@@ -20,15 +20,14 @@ import com.amay.tom.service.qrService2.QRTicketFactory;
 import com.amay.tom.service.qrService2.QRTicketService;
 import com.amay.tom.service.qrService2.TicketInfo;
 
-import com.amay.tvm.bnr.BNRListener;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
-import javafx.scene.effect.GaussianBlur;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import org.tinylog.Logger;
 
@@ -40,6 +39,19 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class PaymentController {
 
+    @FXML private Button bkspc;
+    @FXML private TextField display;
+    @FXML private GridPane numpad;
+    @FXML private Button btn0;
+    @FXML private Button btn3;
+    @FXML private Button btn2;
+    @FXML private Button btn1;
+    @FXML private Button btn6;
+    @FXML private Button btn5;
+    @FXML private Button btn4;
+    @FXML private Button btn9;
+    @FXML private Button btn8;
+    @FXML private Button btn7;
     @FXML private Button btnSubmit;
     @FXML private Button btnBack;
     // FXML UI Components
@@ -701,5 +713,16 @@ public class PaymentController {
             Logger.error("Error processing tickets and navigation: {}", e.getMessage());
             e.printStackTrace();
         }
+    }
+
+    public void handleNumberClick(ActionEvent event) {
+        Button clickedButton = (Button) event.getSource();
+        String currentText = display.getText();
+        display.setText(currentText + clickedButton.getText());
+    }
+
+    public void handleDeleteClick() {
+        int size = display.getText().length();
+        display.setText(display.getText().substring(0,size-1));
     }
 }

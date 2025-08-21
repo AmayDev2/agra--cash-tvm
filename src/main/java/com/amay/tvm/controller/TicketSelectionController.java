@@ -4,6 +4,7 @@ import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.config.SystemConfig;
 import com.amay.tom.model.Station;
+import com.amay.tom.model.TicketType;
 import com.amay.tom.repository.StationData;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -30,14 +31,16 @@ public class TicketSelectionController {
     private StackPane pane;
     private StationData stationData;
     private Agent agent;
+    private TicketType ticketType;
 
 
 
-    public TicketSelectionController(BorderPane borderPane, StackPane stackPane, Agent agent, StationData stationData) {
+    public TicketSelectionController(BorderPane borderPane, StackPane stackPane, Agent agent, StationData stationData, TicketType ticketType) {
         this.borderPane = borderPane;
         this.pane = stackPane;
         this.agent = agent;
         this.stationData = stationData;
+        this.ticketType=ticketType;
         currentStation = SystemConfig.getInstance().getCurrentStation();
 
     }
@@ -121,7 +124,7 @@ public class TicketSelectionController {
         }
         try {
             FXMLLoader loader = ViewFactory.getTicketSelectionDetailsView();
-            loader.setControllerFactory(c -> new StationSelectionController(this.borderPane,this.pane, agent, stationData, selectedDestination));
+            loader.setControllerFactory(c -> new StationSelectionController(this.borderPane,this.pane, agent, stationData, ticketType,selectedDestination));
             this.pane.getChildren().add(loader.load());
         }catch (Exception e) {
             e.printStackTrace();
