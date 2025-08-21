@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" spacing="30.0" style=" -fx-background-radius: 10;"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.amay.tom.controller.SuccessController">
+    <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../../../icons/success.png"/>
+    </ImageView>
+    <Label fx:id="statusText" text="QR Issued Successfully">
+        <font>
+            <Font size="30.0"/>
+        </font>
+    </Label>
+</VBox>
+
+
+

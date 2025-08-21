@@ -1,0 +1,25 @@
+.navigatorButton {
+    -fx-pref-width: 100%;
+    -fx-min-width: 250px;
+    -fx-background-color: #B2D3F7;
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+    -fx-pref-height: 70px;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+
+
+}
+
+.navigatorButton:hover {
+    -fx-background-color: #B2D3F7;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.3), 15, 0.2, 6, 6),
+                 dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 5);
+}
+
+.navigatorButton:pressed {
+    -fx-background-color: #B2D3F7;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 5);
+    -fx-padding: 12 22 8 18;
+}

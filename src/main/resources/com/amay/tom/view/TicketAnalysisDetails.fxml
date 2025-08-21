@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+
+<VBox alignment="CENTER" spacing="10.0" stylesheets="@../../../../css/ticket-analysis.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.controller.TicketAnalysisDetailsController">
+    <children>
+        <Text text="QR Ticket Detail" styleClass="text-header" />
+        <HBox alignment="CENTER_RIGHT" spacing="20">
+            <children>
+                <HBox spacing="8">
+                    <Circle radius="7" fill="#4CAF50" />
+                    <Text text="Unpaid" styleClass="radio-label" />
+                </HBox>
+                <HBox spacing="8">
+                    <Circle radius="7" fill="#E0E0E0" />
+                    <Text text="Paid" styleClass="radio-label" />
+                </HBox>
+            </children>
+        </HBox>
+        <BorderPane>
+            <center>
+                <VBox prefHeight="244.0" prefWidth="600.0" spacing="10.0">
+                    <GridPane alignment="CENTER">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                            <Text text="Ticket Type :" styleClass="text-label" />
+                            <Text fx:id="ticketType" text="01" styleClass="text-value" GridPane.columnIndex="1" />
+                            <Text text="QR Sale Date :" styleClass="text-label" GridPane.columnIndex="2" />
+                            <Text fx:id="qrSaleDate" text="15-05-25,12:02:45" styleClass="text-value" GridPane.columnIndex="3" />
+
+                            <Text text="Ticket Cost :" styleClass="text-label" GridPane.rowIndex="1" />
+                            <Text fx:id="ticketCost" text="50/-" styleClass="text-value" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <Text text="QR Validity :" styleClass="text-label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                            <Text fx:id="qrValidity" text="15-05-25,13:02:45" styleClass="text-value" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                            <Text text="Ticket ID :" styleClass="text-label" GridPane.rowIndex="2" />
+                            <Text fx:id="ticketId" text="0099" styleClass="text-value" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                            <Text text="Origin :" styleClass="text-label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                            <Text fx:id="origin" text="St 10" styleClass="text-value" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+                            <Text text="Quantity :" styleClass="text-label" GridPane.rowIndex="3" />
+                            <Text fx:id="quantity" text="1" styleClass="text-value" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                            <Text text="Destination :" styleClass="text-label" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                            <Text fx:id="destination" text="ST 05" styleClass="text-value" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+                            <Text text="Status :" styleClass="text-label" GridPane.rowIndex="4" />
+                            <Text fx:id="status" text="Over Trave" styleClass="text-status-over" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        </children>
+                    </GridPane>
+
+                    <GridPane fx:id="penaltyGrid" alignment="CENTER" gridLinesVisible="false">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints fx:id="penaltyRow" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                            <Text text="Penalty :" styleClass="text-label" />
+                            <Text fx:id="penalty" text="100/-" styleClass="penalty-text" GridPane.columnIndex="1" />
+                            <Text text="Total :" styleClass="text-label" GridPane.columnIndex="2" />
+                            <Text fx:id="total" text="100/-" styleClass="total-text" GridPane.columnIndex="3" />
+                        </children>
+                        <VBox.margin>
+                            <Insets bottom="10.0" right="50.0" top="10.0" />
+                        </VBox.margin>
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </padding>
+                    </GridPane>
+                    <BorderPane.margin>
+                        <Insets left="30.0" top="10.0" />
+                    </BorderPane.margin>
+                </VBox>
+            </center>
+            <bottom>
+                <VBox alignment="BOTTOM_RIGHT">
+                    <children>
+                        <Button fx:id="adjust" mnemonicParsing="false" onAction="#onClickAdjust" text="Adjust" styleClass="adjust-btn" />
+                    </children>
+                </VBox>
+            </bottom>
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </VBox.margin>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </BorderPane>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+</VBox> 

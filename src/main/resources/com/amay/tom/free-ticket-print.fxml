@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="30.0" style=" -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.controller.FreeTicketPrintController">
+                <children>
+      <ImageView fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icons/success.png" />
+         </image>
+      </ImageView>
+         <Label fx:id="statusText" text="QR Issued Successfully">
+               <font>
+                  <Font size="30.0" />
+               </font></Label>
+<!--                    <Button fx:id="printRecipe" mnemonicParsing="false" onAction="#onClickPaidFreeTicket" prefHeight="11.0" prefWidth="120.0" style="-fx-pref-width: 100%; -fx-min-width: 250px; -fx-background-color: #ff006f; -fx-background-radius: 5; -fx-text-fill: white;" text="Print Recipe">-->
+<!--         <font>-->
+<!--            <Font size="16.0" />-->
+<!--         </font></Button>-->
+
+
+
+                </children>
+ </VBox>

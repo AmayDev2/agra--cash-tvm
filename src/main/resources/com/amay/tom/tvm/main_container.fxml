@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="mainRootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tvm.controller.TVMController">
+   <children>
+      <BorderPane fx:id="borderPane" maxWidth="1024.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0">
+         <top>
+            <AnchorPane maxWidth="1024.0" minHeight="110.0" minWidth="1024.0" prefHeight="110.0" prefWidth="1024.0" style="-fx-background-color: #CCE4FF;" BorderPane.alignment="CENTER">
+                <children>
+                    <Label fx:id="labelStationName" alignment="CENTER" contentDisplay="CENTER" layoutX="339.0" layoutY="15.0" prefHeight="49.0" prefWidth="347.0" style="-fx-font-size: 30;" text="Gandhi Nagar" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="339.0" AnchorPane.rightAnchor="338.0" AnchorPane.topAnchor="15.0">
+                        <font>
+                            <Font name="System Bold" size="40.0" />
+                        </font>
+                        <effect>
+                            <ColorAdjust />
+                        </effect>
+                        <styleClass>
+                            <String fx:value="text-bold" />
+                            <String fx:value="text-primary" />
+                        </styleClass>
+                    </Label>
+                    <ImageView fitHeight="100.0" fitWidth="227.0" layoutX="249.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
+                        <image>
+                            <Image url="@../../../../images/indoor-bhopal-logo.png" />
+                        </image>
+                    </ImageView>
+                    <Label fx:id="lableTime" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="794.0" layoutY="26.0" prefWidth="200.0" style="-fx-font-size: 18; -fx-font-weight: bold;" styleClass="text-secondary" text="11:11:11 AM" textAlignment="RIGHT" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="26.0">
+                        <font>
+                            <Font size="32.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="labelDate" alignment="CENTER_RIGHT" layoutX="800.0" layoutY="51.0" prefWidth="200.0" style="-fx-font-size: 18; -fx-font-weight: bold;" styleClass="text-secondary" text="10 November,2000" textAlignment="RIGHT" AnchorPane.bottomAnchor="36.0" AnchorPane.rightAnchor="24.0">
+                        <font>
+                            <Font size="32.0" />
+                        </font>
+                    </Label>
+                </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <StackPane fx:id="stackPane" minHeight="518.0" minWidth="1024.0" prefHeight="518.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane fx:id="home" maxHeight="618.0" maxWidth="1024.0" minHeight="618.0" minWidth="1024.0" prefHeight="618.0" prefWidth="1024.0">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints percentHeight="90.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="qrPurchaseButton" mnemonicParsing="false" onAction="#onClickQRTicketButton" styleClass="button-purchase" text="Buy QR Ticket" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" />
+                        <Button fx:id="ncmcButton" mnemonicParsing="false"  styleClass="button-purchase" text="NCMC" GridPane.columnIndex="2" />
+                        <HBox alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+<!--                   <fx:include source="station_selection_view.fxml"/>-->
+               </children>
+            </StackPane>
+         </center>
+         <bottom>
+            <AnchorPane maxHeight="50.0" maxWidth="1024.0" minHeight="50.0" minWidth="1024.0" prefHeight="50.0" prefWidth="1024.0" style="-fx-background-color: #CCE4FF;" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

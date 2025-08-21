@@ -1,0 +1,190 @@
+.tab-pane {
+    -fx-tab-min-width: 200px;
+    -fx-tab-max-width: 200px;
+    -fx-tab-min-height: 50px;
+    -fx-tab-max-height: 50px;
+}
+
+.tab-pane .tab-header-area {
+    -fx-background-color: transparent;
+    -fx-background-color: white;
+}
+
+.tab-pane .tab {
+    -fx-background-color: linear-gradient(from 0% 20% to 70% 100%,
+            white 0%,
+            rgb(251, 157, 8) 100%);
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-padding: 5 15 5 15;
+    -fx-background-insets: 0;
+    -fx-background-radius: 5 5 0 0;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5 5 0 0;
+}
+
+.tab-pane .tab:hover {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%,
+            white 0%,
+            rgb(255, 180, 60) 100%);
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%,
+            white 0%,
+            rgb(255, 120, 0) 100%);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.emergency-label {
+    -fx-font-size: 32px;
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-padding: 20px;
+}
+.message_label{
+    -fx-font-size: 24px;
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+    -fx-alignment: center;
+}
+
+
+
+.transparent-bg {
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+}
+
+.medium-label-text {
+    -fx-font-family: 'Futura Md BT';
+    -fx-font-size: 18px;
+}
+
+.curve-edge-button {
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-padding: 8 16 8 16;
+}
+
+.rounded-button {
+    -fx-background-color: #f23c28;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8 16 8 16;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-color: transparent;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.rounded-button:hover {
+    -fx-background-color: #0056b3;
+}
+
+.rounded-button:pressed {
+    -fx-background-color: #003d80;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.3), 4, 0.0, 0, 2);
+}
+
+.sub-label {
+    -fx-font-size: 18px;
+    -fx-text-fill: #888888;
+    -fx-font-family: "Futura Md BT";
+    -fx-font-weight: normal;
+}
+
+.menu-button {
+    -fx-background-color: white;
+    -fx-font-size: 14px;
+    -fx-padding: 5px 15px;
+    -fx-border-width: 1.5px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #733a40;
+    -fx-border-radius: 5px;
+}
+
+.menu-button:hover {
+    -fx-background-color: #d29097;
+}
+
+.menu-button .arrow {
+    -fx-background-color: black;
+    -fx-text-fill: black;
+}
+
+.menu-button .menu-item {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-size: 13px;
+    -fx-padding: 5px 10px;
+}
+
+.menu-button .menu-item:hover {
+    -fx-background-color: #d29097;
+}
+
+.menu-button .menu-item-separator {
+    -fx-border-color: #dcdcdc;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.warning-label {
+    -fx-text-fill: #D8000C;
+    -fx-padding: 5px 10px;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+}
+
+.success-label {
+    -fx-text-fill: #28a745;
+    -fx-padding: 5px 10px;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+}
+
+.small-label {
+    -fx-font-size: 10px;
+    -fx-text-fill: #333333;
+    -fx-padding: 2px 4px;
+    -fx-font-family: "Arial";
+}
+
+.white-text {
+    -fx-text-fill: #fff;
+}
+
+.white-bg {
+    -fx-background-color: #fff;
+    -fx-text-fill: #000;
+}
+
+/* 
+.table-view,
+.table-view .placeholder .label {
+    -fx-background-color: #e5dfff;
+    -fx-text-fill: #3c3366;
+}
+
+.table-button {
+    -fx-min-width: 100;
+    -fx-background-color: #3c3366;
+    -fx-cursor: hand;
+}
+
+.table-view .table-row-cell:filled {
+    -fx-background-color: #e5dfff;
+    -fx-text-fill: #3c3366;
+}
+
+.table-view .table-row-cell:filled .table-cell {
+    -fx-text-fill: #3c3366;
+}
+
+.table-view .table-row-cell:filled:selected .table-cell {
+    -fx-text-fill: #e5dfff;
+} */

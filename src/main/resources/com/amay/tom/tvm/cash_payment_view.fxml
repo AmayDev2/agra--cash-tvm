@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="600.0" prefWidth="1024.0" spacing="20" style="-fx-background-color: white;" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tvm.controller.CashInsertProcessingController">
+
+    <!-- Title -->
+    <Label fx:id="eventTitle" alignment="CENTER" maxWidth="Infinity" style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #1d8aca;" text="Please Insert Cash" />
+
+    <GridPane hgap="20" prefHeight="450.0" prefWidth="1024.0" vgap="20">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="50.0" />
+            <ColumnConstraints percentWidth="50.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="ALWAYS" />
+        </rowConstraints>
+
+        <!-- Left Panel : Payment Info -->
+        <VBox alignment="CENTER_LEFT" spacing="20" GridPane.columnIndex="0">
+            <GridPane hgap="10" vgap="15">
+                <columnConstraints>
+                    <ColumnConstraints />
+                    <ColumnConstraints halignment="RIGHT" percentWidth="70.0" />
+               <ColumnConstraints halignment="RIGHT" minWidth="10.0" percentWidth="4.0" prefWidth="10.0" />
+               <ColumnConstraints halignment="LEFT" percentWidth="30.0" />
+                </columnConstraints>
+
+                <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Total Amount to Pay:" GridPane.columnIndex="1" />
+                <Label fx:id="totalAmount" style="-fx-font-size: 18px; -fx-text-fill: #333;" text="123" GridPane.columnIndex="3" />
+
+                <Label fx:id="remainedAmountText" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Remaining Amount to Pay:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label fx:id="remainedAmount" style="-fx-font-size: 18px; -fx-text-fill: #e63946;" text="12" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+            <Label layoutX="153.0" layoutY="48.0" prefHeight="23.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Total Accepted Amount:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="insertedAmount" layoutX="367.0" layoutY="48.0" style="-fx-font-size: 18px; -fx-text-fill: green;" text="00" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label layoutX="383.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-text-fill: #333;" text="₹" GridPane.columnIndex="2" />
+            <Label layoutX="354.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-text-fill: #333;" text="₹" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label layoutX="366.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-text-fill: #333;" text="₹" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+
+          <Label alignment="CENTER" prefHeight="20.0" prefWidth="500.0" style="-fx-font-size: 16px; -fx-font-style: italic;" text="Acceptable Notes 👇" />
+            <FlowPane fx:id="flowPane" alignment="CENTER" hgap="20" GridPane.halignment="CENTER" />
+            <Label alignment="CENTER" prefHeight="20.0" prefWidth="500.0" style="-fx-font-size: 16px; -fx-font-style: italic;" text="Accepted notes list is blow 👇" />
+            <FlowPane fx:id="flowPaneInsertedNotes" alignment="CENTER" hgap="20" prefHeight="40.0" prefWidth="50.0" GridPane.halignment="CENTER" />
+            <Label fx:id="opsMessage" alignment="CENTER" prefHeight="20.0" prefWidth="500.0" style="-fx-font-size: 24px; -fx-text-fill: #e63946; -fx-font-style: italic;" text="Waiting for the cash...please insert" />
+        </VBox>
+
+        <!-- Right Panel : Success Icon -->
+        <StackPane GridPane.columnIndex="1">
+            <ImageView fx:id="event" fitHeight="300.0" fitWidth="300.0" preserveRatio="true">
+                <image>
+                    <Image url="@../../../../images/tvm/cash-image.png" />
+                </image>
+            </ImageView>
+        </StackPane>
+    </GridPane>
+
+    <!-- Bottom Action -->
+    <HBox alignment="CENTER" spacing="20">
+        <Button fx:id="skipPrintBtn" onAction="#skipPrintReceipt" prefHeight="60.0" prefWidth="250.0" style="-fx-background-color: #e63946; -fx-background-radius: 30; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Cancel Payment" />
+    </HBox>
+
+    <!-- Optional Message Display -->
+<!--    <Label fx:id="msgDisp" alignment="CENTER" maxWidth="Infinity" style="-fx-font-size: 18px; -fx-font-weight: bold;" textFill="#1d8aca" />-->
+</VBox>

@@ -1,0 +1,79 @@
+/* Container Styling */
+#statusWindow {
+    -fx-border-color: #d3d3d3;
+    -fx-border-radius: 12;
+    -fx-background-color: #f9f9f9;
+    -fx-border-width: 1.5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0.1, 0, 4);
+}
+
+/* Title Label Styling */
+#titleLabel {
+    -fx-font-size: 20px;
+    /*-fx-font-weight: bold;*/
+    -fx-text-fill: #333;
+}
+
+/* Status Text Label Styling */
+#statusTextLabel {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-text-fill: #555;
+}
+
+/* Status Label Styling */
+#statusLabel {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-text-fill: #2E7D32; /* More muted green color for a sophisticated look */
+}
+
+/* Buttons Styling */
+#recheckButton, #testButton, #cancelButton,#noButton, #yesButton{
+    -fx-padding: 12 25;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-min-width: 100;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0.2, 0, 3);
+    -fx-cursor: hand;
+}
+
+#recheckButton {
+    -fx-background-color: #757575; /* Muted grey for a neutral appearance */
+    /*-fx-background-insets: 0, 1;*/
+}
+
+#testButton {
+    -fx-background-color: #388E3C; /* Muted green for a more professional look */
+    /*-fx-background-insets: 0, 1;*/
+}
+
+#cancelButton {
+    -fx-background-color: #D32F2F; /* Slightly darker red for a more formal warning color */
+    /*-fx-background-insets: 0, 1;*/
+}
+
+#noButton {
+    -fx-background-color: #388E3C; /* Muted grey for a neutral appearance */
+    /*-fx-background-insets: 0, 1;*/
+}
+
+#yesButton {
+    -fx-background-color: #D32F2F; /* Muted green for a more professional look */
+    /*-fx-background-insets: 0, 1;*/
+}
+
+/* Hover Effects */
+/*#recheckButton:hover, #testButton:hover, #cancelButton:hover {*/
+/*    -fx-background-color: derive(-fx-background-color, -10%);*/
+/*    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 7, 0.2, 0, 3);*/
+/*}*/
+
+/*!* Focused Effects *!*/
+/*#recheckButton:focused, #testButton:focused, #cancelButton:focused {*/
+/*    -fx-background-color: derive(-fx-background-color, -15%);*/
+/*    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 8, 0.3, 0, 4);*/
+/*}*/

@@ -1,0 +1,20 @@
+syntax = "proto3";
+package org.monitoring.proto;
+
+import "TVM.proto";
+
+
+option java_package = "org.network.monitorandcontrol";
+option java_multiple_files = true;
+
+service MonitorAndControl {
+
+    rpc tvmStream(stream TVMProtocol) returns (stream TVMProtocol){}
+}
+
+/*
+    request_type - 10
+*/
+message Alarms{
+    map<int32, string> alarms = 1;
+}

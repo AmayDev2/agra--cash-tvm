@@ -1,0 +1,41 @@
+Manifest-Version: 1.0
+Created-By: Maven Jar Plugin 3.2.0
+Build-Jdk-Spec: 23
+Class-Path: protobuf-java-3.25.3.jar protobuf-java-util-3.25.3.jar jsr30
+ 5-3.0.2.jar error_prone_annotations-2.18.0.jar guava-32.0.1-jre.jar fai
+ lureaccess-1.0.1.jar listenablefuture-9999.0-empty-to-avoid-conflict-wi
+ th-guava.jar checker-qual-3.33.0.jar j2objc-annotations-2.8.jar grpc-ne
+ tty-1.62.2.jar grpc-api-1.62.2.jar netty-codec-http2-4.1.100.Final.jar 
+ netty-common-4.1.100.Final.jar netty-buffer-4.1.100.Final.jar netty-tra
+ nsport-4.1.100.Final.jar netty-resolver-4.1.100.Final.jar netty-codec-4
+ .1.100.Final.jar netty-handler-4.1.100.Final.jar netty-codec-http-4.1.1
+ 00.Final.jar netty-handler-proxy-4.1.100.Final.jar netty-codec-socks-4.
+ 1.100.Final.jar perfmark-api-0.26.0.jar netty-transport-native-unix-com
+ mon-4.1.100.Final.jar grpc-util-1.62.2.jar grpc-protobuf-1.62.2.jar pro
+ to-google-common-protos-2.29.0.jar grpc-protobuf-lite-1.62.2.jar grpc-c
+ ore-1.62.2.jar annotations-4.1.1.4.jar animal-sniffer-annotations-1.23.
+ jar grpc-context-1.62.2.jar grpc-stub-1.62.2.jar jakarta.annotation-api
+ -3.0.0.jar javax.annotation-api-1.3.2.jar argon2-jvm-2.11.jar argon2-jv
+ m-nolibs-2.11.jar jna-5.13.0.jar javafx-controls-17.0.6.jar javafx-cont
+ rols-17.0.6-win.jar javafx-graphics-17.0.6.jar javafx-graphics-17.0.6-w
+ in.jar javafx-base-17.0.6.jar javafx-base-17.0.6-win.jar javafx-fxml-17
+ .0.6.jar javafx-fxml-17.0.6-win.jar core-3.4.1.jar dotenv-java-2.2.0.ja
+ r maven-model-3.6.3.jar plexus-utils-3.2.1.jar gson-2.8.8.jar jackson-c
+ ore-2.15.2.jar jackson-databind-2.15.2.jar jackson-annotations-2.15.2.j
+ ar javafx-swing-17.0.6.jar javafx-swing-17.0.6-win.jar jSerialComm-2.2.
+ 2.jar jedis-4.3.0.jar slf4j-api-1.7.36.jar commons-pool2-2.11.1.jar jso
+ n-20220320.jar log4j-slf4j-impl-2.7.jar log4j-api-2.7.jar jpos-2.1.7.ja
+ r jdom2-2.0.6.1.jar javatuples-1.2.jar jline-3.20.0.jar bsh-2.0b6.jar c
+ ommons-cli-1.4.jar bcprov-jdk15on-1.69.jar bcpg-jdk15on-1.69.jar HdrHis
+ togram-2.1.12.jar org.osgi.core-6.0.0.jar javassist-3.27.0-GA.jar snake
+ yaml-1.28.jar jdbm-1.0.jar je-18.3.12.jar sshd-core-2.6.0.jar sshd-comm
+ on-2.6.0.jar eddsa-0.3.0.jar javapos-1.14.0.jar usb-api-1.0.2.jar tinyl
+ og-api-2.5.0.jar tinylog-impl-2.5.0.jar mysql-connector-java-8.0.28.jar
+  sqlite-jdbc-3.42.0.0.jar java-semver-0.10.2.jar jsch-0.1.55.jar lombok
+ -1.18.32.jar spring-security-crypto-6.2.2.jar
+Main-Class: com.amay.tom.Main
+Build-Jdk: 23
+Built-By: DEV2
+Implementation-Title: Tom
+Implementation-Version: 1.0.0
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="618.0" maxWidth="1024.0" minHeight="618.0" minWidth="1024.0" prefHeight="618.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tvm.controller.TVMController">
+    <columnConstraints>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints percentHeight="90.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Button fx:id="qrPurchaseButton" mnemonicParsing="false" onAction="#onClickQRTicketButton" styleClass="button-purchase" text="Buy QR Ticket" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" />
+        <Button fx:id="ncmcButton" mnemonicParsing="false"  styleClass="button-purchase" text="NCMC" GridPane.columnIndex="2" />
+        <HBox alignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+    </children>
+</GridPane>

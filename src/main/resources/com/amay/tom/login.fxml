@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="1024" maxWidth="1280" prefHeight="1024" prefWidth="1280"  styleClass="anchor-pane" stylesheets="@../../../css/login.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.controller.LoginController">
+
+    <VBox layoutX="533.0" layoutY="339.0"  styleClass="vbox" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <GridPane alignment="CENTER" hgap="10" prefWidth="1200.0" vgap="10">
+            <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="usernameField" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <PasswordField fx:id="passwordField" styleClass="password-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+           <Button alignment="CENTER" contentDisplay="CENTER" onAction="#loginButtonClicked" styleClass="button" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <Text fx:id="messageLabel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+           <Label styleClass="label" text="Login" GridPane.columnIndex="1" />
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints halignment="CENTER" />
+            </columnConstraints>
+            <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+
+    </VBox>
+</AnchorPane>

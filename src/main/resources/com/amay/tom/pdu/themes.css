@@ -1,0 +1,138 @@
+/* === Background Utility Classes === */
+.bg-main {
+    -fx-background-color: #f9f9f9;
+}
+
+.bg-surface {
+    -fx-background-color: #ffffff;
+}
+
+.bg-accent-blue {
+    -fx-background-color: #E6F2FF;
+}
+
+.bg-accent-red {
+    -fx-background-color: #FFE6E6;
+}
+
+.bg-accent-green {
+    -fx-background-color: #E6FFE6;
+}
+
+/* === Accent Backgrounds (Darker Shades) === */
+.bg-accent-blue-dark {
+    -fx-background-color: #CCE4FF; /* darker than #E6F2FF */
+}
+
+.bg-accent-red-dark {
+    -fx-background-color: #FFCCCC; /* darker than #FFE6E6 */
+}
+
+.bg-accent-green-dark {
+    -fx-background-color: #CFF2A6; /* darker than #E6FFE6 */
+}
+
+
+/* === Text Utility Classes === */
+.text-primary {
+    -fx-text-fill: #1C1C1C; /* Logo black */
+}
+
+.text-secondary {
+    -fx-text-fill: #666666;
+}
+
+.text-inverse {
+    -fx-text-fill: #ffffff;
+}
+
+.text-blue {
+    -fx-text-fill: #0072CE;
+}
+
+.text-red {
+    -fx-text-fill: #D71920;
+}
+
+.text-green {
+    -fx-text-fill: #78BE20;
+}
+
+/* === Feedback Labels === */
+.success-label {
+    -fx-text-fill: #78BE20;
+    -fx-font-weight: bold;
+}
+
+.warning-label {
+    -fx-text-fill: #D71920;
+    -fx-font-weight: bold;
+}
+
+.info-label {
+    -fx-text-fill: #0072CE;
+    -fx-font-weight: bold;
+}
+
+/* === Border & Card Utilities === */
+.card {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 8, 0, 0, 2);
+}
+
+.border-bottom {
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #e0e0e0;
+}
+
+/* === Button Variants === */
+.button-primary {
+    -fx-background-color: #0072CE;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 6px;
+    -fx-font-weight: bold;
+}
+
+.button-primary:hover {
+    -fx-background-color: #005BA1;
+}
+
+.button-secondary {
+    -fx-background-color: #78BE20;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 6px;
+}
+
+.button-secondary:hover {
+    -fx-background-color: #5FA315;
+}
+
+.button-danger {
+    -fx-background-color: #D71920;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 6px;
+}
+
+.button-danger:hover {
+    -fx-background-color: #AD151A;
+}
+
+.button-disabled {
+    -fx-background-color: #CCCCCC;
+    -fx-text-fill: #666666;
+    -fx-background-radius: 6px;
+}
+
+/* === Shadow / Elevation === */
+.shadow-sm {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 4, 0, 0, 2);
+}
+
+.shadow-md {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 8, 0, 0, 4);
+}

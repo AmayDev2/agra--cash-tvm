@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="ancher" prefHeight="834.0" prefWidth="1077.0" style="-fx-background-radius: 10;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.controller.AnalysisController">
+    <children>
+        <GridPane fx:id="centerGrid" alignment="CENTER" prefHeight="284.0" prefWidth="719.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="274.0" minHeight="10.0" prefHeight="171.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="100.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <ImageView fx:id="cardScannerImage" fitHeight="250.0" fitWidth="400.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <image>
+                        <Image url="@../../../images/mmrc_card.png" />
+                    </image>
+                    <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </GridPane.margin>
+                </ImageView>
+                <ImageView fx:id="qrScannerImage" fitHeight="250.0" fitWidth="400.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <image>
+                        <Image url="@../../../icons/assets_tom/qrcode.png" />
+                    </image>
+                    <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </GridPane.margin>
+                </ImageView>
+                <Text fx:id="cardAnaText" text="Please Tap Card" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <Text fx:id="qrAnaText" text="Please Scan QR" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

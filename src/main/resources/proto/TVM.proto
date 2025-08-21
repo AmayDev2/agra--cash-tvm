@@ -1,0 +1,74 @@
+syntax = "proto3";
+package org.monitoring.proto;
+
+import "google/protobuf/any.proto";
+
+import "Enums.proto";
+
+option java_package = "org.network.monitorandcontrol.tvm";
+option java_multiple_files = true;
+
+
+message TVMProtocol{
+    int32 status_code = 1; //status code of the operation
+    string error_msg = 2; //error code for the operation
+    RequestType request_type = 3; //send by the client for the server to identify the request type
+    CommandType command_type = 4; //send by the server to the client to perform changes in the euipment
+    google.protobuf.Any request_data = 5; //data associated with the operation
+}
+
+/*
+    TOMDeviceInfo give information about the TOM
+*/
+message TVMDeviceInfo{
+    string equip_name = 1; 
+    string equip_id = 2;
+    string equip_ip = 3;
+    string device_type = 4;
+    string shift_id = 5;
+    string operator_id = 6;
+}
+
+
+/*
+    Monitoring Protocols
+
+    TOMPeripheralStatus give information about the peripherals connection or disconnection
+*/
+
+message TVMPeripheralStatus{
+    bool scu_connected = 1;
+    bool ccu_connected = 2;
+    bool reader_connected = 3;
+    bool scanner_connected = 4;
+    bool printer_connected =5;
+    bool pdu_connected = 6;
+    bool cash_drawer_connected = 7;
+    bool ups_connected = 8;
+}
+
+
+/*
+    TOMVersionCheck is the version information for parameter sync
+*/
+message TVMParameterVersion{
+    string fare_table = 1;
+    string users = 2;
+    string tvm_software = 3;
+    string blacklist = 4;
+    string calendar = 5;
+    string qr_key = 6;
+    string ticket = 7;
+}
+
+
+/*
+    TOMModeControl is to control gate from SCU / CCU
+*/
+message TVMModeControl {
+    OperationMode operation_mode = 1;
+    bool card_process_mode = 2;
+    bool qr_sale_mode = 3;
+    SpecialMode special_mode = 4;
+
+}

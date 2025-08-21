@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="750" prefWidth="750" styleClass="anchor-pane" stylesheets="@../../../../css/components/resume.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.controller.ResumeShiftController">
+    <VBox alignment="CENTER" spacing="10.0" styleClass="vbox" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+        </padding>
+        <Text fx:id="currentStatus" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-bold" text="SHIFT PAUSE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Text>
+        <GridPane alignment="CENTER" vgap="20.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" percentHeight="0.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" percentHeight="0.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" percentHeight="0.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" percentHeight="0.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" percentHeight="0.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <VBox.margin>
+                <Insets left="250.0" right="250.0" />
+            </VBox.margin>
+            <Button fx:id="resumeShiftButton" mnemonicParsing="false" onAction="#onClickResumeShift" styleClass="button-resume" text="Resume Shift" GridPane.rowIndex="4" />
+            <PasswordField fx:id="passwordField" alignment="CENTER" promptText="Enter Password" styleClass="password-field" GridPane.rowIndex="3">
+                <GridPane.margin>
+                    <Insets bottom="10.0" top="10.0" />
+                </GridPane.margin>
+            </PasswordField>
+            <ImageView fx:id="imageView" fitHeight="325.0" fitWidth="345.0" styleClass="image-view" GridPane.rowIndex="1">
+                <image>
+                    <Image fx:id="actualImage" url="@../../../../icons/ticket.png" />
+                </image>
+            </ImageView>
+            <Text fx:id="time" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-time" text="00:00:01" GridPane.rowIndex="2" />
+            <Text fx:id="error" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="5" />
+        </GridPane>
+    </VBox>
+</AnchorPane>

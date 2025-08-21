@@ -1,0 +1,52 @@
+/* VBox styling */
+.main-vbox {
+    /* Optional styling for layout */
+}
+
+/* Button base styling */
+.operation-button {
+    -fx-pref-width: 300px;
+    -fx-min-width: 200px;
+    -fx-min-height: 50px;
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-padding: 10 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0, 0, 2);
+    -fx-background-insets: 0, 1;
+    -fx-transition: all 0.3s ease;
+}
+
+/* Refund button */
+#paidFreeTicket {
+    -fx-background-color: #B2D3F7;
+}
+
+/* Replacement button */
+#pauseEOShift {
+    -fx-background-color:#B2D3F7;
+}
+
+/* Cancel button */
+#stockManagement {
+    -fx-background-color: #B2D3F7;
+}
+
+/* Contact button */
+#contact {
+    -fx-background-color:#B2D3F7;
+    -fx-text-fill: black;
+}
+
+/* Hover effect for all buttons */
+.operation-button:hover {
+
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.35), 15, 0, 0, 3);
+}
+
+/* Pressed effect for all buttons */
+.operation-button:pressed {
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.6), 5, 0, 0, 3);
+    -fx-padding: 12 22 8 18;
+}

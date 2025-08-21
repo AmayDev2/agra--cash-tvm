@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="834.0" prefWidth="1077.0" spacing="10.0" stylesheets="@../../../css/ticket-analysis.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.controller.TicketAnalysisDetailsController">
+    <children>
+
+        <GridPane alignment="CENTER" hgap="10.0" vgap="10.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="2.0" prefWidth="2.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="2.0" prefWidth="2.0" />
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints />
+            </columnConstraints>
+
+            <rowConstraints>
+                <RowConstraints prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints prefHeight="40.0" />
+                <RowConstraints prefHeight="40.0" />
+                <RowConstraints prefHeight="40.0" />
+                <RowConstraints prefHeight="40.0" />
+            <RowConstraints minHeight="5.0" prefHeight="5.0" />
+                <RowConstraints prefHeight="40.0" />
+                <RowConstraints prefHeight="40.0" />
+            </rowConstraints>
+
+            <children>
+                <Separator orientation="HORIZONTAL" GridPane.columnSpan="6" GridPane.rowIndex="1" />
+                <Text styleClass="text-label" text="Ticket Type" GridPane.rowIndex="2" />
+                <Text fx:id="ticketType" styleClass="text-value" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Text styleClass="text-label" text="QR Sale Date" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Text fx:id="qrSaleDate" styleClass="text-value" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+
+                <Text styleClass="text-label" text="Ticket Cost" GridPane.rowIndex="3" />
+                <Text fx:id="ticketCost" styleClass="text-value" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Text styleClass="text-label" text="QR Validity" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <Text fx:id="qrValidity" styleClass="text-value" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+
+                <Text styleClass="text-label" text="Ticket ID" GridPane.rowIndex="4" />
+                <Text fx:id="ticketId" styleClass="text-value" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Text styleClass="text-label" text="Origin" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <Text fx:id="origin" styleClass="text-value" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+
+                <Text styleClass="text-label" text="Quantity" GridPane.rowIndex="5" />
+                <Text fx:id="quantity" styleClass="text-value" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                <Text styleClass="text-label" text="Destination" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                <Text fx:id="destination" styleClass="text-value" text="Text" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+
+                <Text styleClass="text-label" text="Status" GridPane.rowIndex="7" />
+                <Text fx:id="status" styleClass="text-status" text="Text" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+
+                <Separator orientation="HORIZONTAL" GridPane.columnSpan="7" GridPane.rowIndex="6" />
+
+                <RadioButton fx:id="unpaid" text="Unpaid" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="toggleGroup1" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="paid" text="Paid" toggleGroup="$toggleGroup1" GridPane.columnIndex="5" GridPane.halignment="CENTER" />
+            </children>
+        </GridPane>
+        <GridPane fx:id="penaltyGrid" alignment="CENTER" layoutX="110.0" layoutY="280.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="2.0" prefWidth="2.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="2.0" prefWidth="2.0" />
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="5.0" prefHeight="5.0" />
+                <RowConstraints prefHeight="40.0" />
+                <RowConstraints minHeight="5.0" prefHeight="5.0" />
+            </rowConstraints>
+            <children>
+
+                <!-- Top Separator -->
+                <Separator orientation="HORIZONTAL" GridPane.columnSpan="7" GridPane.rowIndex="0" />
+
+
+                <!-- Penalty Row -->
+                <Text styleClass="text-label" text="Penalty" GridPane.rowIndex="1" />
+                <Text fx:id="penalty" styleClass="penalty-text" text="₹ 100/-" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Text styleClass="text-label" text="Total :" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Text fx:id="total" styleClass="total-text" text="₹ 100/-" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+
+                <!-- Top Separator -->
+                <Separator orientation="HORIZONTAL" GridPane.columnSpan="7" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+
+
+        <Button fx:id="adjust" minWidth="300.0" mnemonicParsing="false" onAction="#onClickAdjust" prefHeight="50.0" prefWidth="300.0" styleClass="adjust-btn" text="Adjust" />
+    </children>
+
+    <padding>
+        <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
+    </padding>
+</VBox>

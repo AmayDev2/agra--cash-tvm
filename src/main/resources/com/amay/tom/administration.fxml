@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="834.0" prefWidth="1077.0" stylesheets="@../../../css/administration.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.controller.AdministrationController">
+   <VBox alignment="CENTER" prefHeight="834.0" prefWidth="1077.0" spacing="20.0" styleClass="main-vbox" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <children>
+         <Button fx:id="paidFreeTicket" mnemonicParsing="false" onAction="#onClickPaidFreeTicket" styleClass="operation-button" text="Paid/Free Ticket" />
+         <Button fx:id="pauseEOShift" mnemonicParsing="false" onAction="#onClickPauseEOShift" styleClass="operation-button" text="Pause/EOS" />
+         <Button fx:id="stockManagement" mnemonicParsing="false" onAction="#onClickStockManagement" styleClass="operation-button" text="Stock Management" />
+<!--         <Button fx:id="contact" mnemonicParsing="false" styleClass="operation-button" text="Contact" />-->
+      </children>
+      <padding>
+         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </padding>
+   </VBox>
+</AnchorPane>

@@ -1,0 +1,413 @@
+.tab-pane {
+    -fx-tab-min-width: 200px;
+    -fx-tab-max-width: 200px;
+    -fx-tab-min-height: 50px;
+    -fx-tab-max-height: 50px;
+}
+
+.tab-pane .tab-header-area {
+    -fx-background-color: transparent;
+    -fx-background-color: white;
+}
+
+.tab-pane .tab {
+    -fx-background-color: linear-gradient(from 0% 20% to 70% 100%,
+            white 0%,
+            rgb(251, 157, 8) 100%);
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-padding: 5 15 5 15;
+    -fx-background-insets: 0;
+    -fx-background-radius: 5 5 0 0;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5 5 0 0;
+}
+
+.tab-pane .tab:hover {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%,
+            white 0%,
+            rgb(255, 180, 60) 100%);
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%,
+            white 0%,
+            rgb(255, 120, 0) 100%);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+
+.transparent-bg {
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+}
+
+.medium-label-text {
+    -fx-font-family: 'Futura Md BT';
+    -fx-font-size: 18px;
+}
+
+.curve-edge-button {
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-padding: 8 16 8 16;
+}
+
+.rounded-button {
+    -fx-background-color: #f23c28;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8 16 8 16;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-color: transparent;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.rounded-button:hover {
+    -fx-background-color: #0056b3;
+}
+
+.rounded-button:pressed {
+    -fx-background-color: #003d80;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.3), 4, 0.0, 0, 2);
+}
+
+.sub-label {
+    -fx-font-size: 18px;
+    -fx-text-fill: #888888;
+    -fx-font-family: "Futura Md BT";
+    -fx-font-weight: normal;
+}
+
+.menu-button {
+    -fx-background-color: white;
+    -fx-font-size: 14px;
+    -fx-padding: 5px 15px;
+    -fx-border-width: 1.5px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #733a40;
+    -fx-border-radius: 5px;
+}
+
+.menu-button:hover {
+    -fx-background-color: #d29097;
+}
+
+.menu-button .arrow {
+    -fx-background-color: black;
+    -fx-text-fill: black;
+}
+
+.menu-button .menu-item {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-size: 13px;
+    -fx-padding: 5px 10px;
+}
+
+.menu-button .menu-item:hover {
+    -fx-background-color: #d29097;
+}
+
+.menu-button .menu-item-separator {
+    -fx-border-color: #dcdcdc;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.warning-label {
+    -fx-text-fill: #D8000C;
+    -fx-padding: 5px 10px;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+}
+
+.success-label {
+    -fx-text-fill: #28a745;
+    -fx-padding: 5px 10px;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+}
+
+.small-label {
+    -fx-font-size: 10px;
+    -fx-text-fill: #333333;
+    -fx-padding: 2px 4px;
+    -fx-font-family: "Arial";
+}
+
+.white-text {
+    -fx-text-fill: #fff;
+}
+
+.white-bg {
+    -fx-background-color: #fff;
+    -fx-text-fill: #000;
+}
+
+
+
+.button-purchase{
+     -fx-background-color: #CCE4FF;
+    -fx-pref-width: 220px;
+    -fx-pref-height: 300px;
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0, 0, 4);
+    }
+
+.button:hover {
+            -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.3), 15, 0.2, 6, 6),
+                    dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 5);
+            -fx-padding: 12 22 8 18;
+       }
+
+.button:pressed {
+           -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 5);
+           -fx-padding: 12 22 8 18;
+
+}
+
+/* Global Background */
+.root {
+    -fx-font-family: "Verdana";
+    -fx-background-color: #ffffff;
+}
+
+/* Title Label */
+.label {
+    -fx-font-size: 18px;
+    -fx-text-fill: #333333;
+}
+
+/* Heading Text (e.g., "Buy QR Code Ticket") */
+.heading-label {
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1d8aca;
+}
+
+/* Info/Message Label */
+.info-label {
+    -fx-font-size: 36px;
+    -fx-text-fill: #1d8aca;
+    -fx-alignment: center;
+}
+
+#destination{
+    -fx-font-size: 36px;
+    -fx-text-fill: #0071b3;
+    -fx-font-weight: bold;
+}
+
+/* Session Timer */
+#sessionTimer {
+    -fx-font-size: 40px;
+    -fx-text-fill: #1d8aca;
+    -fx-font-weight: bold;
+}
+
+/* Number Buttons - Stations */
+.number-btn {
+    -fx-background-color: #CCE4FF;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-font-size: 18px;
+    -fx-wrap-text: true;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0, 0, 4);
+}
+
+
+/* Number Buttons - Stations */
+.station-btn {
+    -fx-background-color: #CCE4FF;
+    -fx-text-fill: black;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-font-size: 16px;
+    -fx-wrap-text: true;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0, 0, 4);
+}
+
+.station-btn:selected{
+    -fx-background-color: #0071b3;
+    -fx-text-fill: white;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 5);
+    -fx-padding: 12 22 8 18;
+}
+
+
+
+.button-passenger{
+    -fx-background-color: #CCE4FF;
+    -fx-text-fill: white;
+    -fx-text-weight: bold;
+    -fx-pref-width: 80px;
+    -fx-pref-height: 70px;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-font-size: 28px;
+    -fx-wrap-text: true;
+    -fx-alignment: center;
+      -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0, 0, 4);
+    }
+
+
+.button-journey {
+    -fx-background-color: #CCE4FF;
+    -fx-text-fill: white;
+    -fx-text-weight: bold;
+
+    -fx-pref-width: 300px;
+    -fx-pref-height: 70px;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-font-size: 28px;
+    -fx-wrap-text: true;
+    -fx-alignment: center;
+     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0, 0, 4);
+}
+
+.button-journey:select{
+       -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 5);
+               -fx-padding: 12 22 8 18;
+}
+
+
+/* Navigation & Submit Buttons */
+.button-nav {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 50;
+    -fx-border-color: #0071b3;
+    -fx-border-radius: 50;
+    -fx-text-fill: #0071b3;
+    -fx-font-size: 30px;
+    -fx-alignment: center;
+}
+
+.button-nav:hover {
+    -fx-background-color: #f0faff;
+    -fx-border-color: #005f99;
+    -fx-text-fill: #005f99;
+}
+
+
+.button-nav:pressed {
+    -fx-background-color: #005f99;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0, 0, 4); /* Shadow effect on press */
+}
+
+/* Ticket detail labels */
+.details-tag {
+    -fx-font-size: 24px;
+    -fx-text-fill: #0071b3;
+    -fx-font-weight: bold;
+}
+
+.details-value {
+    -fx-font-size: 24px;
+    -fx-text-fill: #333;
+}
+
+
+.button-payment-select {
+    -fx-background-color:  #CCE4FF;
+    -fx-text-fill: white;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 120px;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0, 0, 4);
+}
+
+
+
+
+
+
+/* Submit and Back Button Icons */
+.image-view {
+    -fx-fit-height: 50px;
+    -fx-fit-width: 50px;
+}
+
+/* Responsive Insets (Optional override for spacing consistency) */
+.grid-pane {
+    -fx-padding: 30 70 30 70; /* top right bottom left */
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+}
+
+
+.emergency-label {
+    -fx-font-size: 32px;
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-padding: 20px;
+}
+
+.button-emergency {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 10;
+}
+
+.message_label{
+    -fx-font-size: 24px;
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+    -fx-alignment: center;
+}
+
+
+.button-back {
+        -fx-background-color: #444;
+        -fx-text-fill: white;
+        -fx-font-size: 20px;
+        -fx-font-weight: bold;
+        -fx-padding: 10px 20px;
+        -fx-background-radius: 10;
+}
+
+.button-payment-select:pressed {
+    -fx-background-color: #0071b3;
+    -fx-text-fill: white;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 5);
+    -fx-padding: 12 22 8 18;
+}
+
+.button-payment-select:selected{
+    -fx-background-color: #0071b3;
+    -fx-text-fill: white;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 5);
+    -fx-padding: 12 22 8 18;
+}
+
+.button-journey:selected{
+                   -fx-background-color: #0071b3;
+                   -fx-text-fill: white;
+                   -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 5);
+                   -fx-padding: 12 22 8 18;
+               }
+
+
+.button-passenger:selected{
+    -fx-background-color: #0071b3;
+    -fx-text-fill: white;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 5);
+    -fx-padding: 12 22 8 18;
+}

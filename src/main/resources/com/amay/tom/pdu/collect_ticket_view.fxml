@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  style=" -fx-background-color: #CCE4FF;"  prefHeight="288.0" prefWidth="640.0" styleClass="bg-surface" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" >
+    <children>
+        <Label fx:id="text" alignment="CENTER" contentDisplay="CENTER" layoutX="163.0" layoutY="54.0" prefHeight="87.0" prefWidth="729.0" style="-fx-font-size: 35;" text="Please Collect Your Ticket!" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+            <styleClass>
+                <String fx:value="text-caption" />
+                <String fx:value="text-primary" />
+            </styleClass></Label>
+
+    </children>
+    <stylesheets>
+        <URL value="@../pdu/themes.css" />
+    </stylesheets>
+</AnchorPane>

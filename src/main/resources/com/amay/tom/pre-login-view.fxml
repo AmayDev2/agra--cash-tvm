@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" prefHeight="1024" prefWidth="1280" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.controller.PreLoginViewController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="1024" prefWidth="1280" spacing="10.0" style="-fx-background-color: #ddfac3; -fx-background-radius: 10;" AnchorPane.leftAnchor="0.0">
+            <children>
+                <Text fx:id="currentStatus" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Last Incomplete Shift">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Text>
+                <GridPane alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="0.0" prefWidth="200.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="0.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="0.0" prefWidth="200.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Operator Details" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Shift &amp; Device Details" GridPane.columnIndex="2" />
+                    </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+                </GridPane>
+                <GridPane alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="0.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="0.0" prefWidth="180.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="0.0" prefWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="0.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="0.0" prefWidth="180.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" percentHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Operator Name :" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Operator Id :" GridPane.rowIndex="1" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Device ID :" GridPane.columnIndex="3" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Shift ID :" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Text fx:id="operatorName" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" />
+                        <Text fx:id="operatorId" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Text fx:id="deviceId" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" />
+                        <Text fx:id="shiftId" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Text fx:id="shiftDuration" layoutX="350.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Shift Duration :" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Text layoutX="350.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Shift Start Time :" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Text fx:id="shiftStartTime" layoutX="450.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                    </children>
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </VBox.margin>
+                </GridPane>
+                <PasswordField fx:id="passwordField" promptText="Enter Password" style="-fx-pref-width: 100%;">
+               <VBox.margin>
+                  <Insets left="530.0" right="530.0" />
+               </VBox.margin></PasswordField>
+                <Button fx:id="shiftResume" mnemonicParsing="false" onAction="#onClickResume" style="-fx-pref-width: 100%; -fx-min-width: 200px; -fx-background-color: #4CAF50; -fx-background-radius: 5; -fx-text-fill: white;" text="Resume">
+                    <font>
+                        <Font size="16.0" />
+                    </font></Button>
+                <Button fx:id="shiftEnd" mnemonicParsing="false" onAction="#onClickEOS" style="-fx-pref-width: 100%; -fx-min-width: 200px; -fx-background-color: #008CBA; -fx-background-radius: 5; -fx-text-fill: white;" text="End Shift">
+                    <font>
+                        <Font size="16.0" />
+                    </font></Button>
+                <Button fx:id="shiftNew" mnemonicParsing="false" onAction="#onClickNewShift" style="-fx-pref-width: 100%; -fx-min-width: 200px; -fx-background-color: #ba0070; -fx-background-radius: 5; -fx-text-fill: white;" text="New Shift">
+                    <font>
+                        <Font size="16.0" />
+                    </font></Button>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

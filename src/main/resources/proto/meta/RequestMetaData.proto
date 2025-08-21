@@ -1,0 +1,15 @@
+syntax ="proto3";
+
+option java_multiple_files = true;
+option java_package = "org.amaytechnosystems";
+option java_outer_classname = "ReqMetaData";
+
+package com.proto.meta.reqmetadata;
+
+message RequestMetaData {
+  string requestId = 1;
+  string requestType = 2;
+  string requestTime = 3;
+  string requestSource = 4;
+  string requestIp = 5;
+}
