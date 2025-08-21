@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="ticketRoot" alignment="TOP_CENTER" spacing="8" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.controller.AgaraTicketController">
+
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <ImageView fx:id="logoImage" fitHeight="20.0" fitWidth="50" >
+
+        </ImageView>
+        <Text  fx:id="ticketName" style="-fx-font-size: 40px; -fx-font-weight: bold;" text="MONORAIL" />
+    </HBox>
+
+    <!-- QR Code -->
+    <ImageView fx:id="qrImage" fitHeight="150" fitWidth="150" />
+
+    <!-- Ticket Details -->
+    <GridPane alignment="TOP_CENTER" hgap="5" vgap="5">
+        <columnConstraints>
+            <ColumnConstraints halignment="LEFT" />
+            <ColumnConstraints halignment="CENTER" maxWidth="10" minWidth="10" />
+            <ColumnConstraints halignment="LEFT" />
+        </columnConstraints>
+
+        <Text text="Date/Time" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Text fx:id="dateTimeText" text="13-05-2025 07:57:40 PM" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+
+        <Text text="Payment Type" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Text fx:id="paymentTypeText" text="UPI" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+        <Text text="Salepoint Id" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Text fx:id="salepointText" text="TOM-02" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+        <Text text="Type" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Text fx:id="ticketTypeText" text="SJT" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+        <Text text="Quantity" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Text fx:id="quantityText" text="1" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+
+        <Text text="From" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <Text fx:id="fromText" text="Captain Shubham Gupta" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+
+        <Text text="To" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <Text fx:id="toText" text="Fatehabad Road" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+
+        <Text text="Price" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        <Text fx:id="priceText" text="Rs. 10.00" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+
+        <Text text="Ticket No" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <Text fx:id="ticketNumberText" text="9264.2.8.40" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+
+        <Text text="Valid Upto" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+        <Text fx:id="validUptoText" text="120 minutes after entry" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+      <padding>
+         <Insets left="20.0" right="20.0" top="10.0" />
+      </padding>
+    </GridPane>
+
+   
+       <!-- Footer -->
+    <Text style="-fx-font-size: 10px; -fx-fill: gray;" text="Valid only for same working day">
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+   </Text>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+<!--    <Text style="-fx-font-size: 10px; -fx-fill: gray;" text="Please retain till the end of journey!" />-->
+
+</VBox>
