@@ -3,9 +3,11 @@ package com.amay.tvm.controller;
 import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.config.SystemConfig;
+import com.amay.tom.controller.components.StatusBottomBarView;
 import com.amay.tom.model.Station;
 import com.amay.tom.model.TicketType;
 import com.amay.tom.repository.StationData;
+import com.amay.utils.TicketUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +17,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -102,18 +105,32 @@ public class TicketSelectionController {
             col = 0;
             row++;
         }
-    }
+
+        btn.getStyleClass().add("main-button");
+
+        }
 }
 
 
     @FXML
     private void navigateToHomePage(ActionEvent actionEvent) {
         int count = pane.getChildren().size();
-
+        this.addBottomBarView();
         if (count > 0) {
             pane.getChildren().remove(count - 1); // remove top-most child
         }
         actionEvent.consume();
+
+    }
+
+    private void addBottomBarView() {
+        try {
+            FXMLLoader fxmlLoader = ViewFactory.getBottomNav();
+            fxmlLoader.setControllerFactory(x -> new StatusBottomBarView(agent.getPeripheralMonitor(), agent.getVersions()));
+            borderPane.setBottom(fxmlLoader.load());
+        } catch (RuntimeException | IOException e) {
+            System.err.println("Error loading bottom navigation view: " + e.getMessage());
+        }
     }
 
     @FXML
@@ -123,9 +140,14 @@ public class TicketSelectionController {
             return;
         }
         try {
-            FXMLLoader loader = ViewFactory.getTicketSelectionDetailsView();
-            loader.setControllerFactory(c -> new StationSelectionController(this.borderPane,this.pane, agent, stationData, ticketType,selectedDestination));
-            this.pane.getChildren().add(loader.load());
+//            FXMLLoader loader = ViewFactory.getTicketSelectionDetailsView();
+//            loader.setControllerFactory(c -> new StationSelectionController(this.borderPane,this.pane, agent, stationData, ticketType,selectedDestination));
+            FXMLLoader fxmlLoader = ViewFactory.getPaymentSummeryView();
+            fxmlLoader.setControllerFactory(param -> new PaymentController(
+                    this.pane, this.borderPane, this.agent, this.stationData,
+                    this.selectedDestination, this.ticketType , TicketUtils.getFare(this.ticketType)
+            ));
+            this.pane.getChildren().add(fxmlLoader.load());
         }catch (Exception e) {
             e.printStackTrace();
         }

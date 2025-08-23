@@ -20,6 +20,7 @@ import com.amay.tom.service.qrService2.QRTicketFactory;
 import com.amay.tom.service.qrService2.QRTicketService;
 import com.amay.tom.service.qrService2.TicketInfo;
 
+import com.amay.utils.TicketUtils;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -39,6 +40,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class PaymentController {
 
+    @FXML private Label minTicketSize;
+    @FXML private Label maxTicketSize;
+    @FXML private Button btnConfirm;
+    @FXML private Button btnAddTicket;
     @FXML private Button bkspc;
     @FXML private TextField display;
     @FXML private GridPane numpad;
@@ -86,20 +91,23 @@ public class PaymentController {
     // Payment processing
     private AbstractPaymentMethod selectedPayment = new UPIPaymentMethod(); // Default
     private String orderId;
+    private int minTicket;
+    private int maxTicket;
 
     /**
      * Main constructor with full parameters
      */
     public PaymentController(StackPane stackPane, BorderPane borderPane, Agent agent,
                              StationData stationData, Station selectedDestination,
-                             TicketType ticketType, int quantity, int fare) {
+                             TicketType ticketType ,int fare
+    ) {
         this.stackPane = stackPane;
         this.borderPane = borderPane;
         this.agent = agent;
         this.stationData = stationData;
         this.selectedDestination = selectedDestination;
         this.ticketType = ticketType;
-        this.quantity = quantity;
+//        this.quantity = quantity;
         this.fare = fare;
 
         if (SystemConfig.getInstance().getCurrentStation() != null && selectedDestination != null) {
@@ -107,7 +115,7 @@ public class PaymentController {
                     SystemConfig.getInstance().getCurrentStation(),
                     selectedDestination,
                     ticketType,
-                    quantity
+                    TicketUtils.getMinTicket(this.ticketType)
             );
         }
     }
@@ -135,12 +143,26 @@ public class PaymentController {
         try {
             // Initialize UI labels
             if (SystemConfig.getInstance().getCurrentStation() != null && selectedDestination != null) {
+
+                this.quantity=TicketUtils.getMinTicket(ticketType);
+
+                this.labelCount.setText(String.valueOf(this.quantity));
+                this.labelFare.setText("₹ " + (fare*quantity));
                 this.labelFrom.setText(SystemConfig.getInstance().getCurrentStation().getStationName());
                 this.labelTo.setText(this.selectedDestination.getStationName());
                 this.labelType.setText(this.ticketType.getTicketTypeName());
-                this.labelCount.setText(String.valueOf(this.quantity));
-                this.labelFare.setText("₹ " + String.valueOf(fare));
+                //Initialize the numpad display with min ticket count value
+                this.display.setText(String.valueOf(quantity));
+                this.minTicketSize.setText("Min : "+TicketUtils.getMinTicket(ticketType));
+                this.maxTicketSize.setText("Max : "+TicketUtils.getMaxTicket(ticketType));
+
             }
+
+
+
+            //define min and max ticket for the ticket type selected
+            minTicket = TicketUtils.getMinTicket(ticketType);
+            maxTicket = TicketUtils.getMaxTicket(ticketType);
 
             // Setup ToggleGroup for mutual exclusion
             setupToggleGroup();
@@ -312,6 +334,20 @@ public class PaymentController {
         return null;
     }
 
+    @FXML
+    private void confirmTicket(){
+        if (SystemConfig.getInstance().getCurrentStation() != null && selectedDestination != null) {
+            this.requestedTicket = new RequestedTicket(
+                    SystemConfig.getInstance().getCurrentStation(),
+                    selectedDestination,
+                    ticketType,
+                    quantity
+            );
+        }
+        labelCount.setText(display.getText());
+        labelFare.setText(String.valueOf(fare*quantity));
+    }
+
     /**
      * Confirm selection and process payment
      */
@@ -354,7 +390,6 @@ public class PaymentController {
             actionEvent.consume();
         }
     }
-
     /**
      * Navigate back to home page
      */
@@ -553,7 +588,7 @@ public class PaymentController {
         }
     }
 
-    private void showWaiting() {;
+    private void showWaiting() {
 
         // Create spinner
         ProgressIndicator spinner = new ProgressIndicator();
@@ -598,7 +633,7 @@ public class PaymentController {
             Logger.info("Processing payment for order: {}", this.orderId);
 
             List<ProperTicket> properTickets = new ArrayList<>();
-            AtomicInteger totalFare = new AtomicInteger();
+            AtomicInteger totalFare = new AtomicInteger(fare*quantity);
 
             for (RequestedTicket requestedTicket : requestedTicketOrder.requestedTicket()) {
                 long issuedAt = Instant.now().toEpochMilli();
@@ -718,11 +753,36 @@ public class PaymentController {
     public void handleNumberClick(ActionEvent event) {
         Button clickedButton = (Button) event.getSource();
         String currentText = display.getText();
-        display.setText(currentText + clickedButton.getText());
+        String newText = currentText + clickedButton.getText();
+        int newTicketCount = Integer.parseInt(newText);
+        if (newTicketCount < maxTicket) {
+            display.setText(currentText + clickedButton.getText());
+            quantity=Integer.parseInt(display.getText());
+        }
     }
 
     public void handleDeleteClick() {
         int size = display.getText().length();
-        display.setText(display.getText().substring(0,size-1));
+        if(size>1) {
+            display.setText(display.getText().substring(0, size - 1));
+            quantity=Integer.parseInt(display.getText());
+        }else if(size>0){
+            display.setText("");
+            quantity=minTicket;
+        }
+    }
+
+    public void handleDecrement() {
+        if(quantity>minTicket){
+            quantity--;
+            display.setText(String.valueOf(quantity));
+        }
+    }
+
+    public void handleIncrement() {
+        if(quantity<maxTicket){
+            quantity++;
+            display.setText(String.valueOf(quantity));
+        }
     }
 }

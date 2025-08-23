@@ -33,61 +33,61 @@
       </children>
    </GridPane>
 
-        <Button fx:id="upsConnectedImage" styleClass="status-button" visible="false">
-                <graphic>
-                        <ImageView fitHeight="30" fitWidth="30">
-                                <Image url="@../../../../images/printer.png" />
-                        </ImageView>
-                </graphic>
-        </Button>
+<!--        <Button fx:id="upsConnectedImage" styleClass="status-button" visible="false">-->
+<!--                <graphic>-->
+<!--                        <ImageView fitHeight="30" fitWidth="30">-->
+<!--                                <Image url="@../../../../images/printer.png" />-->
+<!--                        </ImageView>-->
+<!--                </graphic>-->
+<!--        </Button>-->
 
-        <Button fx:id="scannerConnectedImage" styleClass="status-button">
-                <graphic>
-                        <ImageView fitHeight="30" fitWidth="30">
-                                <Image url="@../../../../images/ncmc_reader.png" />
-                        </ImageView>
-                </graphic>
-        </Button>
+<!--        <Button fx:id="scannerConnectedImage" styleClass="status-button">-->
+<!--                <graphic>-->
+<!--                        <ImageView fitHeight="30" fitWidth="30">-->
+<!--                                <Image url="@../../../../images/ncmc_reader.png" />-->
+<!--                        </ImageView>-->
+<!--                </graphic>-->
+<!--        </Button>-->
 
-        <Button fx:id="printerConnectedImage" styleClass="status-button">
-                <graphic>
-                        <ImageView fitHeight="30" fitWidth="30">
-                                <Image url="@../../../../images/printer.png" />
-                        </ImageView>
-                </graphic>
-        </Button>
+<!--        <Button fx:id="printerConnectedImage" styleClass="status-button">-->
+<!--                <graphic>-->
+<!--                        <ImageView fitHeight="30" fitWidth="30">-->
+<!--                                <Image url="@../../../../images/printer.png" />-->
+<!--                        </ImageView>-->
+<!--                </graphic>-->
+<!--        </Button>-->
 
-        <Button fx:id="scuConnectedImage" styleClass="status-button">
-                <graphic>
-                        <ImageView fitHeight="30" fitWidth="30">
-                                <Image url="@../../../../images/icon_scu.png" />
-                        </ImageView>
-                </graphic>
-        </Button>
+<!--        <Button fx:id="scuConnectedImage" styleClass="status-button">-->
+<!--                <graphic>-->
+<!--                        <ImageView fitHeight="30" fitWidth="30">-->
+<!--                                <Image url="@../../../../images/icon_scu.png" />-->
+<!--                        </ImageView>-->
+<!--                </graphic>-->
+<!--        </Button>-->
 
-        <Button fx:id="ccuConnectedImage" styleClass="status-button">
-                <graphic>
-                        <ImageView fitHeight="30" fitWidth="30">
-                                <Image url="@../../../../images/ccu.png" />
-                        </ImageView>
-                </graphic>
-        </Button>
+<!--        <Button fx:id="ccuConnectedImage" styleClass="status-button">-->
+<!--                <graphic>-->
+<!--                        <ImageView fitHeight="30" fitWidth="30">-->
+<!--                                <Image url="@../../../../images/ccu.png" />-->
+<!--                        </ImageView>-->
+<!--                </graphic>-->
+<!--        </Button>-->
 
-        <Button fx:id="readerConnectedImage" styleClass="status-button">
-                <graphic>
-                        <ImageView fitHeight="30" fitWidth="30">
-                                <Image url="@../../../../images/card_Reader.png" />
-                        </ImageView>
-                </graphic>
-        </Button>
+<!--        <Button fx:id="readerConnectedImage" styleClass="status-button">-->
+<!--                <graphic>-->
+<!--                        <ImageView fitHeight="30" fitWidth="30">-->
+<!--                                <Image url="@../../../../images/card_Reader.png" />-->
+<!--                        </ImageView>-->
+<!--                </graphic>-->
+<!--        </Button>-->
 
-        <Button fx:id="pduConnectedImage" styleClass="status-button">
-                <graphic>
-                        <ImageView fitHeight="30" fitWidth="30">
-                                <Image url="@../../../../images/icon_pdu.png" />
-                        </ImageView>
-                </graphic>
-        </Button>
+<!--        <Button fx:id="pduConnectedImage" styleClass="status-button">-->
+<!--                <graphic>-->
+<!--                        <ImageView fitHeight="30" fitWidth="30">-->
+<!--                                <Image url="@../../../../images/icon_pdu.png" />-->
+<!--                        </ImageView>-->
+<!--                </graphic>-->
+<!--        </Button>-->
 
 
 </HBox>

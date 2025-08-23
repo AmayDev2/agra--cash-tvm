@@ -304,7 +304,8 @@ public class StationSelectionController {
             FXMLLoader fxmlLoader = ViewFactory.getPaymentSummeryView();
             fxmlLoader.setControllerFactory(param -> new PaymentController(
                     this.stackPane, this.borderPane, this.agent, this.stationData,
-                    this.selectedDestination, this.ticketType, this.quantity, fare));
+                    this.selectedDestination, this.ticketType,fare
+            ));
 
             this.stackPane.getChildren().add(fxmlLoader.load());
             this.borderPane.setCenter(this.stackPane);

@@ -144,6 +144,7 @@ public class TVMController {
     }
 
     public void onClickSjtButton(ActionEvent actionEvent) {
+        borderPane.setBottom(null);
         FXMLLoader loader=  ViewFactory.getTicketSelectionView();
         loader.setControllerFactory(c -> new TicketSelectionController(borderPane, stackPane, agent, stationData, TicketType.SINGLE));
         try {
@@ -156,6 +157,7 @@ public class TVMController {
     }
 
     public void onClickRjtButton(ActionEvent actionEvent) {
+        borderPane.setBottom(null);
         FXMLLoader loader=  ViewFactory.getTicketSelectionView();
         loader.setControllerFactory(c -> new TicketSelectionController(borderPane, stackPane, agent, stationData, TicketType.RETURN));
         try {
@@ -168,6 +170,7 @@ public class TVMController {
     }
 
     public void onClickGtButton(ActionEvent actionEvent) {
+        borderPane.setBottom(null);
         FXMLLoader loader=  ViewFactory.getTicketSelectionView();
         loader.setControllerFactory(c -> new TicketSelectionController(borderPane, stackPane, agent, stationData, TicketType.GROUP));
         try {
@@ -177,5 +180,15 @@ public class TVMController {
         }
 
         actionEvent.consume();
+    }
+
+    public void onClickNcmc(ActionEvent actionEvent) {
+    }
+
+    public void onClickBalanceUpdate(ActionEvent actionEvent) {
+    }
+
+    public void onClickCardInquiry(ActionEvent actionEvent) {
+
     }
 }

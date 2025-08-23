@@ -6,8 +6,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="518.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17"
-      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tvm.controller.TicketSelectionController">
+<VBox alignment="CENTER" prefHeight="518.0" prefWidth="1024.0"
+      stylesheets="@css/structure.css"
+      style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.amay.tvm.controller.TicketSelectionController">
 
     <Label styleClass="heading-label" text="Select Destination Station" textAlignment="CENTER">
     </Label>
@@ -21,22 +24,23 @@
                             </padding>
                             <VBox.margin>
                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                            </VBox.margin></GridPane>
+                            </VBox.margin>
+                        </GridPane>
                     </children>
                 </VBox>
             </HBox>
             <HBox alignment="CENTER" fillHeight="false" minWidth="50.0" prefHeight="50.0" prefWidth="1024.0" spacing="10.0" VBox.vgrow="ALWAYS">
                 
                 <Button fx:id="btnBack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#navigateToHomePage" prefHeight="60.0" prefWidth="250.0"
-                        styleClass="button-nav"
+                        styleClass="nav-button"
                         text="Back" textAlignment="CENTER" textFill="#0071b3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
-                    <graphic>
-                        <ImageView fx:id="iconView" fitHeight="50.0" fitWidth="50.0" rotate="180.0" translateX="-50.0">
-                            <image>
-                                <Image url="@../../../../images/tvm/arrow-circle.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
+<!--                    <graphic>-->
+<!--                        <ImageView fx:id="iconView" fitHeight="50.0" fitWidth="50.0" rotate="180.0" translateX="-50.0">-->
+<!--                            <image>-->
+<!--                                <Image url="@../../../../images/tvm/arrow-circle.png" />-->
+<!--                            </image>-->
+<!--                        </ImageView>-->
+<!--                    </graphic>-->
                     <GridPane.margin>
                         <Insets bottom="30.0" left="50.0" />
                     </GridPane.margin>
@@ -46,14 +50,14 @@
                 </Button>
 
 
-                <Button fx:id="btnSubmit" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#confirmSelection" prefHeight="60.0" prefWidth="250.0"  styleClass="button-nav" text="Continue" textAlignment="CENTER" textFill="#0071b3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
-                    <graphic>
-                        <ImageView fx:id="iconView1" fitHeight="50.0" fitWidth="50.0" translateX="15.0">
-                            <image>
-                                <Image url="@../../../../images/tvm/arrow-circle.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
+                <Button fx:id="btnSubmit" contentDisplay="RIGHT" styleClass="nav-button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#confirmSelection" prefHeight="60.0" prefWidth="250.0" text="Continue" textAlignment="CENTER" textFill="#0071b3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+<!--                    <graphic>-->
+<!--                        <ImageView fx:id="iconView1" fitHeight="50.0" fitWidth="50.0" translateX="15.0">-->
+<!--                            <image>-->
+<!--                                <Image url="@../../../../images/tvm/arrow-circle.png" />-->
+<!--                            </image>-->
+<!--                        </ImageView>-->
+<!--                    </graphic>-->
                     <font>
                         <Font name="Verdana Bold" size="30.0" />
                     </font>

@@ -12,6 +12,7 @@ import com.amay.tom.service.tom.IApplicationService;
 import com.amay.tom.systemcontrole.SystemControl;
 import com.amay.tom.utils.env.EnvFile;
 import com.amay.tvm.bnr.BNRIntegration;
+import com.amay.utils.PrinterUtil;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
