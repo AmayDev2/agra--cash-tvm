@@ -24,7 +24,7 @@
 }
 
 .logo-pane {
-    -fx-background-image: url("/images/indoor-bhopal-logo.png");
+    -fx-background-image: url("/images/upmrc_logo.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-background-size: contain;      /* keep aspect ratio */

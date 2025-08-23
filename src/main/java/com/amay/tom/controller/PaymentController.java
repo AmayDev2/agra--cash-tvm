@@ -139,7 +139,6 @@ public class PaymentController implements PaymentControllerListener {
         cashReceived.setDisable(false);
         cashReceived.setVisible(true);
         event.consume();
-
     }
 
     @FXML

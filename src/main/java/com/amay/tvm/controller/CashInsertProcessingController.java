@@ -5,8 +5,11 @@ import com.jxfs.events.JxfsException;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 
@@ -87,6 +90,23 @@ public class CashInsertProcessingController {
                 flowPane.getChildren().add(chip);
             }
 
+//            for (Integer note : list) {
+//                // Load the image for the note
+//                // Assume you have images named like 10.png, 20.png, etc., in resources/icons/notes/
+//                String imagePath = "/icons/notes/" + note + ".png";
+//                ImageView noteImage = new ImageView(new Image(getClass().getResourceAsStream(imagePath)));
+//
+//                // Set preferred size for the note image
+//                noteImage.setFitWidth(80);  // adjust width as needed
+//                noteImage.setFitHeight(40); // adjust height as needed
+//                noteImage.setPreserveRatio(true);
+//
+//                // Optional: add some margin/padding between notes
+//                FlowPane.setMargin(noteImage, new Insets(5, 5, 5, 5));
+//
+//                // Add the image to the FlowPane
+//                flowPane.getChildren().add(noteImage);
+//            }
         });
     }
 

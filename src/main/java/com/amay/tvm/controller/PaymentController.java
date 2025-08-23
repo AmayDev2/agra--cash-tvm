@@ -26,6 +26,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -590,27 +591,37 @@ public class PaymentController {
 
     private void showWaiting() {
 
-        // Create spinner
-        ProgressIndicator spinner = new ProgressIndicator();
-        spinner.setStyle(
-                "-fx-progress-color: cyan;" +  // updated color
-                        "-fx-scale-x: 8;" +
-                        "-fx-scale-y: 8;"
-        );
+//        // Create spinner
+//        ProgressIndicator spinner = new ProgressIndicator();
+//        spinner.setStyle(
+//                "-fx-progress-color: cyan;" +  // updated color
+//                        "-fx-scale-x: 8;" +
+//                        "-fx-scale-y: 8;"
+//        );
+//
+//        // Create text label
+//        Label loadingText = new Label("Generating Tickets...");
+//        loadingText.setStyle("-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: gold;"); // complementary color
+//
+//        // Put both inside a StackPane
+//        StackPane spinnerWithText = new StackPane(spinner, loadingText);
+//        StackPane.setAlignment(loadingText, Pos.CENTER);
+//
+//        // Optional: semi-transparent background
+//        spinnerWithText.setStyle("-fx-background-color: rgba(0, 0, 0, 0.3);");
+//
+//        // Add overlay
+//        Platform.runLater(()->this.stackPane.getChildren().add(spinnerWithText));
+        FXMLLoader fxmlLoader = ViewFactory.getTxnProcess();
 
-        // Create text label
-        Label loadingText = new Label("Generating Tickets...");
-        loadingText.setStyle("-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: gold;"); // complementary color
+        Platform.runLater(() -> {
+            try {
+                this.stackPane.getChildren().add(fxmlLoader.load());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
 
-        // Put both inside a StackPane
-        StackPane spinnerWithText = new StackPane(spinner, loadingText);
-        StackPane.setAlignment(loadingText, Pos.CENTER);
-
-        // Optional: semi-transparent background
-        spinnerWithText.setStyle("-fx-background-color: rgba(0, 0, 0, 0.3);");
-
-        // Add overlay
-        Platform.runLater(()->this.stackPane.getChildren().add(spinnerWithText));
     }
 
 
