@@ -32,7 +32,7 @@ public class CashPayment implements PaymentMedia {
 
             // Navigate to completion screen
             FXMLLoader fxmlLoader = ViewFactory.getCashPaymentView();
-            CashInsertProcessingController cashInsertProcessingController=new CashInsertProcessingController((int)amount);
+            CashInsertProcessingController cashInsertProcessingController=new CashInsertProcessingController((int)amount,stackPane);
             fxmlLoader.setControllerFactory((x)->cashInsertProcessingController);
             Platform.runLater(()->{try { stackPane.getChildren().add(fxmlLoader.load());}catch (Exception e){
                 Logger.debug("BNR FAILED : "+e.getMessage());

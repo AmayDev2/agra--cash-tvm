@@ -2,12 +2,14 @@ package com.amay.tvm.controller;
 
 import com.amay.tvm.bnr.BNRIntegration;
 import com.jxfs.events.JxfsException;
+import javafx.animation.PauseTransition;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
@@ -105,14 +107,16 @@ public class CashInsertProcessingController {
 
     private boolean isSuccess;
     private boolean remainingAmount;
+    private StackPane stackPane;
 
     private int amountToPay=40;
     public  CashInsertProcessingController(){
 
     }
 
-    public  CashInsertProcessingController(int amount){
+    public  CashInsertProcessingController(int amount, StackPane stackPane){
         super();
+        this.stackPane=stackPane;
         this.amountToPay=amount;
         this.insertedAmountVal=0;
         this.listOfNotes=new ArrayList<>();
@@ -126,7 +130,6 @@ public class CashInsertProcessingController {
 
     @FXML
     private void initialize(){
-
         this.totalAmount.setText(this.amountToPay+"/-");
         this.remainedAmount.setText(this.amountToPay+"/-");
         this.insertedAmount.setText("00/-");
@@ -134,12 +137,15 @@ public class CashInsertProcessingController {
     }
 
     public void skipPrintReceipt(ActionEvent actionEvent)  {
-        isSuccess=false;
+        isSuccess = false;
         try {
-            BNRIntegration.cancel();
+            BNRIntegration.cancel(flowPaneInsertedNotes.getChildren().isEmpty());
         } catch (JxfsException e) {
             e.printStackTrace();
         }
+        PauseTransition pauseTransition = new PauseTransition(javafx.util.Duration.seconds(2));
+        pauseTransition.setOnFinished(event -> Platform.runLater(()->this.stackPane.getChildren().removeLast()));
+        pauseTransition.play();
         actionEvent.consume();
     }
 

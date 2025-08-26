@@ -35,7 +35,7 @@ public class MaxChangePossibleService {
             // Use maximum possible of current denomination
             int amountUsed = currentDenomination.amount * maxPossibleQuantity;
             returnableAmountObject.amountDetailList.add(
-                    new AmountDetail(currentDenomination.amount, amountUsed, maxPossibleQuantity)
+                    new AmountDetail(currentDenomination.amount, amountUsed, maxPossibleQuantity).setContainerId(currentDenomination.getContainerId())
             );
             returnableAmountObject.totalAmount += amountUsed;
             totalReturnableAmount -= amountUsed;

@@ -9,6 +9,7 @@ import com.amay.tvm.coin.service.CoinModuleService;
 import com.amay.tvm.coin.service.CoinResponseDecoder;
 import com.amay.tvm.coin.service.HoppersRegistry;
 import com.amay.tvm.coin.service.MaxChangePossibleService;
+import org.tinylog.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,7 @@ public enum CoinModuleInterface {
 	public CoinModuleService setupCoinModule(String comPort){
 		service = new CoinModuleService();
 		service.connect(comPort);
-		HoppersRegistry.INSTANCE.setHoppers(8,10,0);
+		HoppersRegistry.INSTANCE.setHoppers(5,10,10,     8,10,0);
 		return service;
 	}
 	public void closeCoinModule(){
@@ -34,46 +35,41 @@ public enum CoinModuleInterface {
 		return result.totalAmount == amount;
 	}
 
-	public boolean dispense(int amount){
+	public CoinResponseDecoder.CoinModuleDispenseResponse dispense(int amount){
+		List<CoinResponseDecoder.DispenseResult> list=new ArrayList<>();
+		CoinResponseDecoder.CoinModuleDispenseResponse dispenseResponse=new CoinResponseDecoder.CoinModuleDispenseResponse(false,0,"msg",list);;
 		try{
 		HaveAmountObject haveAmount = new HaveAmountObject(HoppersRegistry.INSTANCE.getHoppers());
-//		haveAmount.amountDetailList.addAll();
 		haveAmount.totalAmount = amount;
 		ReturnableAmountObject result = new MaxChangePossibleService().getReturnableAmount(new ReturnableAmountObject(new ArrayList<>()),haveAmount, amount, 0);
 		if(result.totalAmount!=amount && !service.isConnected()){
-			return false;
+			return dispenseResponse;
 		}
 
-		List<CoinResponseDecoder.DispenseResult> list=new ArrayList<>();
 		for(AmountDetail amountDetail:result.amountDetailList) {
-			int hopper=getHopper(amountDetail.amount);
+			int hopper= Integer.parseInt(amountDetail.getContainerId());
 			ModuleResponse response= service.dispenseCoin((byte) hopper, (byte) amountDetail.quantity);
 			System.out.println("Dispense done, DATA=" + response.getData().length + " bytes");
 			CoinResponseDecoder.DispenseResult dispenseResult=CoinResponseDecoder.decodeDispenseResponse(response.getData());
-			HoppersRegistry.INSTANCE.updateHopper(hopper,dispenseResult.amountDispensed);
+			HoppersRegistry.INSTANCE.updateHopper(hopper,dispenseResult.quantityDispensed);
 			list.add(dispenseResult);
 		}
-		boolean statue = true;
+
+		boolean statue = false;  // NO NEED
 		for(CoinResponseDecoder.DispenseResult dispenseResult:list){
 			statue=statue || dispenseResult.success;
 		}
-		return statue;
+
+		dispenseResponse.message="Dispense completed";
+		dispenseResponse.success=statue;
+		dispenseResponse.setTotalAmount();
+
+		System.out.println("Dispense response: "+dispenseResponse);
 		}catch (Exception e){
-			e.printStackTrace();
-			return false;
+			Logger.error("ERROR DURING DISPENSE COINS : ",e.getMessage());
 		}
+		return dispenseResponse;
 	}
-
-	private int getHopper(int amount) {
-		if(amount==10){
-			return 2;
-		}else if(amount==5){
-			return 1;
-		}else{
-			return 0;
-		}
-	}
-
 
 	public ReturnableAmountObject getMaxChangeableAmount(HaveAmountObject haveAmountObject, long amount){
 		ReturnableAmountObject result = new MaxChangePossibleService().getReturnableAmount(new ReturnableAmountObject(new ArrayList<>()),haveAmountObject, (int) amount, 0);

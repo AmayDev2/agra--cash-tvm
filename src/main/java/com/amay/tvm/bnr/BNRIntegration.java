@@ -5,6 +5,7 @@ import com.amay.tvm.coin.CoinModuleInterface;
 import com.amay.tvm.coin.model.AmountDetail;
 import com.amay.tvm.coin.model.HaveAmountObject;
 import com.amay.tvm.coin.model.ReturnableAmountObject;
+import com.amay.tvm.coin.service.CoinResponseDecoder;
 import com.jxfs.control.IJxfsBaseControl;
 import com.jxfs.control.cdr.*;
 import com.jxfs.events.IJxfsIntermediateListener;
@@ -57,19 +58,26 @@ public class BNRIntegration {
 
     }
 
-        public static void cancel() throws JxfsException {
+    //TODO: FIX THIS METHOD
+ public static void cancel(boolean empty) throws JxfsException {
 
         try {
             control.cancel(1);
+            Thread.sleep(2000);
         } catch (JxfsException e) {
             Logger.debug(e.getMessage());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
 
-       bnrListener.informationToShow(BNRMessage.CANCEL_TRYING);
-        try {
-            cashInRollback();
-        } catch (JxfsException e) {
-            Logger.debug(e.getMessage());
+     bnrListener.informationToShow(BNRMessage.CANCEL_TRYING);
+
+        if(!empty) {
+            try {
+                cashInRollback();
+            } catch (JxfsException e) {
+                Logger.debug(e.getMessage());
+            }
         }
 //            endCashInTransaction();
             bnrListener.informationToShow(BNRMessage.CANCELED);
@@ -200,6 +208,8 @@ public class BNRIntegration {
              bnrListener.compareTotalAmountAndChange((int)acceptedAmount.acceptedAmount,(int)amountToChange);
                 try {
                  dispenseAndPresent(amountToChange);
+
+                 //TODO: IF NOT HAVE CHANGE THEN TVM SLIP
                 } catch (JxfsException e) {
                     listener.setStatus(BNRStatus.FAILED);
                     throw new RuntimeException(e);
@@ -774,7 +784,9 @@ public class BNRIntegration {
 
                     int changeNeeded=(int) requiredChange - maxChangeAvailable;
                     System.out.println("Unfortunately BNR can`t change this amount of bills "+changeNeeded);
-                    if(!CoinModuleInterface.INSTANCE.dispense( changeNeeded/100)) {
+                    CoinResponseDecoder.CoinModuleDispenseResponse dispenseResponse=CoinModuleInterface.INSTANCE.dispense( changeNeeded/100);
+                    Logger.info(dispenseResponse.toString());
+                    if(!dispenseResponse.success) {
                         //TODO: if coin module don't have any  change  process for role back
                         acceptAmountResponse.setStatus(false);
                         try {
@@ -785,7 +797,7 @@ public class BNRIntegration {
                             e.printStackTrace();
                         }
                     }else{
-                        acceptAmountResponse.setCoinChangedAmount(changeNeeded);
+                        acceptAmountResponse.setCoinChangedAmount(dispenseResponse.amountDispensed*100);
                         acceptAmountResponse.setStatus(true);
                     }
                 }else{
