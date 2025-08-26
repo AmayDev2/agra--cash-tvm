@@ -16,6 +16,8 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
@@ -88,14 +90,12 @@ public class LoginController {
                 }
         ))
         );
-
-
-
     }
 
     @FXML
     void loginButtonClicked(ActionEvent event) throws Exception {
         mainStage = (Stage) messageLabel.getScene().getWindow();
+        mainStage.getScene().getStylesheets().add(getClass().getResource("/com/amay/tom/tvm/css/theme.css").toExternalForm());
         this.shiftService.setMainStage(mainStage);
         String userName= usernameField.getText();
         String userPass=passwordField.getText();

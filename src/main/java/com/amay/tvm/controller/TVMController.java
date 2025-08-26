@@ -5,6 +5,7 @@ import com.amay.tom.agent.Agent;
 import com.amay.tom.config.SystemConfig;
 import com.amay.tom.controller.components.StatusBottomBarView;
 import com.amay.tom.enums.DeviceOperationMode;
+import com.amay.tom.model.TicketType;
 import com.amay.tom.repository.StationData;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -26,13 +27,18 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public class TVMController {
+    @FXML private Button sjtButton;
+    @FXML private Button rjtButton;
+    @FXML private Button gtButton;
+    @FXML private Button balanceUpdateButton;
+    @FXML private Button cardInquiryButton;
+    @FXML private Button ncmcButton;
     @FXML private GridPane home;
     @FXML private Label labelStationName;
     @FXML private Label lableTime;
     @FXML private Label labelDate;
 
     @FXML private Button qrPurchaseButton;
-    @FXML private Button ncmcButton;
 
     @FXML private StackPane stackPane;
     @FXML private BorderPane borderPane;
@@ -84,17 +90,17 @@ public class TVMController {
     }
 
 
-    @FXML private void  onClickQRTicketButton(ActionEvent actionEvent) {
-        FXMLLoader loader=  ViewFactory.getTicketSelectionView();
-        loader.setControllerFactory(c -> new TicketSelectionController(borderPane, stackPane, agent, stationData));
-        try {
-            stackPane.getChildren().add(loader.load());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        actionEvent.consume();
-    }
+//    @FXML private void  onClickQRTicketButton(ActionEvent actionEvent) {
+//        FXMLLoader loader=  ViewFactory.getTicketSelectionView();
+//        loader.setControllerFactory(c -> new TicketSelectionController(borderPane, stackPane, agent, stationData));
+//        try {
+//            stackPane.getChildren().add(loader.load());
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        actionEvent.consume();
+//    }
 
 
     private void setOperationModeListener(){
@@ -137,4 +143,52 @@ public class TVMController {
         });
     }
 
+    public void onClickSjtButton(ActionEvent actionEvent) {
+        borderPane.setBottom(null);
+        FXMLLoader loader=  ViewFactory.getTicketSelectionView();
+        loader.setControllerFactory(c -> new TicketSelectionController(borderPane, stackPane, agent, stationData, TicketType.SINGLE));
+        try {
+            stackPane.getChildren().add(loader.load());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        actionEvent.consume();
+    }
+
+    public void onClickRjtButton(ActionEvent actionEvent) {
+        borderPane.setBottom(null);
+        FXMLLoader loader=  ViewFactory.getTicketSelectionView();
+        loader.setControllerFactory(c -> new TicketSelectionController(borderPane, stackPane, agent, stationData, TicketType.RETURN));
+        try {
+            stackPane.getChildren().add(loader.load());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        actionEvent.consume();
+    }
+
+    public void onClickGtButton(ActionEvent actionEvent) {
+        borderPane.setBottom(null);
+        FXMLLoader loader=  ViewFactory.getTicketSelectionView();
+        loader.setControllerFactory(c -> new TicketSelectionController(borderPane, stackPane, agent, stationData, TicketType.GROUP));
+        try {
+            stackPane.getChildren().add(loader.load());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        actionEvent.consume();
+    }
+
+    public void onClickNcmc(ActionEvent actionEvent) {
+    }
+
+    public void onClickBalanceUpdate(ActionEvent actionEvent) {
+    }
+
+    public void onClickCardInquiry(ActionEvent actionEvent) {
+
+    }
 }

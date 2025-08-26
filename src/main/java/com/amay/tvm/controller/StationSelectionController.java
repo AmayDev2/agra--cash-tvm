@@ -56,12 +56,13 @@ public class StationSelectionController {
      * Constructor
      */
     public StationSelectionController(BorderPane borderPane, StackPane pane, Agent agent,
-                                      StationData stationData, Station selectedDestination) {
+                                      StationData stationData, TicketType ticketType,Station selectedDestination) {
         this.borderPane = borderPane;
         this.stackPane = pane;
         this.agent = agent;
         this.stationData = stationData;
         this.selectedDestination = selectedDestination;
+        this.ticketType=ticketType;
     }
 
     /**
@@ -71,7 +72,6 @@ public class StationSelectionController {
     public void initialize() {
         try {
             // Initialize default values
-            this.ticketType = null;
             this.quantity = 0;
             this.fare = 0;
 
@@ -304,7 +304,8 @@ public class StationSelectionController {
             FXMLLoader fxmlLoader = ViewFactory.getPaymentSummeryView();
             fxmlLoader.setControllerFactory(param -> new PaymentController(
                     this.stackPane, this.borderPane, this.agent, this.stationData,
-                    this.selectedDestination, this.ticketType, this.quantity, fare));
+                    this.selectedDestination, this.ticketType,fare
+            ));
 
             this.stackPane.getChildren().add(fxmlLoader.load());
             this.borderPane.setCenter(this.stackPane);

@@ -26,6 +26,13 @@ public class ViewFactory {
         return fxmlLoader;
     }
 
+    public static FXMLLoader getTxnProcess() {
+        FXMLLoader fxmlLoader = new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/tvm/txn_process.fxml"));
+        Logger.info(fxmlLoader.hashCode());
+        return fxmlLoader;
+    }
+
+
     public static FXMLLoader getHome() {
         FXMLLoader fxmlLoader = new FXMLLoader(ViewFactory.class.getResource("hello-view.fxml"));
         return fxmlLoader;
