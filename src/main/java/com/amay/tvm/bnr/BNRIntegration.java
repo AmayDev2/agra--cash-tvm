@@ -1,6 +1,10 @@
 package com.amay.tvm.bnr;
 
 
+import com.amay.tvm.coin.CoinModuleInterface;
+import com.amay.tvm.coin.model.AmountDetail;
+import com.amay.tvm.coin.model.HaveAmountObject;
+import com.amay.tvm.coin.model.ReturnableAmountObject;
 import com.jxfs.control.IJxfsBaseControl;
 import com.jxfs.control.cdr.*;
 import com.jxfs.events.IJxfsIntermediateListener;
@@ -61,7 +65,7 @@ public class BNRIntegration {
             Logger.debug(e.getMessage());
         }
 
-            bnrListener.informationToShow(BNRMessage.CANCEL_TRYING);
+       bnrListener.informationToShow(BNRMessage.CANCEL_TRYING);
         try {
             cashInRollback();
         } catch (JxfsException e) {
@@ -170,12 +174,14 @@ public class BNRIntegration {
 
     public static boolean cashIn(int amount,IBNRListener listener) {
         BNRIntegration.bnrListener=listener;
-//        try {
-//            endCashInTransaction();
+        try {
+            endCashInTransaction();
 //            control.open();
-//        } catch (JxfsException e) {
-//            e.printStackTrace();
-//        }
+        } catch (JxfsException e) {
+            e.printStackTrace();
+        }
+
+
 
 
          System.out.print("Insert amount to pay : ");
@@ -189,8 +195,8 @@ public class BNRIntegration {
             throw new RuntimeException(e);
         }
         System.out.println("You`ve inserted Total "+acceptedAmount+"} {"+CASH_IN_CURRENCY);
-        if (hasChange(acceptedAmount.acceptedAmount)) {
-             long amountToChange = acceptedAmount.acceptedAmount - CASH_IN_AMOUNT;
+        if ( !acceptedAmount.isRollback() && hasChange(acceptedAmount.acceptedAmount-acceptedAmount.coinChangedAmount)) {
+             long amountToChange = (acceptedAmount.acceptedAmount-acceptedAmount.coinChangedAmount) - CASH_IN_AMOUNT;
              bnrListener.compareTotalAmountAndChange((int)acceptedAmount.acceptedAmount,(int)amountToChange);
                 try {
                  dispenseAndPresent(amountToChange);
@@ -198,9 +204,7 @@ public class BNRIntegration {
                     listener.setStatus(BNRStatus.FAILED);
                     throw new RuntimeException(e);
                 }
-   }
-
-
+        }
 
         return acceptedAmount.status;
     }//main
@@ -217,6 +221,7 @@ public class BNRIntegration {
                 System.out.print(x.getCashType().getValue()/100 +" , ");
                 list.add(x.getCashType().getValue()/100);
             });
+
             bnrListener.setAllowedNotes(list.stream().toList());
         }
 
@@ -254,6 +259,23 @@ public class BNRIntegration {
             }
             x.setEnableDenomination(x.getCashType().getValue()<=note);
         }
+
+//        vector.sort(Comparator.comparingInt((MEIDenominationInfo a) -> a.getCashType().getValue()).reversed());
+//        for(MEIDenominationInfo x:vector){
+//            if(x.isEnableDenomination()){
+//                HaveAmountObject haveAmountObject = null;
+//                try {
+//                    haveAmountObject = getBnrHaveAmountObject();
+//                    boolean MaxRefundable=CoinModuleInterface.INSTANCE.isDenominationPossible(haveAmountObject.amountDetailList,(int)(x.getCashType().getValue()-amount)/100);
+//                    x.setEnableDenomination( x.isEnableDenomination() && MaxRefundable);
+//                } catch (JxfsException e) {
+//                    e.printStackTrace();
+//                }
+//                break;
+//            }
+//        }
+//
+//        vector.sort(Comparator.comparingInt((MEIDenominationInfo a) -> a.getCashType().getValue()).reversed());
     }
 
     /****************************************************************************
@@ -720,6 +742,8 @@ public class BNRIntegration {
     static class AcceptAmountResponse{
         private long acceptedAmount;
         private boolean status;
+        private boolean rollback;
+        private int coinChangedAmount;
     }
 
     public static AcceptAmountResponse acceptAmountV2(long amount) throws JxfsException {
@@ -739,17 +763,36 @@ public class BNRIntegration {
             if (insertedAmount > amount) {
                 long requiredChange = insertedAmount - amount;
                 acceptAmountResponse.setAcceptedAmount(insertedAmount);
-                hasChange = isDenominational(requiredChange); // do i have exchange?
+                hasChange = isDenominational(requiredChange); // do I have exchange?
+                int maxChangeAvailable= 0;
                 // Return money, if bnr can't change it
                 if (!hasChange) {
-                    System.out.println("Unfortunately BNR can`t change this amount of bills "+requiredChange);
-                    if(true) { //TODO: if coin module don't have any  change  process for role back
+//                    --->>> get maximum change available in bnr
+                    HaveAmountObject haveAmountObject=getBnrHaveAmountObject();
+                    ReturnableAmountObject returnableAmountObject=CoinModuleInterface.INSTANCE.getMaxChangeableAmount(haveAmountObject,requiredChange/100);
+                    maxChangeAvailable=returnableAmountObject.totalAmount*100;
+
+                    int changeNeeded=(int) requiredChange - maxChangeAvailable;
+                    System.out.println("Unfortunately BNR can`t change this amount of bills "+changeNeeded);
+                    if(!CoinModuleInterface.INSTANCE.dispense( changeNeeded/100)) {
+                        //TODO: if coin module don't have any  change  process for role back
                         acceptAmountResponse.setStatus(false);
-                        cashInRollback();
+                        try {
+                            cashInRollback();
+                            acceptAmountResponse.setAcceptedAmount(0);
+                            acceptAmountResponse.setRollback(true);
+                        } catch (JxfsException e) {
+                            e.printStackTrace();
+                        }
+                    }else{
+                        acceptAmountResponse.setCoinChangedAmount(changeNeeded);
+                        acceptAmountResponse.setStatus(true);
                     }
                 }else{
                     acceptAmountResponse.setStatus(true);
                 }
+            }else{
+                acceptAmountResponse.setStatus(true);
             }
 
         endCashInTransaction();
@@ -1032,6 +1075,38 @@ public class BNRIntegration {
 
         System.out.println("TOTAL SUM : "+sum.get()/100);
         return sum.get();
+
+    }//observeCashUnit
+
+
+    private static HaveAmountObject getBnrHaveAmountObject() throws JxfsException {
+
+        System.out.println("\n******************* Cash Units *******************");
+//        System.out.println(queryCashUnit());
+        MEICashUnit cashUnit=queryCashUnit();
+        HaveAmountObject bnrHaveAmount=new HaveAmountObject(new ArrayList<>());
+
+        AtomicInteger sum=new AtomicInteger(0);
+
+        cashUnit.getLogicalCashUnits()     // full list
+                .subList(5, 9)               // indices 5 (inclusive) … 9 (exclusive) ⇒ elements 5-8
+                .forEach(x -> {
+                    cashUnit.getPcus().stream().filter(v -> v.getName().equals(x.getPhysicalName()))
+                            .filter(x1->x1.getCount()!=0)
+                            .findFirst().ifPresent(p -> {
+                                System.out.println(x.getCashTypeDescription().split(" ")[1]+"*"+p.getCount() + " -> " + Integer.parseInt(x.getCashTypeDescription().split(" ")[1]) * p.getCount()+" : "+x.getPhysicalName());
+                                sum.getAndAdd(Integer.parseInt(x.getCashTypeDescription().split(" ")[1]) * p.getCount());
+                                int amount=Integer.parseInt(x.getCashTypeDescription().split(" ")[1])/100;
+                                int quantity=p.getCount();
+                                bnrHaveAmount.amountDetailList.add(new AmountDetail(amount,amount*quantity,quantity));
+                            });
+                });
+
+        bnrHaveAmount.amountDetailList.sort(Comparator.comparingInt(AmountDetail::getAmount).reversed());
+
+        System.out.println("TOTAL SUM : "+sum.get());
+        bnrHaveAmount.totalAmount=sum.get();
+        return bnrHaveAmount;
 
     }//observeCashUnit
 

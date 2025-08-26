@@ -57,6 +57,7 @@ import com.amay.tom.utils.env.EnvLoader;
 import com.amay.tom.utils.helper.Helper;
 import com.amay.tom.utils.jsonFile.JsonFileWriterUtil;
 import com.amay.tvm.bnr.BNRIntegration;
+import com.amay.tvm.coin.CoinModuleInterface;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -430,7 +431,8 @@ public class TomInitialize implements ITomInitialize {
                 this.peripheralDeviceStatus();
                 this.updateBusinessTime();
                 //this.pushRemainedDate();
-//                BNRIntegration.bnrOpen();
+                BNRIntegration.bnrOpen();
+                CoinModuleInterface.INSTANCE.setupCoinModule("COM6");
                 this.onSuccessfulInitialization(null);
                 this.updateUI(0.9, "All done...");
             } catch (InterruptedException | IOException e) {

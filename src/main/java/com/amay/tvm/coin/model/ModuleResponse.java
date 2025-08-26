@@ -1,0 +1,21 @@
+package com.amay.tvm.coin.model;
+
+import java.util.Arrays;
+
+public class ModuleResponse {
+	private final byte command;
+	private final byte sequenceNumber;
+	private final byte[] data;
+
+	public ModuleResponse(byte command, byte sequenceNumber, byte[] data) {
+		this.command = command;
+		this.sequenceNumber = sequenceNumber;
+		this.data = data == null ? new byte[0] : Arrays.copyOf(data, data.length);
+	}
+
+	public byte getCommand() { return command; }
+	public byte getSequenceNumber() { return sequenceNumber; }
+	public byte[] getData() { return Arrays.copyOf(data, data.length); }
+}
+
+
