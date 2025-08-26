@@ -432,7 +432,7 @@ public class TomInitialize implements ITomInitialize {
                 this.updateBusinessTime();
                 //this.pushRemainedDate();
                 BNRIntegration.bnrOpen();
-                CoinModuleInterface.INSTANCE.setupCoinModule("COM6");
+                CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort());
                 this.onSuccessfulInitialization(null);
                 this.updateUI(0.9, "All done...");
             } catch (InterruptedException | IOException e) {

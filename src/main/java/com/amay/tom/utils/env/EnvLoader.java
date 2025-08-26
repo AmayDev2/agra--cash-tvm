@@ -175,4 +175,8 @@ public class EnvLoader {
         String isUpdate = dotenv.get("UPDATE");
         return isUpdate != null && isUpdate.equalsIgnoreCase("false");
     }
+
+    public String getComPort() {
+        return  dotenv.get("COM_PORT");
+    }
 }

@@ -63,7 +63,7 @@
             <!-- Row 3: 0 centered below -->
             <Pane prefHeight="72" prefWidth="72" GridPane.columnIndex="0" GridPane.rowIndex="3" />
             <Button fx:id="btn0" onAction="#handleNumberClick" prefHeight="72" prefWidth="72" styleClass="numpad" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button fx:id="bkspc" onAction="#handleDeleteClick" prefHeight="72" prefWidth="72" styleClass="clear" text="Clear" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button fx:id="bkspc" onAction="#handleDeleteClick" prefHeight="72" prefWidth="72" styleClass="numpad" text="Clear" GridPane.columnIndex="2" GridPane.rowIndex="3" />
          <columnConstraints>
             <ColumnConstraints />
             <ColumnConstraints />
