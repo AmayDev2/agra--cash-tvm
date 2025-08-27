@@ -1,0 +1,20 @@
+=====================Log file succesfully created=====================
+2025-08-27 20-36-15.0629[]*****************************************
+2025-08-27 20-36-15.0631[]DLL Log Initialize. Verbosity: 6
+2025-08-27 20-36-15.0632[]*****************************************
+2025-08-27 20-36-15.0632[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-08-27 20-36-15.0633[]DLL Version: 1.07
+2025-08-27 20-36-15.0633[InitLibrary]Begin
+2025-08-27 20-36-15.0657[InitLibrary]Library SignID:00000101
+2025-08-27 20-36-15.0658[InitLibrary]Current SignID:00000101
+2025-08-27 20-36-15.0658[InitLibrary]End
+2025-08-27 20-36-15.0659[GetAPIVersion]Begin
+2025-08-27 20-36-15.0660[GetAPIVersion]API rel 1.07
+2025-08-27 20-36-15.0660[GetAPIVersion]End
+2025-08-27 20-36-15.0661[GetAPIVersionHwLibrary]Begin
+2025-08-27 20-36-15.0663[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-08-27 20-36-15.0663[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-08-27 20-36-15.0664[GetAPIVersionHwLibrary]End
+2025-08-27 20-36-15.0664[EnumUSBDevices]Begin
+2025-08-27 20-36-15.0669[EnumUSBDevices]Found 0 USB Devices
+2025-08-27 20-36-15.0670[EnumUSBDevices]End
