@@ -6,6 +6,7 @@ import com.amay.tom.config.SystemConfig;
 import com.amay.tom.controller.components.StatusBottomBarView;
 import com.amay.tom.model.Station;
 import com.amay.tom.model.TicketType;
+import com.amay.tom.repository.FareLine3;
 import com.amay.tom.repository.StationData;
 import com.amay.utils.TicketUtils;
 import javafx.event.ActionEvent;
@@ -16,6 +17,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
+import org.bouncycastle.pqc.math.linearalgebra.IntegerFunctions;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -143,9 +145,13 @@ public class TicketSelectionController {
 //            FXMLLoader loader = ViewFactory.getTicketSelectionDetailsView();
 //            loader.setControllerFactory(c -> new StationSelectionController(this.borderPane,this.pane, agent, stationData, ticketType,selectedDestination));
             FXMLLoader fxmlLoader = ViewFactory.getPaymentSummeryView();
+            int srcId = Integer.parseInt(this.currentStation.getStationId());
+            int desId = Integer.parseInt(this.selectedDestination.getStationId());
+            int multiplier = this.ticketType.equals(TicketType.RETURN) ? 2 : 1;
+            int fare = FareLine3.distanceMatrix[srcId][desId]*multiplier;
             fxmlLoader.setControllerFactory(param -> new PaymentController(
                     this.pane, this.borderPane, this.agent, this.stationData,
-                    this.selectedDestination, this.ticketType , TicketUtils.getFare(this.ticketType)
+                    this.selectedDestination, this.ticketType ,fare
             ));
             this.pane.getChildren().add(fxmlLoader.load());
         }catch (Exception e) {

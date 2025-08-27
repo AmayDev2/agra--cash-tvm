@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" minWidth="330.0" prefWidth="330.0" spacing="10.0" stylesheets="@../../../../css/mp_metro_eos.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.controller.EOSReport">
+    <children>
+        <!-- Header -->
+        <GridPane alignment="TOP_CENTER" hgap="10.0" vgap="5.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" />
+            </columnConstraints>
+            <children>
+                <Pane fx:id="logoPane" prefWidth="100.0" prefHeight="100.0">
+                </Pane>
+
+<!--                <ImageView fitHeight="100.0" fitWidth="100.0" preserveRatio="true">-->
+<!--                    <image>-->
+<!--                        <Image url="@../../../../images/indore-bhopal-logo.png" />-->
+<!--                    </image>-->
+<!--                </ImageView>-->
+                <Text text="Indore Metro" textAlignment="CENTER" wrappingWidth="115.69140625" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Text>
+                <Text text="End of Shift Report" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+<!--            <ImageView fitHeight="100.0" fitWidth="133.0">-->
+<!--               <image>-->
+<!--                  <Image url="@../../../../images/indore-bhopal-logo.png" />-->
+<!--               </image>-->
+<!--            </ImageView>-->
+            </children>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+
+        <!-- Metadata Section -->
+        <GridPane alignment="CENTER" hgap="5" minWidth="300.0" prefWidth="300.0" vgap="5">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="40" />
+                <ColumnConstraints halignment="CENTER" percentWidth="10" />
+                <ColumnConstraints percentWidth="50" />
+            </columnConstraints>
+            <children>
+                <Text text="Station Name" />
+                <Text text=":" GridPane.columnIndex="1" />
+                <Text fx:id="stationName" text="Station Name" GridPane.columnIndex="2" />
+
+                <Text text="Shift ID" GridPane.rowIndex="1" />
+                <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Text fx:id="shiftId" text="001" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+                <Text text="Shift Start" GridPane.rowIndex="2" />
+                <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Text fx:id="shiftStart" text="14-09-2023 14:00:00" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+                <Text text="Shift End" GridPane.rowIndex="3" />
+                <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Text fx:id="shiftEnd" text="14-09-2023 22:00:00" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+                <Text text="Equipment ID" GridPane.rowIndex="4" />
+                <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Text fx:id="equipmentId" text="3220702" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+
+                <Text text="Operator ID" GridPane.rowIndex="5" />
+                <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Text fx:id="operatorId" text="1111" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            </children>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+
+        <!-- Section A to J and Summary -->
+        <VBox fx:id="stockSection" alignment="CENTER" minWidth="300.0" prefWidth="300.0" spacing="5.0">
+            <Text styleClass="section-title" text="Start Balance" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Text>
+            <GridPane alignment="TOP_CENTER" minWidth="300.0" prefWidth="300.0" vgap="5.0">
+                <columnConstraints>
+                    <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" percentWidth="32.0" />
+                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" percentWidth="28.0" />
+                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" percentWidth="40.0" />
+                </columnConstraints>
+                <children>
+                    <Text text="Imprest Money " />
+                    <Text text=":" GridPane.columnIndex="1" />
+                    <Text fx:id="impressMoney" text="₹ 0" GridPane.columnIndex="2" />
+                </children>
+            <rowConstraints>
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+        </VBox>
+
+        <VBox fx:id="saleTransactionSection" alignment="CENTER" spacing="5.0">
+            <Text styleClass="section-title" text="QR Sale Transaction" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Text>
+            <GridPane minWidth="300.0" prefWidth="300.0" vgap="5.0">
+                <columnConstraints>
+                    <ColumnConstraints halignment="LEFT" percentWidth="60.0" />
+                    <ColumnConstraints halignment="CENTER" percentWidth="16.0" />
+                    <ColumnConstraints halignment="CENTER" percentWidth="30.0" />
+                </columnConstraints>
+
+                <children>
+                    <!-- Header -->
+                    <Text text="Transaction">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text text="Count" GridPane.columnIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text text="Amount" GridPane.columnIndex="2">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                    <!-- SJT -->
+                    <Text text="SJT Cash" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="sjtCashCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="sjtCashAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                    <Text text="RJT Cash" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="rjtCashCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="rjtCashAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                    <Text text="GT Cash" GridPane.rowIndex="3">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="groupCashCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="groupCashAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <!-- RJT -->
+                    <Text text="SJT UPI" GridPane.rowIndex="4">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="sjtUpiCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="sjtUpiAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                    <Text text="RJT UPI" GridPane.rowIndex="5">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="rjtUpiCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="rjtUpiAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                    <Text text="GT UPI" GridPane.rowIndex="6">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="groupUpiCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="groupUpiAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                    <!-- Group Ticket -->
+                    <Text text="SJT POS" GridPane.rowIndex="7">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="sjtPosCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="sjtPosAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                    <Text text="RJT POS" GridPane.rowIndex="8">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="rjtPosCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="rjtPosAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                    <Text text="GT POS" GridPane.rowIndex="9">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="groupPosCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="groupPosAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                    <!-- Total -->
+                    <Text styleClass="section-title" text="Total" GridPane.rowIndex="10">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font></Text>
+                    <Text fx:id="totalSaleCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font></Text>
+                    <Text fx:id="totalSaleAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="10">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font></Text>
+                </children>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+        </VBox>
+
+
+        <VBox fx:id="addValueSection" alignment="CENTER" spacing="5.0">
+            <Text styleClass="section-title" text="NCMC Transaction" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Text>
+            <GridPane minWidth="300.0" prefHeight="230.0" prefWidth="310.0" vgap="5.0">
+                <columnConstraints>
+                    <ColumnConstraints halignment="LEFT" percentWidth="62.0" />
+                    <ColumnConstraints halignment="CENTER" percentWidth="18.0" />
+                    <ColumnConstraints halignment="CENTER" percentWidth="30.0" />
+                </columnConstraints>
+
+                      <children>
+                    <!-- Header -->
+                    <Text text="Transaction">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text text="Count" GridPane.columnIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text text="Amount" GridPane.columnIndex="2">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                          <!-- NCMC SV Top-up Cash -->
+                    <Text text="NCMC Issuance Cash" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="ncmcCashIssuanceCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="ncmcCashIssuanceAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                          <!-- NCMC SV Top-up UPI -->
+                    <Text text="NCMC Issuance UPI" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="ncmcUpiIssuanceCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="ncmcUpiIssuanceAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                          <!-- NCMC SV Top-up POS -->
+                    <Text text="NCMC Issuance POS" GridPane.rowIndex="3">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="ncmcPosIssuanceCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="ncmcPosIssuanceAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                          <!-- Total -->
+                    <Text styleClass="section-title" text="Total" GridPane.rowIndex="10">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Text>
+                    <Text fx:id="totalAddValueCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Text>
+                    <Text fx:id="totalAddValueAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="10">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Text>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NCMC Top Up Cash" GridPane.rowIndex="4">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="ncmcCashTopupCount" strokeType="OUTSIDE" strokeWidth="0.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="ncmcCashTopupAmount" strokeType="OUTSIDE" strokeWidth="0.0" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NCMC Top Up UPI" wrappingWidth="149.33674430847168" GridPane.rowIndex="5">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NCMC Top Up POS" GridPane.rowIndex="6">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NCMC Replacement Cash" wrappingWidth="150.0" GridPane.rowIndex="7">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NCMC Replacement UPI" wrappingWidth="150.0" GridPane.rowIndex="8">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NCMC Replacement POS" wrappingWidth="150.0" GridPane.rowIndex="9">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="ncmcUpiTopupCount" strokeType="OUTSIDE" strokeWidth="0.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="ncmcUpiTopupAmount" strokeType="OUTSIDE" strokeWidth="0.0" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="ncmcPosTopupCount" strokeType="OUTSIDE" strokeWidth="0.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="ncmcPosTopupAmount" strokeType="OUTSIDE" strokeWidth="0.0" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="ncmcCashReplacementCount" strokeType="OUTSIDE" strokeWidth="0.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="ncmcCashReplacementAmount" strokeType="OUTSIDE" strokeWidth="0.0" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                </children>
+
+                      <rowConstraints>
+                    <RowConstraints />
+                    <RowConstraints maxHeight="24.000020599365232" minHeight="15.000016021728516" prefHeight="17.399979400634766" />
+                    <RowConstraints maxHeight="20.799971771240237" minHeight="11.199979400634767" prefHeight="17.400020599365234" />
+                    <RowConstraints />
+               <RowConstraints maxHeight="24.79996337890624" minHeight="10.0" prefHeight="14.79998779296875" />
+               <RowConstraints maxHeight="40.800024414062506" minHeight="10.0" prefHeight="18.200024414062497" />
+               <RowConstraints maxHeight="55.200048828125006" minHeight="10.0" prefHeight="16.600012207031256" />
+               <RowConstraints maxHeight="56.000024414062494" minHeight="12.800024414062506" prefHeight="16.59998779296876" />
+               <RowConstraints maxHeight="56.000024414062494" minHeight="12.60003662109375" prefHeight="12.60003662109375" />
+               <RowConstraints maxHeight="56.000024414062494" minHeight="15.999951171875011" prefHeight="15.999951171875011" />
+                    <RowConstraints maxHeight="66.99995117187501" minHeight="10.0" prefHeight="18.800048828125" />
+                </rowConstraints>
+            </GridPane>
+        </VBox>
+
+
+        <VBox fx:id="adminHandlingSection" alignment="CENTER" spacing="5.0">
+            <Text styleClass="section-title" text="Adjustment" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Text>
+            <GridPane minWidth="300.0" prefHeight="222.0" prefWidth="310.0" vgap="5.0">
+                <columnConstraints>
+                    <ColumnConstraints halignment="LEFT" percentWidth="57.0" />
+                    <ColumnConstraints halignment="CENTER" percentWidth="16.0" />
+                    <ColumnConstraints halignment="CENTER" percentWidth="27.0" />
+                </columnConstraints>
+                <children>
+                    <Text text="Transaction">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text text="Count" wrappingWidth="32.90936279296875" GridPane.columnIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text text="Amount" GridPane.columnIndex="2">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                    <Text text="QR Adjustment Cash" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="qrAdjustmentCashCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="qrAdjustmentCashAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                    <Text text="QR Adjustment UPI" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="qrAdjustmentUpiCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="qrAdjustmentUpiAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                    <Text text="QR Adjustment POS" GridPane.rowIndex="3">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="qrAdjustmentPosCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="qrAdjustmentPosAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                    <Text text="Total" GridPane.rowIndex="10">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font></Text>
+                    <Text fx:id="totalAdjustmentCount" text="0" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font></Text>
+                    <Text fx:id="totalAdjustmentAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="10">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font></Text>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NCMC Adjustment Cash" wrappingWidth="150.0" GridPane.rowIndex="4">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text layoutX="10.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NCMC Adjustment UPI" wrappingWidth="150.0" GridPane.rowIndex="5">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NCMC Adjustment POS" wrappingWidth="150.0" GridPane.rowIndex="6">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Paid Exit UPI" wrappingWidth="101.33672904968262" GridPane.rowIndex="8">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Paid Exit Cash" wrappingWidth="101.33672904968262" GridPane.rowIndex="7">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Paid Exit POS" wrappingWidth="101.33672904968262" GridPane.rowIndex="9">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="ncmcAdjustmentCashCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="ncmcAdjustmentUpiCount" text="0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="ncmcAdjustmentPosCount" layoutX="177.0" layoutY="154.0" strokeWidth="0.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="ncmcAdjustmentCashAmount" strokeType="OUTSIDE" strokeWidth="0.0" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="ncmcAdjustmentUpiAmount" strokeType="OUTSIDE" strokeWidth="0.0" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="ncmcAdjustmentPosAmount" strokeType="OUTSIDE" strokeWidth="0.0" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="paidExitCashCount" strokeWidth="0.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="paidExitCashAmount" strokeType="OUTSIDE" strokeWidth="0.0" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="paidExitUpiCount" strokeWidth="0.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="paidExitUpiAmount" strokeType="OUTSIDE" strokeWidth="0.0" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="paidExitPosCount" strokeWidth="0.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+               <Text fx:id="paidExitPosAmount" strokeType="OUTSIDE" strokeWidth="0.0" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                </children>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints maxHeight="26.39999999999999" minHeight="16.79995117187501" prefHeight="16.79995117187501" />
+               <RowConstraints maxHeight="39.200048828125006" minHeight="16.79995117187501" prefHeight="21.600048828124997" />
+               <RowConstraints maxHeight="48.800024414062506" minHeight="16.000024414062494" prefHeight="21.60004882812501" />
+               <RowConstraints maxHeight="56.800024414062506" minHeight="16.80009765624999" prefHeight="16.80009765624999" />
+               <RowConstraints maxHeight="64.80002441406248" minHeight="16.000024414062494" prefHeight="16.000024414062494" />
+               <RowConstraints maxHeight="74.40001525878904" minHeight="12.799960327148426" prefHeight="18.39997558593751" />
+               <RowConstraints maxHeight="80.00003967285159" minHeight="22.400048828125023" prefHeight="72.00003967285159" />
+            </rowConstraints>
+            </GridPane>
+        </VBox>
+        <VBox fx:id="adjustmentSection" alignment="CENTER" spacing="5.0">
+            <Text styleClass="section-title" text="Admin Handling" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Text>
+            <GridPane minWidth="300.0" prefHeight="72.0" prefWidth="310.0" vgap="5.0">
+                <columnConstraints>
+                    <ColumnConstraints halignment="LEFT" percentWidth="58.0" />
+                    <ColumnConstraints halignment="CENTER" percentWidth="14.0" />
+                    <ColumnConstraints halignment="CENTER" percentWidth="28.0" />
+                </columnConstraints>
+                <children>
+                    <Text text="Transaction">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text text="Count" GridPane.columnIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text text="Amount" GridPane.columnIndex="2">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                    <Text text="Free Exit" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="freeExitCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="freeExitAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                    <Text text="Replacement Ticket" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="replacementTicketCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="replacementTicketAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="12.0" />
+
+
+                  </font></Text>
+                    <Text text="Free Adjustment" GridPane.rowIndex="3">
+                        <font>
+                            <Font size="12.0" />
+                        </font></Text>
+                    <Text fx:id="freeAdjustmentCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <font>
+                            <Font size="12.0" />
+                        </font></Text>
+                    <Text fx:id="freeAdjustmentAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                        <font>
+                            <Font size="12.0" />
+                        </font></Text>
+<!--               <Text text="Total" GridPane.rowIndex="3">-->
+<!--                  <font>-->
+<!--                     <Font name="System Bold" size="12.0" />-->
+<!--                  </font>-->
+<!--               </Text>-->
+<!--               <Text fx:id="totalAdminCount1" text="0" textAlignment="CENTER" wrappingWidth="13.668701171875" GridPane.columnIndex="1" GridPane.rowIndex="3">-->
+<!--                  <font>-->
+<!--                     <Font name="System Bold" size="12.0" />-->
+<!--                  </font>-->
+<!--               </Text>-->
+<!--               <Text fx:id="totalAdminAmount" text="₹ 0" textAlignment="CENTER" wrappingWidth="33.668702125549316" GridPane.columnIndex="2" GridPane.rowIndex="3">-->
+<!--                  <font>-->
+<!--                     <Font name="System Bold" size="12.0" />-->
+<!--                  </font>-->
+<!--               </Text>-->
+                </children>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            </rowConstraints>
+            </GridPane>
+        </VBox>
+
+<!--        <VBox fx:id="replacementSection" alignment="CENTER" spacing="5.0" visible="false">-->
+<!--            <Text styleClass="section-title" text="Replacement (F)" />-->
+<!--            <GridPane hgap="10.0" vgap="5.0">-->
+<!--                <columnConstraints>-->
+<!--                    <ColumnConstraints halignment="LEFT" percentWidth="40" />-->
+<!--                    <ColumnConstraints halignment="CENTER" percentWidth="30" />-->
+<!--                    <ColumnConstraints halignment="RIGHT" percentWidth="30" />-->
+<!--                </columnConstraints>-->
+<!--                <children>-->
+<!--                    <Text text="Transaction" />-->
+<!--                    <Text text="Count" GridPane.columnIndex="1" />-->
+<!--                    <Text text="Amount" GridPane.columnIndex="2" />-->
+
+<!--                    <Text text="QR Replacement" GridPane.rowIndex="1" />-->
+<!--                    <Text fx:id="qrReplacementCount" text="2" GridPane.columnIndex="1" GridPane.rowIndex="1" />-->
+<!--                    <Text fx:id="qrReplacementAmount" text="₹ 200" GridPane.columnIndex="2" GridPane.rowIndex="1" />-->
+
+<!--                    <Text text="NCMC Replacement" GridPane.rowIndex="2" />-->
+<!--                    <Text fx:id="ncmcReplacementCount" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />-->
+<!--                    <Text fx:id="ncmcReplacementAmount" text="₹ 200" GridPane.columnIndex="2" GridPane.rowIndex="2" />-->
+
+<!--                    <Text text="Total" GridPane.rowIndex="3" />-->
+<!--                    <Text fx:id="totalReplacementCount" text="4" GridPane.columnIndex="1" GridPane.rowIndex="3" />-->
+<!--                    <Text fx:id="totalReplacementAmount" text="₹ 400" GridPane.columnIndex="2" GridPane.rowIndex="3" />-->
+<!--                </children>-->
+<!--            <rowConstraints>-->
+<!--               <RowConstraints />-->
+<!--               <RowConstraints />-->
+<!--               <RowConstraints />-->
+<!--               <RowConstraints />-->
+<!--            </rowConstraints>-->
+<!--            </GridPane>-->
+<!--        </VBox>-->
+
+
+
+
+
+        <VBox fx:id="refundSection" alignment="CENTER" spacing="5.0">
+            <Text styleClass="section-title" text="Refund" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Text>
+            <GridPane minWidth="300.0" prefWidth="300.0" vgap="5.0">
+                <columnConstraints>
+                    <ColumnConstraints halignment="LEFT" percentWidth="57.0" />
+                    <ColumnConstraints halignment="CENTER" percentWidth="16.0" />
+                    <ColumnConstraints halignment="CENTER" percentWidth="27.0" />
+                </columnConstraints>
+                <children>
+                    <Text text="Transaction">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text text="Count" GridPane.columnIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text text="Amount" GridPane.columnIndex="2">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                    <Text text="SJT Refund" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="sjtRefundCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="sjtRefundAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                    <Text text="RJT Refund" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="rjtRefundCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="rjtRefundAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                    <Text text="GT Refund" GridPane.rowIndex="3">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="groupRefundCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+                    <Text fx:id="groupRefundAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                  <font>
+                     <Font size="12.0" />
+                  </font></Text>
+
+                    <Text text="Total" GridPane.rowIndex="4">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font></Text>
+                    <Text fx:id="totalRefundCount" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font></Text>
+                    <Text fx:id="totalRefundAmount" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font></Text>
+                </children>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints maxHeight="14.5" minHeight="14.5" prefHeight="14.5" />
+               <RowConstraints maxHeight="14.5" minHeight="14.5" prefHeight="14.5" />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+        </VBox>
+        <VBox fx:id="ncmcTopUpSection" alignment="CENTER" spacing="5.0" />
+
+
+        <!-- Summary Section -->
+        <VBox fx:id="summarySection" alignment="TOP_CENTER" spacing="5.0">
+            <Text styleClass="section-title" text="Summary" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Text>
+            <GridPane minWidth="300.0" prefWidth="300.0" vgap="5.0">
+                <columnConstraints>
+                    <ColumnConstraints halignment="LEFT" percentWidth="58.0" />
+               <ColumnConstraints halignment="RIGHT" percentWidth="13.0" />
+                    <ColumnConstraints halignment="CENTER" percentWidth="29.0" />
+                </columnConstraints>
+                <children>
+                    <Text text="Transaction" />
+                    <Text text="Amount" GridPane.columnIndex="2" />
+
+                    <Text text="Total Sale by Cash (A)" GridPane.rowIndex="1" />
+                    <Text fx:id="totalCash" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+                    <Text text="Total Sale by UPI (B)" GridPane.rowIndex="2" />
+                    <Text fx:id="totalUpiTransactions" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+                    <Text text="Total Sale by POS (C)" GridPane.rowIndex="3" />
+                    <Text fx:id="totalCardTransactions" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+                    <Text text="Total Revenue (A+B+C)-Refund" GridPane.rowIndex="4">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font></Text>
+                    <Text fx:id="revenue" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font></Text>
+
+                    <Text text="Available Cash (A-Refund)" GridPane.rowIndex="5">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font></Text>
+                    <Text fx:id="finalTotal" text="₹ 0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font></Text>
+               <Text text="0" textAlignment="CENTER" wrappingWidth="28.50231897830963" GridPane.columnIndex="1" GridPane.rowIndex="5" visible="false">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font></Text>
+               <Text text="0" textAlignment="CENTER" wrappingWidth="28.502318859100342" GridPane.columnIndex="1" GridPane.rowIndex="4" visible="false">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font></Text>
+               <Text text="0" textAlignment="CENTER" wrappingWidth="27.268737316131592" GridPane.columnIndex="1" GridPane.rowIndex="3" visible="false"/>
+               <Text text="0" textAlignment="CENTER" wrappingWidth="27.268737316131592" GridPane.columnIndex="1" GridPane.rowIndex="2" visible="false"/>
+               <Text text="0" textAlignment="CENTER" wrappingWidth="29.668761730194092" GridPane.columnIndex="1" GridPane.rowIndex="1" visible="false"/>
+               <Text text="Count" textAlignment="CENTER" GridPane.columnIndex="1" visible="false"/>
+                </children>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints maxHeight="17.0" minHeight="17.0" prefHeight="17.0" />
+               <RowConstraints maxHeight="17.0" minHeight="17.0" prefHeight="17.0" />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+        </VBox>
+
+    </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

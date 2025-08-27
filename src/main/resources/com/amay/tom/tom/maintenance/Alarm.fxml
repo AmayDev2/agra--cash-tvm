@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+    <VBox alignment="TOP_CENTER" spacing="20" xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.amay.tom.controller.MaintenanceAlarm" stylesheets="@../../../../css/maintenance/importexport.css">
+        <Label styleClass="center-label" text="Test Mode" />
+
+        <GridPane alignment="CENTER" hgap="200.0" prefHeight="500.0" vgap="50.0">
+
+
+            <Label alignment="CENTER" contentDisplay="CENTER" styleClass="grid-label" text="Import" GridPane.columnIndex="0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" styleClass="grid-label" text="Export" GridPane.columnIndex="1" />
+
+            <Button alignment="CENTER" styleClass="grid-button" text="System Application" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Button alignment="CENTER" styleClass="grid-button" text="Transaction List" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Button alignment="CENTER" styleClass="grid-button" text="System Parameter" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" />
+                <ColumnConstraints halignment="CENTER" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+    </VBox>

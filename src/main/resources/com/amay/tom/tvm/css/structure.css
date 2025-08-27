@@ -72,6 +72,18 @@
        -fx-font-size:14;
  }
 
+ .back{
+     -fx-background-radius:8;
+        -fx-font-size:18;
+         -fx-font-weight:bold;
+ }
+
+ .pay{
+ -fx-background-radius:8;
+    -fx-font-weight:bold;
+     -fx-font-size:18;
+ }
+
   .pay-method {
      -fx-background-radius:8;
      -fx-font-size:18;

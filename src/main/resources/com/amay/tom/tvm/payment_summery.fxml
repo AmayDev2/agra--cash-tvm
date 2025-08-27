@@ -63,7 +63,7 @@
             <!-- Row 3: 0 centered below -->
             <Pane prefHeight="72" prefWidth="72" GridPane.columnIndex="0" GridPane.rowIndex="3" />
             <Button fx:id="btn0" onAction="#handleNumberClick" prefHeight="72" prefWidth="72" styleClass="numpad" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button fx:id="bkspc" onAction="#handleDeleteClick" prefHeight="72" prefWidth="72" styleClass="numpad" text="Clear" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button fx:id="bkspc" onAction="#handleDeleteClick" prefHeight="72" prefWidth="72" styleClass="clear" text="Clear" GridPane.columnIndex="2" GridPane.rowIndex="3" />
          <columnConstraints>
             <ColumnConstraints />
             <ColumnConstraints />
@@ -152,9 +152,9 @@
 
         <!-- Bottom action buttons: Back (left) and Pay (right) -->
         <HBox alignment="CENTER" prefWidth="520" spacing="40">
-            <Button fx:id="btnBack" onAction="#navigateToHomePage" prefHeight="52" prefWidth="140" style="-fx-background-radius:8; -fx-background-color:#8f8f8f; -fx-text-fill:white; -fx-font-size:18; -fx-font-weight:bold;" text="Back" />
+            <Button fx:id="btnBack" onAction="#navigateToHomePage" prefHeight="52" prefWidth="140" styleClass="back" text="Back" />
             <Region HBox.hgrow="ALWAYS" />
-            <Button fx:id="btnSubmit" onAction="#confirmSelection" prefHeight="52" prefWidth="140" style="-fx-background-radius:8; -fx-background-color:#2eae4a; -fx-text-fill:white; -fx-font-size:18; -fx-font-weight:bold;" text="Pay" />
+            <Button fx:id="btnSubmit" onAction="#confirmSelection" prefHeight="52" prefWidth="140" styleClass="pay" text="Pay" />
         </HBox>
     </VBox>
 </HBox>

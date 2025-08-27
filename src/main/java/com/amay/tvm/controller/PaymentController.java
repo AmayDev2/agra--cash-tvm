@@ -346,7 +346,7 @@ public class PaymentController {
             );
         }
         labelCount.setText(display.getText());
-        labelFare.setText(String.valueOf(fare*quantity));
+        labelFare.setText("₹ " + (fare*quantity));
     }
 
     /**
@@ -656,7 +656,7 @@ public class PaymentController {
                 subProperTickets.forEach(properTicket -> {
                     Logger.info("Sub Proper ticket: {} - Price: {}",
                             properTicket.getTicketType(), properTicket.getPrice());
-                    totalFare.addAndGet(properTicket.getPrice());
+//                    totalFare.addAndGet(properTicket.getPrice());
                     Logger.info("Updated fare: {}", totalFare.get());
                 });
 
@@ -686,7 +686,8 @@ public class PaymentController {
                         alert.setContentText("Payment failed. Please try again.");
                         alert.showAndWait();
                     });
-                }else {
+                }else
+                {
                    showWaiting();
                     Logger.info("Payment response: {}", paymentResponse);
                     ProperTicketOrder properTicketOrder = new ProperTicketOrder(
@@ -766,7 +767,7 @@ public class PaymentController {
         String currentText = display.getText();
         String newText = currentText + clickedButton.getText();
         int newTicketCount = Integer.parseInt(newText);
-        if (newTicketCount < maxTicket) {
+        if (newTicketCount <= maxTicket) {
             display.setText(currentText + clickedButton.getText());
             quantity=Integer.parseInt(display.getText());
         }

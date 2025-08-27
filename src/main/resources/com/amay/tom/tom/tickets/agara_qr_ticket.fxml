@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="ticketRoot" alignment="TOP_CENTER" minHeight="470.0" minWidth="250.0" prefHeight="470.0" prefWidth="250.0" spacing="1.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.controller.AgaraTicketController">
+
+          <!-- Header -->
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Pane fx:id="logoPane" prefWidth="500.0" prefHeight="200.0">
+        </Pane>
+
+        <!--        <ImageView fx:id="logoImage" fitHeight="20.0" fitWidth="50">-->
+
+<!--        </ImageView>-->
+        <Text fx:id="ticketName" style="-fx-font-size: 40px; -fx-font-weight: bold;" text="TICKET" />
+    </HBox>
+
+          <!-- QR Code -->
+    <ImageView fx:id="qrImage" fitHeight="180.0" fitWidth="180.0" />
+
+          <!-- Ticket Details -->
+    <GridPane alignment="TOP_CENTER" hgap="3.0" vgap="1.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="LEFT" />
+            <ColumnConstraints halignment="CENTER" maxWidth="10" minWidth="10" />
+            <ColumnConstraints halignment="LEFT" />
+        </columnConstraints>
+
+              <Text text="Date/Time" GridPane.columnIndex="0" GridPane.rowIndex="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text fx:id="dateTimeText" text="13-05-2025 07:57:40 PM" GridPane.columnIndex="2" GridPane.rowIndex="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+
+              <Text text="Payment Type" GridPane.columnIndex="0" GridPane.rowIndex="1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text fx:id="paymentTypeText" text="UPI" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+
+              <Text text="Salepoint Id." GridPane.columnIndex="0" GridPane.rowIndex="2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text fx:id="salepointText" text="TOM-02" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+
+              <Text text="Type" GridPane.columnIndex="0" GridPane.rowIndex="3">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text fx:id="ticketTypeText" text="SJT" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+
+              <Text text="Platform No." GridPane.columnIndex="0" GridPane.rowIndex="4">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text fx:id="quantityText" text="1" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+
+              <Text text="From" GridPane.columnIndex="0" GridPane.rowIndex="5">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text fx:id="fromText" text="Captain Shubham Gupta" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+
+              <Text text="To" GridPane.columnIndex="0" GridPane.rowIndex="6">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text fx:id="toText" text="Fatehabad Road" GridPane.columnIndex="2" GridPane.rowIndex="6">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+
+              <Text text="Price" GridPane.columnIndex="0" GridPane.rowIndex="7">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="7">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text fx:id="priceText" text="Rs. 10.00" GridPane.columnIndex="2" GridPane.rowIndex="7">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+
+              <Text text="Ticket No." GridPane.columnIndex="0" GridPane.rowIndex="8">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="8">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text fx:id="ticketNumberText" text="9264.2.8.40" GridPane.columnIndex="2" GridPane.rowIndex="8">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+
+              <Text text="Valid Upto" GridPane.columnIndex="0" GridPane.rowIndex="9">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text text=":" GridPane.columnIndex="1" GridPane.rowIndex="9">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+        <Text fx:id="validUptoText" text="120 minutes after entry" GridPane.columnIndex="2" GridPane.rowIndex="9">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+
+              <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+      <padding>
+         <Insets left="10.0" right="10.0" />
+      </padding>
+    </GridPane>
+
+         
+             <!-- Footer -->
+    <Text style="-fx-font-size: 10px; -fx-fill: gray;" text="Valid only for same working day">
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+   </Text>
+<!--    <Text style="-fx-font-size: 10px; -fx-fill: gray;" text="Please retain till the end of journey!" />-->
+
+      </VBox>

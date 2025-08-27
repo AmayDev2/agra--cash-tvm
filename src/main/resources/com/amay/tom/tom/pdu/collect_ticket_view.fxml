@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="288.0" prefWidth="640.0" style=" -fx-background-color;" styleClass="bg-header" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="245.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../icons/assets_tom/success.png" />
+            </image>
+        </ImageView>
+        <Label fx:id="successText" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="195.0" prefHeight="87.0" prefWidth="729.0" style="-fx-font-size: 28;" text="Payment Successful" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="150.0">
+            <styleClass>
+                <String fx:value="text-caption" />
+                <String fx:value="text-primary" />
+            </styleClass></Label>
+        <Label fx:id="text" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="195.0" prefHeight="87.0" prefWidth="729.0" style="-fx-font-size: 28;" text="Please Collect Your Ticket!" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="195.0">
+            <styleClass>
+                <String fx:value="text-caption" />
+                <String fx:value="text-primary" />
+            </styleClass></Label>
+
+    </children>
+    <stylesheets>
+        <URL value="@../pdu/themes.css" />
+    </stylesheets>
+</AnchorPane>
