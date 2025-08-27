@@ -1,4 +1,6 @@
-package com.amay.utils;//************************************************************************************
+package com.amay.printer;
+
+//************************************************************************************
 //*                                                                                  *
 //* This document contains programming examples.                                     *
 //*                                                                                  *
@@ -33,7 +35,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 
-public class PrinterUtil {
+public class Printer {
 
     static CuCustomWndAPIJWrap cucjwrap = null;
     static CuCustomWndDevice cudev = null;
@@ -154,6 +156,7 @@ public class PrinterUtil {
     public static void Main(String[] args)
     {
 
+
         boolean bExit = false;
 
 
@@ -164,7 +167,7 @@ public class PrinterUtil {
             
             // Method 1: Try to load from lib/Printer directory
             try {
-                String dllPath = "lib/Printer/CuCustomWndAPI.dll";
+                String dllPath = ".";
                 System.out.println("Trying to load from: " + dllPath);
                 System.load(dllPath);
                 System.out.println("SUCCESS: Native library loaded from lib/Printer directory!");
@@ -173,7 +176,7 @@ public class PrinterUtil {
                 
                 // Method 2: Try to load from absolute path
                 try {
-                    String absolutePath = System.getProperty("user.dir") + "/lib/Printer/CuCustomWndAPI.dll";
+                    String absolutePath = System.getProperty("user.dir") + "/.";
                     System.out.println("Trying to load from absolute path: " + absolutePath);
                     System.load(absolutePath);
                     System.out.println("SUCCESS: Native library loaded from absolute path!");

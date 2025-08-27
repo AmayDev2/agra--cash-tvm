@@ -168,10 +168,18 @@
 
 <!--        printer-->
 
+<!--        <dependency>-->
+<!--            <groupId>com.custom</groupId>-->
+<!--            <artifactId>CuCustomWndAPIJWrap</artifactId>-->
+<!--            <version>1.0.0</version>-->
+<!--            <scope>system</scope>-->
+<!--            <systemPath>${project.basedir}/lib/Printer/CuCustomWndAPIJWrap.jar</systemPath>-->
+<!--        </dependency>-->
+
         <dependency>
-            <groupId>com.amay.printer</groupId>
-            <artifactId>CuCustomWndAPIJWrap</artifactId>
-            <version>1.0.0</version>
+            <groupId>com.custom</groupId>
+            <artifactId>wndapijwrap</artifactId>
+            <version>1.0</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/Printer/CuCustomWndAPIJWrap.jar</systemPath>
         </dependency>
