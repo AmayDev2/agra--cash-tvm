@@ -64,7 +64,7 @@
 
         <!-- Right Panel : Success Icon -->
         <StackPane GridPane.columnIndex="1">
-            <ImageView fx:id="event" fitHeight="300.0" fitWidth="300.0" preserveRatio="true">
+            <ImageView fx:id="event" fitHeight="300.0" fitWidth="300.0" preserveRatio="true" scaleX="1.4" scaleY="1.4" scaleZ="1.4">
                 <image>
                     <Image url="@../../../../images/tvm/tvm image 1.png" />
                 </image>
