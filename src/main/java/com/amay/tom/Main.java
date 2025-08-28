@@ -117,15 +117,6 @@ public class Main extends Application {
 
             // Keep window always on top
             stage.setAlwaysOnTop(true);
-            
-            // Initialize printer with proper native library loading
-            try {
-                System.out.println("Initializing printer...");
-                Printer.Main(new String[]{});
-            } catch (Exception e) {
-                System.err.println("Error initializing printer: " + e.getMessage());
-                e.printStackTrace();
-            }
 
             // Set window properties
             stage.setMinHeight(768);

@@ -1,5 +1,6 @@
 package com.amay.tom.service.print.impl;
 
+import com.amay.printer.PrinterCommandDispatcher;
 import com.amay.tom.config.SystemConfig;
 import com.amay.tom.enums.FareMedium;
 import javafx.print.PrinterJob;
@@ -250,6 +251,7 @@ public class ImplPrintTicket{
 
 
 
+    @Deprecated
     public static void printImage(BufferedImage resizedImage) throws RuntimeException {
 
 //        if(FareMedium.QR.getFareMediumTotal()-FareMedium.QR.getFareMediumSale()<=0){

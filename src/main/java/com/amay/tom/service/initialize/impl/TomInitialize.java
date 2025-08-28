@@ -1,5 +1,6 @@
 package com.amay.tom.service.initialize.impl;
 
+import com.amay.printer.PrinterCommandDispatcher;
 import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.api.UserMapper;
@@ -431,8 +432,9 @@ public class TomInitialize implements ITomInitialize {
                 this.peripheralDeviceStatus();
                 this.updateBusinessTime();
                 //this.pushRemainedDate();
-                BNRIntegration.bnrOpen();
-                CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort());
+//                BNRIntegration.bnrOpen();
+//                CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort());
+                PrinterCommandDispatcher.INSTANCE.setupPrinter();
                 this.onSuccessfulInitialization(null);
                 this.updateUI(0.9, "All done...");
             } catch (InterruptedException | IOException e) {

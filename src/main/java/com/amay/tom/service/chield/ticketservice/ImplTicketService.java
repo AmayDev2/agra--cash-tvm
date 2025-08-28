@@ -1,5 +1,6 @@
 package com.amay.tom.service.chield.ticketservice;
 
+import com.amay.printer.PrinterCommandDispatcher;
 import com.amay.tom.ViewFactory;
 import com.amay.tom.config.SystemConfig;
 import com.amay.tom.controller.AgaraTicketController;
@@ -275,7 +276,8 @@ public class ImplTicketService implements TicketService, ReprintTicket {
             if (/*EnvFile.getPrinterCheck() &&*/ PeripheralMonitor.getPrinterStatus()) {
 
                 Logger.info("Printing Ticket");
-                ImplPrintTicket.printImage(bufferedImage);
+//                ImplPrintTicket.printImage(bufferedImage);
+                PrinterCommandDispatcher.INSTANCE.printImage(bufferedImage);
             } else {
                 Logger.warn("Printer not connected {}", EnvFile.getThermalPrinterModel());
             }
