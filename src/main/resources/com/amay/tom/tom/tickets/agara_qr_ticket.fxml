@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox fx:id="ticketRoot" alignment="TOP_CENTER" minHeight="470.0" minWidth="250.0" prefHeight="470.0" prefWidth="250.0" spacing="1.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.controller.AgaraTicketController">
+<VBox fx:id="ticketRoot" alignment="TOP_CENTER" minHeight="470.0" minWidth="250.0" prefHeight="470.0" prefWidth="250.0" rotate="90.0" spacing="1.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.controller.AgaraTicketController">
 
           <!-- Header -->
     <HBox alignment="CENTER_LEFT" spacing="10">
-        <Pane fx:id="logoPane" prefWidth="500.0" prefHeight="200.0">
+        <Pane fx:id="logoPane" prefHeight="200.0" prefWidth="500.0">
         </Pane>
 
         <!--        <ImageView fx:id="logoImage" fitHeight="20.0" fitWidth="50">-->

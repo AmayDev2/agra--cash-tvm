@@ -18,3 +18,285 @@
 2025-08-27 20-36-15.0664[EnumUSBDevices]Begin
 2025-08-27 20-36-15.0669[EnumUSBDevices]Found 0 USB Devices
 2025-08-27 20-36-15.0670[EnumUSBDevices]End
+2025-08-28 11-31-59.0330[]*****************************************
+2025-08-28 11-31-59.0331[]DLL Log Initialize. Verbosity: 6
+2025-08-28 11-31-59.0333[]*****************************************
+2025-08-28 11-31-59.0334[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-08-28 11-31-59.0335[]DLL Version: 1.07
+2025-08-28 11-31-59.0336[InitLibrary]Begin
+2025-08-28 11-31-59.0383[InitLibrary]Library SignID:00000101
+2025-08-28 11-31-59.0384[InitLibrary]Current SignID:00000101
+2025-08-28 11-31-59.0384[InitLibrary]End
+2025-08-28 11-31-59.0386[GetAPIVersion]Begin
+2025-08-28 11-31-59.0387[GetAPIVersion]API rel 1.07
+2025-08-28 11-31-59.0388[GetAPIVersion]End
+2025-08-28 11-31-59.0389[GetAPIVersionHwLibrary]Begin
+2025-08-28 11-31-59.0395[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-08-28 11-31-59.0396[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-08-28 11-31-59.0397[GetAPIVersionHwLibrary]End
+2025-08-28 11-31-59.0397[EnumUSBDevices]Begin
+2025-08-28 11-31-59.0407[EnumUSBDevices]Found 0 USB Devices
+2025-08-28 11-31-59.0409[EnumUSBDevices]End
+2025-08-28 11-35-34.0165[]*****************************************
+2025-08-28 11-35-34.0168[]DLL Log Initialize. Verbosity: 6
+2025-08-28 11-35-34.0169[]*****************************************
+2025-08-28 11-35-34.0170[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-08-28 11-35-34.0172[]DLL Version: 1.07
+2025-08-28 11-35-34.0173[InitLibrary]Begin
+2025-08-28 11-35-34.0228[InitLibrary]Library SignID:00000101
+2025-08-28 11-35-34.0230[InitLibrary]Current SignID:00000101
+2025-08-28 11-35-34.0232[InitLibrary]End
+2025-08-28 11-35-34.0234[GetAPIVersion]Begin
+2025-08-28 11-35-34.0235[GetAPIVersion]API rel 1.07
+2025-08-28 11-35-34.0237[GetAPIVersion]End
+2025-08-28 11-35-34.0239[GetAPIVersionHwLibrary]Begin
+2025-08-28 11-35-34.0245[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-08-28 11-35-34.0247[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-08-28 11-35-34.0248[GetAPIVersionHwLibrary]End
+2025-08-28 11-35-34.0250[EnumUSBDevices]Begin
+2025-08-28 11-35-34.0263[EnumUSBDevices]Found 0 USB Devices
+2025-08-28 11-35-34.0264[EnumUSBDevices]End
+2025-08-28 11-57-44.0387[]*****************************************
+2025-08-28 11-57-44.0389[]DLL Log Initialize. Verbosity: 6
+2025-08-28 11-57-44.0390[]*****************************************
+2025-08-28 11-57-44.0391[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-08-28 11-57-44.0392[]DLL Version: 1.07
+2025-08-28 11-57-44.0394[InitLibrary]Begin
+2025-08-28 11-57-44.0430[InitLibrary]Library SignID:00000101
+2025-08-28 11-57-44.0432[InitLibrary]Current SignID:00000101
+2025-08-28 11-57-44.0433[InitLibrary]End
+2025-08-28 11-57-44.0434[GetAPIVersion]Begin
+2025-08-28 11-57-44.0435[GetAPIVersion]API rel 1.07
+2025-08-28 11-57-44.0436[GetAPIVersion]End
+2025-08-28 11-57-44.0437[GetAPIVersionHwLibrary]Begin
+2025-08-28 11-57-44.0442[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-08-28 11-57-44.0444[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-08-28 11-57-44.0446[GetAPIVersionHwLibrary]End
+2025-08-28 11-57-44.0448[EnumUSBDevices]Begin
+2025-08-28 11-57-44.0457[EnumUSBDevices]Found 0 USB Devices
+2025-08-28 11-57-44.0459[EnumUSBDevices]End
+2025-08-30 10-29-05.0901[]*****************************************
+2025-08-30 10-29-05.0905[]DLL Log Initialize. Verbosity: 6
+2025-08-30 10-29-05.0906[]*****************************************
+2025-08-30 10-29-05.0907[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-08-30 10-29-05.0909[]DLL Version: 1.07
+2025-08-30 10-29-05.0910[InitLibrary]Begin
+2025-08-30 10-29-05.0947[InitLibrary]Library SignID:00000101
+2025-08-30 10-29-05.0949[InitLibrary]Current SignID:00000101
+2025-08-30 10-29-05.0951[InitLibrary]End
+2025-08-30 10-29-05.0952[GetAPIVersion]Begin
+2025-08-30 10-29-05.0953[GetAPIVersion]API rel 1.07
+2025-08-30 10-29-05.0954[GetAPIVersion]End
+2025-08-30 10-29-05.0955[GetAPIVersionHwLibrary]Begin
+2025-08-30 10-29-05.0958[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-08-30 10-29-05.0959[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-08-30 10-29-05.0960[GetAPIVersionHwLibrary]End
+2025-08-30 10-29-05.0961[EnumUSBDevices]Begin
+2025-08-30 10-29-05.0971[EnumUSBDevices]Found 0 USB Devices
+2025-08-30 10-29-05.0972[EnumUSBDevices]End
+2025-08-30 10-46-26.0629[]*****************************************
+2025-08-30 10-46-26.0632[]DLL Log Initialize. Verbosity: 6
+2025-08-30 10-46-26.0634[]*****************************************
+2025-08-30 10-46-26.0637[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-08-30 10-46-26.0638[]DLL Version: 1.07
+2025-08-30 10-46-26.0640[InitLibrary]Begin
+2025-08-30 10-46-26.0683[InitLibrary]Library SignID:00000101
+2025-08-30 10-46-26.0684[InitLibrary]Current SignID:00000101
+2025-08-30 10-46-26.0687[InitLibrary]End
+2025-08-30 10-46-26.0688[GetAPIVersion]Begin
+2025-08-30 10-46-26.0690[GetAPIVersion]API rel 1.07
+2025-08-30 10-46-26.0692[GetAPIVersion]End
+2025-08-30 10-46-26.0693[GetAPIVersionHwLibrary]Begin
+2025-08-30 10-46-26.0697[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-08-30 10-46-26.0698[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-08-30 10-46-26.0699[GetAPIVersionHwLibrary]End
+2025-08-30 10-46-26.0700[EnumUSBDevices]Begin
+2025-08-30 10-46-26.0708[EnumUSBDevices]Found 1 USB Devices
+2025-08-30 10-46-26.0709[EnumUSBDevices]End
+2025-08-30 10-46-26.0711[OpenPrinterUSB]Begin
+2025-08-30 10-46-26.0711[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-08-30 10-46-26.0719[OpenPrinterUSB]New device ID:00000101
+2025-08-30 10-46-26.0720[OpenPrinterUSB]End
+2025-08-30 10-46-26.0724[GetInfoDeviceModel]Begin
+2025-08-30 10-46-26.0729[GetInfoDeviceModel]Device Model:Custom K80
+2025-08-30 10-46-26.0730[GetInfoDeviceModel]End
+2025-08-30 10-46-26.0730[GetInfoFirmwareVersion]Begin
+2025-08-30 10-46-26.0736[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-08-30 10-46-26.0737[GetInfoFirmwareVersion]End
+2025-08-30 10-46-26.0738[GetCapCommPortType]Begin
+2025-08-30 10-46-26.0743[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-08-30 10-46-26.0744[GetCapCommPortType]End
+2025-08-30 10-46-26.0745[GetCapPrinterResolution]Begin
+2025-08-30 10-46-26.0747[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-08-30 10-46-26.0750[GetCapPrinterResolution]End
+2025-08-30 10-46-26.0750[GetCapPrintWidth]Begin
+2025-08-30 10-46-26.0752[GetCapPrintWidth]Cap Print Width:640
+2025-08-30 10-46-26.0754[GetCapPrintWidth]End
+2025-08-30 10-46-45.0500[PrintBitmapImage]Begin
+2025-08-30 10-46-45.0501[PrintBitmapImage]Extracting 24bit RAW buffer from Bitmap...
+2025-08-30 10-46-45.0520[PrintBitmapImage]<Width>:1295
+2025-08-30 10-46-45.0525[PrintBitmapImage]<Height>:2245
+2025-08-30 10-46-45.0526[PrintBitmapImage]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_TO_FIT<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-08-30 10-46-47.0610[PrintBitmapImage]End
+2025-08-30 10-46-47.0611[Cut]Begin
+2025-08-30 10-46-47.0612[Cut]CutType:CUT_TOTAL
+2025-08-30 10-46-47.0616[Cut]End
+2025-08-30 10-53-33.0835[]*****************************************
+2025-08-30 10-53-33.0839[]DLL Log Initialize. Verbosity: 6
+2025-08-30 10-53-33.0840[]*****************************************
+2025-08-30 10-53-33.0842[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-08-30 10-53-33.0845[]DLL Version: 1.07
+2025-08-30 10-53-33.0847[InitLibrary]Begin
+2025-08-30 10-53-33.0899[InitLibrary]Library SignID:00000101
+2025-08-30 10-53-33.0900[InitLibrary]Current SignID:00000101
+2025-08-30 10-53-33.0901[InitLibrary]End
+2025-08-30 10-53-33.0902[GetAPIVersion]Begin
+2025-08-30 10-53-33.0905[GetAPIVersion]API rel 1.07
+2025-08-30 10-53-33.0906[GetAPIVersion]End
+2025-08-30 10-53-33.0907[GetAPIVersionHwLibrary]Begin
+2025-08-30 10-53-33.0911[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-08-30 10-53-33.0913[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-08-30 10-53-33.0913[GetAPIVersionHwLibrary]End
+2025-08-30 10-53-33.0914[EnumUSBDevices]Begin
+2025-08-30 10-53-33.0927[EnumUSBDevices]Found 1 USB Devices
+2025-08-30 10-53-33.0930[EnumUSBDevices]End
+2025-08-30 10-53-33.0932[OpenPrinterUSB]Begin
+2025-08-30 10-53-33.0934[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-08-30 10-53-33.0947[OpenPrinterUSB]New device ID:00000101
+2025-08-30 10-53-33.0949[OpenPrinterUSB]End
+2025-08-30 10-53-33.0958[GetInfoDeviceModel]Begin
+2025-08-30 10-53-33.0963[GetInfoDeviceModel]Device Model:Custom K80
+2025-08-30 10-53-33.0964[GetInfoDeviceModel]End
+2025-08-30 10-53-33.0967[GetInfoFirmwareVersion]Begin
+2025-08-30 10-53-33.0973[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-08-30 10-53-33.0975[GetInfoFirmwareVersion]End
+2025-08-30 10-53-33.0976[GetCapCommPortType]Begin
+2025-08-30 10-53-33.0985[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-08-30 10-53-33.0987[GetCapCommPortType]End
+2025-08-30 10-53-33.0988[GetCapPrinterResolution]Begin
+2025-08-30 10-53-33.0996[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-08-30 10-53-33.0998[GetCapPrinterResolution]End
+2025-08-30 10-53-33.0999[GetCapPrintWidth]Begin
+2025-08-30 10-53-34.0006[GetCapPrintWidth]Cap Print Width:640
+2025-08-30 10-53-34.0009[GetCapPrintWidth]End
+2025-08-30 10-53-50.0654[PrintBitmapImage]Begin
+2025-08-30 10-53-50.0655[PrintBitmapImage]Extracting 24bit RAW buffer from Bitmap...
+2025-08-30 10-53-50.0679[PrintBitmapImage]<Width>:1295
+2025-08-30 10-53-50.0681[PrintBitmapImage]<Height>:2245
+2025-08-30 10-53-50.0682[PrintBitmapImage]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_TO_FIT<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-08-30 10-53-52.0781[PrintBitmapImage]End
+2025-08-30 10-53-52.0783[Cut]Begin
+2025-08-30 10-53-52.0784[Cut]CutType:CUT_TOTAL
+2025-08-30 10-53-52.0788[Cut]End
+2025-08-30 10-55-34.0886[PrintBitmapImage]Begin
+2025-08-30 10-55-34.0887[PrintBitmapImage]Extracting 24bit RAW buffer from Bitmap...
+2025-08-30 10-55-34.0894[PrintBitmapImage]<Width>:1295
+2025-08-30 10-55-34.0895[PrintBitmapImage]<Height>:2245
+2025-08-30 10-55-34.0896[PrintBitmapImage]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_TO_FIT<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-08-30 10-55-36.0952[PrintBitmapImage]End
+2025-08-30 10-55-36.0953[Cut]Begin
+2025-08-30 10-55-36.0954[Cut]CutType:CUT_TOTAL
+2025-08-30 10-55-36.0958[Cut]End
+2025-08-30 10-55-57.0372[]*****************************************
+2025-08-30 10-55-57.0374[]DLL Log Initialize. Verbosity: 6
+2025-08-30 10-55-57.0375[]*****************************************
+2025-08-30 10-55-57.0375[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-08-30 10-55-57.0376[]DLL Version: 1.07
+2025-08-30 10-55-57.0377[InitLibrary]Begin
+2025-08-30 10-55-57.0411[InitLibrary]Library SignID:00000101
+2025-08-30 10-55-57.0412[InitLibrary]Current SignID:00000101
+2025-08-30 10-55-57.0413[InitLibrary]End
+2025-08-30 10-55-57.0415[GetAPIVersion]Begin
+2025-08-30 10-55-57.0416[GetAPIVersion]API rel 1.07
+2025-08-30 10-55-57.0418[GetAPIVersion]End
+2025-08-30 10-55-57.0421[GetAPIVersionHwLibrary]Begin
+2025-08-30 10-55-57.0427[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-08-30 10-55-57.0428[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-08-30 10-55-57.0431[GetAPIVersionHwLibrary]End
+2025-08-30 10-55-57.0434[EnumUSBDevices]Begin
+2025-08-30 10-55-57.0452[EnumUSBDevices]Found 1 USB Devices
+2025-08-30 10-55-57.0454[EnumUSBDevices]End
+2025-08-30 10-55-57.0456[OpenPrinterUSB]Begin
+2025-08-30 10-55-57.0457[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-08-30 10-55-57.0467[OpenPrinterUSB]New device ID:00000101
+2025-08-30 10-55-57.0468[OpenPrinterUSB]End
+2025-08-30 10-55-57.0479[GetInfoDeviceModel]Begin
+2025-08-30 10-55-57.0485[GetInfoDeviceModel]Device Model:Custom K80
+2025-08-30 10-55-57.0486[GetInfoDeviceModel]End
+2025-08-30 10-55-57.0488[GetInfoFirmwareVersion]Begin
+2025-08-30 10-55-57.0495[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-08-30 10-55-57.0496[GetInfoFirmwareVersion]End
+2025-08-30 10-55-57.0498[GetCapCommPortType]Begin
+2025-08-30 10-55-57.0506[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-08-30 10-55-57.0507[GetCapCommPortType]End
+2025-08-30 10-55-57.0508[GetCapPrinterResolution]Begin
+2025-08-30 10-55-57.0513[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-08-30 10-55-57.0513[GetCapPrinterResolution]End
+2025-08-30 10-55-57.0514[GetCapPrintWidth]Begin
+2025-08-30 10-55-57.0518[GetCapPrintWidth]Cap Print Width:640
+2025-08-30 10-55-57.0520[GetCapPrintWidth]End
+2025-08-30 10-56-12.0219[PrintBitmapImage]Begin
+2025-08-30 10-56-12.0220[PrintBitmapImage]Extracting 24bit RAW buffer from Bitmap...
+2025-08-30 10-56-12.0231[PrintBitmapImage]<Width>:1295
+2025-08-30 10-56-12.0231[PrintBitmapImage]<Height>:2245
+2025-08-30 10-56-12.0232[PrintBitmapImage]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_TO_FIT<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-08-30 10-56-14.0339[PrintBitmapImage]End
+2025-08-30 10-56-14.0342[Cut]Begin
+2025-08-30 10-56-14.0343[Cut]CutType:CUT_TOTAL
+2025-08-30 10-56-14.0347[Cut]End
+2025-08-30 11-03-00.0377[]*****************************************
+2025-08-30 11-03-00.0379[]DLL Log Initialize. Verbosity: 6
+2025-08-30 11-03-00.0382[]*****************************************
+2025-08-30 11-03-00.0382[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-08-30 11-03-00.0383[]DLL Version: 1.07
+2025-08-30 11-03-00.0384[InitLibrary]Begin
+2025-08-30 11-03-00.0426[InitLibrary]Library SignID:00000101
+2025-08-30 11-03-00.0429[InitLibrary]Current SignID:00000101
+2025-08-30 11-03-00.0430[InitLibrary]End
+2025-08-30 11-03-00.0432[GetAPIVersion]Begin
+2025-08-30 11-03-00.0434[GetAPIVersion]API rel 1.07
+2025-08-30 11-03-00.0436[GetAPIVersion]End
+2025-08-30 11-03-00.0438[GetAPIVersionHwLibrary]Begin
+2025-08-30 11-03-00.0445[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-08-30 11-03-00.0447[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-08-30 11-03-00.0450[GetAPIVersionHwLibrary]End
+2025-08-30 11-03-00.0452[EnumUSBDevices]Begin
+2025-08-30 11-03-00.0472[EnumUSBDevices]Found 1 USB Devices
+2025-08-30 11-03-00.0475[EnumUSBDevices]End
+2025-08-30 11-03-00.0476[OpenPrinterUSB]Begin
+2025-08-30 11-03-00.0479[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-08-30 11-03-00.0490[OpenPrinterUSB]New device ID:00000101
+2025-08-30 11-03-00.0492[OpenPrinterUSB]End
+2025-08-30 11-03-00.0500[GetInfoDeviceModel]Begin
+2025-08-30 11-03-00.0506[GetInfoDeviceModel]Device Model:Custom K80
+2025-08-30 11-03-00.0507[GetInfoDeviceModel]End
+2025-08-30 11-03-00.0509[GetInfoFirmwareVersion]Begin
+2025-08-30 11-03-00.0519[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-08-30 11-03-00.0521[GetInfoFirmwareVersion]End
+2025-08-30 11-03-00.0522[GetCapCommPortType]Begin
+2025-08-30 11-03-00.0534[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-08-30 11-03-00.0535[GetCapCommPortType]End
+2025-08-30 11-03-00.0536[GetCapPrinterResolution]Begin
+2025-08-30 11-03-00.0540[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-08-30 11-03-00.0541[GetCapPrinterResolution]End
+2025-08-30 11-03-00.0543[GetCapPrintWidth]Begin
+2025-08-30 11-03-00.0551[GetCapPrintWidth]Cap Print Width:640
+2025-08-30 11-03-00.0552[GetCapPrintWidth]End
+2025-08-30 11-03-14.0436[PrintBitmapImage]Begin
+2025-08-30 11-03-14.0437[PrintBitmapImage]Extracting 24bit RAW buffer from Bitmap...
+2025-08-30 11-03-14.0448[PrintBitmapImage]<Width>:1295
+2025-08-30 11-03-14.0449[PrintBitmapImage]<Height>:2245
+2025-08-30 11-03-14.0449[PrintBitmapImage]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_TO_FIT<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-08-30 11-03-16.0605[PrintBitmapImage]End
+2025-08-30 11-03-16.0607[Cut]Begin
+2025-08-30 11-03-16.0607[Cut]CutType:CUT_TOTAL
+2025-08-30 11-03-16.0612[Cut]End
+2025-08-30 11-04-37.0369[PrintBitmapImage]Begin
+2025-08-30 11-04-37.0370[PrintBitmapImage]Extracting 24bit RAW buffer from Bitmap...
+2025-08-30 11-04-37.0379[PrintBitmapImage]<Width>:1295
+2025-08-30 11-04-37.0379[PrintBitmapImage]<Height>:2245
+2025-08-30 11-04-37.0379[PrintBitmapImage]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_TO_FIT<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-08-30 11-04-39.0411[PrintBitmapImage]End
+2025-08-30 11-04-39.0412[Cut]Begin
+2025-08-30 11-04-39.0413[Cut]CutType:CUT_TOTAL
+2025-08-30 11-04-39.0416[Cut]End
