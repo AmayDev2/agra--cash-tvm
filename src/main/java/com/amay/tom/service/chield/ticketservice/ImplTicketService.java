@@ -173,6 +173,7 @@ public class ImplTicketService implements TicketService, ReprintTicket {
         return qrTickets.toArray(new QRTicket[0]);
     }
 
+    @Deprecated
     public boolean reprintTicketByTicketNo(String ticketNo) {
         Logger.info("Reprinting ticket by ticket no: {}", ticketNo);
 
@@ -276,8 +277,9 @@ public class ImplTicketService implements TicketService, ReprintTicket {
             if (/*EnvFile.getPrinterCheck() &&*/ PeripheralMonitor.getPrinterStatus()) {
 
                 Logger.info("Printing Ticket");
-//                ImplPrintTicket.printImage(bufferedImage);
-                PrinterCommandDispatcher.INSTANCE.printImage(bufferedImage);
+                ImplPrintTicket.printImage(bufferedImage);
+//                PrinterCommandDispatcher.INSTANCE.printImage(bufferedImage);
+                PrinterCommandDispatcher.INSTANCE.printText(qrTicket);
             } else {
                 Logger.warn("Printer not connected {}", EnvFile.getThermalPrinterModel());
             }

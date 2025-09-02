@@ -12,6 +12,7 @@ public class UPIPayment implements PaymentMedia {
                 .setOrderId(orderId)
                 .setAmount((int)amount)
                 .setTransactionId("UPI"+UUID.randomUUID().toString())
+                .setSuccess(true)
                 .setStatus("SUCCESS");
     }
 }

@@ -58,7 +58,7 @@ public class AgaraTicketController {
     @FXML
     private void initialize() {
         ticketName.setText(EnvFile.getTicketName());
-        logoImage.setImage(new Image("file:src/main/resources/images/indoor-bhopal-logo.png" ));
+//        logoImage.setImage(new Image("file:src/main/resources/images/indoor-bhopal-logo-ticket.png" ));
     }
 
     public void updateTicketData(QRTicket qrTicket) {

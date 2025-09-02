@@ -18,4 +18,5 @@ public class PaymentResponse {
     private int amount;
     private String paymentMode;
     private String status;
+    private boolean isSuccess;
 }

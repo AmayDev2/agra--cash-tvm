@@ -28,6 +28,7 @@ public class CashPayment implements PaymentMedia {
                  paymentResponse.setOrderId(orderId)
                 .setAmount((int)amount)
                 .setTransactionId("CASH_"+UUID.randomUUID())
+                .setSuccess(false)
                 .setStatus("FAILED");
 
             // Navigate to completion screen
@@ -44,7 +45,7 @@ public class CashPayment implements PaymentMedia {
                 throw new RuntimeException(" Transaction couldn't be succeed");
             }
 
-            return paymentResponse.setStatus("SUCCESS");
+            return paymentResponse.setStatus("SUCCESS").setSuccess(true);
         }catch (Exception e){
             return  paymentResponse.setStatus("FAILED");
         }finally {

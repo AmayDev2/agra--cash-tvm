@@ -8,6 +8,8 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
@@ -17,6 +19,14 @@ import java.util.ArrayList;
 public class SessionCompletion {
     public Label totalAmount;
     public Label remainedAmount;
+
+    @FXML private Label eventTitle;
+    @FXML private ImageView event;
+
+    private  String eventTitleText;
+    private  String image;
+
+
     private BorderPane borderPane;
     private StackPane stackPane;
     private GridPane gridPane;
@@ -26,7 +36,12 @@ public class SessionCompletion {
 
     @FXML
     void initialize(){
+
         gridPane= (GridPane) this.stackPane.getChildren().getFirst();
+        if(image!=null){
+            event.setImage(new Image(image));
+            eventTitle.setText(eventTitleText);
+        }
 
     }
 
@@ -40,6 +55,10 @@ public class SessionCompletion {
         this.stackPane=stackPane;
         this.borderPane = borderPane;
         printTicketService = new PrintTicketService(generatedTicket, paymentResponse, agent);
+        if(!paymentResponse.isSuccess()){
+            eventTitleText="Transaction Failed";
+            image="file://images/tvm/failed.png";
+        }
     }
 
 

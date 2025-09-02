@@ -9,51 +9,54 @@
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="568.0" minWidth="-Infinity" prefHeight="618.0" prefWidth="1024.0"
       style="-fx-background-color: #fff;" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tvm.controller.SessionCompletion">
 
-        <GridPane minHeight="618.0">
-            <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            </columnConstraints>
-            <rowConstraints>
-                <RowConstraints percentHeight="20.0" vgrow="SOMETIMES" />
-                <RowConstraints percentHeight="60.0" vgrow="SOMETIMES" />
-                <RowConstraints percentHeight="20.0" vgrow="SOMETIMES" />
-            </rowConstraints>
-            <children>
-                <ImageView fx:id="event"
-                           fitHeight="350.0"
-                           fitWidth="350.0"
-                           GridPane.halignment="CENTER"
-                           GridPane.rowIndex="1"
-                           GridPane.valignment="TOP"
-                           pickOnBounds="true"
-                           preserveRatio="true">
-                    <image>
-                        <Image url="@../../../../icons/assets_tom/success.png" />
-                    </image>
-                </ImageView>
-                <Label fx:id="eventTitle" text="Success" styleClass="heading-label"  GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+    <GridPane minHeight="618.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints percentHeight="20.0" vgrow="SOMETIMES"/>
+            <RowConstraints percentHeight="60.0" vgrow="SOMETIMES"/>
+            <RowConstraints percentHeight="20.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <ImageView fx:id="event"
+                   fitHeight="350.0"
+                   fitWidth="350.0"
+                   GridPane.halignment="CENTER"
+                   GridPane.rowIndex="1"
+                   GridPane.valignment="TOP"
+                   pickOnBounds="true"
+                   preserveRatio="true">
+            <Image url="@../../../../icons/assets_tom/success.png"/>
+        </ImageView>
+        <Label fx:id="eventTitle" text="Transaction Successful" styleClass="heading-label" GridPane.halignment="CENTER"
+               GridPane.valignment="CENTER">
+        </Label>
 
-                </Label>
-                <HBox alignment="CENTER" spacing="20" GridPane.halignment="CENTER" GridPane.rowIndex="2">
-                    <Button fx:id="printBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#printReceipt" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: #1d8aca; -fx-background-radius: 30 30 30 30;" text="Print Receipt" textFill="WHITE">
-                        <GridPane.margin>
-                            <Insets top="300.0" />
-                        </GridPane.margin>
-                        <font>
-                            <Font name="Segoe UI Bold" size="20.0" />
-                        </font>
-                    </Button>
-                    <Button fx:id="skipPrintBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#skipPrintReceipt" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: #208323; -fx-background-radius: 30 30 30 30;" text="Save Paper" textFill="WHITE">
-                        <GridPane.margin>
-                            <Insets top="300.0" />
-                        </GridPane.margin>
-                        <font>
-                            <Font name="Segoe UI Bold" size="20.0" />
-                        </font>
-                    </Button>
-                </HBox>
-            </children>
-        </GridPane>
+        <HBox alignment="CENTER" spacing="20" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <Button fx:id="printBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" onAction="#printReceipt" prefHeight="60.0"
+                    prefWidth="180.0" style="-fx-background-color: #1d8aca; -fx-background-radius: 30 30 30 30;"
+                    text="Print Receipt" textFill="WHITE">
+                <GridPane.margin>
+                    <Insets top="300.0"/>
+                </GridPane.margin>
+                <font>
+                    <Font name="Segoe UI Bold" size="20.0"/>
+                </font>
+            </Button>
+            <Button fx:id="skipPrintBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" onAction="#skipPrintReceipt" prefHeight="60.0"
+                    prefWidth="180.0" style="-fx-background-color: #208323; -fx-background-radius: 30 30 30 30;"
+                    text="Save Paper" textFill="WHITE">
+                <GridPane.margin>
+                    <Insets top="300.0"/>
+                </GridPane.margin>
+                <font>
+                    <Font name="Segoe UI Bold" size="20.0"/>
+                </font>
+            </Button>
+        </HBox>
+    </GridPane>
         <Label fx:id="msgDisp" textFill="#1d8aca" StackPane.alignment="BOTTOM_CENTER">
             <StackPane.margin>
                 <Insets bottom="50.0" />

@@ -676,18 +676,25 @@ public class PaymentController {
                         .getPaymentMedia(selectedPayment)
                         .pay(totalFare.get(), requestedTicketOrder.orderId(), new Object[]{this.stackPane});
 
-                if(!paymentResponse.getStatus().equals("SUCCESS")){
+                if(!paymentResponse.isSuccess()){
                     buttonsDisability(false);
-                    Logger.info("Payment response: {}", paymentResponse);
-                    Platform.runLater(()-> {
-                        Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setTitle("Payment Failed");
-                        alert.setHeaderText(null);
-                        alert.setContentText("Payment failed. Please try again.");
-                        alert.showAndWait();
-                    });
-                }else
-                {
+//                    Logger.info("Payment response: {}", paymentResponse);
+//                    Platform.runLater(()-> {
+//                        Alert alert = new Alert(Alert.AlertType.ERROR);
+//                        alert.setTitle("Payment Failed");
+//                        alert.setHeaderText(null);
+//                        alert.setContentText("Payment failed. Please try again.");
+//                        alert.showAndWait();
+//                    });
+                    ProperTicketOrder properTicketOrder = new ProperTicketOrder(
+                            properTickets.toArray(new ProperTicket[0]),
+                            totalFare.get(),
+                            requestedTicketOrder.orderId()
+                    );
+
+                    // Generate and process tickets
+                    this.paymentFailedAndNavigate(properTicketOrder, paymentResponse);
+                }else{
                    showWaiting();
                     Logger.info("Payment response: {}", paymentResponse);
                     ProperTicketOrder properTicketOrder = new ProperTicketOrder(
@@ -753,6 +760,49 @@ public class PaymentController {
                 }
                 this.borderPane.setCenter(this.stackPane);
                     });
+
+            Logger.info("Successfully navigated to completion screen");
+
+        } catch (RuntimeException e) {
+            Logger.error("Error processing tickets and navigation: {}", e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    private void paymentFailedAndNavigate(ProperTicketOrder properTicketOrder, PaymentResponse paymentResponse) {
+        try {
+            QRTicketService qrTicketService = QRTicketFactory.getQRService(new AbstractQRTicketGenerator(), agent);
+
+            TicketInfo ticketInfo = new TicketInfo();
+            ticketInfo.setPreGeneratadTicket(new PreGeneratadTicket()
+                    .setProperTicketOrder(properTicketOrder)
+                    .setPaymentResponse(paymentResponse));
+            ticketInfo.setPAmount(paymentResponse.getAmount());
+
+            ArrayList<GeneratedTicket> generatedTickets= new ArrayList<>();
+
+            // Navigate to completion screen
+            FXMLLoader fxmlLoader = ViewFactory.getSessionCompletionView();
+
+            SessionCompletion sessionCompletion = new SessionCompletion(
+                    this.stackPane,
+                    this.borderPane,
+                    generatedTickets,
+                    paymentResponse,
+                    agent
+            );
+
+            Platform.runLater(()-> {
+                fxmlLoader.setControllerFactory(param -> sessionCompletion);
+                sessionCompletion.printTicket();
+
+                try {
+                    this.stackPane.getChildren().add(fxmlLoader.load());
+                } catch (IOException e) {
+                    e.getMessage();
+                }
+                this.borderPane.setCenter(this.stackPane);
+            });
 
             Logger.info("Successfully navigated to completion screen");
 

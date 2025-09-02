@@ -32,6 +32,7 @@ public class CcuTgService {
     }
 
 
+    @Deprecated
     public QRTicket[] getTicket(org.transaction.qr.QrTransactionGrpc.QrTransactionBlockingStub blockingStub, IssueTicket ticketRequest) {
 
 

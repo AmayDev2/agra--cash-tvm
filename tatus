@@ -1,0 +1,109 @@
+[33mcommit 1511949ab7c2e77ce4a0b7a627cb47f29b7e36b6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mtvm-intigration[m[33m, [m[1;31morigin/tvm-intigration[m[33m)[m
+Author: Kamal Jha <developer4@amaytechnosystems.com>
+Date:   Mon Sep 1 10:07:48 2025 +0530
+
+    Ticket Print
+
+[33mcommit e6661b9a09ffaf16062f164d8a9918631f3e9ee1[m
+Merge: f82522a 6fd7840
+Author: Kamal Jha <developer4@amaytechnosystems.com>
+Date:   Thu Aug 28 10:19:02 2025 +0530
+
+    Printer
+
+[33mcommit f82522a80e721e7be9b3f52e7137ee2d78da06c5[m
+Author: Kamal Jha <developer4@amaytechnosystems.com>
+Date:   Thu Aug 28 10:14:25 2025 +0530
+
+    Vending machine photo size increase
+
+[33mcommit 6fd78408e4eaf08493d2cec37d3fa522510eca16[m
+Author: AmayDev2 <developer2@amaytechnosystems.com>
+Date:   Wed Aug 27 20:38:51 2025 +0530
+
+    add: Printer by direct command
+
+[33mcommit 991d3a9b02e71fb1341cb15f2c5d9ffe508fe872[m
+Author: AmayDev2 <developer2@amaytechnosystems.com>
+Date:   Wed Aug 27 15:04:48 2025 +0530
+
+    add: Printer API
+
+[33mcommit 448b355cc516f64c0b42447e43fc058116903c17[m
+Author: Kamal Jha <developer4@amaytechnosystems.com>
+Date:   Wed Aug 27 15:03:07 2025 +0530
+
+    Payment amount fixed on cast insert page
+
+[33mcommit 547fe1ef1b94d2bf8fef304d742cc8e1792eb108[m
+Author: AmayDev2 <developer2@amaytechnosystems.com>
+Date:   Wed Aug 27 11:16:28 2025 +0530
+
+    bnr
+
+[33mcommit 2beb5aa29bec9932454b9059f802e7177040610a[m
+Author: AmayDev2 <developer2@amaytechnosystems.com>
+Date:   Tue Aug 26 18:07:33 2025 +0530
+
+    done
+
+[33mcommit d1afdca7e18c32546280d8b19368e65efa9a7b29[m
+Merge: 1692970 99335af
+Author: AmayDev2 <developer2@amaytechnosystems.com>
+Date:   Tue Aug 26 16:58:49 2025 +0530
+
+    Merge remote-tracking branch 'origin/AgraTVM-dev4' into tvm-intigration
+
+[33mcommit 169297065721653839aec61a82aefa24a3311bd0[m[33m ([m[1;31morigin/coin-module[m[33m, [m[1;32mcoin-module[m[33m)[m
+Author: AmayDev2 <developer2@amaytechnosystems.com>
+Date:   Tue Aug 26 16:53:51 2025 +0530
+
+    coin module is working
+
+[33mcommit ceb2f11d222db9c3bf205e084fd43d13f2396cc4[m
+Author: AmayDev2 <developer2@amaytechnosystems.com>
+Date:   Tue Aug 26 12:07:58 2025 +0530
+
+    coin module escape caomand is working
+
+[33mcommit 99335afe810241300c5a921d9c398921e69019f8[m[33m ([m[1;31morigin/AgraTVM-dev4[m[33m)[m
+Author: Kamal Jha <developer4@amaytechnosystems.com>
+Date:   Sat Aug 23 19:29:24 2025 +0530
+
+    theme and processing page update
+
+[33mcommit 4d11ee05683520c8d1d27c72b1110edc862395df[m
+Author: Kamal Jha <developer4@amaytechnosystems.com>
+Date:   Sat Aug 23 17:53:22 2025 +0530
+
+    agra-theme and flow
+
+[33mcommit 3058d9b932011ec7d3e4f5c10e8c1decc59e70c2[m
+Author: Kamal Jha <developer4@amaytechnosystems.com>
+Date:   Thu Aug 21 20:08:10 2025 +0530
+
+    TicketType selection and numpad
+
+[33mcommit b71a38943875fbd99a2a926f96e313bf4d194426[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: AmayDev2 <developer2@amaytechnosystems.com>
+Date:   Thu Aug 21 16:25:42 2025 +0530
+
+    add: tickets
+
+[33mcommit cd1c21d7aae8040e1914ac5f56121e52c7831fb9[m
+Author: AmayDev2 <developer2@amaytechnosystems.com>
+Date:   Thu Aug 21 16:20:39 2025 +0530
+
+    add:  TVM Project
+
+[33mcommit cac2c4b4abd0a7a84697cd39aed5c18f5ab03a11[m
+Author: Kamal Jha <developer4@amaytechnosystems.com>
+Date:   Thu Aug 21 16:09:29 2025 +0530
+
+    init
+
+[33mcommit e835e60b4e0ed35d4e2ce8b5ddada48e95ab509a[m
+Author: Kamal Jha <developer4@amaytechnosystems.com>
+Date:   Thu Aug 21 16:08:57 2025 +0530
+
+    init

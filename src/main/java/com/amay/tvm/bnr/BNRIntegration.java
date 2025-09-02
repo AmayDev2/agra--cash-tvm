@@ -285,7 +285,7 @@ public class BNRIntegration {
 //            }
 //        }
 //
-//        vector.sort(Comparator.comparingInt((MEIDenominationInfo a) -> a.getCashType().getValue()).reversed());
+        vector.sort(Comparator.comparingInt((MEIDenominationInfo a) -> a.getCashType().getValue()).reversed());
     }
 
     /****************************************************************************

@@ -181,7 +181,7 @@
             <artifactId>wndapijwrap</artifactId>
             <version>1.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/lib/Printer/CuCustomWndAPIJWrap.jar</systemPath>
+            <systemPath>${project.basedir}/CuCustomWndAPIJWrap.jar</systemPath>
         </dependency>
 
         <!-- grpc dependency -->

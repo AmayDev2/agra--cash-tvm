@@ -46,6 +46,7 @@ public class PrintTicketService {
     }
 
     public void printTicket() {
+        if(this.generatedTicket.isEmpty())return;
         if(this.generatedTicket.getFirst() instanceof AdjustedTicket){
             Logger.debug("Adjusted Ticket info :"+this.generatedTicket.getFirst().toString());
             TicketInfo ticketInfo= ((AdjustedTicket) this.generatedTicket.getFirst()).getTicketInfo();
@@ -73,6 +74,7 @@ public class PrintTicketService {
                 uiqrTicket.setDestination(postGeneratedTicket.getProperTicket().getDestination().getStationName());
                 uiqrTicket.setTicketType(postGeneratedTicket.getProperTicket().getTicketType());
                 uiqrTicket.setQrCode(this.getQRImage(postGeneratedTicket.getQrCodeString(), postGeneratedTicket.getTicketId()));
+                uiqrTicket.setQrCodeString(postGeneratedTicket.getQrCodeString());
                 this.uiqrTickets.add(uiqrTicket);
             }
 
@@ -83,10 +85,11 @@ public class PrintTicketService {
 
     private void tempPrintTicket(){
         for (UIQRTicket uiqrTicket : uiqrTickets) {
-            QRTicket qrTicket = new QRTicket(uiqrTicket.getTicketId(), uiqrTicket.getIssuedAt(), uiqrTicket.getValidUntil(), uiqrTicket.getSource(), uiqrTicket.getDestination(), uiqrTicket.getTicketType().getTicketTypeName(), "Cash", uiqrTicket.getPrice(), uiqrTicket.getQrCode());
+            QRTicket qrTicket = new QRTicket(uiqrTicket.getTicketId(), uiqrTicket.getIssuedAt(), uiqrTicket.getValidUntil(), uiqrTicket.getSource(), uiqrTicket.getDestination(), uiqrTicket.getTicketType().getTicketTypeName(), "CASH", uiqrTicket.getPrice(), uiqrTicket.getQrCode());
             qrTicket.setQty(Integer.parseInt(uiqrTicket.getQuantity()));
+            qrTicket.setQrCodeData(uiqrTicket.getQrCodeString());
             try {
-                Thread.sleep(2000);
+                Thread.sleep(200);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -100,7 +103,7 @@ public class PrintTicketService {
         Image image = null;
         //4-generate QR Generation
         try {
-            BufferedImage qrImage = qrService.createQRCode(null, encryptQR, 500, "png");
+            BufferedImage qrImage = qrService.createQRCode(null, encryptQR, 300, "png");
             //5-save QR image TODO: save image with id
             String folderPath = NewFolder.createTodayFolder();
             ImageUtils.saveBufferedImage(qrImage, folderPath + "\\" + "QR"+ticketId+ ".png");
