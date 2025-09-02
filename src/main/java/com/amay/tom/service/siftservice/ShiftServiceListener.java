@@ -9,9 +9,9 @@ import java.util.Arrays;
 
 public class ShiftServiceListener implements RemoteListener, InternalListener {
 
-    private final ShiftService shiftService;
+    private final com.amay.tom.service.siftservice.ShiftService shiftService;
 
-    public ShiftServiceListener(ShiftService shiftService){
+    public ShiftServiceListener(com.amay.tom.service.siftservice.ShiftService shiftService){
         this.shiftService=shiftService;
     }
 

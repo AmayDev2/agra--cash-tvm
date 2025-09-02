@@ -44,7 +44,7 @@ public class CancelViewController {
         // Add initial rows or call a method to load data
         cancelService.getObserverList().forEach(ticket -> {
             addRow(gridView.getRowCount(), ticket.getTicketId(), ticket.getInStation(), ticket.getOutStation(), ticket.getTicketType(),
-                    TimeUtil.epochMilliToFormattedSystemTime(String.valueOf(ticket.getIssueAt()),"yyyy-MM-dd HH:mm:ss"));
+                    TimeUtil.epochMilliToFormattedSystemTime(String.valueOf(ticket.getIssueAt()),"dd-MM-yyyy HH:mm:ss"));
         });
         if(cancelService.getObserverList().isEmpty())
             clearButton.setDisable(true);

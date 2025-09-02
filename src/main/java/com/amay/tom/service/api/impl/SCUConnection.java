@@ -154,112 +154,70 @@ public enum SCUConnection implements IApi {
         apiRequest.createGetRequest(URLS.GET_TICKET_CONFIG.replace("192.168.1.43:5000", IP + ":" + PORT));
         return apiClient.sendRequest(apiRequest.buildRequest());
     }
-
+//    https://192.168.1.43:5000/api/v1/params/all
     @Override
     public String getCalender() {
-        return """
-                [
-                    {
-                        "id": 1,
-                        "configVer": "v0.1",
-                        "specialDayName": "Test Special Day",
-                        "businessDayModel": {
-                            "id": 4,
-                            "configVer": "v0.1",
-                            "businessDayName": "Special Day One",
-                            "dayType": "SPECIALDAY",
-                            "startTime": "06:00:00",
-                            "endTime": "22:00:00",
-                            "fareMultiplier": 0.8,
-                            "status": "ACTIVE"
-                        },
-                        "status": null,
-                        "specialDate":"09-07"}
-                ]
-                """;
+        ApiClient apiClient = new ApiClient();
+        apiClient.setConnectionTimeout(2);
+        apiClient.setReadTimeout(2);
+        IApiRequest apiRequest = new ApiRequest();
+        apiRequest.setHeader("Content-Type", "application/json");
+        apiRequest.createGetRequest(URLS.CALENDER.replace("192.168.1.43:5000", IP + ":" + PORT));
+        return apiClient.sendRequest(apiRequest.buildRequest());
     }
-
+//    http://localhost:5000/api/v1/ops/peak-times
     @Override
-    public String getpeakTime() {
-        return """
-                
-                [
-                    {
-                        "id": 52,
-                        "configVer": "v0.1",
-                        "peakTimeName": "Morning Peak",
-                        "startTime": "08:00:00",
-                        "endTime": "10:30:00",
-                        "fareMultiplier": 1.1,
-                        "status": "ACTIVE"
-                    },
-                    {
-                        "id": 53,
-                        "configVer": "v0.1",
-                        "peakTimeName": "Afternoon Off-Peak",
-                        "startTime": "13:00:00",
-                        "endTime": "15:00:00",
-                        "fareMultiplier": 0.9,
-                        "status": "ACTIVE"
-                    },
-                    {
-                        "id": 54,
-                        "configVer": "v0.1",
-                        "peakTimeName": "Evening Peak",
-                        "startTime": "16:30:00",
-                        "endTime": "20:00:00",
-                        "fareMultiplier": 1.1,
-                        "status": "ACTIVE"
-                }
-                ]
-                """;
+    public String getPeakTime() {
+        ApiClient apiClient = new ApiClient();
+        apiClient.setConnectionTimeout(2);
+        apiClient.setReadTimeout(2);
+        IApiRequest apiRequest = new ApiRequest();
+        apiRequest.setHeader("Content-Type", "application/json");
+         apiRequest.createGetRequest(URLS.PEAK_HOURS.replace("192.168.1.43:5000", IP + ":" + PORT));
+        return apiClient.sendRequest(apiRequest.buildRequest());
     }
-
+//    http://localhost:5000/api/v1/ops/business-day
     @Override
     public String getBusinessDay() {
-        return """
-                [
-                    {
-                        "id": 202,
-                        "configVer": "v0.1",
-                        "businessDayName": "Operation Weekday",
-                        "dayType": "WEEKDAYS",
-                        "startTime": "06:00:00",
-                        "endTime": "21:00:00",
-                        "fareMultiplier": 1,
-                        "status": "ACTIVE"
-                    },
-                    {
-                        "id": 203,
-                        "configVer": "v0.1",
-                        "businessDayName": "Special Day One",
-                        "dayType": "SPECIALDAY",
-                        "startTime": "06:00:00",
-                        "endTime": "22:00:00",
-                        "fareMultiplier": 1,
-                        "status": "ACTIVE"
-                    },
-                    {
-                        "id": 204,
-                        "configVer": "v0.1",
-                        "businessDayName": "Operation Saturday",
-                        "dayType": "SATURDAY",
-                        "startTime": "06:00:00",
-                        "endTime": "21:00:00",
-                        "fareMultiplier": 1.1,
-                        "status": "ACTIVE"
-                    },
-                    {
-                        "id": 205,
-                        "configVer": "v0.1",
-                        "businessDayName": "Operational Sundays",
-                        "dayType": "SUNDAY",
-                        "startTime": "06:00:00",
-                        "endTime": "22:00:00",
-                        "fareMultiplier": 0.9,
-                        "status": "ACTIVE"
-                }
-                ]
-                """;
+        ApiClient apiClient = new ApiClient();
+        apiClient.setConnectionTimeout(2);
+        apiClient.setReadTimeout(2);
+        IApiRequest apiRequest = new ApiRequest();
+        apiRequest.setHeader("Content-Type", "application/json");
+        apiRequest.createGetRequest(URLS.GET_BUSINESS_DAY.replace("192.168.1.43:5000", IP + ":" + PORT));
+        return apiClient.sendRequest(apiRequest.buildRequest());
+    }
+
+    @Override
+    public String getMasterVersion() {
+        ApiClient apiClient = new ApiClient();
+        apiClient.setConnectionTimeout(2);
+        apiClient.setReadTimeout(2);
+        IApiRequest apiRequest = new ApiRequest();
+        apiRequest.setHeader("Content-Type", "application/json");
+        apiRequest.createGetRequest(URLS.GET_ALL_VERSION.replace("192.168.1.43:5000", IP + ":" + PORT));
+        return apiClient.sendRequest(apiRequest.buildRequest());
+    }
+
+    @Override
+    public String getProduct() {
+        ApiClient apiClient = new ApiClient();
+        apiClient.setConnectionTimeout(2);
+        apiClient.setReadTimeout(2);
+        IApiRequest apiRequest = new ApiRequest();
+        apiRequest.setHeader("Content-Type", "application/json");
+        apiRequest.createGetRequest(URLS.PRODUCT_DEFINITION.replace("192.168.1.43:5000", IP + ":" + PORT));
+        return apiClient.sendRequest(apiRequest.buildRequest());
+
+    }
+
+    public String getTomConfig() {
+        ApiClient apiClient = new ApiClient();
+        apiClient.setConnectionTimeout(2);
+        apiClient.setReadTimeout(2);
+        IApiRequest apiRequest = new ApiRequest();
+        apiRequest.setHeader("Content-Type", "application/json");
+        apiRequest.createGetRequest(URLS.TOM_CONFIG.replace("192.168.1.43:5000", IP + ":" + PORT));
+        return apiClient.sendRequest(apiRequest.buildRequest());
     }
 }

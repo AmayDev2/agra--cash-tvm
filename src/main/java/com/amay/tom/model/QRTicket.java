@@ -9,10 +9,8 @@ import com.amay.tom.utils.time.TimeUtil;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import javafx.scene.image.Image;
 import lombok.*;
-import org.tinylog.Logger;
 
 import java.io.Serializable;
-import java.util.Date;
 
 
 @Data

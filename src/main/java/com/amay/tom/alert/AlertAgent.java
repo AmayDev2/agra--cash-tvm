@@ -1,9 +1,10 @@
 package com.amay.tom.alert;
 
+import com.amay.tom.alert.SCUAlert;
 import com.amay.tom.enums.Alarm;
 import com.amay.tom.grpc.monotoring.GrpcApiListener;
 
-public enum AlertAgent implements SCUAlert  {
+public enum AlertAgent implements SCUAlert {
     INSTANCE;
 
     private GrpcApiListener grpcApiListener;

@@ -3,6 +3,7 @@ package com.amay.tom.service.siftservice;
 
 import com.amay.tom.ViewFactory;
 import com.amay.tom.controller.ResumeShiftController;
+import com.amay.tom.service.siftservice.InternalListener;
 import com.amay.tom.service.siftservice.impl.ShiftServiceImpl;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,11 +13,11 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.Window;
-import org.network.monitorandcontrol.DeviceType;
+import org.network.monitorandcontrol.EquipmentType;
 
 public class PopupContent {
     private Stage popupStage;
-    private DeviceType deviceType;
+    private EquipmentType equipmentType;
     ResumeShiftController resumeShiftController;
 
 
@@ -43,6 +44,8 @@ public class PopupContent {
             Parent p = loader.load();
 
             Scene scene = new Scene(p, 700, 700);
+            scene.getStylesheets().add(getClass().getResource("/css/theme.css").toExternalForm());
+//            scene.getStylesheets().add(getClass().getResource("/css/agra-theme.css").toExternalForm());
             scene.setFill(Color.TRANSPARENT); // Set the scene fill to transparent
             popupStage.setScene(scene);
         } catch (Exception e) {

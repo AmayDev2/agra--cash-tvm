@@ -1,6 +1,6 @@
 package com.amay.tom.service.fare;
 
-import com.amay.tom.model.Station;
+import com.amay.tom.model.station.Station;
 import com.amay.tom.model.TicketType;
 import com.amay.tom.repository.FareLine3;
 

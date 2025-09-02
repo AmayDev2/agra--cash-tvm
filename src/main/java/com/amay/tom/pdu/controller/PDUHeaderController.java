@@ -25,8 +25,8 @@ public class PDUHeaderController {
 
 
 
-    private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("hh:mm:ss a");
-    private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd MMMM, yyyy");
+    private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("HH:mm:ss");
+    private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
 
     private void startTime(){
@@ -49,9 +49,11 @@ public class PDUHeaderController {
     public void initialize() {
         this.sceneManager = new SceneManager(stackPane);
         this.startTime();
-        labelStationName.setText(SystemConfig.getInstance().getCurrentStation().getStationName());
+        labelStationName.setText("Station Name");
     }
 
-
+    public void setStation(String stationName){
+        labelStationName.setText(stationName);
+    }
 
 }

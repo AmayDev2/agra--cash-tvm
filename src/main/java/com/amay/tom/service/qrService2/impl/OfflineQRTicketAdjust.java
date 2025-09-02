@@ -2,11 +2,13 @@ package com.amay.tom.service.qrService2.impl;
 
 
 import com.amay.tom.agent.Agent;
-import com.amay.tom.enums.AdjustmentType;
-import com.amay.tom.exceptions.TicketNotGenerated;
+import com.amay.tom.config.SystemConfig;
 import com.amay.tom.model.GeneratedTicket;
 import com.amay.tom.model.adjust.AdjustedTicket;
-import com.amay.tom.repository.adjustment.AdjustedTicketRepositoryImpl;
+import com.amay.tom.model.payment.PaymentResponse;
+import com.amay.tom.model.session.Shift;
+import com.amay.tom.pdu.controller.PaymentSummary;
+import com.amay.tom.service.base36.TransactionIdGeneratorService;
 import com.amay.tom.service.qrService2.QRTicketAdjustment;
 import com.amay.tom.service.qrService2.TicketInfo;
 import com.amay.tom.service.qrservice.Impl.ImplQRService;
@@ -21,6 +23,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.UUID;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 /*1:- ticketIds generation  --off(Getting the id instead of orderId)*/
 //2:- ticketQRs string generation --off
@@ -48,36 +51,13 @@ public class OfflineQRTicketAdjust extends QRTicketAdjustment {
     @Override
     public ArrayList<GeneratedTicket> processTicket(String OrderId, String transactionId, TicketInfo ticketInfo) {
         AdjustedTicket ticket = null;
-//        if (ticketInfo.getAdjustmentType().contains(AdjustmentType.ENTRY_TIME)) {
-            ticket=this.adjustEntryTimeOverride(OrderId, transactionId, ticketInfo);
-//        }
-        if (ticketInfo.getAdjustmentType().contains(AdjustmentType.EXIT_TIME)) {
-            ticket=this.adjustExitTimeOverride(OrderId, transactionId, ticketInfo);
-        }
-        if (ticketInfo.getAdjustmentType().contains(AdjustmentType.OVER_TRAVEL)) {
-            ticket=this.adjustDestinationOverride(OrderId, transactionId, ticketInfo);
-        }
-        if (ticketInfo.getAdjustmentType().contains(AdjustmentType.MARK_ENTRY)) {
-            //
-        }
-        if (ticketInfo.getAdjustmentType().contains(AdjustmentType.MARK_EXIT)) {
-           //
-        }
-        if (ticketInfo.getAdjustmentType().contains(AdjustmentType.REVERT_EXIT)) {
-            //
-        }
-        if (ticketInfo.getAdjustmentType().contains(AdjustmentType.REVERT_ENTRY)) {
-            //
-        }
-
-        // NOTE: In case of RJT 2nd journey over travel
-
-        //3:- save into db
+        ticket=this.adjustTicket(OrderId, transactionId, ticketInfo);
         if(null!=ticket){
-            ticket.setPaymentMode(ticketInfo.getPreGeneratadTicket().getPaymentResponse().getPaymentMode());
+//            ticket.setPaymentMode(ticketInfo.getPreGeneratadTicket().getPaymentResponse().getPaymentMode());
+            ticket.setAdjustId(UUID.randomUUID().toString());
             String adjustId=super.saveIntoDb(ticket);
             ticket.setTicketInfo(ticketInfo);
-            super.pushToScu(OrderId,transactionId,ticket);
+            super.pushToScuAsync(OrderId,transactionId,ticket);
             Logger.getLogger("OfflineQRTicketAdjust").info("Ticket Adjusted with id: " + adjustId);
         }
 
@@ -85,6 +65,54 @@ public class OfflineQRTicketAdjust extends QRTicketAdjustment {
         return new ArrayList<GeneratedTicket>() {{
             add(finalTicket);
         }};
+    }
+
+
+    public AdjustedTicket adjustEntryExitOverride(String OrderId, String transactionId, TicketInfo ticketInfo) {
+
+        //1-generate QR String
+        //2-encrypt QR String
+        //TODO:TEST- set entry time in ticketInfo before encryption
+//        ticketInfo.getQrTicketV2().setIssueAt(Instant.now().toEpochMilli());
+
+        String qrData= Base64Encoding.decode(ticketInfo.getQrData());
+        String[] qrDataArray=qrData.split(delimiter);
+        ticketInfo.setEffectiveTime(Instant.now().toEpochMilli());
+        //index 2
+        qrDataArray[2]= String.valueOf(ticketInfo.getEffectiveTime());
+        ticketInfo.setQrData(Arrays.toString(qrDataArray));
+
+        String encryptQR = this.getQRDataByTicketV1(ticketInfo.getQrData(),ticketInfo.getQrTicketV2().getTicketId(),ticketInfo.getQrTicketV2().getInStation().getStationId(),ticketInfo.getQrTicketV2().getOutStation().getStationId(),
+                ticketInfo.getQrTicketV2().getAmount(),ticketInfo.getQrTicketV2().getOperatorId(),ticketInfo.getQrTicketV2().getOperatorId(),ticketInfo.getQrTicketV2().getOperatorId(),
+                String.valueOf(ticketInfo.getQrTicketV2().getIssueAt()),String.valueOf(ticketInfo.getQrTicketV2().getValidUntil()),Integer.parseInt(ticketInfo.getQrTicketV2().getTicketType().getTicketTypeId()),ticketInfo.getQrTicketV2().getQuantity());
+
+        AdjustedTicket adjustedTicket = getAdjustedTicket(ticketInfo, encryptQR).setOrderId(OrderId)
+                .setTransactionId(transactionId)
+                .setAdjustmentType("ENTRY_TIME")
+                .setDestination(ticketInfo.getQrTicketV2().getOutStation().getStationId())
+                .setIssueTime(String.valueOf(ticketInfo.getEffectiveTime()))
+                .setPaymentMode(ticketInfo.getQrTicketV2().getFareMode());
+        //3-save into db
+        String adjustId = saveIntoDb(adjustedTicket);
+
+        Logger.getLogger("OfflineQRTicketAdjust").info("Ticket Adjusted with id: " + adjustId);
+//        getQRImage(encryptQR);
+        return adjustedTicket;
+
+    }
+
+
+
+
+    //NOTE:- here we are not generating any new qrData
+    //1- generate an adjusted id
+    @Override
+    public AdjustedTicket adjustTicket(String OrderId, String transactionId, TicketInfo ticketInfo) {
+        AdjustedTicket adjustedTicket = getAdjustedTicket(ticketInfo, ticketInfo.getQrData()).setOrderId(OrderId)
+                .setTransactionId(transactionId)
+                .setTicketInfo(ticketInfo);
+        return adjustedTicket;
+
     }
 
     @Override
@@ -185,8 +213,11 @@ public class OfflineQRTicketAdjust extends QRTicketAdjustment {
         return new AdjustedTicket()
                 .setArea(ticketInfo.getArea())
                 .setPenaltyAmount(String.valueOf(ticketInfo.getPAmount()))
-                .setTicketNumber(ticketInfo.getQrTicketV2().getTicketId()).setAdjustmentType(ticketInfo.getAdjustmentType().spliterator().toString()).setEncryptedQR(encryptQR).setCreatedAt(LocalDateTime.ofInstant(new Date().toInstant(), ZoneId.systemDefault())).setUpdatedAt(LocalDateTime.ofInstant(new Date().toInstant(), ZoneId.systemDefault()))
-                .setTransactionTime(LocalDateTime.ofInstant(new Date().toInstant(), ZoneId.systemDefault()));
+                .setTicketNumber(ticketInfo.getQrTicketV2().getTicketId())
+                .setAdjustmentType(ticketInfo.getAdjustmentType().stream().map(Enum::name).collect(Collectors.joining(", ")))
+                .setEncryptedQR(encryptQR).setCreatedAt(LocalDateTime.ofInstant(new Date().toInstant(), ZoneId.systemDefault())).setUpdatedAt(LocalDateTime.ofInstant(new Date().toInstant(), ZoneId.systemDefault()))
+                .setTransactionTime(LocalDateTime.ofInstant(new Date().toInstant(), ZoneId.systemDefault()))
+                .setDeviceId(SystemConfig.getInstance().getCurrentEquipment().getEquipmentId());
     }
 
 

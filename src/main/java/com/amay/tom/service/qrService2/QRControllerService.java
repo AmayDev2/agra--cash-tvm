@@ -43,9 +43,9 @@ public class QRControllerService {
         fxmlLoader.setControllerFactory(c -> new PaymentController(agent));
         Parent root = fxmlLoader.load();
 
-
         PaymentController paymentController = fxmlLoader.getController();
         paymentController.setParentNode(this.controller);
+        paymentController.setBorderPane(borderPane);
         paymentController.setParentNode(this.borderPane.getCenter());
         paymentController.setRequestedTicketOrder(requestedTicketOrder);
         observableList.clear();

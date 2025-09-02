@@ -1,7 +1,6 @@
 package com.amay.tom.utils.time;
 
 import com.amay.tom.config.TicketConfig;
-import com.amay.tom.utils.env.EnvFile;
 import com.google.protobuf.Timestamp;
 import org.tinylog.Logger;
 
@@ -21,7 +20,7 @@ public class TimeUtil {
     }
 
     public static long getCurrentDateTimeInLong() {
-        return new java.util.Date().getTime();
+        return new Date().getTime();
     }
 
 
@@ -55,7 +54,7 @@ public class TimeUtil {
 
 
     public static String getCurrentTimestamp() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         LocalDateTime now = LocalDateTime.now();
         return now.format(formatter);
     }
@@ -65,7 +64,7 @@ public class TimeUtil {
         String time = decodeTime(encodedTime);
         String dateTime= date + " " + time;
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
         LocalDateTime localDateTime = LocalDateTime.parse(dateTime, formatter);
         return formatter.format(localDateTime);
 
@@ -82,7 +81,7 @@ public class TimeUtil {
         String day = encodedDate.substring(4, 6);
         String date = year + "-" + month + "-" + day;
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         LocalDate localDate = LocalDate.parse(date, formatter);
         return formatter.format(localDate);
     }
@@ -103,7 +102,7 @@ public class TimeUtil {
     }
 
     public static String addHours(String issueTime, int hours) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
         LocalDateTime localDateTime = LocalDateTime.parse(issueTime, formatter);
         localDateTime = localDateTime.plusHours(hours);
         return localDateTime.format(formatter);
@@ -112,11 +111,11 @@ public class TimeUtil {
     public static boolean isExpired(String expiryTime) {
         return true;
 //        try{
-//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
 //        LocalDateTime localDateTime = LocalDateTime.parse(expiryTime, formatter);
 //        return LocalDateTime.now().isAfter(localDateTime);}
 //        catch(DateTimeParseException e){
-//            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+//            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 //            LocalDateTime localDateTime = LocalDateTime.parse(expiryTime, formatter);
 //            return LocalDateTime.now().isAfter(localDateTime);
 //        }catch (Exception e){
@@ -125,7 +124,7 @@ public class TimeUtil {
     }
 
     public static boolean addedMinIsBeforeNow(String initiateDateTime, int ticketIssueToEntryTimeLimitMin) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
         LocalDateTime localDateTime = LocalDateTime.parse(initiateDateTime, formatter);
         localDateTime = localDateTime.plusMinutes(ticketIssueToEntryTimeLimitMin);
         return LocalDateTime.now().isBefore(localDateTime);
@@ -133,14 +132,14 @@ public class TimeUtil {
 
     public static long getTimeInMilli(String expiryTime) {
         try {
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
             LocalDateTime localDateTime = LocalDateTime.parse(expiryTime, formatter);
-            long milli = localDateTime.atZone(java.time.ZoneId.systemDefault()).toInstant().toEpochMilli();
+            long milli = localDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
             return milli;
         } catch (DateTimeParseException e) {
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
             LocalDateTime localDateTime = LocalDateTime.parse(expiryTime, formatter);
-            long milli = localDateTime.atZone(java.time.ZoneId.systemDefault()).toInstant().toEpochMilli();
+            long milli = localDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
             return milli;
         }catch (Exception e){
             throw new IllegalArgumentException("Invalid expiry time");
@@ -148,9 +147,9 @@ public class TimeUtil {
     }
 
     public static long StringToTime(String initiateDateTime) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         LocalDateTime localDateTime = LocalDateTime.parse(initiateDateTime, formatter);
-        return localDateTime.atZone(java.time.ZoneId.systemDefault()).toInstant().toEpochMilli();
+        return localDateTime.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
     }
 
     public static long addHoursEpoch(long issuanceTime, int ticketTime) {
@@ -251,6 +250,12 @@ public class TimeUtil {
         return currentTime.format(DateTimeFormatter.ofPattern(formate));
     }
 
+    public static boolean isCurrentDay(String day) {
+        String formate="yyMMdd";
+        LocalDateTime currentTime = LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
+        return currentTime.format(DateTimeFormatter.ofPattern(formate)).equals(day);
+    }
+
 
     public static boolean compareForAnalysis(String initiateDateTime) {
         try {
@@ -308,6 +313,12 @@ public class TimeUtil {
             Logger.warn("Ticket check failed: ERROR {}", e.getMessage());
             return false;
         }
+    }
+
+
+    public static long getCurrentMilli() {
+        Instant now = Instant.now();
+        return now.toEpochMilli();
     }
 
 }

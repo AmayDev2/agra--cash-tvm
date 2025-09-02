@@ -3,6 +3,8 @@ package com.amay.tom.maintenance.service.component;
 import com.amay.tom.ViewFactory;
 import com.amay.tom.controller.components.ConfermationWindow;
 import com.amay.tom.controller.components.StatusWindow;
+import com.amay.tom.maintenance.service.component.MyOperation;
+import com.amay.tom.maintenance.service.component.StatusWindowPopupListener;
 import com.amay.tom.maintenance.service.component.model.StatusWindowModel;
 import com.amay.tom.threadpool.ThreadPool;
 import javafx.fxml.FXMLLoader;
@@ -12,11 +14,11 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.Window;
-import org.network.monitorandcontrol.DeviceType;
+import org.network.monitorandcontrol.EquipmentType;
 
 public class StatusWindowPopup implements StatusWindowPopupListener {
-    private Stage popupStage;
-    private DeviceType deviceType;
+    private final Stage popupStage;
+    private EquipmentType equipmentType;
 
 
     public StatusWindowPopup(MyOperation myOperation, StatusWindowModel statusWindowModel, ThreadPool threadPool) {

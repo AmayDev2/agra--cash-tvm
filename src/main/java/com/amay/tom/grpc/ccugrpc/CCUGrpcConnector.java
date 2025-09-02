@@ -1,8 +1,6 @@
 package com.amay.tom.grpc.ccugrpc;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
-import org.transaction.qr.QrTransactionGrpc;
-
 import java.util.concurrent.TimeUnit;
 
 public class CCUGrpcConnector {
@@ -24,17 +22,6 @@ public class CCUGrpcConnector {
                 .build();
     }
 
-    public QrTransactionGrpc.QrTransactionBlockingStub getBlockingStub() {
-        return QrTransactionGrpc.newBlockingStub(channel);
-    }
-
-    public QrTransactionGrpc.QrTransactionStub getAsyncStub() {
-        return QrTransactionGrpc.newStub(channel);
-    }
-
-    public QrTransactionGrpc.QrTransactionFutureStub getFutureStub() {
-        return QrTransactionGrpc.newFutureStub(channel);
-    }
 
     public void reconnect() {
         this.shutdown();

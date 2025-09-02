@@ -5,6 +5,7 @@ import com.amay.tom.exceptions.QueryNotAppropriateException;
 import com.amay.tom.exceptions.UsernameNotFoundException;
 import com.amay.tom.model.user.dto.UserPrivilegeDto;
 import com.amay.tom.model.user.dto.UserDto;
+import com.amay.tom.repository.user.UserRepository;
 
 import java.sql.*;
 import java.time.LocalDateTime;

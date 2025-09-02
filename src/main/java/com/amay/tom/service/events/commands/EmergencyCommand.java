@@ -1,6 +1,5 @@
 package com.amay.tom.service.events.commands;
 
-import com.amay.tom.grpc.monotoring.GrpcApiListener;
 import com.amay.tom.listener.ModesListener;
 import com.amay.tom.service.events.TOMCommand;
 import com.amay.tom.service.tom.IApplicationService;

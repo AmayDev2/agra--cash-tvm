@@ -1,5 +1,8 @@
 package com.amay.tom.model.ccuRest;
 
+import com.amay.tom.model.ccuRest.Role;
+import com.amay.tom.model.ccuRest.UserProfile;
+import com.amay.tom.model.ccuRest.UserStatus;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;

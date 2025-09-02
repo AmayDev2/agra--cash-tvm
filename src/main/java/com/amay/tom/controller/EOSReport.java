@@ -1,39 +1,63 @@
 package com.amay.tom.controller;
 
+import com.amay.tom.Main;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.config.SystemConfig;
 import javafx.fxml.FXML;
 import javafx.scene.text.Text;
+import org.tinylog.Logger;
 
 import java.time.LocalDateTime;
 
 public class EOSReport {
+
+    @FXML public Text freeAdjustmentCount;
+    @FXML private Text qrAdjustmentCashAmount;
+    @FXML private Text qrAdjustmentUpiCount;
+    @FXML private Text qrAdjustmentUpiAmount;
+    @FXML private Text qrAdjustmentPosCount;
+    @FXML private Text qrAdjustmentPosAmount;
+    @FXML private Text ncmcAdjustmentCashCount;
+    @FXML private Text ncmcAdjustmentUpiCount;
+    @FXML private Text ncmcAdjustmentPosCount;
+    @FXML private Text ncmcAdjustmentCashAmount;
+    @FXML private Text ncmcAdjustmentUpiAmount;
+    @FXML private Text ncmcAdjustmentPosAmount;
+    @FXML private Text paidExitCashCount;
+    @FXML private Text paidExitCashAmount;
+    @FXML private Text paidExitUpiCount;
+    @FXML private Text paidExitUpiAmount;
+    @FXML private Text paidExitPosCount;
+    @FXML private Text paidExitPosAmount;
+    @FXML private Text qrAdjustmentCashCount;
+    @FXML private Text replacementTicketCount;
+    @FXML private Text replacementTicketAmount;
     @FXML private Text sjtCashCount;
     @FXML private Text sjtCashAmount;
     @FXML private Text rjtCashCount;
     @FXML private Text rjtCashAmount;
     @FXML private Text groupCashCount;
     @FXML private Text groupCashAmount;
-    @FXML private Text ncmcCashCount;
-    @FXML private Text ncmcCashAmount;
-    @FXML private Text ncmcCashTopupAmount;
-    @FXML private Text ncmcCashTopupCount;
+//    @FXML private Text ncmcCashCount;
+//    @FXML private Text ncmcCashAmount;
+//    @FXML private Text ncmcCashTopupAmount;
+//    @FXML private Text ncmcCashTopupCount;
     @FXML private Text freeExitCount;
     @FXML private Text freeExitAmount;
     @FXML private Text paidExitCount;
     @FXML private Text paidExitAmount;
-    @FXML private Text duplicateTicketCount;
-    @FXML private Text duplicateTicketAmount;
-    @FXML private Text totalAdminCount;
-    @FXML private Text totalAdminAmount;
-    @FXML private Text adjustmentCount;
-    @FXML private Text adjustmentAmount;
+//    @FXML private Text duplicateTicketCount;
+//    @FXML private Text duplicateTicketAmount;
+//    @FXML private Text totalAdminCount;
+//    @FXML private Text totalAdminAmount;
+//    @FXML private Text adjustmentCount;
+//    @FXML private Text adjustmentAmount;
     @FXML private Text totalAdjustmentCount;
     @FXML private Text totalAdjustmentAmount;
-    @FXML private Text paybackCount;
-    @FXML private Text paybackAmount;
-    @FXML private Text totalPaybackCount;
-    @FXML private Text totalPaybackAmount;
+//    @FXML private Text paybackCount;
+//    @FXML private Text paybackAmount;
+//    @FXML private Text totalPaybackCount;
+//    @FXML private Text totalPaybackAmount;
 
 
 
@@ -62,6 +86,8 @@ public class EOSReport {
     @FXML private Text sjtRefundAmount;
     @FXML private Text rjtRefundCount;
     @FXML private Text rjtRefundAmount;
+    @FXML private Text groupRefundAmount;
+    @FXML private Text groupRefundCount;
     @FXML private Text ncmcRefundCount;
     @FXML private Text ncmcRefundAmount;
     @FXML private Text totalRefundCount;
@@ -79,6 +105,9 @@ public class EOSReport {
     @FXML private Text totalCardTransactions;
     @FXML private Text totalUpiTransactions;
     @FXML private Text finalTotal;
+    @FXML private Text revenue;
+
+    private int rev;
 
     @FXML void initialize() {
         // Initialize the UI components if needed
@@ -111,53 +140,124 @@ public class EOSReport {
                              String StationName,
                              String shiftStartTime,
                              String shiftEndTime,
-                             String mOperatorId
-                             ) {
+                             String mOperatorId,
+                             int finalSjtRefundCount,
+                             int finalSjtRefundAmount,
+                             int finalRjtRefundCount,
+                             int finalRjtRefundAmount,
+                             int finalGroupRefundCount,
+                             int finalGroupRefundAmount,
+                             int finalNoOfQrCashAdjusted,
+                             int finalNoOfQrUpiAdjusted,
+                             int finalNoOfQrPosAdjusted,
+                             int finalNoOfPaidExitCash,
+                             int finalNoOfPaidExitUpi,
+                             int finalNoOfPaidExitPos,
+                             int finalNoOfNcmcCashAdjusted,
+                             int finalNoOfNcmcUpiAdjusted,
+                             int finalNoOfNcmcPosAdjusted,
+                             int finalQrCashAmountAdjusted,
+                             int finalQrUpiAmountAdjusted,
+                             int finalQrPosAmountAdjusted,
+                             int finalPaidExitCashAmount,
+                             int finalPaidExitUpiAmount,
+                             int finalPaidExitPosAmount,
+                             int finalNcmcCashAmountAdjusted,
+                             int finalNcmcUpiAmountAdjusted,
+                             int finalNcmcPosAmountAdjusted,
+                             int finalTotalCardTransactions,
+                             int finalTotalUpiTransactions,
+                             int finaltotalCashTransactions,
+                             int finalFreeAdjustCount
+    ) {
+try {
+    this.stationName.setText(String.valueOf(StationName));
+    this.shiftId.setText(shiftId);
+    equipmentId.setText(SystemConfig.getInstance().getCurrentEquipment().getEquipmentId());
+    shiftStart.setText(shiftStartTime);
+    shiftEnd.setText(shiftEndTime);
+    operatorId.setText(mOperatorId);
+    impressMoney.setText("₹ " + String.valueOf(imprestMoney));
 
-        this.stationName.setText(String.valueOf(StationName));
-        this.shiftId.setText(shiftId);
-        equipmentId.setText(SystemConfig.getInstance().getCurrentEquipment().getEquipmentId());
-        shiftStart.setText(shiftStartTime);
-        shiftEnd.setText(shiftEndTime);
-        operatorId.setText(mOperatorId);
-        impressMoney.setText(String.valueOf(imprestMoney));
+    sjtCashAmount.setText("₹ " + String.valueOf(finalAmountSJT));
+    sjtCashCount.setText(String.valueOf(finalNoOfSJT));
+    rjtCashCount.setText(String.valueOf(finalNoOfRJT));
+    rjtCashAmount.setText("₹ " + String.valueOf(finalAmountRJT));
+    groupCashCount.setText(String.valueOf(finalNoOfGroup));
+    groupCashAmount.setText("₹ " + String.valueOf(finalAmountGroup));
 
-        sjtCashAmount.setText(String.valueOf(finalAmountSJT));
-        sjtCashCount.setText(String.valueOf(finalNoOfSJT));
-        rjtCashCount.setText(String.valueOf(finalNoOfRJT));
-        rjtCashAmount.setText(String.valueOf(finalAmountRJT));
-        groupCashCount.setText(String.valueOf(finalNoOfGroup));
-        groupCashAmount.setText(String.valueOf(finalAmountGroup));
+    //refund
+    sjtRefundCount.setText(String.valueOf(finalSjtRefundCount));
+    sjtRefundAmount.setText("₹ " +Math.abs(finalSjtRefundAmount));
+    rjtRefundCount.setText(String.valueOf(finalRjtRefundCount));
+    rjtRefundAmount.setText("₹ " + Math.abs(finalRjtRefundAmount));
+    groupRefundCount.setText(String.valueOf(finalGroupRefundCount));
+    groupRefundAmount.setText("₹ " +Math.abs(finalGroupRefundAmount));
 
-        totalSaleCount.setText(String.valueOf(finalSubTotalCount));
-        totalSaleAmount.setText(String.valueOf(finalTotalAmount));
+    totalSaleCount.setText(String.valueOf(finalSubTotalCount));
+//    totalSaleAmount.setText("₹ " + String.valueOf(finalTotalAmount-finalAmountPaid));
+    totalSaleAmount.setText("₹ " + String.valueOf(finalAmountSJT+finalAmountRJT+finalAmountGroup));
 
-        freeExitCount.setText(String.valueOf(finalNoOfFree));
-        freeExitAmount.setText(String.valueOf(finalAmountFree));
-        paidExitCount.setText(String.valueOf(finalNoOfPaid));
-        paidExitAmount.setText(String.valueOf(finalAmountPaid));
-        duplicateTicketCount.setText(String.valueOf(finalNoOfCanceled));
-        duplicateTicketAmount.setText(String.valueOf(finalAmountCanceled));
+    freeExitCount.setText(String.valueOf(finalNoOfFree));
+    freeExitAmount.setText("₹ " + String.valueOf(finalAmountFree));
+//    paidExitCount.setText(String.valueOf(finalNoOfPaid));
+//    paidExitAmount.setText("₹ " + String.valueOf(finalAmountPaid));
+    replacementTicketCount.setText(String.valueOf(finalNoOfReplaced));
+//    duplicateTicketCount.setText(String.valueOf(finalNoOfCanceled));
+//    duplicateTicketAmount.setText("₹ " + String.valueOf(finalAmountCanceled));
 
-        adjustmentCount.setText(String.valueOf(finalNoOfAdjusted));
-        adjustmentAmount.setText(String.valueOf(finalAmountAdjusted));
-        totalAdjustmentCount.setText(String.valueOf(finalNoOfAdjusted));
-        totalAdjustmentAmount.setText(String.valueOf(finalAmountAdjusted));
+//    adjustmentCount.setText(String.valueOf(finalNoOfAdjusted));
+//    adjustmentAmount.setText("₹ " + String.valueOf(finalAmountAdjusted));
+    qrAdjustmentCashAmount.setText("₹ " + String.valueOf(finalQrCashAmountAdjusted));
 
-        finalTotal.setText(String.valueOf(finalTotalAmount)); // Assuming total cash is the final total amount
-        totalSaleAmount.setText(String.valueOf(finalTotalAmount)); // Assuming total sale amount is the final total amount
-        totalCash.setText(String.valueOf(finalTotalAmount)); // Assuming total cash is the final total amount
+    qrAdjustmentUpiCount.setText(String.valueOf(finalNoOfQrUpiAdjusted));
+    qrAdjustmentUpiAmount.setText("₹ " + String.valueOf(finalQrUpiAmountAdjusted));
 
-        totalRefundAmount.setText(String.valueOf(finalAmountRefunded));
-        totalRefundCount.setText(String.valueOf(finalNoOfRefund));
+    qrAdjustmentPosCount.setText(String.valueOf(finalNoOfQrPosAdjusted));
+    qrAdjustmentPosAmount.setText("₹ " + String.valueOf(finalQrPosAmountAdjusted));
 
-        duplicateTicketCount.setText(String.valueOf(finalNoOfReplaced));
-        duplicateTicketAmount.setText(String.valueOf(finalAmountReplaced));
-        totalAdjustmentAmount.setText(String.valueOf(finalAmountReplaced));
-        totalAdjustmentCount.setText(String.valueOf(finalNoOfReplaced));
+    ncmcAdjustmentCashCount.setText(String.valueOf(finalNoOfNcmcCashAdjusted));
+    ncmcAdjustmentUpiCount.setText(String.valueOf(finalNoOfNcmcUpiAdjusted));
+    ncmcAdjustmentPosCount.setText(String.valueOf(finalNoOfNcmcPosAdjusted));
 
+    ncmcAdjustmentCashAmount.setText("₹ " + String.valueOf(finalNcmcCashAmountAdjusted));
+    ncmcAdjustmentUpiAmount.setText("₹ " + String.valueOf(finalNcmcUpiAmountAdjusted));
+    ncmcAdjustmentPosAmount.setText("₹ " + String.valueOf(finalNcmcPosAmountAdjusted));
 
+    paidExitCashCount.setText(String.valueOf(finalNoOfPaidExitCash));
+    paidExitCashAmount.setText("₹ " + String.valueOf(finalPaidExitCashAmount));
 
+    paidExitUpiCount.setText(String.valueOf(finalNoOfPaidExitUpi));
+    paidExitUpiAmount.setText("₹ " + String.valueOf(finalPaidExitUpiAmount));
+
+    paidExitPosCount.setText(String.valueOf(finalNoOfPaidExitPos));
+    paidExitPosAmount.setText("₹ " + String.valueOf(finalPaidExitPosAmount));
+
+    qrAdjustmentCashCount.setText(String.valueOf(finalNoOfQrCashAdjusted));
+
+    totalAdjustmentCount.setText(String.valueOf(finalNoOfAdjusted));
+    totalAdjustmentAmount.setText("₹ " + String.valueOf(finalAmountAdjusted));
+
+    freeAdjustmentCount.setText(String.valueOf(finalFreeAdjustCount));
+
+    finalTotal.setText("₹ " + String.valueOf(finaltotalCashTransactions+ finalAmountRefunded )); // Assuming total cash is the final total amount
+//    totalSaleAmount.setText("₹ " + String.valueOf(finalTotalAmount)); // Assuming total sale amount is the final total amount
+    totalCash.setText("₹ " + String.valueOf(finaltotalCashTransactions)); // Assuming total cash is the final total amount
+
+    totalRefundAmount.setText("₹ " + String.valueOf(Math.abs(finalAmountRefunded)));
+    totalRefundCount.setText(String.valueOf(finalNoOfRefund));
+
+//    duplicateTicketCount.setText(String.valueOf(finalNoOfReplaced));
+//    duplicateTicketAmount.setText("₹ " + String.valueOf(finalAmountReplaced));
+//    totalAdjustmentAmount.setText("₹ " + String.valueOf(finalAmountReplaced));
+//    totalAdjustmentCount.setText(String.valueOf(finalNoOfReplaced));
+
+    rev = finalTotalAmount + finalAmountRefunded;
+
+    revenue.setText("₹ " + String.valueOf(rev));
+} catch (RuntimeException e) {
+    Logger.debug("EOS NOT PRINTING: "+e.getMessage());
+}
 
         // Assuming the imprest money value is the total fare medium
     }
@@ -217,12 +317,13 @@ public class EOSReport {
         totalNcmcTopUpAmount.setText(totalAmount);
     }
 
-    public void setSummary(String cash, String ncmcTopUp, String others, String cardTx, String upiTx, String finalAmt) {
+    public void setSummary(String cash, String ncmcTopUp, String others, String cardTx, String upiTx, String finalAmt, int rev) {
         totalCash.setText(cash);
         summaryNcmcTopUp.setText(ncmcTopUp);
         summaryOthers.setText(others);
         totalCardTransactions.setText(cardTx);
         totalUpiTransactions.setText(upiTx);
+        revenue.setText(String.valueOf(rev));
         finalTotal.setText(finalAmt);
     }
 

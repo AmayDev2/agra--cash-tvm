@@ -1,14 +1,17 @@
 package com.amay.tom.model.session;
 
 
+import com.amay.tom.model.session.Shift;
+import com.amay.tom.model.session.ShiftDto;
+
 import java.sql.Timestamp;
 
 
 import java.sql.Timestamp;
 
 public class ShiftMapper {
-    public static Shift toModel(ShiftDto dto) {
-        return new Shift(
+    public static com.amay.tom.model.session.Shift toModel(com.amay.tom.model.session.ShiftDto dto) {
+        return new com.amay.tom.model.session.Shift(
                 dto.getShiftId(),
                 dto.getOperatorId(),
                 dto.getDeviceId(),
@@ -21,12 +24,16 @@ public class ShiftMapper {
                 dto.getLineNo(),
                 dto.getReason(),
                 dto.getCurrentStatus(),
-                dto.getUpdatedAt() != null ? dto.getUpdatedAt().toLocalDateTime() : null
+                dto.getUpdatedAt() != null ? dto.getUpdatedAt().toLocalDateTime() : null,
+                dto.getImprest_money(),
+                dto.getConfig_version(),
+                dto.isCcu(),
+                dto.isScu()
         );
     }
 
-    public static ShiftDto toDto(Shift shift) {
-        ShiftDto dto = new ShiftDto()
+    public static com.amay.tom.model.session.ShiftDto toDto(Shift shift) {
+        com.amay.tom.model.session.ShiftDto dto = new ShiftDto()
                 .setShiftId(shift.getShiftId())
                 .setOperatorId(shift.getOperatorId())
                 .setDeviceId(shift.getDeviceId())
@@ -39,7 +46,11 @@ public class ShiftMapper {
                 .setLineNo(shift.getLineNo())
                 .setReason(shift.getReason())
                 .setCurrentStatus(shift.getCurrentStatus())
-                .setUpdatedAt(shift.getUpdatedAt() != null ? Timestamp.valueOf(shift.getUpdatedAt()) : null);
+                .setUpdatedAt(shift.getUpdatedAt() != null ? Timestamp.valueOf(shift.getUpdatedAt()) : null)
+                .setImprest_money(shift.getImprest_money())
+                .setConfig_version(shift.getConfig_version())
+                .setCcu(shift.isCcu())
+                .setScu(shift.isScu());
         return dto;
     }
 }

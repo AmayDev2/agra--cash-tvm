@@ -1,6 +1,7 @@
 package com.amay.tom.repository.sql;
 
 import com.amay.tom.database.SQLiteConnection;
+import com.amay.tom.repository.sql.SqlGlobalRepository;
 
 import java.sql.Connection;
 

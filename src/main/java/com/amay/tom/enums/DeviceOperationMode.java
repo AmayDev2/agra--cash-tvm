@@ -60,6 +60,12 @@ public enum DeviceOperationMode {
         public void performAction(EquipmentPrivilege equipmentPrivilege) {
 
         }
+    },
+    SHIFT_NOT_ACTIVE(10, "Shift Not Active", "yellow") {
+        @Override
+        public void performAction(EquipmentPrivilege equipmentPrivilege) {
+
+        }
     };
 
     private final int deviceStatusId;

@@ -82,7 +82,7 @@ public class TVMController {
     private void addBottomBarView() {
         try {
             FXMLLoader fxmlLoader = ViewFactory.getBottomNav();
-            fxmlLoader.setControllerFactory(x -> new StatusBottomBarView(agent.getPeripheralMonitor(), agent.getVersions()));
+            fxmlLoader.setControllerFactory(x -> new StatusBottomBarView(agent.getPeripheralMonitor(), agent.getVersions(),agent.getMasterConfigInfo()));
             borderPane.setBottom(fxmlLoader.load());
         } catch (RuntimeException | IOException e) {
             System.err.println("Error loading bottom navigation view: " + e.getMessage());

@@ -27,7 +27,7 @@ import java.io.IOException;
 
 public class CscOperationsViewController {
 
-    TaggedLogger logger = org.tinylog.Logger.tag("CscOperationsViewController");
+    TaggedLogger logger = Logger.tag("CscOperationsViewController");
 
     @FXML
     private AnchorPane anchorPane;

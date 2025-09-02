@@ -1,6 +1,9 @@
 package com.amay.tom.model;
 
 import com.amay.tom.enums.Language;
+import com.amay.tom.model.TicketType;
+import com.amay.tom.model.station.Station;
+
 public record Passenger(Station source, Station destination, int quantity, TicketType ticketType, Language language) {
     public Passenger {
         if (quantity <= 0) {

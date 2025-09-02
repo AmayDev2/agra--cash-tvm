@@ -1,21 +1,19 @@
 package com.amay.tom.service.controller.impl;
 
 import com.amay.tom.config.SystemConfig;
-import com.amay.tom.controller.MainController;
 import com.amay.tom.enums.Language;
 import com.amay.tom.exceptions.NotFoundStationException;
 import com.amay.tom.exceptions.TicketNotAddedException;
 import com.amay.tom.exceptions.TicketNotFoundException;
 import com.amay.tom.model.MetroTicket;
 import com.amay.tom.model.Passenger;
-import com.amay.tom.model.Station;
+import com.amay.tom.model.station.Station;
 import com.amay.tom.model.TicketType;
 import com.amay.tom.repository.StationData;
 import com.amay.tom.repository.TicketTypeData;
 import com.amay.tom.service.chield.TicketService;
 import com.amay.tom.service.chield.ticketservice.ImplTicketService;
 import com.amay.tom.service.controller.MainUIService;
-import lombok.Getter;
 import org.tinylog.Logger;
 
 import java.util.ArrayList;

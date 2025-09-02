@@ -1,4 +1,4 @@
-//
+package com.amay.tom.model.ccuRest;//
 //
 //public class UsersDTO {
 //

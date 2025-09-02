@@ -11,7 +11,7 @@ import java.util.Optional;
 
 public abstract class UserRepository {
 
-    protected static final String USER_TABLE_NAME = "user";
+    protected static final String USER_TABLE_NAME = "users";
     protected static final String USER_PRIVILEGE_TABLE_NAME = "user_privilege";
     protected Connection connection = null;
 

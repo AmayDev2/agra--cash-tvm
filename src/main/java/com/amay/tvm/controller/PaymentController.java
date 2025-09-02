@@ -5,7 +5,7 @@ import com.amay.tom.agent.Agent;
 import com.amay.tom.config.SystemConfig;
 import com.amay.tom.enums.PaymentMethod;
 import com.amay.tom.model.GeneratedTicket;
-import com.amay.tom.model.Station;
+import com.amay.tom.model.station.Station;
 import com.amay.tom.model.TicketType;
 import com.amay.tom.model.payment.PaymentResponse;
 import com.amay.tom.model.tickets.*;

@@ -2,9 +2,10 @@ package com.amay.tom.service.devices;
 
 
 import com.amay.tom.grpc.monotoring.GrpcApiListener;
+import com.amay.tom.service.devices.DeviceStatusListener;
 import lombok.Getter;
 
-public class ImpDeviceStatusListener implements DeviceStatusListener{
+public class ImpDeviceStatusListener implements DeviceStatusListener {
 
     @Getter
     private int[] deviceStatus ;

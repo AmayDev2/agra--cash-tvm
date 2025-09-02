@@ -1,6 +1,7 @@
 package com.amay.tom.ipstatus;
 
 
+import com.amay.tom.ipstatus.IpService;
 import com.amay.tom.ipstatus.model.IpData;
 import javafx.application.Platform;
 
@@ -8,7 +9,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ipServiceImpl implements IpService{
+public class ipServiceImpl implements IpService {
     List<IpData> ipList=new ArrayList<>();
 
 

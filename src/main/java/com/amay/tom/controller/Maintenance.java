@@ -122,8 +122,8 @@ public class Maintenance implements Initializable{
 
     //Update time and date
     private void updateDateTime() {
-        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("hh:mm:ss a");
-        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd-MMM-yyyy");
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
             LocalDateTime now = LocalDateTime.now();
@@ -141,7 +141,7 @@ public class Maintenance implements Initializable{
     private void setFooter() {
         try {
             FXMLLoader fxmlLoader = ViewFactory.getBottomNav();
-            fxmlLoader.setControllerFactory(c -> new StatusBottomBarView(this.agent.getPeripheralMonitor(), agent.getVersions()));
+            fxmlLoader.setControllerFactory(c -> new StatusBottomBarView(this.agent.getPeripheralMonitor(), agent.getVersions(),agent.getMasterConfigInfo()));
             HBox bottomNav = fxmlLoader.load();
             borderPane.setBottom(bottomNav);
         } catch (IOException e) {

@@ -8,26 +8,28 @@ public interface ITomInitialize {
     void getSQLightDBConnection() throws RuntimeException,InterruptedException;
     void getSQLDBConnection() throws RuntimeException, InterruptedException;
 
-    void setCCUConnection() throws IOException;
-    void setSCUConnection() throws IOException;
+    void setSCUTransactionConnection() throws IOException;
 
-    void setCCUConnectionActual() throws IOException;
-    void setCcuMonitoringService() throws IOException;
+    void setCCUTransactionConnection() throws IOException;
 
-    void setCCUTGConnection() throws IOException;
+    void setSCUMonitoringService() throws IOException;
 
-    boolean versionCheck();
+    void setCCUMonitoringService() throws IOException;
 
-            boolean getFareTable();
-            boolean getFareTableVersion();
+
+
+    boolean getFareTable(boolean isUpdate);
+
+    boolean getFareTableVersion();
             boolean getFareTableUpdate();
             boolean getCalender();
             boolean getCalenderVersion();
             boolean getCalenderUpdate();
             boolean getApplicationUpdate();
             boolean getBlackListCards();
-            boolean getUserDataTableVersion();
-            boolean getUserUpdatedTable();
+
+    boolean getUserDataTableVersion(boolean isUpdate);
+
 
 
 
@@ -39,15 +41,11 @@ public interface ITomInitialize {
 
     void initializeThreadPool();   //must
 
+    boolean getUserUpdatedTable(boolean isUpdate);
+
     boolean peripheralDeviceStatus();
-//    boolean deletePreviousData();
-//    boolean deletePreviousLogs();
     void deviceInitialization();
-
-
     void checkStationMode();
-
-    void loadStations();
-
+    boolean loadStations(boolean isUpdate);
     void pushRemainedDate();
 }

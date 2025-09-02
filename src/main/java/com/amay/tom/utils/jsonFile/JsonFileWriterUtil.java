@@ -2,8 +2,6 @@ package com.amay.tom.utils.jsonFile;
 
 
 
-import com.amay.tom.model.Station;
-import com.amay.tom.utils.env.EnvFile;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
@@ -31,6 +29,25 @@ public class JsonFileWriterUtil {
         } catch (IOException e) {
             System.err.println("Failed to write JSON to file: " + filePath);
             e.printStackTrace();
+        }
+    }
+
+    /**
+     * Writes the current station data to a JSON file.
+     */
+    public static Object readFileToJsonObject(String filePath,Class<?> className) {
+        try {
+            File file = new File(filePath);
+            if (file.exists()) {
+                return objectMapper.readValue(file, className);
+            } else {
+                System.err.println("File not found: " + filePath);
+                return null;
+            }
+        } catch (IOException e) {
+            System.err.println("Failed to read JSON from file: " + filePath);
+            e.printStackTrace();
+            return null;
         }
     }
 }

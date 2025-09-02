@@ -1,6 +1,7 @@
 package com.amay.tom.controller.components;
 
 import com.amay.tom.config.Versions;
+import com.amay.tom.model.version.MasterConfigInfo;
 import com.amay.tom.service.devices.DeviceStatusListener;
 import com.amay.tom.service.devices.PeripheralMonitor;
 import com.amay.tom.utils.helper.Helper;
@@ -12,7 +13,11 @@ import org.tinylog.Logger;
 
 public class StatusBottomBarView {
     @FXML
+    private Text fareTableVersion;
+    @FXML
     private Text softwareVersion;
+    @FXML
+    private Text parameterVersion;
     @FXML
     private Button scuConnectedImage;
 
@@ -37,17 +42,24 @@ public class StatusBottomBarView {
     @FXML
     private Button upsConnectedImage;
 
-    private final Versions versions;
+    private Versions versions;
+
+    private MasterConfigInfo masterConfigInfo;
 
 
     @FXML
     private void initialize() {
-        softwareVersion.setText(versions.getVersion());
+        Logger.debug("StatusBottomBarView initialized");
+//        softwareVersion.setText(versions.getVersion());
+        softwareVersion.setText(masterConfigInfo.getTomSwVer());
+        fareTableVersion.setText(masterConfigInfo.getFareConfig());
+        parameterVersion.setText(masterConfigInfo.getConfigVer());
     }
 
-    public StatusBottomBarView(PeripheralMonitor peripheralMonitor, Versions versions) {
+    public StatusBottomBarView(PeripheralMonitor peripheralMonitor, Versions versions, MasterConfigInfo masterConfigInfo) {
         peripheralMonitor.addDeviceStatusListener(new UIDeviceListener(this));
         this.versions = versions;
+        this.masterConfigInfo=masterConfigInfo;
     }
 
     private void setPeripheralStatus(Button button, boolean isActive) {

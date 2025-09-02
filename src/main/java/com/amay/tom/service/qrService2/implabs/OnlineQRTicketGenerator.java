@@ -12,7 +12,7 @@ public class OnlineQRTicketGenerator extends AbstractQRTicketGenerator {
     @Override
     public QRTicketGenerator create(Agent agent) {
 //        return new com.amay.tom.service.qrService2.impl.OnlineQRTicketGenerator(agent.getTicketsRepository(),agent.getScuService(),agent.getCcutgService(),agent.getShift(),agent.getThreadPool(),agent.getCcuService());
-        return new com.amay.tom.service.qrService2.impl.OnlineQRTicketGenerator(agent.getTicketsRepository(),agent.getScuService(),agent.getShift(),agent.getThreadPool(),agent.getCcuService(),agent.getShiftIdGeneratorService().getTicketIdGeneratorService());
+        return new com.amay.tom.service.qrService2.impl.OnlineQRTicketGenerator(agent.getTicketsRepository(),agent.getScuService(),agent.getShift(),agent.getThreadPool(),agent.getCcuService(),agent.getShiftIdGeneratorService().getTicketIdGeneratorService(),agent.getMasterConfigInfo());
     }
 
 }

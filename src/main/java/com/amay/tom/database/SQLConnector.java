@@ -26,6 +26,7 @@ public class SQLConnector {
     private final BlockingQueue<Connection> pool;
     private static int count = 0;
 
+
     public SQLConnector(String jdbcUrl, String username, String password, int noOfConnections) {
         this.jdbcUrl = jdbcUrl;
         this.username = username;
@@ -42,9 +43,10 @@ public class SQLConnector {
     private void initializePool() {
         for (int i = 0; i < maxConnections; i++) {
             try {
+                Class.forName("org.h2.Driver");
                 Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
                 pool.offer(connection);
-            } catch (SQLException e) {
+            } catch (SQLException | ClassNotFoundException e) {
                 Logger.error("Error initializing database connection pool: {}", e.getMessage());
                 e.printStackTrace();
             }

@@ -22,7 +22,13 @@ public interface IApi {
 
     String getCalender();
 
-    String getpeakTime();
+    String getPeakTime();
 
     String getBusinessDay();
+
+    String getMasterVersion();
+
+    String getProduct();
+
+    String getTomConfig();
 }

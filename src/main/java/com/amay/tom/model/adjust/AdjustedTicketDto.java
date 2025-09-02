@@ -32,4 +32,6 @@ public class AdjustedTicketDto {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private LocalDateTime transactionTime;
+    private boolean ccu;
+    private boolean scu;
 }

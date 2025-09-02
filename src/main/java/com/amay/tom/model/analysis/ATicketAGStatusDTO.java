@@ -1,6 +1,7 @@
 package com.amay.tom.model.analysis;
 
 // ATicketAGStatusDTO.java
+import com.amay.tom.model.analysis.ADeviceDTO;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.amaytechnosystems.TicketOperation;

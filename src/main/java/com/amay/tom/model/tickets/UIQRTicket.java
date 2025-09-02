@@ -18,5 +18,4 @@ public class UIQRTicket {
     private String price;
     private String issuedAt;
     private String validUntil;
-    private String qrCodeString;
 }

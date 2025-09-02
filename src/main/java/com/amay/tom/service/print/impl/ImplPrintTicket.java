@@ -1,10 +1,7 @@
 package com.amay.tom.service.print.impl;
 
-import com.amay.printer.PrinterCommandDispatcher;
-import com.amay.tom.config.SystemConfig;
-import com.amay.tom.enums.FareMedium;
+import com.amay.tom.service.devices.PeripheralMonitor;
 import javafx.print.PrinterJob;
-import javafx.scene.control.Alert;
 import javafx.scene.text.Text;
 import org.tinylog.Logger;
 
@@ -250,9 +247,89 @@ public class ImplPrintTicket{
     }
 
 
-
     @Deprecated
+    public static void printImage_DEP(BufferedImage resizedImage) throws RuntimeException {
+        if (!PeripheralMonitor.getPrinterStatus()) {
+            return;
+        }
+
+        try {
+            // Convert image to ESC/POS byte array
+            byte[] escposData = convertImageToEscPos(resizedImage);
+
+            // Use RAW print flavor so the printer interprets commands directly
+            DocFlavor flavor = DocFlavor.BYTE_ARRAY.AUTOSENSE;
+            PrintService[] printServices = PrintServiceLookup.lookupPrintServices(flavor, null);
+
+            if (printServices.length == 0) {
+                throw new RuntimeException("No printer found.");
+            }
+
+            PrintService printService = PrintServiceLookup.lookupDefaultPrintService();
+            if (printService == null) {
+                throw new RuntimeException("Default printer not found.");
+            }
+
+            DocPrintJob job = printService.createPrintJob();
+            Doc doc = new SimpleDoc(escposData, flavor, null);
+
+            job.print(doc, null);
+            System.out.println("Image printed successfully without margins.");
+        } catch (Exception e) {
+            Logger.error("Error printing image: {}", e.getMessage());
+            throw new RuntimeException("Error printing image: " + e.getMessage(), e);
+        }
+    }
+
+    private static byte[] convertImageToEscPos(BufferedImage img) throws IOException {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+
+        // ESC @ - Initialize printer
+        baos.write(new byte[]{0x1B, '@'});
+
+        int width = img.getWidth();
+        int height = img.getHeight();
+
+        // Convert each 24-pixel-high band
+        for (int y = 0; y < height; y += 24) {
+            baos.write(new byte[]{0x1B, '*', 33, (byte) (width & 0xFF), (byte) ((width >> 8) & 0xFF)});
+            for (int x = 0; x < width; x++) {
+                for (int k = 0; k < 3; k++) {
+                    byte slice = 0;
+                    for (int b = 0; b < 8; b++) {
+                        int yy = y + (k * 8) + b;
+                        int pixelColor = 0xFFFFFF; // white by default
+                        if (yy < height) {
+                            pixelColor = img.getRGB(x, yy);
+                        }
+                        int r = (pixelColor >> 16) & 0xFF;
+                        int g = (pixelColor >> 8) & 0xFF;
+                        int bl = pixelColor & 0xFF;
+                        int luminance = (r * 30 + g * 59 + bl * 11) / 100;
+                        if (luminance < 128) {
+                            slice |= (1 << (7 - b));
+                        }
+                    }
+                    baos.write(slice);
+                }
+            }
+            baos.write(0x0A); // line feed
+        }
+
+        // Cut paper (optional)
+        baos.write(new byte[]{0x1D, 'V', 66, 0});
+
+        return baos.toByteArray();
+    }
+
+
+
+
+
     public static void printImage(BufferedImage resizedImage) throws RuntimeException {
+        if(!PeripheralMonitor.getPrinterStatus()){
+            return;
+        }
 
 //        if(FareMedium.QR.getFareMediumTotal()-FareMedium.QR.getFareMediumSale()<=0){
 //            Alert alert = new Alert(Alert.AlertType.ERROR);

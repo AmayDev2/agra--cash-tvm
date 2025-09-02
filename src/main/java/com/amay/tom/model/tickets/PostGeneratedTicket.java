@@ -1,8 +1,7 @@
 package com.amay.tom.model.tickets;
 
 import com.amay.tom.model.GeneratedTicket;
-import com.amay.tom.model.Station;
-import com.amay.tom.model.TicketType;
+import com.amay.tom.model.tickets.ProperTicket;
 import lombok.*;
 import lombok.experimental.Accessors;
 

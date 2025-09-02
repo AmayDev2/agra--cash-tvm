@@ -4,7 +4,15 @@ import com.amay.tom.model.TicketType;
 
 public class TicketTypeData {
     private static TicketTypeData instance = null;
-    private final TicketType[] ticketTypeArray = { TicketType.SINGLE, TicketType.RETURN,TicketType.GROUP, TicketType.FREE};
+    private final TicketType[] ticketTypeArray = {
+            TicketType.SINGLE,
+            TicketType.RETURN,
+            TicketType.GROUP,
+            TicketType.FREE,
+            TicketType.MQR_SINGLE,
+            TicketType.MQR_RETURN,
+            TicketType.MQR_GROUP
+    };
 
     private TicketTypeData() {
     }

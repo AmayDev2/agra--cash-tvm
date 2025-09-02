@@ -62,9 +62,9 @@ public class ResumeShiftController {
 
 
     {
-        javafx.animation.Timeline timeline = new javafx.animation.Timeline(
-                new javafx.animation.KeyFrame(
-                        javafx.util.Duration.seconds(1),
+        Timeline timeline = new Timeline(
+                new KeyFrame(
+                        Duration.seconds(1),
                         event -> {
                             Platform.runLater(() -> {
                                 // Increment the time counter by 1000 milliseconds

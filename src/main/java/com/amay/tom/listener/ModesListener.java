@@ -153,6 +153,16 @@ public class ModesListener implements RemoteListener {
 
     private void setEmergencyMode() {
         equipmentPrivilege.setQrTicketIssue(false);
+        equipmentPrivilege.setQrTicketAnalysis(false);
+        equipmentPrivilege.setQrTicketAdjustment(false);
+        equipmentPrivilege.setQrTicketCancellation(false);
+        equipmentPrivilege.setQrTicketRefund(false);
+        equipmentPrivilege.setQrTicketReprint(false);
+        equipmentPrivilege.setQrTicketReplacement(false);
+        equipmentPrivilege.setQrFreeTicket(false);
+        equipmentPrivilege.setQrPaidTicket(false);
+        equipmentPrivilege.setTvm(false);
+
         agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.EMERGENCY);
         agent.getGrpcApiListener().sendAlarm(Alarm.EMERGENCY);
         agent.getGrpcApiListener().sendSpecialMode(SpecialMode.EMERGENCY);

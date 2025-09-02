@@ -1,9 +1,7 @@
 package com.amay.tom.model.tickets;
 
-import com.amay.tom.model.Station;
+import com.amay.tom.model.station.Station;
 import com.amay.tom.model.TicketType;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import javafx.scene.image.Image;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

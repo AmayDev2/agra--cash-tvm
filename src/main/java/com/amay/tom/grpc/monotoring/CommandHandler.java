@@ -9,6 +9,7 @@ import com.amay.tom.service.tom.IApplicationService;
 import com.amay.tom.utils.helper.Helper;
 import com.google.protobuf.Any;
 import org.network.monitorandcontrol.tvm.TVMModeControl;
+import org.network.monitorandcontrol.tvm.TVMProtocol;
 
 public class CommandHandler {
 
@@ -20,7 +21,7 @@ public class CommandHandler {
         this.applicationService = applicationService;
     }
 
-    public void handleCommand(org.network.monitorandcontrol.CommandType commandType, org.network.monitorandcontrol.tvm.TVMProtocol value) {
+    public void handleCommand(org.network.monitorandcontrol.CommandType commandType, TVMProtocol value) {
         switch (commandType){
             case GET_DEVICE_INFO:
                 System.out.println("GET_DEVICE_INFO");
@@ -30,7 +31,7 @@ public class CommandHandler {
                 System.out.println("MODE_CONTROL");
                 handelModeControl(value.getRequestData());
                 break;
-            case GET_DIVICE_VERSIONS:
+            case GET_DEVICE_VERSIONS:
                 remote=new Remote(new VersionCommand(applicationService));
                 System.out.println("GET_DIVICE_VERSIONS");
                 break;
@@ -48,8 +49,7 @@ public class CommandHandler {
 
     private void handelModeControl(Any requestData) {
         try {
-//            TOMModeControl tomModeControl = requestData.unpack(Any.class).unpack(TOMModeControl.class);
-            TVMModeControl tomModeControl = requestData.unpack(TVMModeControl.class);
+           TVMModeControl tomModeControl = requestData.unpack(TVMModeControl.class);
             System.out.println("Mode Control: " + tomModeControl);
             System.out.println("Operation Mode : "+tomModeControl.getOperationMode()+"  - "+"Special Mode : "+tomModeControl.getSpecialMode()+"qr"+tomModeControl.getQrSaleMode()+"card"+tomModeControl.getCardProcessMode());
             String commands=tomModeControl.toString();
@@ -59,7 +59,7 @@ public class CommandHandler {
                     remote = new Remote(new ShutdownCommand(applicationService));
                     break;
                 case RESTART:
-                    remote = new Remote(new RebootCommand(applicationService));
+                    remote = new Remote(new com.amay.tom.grpc.monotoring.RebootCommand(applicationService));
                     break;
                 case SHIFT_END:
                     remote = new Remote(new EOSCommand(applicationService));
@@ -116,7 +116,7 @@ public class CommandHandler {
 
         RedisMessage redisMessage= (RedisMessage) Helper.JSONtoObject(message, RedisMessage.class);
         assert redisMessage != null;
-        Command command = Command.valueOf(redisMessage.getMessage());
+        Command command =Command.valueOf(redisMessage.getMessage());
         TOMCommand tomCommand ;
         switch(command){
             case END_OF_SHIFT :

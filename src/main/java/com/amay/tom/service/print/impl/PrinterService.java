@@ -145,7 +145,6 @@ public class PrinterService implements Printable {
         return null;
     }
 
-    @Deprecated
     public void printImage(String printerName, BufferedImage image, int width, int height) {
         // Resize the image
         BufferedImage resizedImage = resizeImage(image, width, height);

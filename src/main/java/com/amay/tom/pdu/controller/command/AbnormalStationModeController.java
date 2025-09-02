@@ -5,9 +5,11 @@ import com.amay.tom.pdu.controller.StationMode;
 import com.amay.tom.repository.StationData;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.StackPane;
 
 
 public class AbnormalStationModeController {
@@ -22,6 +24,9 @@ public class AbnormalStationModeController {
 
     @FXML void initialize() {
         imageView.setImage(new Image("file:"+imagePath));
+        imageView.setFitWidth(500);
+        imageView.setFitHeight(300);
+        imageView.setPreserveRatio(true);
         label.setText(header);
         messageLabel.setText(message);
     }

@@ -16,6 +16,11 @@ public class OnlineQRTicketAdjust extends QRTicketAdjustment {
     }
 
     @Override
+    public AdjustedTicket adjustTicket(String OrderId, String transactionId, TicketInfo ticketInfo) {
+        return null;
+    }
+
+    @Override
     public AdjustedTicket adjustEntryTimeOverride(String OrderId, String transactionId, TicketInfo ticketInfo) {
 
         return null;

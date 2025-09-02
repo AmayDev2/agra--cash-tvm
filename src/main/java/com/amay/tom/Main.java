@@ -2,7 +2,6 @@ package com.amay.tom;
 
 //import com.amay.tom.config.SecurityUtil;
 //import com.amay.tom.controller.PDUController;
-import com.amay.printer.Printer;
 import com.amay.tom.controller.TomInitializeViewController;
 import com.amay.tom.database.DatabaseConnector;
 import com.amay.tom.database.RedisConnectionPool;
@@ -13,12 +12,10 @@ import com.amay.tom.service.tom.IApplicationService;
 import com.amay.tom.systemcontrole.SystemControl;
 import com.amay.tom.utils.env.EnvFile;
 import com.amay.tvm.bnr.BNRIntegration;
-import com.amay.utils.PrinterUtil;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCombination;
@@ -28,7 +25,6 @@ import javafx.stage.StageStyle;
 import org.tinylog.Logger;
 
 import java.io.IOException;
-import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class Main extends Application {

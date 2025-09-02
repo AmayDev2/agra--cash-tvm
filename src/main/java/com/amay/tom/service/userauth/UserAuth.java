@@ -4,6 +4,7 @@ import com.amay.tom.config.PasswordService;
 import com.amay.tom.exceptions.UsernameNotFoundException;
 import com.amay.tom.model.user.entity.User;
 import com.amay.tom.model.user.entity.UserPrivilege;
+import com.amay.tom.service.userauth.UserDetailsService;
 import lombok.Getter;
 
 public class UserAuth {
@@ -17,26 +18,25 @@ public class UserAuth {
     }
 
     public UserPrivilege login(String username, String password) throws Exception   {
-        return new UserPrivilege();
-//        User user = userDetailsService.loadUserByUsername(username);
-//        PasswordService passwordService = new PasswordService();
-//
-//        boolean isMatch = passwordService.verifyPassword(user.getPassword(), password);
-//        System.out.println("Password Match: " + isMatch);
-//        if (isMatch) {
-//            currentUser = user;
-//
-//           System.out.println("User Privilege: "+user.toString());
-//            UserPrivilege userPrivilege= userDetailsService.loadUserPrivilege(username);
-//            if(userPrivilege.isQrFreeTicket()  || userPrivilege.isQrPaidTicket() || userPrivilege.isQrTicketAdjustment()
-//            || userPrivilege.isQrTicketAnalysis() || userPrivilege.isQrTicketIssue() || userPrivilege.isQrTicketCancellation()
-//            || userPrivilege.isQrTicketRefund() || userPrivilege.isQrTicketReplacement()
-//            || userPrivilege.isQrTicketReprint() || userPrivilege.isTvm()){
-//                return  userPrivilege;
-//            }
+        User user = userDetailsService.loadUserByUsername(username);
+        PasswordService passwordService = new PasswordService();
 
-//        }
-//        throw new UsernameNotFoundException("Privilege Not Found");
+        boolean isMatch = passwordService.verifyPassword(user.getPassword(), password);
+        System.out.println("Password Match: " + isMatch);
+        if (isMatch) {
+            currentUser = user;
+
+           System.out.println("User Privilege: "+user.toString());
+            UserPrivilege userPrivilege= userDetailsService.loadUserPrivilege(username);
+            if(userPrivilege.isQrFreeTicket()  || userPrivilege.isQrPaidTicket() || userPrivilege.isQrTicketAdjustment()
+            || userPrivilege.isQrTicketAnalysis() || userPrivilege.isQrTicketIssue() || userPrivilege.isQrTicketCancellation()
+            || userPrivilege.isQrTicketRefund() || userPrivilege.isQrTicketReplacement()
+            || userPrivilege.isQrTicketReprint() || userPrivilege.isTvm()){
+                return  userPrivilege;
+            }
+
+        }
+        throw new UsernameNotFoundException("Incorrect User ID or Password");
     }
 
     public boolean resumeShift(String password){
@@ -47,6 +47,7 @@ public class UserAuth {
     public void logout() {
 
         currentUser = null;
+
     }
 
     public void pauseShift(){

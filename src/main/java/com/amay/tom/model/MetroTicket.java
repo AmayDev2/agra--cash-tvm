@@ -1,8 +1,12 @@
 package com.amay.tom.model;
 
 import com.amay.tom.config.SystemConfig;
+import com.amay.tom.model.Equipment;
+import com.amay.tom.model.QRTicket;
+import com.amay.tom.model.Ticket;
+import com.amay.tom.model.TicketType;
+import com.amay.tom.model.station.Station;
 import com.amay.tom.utils.time.TimeUtil;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -35,7 +39,7 @@ public class MetroTicket {
     @Getter
     @Setter
     private Station destination;
-    private Ticket ticket;
+    private com.amay.tom.model.Ticket ticket;
 
 
 //    public MetroTicket(String lineNumber, long issuanceTime, int expireTime, Station source, Station destination, Ticket ticket) {
@@ -61,7 +65,7 @@ public class MetroTicket {
 //    }
 
     public MetroTicket(String lineNumber, Station stationId, long issuanceTime, long expireTime, Station source,
-                       Station destination, String ticketId, int fare, TicketType ticketType, int ticketQuantity) {
+                       Station destination, String ticketId, int fare, com.amay.tom.model.TicketType ticketType, int ticketQuantity) {
         this.lineNumber = lineNumber;
         this.stationId = stationId;
         this.issuanceTime = issuanceTime;
@@ -171,7 +175,7 @@ public class MetroTicket {
         return ticket.getTicketQuantity();
     }
 
-    private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    private SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
 
     @Override
     public String toString() {
@@ -190,12 +194,12 @@ public class MetroTicket {
                 "Ticket Quantity: " + ticket.getTicketQuantity() + "\n";
     }
 
-    public QRTicket getQRTicket() {
+    public com.amay.tom.model.QRTicket getQRTicket() {
 
         String sr = TimeUtil.epochToFormattedSystemTime(String.valueOf(validityTime), null);  //TODO: Check if this is correct
 
         Logger.info("Validity Time: {}", sr);
-        return new QRTicket(this.getTicketId(),
+        return new com.amay.tom.model.QRTicket(this.getTicketId(),
                 this.sdf.format(new Date(issuanceTime * 1000)),
                 TimeUtil.epochToFormattedSystemTime(String.valueOf(validityTime), null),
                 this.source.getStationName(),
@@ -206,7 +210,7 @@ public class MetroTicket {
                 null);
     }
 
-    public QRTicket getAdjustedQRTicket() {
+    public com.amay.tom.model.QRTicket getAdjustedQRTicket() {
 
         String sr = TimeUtil.epochToFormattedSystemTime(String.valueOf(validityTime), null);  //TODO: Check if this is correct
 

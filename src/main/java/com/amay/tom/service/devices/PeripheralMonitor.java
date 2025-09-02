@@ -1,13 +1,12 @@
 package com.amay.tom.service.devices;
 
-import com.amay.tom.config.SystemConfig;
 import com.amay.tom.database.RedisConnectionPool;
 import com.amay.tom.enums.ConnectionStatus;
 import com.amay.tom.grpc.monotoring.GrpcApiListener;
+import com.amay.tom.service.devices.DeviceStatusListener;
 import com.amay.tom.service.devices.device.PrinterStatus;
 import com.amay.tom.utils.env.EnvFile;
 import com.amay.tom.utils.helper.Helper;
-import com.fazecast.jSerialComm.SerialPort;
 import lombok.Getter;
 import org.tinylog.Logger;
 
@@ -16,11 +15,8 @@ import javax.print.PrintServiceLookup;
 import java.awt.*;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 public class PeripheralMonitor implements Runnable {
 
@@ -67,7 +63,7 @@ public class PeripheralMonitor implements Runnable {
     public void run() {
         deviceStatus = new int[8];
         scanner_connected = scannerConnected();
-        printer_connected = getPrinterStatus();
+//        printer_connected = getPrinterStatus();
         scu_connected = ConnectionStatus.CONNECTED.equals(this.grpcApiListener.getConnectionStatus());
         ccu_connected = ConnectionStatus.CONNECTED.equals(this.ccuGrpcApiListener.getConnectionStatus());
         pdu_connected = poleDisplayConnected();
@@ -81,12 +77,12 @@ public class PeripheralMonitor implements Runnable {
         deviceStatus[6] = cash_drawer_connected ? 1 : 0;
         deviceStatus[7] = ups_connected ? 1 : 0;
 
-//        Logger.debug("Peripherals status: {}", Helper.ObjectToJson(deviceStatus));
+        Logger.debug("Peripherals status: {}", Helper.ObjectToJson(deviceStatus));
 
 
         // notify the all subscribers/listeners
         for (DeviceStatusListener listener : listeners) {
-//            Logger.debug("Pushing stratus to: {} {}", listeners.size(),listener);
+            Logger.debug("Pushing stratus to: {} {}", listeners.size(),listener);
             listener.onDeviceStatusChanged(deviceStatus);
         }
     }

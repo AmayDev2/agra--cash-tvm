@@ -2,9 +2,13 @@ package com.amay.tom.controller;
 
 import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
+import com.amay.tom.controller.PaidFreeTicket;
+import com.amay.tom.controller.StocksAddViewController;
 import com.amay.tom.controllerInterface.controllerInt.ControllerAdapter;
 import com.amay.tom.model.equipment.entity.EquipmentPrivilege;
 import com.amay.tom.model.user.entity.UserPrivilege;
+import com.amay.tom.service.siftservice.InternalListener;
+import com.amay.tom.service.userauth.UserAuth;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,7 +20,7 @@ import javafx.scene.layout.Pane;
 
 public class AdministrationController {
 
-    private Agent agent=null;
+    private  Agent agent;
     @FXML
     public Button paidFreeTicket;
 
@@ -46,7 +50,7 @@ public class AdministrationController {
 
     }
 
-    //    @FXML
+//        @FXML
 //    private AnchorPane anchorPane;
     public void onClickPaidFreeTicket(ActionEvent actionEvent) {
         FXMLLoader fxmlLoader=ViewFactory.getPaidFreeTicket();
@@ -69,23 +73,23 @@ public class AdministrationController {
     }
 
 
-
-    public void onClickPauseEOShift(ActionEvent actionEvent) {
-
-        FXMLLoader fxmlLoader=ViewFactory.getPauseEosSelection();
-        fxmlLoader.setControllerFactory(x->new PauseEosSelectionViewController(this.agent.getInternalListener(),this.agent.getUserAuth()));
-
-        Platform.runLater(()->{
-            try {
-//                anchorPane.getChildren().clear();
-//                anchorPane.getChildren().add(fxmlLoader.load());
-                ControllerAdapter.INSTANCE.setChildInCenterAnchorPane(fxmlLoader, null);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
-
-    }
+//
+//    public void onClickPauseEOShift(ActionEvent actionEvent) {
+//
+//        FXMLLoader fxmlLoader=ViewFactory.getPauseEosSelection();
+//        fxmlLoader.setControllerFactory(x->new PauseEosSelectionViewController(this.agent.getInternalListener(),this.agent.getUserAuth()));
+//
+//        Platform.runLater(()->{
+//            try {
+////                anchorPane.getChildren().clear();
+////                anchorPane.getChildren().add(fxmlLoader.load());
+//                ControllerAdapter.INSTANCE.setChildInCenterAnchorPane(fxmlLoader, null);
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        });
+//
+//    }
 
 
     public void onClickStockManagement(ActionEvent actionEvent) {
@@ -102,5 +106,16 @@ public class AdministrationController {
             }
         });
         actionEvent.consume();
+    }
+
+    @FXML
+    void onClickEOS(ActionEvent event) {
+        this.agent.getInternalListener().EOShift();
+    }
+
+    @FXML
+    void onClickPause(ActionEvent event) {
+        this.agent.getInternalListener().PauseShift();
+
     }
 }

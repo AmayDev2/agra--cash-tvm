@@ -4,7 +4,7 @@ import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.config.SystemConfig;
 import com.amay.tom.controller.components.StatusBottomBarView;
-import com.amay.tom.model.Station;
+import com.amay.tom.model.station.Station;
 import com.amay.tom.model.TicketType;
 import com.amay.tom.repository.FareLine3;
 import com.amay.tom.repository.StationData;
@@ -128,7 +128,7 @@ public class TicketSelectionController {
     private void addBottomBarView() {
         try {
             FXMLLoader fxmlLoader = ViewFactory.getBottomNav();
-            fxmlLoader.setControllerFactory(x -> new StatusBottomBarView(agent.getPeripheralMonitor(), agent.getVersions()));
+            fxmlLoader.setControllerFactory(x -> new StatusBottomBarView(agent.getPeripheralMonitor(), agent.getVersions(),agent.getMasterConfigInfo()));
             borderPane.setBottom(fxmlLoader.load());
         } catch (RuntimeException | IOException e) {
             System.err.println("Error loading bottom navigation view: " + e.getMessage());

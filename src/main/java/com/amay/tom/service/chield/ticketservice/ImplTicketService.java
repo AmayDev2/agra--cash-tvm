@@ -4,12 +4,15 @@ import com.amay.printer.PrinterCommandDispatcher;
 import com.amay.tom.ViewFactory;
 import com.amay.tom.config.SystemConfig;
 import com.amay.tom.controller.AgaraTicketController;
-import com.amay.tom.controller.TicketController;
 import com.amay.tom.database.SQLiteConnection;
 import com.amay.tom.exceptions.TicketNotGenerated;
-import com.amay.tom.model.*;
+import com.amay.tom.model.MetroTicket;
+import com.amay.tom.model.Passenger;
+import com.amay.tom.model.QRTicket;
+import com.amay.tom.model.TicketType;
 import com.amay.tom.model.siftdata.ShiftHeader;
 import com.amay.tom.model.siftdata.TicketRecord;
+import com.amay.tom.model.station.Station;
 import com.amay.tom.repository.QRDataArray;
 import com.amay.tom.repository.TicketRecordRepository;
 import com.amay.tom.repository.TicketsRepository;
@@ -62,20 +65,20 @@ public class ImplTicketService implements TicketService, ReprintTicket {
         this.qrDataGenerator = qrDataGenerator;
         ticketsRepository = TicketsRepository.getInstance();
 
-        if (ticketCount == 0) {
-            Connection connection = null;
-            try {
-                SQLiteConnection.INSTANCE.setSQLiteConnection();
-                connection = SQLiteConnection.INSTANCE.getConnection();
-                ticketCount = Integer.parseInt(ticketsRepository.getLastTicketNumber(connection));
-            } catch (InterruptedException e) {
-                ticketCount = 120000;
-                Logger.error("Error in getting last ticket number: {}", e.getMessage());
-            } finally {
-                SQLiteConnection.INSTANCE.releaseConnection(connection);
-                Logger.info("Last Ticket Number: {}", ticketCount);
-            }
-        }
+//        if (ticketCount == 0) {
+//            Connection connection = null;
+//            try {
+//                SQLiteConnection.INSTANCE.setSQLiteConnection();
+//                connection = SQLiteConnection.INSTANCE.getConnection();
+//                ticketCount = Integer.parseInt(ticketsRepository.getLastTicketNumber(connection));
+//            } catch (InterruptedException e) {
+//                ticketCount = 120000;
+//                Logger.error("Error in getting last ticket number: {}", e.getMessage());
+//            } finally {
+//                SQLiteConnection.INSTANCE.releaseConnection(connection);
+//                Logger.info("Last Ticket Number: {}", ticketCount);
+//            }
+//        }
 
 
     }
@@ -205,7 +208,9 @@ public class ImplTicketService implements TicketService, ReprintTicket {
             if (EnvFile.getPrinterCheck() && PeripheralMonitor.getPrinterStatus()) {
                 Logger.info("Printing Ticket");
                 ImplPrintTicket.printImage(ImageUtils.nodeToImage(vd));
-            } else {
+            }
+            else
+            {
                 Logger.warn("Printer not connected {}", EnvFile.getThermalPrinterModel());
             }
 
@@ -258,6 +263,29 @@ public class ImplTicketService implements TicketService, ReprintTicket {
 
     }
 
+    @Override
+    public BufferedImage getImage(QRTicket qrTicket) {
+
+        BufferedImage bufferedImage = null;
+        try {
+            FXMLLoader fxmlLoader = ViewFactory.getTicket();
+            Pane vd = fxmlLoader.load();
+
+            AgaraTicketController agaraTicketController= fxmlLoader.getController();
+            agaraTicketController.updateTicketData(qrTicket);
+            bufferedImage = ImageUtils.nodeToImage(vd);
+            String folderPath = NewFolder.createTodayFolder();
+
+            ImageUtils.saveBufferedImage(bufferedImage, folderPath + "\\" + qrTicket.getTicketNo() + ".png");
+
+        } catch (Exception e) {
+            Logger.error("Error in printing ticket: {}", e.getMessage());
+            e.getStackTrace();
+        }
+
+        return bufferedImage;
+    }
+
 
     @Override
     public boolean printAndSaveTicket(QRTicket qrTicket) {
@@ -273,12 +301,12 @@ public class ImplTicketService implements TicketService, ReprintTicket {
 
             ImageUtils.saveBufferedImage(bufferedImage, folderPath + "\\" + qrTicket.getTicketNo() + ".png");
 
+            Logger.info("Printer status: {}", PeripheralMonitor.getPrinterStatus());
             //TODO:Print the ticket
             if (/*EnvFile.getPrinterCheck() &&*/ PeripheralMonitor.getPrinterStatus()) {
 
                 Logger.info("Printing Ticket");
-                ImplPrintTicket.printImage(bufferedImage);
-//                PrinterCommandDispatcher.INSTANCE.printImage(bufferedImage);
+//                ImplPrintTicket.printImage(bufferedImage);
                 PrinterCommandDispatcher.INSTANCE.printText(qrTicket);
             } else {
                 Logger.warn("Printer not connected {}", EnvFile.getThermalPrinterModel());

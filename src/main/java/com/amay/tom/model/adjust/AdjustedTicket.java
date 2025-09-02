@@ -35,5 +35,7 @@ public class AdjustedTicket implements GeneratedTicket {
     private LocalDateTime updatedAt;
     private LocalDateTime transactionTime;
     private TicketInfo ticketInfo;
+    private boolean ccu;
+    private boolean scu;
 
 }

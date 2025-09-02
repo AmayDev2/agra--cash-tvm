@@ -1,18 +1,21 @@
 package com.amay.tom.service.qrService2;
 
 import com.amay.tom.config.SystemConfig;
-import com.amay.tom.exceptions.PaymentNotDoneException;
+import com.amay.tom.enums.PayMethod;
 import com.amay.tom.exceptions.TicketNotGenerated;
+import com.amay.tom.grpc.scugrpc.ScuDataMapper;
+import com.amay.tom.grpc.scugrpc.ScuService;
 import com.amay.tom.model.GeneratedTicket;
 import com.amay.tom.model.session.Shift;
 import com.amay.tom.model.tickets.PostGeneratedTicket;
 import com.amay.tom.model.tickets.ProperTicket;
 import com.amay.tom.model.tickets.TicketsDto;
+import com.amay.tom.model.version.MasterConfigInfo;
 import com.amay.tom.repository.tickets.TicketsRepository;
-import com.amay.tom.grpc.scugrpc.ScuDataMapper;
-import com.amay.tom.grpc.scugrpc.ScuService;
+import com.amay.tom.repository.version.VersionRepository;
+import com.amay.tom.service.qrService2.QRTicketService;
+import com.amay.tom.service.qrService2.TicketInfo;
 import com.amay.tom.threadpool.ThreadPool;
-import com.amay.tom.utils.encription.Base64Encoding;
 import org.amaytechnosystems.TicketRequestV1;
 import org.tinylog.Logger;
 
@@ -24,19 +27,20 @@ import java.util.concurrent.CompletableFuture;
 public  abstract class QRTicketGenerator implements QRTicketService {
 
     private final TicketsRepository ticketsRepository;
+    private final MasterConfigInfo masterConfigInfo;
     private final ScuService scuService;
     private final Shift shift;
     private final ThreadPool threadPool;
     private final ScuService ccuService; // Not used in the current implementation, can be removed if not needed
     private final String delimiter = ":"; // Delimiter used in QR code data
 
-    protected QRTicketGenerator(TicketsRepository ticketsRepository, ScuService scuService, Shift shift, ThreadPool threadPool, ScuService ccuService) {
+    protected QRTicketGenerator(TicketsRepository ticketsRepository, ScuService scuService, Shift shift, ThreadPool threadPool, ScuService ccuService, MasterConfigInfo masterConfigInfo) {
         this.scuService = scuService;
         this.ticketsRepository = ticketsRepository;
         this.shift=shift;
         this.threadPool=threadPool;
         this.ccuService = ccuService; // Not used in the current implementation, can be removed if not needed'
-
+        this.masterConfigInfo=masterConfigInfo;
     }
 
     protected abstract ArrayList<PostGeneratedTicket> getTicketIds(ProperTicket[] properTicket, String orderId);
@@ -50,38 +54,39 @@ public  abstract class QRTicketGenerator implements QRTicketService {
 
 
     private void saveInLocalDB(String orderId,String transactionId,PostGeneratedTicket postGeneratedTicket) {
+    TicketsDto ticketDto = new TicketsDto()
+            .setTicketId(postGeneratedTicket.getTicketId())
+            .setQrData(postGeneratedTicket.getQrCodeString())
+            .setActive(true)
+            .setTicketType(postGeneratedTicket.getProperTicket().getTicketType().getTicketTypeId())
+            .setInStation(postGeneratedTicket.getProperTicket().getSource().getStationId())
+            .setOutStation(postGeneratedTicket.getProperTicket().getDestination().getStationId())
+            .setAmount(postGeneratedTicket.getProperTicket().getPrice())
+            .setQuantity(postGeneratedTicket.getProperTicket().getQuantity())
+            .setIssueAt(postGeneratedTicket.getProperTicket().getIssuedAt())
+            .setValidUntil(postGeneratedTicket.getProperTicket().getValidUntil())
+            .setOrderId(orderId)
+            .setPaymentMode(PayMethod.CASH.name())
+            .setDeviceType(shift.getDeviceId().substring(4, 6))
+            .setStationId(shift.getDeviceId().substring(2, 4))
+            .setLineId(shift.getDeviceId().substring(0, 2))
+            .setShiftId(shift.getShiftId())
+            .setOperatorId(shift.getOperatorId())
+            .setDeviceId(shift.getDeviceId())
+            .setTransactionId(transactionId)
+            .setCreatedAt(LocalDateTime.now())
+            .setUpdatedAt(LocalDateTime.now())
+            .setTicketVer(masterConfigInfo.getProductConfig())
+            .setFaretableVer(masterConfigInfo.getFareConfig())
+            .setSoftwareVer(masterConfigInfo.getTomSwVer());
+    ticketsRepository.save(ticketDto);
 
-        TicketsDto ticketDto = new TicketsDto()
-                .setTicketId(postGeneratedTicket.getTicketId())
-                .setQrData(postGeneratedTicket.getQrCodeString())
-                        .setActive(true)
-                        .setTicketType(postGeneratedTicket.getProperTicket().getTicketType().getTicketTypeId())
-                        .setInStation(postGeneratedTicket.getProperTicket().getSource().getStationId())
-                        .setOutStation(postGeneratedTicket.getProperTicket().getDestination().getStationId())
-                        .setAmount(postGeneratedTicket.getProperTicket().getPrice())
-                        .setQuantity(postGeneratedTicket.getProperTicket().getQuantity())
-                        .setIssueAt(postGeneratedTicket.getProperTicket().getIssuedAt())
-                        .setValidUntil(postGeneratedTicket.getProperTicket().getValidUntil())
-                        .setOrderId(orderId)
-                        .setPaymentMode("Cash")
-                        .setDeviceType(shift.getDeviceId().substring(4,6))
-                        .setStationId(shift.getDeviceId().substring(2,4))
-                        .setLineId(shift.getDeviceId().substring(0,2))
-                        .setShiftId(shift.getShiftId())
-                        .setOperatorId(shift.getOperatorId())
-                        .setDeviceId(shift.getDeviceId())
-                        .setTransactionId(transactionId)
-                        .setCreatedAt(LocalDateTime.now())
-                        .setUpdatedAt(LocalDateTime.now());
-
-
-        ticketsRepository.save(ticketDto);
     }
 
     private void pushToScu(String orderId, String transactionId, PostGeneratedTicket postGeneratedTicket) {
         Logger.debug("Pushing ticket issue info to SCU");
         TicketRequestV1 ticketRequestV1 = ScuDataMapper.createTicketIssueRequest(orderId, transactionId, postGeneratedTicket, this.shift);
-        scuService.pushTicketIssueInfo(ticketRequestV1);
+        scuService.pushTicketIssueInfo(ticketRequestV1,ticketsRepository);
         Logger.info("Ticket issue info pushed to SCU for orderId: {}, transactionId: {}, ticketId: {}", orderId, transactionId, postGeneratedTicket.getTicketId());
     }
 
@@ -89,7 +94,7 @@ public  abstract class QRTicketGenerator implements QRTicketService {
         Logger.debug("Pushing ticket issue info to CCU");
 
         TicketRequestV1 ticketRequestV1 = ScuDataMapper.createTicketIssueRequest(orderId, transactionId, postGeneratedTicket, this.shift);
-        ccuService.pushTicketIssueInfo(ticketRequestV1);
+        ccuService.pushTicketIssueInfo(ticketRequestV1,ticketsRepository);
         Logger.info("Ticket issue info pushed to CCU for orderId: {}, transactionId: {}, ticketId: {}", orderId, transactionId, postGeneratedTicket.getTicketId());
     }
 

@@ -1,6 +1,7 @@
 package com.amay.tom.model.tickets;
 
 import com.amay.tom.model.payment.PaymentResponse;
+import com.amay.tom.model.tickets.ProperTicketOrder;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

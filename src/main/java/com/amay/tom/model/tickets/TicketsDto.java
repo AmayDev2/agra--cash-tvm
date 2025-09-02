@@ -49,8 +49,6 @@ public class TicketsDto {
     private String ticketVer;
     private String faretableVer;
 
-
-
     private int quantity;
     private String status;
 
@@ -58,4 +56,7 @@ public class TicketsDto {
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+
+    private Boolean ccu=false;
+    private Boolean scu=false;
 }

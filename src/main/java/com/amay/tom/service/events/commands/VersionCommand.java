@@ -1,5 +1,6 @@
 package com.amay.tom.service.events.commands;
 
+import com.amay.tom.grpc.monotoring.GrpcApiListener;
 import com.amay.tom.service.events.TOMCommand;
 import com.amay.tom.service.tom.IApplicationService;
 
@@ -12,7 +13,9 @@ public class VersionCommand implements TOMCommand {
     }
     @Override
     public boolean executeCommand() {
-         return applicationService.sendVersion();
+//         return applicationService.sendVersion();
+        applicationService.notifyListener(GrpcApiListener.class,VersionCommand.class);
+        return true;
 
     }
 }

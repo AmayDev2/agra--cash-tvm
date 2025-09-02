@@ -1,6 +1,7 @@
 package com.amay.tom.controller;
 
 import com.amay.tom.agent.Agent;
+import com.amay.tom.controller.Controller;
 import com.amay.tom.enums.FareMedium;
 import com.amay.tom.grpc.scugrpc.ScuDataMapper;
 import javafx.application.Platform;
@@ -8,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextFormatter;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -78,6 +80,20 @@ public class StocksAddViewController {
             this.imprestMoneyClearButton.setVisible(isInitialization);
         });
 
+        imprestMoneyValue.setTextFormatter(new TextFormatter<>(change -> {
+            if(change.isAdded()){
+                String newAmount = change.getControlNewText();
+                return (newAmount.matches("^\\d+$") && newAmount.length()<5 && !newAmount.startsWith("0")) ? change : null;
+            } else return change;
+        }));
+
+        ncmcValue.setTextFormatter(new TextFormatter<>(change -> {
+            if(change.isAdded()){
+                String newAmount = change.getControlNewText();
+                return (newAmount.matches("^\\d+$") && newAmount.length()<5 && !newAmount.startsWith("0")) ? change : null;
+            } else return change;
+        }));
+
 
     }
 
@@ -88,6 +104,8 @@ public class StocksAddViewController {
         agent.getScuService().pushTotalStock(ScuDataMapper.getStockRequest(agent.getShift().getShiftId(),
                 agent.getSystemConfig().getCurrentEquipment().getEquipmentId(),
                 FareMedium.NCMC.getFareMediumTotal(),FareMedium.IMPREST_MONEY.getFareMediumTotal()));
+        agent.getShift().setImprest_money(availableImprestMoney.getText());
+        agent.getShiftRepository().updateImprest(agent.getShift().getShiftId(), availableImprestMoney.getText());
     }
 
 
@@ -100,7 +118,7 @@ public class StocksAddViewController {
         this.updateStock();
 
         Logger.info("NCMC Empty Clicked");
-        Controller.getController().updateStock();
+        com.amay.tom.controller.Controller.getController().updateStock();
 
     }
 
@@ -114,7 +132,7 @@ public class StocksAddViewController {
                 ncmcValue.setText("");
 
                 Logger.info("NCMC Added: {}", FareMedium.NCMC.getFareMediumTotal());
-                Controller.getController().updateStock();
+                com.amay.tom.controller.Controller.getController().updateStock();
             }
 
         } catch (NumberFormatException e) {
@@ -129,7 +147,7 @@ public class StocksAddViewController {
         FareMedium.QR.setFareMediumTotal(0);
         updateStock();
         System.out.println("QR Empty Clicked" + FareMedium.QR.getFareMediumTotal());
-        Controller.getController().updateStock();
+        com.amay.tom.controller.Controller.getController().updateStock();
 
     }
 
@@ -178,7 +196,7 @@ public class StocksAddViewController {
                 imprestMoneyValue.setText("");
                 System.out.println("Imprest Update Clicked " + FareMedium.IMPREST_MONEY.getFareMediumTotal());
                 Logger.info("Imprest Added: {}", FareMedium.IMPREST_MONEY.getFareMediumTotal());
-                Controller.getController().updateStock();
+                com.amay.tom.controller.Controller.getController().updateStock();
             }
         } catch (NumberFormatException e) {
             Logger.warn("Invalid input");
@@ -192,10 +210,8 @@ public class StocksAddViewController {
 
         FareMedium.IMPREST_MONEY.setFareMediumTotal(0);
         System.out.println("NCMC Empty Clicked"+FareMedium.IMPREST_MONEY.getFareMediumTotal());
-//        this.updateStock();
+        this.updateStock();
         Logger.info("IMPREST MONEY Empty Clicked");
         Controller.getController().updateStock();
-
-
     }
 }

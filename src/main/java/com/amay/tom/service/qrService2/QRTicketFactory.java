@@ -1,6 +1,8 @@
 package com.amay.tom.service.qrService2;
 
 import com.amay.tom.agent.Agent;
+import com.amay.tom.service.qrService2.AbstractQRTicketService;
+import com.amay.tom.service.qrService2.QRTicketService;
 
 public class QRTicketFactory {
 

@@ -23,7 +23,7 @@ public class UserDetailsService {
 
     public User loadUserByUsername(String username) throws UsernameNotFoundException, QueryNotAppropriateException {
        UserDto userDto = userRepository.findByUsername(username)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
+                .orElseThrow(() -> new UsernameNotFoundException("User not found with User ID: " + username));
 //        boolean accountNonExpired = userDto.getAccountExpiryDate() == null || userDto.getAccountExpiryDate().isAfter(LocalDateTime.now());
 //        boolean credentialsNonExpired = userDto.getCredentialsExpiryDate() == null || userDto.getCredentialsExpiryDate().isAfter(LocalDateTime.now());
         boolean isEnable = userDto.isEnabled();

@@ -1,5 +1,7 @@
 package com.amay.tom.service.events;
 
+import com.amay.tom.service.events.TOMCommand;
+
 public class Remote {
 
         private TOMCommand command;

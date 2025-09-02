@@ -3,19 +3,22 @@ package com.amay.tom.controller;
 import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.config.TicketConfig;
+import com.amay.tom.controller.RefundTicketDetailsController;
+import com.amay.tom.controller.ReplacementTicketDetailsController;
 import com.amay.tom.controllerInterface.controllerInt.ControllerAdapter;
 import com.amay.tom.grpc.scugrpc.ScuDataMapper;
 import com.amay.tom.grpc.scugrpc.ScuService;
 import com.amay.tom.model.QRTicket;
+import com.amay.tom.model.TicketType;
+import com.amay.tom.model.product.Product;
 import com.amay.tom.model.tickets.TicketsDto;
 import com.amay.tom.repository.tickets.TicketsRepository;
-import com.amay.tom.service.analysis.QrCodeEventListener;
 import com.amay.tom.service.analysis.TicketNumberFromQREventListener;
 import com.amay.tom.service.chield.ReprintTicket;
 import com.amay.tom.service.chield.ticketservice.ImplTicketService;
 import com.amay.tom.service.qrDataGenerator.impl.ImplQRDataGenerator;
 import com.amay.tom.service.qrReaderServiceTest.QrReader;
-import com.amay.tom.utils.env.EnvFile;
+import com.amay.tom.utils.ticket.TicketUtil;
 import com.amay.tom.utils.time.TimeUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -26,7 +29,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import org.amaytechnosystems.TicketAnalysisResponseV1;
 import org.amaytechnosystems.TicketRefundResponseV1;
@@ -111,7 +113,7 @@ public class QRTOperations {
 
     public void onClickRefund(ActionEvent actionEvent) {
         try {
-            onSearchClick(inputTextField.getText().trim());
+            onSearchClick(inputTextField.getText().toUpperCase().trim());
         } catch (Exception e) {
             Logger.error("Error in loading Refund Ticket Input View: {}", e.getMessage());
             e.printStackTrace();
@@ -121,7 +123,7 @@ public class QRTOperations {
 
     public void onClickReplacement(ActionEvent actionEvent) {
         try {
-            onClickConform(inputTextField.getText().trim());
+            onClickConform(inputTextField.getText().toUpperCase().trim());
         } catch (Exception e) {
             Logger.error("Error in loading QRT Operations View: {}", e.getMessage());
             e.printStackTrace();
@@ -131,44 +133,95 @@ public class QRTOperations {
 
     void onClickConform(String ticketNumber)  {
 
+        if (ticketNumber.isEmpty()) {
+            errorText.setText("Please enter a ticket number");
+            return;
+        }
+
         TicketsDto ticketsDto=ticketsRepository.findById(ticketNumber);
+
+        if(ticketsDto==null){
+            try {
+                ticketsDto = getTicketByTicketNumber(ticketNumber);
+            } catch (RuntimeException e) {
+               Logger.error("Error fetching ticket by number: {}", e.getMessage());
+                errorText.setText("Ticket Not Found");
+                return;
+            }
+        }
+        // check for today ticket
+        if(!TicketUtil.isTodayTicket(ticketsDto.getIssueAt())){
+            errorText.setText("Time has exceeded to replace.");
+            return;
+        }
+
+        //check if ticket is active
+        if(!ticketsDto.isActive()){
+            errorText.setText("Ticket is irreplaceable");
+            return;
+        }
 
         //TODO: map ticket by model
 
         try{
             FXMLLoader loader = ViewFactory.getReplacementDetailsView();
-            loader.setControllerFactory(x->new ReplacementTicketDetailsController(ticketsDto,borderPane));
+            TicketsDto finalTicketsDto = ticketsDto;
+            loader.setControllerFactory(x->new ReplacementTicketDetailsController(finalTicketsDto,borderPane,agent));
             Pane root = loader.load();
             ControllerAdapter.INSTANCE.setChildInCenterAnchorPane(root);
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-
-
     }
 
 
 
+    //1- GET TICKET
+    //2- CHECK IF TICKET IS Replaceable
+        //1- IF JOURNEY IS NOT COMPLETED
+        //2- IF TICKET IS  ACTIVE
+    private TicketsDto getTicketByTicketNumber(String ticketNumber) throws RuntimeException {
+        TicketsDto ticketDto=new TicketsDto() ;
+        TicketRequestV1 ticketRequestV1 = ScuDataMapper.createTicketInfoRequestByNumber(ticketNumber);
+        TicketAnalysisResponseV1 ticketRefundResponseV1;
+        if (agent.getPeripheralMonitor().isCcu_connected()) {
+            ticketRefundResponseV1 = ccuService.getTicketAnalysisByNumber(ticketRequestV1);
+        } else {
+            ticketRefundResponseV1 = scuService.getTicketAnalysisByNumber(ticketRequestV1);
+        }
+
+        if (!ticketRefundResponseV1.getResponseMetaData().getErrorCode().equals("200")) {
+            errorText.setText("Ticket Not Found on " + (agent.getPeripheralMonitor().isCcu_connected() ? "CCU" : "SCU") + " server");
+            throw new RuntimeException("Ticket Not Found on " + (agent.getPeripheralMonitor().isCcu_connected() ? "CCU" : "SCU") + " server");
+        }
+
+        ticketDto.setTicketId(ticketRefundResponseV1.getTicketAnalysis().getTicket().getTicketId());
+        ticketDto.setIssueAt(Long.parseLong(ticketRefundResponseV1.getTicketAnalysis().getTicket().getTicketIssue()));
+        ticketDto.setPaymentMode(ticketRefundResponseV1.getTicketAnalysis().getTicket().getPaymentMode());
+        ticketDto.setAmount(ticketRefundResponseV1.getTicketAnalysis().getTicket().getAmount());
+        ticketDto.setInStation(ticketRefundResponseV1.getTicketAnalysis().getTicket().getSourceStation());
+        ticketDto.setOutStation(ticketRefundResponseV1.getTicketAnalysis().getTicket().getDestinationStation());
+        ticketDto.setTicketType(ticketRefundResponseV1.getTicketAnalysis().getTicket().getProductId());
+        ticketDto.setQrData(ticketRefundResponseV1.getTicketAnalysis().getTicket().getQrData());
+        ticketDto.setActive(ticketRefundResponseV1.getTicketAnalysis().getTicket().getIsActive());
+        ticketDto.setQuantity(ticketRefundResponseV1.getTicketAnalysis().getTicket().getQuantity());
+
+        System.out.println("Ticket DTO1234 : "+ticketDto.toString());
+    return ticketDto;
+    }
+
 //    @FXML
     private void onSearchClick(String ticketNumber) {
 
-
-        String description = (TicketConfig.INSTANT.getProductTypeDefDTO().getMaxRefundTime() == 0)
-                ? "Valid until the end of the day"
-                : "Valid for " + TicketConfig.INSTANT.getProductTypeDefDTO().getMaxRefundTime() + " minutes from issuance";
-
         boolean status=true;
 
-        if (ticketNumber.isEmpty()) {
-//            errorText.setText("Please enter a ticket number");
-            alert.setTitle("Info");
-            alert.setHeaderText("Operation Failed");
-            alert.setContentText("Please enter a ticket number");
-            alert.showAndWait();
-            return;
-        }
 
         try {
+            if (ticketNumber.isEmpty()) {
+                throw new RuntimeException("Please enter a ticket number");
+            }
+
+
             TicketRequestV1 ticketRequestV1= ScuDataMapper.createTicketInfoRequestByNumber(ticketNumber);
             QRTicket ticket= new QRTicket();
             TicketRefundResponseV1 ticketRefundResponseV1;
@@ -181,31 +234,30 @@ public class QRTOperations {
             }else{
                 isCCU = false;
                 ticketRefundResponseV1 = scuService.getTicketByNumber(ticketRequestV1);
-//                TicketAnalysisResponseV1 ticketRefundResponseV1 = scuService.getTicketAnalysisByNumber(ticketRequestV1);
             }
 
-            System.out.println(ticketRefundResponseV1.getResponseMetaData().getErrorCode());
+            Logger.debug(ticketRefundResponseV1.getResponseMetaData().getErrorCode());
 
             if (!ticketRefundResponseV1.getResponseMetaData().getErrorCode().equals("200")) {
-                errorText.setText("Ticket Not Found");
-//                System.out.println("Ticket Response is Null");
-//                alert.setTitle("Info");
-//                alert.setHeaderText("Operation Failed");
-//                alert.setContentText("Ticket Not Found");
-//                alert.showAndWait();
-                return;
+                errorText.setText("Ticket Not Found on "+ (isCCU ? "CCU" : "SCU") + " server");
+                throw new RuntimeException("Ticket Not Found on "+ (isCCU ? "CCU" : "SCU") + " server");
             }
 
-            System.out.println("Ticket Status  "+ticketRefundResponseV1.getTicket().getTicketType()+" "
+            int maxRefundTime = TicketType.getTicket(ticketRefundResponseV1.getTicket().getProductId()).getProduct().getRefundAfterSale();
+            String description = maxRefundTime==0
+                    ? "Valid until the end of the Business day"
+                    : "Valid for " + maxRefundTime + " minutes from issuance";
+
+            Logger.debug("Ticket Status  "+ticketRefundResponseV1.getTicket().getProductId()+" "
                     +ticketRefundResponseV1.getTicket().getStatus()+" "+ticketRefundResponseV1.getTicket().getIsActive());
 
-            ticket.setTicketNo(ticketRefundResponseV1.getTicket().getTicketNumber());
+            ticket.setTicketNo(ticketRefundResponseV1.getTicket().getTicketId());
             ticket.setInitiateDateTime(ticketRefundResponseV1.getTicket().getTicketIssue());
             ticket.setFareMode(ticketRefundResponseV1.getTicket().getPaymentMode());
             ticket.setPrice("Rs. "+ticketRefundResponseV1.getTicket().getAmount());
             ticket.setFrom(ticketRefundResponseV1.getTicket().getSourceStation());
             ticket.setTo(ticketRefundResponseV1.getTicket().getDestinationStation());
-            ticket.setType(ticketRefundResponseV1.getTicket().getTicketType());
+            ticket.setType(ticketRefundResponseV1.getTicket().getProductId());
             isUsed=Integer.parseInt(ticketRefundResponseV1.getTicket().getStatus())>0;
 
 
@@ -216,12 +268,25 @@ public class QRTOperations {
 
             if(!ticketRefundResponseV1.getTicket().getIsActive()){
                 status=false;
-                description="Currently not active";
+                description="Ticket is Inactive ";
+
             }
 
             if(isUsed){
                 status=false;
                 description="Ticket Used";
+            }
+
+            if(TicketType.getTicket(ticketRefundResponseV1.getTicket().getProductId())==null
+                    ||!TicketType.getTicket(ticketRefundResponseV1.getTicket().getProductId()).isRefundable()){
+                status=false;
+                description="Not Refundable";
+            }
+
+            if(!ticketRefundResponseV1.getTicket().getSourceStation().equals(this.agent.getSystemConfig().getCurrentStation().getStationId()))
+            {
+                status=false;
+                description="Ticket generated at different Station";
             }
 
 
@@ -234,21 +299,8 @@ public class QRTOperations {
 
         } catch (Exception e) {
             Logger.error("Error searching for ticket: {}", e.getMessage());
-            alert.setTitle("Info");
-            alert.setHeaderText("Operation Failed");
-            alert.setContentText("Could not find  Ticket");
-            alert.showAndWait();
+            errorText.setText(e.getMessage());
         }
     }
 
-//    public void onClickCancel(ActionEvent actionEvent) {
-//        try {
-//            FXMLLoader fxmlLoader = ViewFactory.getCancelView();
-//            fxmlLoader.setControllerFactory(param -> new CancelViewController(agent));
-//            borderPane.setCenter(fxmlLoader.load());
-//        } catch (Exception e) {
-//            Logger.error("Error in loading QRT Operations View: {}", e.getMessage());
-//            e.printStackTrace();
-//        }
-//    }
 }

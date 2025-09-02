@@ -1,10 +1,11 @@
 package com.amay.tom.repository.tickets;
 
 
-import com.amay.tom.model.QRTicket;
 import com.amay.tom.model.tickets.TicketsDto;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.List;
 
 public abstract class TicketsRepository {
@@ -45,7 +46,9 @@ public abstract class TicketsRepository {
             "status VARCHAR(255)," +
             "transactionId VARCHAR(255)," +
             "createdAt TIMESTAMP," +
-            "updatedAt TIMESTAMP" +
+            "updatedAt TIMESTAMP, " +
+            "ccu BOOLEAN DEFAULT FALSE,"+
+            "scu BOOLEAN DEFAULT FALSE"+
             ");";
 
     protected static final String INSERT_SQL = "INSERT INTO " + TABLE_NAME + " (orderId, ticketId, issueAt, entryTime, validUntil, inStation, outStation, language, ticketType, qrData, operatorId, shiftId, deviceId, deviceType, deviceSerial, lineId, stationId, amount, discount, paymentMode, isCanceled, isRefund, isReplaced, isAdjusted, isActive, softwareVer, ticketVer, faretableVer, quantity, status, transactionId, createdAt, updatedAt) " +
@@ -61,6 +64,7 @@ public abstract class TicketsRepository {
     protected static final String SELECT_TICKET_BY_ORDER_ID_SQL = "SELECT * FROM "+ TABLE_NAME +" WHERE orderId = ?";
     protected static final String SELECT_EOS_SQL = "SELECT * FROM "+ TABLE_NAME+ " WHERE shiftId = ?";
     protected static final String SELECT_QR_TICKETS_FROM_SQL = "SELECT * FROM "+ TABLE_NAME +" WHERE createdAt >= ? ORDER BY createdAt DESC";
+    protected static final String SELECT_QR_TICKETS_NOT_PUSHED = "SELECT * FROM "+ TABLE_NAME +" WHERE ? ORDER BY createdAt DESC";
 
     abstract void createTableIfNotExists() throws SQLException;
     public abstract String save(TicketsDto tickets);
@@ -76,5 +80,9 @@ public abstract class TicketsRepository {
     abstract public List<TicketsDto> getTicketByOrderId(String orderId);
     abstract public List<TicketsDto> getTicketByShiftId(String shiftId);
     abstract public List<TicketsDto> findAllQRTicketsFrom(Timestamp timestamp);
+
+    public abstract void pushTickets(List<String> ticketIds, String column);
+
+    public abstract List<TicketsDto> findNotPushedTicket(String chanal);
 }
 

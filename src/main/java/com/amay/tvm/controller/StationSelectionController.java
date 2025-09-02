@@ -3,7 +3,7 @@ package com.amay.tvm.controller;
 import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.config.SystemConfig;
-import com.amay.tom.model.Station;
+import com.amay.tom.model.station.Station;
 import com.amay.tom.model.TicketType;
 import com.amay.tom.repository.FareLine3;
 import com.amay.tom.repository.StationData;

@@ -1,5 +1,7 @@
 package com.amay.tom.service.tom;
 
+import com.amay.tom.service.tom.IApplicationService;
+import com.amay.tom.service.tom.RemoteListener;
 import com.amay.tom.systemcontrole.SystemControl;
 import org.tinylog.Logger;
 
@@ -7,14 +9,14 @@ import javax.management.ServiceNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ApplicationService  implements IApplicationService{
+public class ApplicationService  implements IApplicationService {
 
 //    private ShiftService shiftService;
 //    private final SiftService siftService;
 //    private final GrpcApiListener grpcApiListener;
     private final SystemControl systemControl;
 
-    private final List<RemoteListener> remoteListeners=new ArrayList<>();
+    private final List<com.amay.tom.service.tom.RemoteListener> remoteListeners=new ArrayList<>();
 
     public void addListener(RemoteListener remoteListener){
         this.remoteListeners.add(remoteListener);

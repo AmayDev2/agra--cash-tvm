@@ -1,9 +1,9 @@
 package com.amay.tom.repository.tickets;
 
 
-
-import com.amay.tom.model.QRTicket;
 import com.amay.tom.model.tickets.TicketsDto;
+import com.amay.tom.repository.tickets.TicketsRepository;
+import jakarta.transaction.Transactional;
 import org.tinylog.Logger;
 
 import java.sql.*;
@@ -72,11 +72,11 @@ public class TicketsRepositoryImpl extends TicketsRepository {
 
             try (ResultSet generatedKeys = pstmt.getGeneratedKeys()) {
                 if (generatedKeys.next()) {
-                    return String.valueOf(generatedKeys.getInt(1));
+                    return generatedKeys.getString(1);
                 }
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            Logger.debug("Error saving ticket: {}", e.getMessage());
         }
         return null;
     }
@@ -244,6 +244,56 @@ public class TicketsRepositoryImpl extends TicketsRepository {
 
         return list;
     }
+
+    @Override
+    public List<TicketsDto> findNotPushedTicket(String column) {
+        if (!"scu".equalsIgnoreCase(column) && !"ccu".equalsIgnoreCase(column)) {
+            throw new IllegalArgumentException("Invalid column name: " + column);
+        }
+        column+=" = false";
+
+        String query="SELECT * FROM "+ TABLE_NAME +" WHERE "+ column+" ORDER BY createdAt DESC";
+
+        List<TicketsDto> list = new ArrayList<>();
+        try (PreparedStatement pstmt = connection.prepareStatement( query)) {
+//            pstmt.setString(1, column);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                list.add(mapRow(rs)); // Add each TicketsDto to the list
+            }
+        } catch (SQLException e) {
+            Logger.debug("Error fetching QR tickets: {}", e.getMessage());
+
+        }
+
+        return list;
+    }
+
+
+    @Override
+    @Transactional
+    public void pushTickets(List<String> ticketIds, String column) {
+        // validate column name to prevent SQL injection
+        if (!"scu".equalsIgnoreCase(column) && !"ccu".equalsIgnoreCase(column)) {
+            throw new IllegalArgumentException("Invalid column name: " + column);
+        }
+
+        String sql = "UPDATE " + TABLE_NAME + " SET " + column + " = true WHERE ticketId = ?";
+
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
+            for (String id : ticketIds) {
+                pstmt.setString(1, id);
+                pstmt.addBatch();
+            }
+            int[] updated = pstmt.executeBatch();
+            Logger.info("Marked {} for {} tickets", column.toUpperCase(), updated.length);
+        } catch (SQLException e) {
+            Logger.error("Error marking {} for tickets: {}", column.toUpperCase(), e.getMessage());
+            throw new RuntimeException("Failed to mark " + column.toUpperCase() + " for tickets", e);
+        }
+    }
+
+
 
     private TicketsDto mapRow(ResultSet rs) throws SQLException {
         TicketsDto ticket = new TicketsDto();

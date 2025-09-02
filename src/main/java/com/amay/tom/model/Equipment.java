@@ -1,8 +1,9 @@
 package com.amay.tom.model;
 
 public class Equipment {
-    private String equipmentId;
-    private String equipmentSerial;
+    private final String equipmentId;
+    private final String equipmentSerial;
+    private final String equipmentName;
 
 
 
@@ -14,8 +15,13 @@ public class Equipment {
         return equipmentSerial;
     }
 
+    public String getEquipmentName() {
+        return equipmentName;
+    }
+
     public Equipment(String equipmentId, String equipmentSerial) {
         this.equipmentId = equipmentId;
         this.equipmentSerial = equipmentSerial;
+        this.equipmentName= (equipmentId.startsWith("01", 4)?"TOM": equipmentId.startsWith("02", 4)?"EFO":"UNKNOWN") + " - " + equipmentSerial;
     }
 }

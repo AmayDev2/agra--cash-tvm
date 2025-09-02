@@ -1,4 +1,4 @@
-//package com.amay.tom.service.print;
+package com.amay.tom.service.print;//package com.amay.tom.service.print;
 //
 //import jpos.JposException;
 //import jpos.POSPrinter;

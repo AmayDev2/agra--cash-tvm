@@ -1,9 +1,7 @@
 package com.amay.tom.service.ticketprint;
 
 import com.amay.tom.agent.Agent;
-import com.amay.tom.enums.FareMedium;
-import com.amay.tom.grpc.scugrpc.ScuDataMapper;
-import com.amay.tom.grpc.scugrpc.ScuService;
+import com.amay.tom.listener.PrintProgressListener;
 import com.amay.tom.model.GeneratedTicket;
 import com.amay.tom.model.QRTicket;
 import com.amay.tom.model.adjust.AdjustedTicket;
@@ -19,6 +17,7 @@ import com.amay.tom.service.qrservice.QRService;
 import com.amay.tom.utils.folder.NewFolder;
 import com.amay.tom.utils.image.ImageUtils;
 import com.amay.tom.utils.time.TimeUtil;
+import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 import org.tinylog.Logger;
@@ -26,6 +25,7 @@ import org.tinylog.Logger;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class PrintTicketService {
     private ArrayList<GeneratedTicket> generatedTicket;
@@ -45,8 +45,8 @@ public class PrintTicketService {
         this.agent = agent;
     }
 
-    public void printTicket() {
-        if(this.generatedTicket.isEmpty())return;
+    public void printTicket(PrintProgressListener listener) {
+        if(generatedTicket.isEmpty())return;
         if(this.generatedTicket.getFirst() instanceof AdjustedTicket){
             Logger.debug("Adjusted Ticket info :"+this.generatedTicket.getFirst().toString());
             TicketInfo ticketInfo= ((AdjustedTicket) this.generatedTicket.getFirst()).getTicketInfo();
@@ -74,29 +74,34 @@ public class PrintTicketService {
                 uiqrTicket.setDestination(postGeneratedTicket.getProperTicket().getDestination().getStationName());
                 uiqrTicket.setTicketType(postGeneratedTicket.getProperTicket().getTicketType());
                 uiqrTicket.setQrCode(this.getQRImage(postGeneratedTicket.getQrCodeString(), postGeneratedTicket.getTicketId()));
-                uiqrTicket.setQrCodeString(postGeneratedTicket.getQrCodeString());
                 this.uiqrTickets.add(uiqrTicket);
             }
+            this.tempPrintTicket(listener,this.uiqrTickets.size());
 
         }
-        this.tempPrintTicket();
+
 
     }
 
-    private void tempPrintTicket(){
+    private void tempPrintTicket(PrintProgressListener runnable, int size){
+        AtomicInteger count = new AtomicInteger();
         for (UIQRTicket uiqrTicket : uiqrTickets) {
-            QRTicket qrTicket = new QRTicket(uiqrTicket.getTicketId(), uiqrTicket.getIssuedAt(), uiqrTicket.getValidUntil(), uiqrTicket.getSource(), uiqrTicket.getDestination(), uiqrTicket.getTicketType().getTicketTypeName(), "CASH", uiqrTicket.getPrice(), uiqrTicket.getQrCode());
+            QRTicket qrTicket = new QRTicket(uiqrTicket.getTicketId(), uiqrTicket.getIssuedAt(), uiqrTicket.getValidUntil(), uiqrTicket.getSource(), uiqrTicket.getDestination(), uiqrTicket.getTicketType().getTicketTypeName(), "Cash", uiqrTicket.getPrice(), uiqrTicket.getQrCode());
             qrTicket.setQty(Integer.parseInt(uiqrTicket.getQuantity()));
-            qrTicket.setQrCodeData(uiqrTicket.getQrCodeString());
             try {
-                Thread.sleep(200);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            implTicketService.printAndSaveTicket(qrTicket);
+
+            Platform.runLater(() -> {
+                boolean isPrinted = implTicketService.printAndSaveTicket(qrTicket);
+//                count.addAndGet(isPrinted ? 1 : 0);
+//                runnable.update(count.get(), size);
+            });
         }
-        System.out.println("sold stock :"+FareMedium.QR.getFareMediumSale()+" "+FareMedium.NCMC.getFareMediumSale());
-        agent.getScuService().pushTotalStock(ScuDataMapper.getStockSoldRequest(agent.getShift().getShiftId(),agent.getSystemConfig().getCurrentEquipment().getEquipmentId(),FareMedium.QR.getFareMediumSale(),FareMedium.NCMC.getFareMediumSale()));
+        //System.out.println("sold stock :"+FareMedium.QR.getFareMediumSale()+" "+FareMedium.NCMC.getFareMediumSale());
+        //agent.getScuService().pushTotalStock(ScuDataMapper.getStockSoldRequest(agent.getShift().getShiftId(),agent.getSystemConfig().getCurrentEquipment().getEquipmentId(),FareMedium.QR.getFareMediumSale(),FareMedium.NCMC.getFareMediumSale()));
     }
 
     private Image getQRImage(String encryptQR,String ticketId) {

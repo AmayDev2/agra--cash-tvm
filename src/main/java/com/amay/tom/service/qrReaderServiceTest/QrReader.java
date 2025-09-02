@@ -126,6 +126,7 @@ public class QrReader extends Thread {
     }
 }*/
 
+import com.amay.tom.service.qrReaderServiceTest.QrCodeListener;
 import javafx.application.Platform;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;

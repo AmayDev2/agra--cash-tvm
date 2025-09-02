@@ -2,14 +2,22 @@ package com.amay.tom.controller;
 
 import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
+import com.amay.tom.controller.SuccessController;
+import com.amay.tom.enums.RefundStatus;
+import com.amay.tom.exceptions.NotRefundableOnDifferentStationException;
+import com.amay.tom.exceptions.TicketAlreadyRefunded;
+import com.amay.tom.exceptions.TicketCouldNotRefunded;
 import com.amay.tom.grpc.scugrpc.ScuDataMapper;
 import com.amay.tom.grpc.scugrpc.ScuService;
 import com.amay.tom.model.QRTicket;
+import com.amay.tom.model.TicketType;
 import com.amay.tom.model.refund.RefundDTO;
+import com.amay.tom.model.refund.RefundMapper;
 import com.amay.tom.repository.StationData;
-import com.amay.tom.service.qrService2.*;
+import com.amay.tom.service.qrService2.RefundQRService;
 import com.amay.tom.service.qrService2.impl.RefundQRServiceImpl;
 import com.amay.tom.utils.folder.NewFolder;
+import com.amay.tom.utils.objects.RefundValidationResponse;
 import com.amay.tom.utils.time.TimeUtil;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -27,6 +35,7 @@ import org.tinylog.Logger;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 public class RefundTicketDetailsController {
     @FXML
@@ -63,6 +72,8 @@ public class RefundTicketDetailsController {
     private boolean mStatus;
     private double mAmount;
     private boolean isCCU;
+    private boolean pushedToCCU;
+    private boolean pushedToSCU;
     
     public RefundTicketDetailsController(BorderPane borderPane,
                                          Agent agent,
@@ -93,9 +104,8 @@ public class RefundTicketDetailsController {
         source.setText(StationData.getInstance().getStation(ticket.getFrom()).getStationName());
         destination.setText(StationData.getInstance().getStation(ticket.getTo()).getStationName());
         fare.setText(ticket.getPrice());
-        type.setText(ticket.getType());
+        type.setText(TicketType.getTicket(ticket.getType()).getTicketTypeName());
         dateTime.setText(TimeUtil.epochMilliToFormattedSystemTime(ticket.getInitiateDateTime(),null));
-//        validUntil.setText(ticket.getExpiryTime());
         description.setText(mDescription);
 
         
@@ -115,22 +125,16 @@ public class RefundTicketDetailsController {
     private void onRefundClick() {
         try {
             // Process refund
-            boolean refundSuccess = processRefund();
-            String status="Refunded Successfully";
+            RefundValidationResponse refundValidationResponse = processRefund();
+            String status=refundValidationResponse.getMessage();
             
-            if (refundSuccess) {
-//                showAlert(Alert.AlertType.INFORMATION, "Refund Successful",
-//                         "The ticket has been successfully refunded.");
-
+            if (refundValidationResponse.isValid()) {
                 // Print refund receipt
                 this.printRefundReceipt();
-
                     FXMLLoader fxmlLoader = ViewFactory.getSuccessPage();
-                    fxmlLoader.setControllerFactory((x)->new SuccessController(status, refundSuccess));
+                    fxmlLoader.setControllerFactory((x)->new SuccessController(status, refundValidationResponse.isValid()));
                     borderPane.setCenter(fxmlLoader.load());
-
             } else {
-
                 showAlert(Alert.AlertType.ERROR, "Refund Failed", 
                          "Failed to process the refund. Please try again.");
             }
@@ -140,36 +144,129 @@ public class RefundTicketDetailsController {
                      "An error occurred while processing the refund.");
         }
 
+    }
 
-
+    public RefundDTO getRefundDetails(String ticketNumber) {
+        try {
+            return RefundMapper.toDTO(this.agent.getRefundTicketRepository().findByTicketNumber(ticketNumber));
+        } catch (Exception e) {
+            Logger.error("Error getting refund details: {}", e.getMessage());
+            return null;
+        }
     }
     
-    private boolean processRefund() {
+    private RefundValidationResponse  processRefund() {
+            RefundValidationResponse refundValidationResponse=null;
+            boolean isValid = false;
+            String message ="";
+        try {
+            if (!this.ticket.getFrom().equals(this.agent.getSystemConfig().getCurrentStation().getStationId())) {
+                throw new NotRefundableOnDifferentStationException("Ticket is not from current station: " + this.agent.getSystemConfig().getCurrentStation()+" "+this.ticket.getFrom());
+            }
 
-        TicketRefundRequestV1 ticketRequestV1= ScuDataMapper.createTicketRefundRequestByNumber(this.ticket.getTicketNo(),"CASH");
-        TicketRefundResponseV2 ticketRefundResponseV2;
+            RefundDTO refundDTO = getRefundDetails(this.ticket.getTicketNo());
+            if (refundDTO != null) {
+                throw new TicketAlreadyRefunded("Ticket with Number: " + this.ticket.getTicketNo() + " is already refunded.");
+            }
 
-        if(isCCU) {
-            ticketRefundResponseV2 = ccuService.refundTicket(ticketRequestV1);
-        }else{  //TODO: Remove this, if this is for only CCU
-            ticketRefundResponseV2 = scuService.refundTicket(ticketRequestV1);
+            String refundId = UUID.randomUUID().toString();
+            TicketRefundRequestV1 ticketRequestV1 = ScuDataMapper.createTicketRefundRequestByNumber(this.ticket.getTicketNo(), "CASH",(int)mAmount,this.ticket.getType(),refundId);
+            TicketRefundResponseV2 ticketRefundResponseV2;
+            message="Refund failed";
+            if (isCCU) {
+                ticketRefundResponseV2 = ccuService.refundTicket(ticketRequestV1);
+                try {
+                    if (ticketRefundResponseV2.getResponseMetaData().getErrorCode().equals("200")) {
+                        isValid = true;
+                        pushedToCCU = true;
+                        message = "Refund Successful";
+                    }
+                }catch (Exception e) {
+                    Logger.error("Error pushing refund data to to SCU");
+                }
+                try {
+                    ticketRefundResponseV2 = scuService.refundTicket(ticketRequestV1);
+                    if (ticketRefundResponseV2.getResponseMetaData().getErrorCode().equals("200")) {
+                        isValid = true;
+                        pushedToSCU = true;
+                        message = "Refund Successful";
+                    }
+                } catch (Exception e) {
+                    Logger.error("Error pushing refund data to to SCU");
+                }
+            }
+            else {  //TODO: Remove this, if this is for only CCU
+                ticketRefundResponseV2 = scuService.refundTicket(ticketRequestV1);
+                if(ticketRefundResponseV2.getResponseMetaData().getErrorCode().equals("200")){
+                    isValid=true;
+                    pushedToSCU=true;
+                    message="Refund Successful";
+                }
+            }
+//            if (!ticketRefundResponseV2.getResponseMetaData().getErrorCode().equals("200")) {
+//                // failed
+////                throw new TicketCouldNotRefunded("Not Found Ticket with Number: " + ticket.getTicketNo());
+////                agent.getRefundTicketRepository().updateRefundStatus(refundId,"FAIL");
+//                message="Refund failed";
+//            }
+//            else{
+//                isValid=true;
+////                agent.getRefundTicketRepository().updateRefundStatus(refundId,"SUCCESS");
+//                message="Refund Successful";
+//            }
+
+            //
+
+            // Check if the ticket is already refunded
+            refundValidationResponse=new RefundValidationResponse(isValid, message);
+            // Set the station ID from the agent's system config
+            refundValidationResponse.setRefundAmount(String.valueOf(mAmount));
+
+
+            //Local save of refund details
+            Logger.debug("Refund Response: {}", ticketRefundResponseV2);
+            Logger.debug(ticketRefundResponseV2.getResponseMetaData().getErrorMessage());
+            refundDTO = new RefundDTO();
+            refundDTO.setRefundMode(ticketRefundResponseV2.getTicketRefundData().getRefundInfo().getRefundMode());
+            String ticketNumber = ticketRefundResponseV2.getTicketRefundData().getRefundInfo().getTicketId();
+
+            refundDTO.setTicketNumber(ticketNumber);
+            refundDTO.setAmount(mAmount);
+            refundDTO.setShiftId(agent.getShift().getShiftId());
+            refundDTO.setCreationDateTime(LocalDateTime.now());
+            refundDTO.setUpdateDateTime(LocalDateTime.now());
+            refundDTO.setOperatorId(agent.getShift().getOperatorId());
+            refundDTO.setDeviceId(agent.getShift().getDeviceId());
+            refundDTO.setTicketType(ticket.getType());
+            refundDTO.setRefundId(refundId);
+            if(isValid){
+                refundDTO.setStatus("SUCCESS");
+            }else {
+                refundDTO.setStatus("FAIL");
+            }
+            if(pushedToCCU){
+                refundDTO.setCcu(true);
+            }
+            if (pushedToSCU){
+                refundDTO.setScu(true);
+            }
+            RefundQRService refundQRService = new RefundQRServiceImpl(agent);
+            refundQRService.processRefund(refundDTO);
+        } catch (RuntimeException e) {
+            if( e instanceof TicketAlreadyRefunded) {
+                refundValidationResponse=new RefundValidationResponse(false, e.getMessage());
+            } else if (e instanceof TicketCouldNotRefunded) {
+                refundValidationResponse= new RefundValidationResponse(false, e.getMessage());
+            } else if( e instanceof NotRefundableOnDifferentStationException) {
+                refundValidationResponse = new RefundValidationResponse(false, e.getMessage());
+            }
+            else {
+                Logger.error("Error processing refund: {}", e.getMessage());
+                refundValidationResponse = new RefundValidationResponse(false, "An error occurred while processing the refund: " + e.getMessage());
+            }
+
         }
-
-        System.out.println(ticketRefundResponseV2.getResponseMetaData().getErrorMessage());
-        RefundDTO refundDTO =new RefundDTO();
-        refundDTO.setRefundMode(ticketRefundResponseV2.getTicketRefundData().getRefundInfo().getRefundMode());
-        refundDTO.setTicketNumber(ticketRefundResponseV2.getTicketRefundData().getRefundInfo().getTicketNumber());
-        refundDTO.setAmount(mAmount);
-        refundDTO.setShiftId(agent.getShift().getShiftId());
-        refundDTO.setCreationDateTime(LocalDateTime.now());
-        refundDTO.setUpdateDateTime(LocalDateTime.now());
-        refundDTO.setOperatorId(agent.getShift().getOperatorId());
-        refundDTO.setDeviceId(agent.getShift().getDeviceId());
-
-        RefundQRService refundQRService= new RefundQRServiceImpl(agent);
-        refundQRService.processRefund(refundDTO);
-        
-        return ticketRefundResponseV2.getResponseMetaData().getErrorCode().equals("200");
+        return refundValidationResponse;  // Return true if refund was successful
     }
     
     private void printRefundReceipt() {

@@ -3,7 +3,8 @@ public enum StationMode {
 
     EMERGENCY("⚠ EMERGENCY MODE ACTIVATED ⚠", "Please leave the Station Immediately", "src/main/resources/images/emergency.png"),
     OUT_OF_SERVICE("OUT OF SERVICE", "", "src/main/resources/images/out _of_service.png"),
-    STATION_CLOSED("STATION CLOSED", "Please leave the Station", "src/main/resources/images/out _of_service.png");
+    STATION_CLOSED("STATION CLOSED", "Please leave the Station", "src/main/resources/images/out _of_service.png"),
+    SHIFT_NOT_ACTIVE("COUNTER CLOSED", "Please use another window", "src/main/resources/images/out _of_service.png");
 
     private final String label;
     private final String message;

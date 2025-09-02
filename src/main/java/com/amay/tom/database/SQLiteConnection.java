@@ -1,5 +1,6 @@
 package com.amay.tom.database;
 
+import com.amay.tom.config.Env;
 import com.amay.tom.utils.env.EnvFile;
 import org.tinylog.Logger;
 
@@ -23,9 +24,9 @@ public enum SQLiteConnection {
     private BlockingQueue<Connection> pool;
 
     public void setSQLiteConnection() {
-        String dbUrl = EnvFile.getSQLiteDatabasePath();
-        String dbFileName = EnvFile.getSQLiteDatabaseName();
-        int noOfConnections = EnvFile.getSQLiteDatabaseConnections();
+        String dbUrl = Env.SQLITE_DATABASE_PATH;
+        String dbFileName = Env.SQLITE_DATABASE_NAME;
+        int noOfConnections = Env.SQLITE_DATABASE_CONNECTIONS;
         this.JDBC_URL = "jdbc:sqlite:" + dbUrl + File.separator + dbFileName;
         MAX_CONNECTIONS=noOfConnections;
         pool = new ArrayBlockingQueue<>(MAX_CONNECTIONS);

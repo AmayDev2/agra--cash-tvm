@@ -1,14 +1,10 @@
 package com.amay.tom.service.qrService2;
 
 import com.amay.tom.enums.AdjustmentType;
-import com.amay.tom.model.MetroTicket;
-import com.amay.tom.model.Station;
-import com.amay.tom.model.TicketType;
+import com.amay.tom.model.station.Station;
 import com.amay.tom.model.tickets.PreGeneratadTicket;
-import com.amay.tom.model.tickets.ProperTicketOrder;
 import com.amay.tom.model.tickets.QRTicketV2;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.HashSet;

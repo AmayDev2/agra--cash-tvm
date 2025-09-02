@@ -2,9 +2,10 @@ package com.amay.tom.controller;
 
 import com.amay.tom.ViewFactory;
 import com.amay.tom.config.SystemConfig;
+import com.amay.tom.controller.PaymentController;
 import com.amay.tom.enums.Language;
 import com.amay.tom.model.MetroTicket;
-import com.amay.tom.model.Station;
+import com.amay.tom.model.station.Station;
 import com.amay.tom.model.TicketType;
 import com.amay.tom.service.controller.MainUIService;
 import com.amay.tom.service.controller.impl.ImplMainUiService;
@@ -121,7 +122,7 @@ public class MainController {
 //
     @FXML
     private Label welcomeText;
-//
+///
     private  MainUIService mainUIService;
 
     public MainController() {

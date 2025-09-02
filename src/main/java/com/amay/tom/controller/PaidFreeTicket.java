@@ -3,6 +3,7 @@ package com.amay.tom.controller;
 import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.config.SystemConfig;
+import com.amay.tom.controller.PaymentController;
 import com.amay.tom.controllerInterface.controllerInt.ControllerAdapter;
 import com.amay.tom.model.MetroTicket;
 import com.amay.tom.model.TicketType;
@@ -29,6 +30,10 @@ import java.util.UUID;
 public class PaidFreeTicket {
 
     @FXML
+    private RadioButton paidExit;
+    @FXML
+    private RadioButton freeExit;
+    @FXML
     private VBox paidFreeTicketView;
 
     @FXML
@@ -39,16 +44,13 @@ public class PaidFreeTicket {
 
     @FXML
     private RadioButton tailgating;
-
-    @FXML
-    private RadioButton ticketless;
+    
 
 
     @FXML
     private ToggleGroup toggleGroup2;
 
-    @FXML
-    private RadioButton unreadeable;
+
 
     UserPrivilege userPrivilege;
     EquipmentPrivilege equipmentPrivilege;
@@ -73,7 +75,7 @@ public class PaidFreeTicket {
         toggleGroup2.getToggles().forEach(toggle -> {
             RadioButton radioButton = (RadioButton) toggle;
 
-            if (radioButton.isSelected() && radioButton.getText().equals(unreadeable.getText())) {
+            if (radioButton.isSelected() && radioButton.getText().equals(freeExit.getText())) {
                     RequestedTicket[] requestedTicketArray = new RequestedTicket[1];
 
                     requestedTicketArray[0] = new RequestedTicket(agent.getSystemConfig().getCurrentStation(),agent.getSystemConfig().getCurrentStation(),  TicketType.FREE,1);
@@ -84,6 +86,7 @@ public class PaidFreeTicket {
 
                     FXMLLoader fxmlLoader = ViewFactory.getPayment();
                     PaymentController paymentController = new PaymentController(agent);
+                    paymentController.setBorderPane(borderPane);
                     paymentController.setParentNode(borderPane.getCenter());
 
                     fxmlLoader.setControllerFactory(c -> paymentController);
@@ -96,7 +99,7 @@ public class PaidFreeTicket {
                     paymentController.setRequestedTicketOrderFree(requestedTicketOrder);
 
 
-            } else if (radioButton.isSelected() && radioButton.getText().equals(ticketless.getText())) {
+            } else if (radioButton.isSelected() && radioButton.getText().equals(paidExit.getText())) {
                 RequestedTicket[] requestedTicketArray = new RequestedTicket[1];
 
                 requestedTicketArray[0] = new RequestedTicket(agent.getSystemConfig().getCurrentStation(),agent.getSystemConfig().getCurrentStation(),  TicketType.PAID,1);
@@ -124,29 +127,34 @@ public class PaidFreeTicket {
     }
 
     public void initialize() {
-        tailgating.setVisible(false);
-        tailgating.setToggleGroup(toggleGroup2);
-        ticketless.setToggleGroup(toggleGroup2);
-        unreadeable.setToggleGroup(toggleGroup2);
+//        tailgating.setVisible(false);
+//        tailgating.setToggleGroup(toggleGroup2);
+        paidExit.setToggleGroup(toggleGroup2);
+        freeExit.setToggleGroup(toggleGroup2);
 //        ticketService = new ImplTicketService();
 
-        tailgating.setDisable(!userPrivilege.isQrPaidTicket() || !equipmentPrivilege.isQrPaidTicket().get());
-        ticketless.setDisable(!userPrivilege.isQrPaidTicket() || !equipmentPrivilege.isQrPaidTicket().get());
-        unreadeable.setDisable(!userPrivilege.isQrFreeTicket() || !equipmentPrivilege.isQrFreeTicket().get());
+//        tailgating.setDisable(!userPrivilege.isQrPaidTicket() || !equipmentPrivilege.isQrPaidTicket().get());
+        paidExit.setDisable(!userPrivilege.isQrPaidTicket() || !equipmentPrivilege.isQrPaidTicket().get());
+        freeExit.setDisable(!userPrivilege.isQrFreeTicket() || !equipmentPrivilege.isQrFreeTicket().get());
 
         equipmentPrivilege.isQrPaidTicket().addListener((observable, oldValue, newValue) -> {
-            tailgating.setSelected(!userPrivilege.isQrPaidTicket() &&  !newValue);
-            ticketless.setSelected(!userPrivilege.isQrPaidTicket() &&  !newValue);
-            tailgating.setDisable(!userPrivilege.isQrPaidTicket() ||  !equipmentPrivilege.isQrPaidTicket().get() || !newValue);
-            ticketless.setDisable(!userPrivilege.isQrPaidTicket() ||  !equipmentPrivilege.isQrPaidTicket().get() || !newValue);
+//            tailgating.setSelected(!userPrivilege.isQrPaidTicket() &&  !newValue);
+            paidExit.setSelected(!userPrivilege.isQrPaidTicket() &&  !newValue);
+//            tailgating.setDisable(!userPrivilege.isQrPaidTicket() ||  !equipmentPrivilege.isQrPaidTicket().get() || !newValue);
+            paidExit.setDisable(!userPrivilege.isQrPaidTicket() ||  !equipmentPrivilege.isQrPaidTicket().get() || !newValue);
         });
 
         equipmentPrivilege.isQrFreeTicket().addListener((observable, oldValue, newValue) -> {
-            unreadeable.setSelected(!userPrivilege.isQrFreeTicket() && !newValue);
-            unreadeable.setDisable(!userPrivilege.isQrFreeTicket() ||  !equipmentPrivilege.isQrFreeTicket().get() || !newValue);
+            freeExit.setSelected(!userPrivilege.isQrFreeTicket() && !newValue);
+            freeExit.setDisable(!userPrivilege.isQrFreeTicket() ||  !equipmentPrivilege.isQrFreeTicket().get() || !newValue);
         });
+        
+        this.activateTickets();
+    }
 
-
+    private void activateTickets() {
+        paidExit.setDisable(!TicketType.FREE.getProduct().isActive());
+        freeExit.setDisable(!TicketType.PAID.getProduct().isActive());
     }
 
 }

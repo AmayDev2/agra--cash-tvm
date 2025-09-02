@@ -1,12 +1,14 @@
 package com.amay.tom.controller;
 
 import com.amay.tom.agent.Agent;
+import com.amay.tom.controller.Controller;
+import com.amay.tom.controller.OperationCompleteController;
 import com.amay.tom.controllerInterface.controllerInt.ControllerAdapter;
 import com.amay.tom.enums.PaymentMethod;
 import com.amay.tom.exceptions.NotValidTicketToCalculateFare;
 import com.amay.tom.model.GeneratedTicket;
 import com.amay.tom.model.MetroTicket;
-import com.amay.tom.model.Station;
+import com.amay.tom.model.station.Station;
 import com.amay.tom.model.TicketType;
 import com.amay.tom.model.payment.PaymentResponse;
 import com.amay.tom.model.tickets.*;
@@ -16,7 +18,7 @@ import com.amay.tom.pdu.controller.command.WelcomePageCommand;
 import com.amay.tom.repository.FareLine3;
 import com.amay.tom.service.chield.TicketService;
 import com.amay.tom.service.chield.ticketservice.ImplTicketService;
-//import com.amay.tom.service.payment.IPayment;
+import com.amay.tom.service.devices.device.PrinterStatus;
 import com.amay.tom.service.payment.PaymentControllerListener;
 import com.amay.tom.service.payment2.AbstractPaymentMethod;
 import com.amay.tom.service.payment2.PaymentFactory;
@@ -26,12 +28,11 @@ import com.amay.tom.service.qrDataGenerator.impl.ImplQRDataGenerator;
 import com.amay.tom.service.qrService2.*;
 import com.amay.tom.utils.GridPaneCloner;
 import com.amay.tom.utils.env.EnvFile;
-import javafx.animation.PauseTransition;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.HPos;
-import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
@@ -41,7 +42,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
-import javafx.util.Duration;
+import org.amaytechnosystems.AdjustmentArea;
 import org.tinylog.Logger;
 
 import java.io.IOException;
@@ -64,6 +65,8 @@ public class PaymentController implements PaymentControllerListener {
     private Button upi;
     @FXML
     private Button xyz;
+    @FXML
+    private Label insufficientCash;
     private TicketService ticketService;
     private PaymentMethod paymentMethod = PaymentMethod.CASH;
     @FXML
@@ -80,7 +83,6 @@ public class PaymentController implements PaymentControllerListener {
     private VBox centerVBox;
     @FXML
     private Text changeAmount;
-    @FXML
     private BorderPane borderPane;
     @FXML
     private ColumnConstraints destinationCol;
@@ -105,14 +107,13 @@ public class PaymentController implements PaymentControllerListener {
     private TicketInfo[] ticketInfos;
     private Alert alert;
     private int changedCash = 0;
-    private Controller controller;
+    private com.amay.tom.controller.Controller controller;
     private RequestedTicketOrder requestedTicketOrder;
     private int totalFareCalculated = 0;
 
     public PaymentController(Agent agent) {
         Logger.debug("PaymentController created");
         this.agent = agent;
-
     }
 
 /*    private void toggleRowVisibility(boolean visibility) {
@@ -139,6 +140,7 @@ public class PaymentController implements PaymentControllerListener {
         cashReceived.setDisable(false);
         cashReceived.setVisible(true);
         event.consume();
+
     }
 
     @FXML
@@ -161,9 +163,6 @@ public class PaymentController implements PaymentControllerListener {
 
     }
 
-/*    public void proceedToPayment(ActionEvent actionEvent) {
-    }*/
-
     private void showGridPane() {
         agent.getThreadPool().getFixedThreadPool().execute(
                 () -> {
@@ -178,6 +177,17 @@ public class PaymentController implements PaymentControllerListener {
         ticketService = new ImplTicketService(new ImplQRDataGenerator());
         cash.isVisible();
         alert = new Alert(Alert.AlertType.ERROR);
+        insufficientCash.setText("");
+
+        Platform.runLater(()->cashReceived.requestFocus());
+
+        cashReceived.setTextFormatter(new TextFormatter<String>(change -> {
+            if(change.isAdded()){
+            String newAmount = change.getControlNewText();
+            return (newAmount.matches("^\\d+$") && newAmount.length()<5 && !newAmount.startsWith("0")) ? change : null;
+            } else return change;
+        }
+        ));
     }
 
     //PAID
@@ -205,7 +215,9 @@ public class PaymentController implements PaymentControllerListener {
             Text ticketType = new Text(requestedTicket.ticketType().getTicketTypeName());
             Text quantity = new Text(String.valueOf(requestedTicket.quantity()));
 
-            int amount = (requestedTicket.ticketType().equals(TicketType.RETURN) ? 2 : 1) * requestedTicket.quantity() * FareLine3.distanceMatrix[0][FareLine3.distanceMatrix.length - 1];
+            int amount = (requestedTicket.ticketType().getProduct().equals(TicketType.RETURN) ? 2 : 1) * requestedTicket.quantity() * FareLine3.distanceMatrix[0][FareLine3.distanceMatrix.length - 1];
+            //Add penalty amount
+            amount+=requestedTicketOrder.requestedTicket()[i].ticketType().getProduct().getTicketlessCharges();
 //            amount=(int)(agent.getBusinessRule().getFareMultiplayer()*amount);
 
             Text fare = new Text(String.valueOf(amount));
@@ -233,6 +245,8 @@ public class PaymentController implements PaymentControllerListener {
             rowConstraints.setVgrow(header.getVgrow());
             ticketsGrid.getRowConstraints().add(rowConstraints);
         }
+
+
 
         // Add separator row above and below ticket entries
         BorderPane separator1 = new BorderPane();
@@ -401,8 +415,8 @@ public class PaymentController implements PaymentControllerListener {
         this.setCashReceivedListener(totalFare);
         this.showGridPane();
     }
-    // FREE
-    public void setRequestedTicketOrderFree(RequestedTicketOrder requestedTicketOrder){
+
+    private void hideCashInBox(){
         this.cash.setVisible(false);
         this.card.setVisible(false);
         this.upi.setVisible(false);
@@ -418,6 +432,10 @@ public class PaymentController implements PaymentControllerListener {
                 node.setVisible(false);
             }
         }
+    }
+    // FREE
+    public void setRequestedTicketOrderFree(RequestedTicketOrder requestedTicketOrder){
+        hideCashInBox();
 
         Logger.info("Requested ticket order set: {} {}", requestedTicketOrder, requestedTicketOrder.requestedTicket().length);
         RequestedTicket[] requestedTickets = requestedTicketOrder.requestedTicket();
@@ -616,13 +634,12 @@ public class PaymentController implements PaymentControllerListener {
         this.showGridPane();
     }
     //ADJUSTMENT
-    public void setTicketsPantylinerGrid(TicketInfo[] metroTickets, String orderId) {
+    public void setTicketsPenaltyLinerGrid(TicketInfo[] metroTickets, String orderId) {
         payFor = 1;
         this.ticketInfos = metroTickets;
         int noOfTickets = metroTickets.length;
         this.orderId = orderId;
         this.requestedTicketOrder= new RequestedTicketOrder(null,agent.getShiftIdGeneratorService().getOrderIdGeneratorService().generateOrderId());
-
         for (int i = 0; i < noOfTickets; i++) {
             TicketInfo metroTicket = metroTickets[i];
 
@@ -717,59 +734,63 @@ public class PaymentController implements PaymentControllerListener {
         ticketsGrid.add(totalQty, 3, noOfTickets + 2);
         ticketsGrid.add(totalVal, 4, noOfTickets + 2);
 
-        this.totalFareCalculated = totalFare;
-        this.setCashReceivedListener(totalFare);
+        if(metroTickets[0].getPAmount()==0){
+            hideCashInBox();
+        }else {
+            this.totalFareCalculated = totalFare;
+            this.setCashReceivedListener(totalFare);
+        }
         this.showGridPane();
     }
 
     @FXML
     void onAmountUpdate(InputMethodEvent event) {
+//        System.out.println("Amount updated");
     }
 
     @FXML
     void onBalanceUpdate(ActionEvent event) {
         System.out.println("Balance updated");
-
     }
 
     @FXML
     void onClickPay(ActionEvent event) {
 
         if (Integer.parseInt(cashReceived.getText()) < totalFare) {
-            alert.setContentText("Insufficient cash received");
-            alert.showAndWait();
+            insufficientCash.setText("Insufficient Cash");
             throw new RuntimeException("Insufficient cash received");
         }
+        else insufficientCash.setText("");
 
         // 🔧 Create overlay at runtime
-        VBox overlayContent = new VBox(15);
-        overlayContent.setAlignment(Pos.CENTER);
-        overlayContent.setPrefSize(stackPane.getWidth(), stackPane.getHeight());
-
-        Label label = new Label("🖨 Printing Tickets...");
-        label.setStyle("-fx-font-size: 24px; -fx-text-fill: white; -fx-font-weight: bold;");
-
-        ProgressIndicator spinner = new ProgressIndicator();
-
-        overlayContent.getChildren().addAll(label, spinner);
-
-        AnchorPane overlayPane = new AnchorPane(overlayContent);
-        overlayPane.setStyle("-fx-background-color: rgba(0, 0, 0, 0.5);");
-        AnchorPane.setTopAnchor(overlayContent, 0.0);
-        AnchorPane.setBottomAnchor(overlayContent, 0.0);
-        AnchorPane.setLeftAnchor(overlayContent, 0.0);
-        AnchorPane.setRightAnchor(overlayContent, 0.0);
-
-        // Add to stackPane
-        stackPane.getChildren().add(overlayPane);
-
-        // Simulate printing delay
-        PauseTransition pause = new PauseTransition(Duration.seconds(2));
-        pause.setOnFinished(e -> {
-            stackPane.getChildren().remove(overlayPane);
+//        VBox overlayContent = new VBox(15);
+//        overlayContent.setAlignment(Pos.CENTER);
+//        overlayContent.setPrefSize(stackPane.getWidth(), stackPane.getHeight());
+//
+//        Label label = new Label("🖨 Printing Tickets...");
+//        label.setStyle("-fx-font-size: 24px; -fx-text-fill: white; -fx-font-weight: bold;");
+//
+//        ProgressIndicator spinner = new ProgressIndicator();
+//
+//        overlayContent.getChildren().addAll(label, spinner);
+//
+//        AnchorPane overlayPane = new AnchorPane(overlayContent);
+//        overlayPane.setStyle("-fx-background-color: rgba(0, 0, 0, 0.5);");
+//        AnchorPane.setTopAnchor(overlayContent, 0.0);
+//        AnchorPane.setBottomAnchor(overlayContent, 0.0);
+//        AnchorPane.setLeftAnchor(overlayContent, 0.0);
+//        AnchorPane.setRightAnchor(overlayContent, 0.0);
+//
+//        // Add to stackPane
+//        stackPane.getChildren().add(overlayPane);
+//
+//        // Simulate printing delay
+//        PauseTransition pause = new PauseTransition(Duration.seconds(0));
+//        pause.setOnFinished(e -> {
+//            stackPane.getChildren().remove(overlayPane);
             // TODO: Final transaction logic here
-//
-//
+
+
 //        if(FareMedium.QR.getFareMediumTotal()-FareMedium.QR.getFareMediumSale() -metroTickets.length <=0){
 //            Alert alert = new Alert(Alert.AlertType.INFORMATION);
 //            alert.setTitle("Error");
@@ -778,15 +799,13 @@ public class PaymentController implements PaymentControllerListener {
 //            alert.show();
 //            throw new RuntimeException("Insufficient Stock");
 //        }
-//
-//        if(!PrinterStatus.getPrinterStatus()) { TODO: check for printer
-//            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-//            alert.setTitle("Error");
-//            alert.setHeaderText(null);
-//            alert.setContentText("Printer not connected");
-//            alert.show();
+
+//        if(!PrinterStatus.getPrinterStatus()) {
+//            insufficientCash.setText("Printer not connected");
 //            throw new RuntimeException("Printer not connected");
 //        }
+//        else
+//            insufficientCash.setText("");
 
             if (payFor == 1) {
                 AbstractPaymentMethod selectedPayment = switch (paymentMethod) {
@@ -806,7 +825,7 @@ public class PaymentController implements PaymentControllerListener {
 
                 FXMLLoader fxmlLoader2 = getFreeTicketPrint();
 
-                fxmlLoader2.setControllerFactory((x) -> new FreeTicketPrintController(generatedTicket, paymentResponse, agent));
+                fxmlLoader2.setControllerFactory((x) -> new OperationCompleteController("Ticket Adjusted Successfully.",generatedTicket, paymentResponse, agent,borderPane));
 
                 try {
                     ControllerAdapter.INSTANCE.setChildInCenterAnchorPane(fxmlLoader2.load());
@@ -828,7 +847,7 @@ public class PaymentController implements PaymentControllerListener {
 
                 for (RequestedTicket requestedTicket : requestedTicketOrder.requestedTicket()) {
                     long issuedAt = Instant.now().toEpochMilli();
-                    long validUntil = (long) requestedTicket.ticketType().getTicketTime() * 60 * 1000 + issuedAt;
+                    long validUntil = 0;
                     int fareS2D = this.getFare(requestedTicket); //getting fare from fare matrix of single ticket
                     List<ProperTicket> subProperTickets = this.getProperTickets(requestedTicket, issuedAt, validUntil, fareS2D);
                     subProperTickets.forEach(properTicket -> {
@@ -867,7 +886,7 @@ public class PaymentController implements PaymentControllerListener {
 
                 FXMLLoader fxmlLoader2 = getFreeTicketPrint();
 
-                fxmlLoader2.setControllerFactory((x) -> new FreeTicketPrintController(generatedTicket, paymentResponse, agent));
+                fxmlLoader2.setControllerFactory((x) -> new OperationCompleteController("Tickets Issued Successfully.",generatedTicket, paymentResponse, agent,borderPane));
 
                 try {
                     ControllerAdapter.INSTANCE.setChildInCenterAnchorPane(fxmlLoader2.load());
@@ -915,9 +934,10 @@ public class PaymentController implements PaymentControllerListener {
                 }
             }*/
 
-        }});
-        pause.play();
-        event.consume();
+        }
+//        });
+//        pause.play();
+//        event.consume();
 
     }
 
@@ -1006,33 +1026,30 @@ public class PaymentController implements PaymentControllerListener {
             // Reset total fare
             totalFareCalculated = 0;
 
-
-//            this.controller.qrTicket(null);
             if( previousNode != null) {
                 PDUCommandDispatcher.INSTANCE.dispatch(new WelcomePageCommand());
                 // Navigate back to the previous node
                 ControllerAdapter.INSTANCE.setChildInCenterAnchorPane((Parent) previousNode);
             } else {
-                throw new RuntimeException("Previous node is null, cannot navigate back to home screen");}
-
+                throw new RuntimeException("Previous node is null, cannot navigate back to home screen");
+            }
             // Log the navigation
             Logger.info("Navigated back to home screen from payment screen");
 
         } catch (RuntimeException | IOException  e) {
             Logger.error("Error navigating back to home screen: {}", e);
-            // Show error alert to user
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Navigation Error");
-            alert.setHeaderText("Could not return to previous screen");
-            alert.setContentText("Please try again or contact support if the problem persists.");
-            alert.showAndWait();
+//            // Show error alert to user
+//            Alert alert = new Alert(Alert.AlertType.ERROR);
+//            alert.setTitle("Navigation Error");
+//            alert.setHeaderText("Could not return to previous screen");
+//            alert.setContentText("Please try again or contact support if the problem persists.");
+//            alert.showAndWait();
         }
 
         actionEvent.consume();
     }
 
     private Node previousNode;
-
 
     public void setParentNode(Node center) {
         this.previousNode=center;
@@ -1049,11 +1066,11 @@ public class PaymentController implements PaymentControllerListener {
         int source= Integer.parseInt(requestedTicket.destination().getStationId());
         int destination=Integer.parseInt(requestedTicket.source().getStationId());
 //        Logger.info("Fare Multiplayer {} source {} destination {}",requestedTicket.ticketType().getFareMultiplayer(),source,destination);
-        final int ticketPrice= switch (requestedTicket.ticketType()) {
-            case SINGLE,RETURN,GROUP,TEST,FREE ->
+        final int ticketPrice=  switch (requestedTicket.ticketType()) {
+            case SINGLE,RETURN,GROUP,FREE ->
             (int)(agent.getBusinessRule().getFareMultiplayer()
             *FareLine3.distanceMatrix[ source - 1] [destination - 1]);
-            case PAID ->FareLine3.distanceMatrix[0][FareLine3.distanceMatrix.length - 1]; // TODO: FATEMULTIPLAYER IS NOT appliwd
+            case PAID ->FareLine3.distanceMatrix[0][FareLine3.distanceMatrix.length - 1]+(int)TicketType.PAID.getProduct().getTicketlessCharges(); // TODO: FATEMULTIPLAYER IS NOT appliwd
             default -> throw new NotValidTicketToCalculateFare("Not a valid ticket type");
         };
         // Multiply by default fare multiplayer
@@ -1067,7 +1084,7 @@ public class PaymentController implements PaymentControllerListener {
 
         Logger.info("Fare Multiplayer {} source {} destination {}",FARE_MULTIPLAYER,source,destination);
         final int ticketPrice= switch (ticketType) {
-            case SINGLE,RETURN,GROUP,TEST,FREE ->
+            case SINGLE,RETURN,GROUP,FREE ->
                     (timeFareMultiplayer
                             *FareLine3.distanceMatrix[ source - 1] [destination - 1]);
             case PAID ->FareLine3.distanceMatrix[0][FareLine3.distanceMatrix.length - 1]; // TODO: FATEMULTIPLAYER IS NOT appliwd
@@ -1077,4 +1094,7 @@ public class PaymentController implements PaymentControllerListener {
     }
 
 
+    public void setBorderPane(BorderPane borderPane) {
+        this.borderPane = borderPane;
+    }
 }

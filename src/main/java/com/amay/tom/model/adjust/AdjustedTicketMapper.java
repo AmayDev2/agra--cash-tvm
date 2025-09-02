@@ -30,7 +30,9 @@ public class AdjustedTicketMapper {
                 .setTransactionId(ticket.getTransactionId())
                 .setCreatedAt(ticket.getCreatedAt())
                 .setUpdatedAt(ticket.getUpdatedAt())
-                .setTransactionTime(ticket.getTransactionTime());
+                .setTransactionTime(ticket.getTransactionTime())
+                .setCcu(ticket.isCcu())
+                .setScu(ticket.isScu());
     }
 
     public static AdjustedTicket toEntity(AdjustedTicketDto dto) {
@@ -58,6 +60,8 @@ public class AdjustedTicketMapper {
                 .setTransactionId(dto.getTransactionId())
                 .setCreatedAt(dto.getCreatedAt())
                 .setUpdatedAt(dto.getUpdatedAt())
-                .setTransactionTime(dto.getTransactionTime());
+                .setTransactionTime(dto.getTransactionTime())
+                .setCcu(dto.isCcu())
+                .setScu(dto.isScu());
     }
 }

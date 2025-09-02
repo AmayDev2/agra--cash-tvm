@@ -1,10 +1,15 @@
 package com.amay.tom.utils.env;
 
+import com.amay.tom.model.equipment.dto.EquipmentPrivilegeDto;
+import com.amay.tom.model.equipment.entity.EquipmentPrivilege;
 import io.github.cdimascio.dotenv.Dotenv;
+
+import static com.amay.tom.config.Env.*; // static import for constants
 
 public class EnvLoader {
 
-    private Dotenv dotenv=null;
+    private Dotenv dotenv = null;
+
     public EnvLoader(String envPath) {
         try {
             dotenv = Dotenv.configure().directory(envPath).load();
@@ -12,171 +17,174 @@ public class EnvLoader {
             e.printStackTrace();
         }
     }
+
+    private String getOrDefault(String key, String defaultValue) {
+        String value = dotenv.get(key);
+        return value != null ? value : defaultValue;
+    }
+
+    private int getOrDefaultInt(String key, int defaultValue) {
+        String value = dotenv.get(key);
+        return value != null ? Integer.parseInt(value) : defaultValue;
+    }
+
+    private boolean getOrDefaultBoolean(String key, boolean defaultValue) {
+        String value = dotenv.get(key);
+        return value != null ? Boolean.parseBoolean(value) : defaultValue;
+    }
+
     public String getEnvValue(String key) {
         return dotenv.get(key);
     }
 
-    public  String getDatabaseUrl() {
-        return dotenv.get("DATABASE_URL");
+    public String getDatabaseUrl() {
+        return getOrDefault("DATABASE_URL", DATABASE_URL);
     }
 
-    public  String getDatabaseUsername() {
-        return dotenv.get("DATABASE_USERNAME");
+    public String getDatabaseUsername() {
+        return getOrDefault("DATABASE_USERNAME", DATABASE_USERNAME);
     }
 
-    public  String getDatabasePassword() {
-        return dotenv.get("DATABASE_PASSWORD");
+    public String getDatabasePassword() {
+        return getOrDefault("DATABASE_PASSWORD", DATABASE_PASSWORD);
     }
 
-    public  String getDatabasePassword2() {
-        return dotenv.get("DATABASE_PASSWORD2");
+    public String getDatabasePassword2() {
+        return getOrDefault("DATABASE_PASSWORD2", DATABASE_PASSWORD2);
     }
 
-    public  String getEquipmentPrivileges() {
-        return dotenv.get("EQUIPMENT_PRIVILEGES");
+    public EquipmentPrivilegeDto getEquipmentPrivileges() {
+        return new EquipmentPrivilegeDto();
     }
 
-    public  String getStationIdNew() {
-        return dotenv.get("STATION_ID_NEW");
+    public String getStationIdNew() {
+        return getOrDefault("STATION_ID_NEW", STATION_ID_NEW);
     }
 
-    public  String getEquipmentIdNew() {
-        return dotenv.get("EQUIPMENT_ID_NEW");
+    public String getEquipmentIdNew() {
+        return getOrDefault("EQUIPMENT_ID_NEW", EQUIPMENT_ID_NEW);
     }
 
-    public  String getEquipmentSerialNew() {
-        return dotenv.get("EQUIPMENT_SERIAL_NEW");
+    public String getEquipmentSerialNew() {
+        return getOrDefault("EQUIPMENT_SERIAL_NEW", EQUIPMENT_SERIAL_NEW);
     }
 
-    public  String getLineNumber() {
-        return dotenv.get("LINE_NUMBER");
+    public String getLineNumber() {
+        return getOrDefault("LINE_NUMBER", LINE_NUMBER);
     }
 
-    public  String getQrScannerModel() {
-        return dotenv.get("QR_SCANNER_MODEL2");
+    public String getQrScannerModel() {
+        return getOrDefault("QR_SCANNER_MODEL", QR_SCANNER_MODEL);
     }
 
-    public  String getThermalPrinterModel() {
-        return dotenv.get("THERMAL_PRINTER_MODEL2");
+    public String getThermalPrinterModel() {
+        return getOrDefault("THERMAL_PRINTER_MODEL", THERMAL_PRINTER_MODEL);
     }
 
-    public  boolean isPrinterCheckBeforePrint() {
-        return Boolean.parseBoolean(dotenv.get("PRINTER_CHECK_BEFORE_PRINT"));
+    public boolean isPrinterCheckBeforePrint() {
+        return getOrDefaultBoolean("PRINTER_CHECK_BEFORE_PRINT", PRINTER_CHECK_BEFORE_PRINT);
     }
 
-    public  int getShiftTimePeriodInMinutes() {
-        return Integer.parseInt(dotenv.get("SHIFT_TIME_PERIOD_IN_MINUTES"));
+    public int getShiftTimePeriodInMinutes() {
+        return getOrDefaultInt("SHIFT_TIME_PERIOD_IN_MINUTES", SHIFT_TIME_PERIOD_IN_MINUTES);
+    }
+//    public static String getStationsFile() {
+//        return getO("CURRENT_METRO_LINE_STATIONS_FILE");
+//    }MDEwNDAxMTI6OFcyOElMSEJLMDEwMDAzOjE3NTUxODI5MzA1NTQ6MDowMDIwOjAxOjAyOjAxOjAxOjA=
+
+    public String getRedisHost() {
+        return getOrDefault("REDIS_HOST", REDIS_HOST);
     }
 
-    public  String getRedisHost() {
-        return dotenv.get("REDIS_HOST");
+    public int getRedisPort() {
+        return getOrDefaultInt("REDIS_PORT", REDIS_PORT);
     }
 
-    public  int getRedisPort() {
-        return Integer.parseInt(dotenv.get("REDIS_PORT"));
+    public String getRedisPassword() {
+        return getOrDefault("REDIS_PASSWORD", REDIS_PASSWORD);
     }
 
-    public  String getRedisPassword() {
-        return dotenv.get("REDIS_PASSWORD");
+    public String getScuIpAddress() {
+        return getOrDefault("SCU_IP_ADDRESS", SCU_IP_ADDRESS);
     }
 
-    public  String getCcuIpAddress() {
-        return dotenv.get("CCU_IP_ADDRESS");
+    public int getScuPort() {
+        return getOrDefaultInt("SCU_PORT", SCU_PORT);
     }
 
-    public  int getCcuPort() {
-        return Integer.parseInt(dotenv.get("CCU_PORT"));
+    public String getCcuIpAddress() {
+        return getOrDefault("CCU_IP_ADDRESS", CCU_IP_ADDRESS);
     }
 
-    public  String getCcuIpAddressActual() {
-        return dotenv.get("CCU_IP_ADDRESS_ACTUAL");
-    }
-
-    public  int getCcuPortActual() {
-        return Integer.parseInt(dotenv.get("CCU_PORT_ACTUAL"));
+    public int getCcuPort() {
+        return getOrDefaultInt("CCU_PORT", CCU_PORT);
     }
 
     public String getSQLiteDatabasePath() {
-        return dotenv.get("SQLITE_DATABASE_PATH");
+        return getOrDefault("SQLITE_DATABASE_PATH", SQLITE_DATABASE_PATH);
     }
 
     public String getSQLiteDatabaseName() {
-        return dotenv.get("SQLITE_DATABASE_NAME");
+        return getOrDefault("SQLITE_DATABASE_NAME", SQLITE_DATABASE_NAME);
     }
 
-
     public int getSQLiteDatabaseConnections() {
-        int count=1;
-        try{
-            String countStr=dotenv.get("SQLITE_DATABASE_CONNECTIONS");
-          count=Integer.parseInt(countStr);
-         System.out.println("Count: "+count);
-        }catch(Exception e){
-            System.out.println("Error in getting SQLITE_DATABASE_CONNECTIONS");
-            e.printStackTrace();
-
-        }
-         return count;
+        return getOrDefaultInt("SQLITE_DATABASE_CONNECTIONS", SQLITE_DATABASE_CONNECTIONS);
     }
 
     public String getRestPort() {
-        return dotenv.get("CCU_REST_PORT");
+        return getOrDefault("CCU_REST_PORT", String.valueOf(CCU_REST_PORT));
     }
 
     public String getFTPHost() {
-        return dotenv.get("FTP_HOST");
+        return getOrDefault("FTP_HOST", FTP_HOST);
     }
 
     public int getFTPPort() {
-        return Integer.parseInt(dotenv.get("FTP_PORT"));
+        return getOrDefaultInt("FTP_PORT", FTP_PORT);
     }
 
     public String getFTPUsername() {
-        return dotenv.get("FTP_USERNAME");
+        return getOrDefault("FTP_USERNAME", FTP_USERNAME);
     }
 
     public String getFTPPassword() {
-        return dotenv.get("FTP_PASSWORD");
+        return getOrDefault("FTP_PASSWORD", FTP_PASSWORD);
     }
 
     public String getFTPRemoteFilePath() {
-        return dotenv.get("FTP_REMOTE_FILE_PATH");
+        return getOrDefault("FTP_REMOTE_FILE_PATH", FTP_REMOTE_FILE_PATH);
     }
 
     public String getFTPLocalPath() {
-        return dotenv.get("FTP_LOCAL_PATH");
+        return getOrDefault("FTP_LOCAL_PATH", FTP_LOCAL_PATH);
     }
 
     public String getLocalFileName() {
-        return dotenv.get("LOCAL_FILE_NAME");
+        return getOrDefault("LOCAL_FILE_NAME", LOCAL_FILE_NAME);
     }
 
     public String getApplicationLauncherPath() {
-        return dotenv.get("APPLICATION_LAUNCHER_PATH");
+        return getOrDefault("APPLICATION_LAUNCHER_PATH", APPLICATION_LAUNCHER_PATH);
     }
 
     public String getApplicationPath() {
-        return dotenv.get("APPLICATION_PATH");
+        return getOrDefault("APPLICATION_PATH", APPLICATION_PATH);
     }
 
     public String getCurrentFileName() {
-        return dotenv.get("CURRENT_FILE_NAME");
+        return getOrDefault("CURRENT_FILE_NAME", CURRENT_FILE_NAME);
     }
 
     public int getLaunchDelay() {
-        return Integer.parseInt(dotenv.get("LAUNCH_DELAY"));
+        return getOrDefaultInt("LAUNCH_DELAY", LAUNCH_DELAY);
     }
 
     public String getFXMLLib() {
-        return dotenv.get("FXML_LIB");
+        return getOrDefault("FXML_LIB", FXML_LIB);
     }
 
     public boolean getIsUpdate() {
-        String isUpdate = dotenv.get("UPDATE");
-        return isUpdate != null && isUpdate.equalsIgnoreCase("false");
-    }
-
-    public String getComPort() {
-        return  dotenv.get("COM_PORT");
+        return getOrDefaultBoolean("UPDATE", UPDATE);
     }
 }

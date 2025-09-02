@@ -1,17 +1,10 @@
 package com.amay.tom.repository;
 
-import com.amay.tom.model.Station;
-import com.amay.tom.utils.env.EnvFile;
-import com.google.gson.Gson;
-import java.io.FileReader;
-import java.io.IOException;
+import com.amay.tom.model.station.Station;
+import com.amay.tom.model.station.StationEntity;
+import com.amay.tom.repository.station.StationRepository;
 
-import java.io.FileReader;
-import com.amay.tom.model.Station;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.io.File;
-import java.io.IOException;
+import java.util.List;
 
 public class StationData {
 
@@ -20,70 +13,34 @@ public class StationData {
     public static StationData getInstance(){
         if(INSTANCE==null){
             INSTANCE=new StationData();
-
         }
         return INSTANCE;
-
     }
     private Station[] stations;
 
-    private StationData(){
-            getStationsArray();
+    private StationData(StationRepository stationRepository){
+            getStationsArray(stationRepository);
     }
 
-    public void getStationsArray() {
-        ObjectMapper objectMapper = new ObjectMapper();
+    private StationData(){
 
-        try {
-            String st=EnvFile.getStationsFile();
-            // Parse JSON to Java object
-            stations = objectMapper.readValue(new File(st), Station[].class);
-
+    }
+    public void getStationsArray(StationRepository stationRepository) {
+            List<StationEntity> stationList = stationRepository.findAll();
+            stations=new Station[stationList.size()];
             // Print station details
-            for (Station station : stations) {
-                System.out.println("Station code: " + station.getStationId());
-                System.out.println("Station name: " + station.getStationName());
+            for (int i=0;i<stationList.size();i++) {
+                String stationId = stationList.get(i).getStationId();
+                String stationName = stationList.get(i).getStationName();
+                System.out.println("Station code: " + stationId);
+                System.out.println("Station name: " + stationName);
                 System.out.println();
+                stations[i]=new Station(stationId,stationName);
             }
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-
     }
 
     public Station[] getStationArray(){
-//        getStationsArray();
-//        Station[] stations = {
-//                new Station("st01", "Taj East Gate"),
-//                new Station("st02", "Basai"),
-//                new Station("st03", "Fatehabad Road"),
-//                new Station("st04", "Taj Mahal"),
-//                new Station("st05", "Agra Fort"),
-//                new Station("st06", "JamaMasjid"),
-//                new Station("st07", "MedicalCollege"),
-//                new Station("st08", "Agra College"),
-//                new Station("st09", "Raja Ki Mandi"),
-//                new Station("st10", "RBS College"),
-//                new Station("st11", "ISBT"),
-//                new Station("st12", "Guru KaTaal"),
-//                new Station("st13", "Sikandra"),
-//                new Station("st14", "Agra Cantt"),
-//                new Station("st15", "Sadar Bazar"),
-//                new Station("st16", "Collectorate"),
-//                new Station("st17", "SubhashPark"),
-//                new Station("st18", "Agra College"),
-//                new Station("st19", "Hariparvat Chauraha"),
-//                new Station("st20", "Sanjay Place"),
-//                new Station("st21", "M.G.Road"),
-//                new Station("st22", "Sultan Ganj Crossing"),
-//                new Station("st23", "Kamla Nagar"),
-//                new Station("st24", "Ram Bagh"),
-//                new Station("st25", "Foundary Nagar"),
-//                new Station("st26", "Agra Mandi"),
-//                new Station("st27", "Kalindi Vihar")
-//        };
         return this.stations;
-
     }
 
     public Station getStation(String stationId){
@@ -94,6 +51,23 @@ public class StationData {
             }
         }
         return null;
+    }
+
+    public Station getStationByName(String stationName){
+        Station[] stations = getStationArray();
+        for (Station station : stations) {
+            if(station.getStationName().equals(stationName)){
+                return station;
+            }
+        }
+        return null;
+    }
+
+    public int getPlatform(String sourceStation,String destination){
+        int sourceStationSeqNo=Integer.parseInt(getStationByName(sourceStation).getStationId());
+        int destinationStationSeqNo=Integer.parseInt(getStationByName(destination).getStationId());
+        return sourceStationSeqNo>destinationStationSeqNo?1:sourceStationSeqNo<destinationStationSeqNo?2:0;
+
     }
 
     public boolean checkIsEqual(String to) {

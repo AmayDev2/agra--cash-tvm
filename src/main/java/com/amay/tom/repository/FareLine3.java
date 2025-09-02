@@ -1,69 +1,47 @@
 package com.amay.tom.repository;
 
+import com.amay.tom.agent.Agent;
+import com.amay.tom.model.faretable.FareRowEntity;
+import com.amay.tom.model.faretable.FaretableMapper;
+import com.amay.tom.repository.fareTable.FareTableRepository;
 import com.amay.tom.utils.env.EnvFile;
 
 import java.io.*;
+import java.util.List;
 
 public class FareLine3 {
-    public static int[][] distanceMatrix ; /*{
-            {10, 10, 20, 20, 20, 20, 30, 30, 40, 40, 40, 40, 50, 50, 50, 60, 60, 60, 60, 70, 70, 70, 70, 70, 70, 70, 70},
-            {10, 10, 10, 10, 20, 20, 20, 30, 30, 30, 40, 40, 40, 50, 50, 50, 60, 60, 60, 60, 70, 70, 70, 70, 70, 70, 70},
-            {20, 10, 10, 10, 10, 20, 20, 20, 30, 30, 40, 40, 40, 50, 50, 50, 60, 60, 60, 60, 70, 70, 70, 70, 70, 70, 70},
-            {20, 10, 10, 10, 10, 10, 20, 20, 30, 30, 30, 40, 40, 40, 50, 50, 50, 60, 60, 60, 60, 70, 70, 70, 70, 70, 70},
-            {20, 20, 10, 10, 10, 10, 10, 20, 20, 30, 30, 30, 40, 40, 40, 50, 50, 60, 60, 60, 60, 70, 70, 70, 70, 70, 70},
-            {20, 20, 20, 10, 10, 10, 10, 20, 20, 20, 30, 30, 40, 40, 40, 50, 50, 50, 60, 60, 60, 60, 70, 70, 70, 70, 70},
-            {30, 20, 20, 20, 10, 10, 10, 10, 20, 20, 30, 30, 30, 40, 40, 50, 50, 50, 50, 60, 60, 60, 60, 70, 70, 70, 70},
-            {30, 30, 20, 20, 20, 20, 10, 10, 10, 20, 20, 20, 30, 30, 40, 40, 50, 50, 50, 50, 60, 60, 60, 60, 70, 70, 70},
-            {40, 30, 30, 30, 20, 20, 20, 10, 10, 10, 20, 20, 20, 30, 30, 40, 40, 50, 50, 50, 60, 60, 60, 60, 60, 70, 70},
-            {40, 30, 30, 30, 30, 20, 20, 20, 10, 10, 10, 20, 20, 30, 30, 40, 40, 50, 50, 50, 50, 60, 60, 60, 60, 60, 70},
-            {40, 40, 40, 30, 30, 30, 30, 20, 20, 10, 10, 10, 20, 20, 30, 30, 40, 40, 40, 50, 50, 60, 60, 60, 60, 60, 60},
-            {40, 40, 40, 40, 30, 30, 30, 20, 20, 20, 10, 10, 10, 20, 20, 30, 40, 40, 40, 50, 50, 50, 60, 60, 60, 60, 60},
-            {50, 40, 40, 40, 40, 40, 30, 30, 20, 20, 20, 10, 10, 10, 20, 20, 30, 40, 40, 40, 50, 50, 50, 50, 60, 60, 60},
-            {50, 50, 50, 40, 40, 40, 40, 30, 30, 30, 20, 20, 10, 10, 10, 20, 20, 30, 30, 40, 40, 50, 50, 50, 50, 60, 60},
-            {50, 50, 50, 50, 40, 40, 40, 40, 30, 30, 30, 20, 20, 10, 10, 10, 20, 30, 30, 30, 40, 40, 50, 50, 50, 50, 60},
-            {60, 50, 50, 50, 50, 50, 50, 40, 40, 40, 30, 30, 20, 20, 10, 10, 10, 20, 20, 30, 40, 40, 40, 40, 50, 50, 50},
-            {60, 60, 60, 50, 50, 50, 50, 50, 40, 40, 40, 40, 30, 20, 20, 10, 10, 10, 20, 20, 30, 40, 40, 40, 40, 50, 50},
-            {60, 60, 60, 60, 60, 50, 50, 50, 50, 50, 40, 40, 40, 30, 30, 20, 10, 10, 10, 20, 20, 30, 30, 40, 40, 40, 50},
-            {60, 60, 60, 60, 60, 60, 50, 50, 50, 50, 40, 40, 40, 30, 30, 20, 20, 10, 10, 10, 20, 20, 30, 30, 40, 40, 40},
-            {70, 60, 60, 60, 60, 60, 60, 50, 50, 50, 50, 50, 40, 40, 30, 30, 20, 20, 10, 10, 20, 20, 20, 30, 30, 40, 40},
-            {70, 70, 70, 60, 60, 60, 60, 60, 60, 50, 50, 50, 50, 40, 40, 40, 30, 20, 20, 20, 10, 10, 20, 20, 30, 30, 30},
-            {70, 70, 70, 70, 70, 60, 60, 60, 60, 60, 60, 50, 50, 50, 40, 40, 40, 30, 20, 20, 10, 10, 10, 20, 20, 20, 30},
-            {70, 70, 70, 70, 70, 70, 60, 60, 60, 60, 60, 60, 50, 50, 50, 40, 40, 30, 30, 20, 20, 10, 10, 10, 20, 20, 30},
-            {70, 70, 70, 70, 70, 70, 70, 60, 60, 60, 60, 60, 50, 50, 50, 40, 40, 40, 30, 30, 20, 20, 10, 10, 10, 20, 20},
-            {70, 70, 70, 70, 70, 70, 70, 70, 60, 60, 60, 60, 60, 50, 50, 50, 40, 40, 40, 30, 30, 20, 20, 10, 10, 10, 20},
-            {70, 70, 70, 70, 70, 70, 70, 70, 70, 60, 60, 60, 60, 60, 50, 50, 50, 40, 40, 40, 30, 20, 20, 20, 10, 10, 10},
-            {70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 60, 60, 60, 60, 60, 50, 50, 50, 40, 40, 30, 30, 30, 20, 20, 10, 10},
-            {70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 60, 60, 60, 60, 50, 50, 50, 40, 40, 30, 30, 30, 20, 20, 10, 10},
-            {70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 60, 60, 60, 50, 50, 50, 40, 40, 40, 30, 20, 20, 10, 10, 10},
-            {70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 60, 60, 50, 50, 50, 40, 40, 40, 30, 30, 30, 20, 20, 10}
-    };*/
+    public static int[][] distanceMatrix ;
 
+//    public static void saveData(String fileName) {
+//        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(EnvFile.getDistanceMatrixFilePath()+fileName))) {
+//            oos.writeObject(distanceMatrix);
+//            System.out.println("Data saved successfully.");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+//    public static void saveData(String fileName,int[][] distanceMatrix) {
+//        FareLine3.distanceMatrix=distanceMatrix;
+//        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(EnvFile.getDistanceMatrixFilePath() +fileName))) {
+//            oos.writeObject(distanceMatrix);
+//            System.out.println("Data saved successfully.");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
-    public static void saveData(String fileName) {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(EnvFile.getDistanceMatrixFilePath()+fileName))) {
-            oos.writeObject(distanceMatrix);
-            System.out.println("Data saved successfully.");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    public static void saveData(String fileName,int[][] distanceMatrix) {
-        FareLine3.distanceMatrix=distanceMatrix;
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(EnvFile.getDistanceMatrixFilePath() +fileName))) {
-            oos.writeObject(distanceMatrix);
-            System.out.println("Data saved successfully.");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void retrieveData(String fileName) {
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(EnvFile.getDistanceMatrixFilePath()+fileName))) {
-            distanceMatrix = (int[][]) ois.readObject();
+    public static void retrieveData(Agent agent) {
+//        try
+//               (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(EnvFile.getDistanceMatrixFilePath()+fileName)))
+//        {
+//            distanceMatrix = (int[][]) ois.readObject();
+            FareTableRepository fareTableRepository = agent.getFareTableRepository();
+            List<FareRowEntity> fareRowEntities = fareTableRepository.findAll();
+            distanceMatrix =  FaretableMapper.entityToMatrix(fareRowEntities,agent.getFareTableRepository().getUniqueSourceCount());
             System.out.println("Data retrieved successfully.");
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
 

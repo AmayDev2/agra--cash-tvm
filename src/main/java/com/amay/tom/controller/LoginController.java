@@ -48,9 +48,9 @@ public class LoginController {
         this.agent = agent;
         this.shiftService=new ShiftServiceImpl(agent,
                 new UserAuth(
-                new UserDetailsService(
-                new UserRepositoryImpl(
-                        agent.getConnection()))),new ShiftRepositoryImpl(agent.getConnection()));
+                        new UserDetailsService(
+                                new UserRepositoryImpl(
+                                        agent.getConnection()))),new ShiftRepositoryImpl(agent.getConnection()));
     }
 
     private Stage mainStage;
@@ -59,36 +59,36 @@ public class LoginController {
     private void initialize() {
         // check for last shift completion in another thread so that UI is not blocked
         this.agent.getThreadPool().getFixedThreadPool().execute(()->
-        Platform.runLater(() ->
-        this.shiftService.checkLastShiftCompletion().ifPresentOrElse(
-                shift -> {
-                    // Trigger your event or logic here
-                    this.shiftService.markLastShiftAsCompleted(shift);
+                Platform.runLater(() ->
+                        this.shiftService.checkLastShiftCompletion().ifPresentOrElse(
+                                shift -> {
+                                    // Trigger your event or logic here
+                                    this.shiftService.markLastShiftAsCompleted(shift);
 
-                    Alert alert = new Alert(Alert.AlertType.WARNING);
-                    alert.setTitle("Shift Status");
-                    alert.setHeaderText("Last Shift Is Not Completed");
-                    alert.setContentText("Do you want to ?");
+                                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                                    alert.setTitle("Shift Status");
+                                    alert.setHeaderText("Last Shift Is Not Completed");
+                                    alert.setContentText("Do you want to ?");
 
-                    ButtonType continueButton = new ButtonType("Continue", ButtonBar.ButtonData.OK_DONE);
+                                    ButtonType continueButton = new ButtonType("Continue", ButtonBar.ButtonData.OK_DONE);
 
 
-                    alert.getButtonTypes().setAll(continueButton);
+                                    alert.getButtonTypes().setAll(continueButton);
 
-                    Optional<ButtonType> result = alert.showAndWait();
+                                    Optional<ButtonType> result = alert.showAndWait();
 
-                    if (result.isPresent() && result.get() == continueButton) {
-                        Logger.info("Continue clicked");
-                        this.shiftService.printEOSReport(shift);
-                    } else {
-                        Logger.info("Cancelled or closed");
-                    }
+                                    if (result.isPresent() && result.get() == continueButton) {
+                                        Logger.info("Continue clicked");
+                                        this.shiftService.printEOSReport(shift);
+                                    } else {
+                                        Logger.info("Cancelled or closed");
+                                    }
 
-                },
-                () -> {
-                    Logger.info("No last shift found or it is already completed.");
-                }
-        ))
+                                },
+                                () -> {
+                                    Logger.info("No last shift found or it is already completed.");
+                                }
+                        ))
         );
     }
 
@@ -102,17 +102,17 @@ public class LoginController {
         userName=userName.trim();
         userPass=userPass.trim();
 
-        userName="tvm_user";
-        userPass="tvm_user";
+//        userName="tvm_user";
+//        userPass="tvm_user";
 
 
         try {
-        if(!agent.getBusinessRule().isActiveWorkingHour())throw new RuntimeException("Not under Working Hours");
+            if(!agent.getBusinessRule().isActiveWorkingHour())throw new RuntimeException("Not under Working Hours");
 
-        if(userName.isEmpty() || userPass.isEmpty()){
-            Platform.runLater(()->messageLabel.setText("Provide Username or Password"));
-            throw new EmptyUsernameOrPasswordException("Provide Username AND Password");
-        }
+            if(userName.isEmpty() || userPass.isEmpty()){
+                Platform.runLater(()->messageLabel.setText("Provide Username or Password"));
+                throw new EmptyUsernameOrPasswordException("Provide Username AND Password");
+            }
 
 
             FXMLLoader fxmlLoader = this.shiftService.startShift(userName, userPass);

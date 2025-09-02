@@ -8,9 +8,6 @@ public class EquipmentPrivilege {
     private BooleanProperty qrTicketIssue = new SimpleBooleanProperty();
     private BooleanProperty qrTicketAnalysis = new SimpleBooleanProperty();
     private BooleanProperty qrTicketAdjustment = new SimpleBooleanProperty();
-
-
-
     private BooleanProperty qrTicketCancellation = new SimpleBooleanProperty();
     private BooleanProperty qrTicketRefund = new SimpleBooleanProperty();
     private BooleanProperty qrTicketReprint = new SimpleBooleanProperty();

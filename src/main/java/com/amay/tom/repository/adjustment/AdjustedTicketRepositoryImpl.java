@@ -1,15 +1,17 @@
 package com.amay.tom.repository.adjustment;
 
-import com.amay.tom.model.QRTicket;
 import com.amay.tom.model.adjust.AdjustedTicketDto;
+import com.amay.tom.model.tickets.TicketsDto;
+import com.amay.tom.repository.adjustment.AdjustedTicketRepository;
 import com.amay.tom.repository.tickets.TicketsRepository;
+import jakarta.transaction.Transactional;
 import org.tinylog.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdjustedTicketRepositoryImpl  extends AdjustedTicketRepository {
+public class AdjustedTicketRepositoryImpl  extends com.amay.tom.repository.adjustment.AdjustedTicketRepository {
 
     private TicketsRepository ticketsRepository;
     public AdjustedTicketRepositoryImpl(Connection connection, TicketsRepository ticketsRepository)  {
@@ -142,6 +144,8 @@ public class AdjustedTicketRepositoryImpl  extends AdjustedTicketRepository {
             pstmt.setString(18, adjustedTicket.getEncryptedQR());
             pstmt.setString(19,adjustedTicket.getPenaltyAmount());
             pstmt.setString(20,adjustedTicket.getShiftId());
+            pstmt.setBoolean(21, adjustedTicket.isCcu());
+            pstmt.setBoolean(22,adjustedTicket.isScu());
             pstmt.executeUpdate();
         }catch (SQLException e){
             e.printStackTrace();
@@ -157,6 +161,54 @@ public class AdjustedTicketRepositoryImpl  extends AdjustedTicketRepository {
             e.printStackTrace();
         }
     }
+
+    @Override
+    @Transactional
+    public void pushTickets(List<String> ticketIds, String column) {
+        // validate column name to prevent SQL injection
+        if (!"scu".equalsIgnoreCase(column) && !"ccu".equalsIgnoreCase(column)) {
+            throw new IllegalArgumentException("Invalid column name: " + column);
+        }
+
+        String sql = "UPDATE " + TABLE_NAME + " SET " + column + " = true WHERE adjustId = ?";
+
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
+            for (String id : ticketIds) {
+                pstmt.setString(1, id);
+                pstmt.addBatch();
+            }
+            int[] updated = pstmt.executeBatch();
+            Logger.info("Marked {} for {} adjusts", column.toUpperCase(), updated.length);
+        } catch (SQLException e) {
+            Logger.error("Error marking {} for adjusts: {}", column.toUpperCase(), e.getMessage());
+            throw new RuntimeException("Failed to mark " + column.toUpperCase() + " for adjusts", e);
+        }
+    }
+
+    @Override
+    public List<AdjustedTicketDto> findNotPushedTicket(String column) {
+        if (!"scu".equalsIgnoreCase(column) && !"ccu".equalsIgnoreCase(column)) {
+            throw new IllegalArgumentException("Invalid column name: " + column);
+        }
+        column+=" = false";
+
+        String query="SELECT * FROM "+ TABLE_NAME +" WHERE "+ column+" ORDER BY createdAt DESC";
+
+        List<AdjustedTicketDto> list = new ArrayList<>();
+        try (PreparedStatement pstmt = connection.prepareStatement( query)) {
+//            pstmt.setString(1, column);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                list.add(mapRow(rs)); // Add each AdjustedTicketDto to the list
+            }
+        } catch (SQLException e) {
+            Logger.debug("Error fetching QR tickets: {}", e.getMessage());
+
+        }
+
+        return list;
+    }
+
 
     private AdjustedTicketDto mapRow(ResultSet rs) throws SQLException {
         AdjustedTicketDto adjustedTicket = new AdjustedTicketDto();
@@ -180,6 +232,8 @@ public class AdjustedTicketRepositoryImpl  extends AdjustedTicketRepository {
         adjustedTicket.setEncryptedQR(rs.getString("encryptedQR"));
         adjustedTicket.setPenaltyAmount(rs.getString("penaltyAmount"));
         adjustedTicket.setShiftId(rs.getString("shiftId"));
+        adjustedTicket.setCcu(rs.getBoolean("ccu"));
+        adjustedTicket.setScu(rs.getBoolean("scu"));
         return adjustedTicket;
     }
 }

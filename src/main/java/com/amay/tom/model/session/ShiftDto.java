@@ -30,5 +30,9 @@ public class ShiftDto {
     private String reason;
     private String currentStatus;
     private Timestamp updatedAt;
+    private String imprest_money;
+    private String config_version;
+    private boolean ccu=false;
+    private boolean scu=false;
 
 }

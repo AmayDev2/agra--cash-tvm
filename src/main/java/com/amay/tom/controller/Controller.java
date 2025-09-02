@@ -3,17 +3,12 @@ package com.amay.tom.controller;
 import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.config.SystemConfig;
-import com.amay.tom.config.TicketConfig;
 import com.amay.tom.controller.components.StatusBottomBarView;
 import com.amay.tom.controllerInterface.controllerInt.ControllerAdapter;
 import com.amay.tom.enums.DeviceOperationMode;
-import com.amay.tom.enums.DeviceStatus;
-import com.amay.tom.enums.EOSType;
-import com.amay.tom.enums.FareMedium;
-import com.amay.tom.model.Station;
+import com.amay.tom.model.station.Station;
 import com.amay.tom.model.TicketType;
 import com.amay.tom.model.equipment.entity.EquipmentPrivilege;
-import com.amay.tom.model.siftdata.ShiftHeader;
 import com.amay.tom.model.tickets.RequestedTicket;
 import com.amay.tom.model.user.entity.UserPrivilege;
 import com.amay.tom.pdu.controller.command.*;
@@ -24,7 +19,6 @@ import com.amay.tom.service.chield.ticketservice.ImplTicketService;
 import com.amay.tom.service.qrService2.QRControllerService;
 import com.amay.tom.service.siftservice.SiftService;
 import com.amay.tom.service.siftservice.impl.ImplSiftService;
-import com.amay.tom.utils.env.EnvFile;
 import com.amay.tom.utils.helper.Helper;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -32,23 +26,20 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.scene.text.Text;
 import org.tinylog.Logger;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -57,24 +48,28 @@ public class Controller {
     public static Controller controller;
     private final SiftService siftService;
     // Date and Time
-    private final DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("hh:mm:ss a");
-    private final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd MMM yyyy");
+    private final DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+    private final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
     private final StationData stationData;
     private final TicketTypeData ticketTypeData;
     @FXML
     public ImageView clockIcon;
     @FXML
     public ImageView calendarIcon;
+    @FXML private Label peakHour;
     @FXML private ListView ticketDetailsList;
 
     @FXML
-    private Button qrtOperations;
+    private ToggleButton qrtOperations;
 
     @FXML
     protected Label dateLabel;
+
+    @FXML
+    protected Label message;
     @FXML
     protected Label timeLabel;
-     int MIN_GROUP_TICKET_PASSENGER = 2;
+     int MIN_GROUP_TICKET_PASSENGER = 10;
      int MAX_GROUP_TICKET_PASSENGER =30;
     @FXML
     private Label shiftIdLabel;
@@ -99,17 +94,13 @@ public class Controller {
     @FXML
     private ImageView logo;
     @FXML
-    private Button ncmc;
-//    @FXML
-//    private Text ncmcAviable;
-    @FXML
-    private Text ncmcSale;
+    private ToggleButton ncmc;
+
     @FXML
     private Label ncmcStock;
     @FXML
     private Text qrAviable;
-    @FXML
-    private Text qrSale;
+
     @FXML
     private Label qrStock;
     @FXML
@@ -117,13 +108,13 @@ public class Controller {
     @FXML
     private Label tCountText;
     @FXML
-    private Button analysisButton;
+    private ToggleButton analysisButton;
     @FXML
     private MenuButton noOfPassengerMenu;
     @FXML
     private Button pay;
     @FXML
-    private Button qrticket;
+    private ToggleButton qrticket;
     @FXML
     private MenuButton ticketTypeMenu;
     @FXML
@@ -148,7 +139,7 @@ public class Controller {
     private Button otherDevice;
     private int[] previousStatus = null;
     @FXML
-    private Button administration;
+    private ToggleButton administration;
     @FXML
     private Label serviceModeLabel;
     @FXML
@@ -195,70 +186,6 @@ public class Controller {
 
     public static Controller getController() {return controller;}
 
-    @FXML
-    void onNoOfPassengerClick(ActionEvent event) {
-        System.out.println("Listener for number of passengers menu");
-    }
-
-    @FXML
-    void onTicketTypeClick(ActionEvent event) {
-        System.out.println("Listener for ticket type menu");
-    }
-
-    @FXML
-    void onDestinationClick(ActionEvent event) {
-        System.out.println("Listener for destination menu");
-    }
-
-    /*@FXML
-    void onPayClick(ActionEvent event) throws IOException {
-
-        if (selectedDestination == null || selectedNoOfPassenger == 0 || selectedTicketType == null) {
-            Logger.error("Destination, No of Passenger and Ticket Type are mandatory");
-            return;
-        }
-
-        if (selectedDestination.getStationId().equals(currentStation.getStationId())) {
-            Logger.error("Destination and current station cannot be same");
-            return;
-        }
-        if (FareMedium.QR.getAvailableStock() <= selectedNoOfPassenger){
-            Logger.error("No stock available for QR Ticket");
-            return;
-        }
-
-        String orderId=Helper.generateOrderId();
-
-        ArrayList<MetroTicket> metroTicketsList = new ArrayList<>();
-        if (!selectedTicketType.equals(TicketType.GROUP) && selectedNoOfPassenger < MIN_GROUP_TICKET_PASSENGER) {
-            for (int i = 0; i < selectedNoOfPassenger; i++) {
-                MetroTicket metroTicket=ticketService.generateTicket(currentStation, selectedDestination, currentStation, 1, selectedTicketType);
-
-                metroTicketsList.add(metroTicket);
-            }
-        } else {
-            metroTicketsList.add(ticketService.generateTicket(currentStation, selectedDestination, currentStation, selectedNoOfPassenger, selectedTicketType));
-        }
-//        MetroTicket metroTicket = ticketService.generateTicket(currentStation, selectedDestination, currentStation, selectedNoOfPassenger, selectedTicketType);
-        MetroTicket[] metroTickets = metroTicketsList.toArray(new MetroTicket[0]);
-
-
-        //Redirect to payment Screen
-        try {
-            FXMLLoader fxmlLoader = ViewFactory.getPayment();
-            fxmlLoader.setControllerFactory(x->new PaymentController(agent));
-            Parent root = fxmlLoader.load();
-            PaymentController paymentController = fxmlLoader.getController();
-            paymentController.setTicketsGrid(metroTickets,orderId);
-            paymentController.setParent(borderPane);
-            borderPane.setCenter(root);
-
-        } catch (Exception e) {
-            Logger.error("Error in loading payment scene: {}", e.getMessage());
-            e.printStackTrace();
-        }
-
-    }*/
 
     private static boolean timeout=false;
 
@@ -282,19 +209,16 @@ public class Controller {
     void onPayClick(ActionEvent event) throws IOException {
         if (!agent.getBusinessRule().isActiveWorkingHour()) {
             outOfWorkingHour();
-            // A: You can place your alert here
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Access Denied");
-            alert.setHeaderText("Outside Working Hours");
-            alert.setContentText("You are trying to access the system outside of the allowed working hours.");
-            alert.showAndWait(); // blocks until user closes the alert
+            message.setText("End of Business Hours");
             return;
         }
 
         if(items.isEmpty()){
             Logger.error("No ticket to pay");
+            message.setText("Add ticket in Cart!");
             return;
         }
+        message.setText("");
         Parent root = qrControllerService.createTicketRequest(items,borderPane);
         borderPane.setCenter(root);
         event.consume();
@@ -340,6 +264,10 @@ public class Controller {
             actionEvent.consume();
         }
     }
+
+    Runnable runnable =()->{
+        qrticket.fire();
+    };
 
     @FXML
     public void onSJTClick(ActionEvent actionEvent) {
@@ -428,51 +356,6 @@ public class Controller {
             }
         }
     }
-
-
-
-//    public void populateStations(List<Station> stations) {
-//        stationGrid.getChildren().clear();
-//        stationGrid.setHgap(20); // Reduced horizontal gap
-//        stationGrid.setVgap(10); // Reduced vertical gap
-//        int columns = 3;
-//        int row = 0, col = 0;
-//
-//        ToggleGroup group = new ToggleGroup();
-//
-//        for (Station station : stations) {
-//            ToggleButton btn = new ToggleButton(station.getStationName());
-//            btn.setMinWidth(175); // Slightly reduced width to accommodate 5 columns
-//            btn.setMinHeight(45); // Slightly reduced height
-//            btn.setId(station.getStationId());
-//            btn.setUserData(station);
-//            btn.setStyle("-fx-font-size: 14; -fx-background-radius: 6; -fx-background-color: #f1f1f1; -fx-border-color: #bbb; -fx-border-radius: 6; -fx-font-weight: bold;");
-//            btn.setToggleGroup(group);
-//
-//            // Disable and style current station
-//            if (station.getStationId().equals(currentStation.getStationId())) {
-//                btn.setStyle("-fx-font-size: 14; -fx-background-radius: 6; -fx-background-color: #f1f1f1; -fx-border-color: #bbb; -fx-border-radius: 6; -fx-font-weight: bold; -fx-text-fill: red;");
-//                btn.setDisable(true);
-//            }
-//
-//            btn.setOnAction(e -> {
-//                ToggleButton selectedBtn = (ToggleButton) e.getSource();
-//                selectedDestination = (Station) selectedBtn.getUserData();
-//
-//            });
-//
-//            stationGrid.add(btn, col, row);
-//
-//            col++;
-//            if (col == columns) {
-//                col = 0;
-//                row++;
-//            }
-//        }
-//    }
-
-
-
     @FXML
     public void onTCountIncClick(ActionEvent actionEvent) {
         if (selectedDestination != null && selectedTicketType != null
@@ -484,7 +367,6 @@ public class Controller {
         Logger.info("Listener for tCountInc button " + selectedNoOfPassenger);
         this.setTicketCount();
         actionEvent.consume();
-
     }
 
     private void setTicketCount() {
@@ -499,23 +381,23 @@ public class Controller {
         this.setTicketCount();
 
     }
-
-    @FXML
-    void onLogout(ActionEvent event) {
-        try {
-            siftService.endOfShift(EOSType.OPERATOR);
-            ((Node) event.getSource()).getScene().setRoot(ViewFactory.getLogin().load());
-
-            Logger.info("Logout successful for user: {}", ShiftHeader.getInstance().getOperatorId());
-            Logger.info("Shift Details:  {}", ShiftHeader.getInstance().toString());
-        } catch (IOException e) {
-            Logger.warn("Error in loading login scene " + e.getMessage());
-            e.printStackTrace();
-
-        }
-        event.consume();
-
-    }
+//
+//    @FXML
+//    void onLogout(ActionEvent event) {
+//        try {
+//            siftService.endOfShift(EOSType.OPERATOR);
+//            ((Node) event.getSource()).getScene().setRoot(ViewFactory.getLogin().load());
+//
+//            Logger.info("Logout successful for user: {}", ShiftHeader.getInstance().getOperatorId());
+//            Logger.info("Shift Details:  {}", ShiftHeader.getInstance().toString());
+//        } catch (IOException e) {
+//            Logger.warn("Error in loading login scene " + e.getMessage());
+//            e.printStackTrace();
+//
+//        }
+//        event.consume();
+//
+//    }
 
     @FXML
     public void onClickAnalysis(ActionEvent actionEvent) {
@@ -558,8 +440,8 @@ public class Controller {
 
     @FXML
     void initialize() {
-        MIN_GROUP_TICKET_PASSENGER= TicketConfig.INSTANT.getProductTypeDefDTO().getMinGroupTicket();
-        MAX_GROUP_TICKET_PASSENGER=TicketConfig.INSTANT.getProductTypeDefDTO().getMaxGroupTicket();
+        MIN_GROUP_TICKET_PASSENGER= TicketType.GROUP.getProduct().getMinTicket();
+        MAX_GROUP_TICKET_PASSENGER=TicketType.GROUP.getProduct().getMaxTicket();
         controller = this;
         setOperationModeListener();
         System.out.println("Controller Initialized "+controller.hashCode()+" "+agent.getDeviceStatus().getCurrentStatus());
@@ -578,27 +460,25 @@ public class Controller {
 
         try {
             FXMLLoader fxmlLoader = ViewFactory.getBottomNav();
-            fxmlLoader.setControllerFactory(x->new StatusBottomBarView(agent.getPeripheralMonitor(),agent.getVersions()));
+            fxmlLoader.setControllerFactory(x->new StatusBottomBarView(agent.getPeripheralMonitor(),agent.getVersions(),agent.getMasterConfigInfo()));
             borderPane.setBottom(fxmlLoader.load());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
+        this.updatePeakHour(ZonedDateTime.now(ZoneId.systemDefault()));
 
-//        // Set the service mode
-//        serviceModeLabel.setText(DeviceStatus.IN_SERVICE.getDeviceStatusName());
-//        serviceModeLabel.setStyle("-fx-text-fill: " + DeviceStatus.IN_SERVICE.getColor());
-        this.updateDateTime();
+        boolean isWeekDay=this.agent.getBusinessRule().getToday().getDayType().equals("WEEKDAYS");
 
+
+        this.updateDateTime(isWeekDay);
+        message.setText("");
 
         userId.setText(agent.getShift().getOperatorId());
         ToggleGroup toggleGroup = new ToggleGroup();
-        csn.setText(currentStation.getStationId().replace("st", ""));
+        csn.setText(currentStation.getStationName());
         shiftIdLabel.setText(this.agent.getShift().getShiftId());
-        equipmentId.setText( SystemConfig.getInstance().getCurrentEquipment().getEquipmentId());
-//        logo.setImage(new Image("file:amaylogo.png"));
-        calendarIcon.setImage(new Image("file:calender.png"));
-        clockIcon.setImage(new Image("file:clock.png"));
+        equipmentId.setText(agent.getSystemConfig().getCurrentEquipment().getEquipmentName());
         tCountText.setText(String.valueOf(selectedNoOfPassenger));
         Station[] stationArray = Arrays.stream(stationData.getStationArray())
 //                .sorted(Comparator.comparing(Station::getStationName)) // replace getStationName with your method to get the station name
@@ -610,48 +490,79 @@ public class Controller {
         // Bind the ListView to the ObservableList
         ticketDetailsList.setItems(items);
 
-        // Set a custom cell factory for multi-column display and remove button
-        ticketDetailsList.setCellFactory(listView -> new ListCell<RequestedTicket>() {
-            private final HBox content;
-            private final Label destinationLabel;
-            private final Label typeLabel;
-            private final Label quantityLabel;
-            private final Button removeButton;
+        showCart();
+
+        this.activateProducts();
+
+    }
+
+    private void activateProducts() {
+            sjt.setDisable(!TicketType.SINGLE.getProduct().isActive());
+            rjt.setDisable(!TicketType.RETURN.getProduct().isActive());
+            group.setDisable(!TicketType.GROUP.getProduct().isActive());
+    }
+
+
+    private void showCart() {
+        ticketDetailsList.setCellFactory(lv -> new ListCell<RequestedTicket>() {
+            private final Label dest = new Label();
+            private final Label type = new Label();
+            private final Label qty  = new Label();
+            private final Button remove = new Button("✖");
+            private final Region spacer = new Region();
+            private final HBox box = new HBox(10, dest, type,spacer, qty, remove);
 
             {
-                destinationLabel = new Label();
-                destinationLabel.setPrefWidth(110);
-                destinationLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 15px; -fx-text-fill: #222;");
-                typeLabel = new Label();
-                typeLabel.setPrefWidth(80);
-                typeLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: #555;");
-                quantityLabel = new Label();
-                quantityLabel.setPrefWidth(20);
-                quantityLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: #555;");
-                removeButton = new Button("✖");
-                removeButton.setStyle("-fx-background-color: #f8d7da; -fx-text-fill: #b71c1c; -fx-font-size: 15px; -fx-background-radius: 8; -fx-cursor: hand; -fx-padding: 2 8;");
-                content = new HBox(10, destinationLabel, typeLabel, quantityLabel, removeButton);
-                content.setAlignment(javafx.geometry.Pos.CENTER_LEFT);
-                content.setStyle("-fx-background-color: #f5f5f5; -fx-background-radius: 10; -fx-padding: 8 10; -fx-effect: dropshadow(gaussian, #e0e0e0, 2, 0.1, 0, 1);");
-                content.setOnMouseEntered(e -> content.setStyle("-fx-background-color: #e3f2fd; -fx-background-radius: 10; -fx-padding: 8 10; -fx-effect: dropshadow(gaussian, #b3e5fc, 4, 0.2, 0, 2);"));
-                content.setOnMouseExited(e -> content.setStyle("-fx-background-color: #f5f5f5; -fx-background-radius: 10; -fx-padding: 8 10; -fx-effect: dropshadow(gaussian, #e0e0e0, 2, 0.1, 0, 1);"));
+                // Styles
+                dest.setStyle("-fx-font-weight:bold; -fx-font-size:15px; -fx-text-fill:#222; -fx-min-width: 120px;");
+                type.setStyle("-fx-font-size:14px; -fx-text-fill:#555;");
+                qty.setStyle("-fx-font-size:14px; -fx-text-fill:#555;");
+                remove.setStyle("-fx-background-color:#f8d7da; -fx-text-fill:#b71c1c;");
+
+                HBox.setHgrow(spacer, Priority.ALWAYS);
+                box.setAlignment(Pos.CENTER_LEFT);
+                box.setPadding(new Insets(8));
+                box.setStyle("-fx-background-color:#f5f5f5; -fx-background-radius:8; -fx-min-width: 270px;");
+
+                box.setOnMouseEntered(e -> box.setStyle("-fx-background-color:#e3f2fd; -fx-background-radius:8;"));
+                box.setOnMouseExited (e -> box.setStyle("-fx-background-color:#f5f5f5; -fx-background-radius:8;"));
+
+                // ADDED: Configure ListView to prevent horizontal scrolling
+                ticketDetailsList.setStyle("-fx-background-color:transparent;");
+
+                // Hide horizontal scrollbar completely
+                ticketDetailsList.lookup(".scroll-bar:horizontal").setVisible(false);
+                // Make width follow ListView
+                box.prefWidthProperty().bind(ticketDetailsList.widthProperty().subtract(20));
             }
 
             @Override
-            protected void updateItem(RequestedTicket ticket, boolean empty) {
-                super.updateItem(ticket, empty);
-                if (empty || ticket == null) {
+            protected void updateItem(RequestedTicket item, boolean empty) {
+                super.updateItem(item, empty);
+                if (empty || item == null) {
                     setGraphic(null);
                 } else {
-                    destinationLabel.setText(ticket.destination().getStationName());
-                    typeLabel.setText(ticket.ticketType().name());
-                    quantityLabel.setText(String.valueOf(ticket.quantity()));
-                    removeButton.setOnAction(e -> getListView().getItems().remove(ticket));
-                    setGraphic(content);
+                    dest.setText(item.destination().getStationName());
+                    type.setText(item.ticketType().getTicketTypeName());
+                    qty.setText( String.valueOf(item.quantity()));
+                    remove.setOnAction(e -> {
+                                getListView().getItems().remove(item);
+                                message.setText("");
+
+                            }
+                    );
+                    setGraphic(box);
                 }
             }
         });
+
+        // Remove default selection highlight
+        ticketDetailsList.setStyle("-fx-background-color:transparent;");
+        ticketDetailsList.getSelectionModel().selectedItemProperty().addListener((o, oldV, newV) ->
+                ticketDetailsList.getSelectionModel().clearSelection());
     }
+
+
 
     private void userPrivilege(UserPrivilege userPrivilege, EquipmentPrivilege equipmentPrivilege) {
         qrticket.setDisable(!(userPrivilege.isQrTicketIssue() && equipmentPrivilege.isQrTicketIssue().get()));
@@ -740,8 +651,8 @@ public class Controller {
 
     public void updateStock() {
         Platform.runLater(() -> {
-            ncmcSale.setText(String.valueOf(FareMedium.NCMC.getFareMediumSale()));
-            qrSale.setText(String.valueOf(FareMedium.QR.getFareMediumSale()));
+            //ncmcSale.setText(String.valueOf(FareMedium.NCMC.getFareMediumSale()));
+            //qrSale.setText(String.valueOf(FareMedium.QR.getFareMediumSale()));
 
 //            ncmcAviable.setText(String.valueOf(FareMedium.NCMC.getFareMediumTotal()));
 //            qrAviable.setText(String.valueOf(FareMedium.QR.getFareMediumTotal()));
@@ -749,12 +660,12 @@ public class Controller {
 //            if (FareMedium.NCMC.getAvailableStock() <= 10) {
 //                ncmcStock.setStyle("-fx-background-color: red;-fx-text-fill: white");
 //            } else if (ncmcStock.getStyle().contains("red")) {
-                ncmcStock.setStyle("-fx-background-color: green;-fx-text-fill: white");
+//                ncmcStock.setStyle("-fx-background-color: green;-fx-text-fill: white");
 //            }
 //            if (FareMedium.QR.getAvailableStock() <= 10) {
 //                qrStock.setStyle("-fx-background-color: red ;-fx-text-fill: white");
 //            } else if (qrStock.getStyle().contains("red")) {
-                qrStock.setStyle("-fx-background-color: green;-fx-text-fill: white");
+//                qrStock.setStyle("-fx-background-color: green;-fx-text-fill: white");
 //            }
 
         });
@@ -782,17 +693,56 @@ public class Controller {
     }
 
 
-    private void updateDateTime() {
-        javafx.animation.Timeline timeline = new javafx.animation.Timeline(new javafx.animation.KeyFrame(javafx.util.Duration.seconds(1), event -> {
-            LocalDateTime now = LocalDateTime.now();
-            Platform.runLater(() -> {
-                timeLabel.setText(timeFormatter.format(now));
-                dateLabel.setText(dateFormatter.format(now));
-                if (!timeout && !agent.getBusinessRule().isActiveWorkingHour())outOfWorkingHour();
-            });
-        }));
-        timeline.setCycleCount(javafx.animation.Animation.INDEFINITE); // Run indefinitely
-        timeline.play(); // Start the timeline
+    private void updateDateTime(boolean isWeekDay) {
+        javafx.animation.Timeline timeline = new javafx.animation.Timeline(
+                new javafx.animation.KeyFrame(javafx.util.Duration.seconds(1), event -> {
+                    // Use system default timezone
+                    ZonedDateTime nowZoned = ZonedDateTime.now(ZoneId.systemDefault());
+                    LocalDateTime now = nowZoned.toLocalDateTime();
+                    Platform.runLater(() -> {
+                        timeLabel.setText(timeFormatter.format(now));
+                        dateLabel.setText(dateFormatter.format(now));
+
+                        if(now.getSecond()==0){
+                            // Update the clock icon or other features if needed
+                            if (!timeout && !agent.getBusinessRule().isActiveWorkingHour()) {
+                                outOfWorkingHour();
+                            }
+                        }
+
+//                        // Check at every 5-minute mark
+//                        if (now.getMinute() % 5 == 0 && now.getSecond() == 0) {
+//                            // Perform tasks every 5 minutes
+//                            Logger.info("Time is a multiple of 5 minutes: {}", now);
+//                        }
+                        // Check at every minute
+                        if (isWeekDay && now.getSecond() == 0 ) {
+
+                            // Determine peak time based on system timezone
+
+                            boolean isPeakTime=this.updatePeakHour(nowZoned);
+
+                            Logger.info("Time is a multiple of 1 minute: {} PeakTime: {}", now, isPeakTime);
+                        }
+                    });
+                })
+        );
+        timeline.setCycleCount(javafx.animation.Animation.INDEFINITE);
+        timeline.play();
+    }
+
+    private boolean updatePeakHour(ZonedDateTime nowZoned){
+        boolean isPeakTime = false;
+        try {
+            long epochSeconds = nowZoned.toInstant().toEpochMilli();
+            isPeakTime = agent.getBusinessRule().isUnderPeakTime(epochSeconds);
+            boolean finalIsPeakTime = isPeakTime;
+            Logger.debug("Peak Time: {}", finalIsPeakTime);
+            Platform.runLater(()->peakHour.setVisible(finalIsPeakTime));
+        } catch (Exception e) {
+            Logger.error("Error checking peak time: {}", e.getMessage());
+        }
+        return isPeakTime;
     }
 
     public void onClickQRTOperation(ActionEvent actionEvent) {
@@ -818,18 +768,13 @@ public class Controller {
            return;
        }
 
-       //cartLimit
-       if(TicketConfig.INSTANT.getProductTypeDefDTO().getMaxTicket()-1<items.size()){
-           Alert alert=new Alert(Alert.AlertType.ERROR);
-                   alert.setContentText("NO SPACE IN CART");
-                   alert.showAndWait();
+
+       if(agent.getTomConfig().getCartLimit()-1<items.size()){
+           message.setText("CART FULL");
            throw new RuntimeException("NO SPACE IN CART");
        }
-//       if (FareMedium.QR.getAvailableStock() <= selectedNoOfPassenger){
-//           Logger.error("No stock available for QR Ticket");
-//           return;
-//       }
-        items.add(new RequestedTicket(agent.getSystemConfig().getCurrentStation(),selectedDestination,  selectedTicketType,selectedNoOfPassenger));
+
+        items.add(new RequestedTicket(agent.getSystemConfig().getCurrentStation(), selectedDestination, selectedTicketType, selectedNoOfPassenger));
 
         items.forEach(x->{
             Logger.info("Ticket: {}",x.source().getStationName()+" "+x.destination().getStationName()+" "+x.ticketType()+" "+x.quantity());
@@ -839,31 +784,15 @@ public class Controller {
 
     }
 
+    public void disableButtons() {
+        borderPane.getLeft().setDisable(true);
+    }
 
-//    private class ControllerListener {
-//
-//
-//        @Override
-//        public void updateTime() {
-//            Logger.info("Updating Time");
-//            LocalDateTime now = LocalDateTime.now();
-//            Platform.runLater(() -> {
-//                timeLabel.setText(timeFormatter.format(now));
-//                dateLabel.setText(dateFormatter.format(now));
-//            });
-//
-//        }
-//
-//        @Override
-//        public void updateServiceMode(DeviceStatus deviceStatus) {
-//            Logger.debug("Updating Service Mode");
-//            Platform.runLater(() -> {
-//                serviceModeLabel.setText(deviceStatus.getDeviceStatusName());
-//                serviceModeLabel.setStyle("-fx-background-color: "+deviceStatus.getColor());
-//            });
-//
-//        }
-//    }
+    public void enableButtons() {
+        borderPane.getLeft().setDisable(false);
+    }
+
+
 
 
 }

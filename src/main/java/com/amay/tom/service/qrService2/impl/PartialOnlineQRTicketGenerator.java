@@ -9,6 +9,7 @@ import com.amay.tom.model.session.Shift;
 import com.amay.tom.model.tickets.PostGeneratedTicket;
 import com.amay.tom.model.tickets.PreGeneratadTicket;
 import com.amay.tom.model.tickets.ProperTicket;
+import com.amay.tom.model.version.MasterConfigInfo;
 import com.amay.tom.repository.tickets.TicketsRepository;
 import com.amay.tom.service.base36.TicketIdGeneratorService;
 import com.amay.tom.service.qrService2.QRTicketGenerator;
@@ -37,8 +38,8 @@ public class PartialOnlineQRTicketGenerator extends QRTicketGenerator {
 
     private static final String delimiter = ":";
 
-    public PartialOnlineQRTicketGenerator(TicketsRepository ticketsRepository, ScuService scuService, Shift shift, ThreadPool threadPool, ScuService ccuService, TicketIdGeneratorService ticketIdGeneratorService) {
-        super(ticketsRepository, scuService, shift,threadPool, ccuService);
+    public PartialOnlineQRTicketGenerator(TicketsRepository ticketsRepository, ScuService scuService, Shift shift, ThreadPool threadPool, ScuService ccuService, TicketIdGeneratorService ticketIdGeneratorService, MasterConfigInfo masterConfigInfo) {
+        super(ticketsRepository, scuService, shift,threadPool, ccuService, masterConfigInfo);
         this.ticketsRepository = ticketsRepository;
         this.ticketIdGeneratorService = ticketIdGeneratorService;
     }

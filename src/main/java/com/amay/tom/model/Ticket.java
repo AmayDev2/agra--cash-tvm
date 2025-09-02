@@ -1,5 +1,7 @@
 package com.amay.tom.model;
 
+import com.amay.tom.model.TicketType;
+
 public class Ticket {
     private String ticketId;
     private int fare;

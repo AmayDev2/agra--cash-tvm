@@ -158,7 +158,7 @@ public class PreLoginViewController {
     }
 
     private void showHomeScene( ActionEvent actionEvent) {
-        FXMLLoader fxmlLoader = ViewFactory.getHome();
+        FXMLLoader fxmlLoader =null;//= ViewFactory.getHome();
 
         try {
             Parent root = fxmlLoader.load();

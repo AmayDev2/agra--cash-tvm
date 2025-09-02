@@ -1,7 +1,6 @@
 package com.amay.tom.threadpool;
-import lombok.Data;
+
 import lombok.Getter;
-import lombok.Setter;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -20,6 +19,5 @@ public class ThreadPool {
         cachedThreadPool = Executors.newCachedThreadPool();
         singleThread = Executors.newSingleThreadExecutor();
         scheduler = Executors.newScheduledThreadPool(1);
-
             }
 }

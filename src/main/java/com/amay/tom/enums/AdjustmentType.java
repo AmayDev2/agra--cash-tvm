@@ -9,5 +9,9 @@ public enum AdjustmentType {
     MARK_EXIT,
     REVERT_EXIT,
     REVERT_ENTRY,
-    ENTRY_EXIT_MISMATCH
+    ENTRY_EXIT_MISMATCH,
+    OVER_STAY,
+    ADJUST_ENTRY,
+    ADJUST_EXIT,
+    EXPIRED
 }

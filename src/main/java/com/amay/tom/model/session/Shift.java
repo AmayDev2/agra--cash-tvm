@@ -1,10 +1,7 @@
 package com.amay.tom.model.session;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 import java.time.LocalDateTime;
@@ -14,6 +11,7 @@ import java.time.LocalDateTime;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Shift {
     private String shiftId;
     private String operatorId;
@@ -28,5 +26,9 @@ public class Shift {
     private String reason;
     private String currentStatus;
     private LocalDateTime updatedAt;
+    private String imprest_money;
+    private String config_version;
+    private boolean ccu=false;
+    private boolean scu=false;
 
 }

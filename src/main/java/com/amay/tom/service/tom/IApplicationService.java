@@ -1,6 +1,7 @@
 package com.amay.tom.service.tom;
 
 import com.amay.tom.service.siftservice.ShiftService;
+import com.amay.tom.service.tom.RemoteListener;
 
 public interface IApplicationService {
 

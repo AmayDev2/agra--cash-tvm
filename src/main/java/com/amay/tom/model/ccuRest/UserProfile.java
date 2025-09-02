@@ -1,5 +1,6 @@
 package com.amay.tom.model.ccuRest;
 
+import com.amay.tom.model.ccuRest.TOMPermission;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;

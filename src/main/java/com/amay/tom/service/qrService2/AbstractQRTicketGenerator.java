@@ -3,7 +3,7 @@ package com.amay.tom.service.qrService2;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.service.qrService2.implabs.*;
 
-public class AbstractQRTicketGenerator extends AbstractQRTicketService{
+public class AbstractQRTicketGenerator extends AbstractQRTicketService {
 
 
     @Override

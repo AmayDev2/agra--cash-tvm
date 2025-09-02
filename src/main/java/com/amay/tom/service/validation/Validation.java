@@ -7,6 +7,8 @@ import com.amay.tom.model.tickets.QRTicketV2;
 
 public interface Validation {
 
+    boolean dateValidation(String ticketIssue);
+
     boolean entryValidation(QRTicket qrTicket);
 
 
@@ -29,5 +31,5 @@ public interface Validation {
 
     int getPenaltyAmount(QRTicketV2 expiryTime);
 
-    boolean entryValidation(String ticketIssue);
+    boolean entryValidation(String ticketIssue,int time);
 }

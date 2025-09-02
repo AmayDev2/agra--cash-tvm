@@ -1,6 +1,7 @@
 package com.amay.tvm.controller;
 
 import com.amay.tom.agent.Agent;
+import com.amay.tom.listener.PrintProgressListener;
 import com.amay.tom.model.GeneratedTicket;
 import com.amay.tom.model.payment.PaymentResponse;
 import com.amay.tom.service.ticketprint.PrintTicketService;
@@ -46,7 +47,7 @@ public class SessionCompletion {
     }
 
     public void printTicket(){
-        new Thread(()-> Platform.runLater(()-> this.printTicketService.printTicket())).start();
+        new Thread(()-> Platform.runLater(()-> this.printTicketService.printTicket((x,y)->System.out.println("Please wait, printing..."+x+"/"+y)))).start();
     }
 
 

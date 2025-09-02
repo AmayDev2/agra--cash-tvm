@@ -1,5 +1,6 @@
 package com.amay.tom.enums;
 
+import com.amay.tom.enums.DeviceOperationMode;
 import lombok.Getter;
 
 import java.util.ArrayList;

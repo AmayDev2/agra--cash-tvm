@@ -1,5 +1,6 @@
 package com.amay.tom.model.tickets;
 
+import com.amay.tom.model.tickets.ProperTicket;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

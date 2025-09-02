@@ -32,7 +32,7 @@ public class ImageUtils {
 
     public static BufferedImage nodeToImage(Node node) {
         SnapshotParameters params = new SnapshotParameters();
-//        params.setFill(javafx.scene.paint.Color.TRANSPARENT);
+        params.setFill(javafx.scene.paint.Color.TRANSPARENT);
         params.setTransform(javafx.scene.transform.Transform.scale(5, 5));
 
         WritableImage writableImage = node.snapshot(params, null);

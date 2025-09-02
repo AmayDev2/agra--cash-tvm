@@ -1,4 +1,4 @@
-//package com.amay.tom.model.records;
+package com.amay.tom.model.records;//package com.amay.tom.model.records;
 //
 //public record PeripheralStatus(int printer, int scanner, int CSC, int PDM) {
 //    // Constructor to initialize the record

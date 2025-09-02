@@ -1,23 +1,36 @@
 package com.amay.tom.agent;
 
 import com.amay.tom.api.service.impl.ApiService;
-import com.amay.tom.config.SystemConfig;
 import com.amay.tom.config.Versions;
 import com.amay.tom.enums.DeviceStatus;
 import com.amay.tom.enums.TomInitializerListener;
 import com.amay.tom.grpc.ccugrpc.CCUTGService;
 import com.amay.tom.grpc.monotoring.GrpcApiListener;
-import com.amay.tom.grpc.scugrpc.ScuService;
-import com.amay.tom.model.bussiness.BusinessList;
+import com.amay.tom.config.SystemConfig;
+import com.amay.tom.model.business.BusinessList;
 import com.amay.tom.model.equipment.dto.EquipmentPrivilegeDto;
 import com.amay.tom.model.equipment.entity.EquipmentPrivilege;
+import com.amay.tom.model.product.Product;
 import com.amay.tom.model.session.Shift;
+import com.amay.tom.model.tomConfig.TomConfig;
 import com.amay.tom.model.user.entity.UserPrivilege;
+import com.amay.tom.model.version.MasterConfigInfo;
+import com.amay.tom.repository.Replacement.ReplacementTicketRepository;
 import com.amay.tom.repository.adjustment.AdjustedTicketRepository;
+import com.amay.tom.repository.business.BusinessDayConfigRepository;
+import com.amay.tom.repository.business.CalendarConfigRepository;
+import com.amay.tom.repository.business.PeakTimeConfigRepository;
+import com.amay.tom.repository.fareTable.FareTableRepository;
+import com.amay.tom.repository.product.ProductRepository;
 import com.amay.tom.repository.refund.RefundTicketRepository;
+import com.amay.tom.repository.session.ShiftRepository;
 import com.amay.tom.repository.sql.SqlGlobalRepository;
 import com.amay.tom.repository.sqlite.SqliteRepositoryImpl;
+import com.amay.tom.repository.station.StationRepository;
 import com.amay.tom.repository.tickets.TicketsRepository;
+import com.amay.tom.grpc.scugrpc.ScuService;
+import com.amay.tom.repository.tomConfig.TomConfigRepository;
+import com.amay.tom.repository.version.VersionRepository;
 import com.amay.tom.service.base36.ShiftIdGeneratorService;
 import com.amay.tom.service.devices.ImpDeviceStatusListener;
 import com.amay.tom.service.devices.PeripheralMonitor;
@@ -32,6 +45,7 @@ import javafx.beans.property.StringProperty;
 import lombok.Data;
 
 import java.sql.Connection;
+import java.util.List;
 
 @Data
 public class Agent {
@@ -67,7 +81,21 @@ public class Agent {
     private ShiftIdGeneratorService shiftIdGeneratorService;
     private BusinessList businessRule;
     private Versions versions;
+    private ReplacementTicketRepository replacementTicketRepository;
+    private ProductRepository productRepository;
+    private VersionRepository versionRepository;
+    private BusinessDayConfigRepository businessDayConfigRepository;
+    private CalendarConfigRepository calendarConfigRepository;
+    private PeakTimeConfigRepository peakTimeConfigRepository;
+    private StationRepository stationRepository;
+    private FareTableRepository fareTableRepository;
+    private TomConfigRepository tomConfigRepository;
+    private ShiftRepository shiftRepository;
+    private MasterConfigInfo masterConfigInfo;
+    private TomConfig tomConfig;
 
+//    private Products products;
+    private List<Product> products;
 
 
 

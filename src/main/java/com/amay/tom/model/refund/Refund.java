@@ -1,7 +1,10 @@
 package com.amay.tom.model.refund;
 
+import lombok.ToString;
+
 import java.time.LocalDateTime;
 
+@ToString
 public class Refund {
     private String ticketNumber;
     private double amount;
@@ -11,13 +14,21 @@ public class Refund {
     private String deviceId;
     private LocalDateTime creationDateTime;
     private LocalDateTime updateDateTime;
+    private String ticketType;
+    private String refundId;
+    private String status;
+
+    // ✅ New fields
+    private boolean ccu=false;
+    private boolean scu=false;
 
     public Refund() {
     }
 
-    public Refund(String ticketNumber, double amount, String shiftId, String operatorId, 
-                 String refundMode, String deviceId, LocalDateTime creationDateTime, 
-                 LocalDateTime updateDateTime) {
+    // All-args constructor including new fields
+    public Refund(String ticketNumber, double amount, String shiftId, String operatorId, String refundMode,
+                  String deviceId, LocalDateTime creationDateTime, LocalDateTime updateDateTime,
+                  String ticketType, String refundId, String status, boolean ccu, boolean scu) {
         this.ticketNumber = ticketNumber;
         this.amount = amount;
         this.shiftId = shiftId;
@@ -26,6 +37,11 @@ public class Refund {
         this.deviceId = deviceId;
         this.creationDateTime = creationDateTime;
         this.updateDateTime = updateDateTime;
+        this.ticketType = ticketType;
+        this.refundId = refundId;
+        this.status = status;
+        this.ccu=ccu;
+        this.scu=scu;
     }
 
     // Getters and Setters
@@ -92,4 +108,45 @@ public class Refund {
     public void setUpdateDateTime(LocalDateTime updateDateTime) {
         this.updateDateTime = updateDateTime;
     }
-} 
+
+    public String getTicketType() {
+        return ticketType;
+    }
+
+    public void setTicketType(String ticketType) {
+        this.ticketType = ticketType;
+    }
+
+    public String getRefundId() {
+        return refundId;
+    }
+
+    public void setRefundId(String refundId) {
+        this.refundId = refundId;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    // ✅ New Getters and Setters
+    public boolean isCcu() {
+        return ccu;
+    }
+
+    public void setCcu(boolean ccu) {
+        this.ccu = ccu;
+    }
+
+    public boolean isScu() {
+        return scu;
+    }
+
+    public void setScu(boolean scu) {
+        this.scu = scu;
+    }
+}

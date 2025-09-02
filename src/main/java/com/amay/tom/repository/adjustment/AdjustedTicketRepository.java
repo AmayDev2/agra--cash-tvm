@@ -1,6 +1,5 @@
 package com.amay.tom.repository.adjustment;
 
-import com.amay.tom.model.QRTicket;
 import com.amay.tom.model.adjust.AdjustedTicketDto;
 
 import java.sql.Connection;
@@ -18,7 +17,7 @@ public abstract class AdjustedTicketRepository {
 
     protected static final String CREATE_TABLE_SQL1 = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + " (" +
             "orderId VARCHAR(255)," +
-            "adjustId SERIAL PRIMARY KEY," +
+            "adjustId VARCHAR(255) PRIMARY KEY," +
             "adjustmentType VARCHAR(255)," +
             "issueTime VARCHAR(255)," +
             "entryTime VARCHAR(255)," +
@@ -36,7 +35,9 @@ public abstract class AdjustedTicketRepository {
             "createdAt TIMESTAMP," +
             "updatedAt TIMESTAMP," +
             "transactionTime TIMESTAMP," +
-            "encryptedQR VARCHAR(255)" +
+            "encryptedQR VARCHAR(255), " +
+            "ccu BOOLEAN DEFAULT FALSE,"+
+            "scu BOOLEAN DEFAULT FALSE"+
             ");";
 
     protected static final String INSERT_SQL = "INSERT INTO " + TABLE_NAME + " (orderId, adjustId, adjustmentType, issueTime, entryTime, exitTime, destination, ticketNumber, deviceId, operatorId, reason, area, paymentMode, transactionId, createdAt, updatedAt, transactionTime, encryptedQR, penaltyAmount, shiftId) " +
@@ -44,7 +45,7 @@ public abstract class AdjustedTicketRepository {
 
     protected static final String SELECT_BY_ID_SQL = "SELECT * FROM " + TABLE_NAME + " WHERE adjustId = ?";
     protected static final String SELECT_EOS_SQL = "SELECT * FROM " + TABLE_NAME +" WHERE shiftId = ?";
-    protected static final String UPDATE_SQL = "UPDATE " + TABLE_NAME + " SET orderId=?, adjustmentType=?, issueTime=?, entryTime=?, exitTime=?, destination=?, ticketNumber=?, deviceId=?, operatorId=?, reason=?, area=?, paymentMode=?, transactionId=?, createdAt=?, updatedAt=?, transactionTime=? encryptedQR=? penaltyAmount=? shiftId=? WHERE adjustId=?";
+    protected static final String UPDATE_SQL = "UPDATE " + TABLE_NAME + " SET orderId=?, adjustmentType=?, issueTime=?, entryTime=?, exitTime=?, destination=?, ticketNumber=?, deviceId=?, operatorId=?, reason=?, area=?, paymentMode=?, transactionId=?, createdAt=?, updatedAt=?, transactionTime=? encryptedQR=? penaltyAmount=? shiftId=?  WHERE adjustId=?";
     protected static final String DELETE_BY_ID_SQL = "DELETE FROM " + TABLE_NAME + " WHERE adjustId = ?";
     protected static final String SELECT_ALL_QR_TICKETS_FROM_SQL = "SELECT * FROM " + TABLE_NAME + " WHERE createdAt >= ? ORDER BY createdAt DESC";
 
@@ -56,4 +57,8 @@ public abstract class AdjustedTicketRepository {
     abstract void deleteById(String adjustId) ;
     public abstract List<AdjustedTicketDto> findForEOS(String shiftId) ;
     public abstract List<AdjustedTicketDto> findAllQRTicketsFrom(Timestamp from);
+
+    public abstract void pushTickets(List<String> ticketIds, String column);
+
+    public abstract List<AdjustedTicketDto> findNotPushedTicket(String column);
 }

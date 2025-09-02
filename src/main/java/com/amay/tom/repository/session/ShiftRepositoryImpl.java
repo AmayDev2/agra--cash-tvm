@@ -1,6 +1,8 @@
 package com.amay.tom.repository.session;
 
 import com.amay.tom.model.session.ShiftDto;
+import com.amay.tom.repository.session.ShiftRepository;
+import jakarta.transaction.Transactional;
 import org.tinylog.Logger;
 
 
@@ -45,6 +47,8 @@ public class ShiftRepositoryImpl extends ShiftRepository {
             pstmt.setString(11, shift.getReason());
             pstmt.setString(12, shift.getCurrentStatus());
             pstmt.setTimestamp(13, shift.getUpdatedAt() != null ? shift.getUpdatedAt() : null);
+            pstmt.setString(14,shift.getImprest_money());
+            pstmt.setString(15,shift.getConfig_version());
             System.out.println(pstmt);
             // Execute the update
             int affectedRows = pstmt.executeUpdate();
@@ -66,7 +70,7 @@ public class ShiftRepositoryImpl extends ShiftRepository {
     }
 
     @Override
-    public Optional<ShiftDto> findById(String shiftId) throws SQLException {
+    public Optional<ShiftDto> findById(String shiftId)  {
         try (PreparedStatement pstmt = connection.prepareStatement(SELECT_BY_ID_SQL)) {
             pstmt.setString(1, shiftId);
             ResultSet rs = pstmt.executeQuery();
@@ -74,6 +78,8 @@ public class ShiftRepositoryImpl extends ShiftRepository {
                 ShiftDto shift = mapResultSetToShiftDto(rs);
                 return Optional.of(shift);
             }
+        } catch (Exception e) {
+            Logger.error("Error finding shift by ID: {}", e.getMessage());
         }
         return Optional.empty();
     }
@@ -107,6 +113,8 @@ public class ShiftRepositoryImpl extends ShiftRepository {
             pstmt.setString(11, shift.getCurrentStatus());
             pstmt.setString(12, shift.getShiftId());
             pstmt.setTimestamp(13, Timestamp.valueOf(shift.getUpdatedAt().toLocalDateTime()));
+            pstmt.setString(14,shift.getImprest_money());
+            pstmt.setString(15,shift.getConfig_version());
             pstmt.executeUpdate();
         }
     }
@@ -122,7 +130,6 @@ public class ShiftRepositoryImpl extends ShiftRepository {
     @Override
     public int startShift(ShiftDto shift) throws SQLException {
         return this.save(shift);
-
     }
 
     @Override
@@ -136,6 +143,17 @@ public class ShiftRepositoryImpl extends ShiftRepository {
             pstmt.setString(6, shift.getOperatorId());
             System.out.println(pstmt);
             pstmt.executeUpdate();
+        }
+    }
+
+    @Override
+    public void updateImprest(String shiftId, String imprest){
+        try (PreparedStatement pstmt = connection.prepareStatement(UPDATE_IMPREST_SQL)) {
+            pstmt.setString(1, imprest);
+            pstmt.setString(2, shiftId);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -191,6 +209,21 @@ public class ShiftRepositoryImpl extends ShiftRepository {
     public Optional<String> findLastUncompletedShiftId() {
         try(Statement stmt = connection.createStatement()){
             ResultSet rs = stmt.executeQuery(FIND_LAST_SHIFT_ID_SQL);
+            if(rs.next()){
+                System.out.println("Last Shift Id : "+rs.getString("shift_id"));
+                return Optional.ofNullable(rs.getString("shift_id"));
+            }
+        } catch (RuntimeException | SQLException e) {
+            Logger.info("Error finding last uncompleted shift ID: {}", e.getMessage());
+        }
+        return Optional.empty();
+    }
+
+
+    @Override
+    public Optional<String> findLastShift() {
+        try(Statement stmt = connection.createStatement()){
+            ResultSet rs = stmt.executeQuery(FIND_LAST_SHIFT);
             if(rs.next()){
                 System.out.println("Last Shift Id : "+rs.getString("shift_id"));
                 return Optional.ofNullable(rs.getString("shift_id"));
@@ -258,6 +291,58 @@ public class ShiftRepositoryImpl extends ShiftRepository {
 
     }
 
+    @Override
+    @Transactional
+    public void pushShifts(List<String> shiftIds, String column) {
+        // validate column name to prevent SQL injection
+        if (!"scu".equalsIgnoreCase(column) && !"ccu".equalsIgnoreCase(column)) {
+            throw new IllegalArgumentException("Invalid column name: " + column);
+        }
+
+        String sql = "UPDATE " + TABLE_NAME + " SET " + column + " = true WHERE shift_id = ?";
+
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
+            for (String id : shiftIds) {
+                pstmt.setString(1, id);
+                pstmt.addBatch();
+            }
+            int[] updated = pstmt.executeBatch();
+            Logger.info("Marked {} for {} shifts", column.toUpperCase(), updated.length);
+        } catch (SQLException e) {
+            Logger.error("Error marking {} for shifts: {}", column.toUpperCase(), e.getMessage());
+            throw new RuntimeException("Failed to mark " + column.toUpperCase() + " for shifts", e);
+        }
+    }
+
+    @Override
+    public List<ShiftDto> findNotPushedShifts(String column) {
+        List<ShiftDto> shifts = new ArrayList<>();
+        if (!"scu".equalsIgnoreCase(column) && !"ccu".equalsIgnoreCase(column)) {
+            throw new IllegalArgumentException("Invalid column name: " + column);
+        }
+        column+=" = false";
+
+        String query="SELECT * FROM " + TABLE_NAME + " WHERE "+column+" ORDER BY created_at DESC";
+
+        try (PreparedStatement pstmt = connection.prepareStatement(query)) {
+//            pstmt.setString(1, column);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                ShiftDto shift = mapResultSetToShiftDto(rs);
+                shifts.add(shift);
+                Logger.debug("Shift found: " + shift);
+            }
+        } catch (SQLException e) {
+            Logger.error("Error finding shifts from timestamp: {}", e.getMessage());
+        }
+        if (shifts.isEmpty()) {
+            Logger.info("No shifts found from the specified timestamp: {}");
+        } else {
+            Logger.info("Found {} shifts from the specified timestamp: {}", shifts.size());
+        }
+        return shifts;
+    }
+
 
     private ShiftDto mapResultSetToShiftDto(ResultSet rs) throws SQLException {
         return new ShiftDto(
@@ -273,7 +358,11 @@ public class ShiftRepositoryImpl extends ShiftRepository {
                 rs.getString("line_no"),
                 rs.getString("reason"),
                 rs.getString("current_status"),
-                rs.getTimestamp("update_at")
+                rs.getTimestamp("update_at"),
+                rs.getString("config_version"),
+                rs.getString("config_version"),
+                rs.getBoolean("ccu"),
+                rs.getBoolean("scu")
         );
     }
 }

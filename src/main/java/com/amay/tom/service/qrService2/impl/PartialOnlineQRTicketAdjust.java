@@ -6,6 +6,7 @@ import com.amay.tom.model.GeneratedTicket;
 import com.amay.tom.model.adjust.AdjustedTicket;
 import com.amay.tom.service.qrService2.QRTicketAdjustment;
 import com.amay.tom.service.qrService2.TicketInfo;
+import com.amay.tom.service.qrService2.impl.OfflineQRTicketAdjust;
 
 import java.util.ArrayList;
 
@@ -21,6 +22,11 @@ public class PartialOnlineQRTicketAdjust extends QRTicketAdjustment {
     @Override
     public ArrayList<GeneratedTicket> processTicket(String OrderId, String transactionId, TicketInfo ticketInfo) {
 
+        return null;
+    }
+
+    @Override
+    public AdjustedTicket adjustTicket(String OrderId, String transactionId, TicketInfo ticketInfo) {
         return null;
     }
 

@@ -1,9 +1,8 @@
 package com.amay.tom.config;
 
 import com.amay.tom.enums.DeviceOperationMode;
-import com.amay.tom.enums.DeviceStatus;
 import com.amay.tom.model.Equipment;
-import com.amay.tom.model.Station;
+import com.amay.tom.model.station.Station;
 import com.amay.tom.model.siftdata.User;
 
 import java.io.IOException;
@@ -14,6 +13,7 @@ public class SystemConfig {
     private volatile Station currentStation;
     private volatile Equipment currentEquipment;
     private volatile User currentUser;
+
 
     private volatile DeviceOperationMode deviceCurrentStatus;
 

@@ -8,14 +8,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class EquipmentPrivilegeDto {
-    private boolean qrTicketIssue;
-    private boolean qrTicketAnalysis;
-    private boolean qrTicketAdjustment;
-    private boolean qrTicketCancellation;
-    private boolean qrTicketRefund;
-    private boolean qrTicketReprint;
-    private boolean qrTicketReplacement;
-    private boolean qrFreeTicket;
-    private boolean qrPaidTicket;
-    private boolean tvm;
+    private boolean qrTicketIssue=true;
+    private boolean qrTicketAnalysis=true;
+    private boolean qrTicketAdjustment=true;
+    private boolean qrTicketCancellation=true;
+    private boolean qrTicketRefund=true;
+    private boolean qrTicketReprint=true;
+    private boolean qrTicketReplacement=true;
+    private boolean qrFreeTicket=true;
+    private boolean qrPaidTicket=true;
+    private boolean tvm=true;
 }
