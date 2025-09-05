@@ -1,5 +1,37 @@
 package com.amay.tom.service.payment2;
 
+import com.amay.tom.enums.PayMethod;
+import com.amay.tom.model.payment.PaymentResponse;
+import com.amay.tvm.backend.entity.TransactionEntity;
+import com.amay.tvm.backend.enums.TransactionStatus;
+import com.amay.tvm.backend.enums.TransactionSubStatus;
+import com.amay.tvm.backend.mapper.TransactionMapper;
+import com.amay.tvm.backend.model.Transaction;
+import com.amay.tvm.backend.repository.TransactionRepository;
+
+import java.time.Instant;
+
 public interface PaymentMedia {
-    public Object pay(double amount,String orderId, Object... args);
+     Object pay(double amount,String orderId, Object... args);
+    default void saveInDbPaymentInitialization(PaymentResponse paymentResponse, TransactionRepository transactionRepository){
+        Transaction transaction = new Transaction();
+        transaction.setAmount(paymentResponse.getAmount());
+        transaction.setOrderId(paymentResponse.getOrderId());
+        transaction.setPaymentMode(paymentResponse.getPaymentMode());
+        transaction.setTransactionUniqueId(paymentResponse.getTransactionId());
+        transaction.setStatus(TransactionStatus.valueOf(paymentResponse.getStatus()));
+        transaction.setSubStatus(TransactionSubStatus.NONE);
+        transaction.setTransactionCompleteTime(0L);
+        transactionRepository.save(TransactionMapper.toEntity(transaction));
+    }
+
+    default void saveInDbPaymentCompletion(PaymentResponse paymentResponse, TransactionRepository transactionRepository){
+        TransactionEntity transaction=transactionRepository.findById(paymentResponse.getTransactionId());
+        transaction.setTransactionId(paymentResponse.getRemoteTransactionId());
+        transaction.setStatus(TransactionStatus.valueOf(paymentResponse.getStatus()));
+        transaction.setSubStatus(TransactionSubStatus.NONE);
+        transaction.setTransactionCompleteTime(Instant.now().toEpochMilli());
+        transactionRepository.update(transaction);
+    }
+
 }

@@ -40,6 +40,7 @@ import com.amay.tom.service.siftservice.ShiftService;
 import com.amay.tom.service.tom.IApplicationService;
 import com.amay.tom.service.userauth.UserAuth;
 import com.amay.tom.threadpool.ThreadPool;
+import com.amay.tvm.backend.repository.TransactionRepository;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import lombok.Data;
@@ -59,6 +60,7 @@ public class Agent {
     private SqliteRepositoryImpl sqliteRepository;
     private SqlGlobalRepository sqlGlobalRepository;
     private TicketsRepository ticketsRepository;
+    private TransactionRepository transactionRepository;
     private ThreadPool threadPool;
     private Connection  Connection;
     private UserAuth userAuth;

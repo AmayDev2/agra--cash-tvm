@@ -33,6 +33,7 @@ import com.mei.bnr.jxfs.xmlrpc.parameters.DirectIOModuleIdParameter;
 import com.mei.bnr.jxfs.xmlrpc.parameters.DirectIOModuleSetIdentificationParameters;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.tinylog.Logger;
 
 import java.util.*;
@@ -42,11 +43,13 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
+@Slf4j
 public class BNRIntegration {
 
-    public static long CASH_IN_AMOUNT = 5000;
+    public static long CASH_IN_AMOUNT = 0;
     public final static String CASH_IN_CURRENCY = "INR";
     public final static int EXPONENT = -2;
+    public static long ACCEPTED_AMOUNT = 0;
 
     public static JxfsATM control;
     public static SynchronousJxfsOperationHelper helper;
@@ -185,14 +188,12 @@ public class BNRIntegration {
         try {
             endCashInTransaction();
 //            control.open();
+            haveAmountObject=getBnrHaveAmountObject();
         } catch (JxfsException e) {
             e.printStackTrace();
         }
-
-
-
-
-         System.out.print("Insert amount to pay : ");
+        ACCEPTED_AMOUNT=0;
+        System.out.print("Insert amount to pay : ");
          CASH_IN_AMOUNT=amount* 100L;
         AcceptAmountResponse acceptedAmount=null;
         try {
@@ -261,6 +262,8 @@ public class BNRIntegration {
 
     private static void mark(long amount){
         vector.sort(Comparator.comparingInt(a -> a.getCashType().getValue()));
+        Logger.info("Marking denomination for amount sorted order : {}", amount);
+        vector.forEach(a -> Logger.info(String.valueOf(a.getCashType().getValue())));
 
         long note=amount;
         for(MEIDenominationInfo x:vector){
@@ -268,6 +271,27 @@ public class BNRIntegration {
                 note=x.getCashType().getValue();
             }
             x.setEnableDenomination(x.getCashType().getValue()<=note);
+        }
+        // TODO: check for maximum amount denomination
+        int maxDenomination=0;
+        int index=-1;
+        for(MEIDenominationInfo x:vector){
+            if(x.isEnableDenomination()){
+                index++;
+                maxDenomination= Math.toIntExact(x.getCashType().getValue() - amount); //in PAISA
+            }
+        }
+        if(maxDenomination>0) {
+//            if(isDenominational(maxDenomination)) {
+                if(!isDenominationalPossible(maxDenomination)){
+                    Logger.info("Denomination  not  possible for max denomination : {}", maxDenomination);
+                    for (int i = index;i<vector.size() ; i++) {
+                        vector.get(i).setEnableDenomination(false);
+                    }
+                }else {
+                    Logger.info("Denomination possible for max denomination : {}", maxDenomination);
+                }
+//            }
         }
 
 //        vector.sort(Comparator.comparingInt((MEIDenominationInfo a) -> a.getCashType().getValue()).reversed());
@@ -284,8 +308,15 @@ public class BNRIntegration {
 //                break;
 //            }
 //        }
+        Logger.info("Marking denomination for amount final order : {}", amount);
+        vector.forEach(a -> Logger.info(String.valueOf(a.getCashType().getValue()+" "+a.isEnableDenomination())));
 //
-        vector.sort(Comparator.comparingInt((MEIDenominationInfo a) -> a.getCashType().getValue()).reversed());
+//        vector.sort(Comparator.comparingInt((MEIDenominationInfo a) -> a.getCashType().getValue()).reversed());
+    }
+
+    private static boolean isDenominationalPossible(int maxDenomination) {
+        return CoinModuleInterface.INSTANCE.isDenominationPossibleAll(haveAmountObject.amountDetailList,maxDenomination/100);
+
     }
 
     /****************************************************************************
@@ -496,7 +527,8 @@ public class BNRIntegration {
                     System.out.println("You`ve inserted(partial) : " + data.getDenomination().getAmount() + " " + CASH_IN_CURRENCY);
                     bnrListener.acceptedAmount((int) data.getDenomination().getAmount());   //PAISA-> RUPEE : Last inserted amount of note
                     bnrListener.informationToShow("Inserted Note is of : ₹ "+data.getDenomination().getAmount()/100+"/-");
-                    mark(data.getDenomination().getAmount());
+                    ACCEPTED_AMOUNT+=data.getDenomination().getAmount();
+                    mark(CASH_IN_AMOUNT-ACCEPTED_AMOUNT);
                     System.out.println("Insertable Notes Are :-");
                     Set<Integer> list=new HashSet<>();
                     vector.stream().filter(JxfsDenominationInfo::isEnableDenomination).forEach(x->{
@@ -1089,6 +1121,8 @@ public class BNRIntegration {
         return sum.get();
 
     }//observeCashUnit
+
+    static HaveAmountObject haveAmountObject;
 
 
     private static HaveAmountObject getBnrHaveAmountObject() throws JxfsException {

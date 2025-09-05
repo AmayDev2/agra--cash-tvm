@@ -1,0 +1,212 @@
+package com.amay.tom.service.devices;
+
+import com.amay.tom.config.SystemConfig;
+import com.amay.tom.database.RedisConnectionPool;
+import com.amay.tom.enums.ConnectionStatus;
+import com.amay.tom.grpc.monotoring.GrpcApiListener;
+import com.amay.tom.service.devices.device.PrinterStatus;
+import com.amay.tom.utils.env.EnvFile;
+import com.amay.tom.utils.helper.Helper;
+import com.fazecast.jSerialComm.SerialPort;
+import lombok.Getter;
+import org.tinylog.Logger;
+
+import javax.print.PrintService;
+import javax.print.PrintServiceLookup;
+import java.awt.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.*;
+import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
+public class PeripheralMonitor implements Runnable {
+
+    @Getter
+    private boolean scu_connected;
+    @Getter
+    private boolean ccu_connected;
+    @Getter
+    private boolean reader_connected;
+    @Getter
+    private boolean scanner_connected;
+    @Getter
+    private boolean printer_connected;
+    @Getter
+    private boolean pdu_connected;
+    @Getter
+    private boolean cash_drawer_connected;
+    @Getter
+    private boolean ups_connected;
+    @Getter
+    private int[] deviceStatus;
+    private GrpcApiListener ccuGrpcApiListener, grpcApiListener;
+
+    private final List<DeviceStatusListener> listeners = new ArrayList<>();
+
+    public PeripheralMonitor(GrpcApiListener ccuGrpcApiListener, GrpcApiListener grpcApiListener) {
+        this.ccuGrpcApiListener= ccuGrpcApiListener;
+        this.grpcApiListener = grpcApiListener;
+    }
+
+    public void addDeviceStatusListener(DeviceStatusListener listener) {
+        Logger.debug("Adding device status listener {} {}", listener, this);
+        listeners.add(listener);
+
+    }
+
+
+    // use this function
+    public void removeDeviceStatusListener(DeviceStatusListener listener) {
+        listeners.remove(listener);
+    }
+
+    @Override
+    public void run() {
+        deviceStatus = new int[8];
+        scanner_connected = scannerConnected();
+        printer_connected = getPrinterStatus();
+        scu_connected = ConnectionStatus.CONNECTED.equals(this.grpcApiListener.getConnectionStatus());
+        ccu_connected = ConnectionStatus.CONNECTED.equals(this.ccuGrpcApiListener.getConnectionStatus());
+        pdu_connected = poleDisplayConnected();
+
+        deviceStatus[0] = scanner_connected ? 1 : 0;
+        deviceStatus[1] = printer_connected ? 1 : 0;
+        deviceStatus[2] = scu_connected ? 1 : 0;
+        deviceStatus[3] = ccu_connected ? 1 : 0;
+        deviceStatus[4] = reader_connected ? 1 : 0;
+        deviceStatus[5] = pdu_connected ? 1 : 0;
+        deviceStatus[6] = cash_drawer_connected ? 1 : 0;
+        deviceStatus[7] = ups_connected ? 1 : 0;
+
+//        Logger.debug("Peripherals status: {}", Helper.ObjectToJson(deviceStatus));
+
+
+        // notify the all subscribers/listeners
+        for (DeviceStatusListener listener : listeners) {
+//            Logger.debug("Pushing stratus to: {} {}", listeners.size(),listener);
+            listener.onDeviceStatusChanged(deviceStatus);
+        }
+    }
+
+    private static boolean PRINTER = false;
+    public static boolean scannerConnected() {
+       /* SerialPort[] serialPorts = SerialPort.getCommPorts();
+        for (SerialPort serialPort : serialPorts) {
+            if (serialPort.getPortDescription().equals(EnvFile.getQRScannerModel())) {
+                return true;
+            }
+        }
+        return false;*/
+        return isUsbDeviceConnected("1EAB", "0003");
+    }
+
+
+    /**
+     * Checks if a USB HID device with given VID and PID is currently connected.
+     * @param vid The Vendor ID (e.g., "1EAB")
+     * @param pid The Product ID (e.g., "0003")
+     * @return true if device is connected, false otherwise
+     */
+    public static boolean isUsbDeviceConnected(String vid, String pid) {
+        try {
+            // Construct the deviceId substring to match
+            String deviceId = "VID_" + vid.toUpperCase() + "&PID_" + pid.toUpperCase();
+
+            // PowerShell command to get DeviceID(s) matching the pattern
+            String psCommand = String.format(
+                    "Get-CimInstance -ClassName Win32_PnPEntity | " +
+                            "Where-Object { $_.DeviceID -like '*%s*' } | " +
+                            "Select-Object -ExpandProperty DeviceID",
+                    deviceId.replace("'", "''") // Escape single quotes to avoid PowerShell errors
+            );
+
+            // Launch PowerShell process to execute the command
+            Process process = Runtime.getRuntime().exec(
+                    new String[] { "powershell.exe", "-NoProfile", "-Command", psCommand }
+            );
+
+            // Read output lines from PowerShell
+            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            String line;
+            boolean found = false;
+            while ((line = reader.readLine()) != null) {
+                if (line.trim().toUpperCase().contains(deviceId)) {
+                    found = true;
+                    break;
+                }
+            }
+            reader.close();
+
+            // Wait for the process to exit, and check error stream for troubleshooting if needed
+            int exitCode = process.waitFor();
+            if (exitCode != 0) {
+                BufferedReader errorReader = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+                StringBuilder errorMsg = new StringBuilder();
+                while ((line = errorReader.readLine()) != null) {
+                    errorMsg.append(line).append(System.lineSeparator());
+                }
+                errorReader.close();
+                System.err.println("PowerShell exited with code " + exitCode + ": " + errorMsg.toString());
+                return false;
+            }
+
+            return found;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+
+    public static boolean poleDisplayConnected(){
+        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+
+        // Get an array of all screen devices (monitors)
+        GraphicsDevice[] devices = ge.getScreenDevices();
+
+        // Check the number of devices
+        if (devices.length > 1) {
+//            System.out.println("A secondary display is connected.");
+            return true;
+        } else {
+//            System.out.println("No secondary display detected.");
+            return false;
+        }
+    }
+
+    public static boolean printerConnected() {
+        PrintService[] printServices = PrintServiceLookup.lookupPrintServices(null, null);
+        for (PrintService printService : printServices) {
+            if (printService.getName().equals(EnvFile.getThermalPrinterModel())) {
+                PRINTER = true;
+                Logger.info("Printer connected {}", printService.getName());
+                return true;
+            }
+        }
+        return PRINTER;
+    }
+
+    public static boolean getPrinterStatus() {
+        return PrinterStatus.getPrinterStatus();
+    }
+
+    public static boolean getInternetStatus() {
+        // Implement the logic to check internet status
+        return false;
+    }
+
+    static long lastTime = 0;
+    static boolean redisStatus = false;
+
+    public static boolean getRedisStatus() {
+        if (System.currentTimeMillis() - lastTime > 1000) {
+            lastTime = System.currentTimeMillis();
+            redisStatus = RedisConnectionPool.isRedisAlive();
+        }
+        return redisStatus;
+    }
+
+}

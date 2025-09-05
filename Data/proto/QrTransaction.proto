@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package org.transactions.qr;
+
+import "Transactions.proto";
+
+
+option java_package = "org.transaction.qr";
+option java_multiple_files = true;
+
+service QrTransaction{
+    rpc initiateTransaction(TransactionProtocol) returns(TransactionResponse) {} //TOM TO CCU, Any Type of transaction that needs CCU involvment {refund, reterival and UPI}
+    rpc issueTicket(IssueTicket) returns(TicketResponse) {} //Payment has been completed generate ticket
+    rpc adjustTicket(AdjustTicket) returns(Response) {} //Send Adjustment request from EFO
+    rpc getTicketDetails(FetchData) returns(TicketDetails) {} //Can be used to fetch detailed data of ticket
+    rpc verifyTicket(FetchData) returns (TicketData) {} //AG TO CCU to verify authenticity of the ticket
+    rpc pushTicketData(stream TicketData) returns (Response) {} //AG TO CCU to push offline ticket entry or exit transaction data
+    rpc pushOfflineTicketData(stream TicketDetails) returns(Response) {} //TOM TO CCU to push offline ticket generated from TOM
+    rpc cancleTicket(Empty) returns(Empty) {} //TOM TO CCU to inform about cancle Ticket
+}
+
+message Empty{
+
+}

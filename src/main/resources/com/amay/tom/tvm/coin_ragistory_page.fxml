@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane prefHeight="250.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17.0.12"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tvm.controller.CoinRagistoryPageController">
+
+    <columnConstraints>
+        <ColumnConstraints minWidth="10.0" percentWidth="80.0" prefWidth="100.0"/>
+        <ColumnConstraints minWidth="10.0" percentWidth="80.0" prefWidth="100.0"/>
+        <ColumnConstraints minWidth="10.0" percentWidth="100.0" prefWidth="100.0"/>
+        <ColumnConstraints percentWidth="100.0"/>
+    </columnConstraints>
+
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" percentHeight="40.0" prefHeight="30.0"/>
+        <RowConstraints minHeight="10.0" percentHeight="60.0" prefHeight="30.0"/>
+        <RowConstraints minHeight="10.0" percentHeight="60.0" prefHeight="30.0"/>
+        <RowConstraints percentHeight="60.0"/>
+    </rowConstraints>
+
+    <!-- Header -->
+    <Label text="Hoper" GridPane.halignment="CENTER">
+        <font>
+            <Font name="System Bold" size="18.0"/>
+        </font>
+    </Label>
+    <Label text="Amount" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+        <font>
+            <Font name="System Bold" size="18.0"/>
+        </font>
+    </Label>
+    <Label text="Quantity" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+        <font>
+            <Font name="System Bold" size="18.0"/>
+        </font>
+    </Label>
+    <Label text="Total" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+        <font>
+            <Font name="System Bold" size="18.0"/>
+        </font>
+    </Label>
+
+    <!-- Hoper 1 -->
+    <Label text="Hoper 1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Label>
+    <Label text="5" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="qty1" onAction="#updateHopperInfo" alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity"
+               prefHeight="30.0" prefWidth="150.0" promptText="Enter Quantity" GridPane.columnIndex="2"
+               GridPane.halignment="CENTER" GridPane.rowIndex="1">
+        <font>
+        <Font size="14.0"/>
+        </font>
+    </TextField>
+    <Label fx:id="total1" text="0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Label>
+
+    <!-- Hoper 2 -->
+    <Label text="Hoper 2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Label>
+    <Label text="10" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="qty2" onAction="#updateHopperInfo" alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity"
+               prefHeight="30.0" prefWidth="150.0" promptText="Enter Quantity" GridPane.columnIndex="2"
+               GridPane.halignment="CENTER" GridPane.rowIndex="2">
+        <font>
+        <Font size="14.0"/>
+        </font>
+    </TextField>
+    <Label fx:id="total2" text="0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Label>
+
+    <!-- Hoper 3 -->
+    <Label text="Hoper 3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Label>
+    <Label text="10" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="qty3" onAction="#updateHopperInfo" alignment="CENTER" maxHeight="30.0" maxWidth="-Infinity"
+               minWidth="-Infinity" prefWidth="150.0" promptText="Enter Quantity" GridPane.columnIndex="2"
+               GridPane.halignment="CENTER" GridPane.rowIndex="3">
+        <font>
+        <Font size="14.0"/>
+        </font>
+    </TextField>
+    <Label fx:id="total3" text="0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Label>
+</GridPane>

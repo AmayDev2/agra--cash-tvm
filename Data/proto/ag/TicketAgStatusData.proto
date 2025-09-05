@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.amaytechnosystems";
+option java_outer_classname = "AGStatusObjectV1";
+
+
+import "meta/RequestMetaData.proto";
+import "meta/ResponseMetaData.proto";
+import "object/BaseObject.proto";
+import "enum/Enums.proto";
+
+
+package com.proto.ag.object;
+
+
+message TicketStatusV1 {
+  string ticketNumber = 1;
+  com.proto.enum.TicketOperation operation =2;
+  baseobject.ADevice device=5;
+  string time=4;
+}
+
+message AGTicketRequestV1 {
+  TicketStatusV1 ticketData = 1;
+  meta.reqmetadata.RequestMetaData requestMetaData = 2;
+
+}
+
+message AGTicketResponseV1 {
+  bool isAllowed=1;
+  meta.respmetadata.ResponseMetaData responseMetaData = 2;
+}

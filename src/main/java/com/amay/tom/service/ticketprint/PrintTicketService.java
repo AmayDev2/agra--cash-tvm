@@ -1,5 +1,6 @@
 package com.amay.tom.service.ticketprint;
 
+import com.amay.printer.PrinterCommandDispatcher;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.listener.PrintProgressListener;
 import com.amay.tom.model.GeneratedTicket;
@@ -60,6 +61,7 @@ public class PrintTicketService {
             uiqrTicket.setDestination(ticketInfo.getQrTicketV2().getOutStation().getStationName());
             uiqrTicket.setTicketType(ticketInfo.getQrTicketV2().getTicketType());
             uiqrTicket.setQrCode(this.getQRImage(((AdjustedTicket) this.generatedTicket.getFirst()).getEncryptedQR(), ticketInfo.getQrTicketV2().getTicketId()));
+            uiqrTicket.setQrData(ticketInfo.getQrData());
             this.uiqrTickets.add(uiqrTicket);
         }else {
             for (GeneratedTicket ticket : generatedTicket) {
@@ -74,6 +76,7 @@ public class PrintTicketService {
                 uiqrTicket.setDestination(postGeneratedTicket.getProperTicket().getDestination().getStationName());
                 uiqrTicket.setTicketType(postGeneratedTicket.getProperTicket().getTicketType());
                 uiqrTicket.setQrCode(this.getQRImage(postGeneratedTicket.getQrCodeString(), postGeneratedTicket.getTicketId()));
+                uiqrTicket.setQrData(postGeneratedTicket.getQrCodeString());
                 this.uiqrTickets.add(uiqrTicket);
             }
             this.tempPrintTicket(listener,this.uiqrTickets.size());
@@ -88,17 +91,13 @@ public class PrintTicketService {
         for (UIQRTicket uiqrTicket : uiqrTickets) {
             QRTicket qrTicket = new QRTicket(uiqrTicket.getTicketId(), uiqrTicket.getIssuedAt(), uiqrTicket.getValidUntil(), uiqrTicket.getSource(), uiqrTicket.getDestination(), uiqrTicket.getTicketType().getTicketTypeName(), "Cash", uiqrTicket.getPrice(), uiqrTicket.getQrCode());
             qrTicket.setQty(Integer.parseInt(uiqrTicket.getQuantity()));
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-
-            Platform.runLater(() -> {
-                boolean isPrinted = implTicketService.printAndSaveTicket(qrTicket);
-//                count.addAndGet(isPrinted ? 1 : 0);
-//                runnable.update(count.get(), size);
-            });
+            qrTicket.setQrCodeData(uiqrTicket.getQrData());
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                throw new RuntimeException(e);
+//            }
+            PrinterCommandDispatcher.INSTANCE.printText(qrTicket);
         }
         //System.out.println("sold stock :"+FareMedium.QR.getFareMediumSale()+" "+FareMedium.NCMC.getFareMediumSale());
         //agent.getScuService().pushTotalStock(ScuDataMapper.getStockSoldRequest(agent.getShift().getShiftId(),agent.getSystemConfig().getCurrentEquipment().getEquipmentId(),FareMedium.QR.getFareMediumSale(),FareMedium.NCMC.getFareMediumSale()));

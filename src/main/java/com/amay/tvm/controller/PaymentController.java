@@ -648,7 +648,7 @@ public class PaymentController {
 
             for (RequestedTicket requestedTicket : requestedTicketOrder.requestedTicket()) {
                 long issuedAt = Instant.now().toEpochMilli();
-                long validUntil = issuedAt + (24 * 60 * 60 * 1000); // Valid for 24 hours
+                long validUntil = 0;//issuedAt + (24 * 60 * 60 * 1000); // Valid for 24 hours
 
                 int fareS2D = this.getFare(requestedTicket);
                 List<ProperTicket> subProperTickets = this.getProperTickets(requestedTicket, issuedAt, validUntil, fareS2D);
@@ -674,7 +674,7 @@ public class PaymentController {
                 // Process payment using the configured payment method
                 PaymentResponse paymentResponse = (PaymentResponse) PaymentFactory
                         .getPaymentMedia(selectedPayment)
-                        .pay(totalFare.get(), requestedTicketOrder.orderId(), new Object[]{this.stackPane});
+                        .pay(totalFare.get(), requestedTicketOrder.orderId(), new Object[]{this.stackPane},agent.getTransactionRepository());
 
                 if(!paymentResponse.isSuccess()){
                     buttonsDisability(false);

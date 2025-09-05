@@ -6,10 +6,6 @@ import org.network.monitorandcontrol.Alarms;
 import org.network.monitorandcontrol.EquipmentType;
 import org.network.monitorandcontrol.OperationMode;
 import org.network.monitorandcontrol.RequestType;
-import org.network.monitorandcontrol.tom.TOMEquipmentInfo;
-import org.network.monitorandcontrol.tom.TOMParameterVersion;
-import org.network.monitorandcontrol.tom.TOMPeripheralStatus;
-import org.network.monitorandcontrol.tom.TOMModeControl;
 import org.network.monitorandcontrol.tvm.*;
 import org.tinylog.Logger;
 
@@ -66,7 +62,7 @@ public class RequestHandler {
 
     public static TVMProtocol testSetOperationModeTest() {
         return TVMProtocol.newBuilder().setRequestType(RequestType.RESPONSE)
-                .setRequestData(Any.pack(TOMModeControl.newBuilder().setOperationMode(OperationMode.MAINTENANCE).build()))
+                .setRequestData(Any.pack(TVMModeControl.newBuilder().setOperationMode(OperationMode.MAINTENANCE).build()))
                 .build();
     }
 

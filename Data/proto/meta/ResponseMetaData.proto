@@ -1,0 +1,14 @@
+syntax ="proto3";
+
+option java_multiple_files = true;
+option java_package = "org.amaytechnosystems";
+option java_outer_classname = "RespMetaData";
+
+package com.proto.meta.respmetadata;
+
+message ResponseMetaData {
+    string errorCode = 1;
+    string errorMessage = 2;
+    string errorDescription = 3;
+
+}

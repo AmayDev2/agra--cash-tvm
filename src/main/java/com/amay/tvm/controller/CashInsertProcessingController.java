@@ -79,6 +79,18 @@ public class CashInsertProcessingController {
         Platform.runLater(() -> {
             flowPane.getChildren().clear(); // clear existing chips
 
+            if(list.isEmpty()){
+                Label noNoteLabel = new Label("Please Insert Exact Amount");
+                noNoteLabel.setStyle(
+                        "-fx-background-color: #f44336;" +  // red background for no notes
+                                "-fx-text-fill: white;" +
+                                "-fx-padding: 5 10 5 10;" +
+                                "-fx-background-radius: 4;" +      // rounded corners
+                                "-fx-font-weight: bold;"
+                );
+                flowPane.getChildren().add(noNoteLabel);
+                return;
+            }
             for (Integer note : list) {
                 Label chip = new Label(String.valueOf(note));
                 chip.setStyle(

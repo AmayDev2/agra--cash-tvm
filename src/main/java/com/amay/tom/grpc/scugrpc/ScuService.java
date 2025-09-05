@@ -94,8 +94,12 @@ public class ScuService {
             TicketResponseV1 ticketResponse = blockingStub.pushTicketIssueInfo(request);
             if (ticketResponse.getResponseMetaData().getErrorCode().equals("200")) {
                 ticketsRepository.pushTickets(List.of(request.getTicketData().getTicket().getTicketId()), chanelName);
+                Logger.info("Pushed Ticket Data Response {} {} {}", request.getTicketData(), ticketResponse.getResponseMetaData(),chanelName);
                 return true;
-            } else return false;
+            } else{
+                Logger.error("Pushed Ticket Data Response {} {} {}", request.getTicketData(), ticketResponse.getResponseMetaData(),chanelName);
+                return false;
+            }
         });
     }
 

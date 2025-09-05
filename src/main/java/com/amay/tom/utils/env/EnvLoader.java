@@ -187,4 +187,8 @@ public class EnvLoader {
     public boolean getIsUpdate() {
         return getOrDefaultBoolean("UPDATE", UPDATE);
     }
+
+    public String getComPort() {
+        return getOrDefault("COM_PORT", "COM2");
+    }
 }

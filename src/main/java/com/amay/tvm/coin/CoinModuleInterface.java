@@ -20,7 +20,7 @@ public enum CoinModuleInterface {
 	public CoinModuleService setupCoinModule(String comPort){
 		service = new CoinModuleService();
 		service.connect(comPort);
-		HoppersRegistry.INSTANCE.setHoppers(5,10,10,     8,10,0);
+		HoppersRegistry.INSTANCE.setHoppers(5,10,10,     0,0,0);
 		return service;
 	}
 	public void closeCoinModule(){
@@ -32,6 +32,26 @@ public enum CoinModuleInterface {
 		HaveAmountObject haveAmount = new HaveAmountObject(list);
 		haveAmount.totalAmount = amount;
 		ReturnableAmountObject result = new MaxChangePossibleService().getReturnableAmount(new ReturnableAmountObject(new ArrayList<>()),haveAmount, amount, 0);
+		return result.totalAmount == amount;
+	}
+
+	public boolean isDenominationPossibleAll(List<AmountDetail> list,int amount){
+		HaveAmountObject haveAmountCoin = new HaveAmountObject(HoppersRegistry.INSTANCE.getHoppers());
+		haveAmountCoin.totalAmount = amount;
+
+		// Original test case - modified for standard denominations
+		HaveAmountObject haveAmount = new HaveAmountObject(list);
+		haveAmount.totalAmount = amount;
+
+		HaveAmountObject combinedHaveAmount = new HaveAmountObject(new ArrayList<>());
+		combinedHaveAmount.totalAmount = amount;
+		combinedHaveAmount.amountDetailList.addAll(haveAmount.amountDetailList);
+		combinedHaveAmount.amountDetailList.addAll(haveAmountCoin.amountDetailList);
+
+		combinedHaveAmount.amountDetailList.sort((o1, o2) -> Integer.compare(o2.getAmount(), o1.getAmount())); // Sort in descending order of amount
+
+		ReturnableAmountObject result = new MaxChangePossibleService().getReturnableAmount(new ReturnableAmountObject(new ArrayList<>()),combinedHaveAmount, amount, 0);
+		result.amountDetailList.forEach(ad -> Logger.info("Using Denomination: {} x {} for", ad.getAmount(), ad.getQuantity(),amount));
 		return result.totalAmount == amount;
 	}
 

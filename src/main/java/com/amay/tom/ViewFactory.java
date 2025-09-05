@@ -149,7 +149,7 @@ public class ViewFactory {
 
     public static FXMLLoader getBottomNav() {
         FXMLLoader fxmlLoader = new FXMLLoader(ViewFactory.class.getResource
-                ("components/status-bottom-bar-view.fxml"));
+                ("/com/amay/tom/tvm/components/status-bottom-bar-view.fxml"));
         return fxmlLoader;
     }
 
@@ -261,6 +261,10 @@ public class ViewFactory {
 
     public static FXMLLoader getCashPaymentView() {
         return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/tvm/cash_payment_view.fxml"));
+    }
+
+    public static FXMLLoader getHopper(){
+        return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/tvm/coin_ragistory_page.fxml"));
     }
 }
 

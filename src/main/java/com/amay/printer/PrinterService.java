@@ -2,13 +2,17 @@ package com.amay.printer;
 
 import com.amay.printer.Response.BaseResponse;
 import com.amay.printer.Response.ImagePrintResponse;
+import com.amay.tom.ViewFactory;
+import com.amay.tom.config.ENVURL;
 import com.amay.tom.config.SystemConfig;
 import com.amay.tom.model.QRTicket;
+import com.amay.tom.repository.StationData;
 import com.custom.wndapijwrap.*;
 import javafx.scene.image.Image;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.List;
 
@@ -173,7 +177,7 @@ public class PrinterService implements PrinterInterface {
 
 
     private void printImageByPath(){
-        String path="src\\main\\resources\\images\\mpmrc.jpg";
+        String path= ENVURL.CONFIG+"images"+ File.separator+"ticket_logo.jpg";
         try {
             PrintImageSettings pis = new PrintImageSettings();
             pis.PrintScaleMode = PrintImageSettings.ImageScale.IMAGE_SCALE_NONE;
@@ -259,8 +263,7 @@ public class PrinterService implements PrinterInterface {
         }
         System.out.println("Populating ticket data...");
 
-        String initTime=qrTicket.getInitiateDateTime();
-        String formatted = getFormatted(qrTicket, initTime);
+        String formatted = getFormatted(qrTicket);
         try {
             PrintFontSettings pfs=new PrintFontSettings();
             pfs.Emphasized=true;
@@ -280,7 +283,7 @@ public class PrinterService implements PrinterInterface {
 
     }
 
-    private static String getFormatted(QRTicket qrTicket, String initTime) {
+    private static String getFormatted(QRTicket qrTicket) {
         String paymentType = qrTicket.getFareMode();
         String equipmentId = SystemConfig.getInstance().getCurrentEquipment().getEquipmentId();
         String product = qrTicket.getType();
@@ -288,6 +291,8 @@ public class PrinterService implements PrinterInterface {
         String to = qrTicket.getTo();
         String price = "Rs. " + qrTicket.getPrice() + "/-";
         String ticketId = qrTicket.getTicketNo();
+        String initTime = qrTicket.getInitiateDateTime();
+        String quantity = qrTicket.getQty() > 1 ? " (" + qrTicket.getQty() + ")" : "";
 
         // Use text block instead of escaped \n
         String ticketData = """
@@ -295,7 +300,7 @@ public class PrinterService implements PrinterInterface {
             Date/Time        : %s
             Payment Type     : %s
             Salepoint Id     : %s
-            Type             : %s
+            Type             : %s %s
             Platform NO.     : %s
             From             : %s
             To               : %s
@@ -308,9 +313,10 @@ public class PrinterService implements PrinterInterface {
             """;
 
         // Insert values
-        String formatted = String.format(ticketData, initTime, paymentType, equipmentId, product, "1", from, to, price, ticketId);
+        String platformNo = String.valueOf(StationData.getInstance().getPlatform(qrTicket.getFrom(),qrTicket.getTo()));
+        String formatted = String.format(ticketData, initTime, paymentType, equipmentId, product,quantity, platformNo, from, to, price, ticketId);
         return formatted;
-    }
+}
 
 
     private void printQR(String qrString) {

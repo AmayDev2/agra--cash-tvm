@@ -12,7 +12,7 @@ public class OfflineQRTicketAdjust extends AbstractQRTicketAdjustment {
 
     @Override
     public QRTicketService create(Agent agent) {
-        AdjustedTicketRepository adjustedTicketRepository=new AdjustedTicketRepositoryImpl(agent.getConnection(),agent.getTicketsRepository());
+        AdjustedTicketRepository adjustedTicketRepository=agent.getAdjustedTicketRepository();
         agent.setAdjustedTicketRepository(adjustedTicketRepository);
         Logger.debug("Adjust Repo Agent Obj "+agent);
         return new com.amay.tom.service.qrService2.impl.OfflineQRTicketAdjust(agent);

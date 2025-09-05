@@ -33,7 +33,7 @@ public class CommandHandler {
                 break;
             case GET_DEVICE_VERSIONS:
                 remote=new Remote(new VersionCommand(applicationService));
-                System.out.println("GET_DIVICE_VERSIONS");
+                System.out.println("GET_DEVICE_VERSIONS");
                 break;
             case GET_PERIPHERAL_STATUS:
                 remote=new Remote(new PheStatusCommand(applicationService));

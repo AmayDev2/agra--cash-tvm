@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 public class PaymentResponse {
     private String orderId;
     private String transactionId;
+    private String remoteTransactionId;
     private LocalDateTime transactionTime;
     private int amount;
     private String paymentMode;

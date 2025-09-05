@@ -20,8 +20,23 @@ public enum HoppersRegistry {
         hoppers.sort((hop11, hop22)->Integer.compare(hop22.amount,hop11.amount)); //DEC
     }
 
+    public String getHopperQuantity(String id){
+        return hoppers.stream().filter(hopper -> hopper.getContainerId().equals(id)).findFirst().map(hopper -> String.valueOf(hopper.quantity)).orElse("0");
+    }
+
+    public void resetHopper(int hopperId) {
+        hoppers.stream().filter(hopper -> hopper.getContainerId().equals(String.valueOf(hopperId))).findFirst().ifPresent(hopper -> hopper.quantity=0);
+    }
+
     public void updateHopper(int hopperId,int dispensedQuantity) {
         hoppers.stream().filter(hopper -> hopper.getContainerId().equals(String.valueOf(hopperId))).findFirst().ifPresent(hopper -> deductQuantity(hopper, dispensedQuantity));
+    }
+    public void updateHopperAdd(int hopperId,int dispensedQuantity) {
+        hoppers.stream().filter(hopper -> hopper.getContainerId().equals(String.valueOf(hopperId))).findFirst().ifPresent(hopper -> addQuantity(hopper, dispensedQuantity));
+    }
+
+    private void addQuantity(AmountDetail hopper, int dispensedQuantity) {
+        hopper.quantity+=dispensedQuantity;
     }
 
     private void deductQuantity(AmountDetail hopper, int dispensedQuantity) {

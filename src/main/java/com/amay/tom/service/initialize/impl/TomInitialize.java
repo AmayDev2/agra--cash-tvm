@@ -1,5 +1,6 @@
 package com.amay.tom.service.initialize.impl;
 
+import com.amay.printer.PrinterCommandDispatcher;
 import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.api.UserMapper;
@@ -87,6 +88,10 @@ import com.amay.tom.utils.StationData1;
 import com.amay.tom.utils.env.EnvFile;
 import com.amay.tom.utils.env.EnvLoader;
 import com.amay.tom.utils.helper.Helper;
+import com.amay.tvm.backend.repository.TransactionRepository;
+import com.amay.tvm.backend.repository.TransactionRepositoryImpl;
+import com.amay.tvm.bnr.BNRIntegration;
+import com.amay.tvm.coin.CoinModuleInterface;
 import com.google.protobuf.Any;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -508,6 +513,11 @@ public class TomInitialize implements ITomInitialize {
                 this.peripheralDeviceStatus();
                 progress += 0.03;
                 this.updateUI(progress, "Peripheral status pushed.");
+
+//                BNRIntegration.bnrOpen();
+//                CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort());
+
+//                PrinterCommandDispatcher.INSTANCE.setupPrinter();
 
                 // 22. Push Remaining Data & Finalize
                 this.pushRemainedDate();
@@ -963,6 +973,8 @@ public class TomInitialize implements ITomInitialize {
         agent.setTomConfigRepository(tomConfigRepository);
         ShiftRepository shiftRepository = new ShiftRepositoryImpl(agent.getConnection());
         agent.setShiftRepository(shiftRepository);
+        TransactionRepository transactionRepository = new TransactionRepositoryImpl(agent.getConnection());
+        agent.setTransactionRepository(transactionRepository);
         return true;
     }
 

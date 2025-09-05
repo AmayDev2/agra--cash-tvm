@@ -6395,3 +6395,1897 @@ Valid Upto       : 120 minutes after entry
 2025-09-02 13-56-57.0465[Cut]Begin
 2025-09-02 13-56-57.0466[Cut]CutType:CUT_TOTAL
 2025-09-02 13-56-57.0467[Cut]End
+2025-09-03 11-30-42.0027[]*****************************************
+2025-09-03 11-30-42.0050[]DLL Log Initialize. Verbosity: 6
+2025-09-03 11-30-42.0050[]*****************************************
+2025-09-03 11-30-42.0051[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 11-30-42.0051[]DLL Version: 1.07
+2025-09-03 11-30-42.0052[InitLibrary]Begin
+2025-09-03 11-30-42.0074[InitLibrary]Library SignID:00000101
+2025-09-03 11-30-42.0074[InitLibrary]Current SignID:00000101
+2025-09-03 11-30-42.0075[InitLibrary]End
+2025-09-03 11-30-42.0075[GetAPIVersion]Begin
+2025-09-03 11-30-42.0076[GetAPIVersion]API rel 1.07
+2025-09-03 11-30-42.0076[GetAPIVersion]End
+2025-09-03 11-30-42.0078[GetAPIVersionHwLibrary]Begin
+2025-09-03 11-30-42.0079[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 11-30-42.0080[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 11-30-42.0081[GetAPIVersionHwLibrary]End
+2025-09-03 11-30-42.0082[EnumUSBDevices]Begin
+2025-09-03 11-30-42.0090[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 11-30-42.0091[EnumUSBDevices]End
+2025-09-03 11-30-42.0092[OpenPrinterUSB]Begin
+2025-09-03 11-30-42.0093[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 11-30-42.0098[OpenPrinterUSB]New device ID:00000101
+2025-09-03 11-30-42.0099[OpenPrinterUSB]End
+2025-09-03 11-30-42.0101[GetInfoDeviceModel]Begin
+2025-09-03 11-30-42.0104[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 11-30-42.0104[GetInfoDeviceModel]End
+2025-09-03 11-30-42.0106[GetInfoFirmwareVersion]Begin
+2025-09-03 11-30-42.0108[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 11-30-42.0108[GetInfoFirmwareVersion]End
+2025-09-03 11-30-42.0109[GetCapCommPortType]Begin
+2025-09-03 11-30-42.0112[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 11-30-42.0113[GetCapCommPortType]End
+2025-09-03 11-30-42.0113[GetCapPrinterResolution]Begin
+2025-09-03 11-30-42.0117[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 11-30-42.0117[GetCapPrinterResolution]End
+2025-09-03 11-30-42.0118[GetCapPrintWidth]Begin
+2025-09-03 11-30-42.0120[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 11-30-42.0121[GetCapPrintWidth]End
+2025-09-03 11-31-15.0853[PrintImageFromPath]Begin
+2025-09-03 11-31-15.0853[PrintImageFromPath]<Image File Path>:src\main\resources\images\mpmrc.jpg
+2025-09-03 11-31-15.0854[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-09-03 11-31-15.0894[PrintImageFromPath]End
+2025-09-03 11-31-15.0896[PrintBarcode]Begin
+2025-09-03 11-31-15.0900[PrintText]Begin
+2025-09-03 11-31-15.0900[PrintText]<Text to Print>:
+Date/Time        : 03-09-2025 11:31:12
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT
+Platform NO.     : 1
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W6BPEQ9P050001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-03 11-31-15.0901[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:20<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-03 11-31-15.0901[PrintText]<Add LF>:false
+2025-09-03 11-31-15.0905[PrintText]End
+2025-09-03 11-31-15.0905[Cut]Begin
+2025-09-03 11-31-15.0906[Cut]CutType:CUT_TOTAL
+2025-09-03 11-31-15.0907[Cut]End
+2025-09-03 11-36-09.0768[]*****************************************
+2025-09-03 11-36-09.0769[]DLL Log Initialize. Verbosity: 6
+2025-09-03 11-36-09.0769[]*****************************************
+2025-09-03 11-36-09.0771[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 11-36-09.0772[]DLL Version: 1.07
+2025-09-03 11-36-09.0773[InitLibrary]Begin
+2025-09-03 11-36-09.0853[InitLibrary]Library SignID:00000101
+2025-09-03 11-36-09.0854[InitLibrary]Current SignID:00000101
+2025-09-03 11-36-09.0856[InitLibrary]End
+2025-09-03 11-36-09.0858[GetAPIVersion]Begin
+2025-09-03 11-36-09.0859[GetAPIVersion]API rel 1.07
+2025-09-03 11-36-09.0863[GetAPIVersion]End
+2025-09-03 11-36-09.0865[GetAPIVersionHwLibrary]Begin
+2025-09-03 11-36-09.0870[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 11-36-09.0872[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 11-36-09.0874[GetAPIVersionHwLibrary]End
+2025-09-03 11-36-09.0876[EnumUSBDevices]Begin
+2025-09-03 11-36-09.0899[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 11-36-09.0900[EnumUSBDevices]End
+2025-09-03 11-36-09.0901[OpenPrinterUSB]Begin
+2025-09-03 11-36-09.0902[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 11-36-09.0909[OpenPrinterUSB]New device ID:00000101
+2025-09-03 11-36-09.0910[OpenPrinterUSB]End
+2025-09-03 11-36-10.0060[GetInfoDeviceModel]Begin
+2025-09-03 11-36-10.0066[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 11-36-10.0067[GetInfoDeviceModel]End
+2025-09-03 11-36-10.0068[GetInfoFirmwareVersion]Begin
+2025-09-03 11-36-10.0074[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 11-36-10.0075[GetInfoFirmwareVersion]End
+2025-09-03 11-36-10.0075[GetCapCommPortType]Begin
+2025-09-03 11-36-10.0078[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 11-36-10.0079[GetCapCommPortType]End
+2025-09-03 11-36-10.0080[GetCapPrinterResolution]Begin
+2025-09-03 11-36-10.0082[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 11-36-10.0084[GetCapPrinterResolution]End
+2025-09-03 11-36-10.0086[GetCapPrintWidth]Begin
+2025-09-03 11-36-10.0090[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 11-36-10.0090[GetCapPrintWidth]End
+2025-09-03 11-36-27.0870[PrintImageFromPath]Begin
+2025-09-03 11-36-27.0871[PrintImageFromPath]<Image File Path>:src\main\resources\images\mpmrc.jpg
+2025-09-03 11-36-27.0871[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-09-03 11-36-27.0890[PrintImageFromPath]End
+2025-09-03 11-36-27.0892[PrintBarcode]Begin
+2025-09-03 11-36-27.0895[PrintText]Begin
+2025-09-03 11-36-27.0895[PrintText]<Text to Print>:
+Date/Time        : 03-09-2025 11:36:24
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT
+Platform NO.     : 1
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W6BPEQ9P060001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-03 11-36-27.0896[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:20<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-03 11-36-27.0896[PrintText]<Add LF>:false
+2025-09-03 11-36-27.0900[PrintText]End
+2025-09-03 11-36-27.0900[Cut]Begin
+2025-09-03 11-36-27.0901[Cut]CutType:CUT_TOTAL
+2025-09-03 11-36-27.0903[Cut]End
+2025-09-03 11-37-40.0381[]*****************************************
+2025-09-03 11-37-40.0383[]DLL Log Initialize. Verbosity: 6
+2025-09-03 11-37-40.0384[]*****************************************
+2025-09-03 11-37-40.0385[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 11-37-40.0385[]DLL Version: 1.07
+2025-09-03 11-37-40.0386[InitLibrary]Begin
+2025-09-03 11-37-40.0420[InitLibrary]Library SignID:00000101
+2025-09-03 11-37-40.0421[InitLibrary]Current SignID:00000101
+2025-09-03 11-37-40.0421[InitLibrary]End
+2025-09-03 11-37-40.0421[GetAPIVersion]Begin
+2025-09-03 11-37-40.0422[GetAPIVersion]API rel 1.07
+2025-09-03 11-37-40.0424[GetAPIVersion]End
+2025-09-03 11-37-40.0425[GetAPIVersionHwLibrary]Begin
+2025-09-03 11-37-40.0429[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 11-37-40.0430[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 11-37-40.0430[GetAPIVersionHwLibrary]End
+2025-09-03 11-37-40.0431[EnumUSBDevices]Begin
+2025-09-03 11-37-40.0441[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 11-37-40.0442[EnumUSBDevices]End
+2025-09-03 11-37-40.0443[OpenPrinterUSB]Begin
+2025-09-03 11-37-40.0443[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 11-37-40.0451[OpenPrinterUSB]New device ID:00000101
+2025-09-03 11-37-40.0451[OpenPrinterUSB]End
+2025-09-03 11-37-40.0454[GetInfoDeviceModel]Begin
+2025-09-03 11-37-40.0456[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 11-37-40.0457[GetInfoDeviceModel]End
+2025-09-03 11-37-40.0457[GetInfoFirmwareVersion]Begin
+2025-09-03 11-37-40.0460[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 11-37-40.0461[GetInfoFirmwareVersion]End
+2025-09-03 11-37-40.0461[GetCapCommPortType]Begin
+2025-09-03 11-37-40.0464[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 11-37-40.0465[GetCapCommPortType]End
+2025-09-03 11-37-40.0465[GetCapPrinterResolution]Begin
+2025-09-03 11-37-40.0467[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 11-37-40.0468[GetCapPrinterResolution]End
+2025-09-03 11-37-40.0469[GetCapPrintWidth]Begin
+2025-09-03 11-37-40.0472[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 11-37-40.0472[GetCapPrintWidth]End
+2025-09-03 11-38-02.0339[PrintImageFromPath]Begin
+2025-09-03 11-38-02.0341[PrintImageFromPath]<Image File Path>:src\main\resources\images\mpmrc.jpg
+2025-09-03 11-38-02.0342[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-09-03 11-38-02.0368[PrintImageFromPath]End
+2025-09-03 11-38-02.0371[PrintBarcode]Begin
+2025-09-03 11-38-02.0374[PrintText]Begin
+2025-09-03 11-38-02.0376[PrintText]<Text to Print>:
+Date/Time        : 03-09-2025 11:37:59
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT
+Platform NO.     : 1
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W6BPEQ9P070001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-03 11-38-02.0376[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:20<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-03 11-38-02.0377[PrintText]<Add LF>:false
+2025-09-03 11-38-02.0381[PrintText]End
+2025-09-03 11-38-02.0382[Cut]Begin
+2025-09-03 11-38-02.0383[Cut]CutType:CUT_TOTAL
+2025-09-03 11-38-02.0385[Cut]End
+2025-09-03 11-38-09.0397[PrintImageFromPath]Begin
+2025-09-03 11-38-09.0398[PrintImageFromPath]<Image File Path>:src\main\resources\images\mpmrc.jpg
+2025-09-03 11-38-09.0399[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-09-03 11-38-09.0428[PrintImageFromPath]End
+2025-09-03 11-38-09.0428[PrintBarcode]Begin
+2025-09-03 11-38-09.0429[PrintText]Begin
+2025-09-03 11-38-09.0429[PrintText]<Text to Print>:
+Date/Time        : 03-09-2025 11:38:06
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT
+Platform NO.     : 1
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W6BPEQ9P070002
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-03 11-38-09.0430[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:20<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-03 11-38-09.0430[PrintText]<Add LF>:false
+2025-09-03 11-38-09.0433[PrintText]End
+2025-09-03 11-38-09.0434[Cut]Begin
+2025-09-03 11-38-09.0434[Cut]CutType:CUT_TOTAL
+2025-09-03 11-38-09.0436[Cut]End
+2025-09-03 11-39-01.0512[PrintImageFromPath]Begin
+2025-09-03 11-39-01.0516[PrintImageFromPath]<Image File Path>:src\main\resources\images\mpmrc.jpg
+2025-09-03 11-39-01.0517[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-09-03 11-39-01.0560[PrintImageFromPath]End
+2025-09-03 11-39-03.0549[PrintBarcode]Begin
+2025-09-03 11-39-03.0549[PrintText]Begin
+2025-09-03 11-39-03.0549[PrintText]<Text to Print>:
+Date/Time        : 03-09-2025 11:38:22
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT
+Platform NO.     : 1
+From             : Gandhi Nagar
+To               : Super Corridor 5
+Price            : Rs. 20/-
+Ticket No.       : 8W6BPEQ9P070003
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-03 11-39-03.0549[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:20<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-03 11-39-03.0549[PrintText]<Add LF>:false
+2025-09-03 11-39-03.0564[PrintText]End
+2025-09-03 11-39-03.0564[Cut]Begin
+2025-09-03 11-39-03.0564[Cut]CutType:CUT_TOTAL
+2025-09-03 11-39-03.0570[Cut]End
+2025-09-03 11-43-24.0068[]*****************************************
+2025-09-03 11-43-24.0070[]DLL Log Initialize. Verbosity: 6
+2025-09-03 11-43-24.0071[]*****************************************
+2025-09-03 11-43-24.0072[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 11-43-24.0073[]DLL Version: 1.07
+2025-09-03 11-43-24.0073[InitLibrary]Begin
+2025-09-03 11-43-24.0106[InitLibrary]Library SignID:00000101
+2025-09-03 11-43-24.0106[InitLibrary]Current SignID:00000101
+2025-09-03 11-43-24.0107[InitLibrary]End
+2025-09-03 11-43-24.0108[GetAPIVersion]Begin
+2025-09-03 11-43-24.0109[GetAPIVersion]API rel 1.07
+2025-09-03 11-43-24.0109[GetAPIVersion]End
+2025-09-03 11-43-24.0111[GetAPIVersionHwLibrary]Begin
+2025-09-03 11-43-24.0113[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 11-43-24.0114[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 11-43-24.0115[GetAPIVersionHwLibrary]End
+2025-09-03 11-43-24.0116[EnumUSBDevices]Begin
+2025-09-03 11-43-24.0123[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 11-43-24.0123[EnumUSBDevices]End
+2025-09-03 11-43-24.0124[OpenPrinterUSB]Begin
+2025-09-03 11-43-24.0124[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 11-43-24.0131[OpenPrinterUSB]New device ID:00000101
+2025-09-03 11-43-24.0132[OpenPrinterUSB]End
+2025-09-03 11-43-24.0135[GetInfoDeviceModel]Begin
+2025-09-03 11-43-24.0138[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 11-43-24.0139[GetInfoDeviceModel]End
+2025-09-03 11-43-24.0140[GetInfoFirmwareVersion]Begin
+2025-09-03 11-43-24.0143[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 11-43-24.0143[GetInfoFirmwareVersion]End
+2025-09-03 11-43-24.0144[GetCapCommPortType]Begin
+2025-09-03 11-43-24.0148[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 11-43-24.0149[GetCapCommPortType]End
+2025-09-03 11-43-24.0150[GetCapPrinterResolution]Begin
+2025-09-03 11-43-24.0152[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 11-43-24.0153[GetCapPrinterResolution]End
+2025-09-03 11-43-24.0153[GetCapPrintWidth]Begin
+2025-09-03 11-43-24.0155[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 11-43-24.0157[GetCapPrintWidth]End
+2025-09-03 11-44-13.0340[PrintImageFromPath]Begin
+2025-09-03 11-44-13.0341[PrintImageFromPath]<Image File Path>:src\main\resources\images\mpmrc.jpg
+2025-09-03 11-44-13.0341[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-09-03 11-44-13.0366[PrintImageFromPath]End
+2025-09-03 11-44-13.0370[PrintBarcode]Begin
+2025-09-03 11-44-13.0375[PrintText]Begin
+2025-09-03 11-44-13.0376[PrintText]<Text to Print>:
+Date/Time        : 03-09-2025 11:43:52
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT
+Platform NO.     : 1
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W6BPEQ9P080001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-03 11-44-13.0377[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:20<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-03 11-44-13.0378[PrintText]<Add LF>:false
+2025-09-03 11-44-13.0383[PrintText]End
+2025-09-03 11-44-13.0384[Cut]Begin
+2025-09-03 11-44-13.0385[Cut]CutType:CUT_TOTAL
+2025-09-03 11-44-13.0389[Cut]End
+2025-09-03 11-45-54.0167[]*****************************************
+2025-09-03 11-45-54.0169[]DLL Log Initialize. Verbosity: 6
+2025-09-03 11-45-54.0170[]*****************************************
+2025-09-03 11-45-54.0170[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 11-45-54.0171[]DLL Version: 1.07
+2025-09-03 11-45-54.0171[InitLibrary]Begin
+2025-09-03 11-45-54.0199[InitLibrary]Library SignID:00000101
+2025-09-03 11-45-54.0200[InitLibrary]Current SignID:00000101
+2025-09-03 11-45-54.0201[InitLibrary]End
+2025-09-03 11-45-54.0201[GetAPIVersion]Begin
+2025-09-03 11-45-54.0202[GetAPIVersion]API rel 1.07
+2025-09-03 11-45-54.0202[GetAPIVersion]End
+2025-09-03 11-45-54.0204[GetAPIVersionHwLibrary]Begin
+2025-09-03 11-45-54.0206[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 11-45-54.0207[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 11-45-54.0207[GetAPIVersionHwLibrary]End
+2025-09-03 11-45-54.0207[EnumUSBDevices]Begin
+2025-09-03 11-45-54.0216[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 11-45-54.0216[EnumUSBDevices]End
+2025-09-03 11-45-54.0217[OpenPrinterUSB]Begin
+2025-09-03 11-45-54.0218[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 11-45-54.0225[OpenPrinterUSB]New device ID:00000101
+2025-09-03 11-45-54.0225[OpenPrinterUSB]End
+2025-09-03 11-45-54.0229[GetInfoDeviceModel]Begin
+2025-09-03 11-45-54.0232[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 11-45-54.0232[GetInfoDeviceModel]End
+2025-09-03 11-45-54.0233[GetInfoFirmwareVersion]Begin
+2025-09-03 11-45-54.0236[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 11-45-54.0237[GetInfoFirmwareVersion]End
+2025-09-03 11-45-54.0237[GetCapCommPortType]Begin
+2025-09-03 11-45-54.0240[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 11-45-54.0241[GetCapCommPortType]End
+2025-09-03 11-45-54.0242[GetCapPrinterResolution]Begin
+2025-09-03 11-45-54.0244[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 11-45-54.0245[GetCapPrinterResolution]End
+2025-09-03 11-45-54.0245[GetCapPrintWidth]Begin
+2025-09-03 11-45-54.0247[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 11-45-54.0248[GetCapPrintWidth]End
+2025-09-03 11-46-54.0781[PrintImageFromPath]Begin
+2025-09-03 11-46-54.0787[PrintImageFromPath]<Image File Path>:src\main\resources\images\mpmrc.jpg
+2025-09-03 11-46-54.0789[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-09-03 11-46-54.0823[PrintImageFromPath]End
+2025-09-03 11-46-54.0825[PrintBarcode]Begin
+2025-09-03 11-46-54.0839[PrintText]Begin
+2025-09-03 11-46-54.0840[PrintText]<Text to Print>:
+Date/Time        : 03-09-2025 11:46:36
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT
+Platform NO.     : 1
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W6BPEQ9P090001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-03 11-46-54.0840[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:20<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-03 11-46-54.0842[PrintText]<Add LF>:false
+2025-09-03 11-46-54.0842[PrintText]End
+2025-09-03 11-46-54.0852[Cut]Begin
+2025-09-03 11-46-54.0852[Cut]CutType:CUT_TOTAL
+2025-09-03 11-46-54.0859[Cut]End
+2025-09-03 12-07-40.0457[]*****************************************
+2025-09-03 12-07-40.0459[]DLL Log Initialize. Verbosity: 6
+2025-09-03 12-07-40.0460[]*****************************************
+2025-09-03 12-07-40.0462[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 12-07-40.0463[]DLL Version: 1.07
+2025-09-03 12-07-40.0464[InitLibrary]Begin
+2025-09-03 12-07-40.0573[InitLibrary]Library SignID:00000101
+2025-09-03 12-07-40.0575[InitLibrary]Current SignID:00000101
+2025-09-03 12-07-40.0576[InitLibrary]End
+2025-09-03 12-07-40.0777[GetAPIVersion]Begin
+2025-09-03 12-07-40.0779[GetAPIVersion]API rel 1.07
+2025-09-03 12-07-40.0781[GetAPIVersion]End
+2025-09-03 12-07-40.0782[GetAPIVersionHwLibrary]Begin
+2025-09-03 12-07-40.0786[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 12-07-40.0787[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 12-07-40.0788[GetAPIVersionHwLibrary]End
+2025-09-03 12-07-40.0789[EnumUSBDevices]Begin
+2025-09-03 12-07-40.0797[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 12-07-40.0797[EnumUSBDevices]End
+2025-09-03 12-07-40.0798[OpenPrinterUSB]Begin
+2025-09-03 12-07-40.0799[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 12-07-40.0806[OpenPrinterUSB]New device ID:00000101
+2025-09-03 12-07-40.0806[OpenPrinterUSB]End
+2025-09-03 12-07-40.0809[GetInfoDeviceModel]Begin
+2025-09-03 12-07-40.0812[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 12-07-40.0813[GetInfoDeviceModel]End
+2025-09-03 12-07-40.0813[GetInfoFirmwareVersion]Begin
+2025-09-03 12-07-40.0816[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 12-07-40.0817[GetInfoFirmwareVersion]End
+2025-09-03 12-07-40.0818[GetCapCommPortType]Begin
+2025-09-03 12-07-40.0823[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 12-07-40.0826[GetCapCommPortType]End
+2025-09-03 12-07-40.0828[GetCapPrinterResolution]Begin
+2025-09-03 12-07-40.0833[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 12-07-40.0834[GetCapPrinterResolution]End
+2025-09-03 12-07-40.0837[GetCapPrintWidth]Begin
+2025-09-03 12-07-40.0842[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 12-07-40.0843[GetCapPrintWidth]End
+2025-09-03 12-09-31.0188[]*****************************************
+2025-09-03 12-09-31.0190[]DLL Log Initialize. Verbosity: 6
+2025-09-03 12-09-31.0193[]*****************************************
+2025-09-03 12-09-31.0195[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 12-09-31.0196[]DLL Version: 1.07
+2025-09-03 12-09-31.0197[InitLibrary]Begin
+2025-09-03 12-09-31.0261[InitLibrary]Library SignID:00000101
+2025-09-03 12-09-31.0262[InitLibrary]Current SignID:00000101
+2025-09-03 12-09-31.0263[InitLibrary]End
+2025-09-03 12-09-31.0265[GetAPIVersion]Begin
+2025-09-03 12-09-31.0267[GetAPIVersion]API rel 1.07
+2025-09-03 12-09-31.0268[GetAPIVersion]End
+2025-09-03 12-09-31.0269[GetAPIVersionHwLibrary]Begin
+2025-09-03 12-09-31.0273[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 12-09-31.0275[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 12-09-31.0276[GetAPIVersionHwLibrary]End
+2025-09-03 12-09-31.0277[EnumUSBDevices]Begin
+2025-09-03 12-09-31.0283[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 12-09-31.0285[EnumUSBDevices]End
+2025-09-03 12-09-31.0286[OpenPrinterUSB]Begin
+2025-09-03 12-09-31.0286[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 12-09-31.0291[OpenPrinterUSB]New device ID:00000101
+2025-09-03 12-09-31.0293[OpenPrinterUSB]End
+2025-09-03 12-09-31.0451[GetInfoDeviceModel]Begin
+2025-09-03 12-09-31.0458[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 12-09-31.0459[GetInfoDeviceModel]End
+2025-09-03 12-09-31.0460[GetInfoFirmwareVersion]Begin
+2025-09-03 12-09-31.0465[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 12-09-31.0466[GetInfoFirmwareVersion]End
+2025-09-03 12-09-31.0467[GetCapCommPortType]Begin
+2025-09-03 12-09-31.0472[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 12-09-31.0473[GetCapCommPortType]End
+2025-09-03 12-09-31.0474[GetCapPrinterResolution]Begin
+2025-09-03 12-09-31.0478[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 12-09-31.0479[GetCapPrinterResolution]End
+2025-09-03 12-09-31.0480[GetCapPrintWidth]Begin
+2025-09-03 12-09-31.0485[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 12-09-31.0486[GetCapPrintWidth]End
+2025-09-03 12-10-55.0550[]*****************************************
+2025-09-03 12-10-55.0552[]DLL Log Initialize. Verbosity: 6
+2025-09-03 12-10-55.0553[]*****************************************
+2025-09-03 12-10-55.0554[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 12-10-55.0556[]DLL Version: 1.07
+2025-09-03 12-10-55.0557[InitLibrary]Begin
+2025-09-03 12-10-55.0660[InitLibrary]Library SignID:00000101
+2025-09-03 12-10-55.0661[InitLibrary]Current SignID:00000101
+2025-09-03 12-10-55.0665[InitLibrary]End
+2025-09-03 12-10-55.0666[GetAPIVersion]Begin
+2025-09-03 12-10-55.0667[GetAPIVersion]API rel 1.07
+2025-09-03 12-10-55.0669[GetAPIVersion]End
+2025-09-03 12-10-55.0670[GetAPIVersionHwLibrary]Begin
+2025-09-03 12-10-55.0675[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 12-10-55.0677[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 12-10-55.0678[GetAPIVersionHwLibrary]End
+2025-09-03 12-10-55.0680[EnumUSBDevices]Begin
+2025-09-03 12-10-55.0694[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 12-10-55.0695[EnumUSBDevices]End
+2025-09-03 12-10-55.0696[OpenPrinterUSB]Begin
+2025-09-03 12-10-55.0697[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 12-10-55.0704[OpenPrinterUSB]New device ID:00000101
+2025-09-03 12-10-55.0705[OpenPrinterUSB]End
+2025-09-03 12-10-55.0709[GetInfoDeviceModel]Begin
+2025-09-03 12-10-55.0714[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 12-10-55.0715[GetInfoDeviceModel]End
+2025-09-03 12-10-55.0715[GetInfoFirmwareVersion]Begin
+2025-09-03 12-10-55.0718[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 12-10-55.0719[GetInfoFirmwareVersion]End
+2025-09-03 12-10-55.0720[GetCapCommPortType]Begin
+2025-09-03 12-10-55.0722[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 12-10-55.0722[GetCapCommPortType]End
+2025-09-03 12-10-55.0724[GetCapPrinterResolution]Begin
+2025-09-03 12-10-55.0726[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 12-10-55.0726[GetCapPrinterResolution]End
+2025-09-03 12-10-55.0727[GetCapPrintWidth]Begin
+2025-09-03 12-10-55.0729[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 12-10-55.0729[GetCapPrintWidth]End
+2025-09-03 12-11-50.0317[]*****************************************
+2025-09-03 12-11-50.0320[]DLL Log Initialize. Verbosity: 6
+2025-09-03 12-11-50.0321[]*****************************************
+2025-09-03 12-11-50.0322[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 12-11-50.0323[]DLL Version: 1.07
+2025-09-03 12-11-50.0323[InitLibrary]Begin
+2025-09-03 12-11-50.0354[InitLibrary]Library SignID:00000101
+2025-09-03 12-11-50.0355[InitLibrary]Current SignID:00000101
+2025-09-03 12-11-50.0356[InitLibrary]End
+2025-09-03 12-11-50.0356[GetAPIVersion]Begin
+2025-09-03 12-11-50.0357[GetAPIVersion]API rel 1.07
+2025-09-03 12-11-50.0358[GetAPIVersion]End
+2025-09-03 12-11-50.0359[GetAPIVersionHwLibrary]Begin
+2025-09-03 12-11-50.0362[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 12-11-50.0363[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 12-11-50.0364[GetAPIVersionHwLibrary]End
+2025-09-03 12-11-50.0365[EnumUSBDevices]Begin
+2025-09-03 12-11-50.0374[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 12-11-50.0375[EnumUSBDevices]End
+2025-09-03 12-11-50.0375[OpenPrinterUSB]Begin
+2025-09-03 12-11-50.0376[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 12-11-50.0384[OpenPrinterUSB]New device ID:00000101
+2025-09-03 12-11-50.0385[OpenPrinterUSB]End
+2025-09-03 12-11-50.0391[GetInfoDeviceModel]Begin
+2025-09-03 12-11-50.0397[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 12-11-50.0398[GetInfoDeviceModel]End
+2025-09-03 12-11-50.0398[GetInfoFirmwareVersion]Begin
+2025-09-03 12-11-50.0403[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 12-11-50.0404[GetInfoFirmwareVersion]End
+2025-09-03 12-11-50.0406[GetCapCommPortType]Begin
+2025-09-03 12-11-50.0410[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 12-11-50.0410[GetCapCommPortType]End
+2025-09-03 12-11-50.0411[GetCapPrinterResolution]Begin
+2025-09-03 12-11-50.0415[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 12-11-50.0417[GetCapPrinterResolution]End
+2025-09-03 12-11-50.0417[GetCapPrintWidth]Begin
+2025-09-03 12-11-50.0420[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 12-11-50.0421[GetCapPrintWidth]End
+2025-09-03 12-13-22.0467[]*****************************************
+2025-09-03 12-13-22.0471[]DLL Log Initialize. Verbosity: 6
+2025-09-03 12-13-22.0474[]*****************************************
+2025-09-03 12-13-22.0475[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 12-13-22.0479[]DLL Version: 1.07
+2025-09-03 12-13-22.0480[InitLibrary]Begin
+2025-09-03 12-13-22.0554[InitLibrary]Library SignID:00000101
+2025-09-03 12-13-22.0556[InitLibrary]Current SignID:00000101
+2025-09-03 12-13-22.0557[InitLibrary]End
+2025-09-03 12-13-22.0769[GetAPIVersion]Begin
+2025-09-03 12-13-22.0771[GetAPIVersion]API rel 1.07
+2025-09-03 12-13-22.0772[GetAPIVersion]End
+2025-09-03 12-13-22.0774[GetAPIVersionHwLibrary]Begin
+2025-09-03 12-13-22.0777[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 12-13-22.0779[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 12-13-22.0780[GetAPIVersionHwLibrary]End
+2025-09-03 12-13-22.0781[EnumUSBDevices]Begin
+2025-09-03 12-13-22.0794[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 12-13-22.0795[EnumUSBDevices]End
+2025-09-03 12-13-22.0797[OpenPrinterUSB]Begin
+2025-09-03 12-13-22.0798[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 12-13-22.0807[OpenPrinterUSB]New device ID:00000101
+2025-09-03 12-13-22.0808[OpenPrinterUSB]End
+2025-09-03 12-13-22.0811[GetInfoDeviceModel]Begin
+2025-09-03 12-13-22.0815[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 12-13-22.0816[GetInfoDeviceModel]End
+2025-09-03 12-13-22.0817[GetInfoFirmwareVersion]Begin
+2025-09-03 12-13-22.0819[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 12-13-22.0820[GetInfoFirmwareVersion]End
+2025-09-03 12-13-22.0821[GetCapCommPortType]Begin
+2025-09-03 12-13-22.0825[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 12-13-22.0826[GetCapCommPortType]End
+2025-09-03 12-13-22.0826[GetCapPrinterResolution]Begin
+2025-09-03 12-13-22.0829[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 12-13-22.0830[GetCapPrinterResolution]End
+2025-09-03 12-13-22.0830[GetCapPrintWidth]Begin
+2025-09-03 12-13-22.0832[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 12-13-22.0833[GetCapPrintWidth]End
+2025-09-03 12-21-30.0349[]*****************************************
+2025-09-03 12-21-30.0351[]DLL Log Initialize. Verbosity: 6
+2025-09-03 12-21-30.0352[]*****************************************
+2025-09-03 12-21-30.0354[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 12-21-30.0355[]DLL Version: 1.07
+2025-09-03 12-21-30.0356[InitLibrary]Begin
+2025-09-03 12-21-30.0399[InitLibrary]Library SignID:00000101
+2025-09-03 12-21-30.0400[InitLibrary]Current SignID:00000101
+2025-09-03 12-21-30.0400[InitLibrary]End
+2025-09-03 12-21-30.0401[GetAPIVersion]Begin
+2025-09-03 12-21-30.0401[GetAPIVersion]API rel 1.07
+2025-09-03 12-21-30.0402[GetAPIVersion]End
+2025-09-03 12-21-30.0402[GetAPIVersionHwLibrary]Begin
+2025-09-03 12-21-30.0404[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 12-21-30.0405[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 12-21-30.0405[GetAPIVersionHwLibrary]End
+2025-09-03 12-21-30.0406[EnumUSBDevices]Begin
+2025-09-03 12-21-30.0412[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 12-21-30.0413[EnumUSBDevices]End
+2025-09-03 12-21-30.0414[OpenPrinterUSB]Begin
+2025-09-03 12-21-30.0414[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 12-21-30.0421[OpenPrinterUSB]New device ID:00000101
+2025-09-03 12-21-30.0422[OpenPrinterUSB]End
+2025-09-03 12-21-30.0425[GetInfoDeviceModel]Begin
+2025-09-03 12-21-30.0428[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 12-21-30.0428[GetInfoDeviceModel]End
+2025-09-03 12-21-30.0429[GetInfoFirmwareVersion]Begin
+2025-09-03 12-21-30.0433[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 12-21-30.0433[GetInfoFirmwareVersion]End
+2025-09-03 12-21-30.0434[GetCapCommPortType]Begin
+2025-09-03 12-21-30.0439[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 12-21-30.0440[GetCapCommPortType]End
+2025-09-03 12-21-30.0441[GetCapPrinterResolution]Begin
+2025-09-03 12-21-30.0452[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 12-21-30.0454[GetCapPrinterResolution]End
+2025-09-03 12-21-30.0456[GetCapPrintWidth]Begin
+2025-09-03 12-21-30.0463[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 12-21-30.0465[GetCapPrintWidth]End
+2025-09-03 12-25-11.0040[]*****************************************
+2025-09-03 12-25-11.0043[]DLL Log Initialize. Verbosity: 6
+2025-09-03 12-25-11.0045[]*****************************************
+2025-09-03 12-25-11.0047[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 12-25-11.0048[]DLL Version: 1.07
+2025-09-03 12-25-11.0049[InitLibrary]Begin
+2025-09-03 12-25-11.0093[InitLibrary]Library SignID:00000101
+2025-09-03 12-25-11.0093[InitLibrary]Current SignID:00000101
+2025-09-03 12-25-11.0094[InitLibrary]End
+2025-09-03 12-25-11.0095[GetAPIVersion]Begin
+2025-09-03 12-25-11.0096[GetAPIVersion]API rel 1.07
+2025-09-03 12-25-11.0098[GetAPIVersion]End
+2025-09-03 12-25-11.0100[GetAPIVersionHwLibrary]Begin
+2025-09-03 12-25-11.0104[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 12-25-11.0105[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 12-25-11.0106[GetAPIVersionHwLibrary]End
+2025-09-03 12-25-11.0108[EnumUSBDevices]Begin
+2025-09-03 12-25-11.0116[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 12-25-11.0117[EnumUSBDevices]End
+2025-09-03 12-25-11.0118[OpenPrinterUSB]Begin
+2025-09-03 12-25-11.0119[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 12-25-11.0127[OpenPrinterUSB]New device ID:00000101
+2025-09-03 12-25-11.0128[OpenPrinterUSB]End
+2025-09-03 12-25-11.0131[GetInfoDeviceModel]Begin
+2025-09-03 12-25-11.0138[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 12-25-11.0139[GetInfoDeviceModel]End
+2025-09-03 12-25-11.0140[GetInfoFirmwareVersion]Begin
+2025-09-03 12-25-11.0144[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 12-25-11.0145[GetInfoFirmwareVersion]End
+2025-09-03 12-25-11.0146[GetCapCommPortType]Begin
+2025-09-03 12-25-11.0151[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 12-25-11.0152[GetCapCommPortType]End
+2025-09-03 12-25-11.0176[GetCapPrinterResolution]Begin
+2025-09-03 12-25-11.0180[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 12-25-11.0180[GetCapPrinterResolution]End
+2025-09-03 12-25-11.0181[GetCapPrintWidth]Begin
+2025-09-03 12-25-11.0185[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 12-25-11.0186[GetCapPrintWidth]End
+2025-09-03 12-26-26.0022[]*****************************************
+2025-09-03 12-26-26.0024[]DLL Log Initialize. Verbosity: 6
+2025-09-03 12-26-26.0025[]*****************************************
+2025-09-03 12-26-26.0025[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 12-26-26.0026[]DLL Version: 1.07
+2025-09-03 12-26-26.0026[InitLibrary]Begin
+2025-09-03 12-26-26.0050[InitLibrary]Library SignID:00000101
+2025-09-03 12-26-26.0052[InitLibrary]Current SignID:00000101
+2025-09-03 12-26-26.0053[InitLibrary]End
+2025-09-03 12-26-26.0053[GetAPIVersion]Begin
+2025-09-03 12-26-26.0054[GetAPIVersion]API rel 1.07
+2025-09-03 12-26-26.0054[GetAPIVersion]End
+2025-09-03 12-26-26.0055[GetAPIVersionHwLibrary]Begin
+2025-09-03 12-26-26.0058[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 12-26-26.0060[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 12-26-26.0062[GetAPIVersionHwLibrary]End
+2025-09-03 12-26-26.0064[EnumUSBDevices]Begin
+2025-09-03 12-26-26.0080[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 12-26-26.0082[EnumUSBDevices]End
+2025-09-03 12-26-26.0084[OpenPrinterUSB]Begin
+2025-09-03 12-26-26.0086[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 12-26-26.0100[OpenPrinterUSB]New device ID:00000101
+2025-09-03 12-26-26.0101[OpenPrinterUSB]End
+2025-09-03 12-26-26.0105[GetInfoDeviceModel]Begin
+2025-09-03 12-26-26.0108[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 12-26-26.0109[GetInfoDeviceModel]End
+2025-09-03 12-26-26.0110[GetInfoFirmwareVersion]Begin
+2025-09-03 12-26-26.0113[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 12-26-26.0114[GetInfoFirmwareVersion]End
+2025-09-03 12-26-26.0114[GetCapCommPortType]Begin
+2025-09-03 12-26-26.0118[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 12-26-26.0118[GetCapCommPortType]End
+2025-09-03 12-26-26.0119[GetCapPrinterResolution]Begin
+2025-09-03 12-26-26.0122[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 12-26-26.0123[GetCapPrinterResolution]End
+2025-09-03 12-26-26.0124[GetCapPrintWidth]Begin
+2025-09-03 12-26-26.0150[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 12-26-26.0151[GetCapPrintWidth]End
+2025-09-03 12-29-26.0258[]*****************************************
+2025-09-03 12-29-26.0259[]DLL Log Initialize. Verbosity: 6
+2025-09-03 12-29-26.0260[]*****************************************
+2025-09-03 12-29-26.0261[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 12-29-26.0261[]DLL Version: 1.07
+2025-09-03 12-29-26.0262[InitLibrary]Begin
+2025-09-03 12-29-26.0321[InitLibrary]Library SignID:00000101
+2025-09-03 12-29-26.0321[InitLibrary]Current SignID:00000101
+2025-09-03 12-29-26.0322[InitLibrary]End
+2025-09-03 12-29-26.0322[GetAPIVersion]Begin
+2025-09-03 12-29-26.0323[GetAPIVersion]API rel 1.07
+2025-09-03 12-29-26.0323[GetAPIVersion]End
+2025-09-03 12-29-26.0324[GetAPIVersionHwLibrary]Begin
+2025-09-03 12-29-26.0326[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 12-29-26.0327[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 12-29-26.0327[GetAPIVersionHwLibrary]End
+2025-09-03 12-29-26.0328[EnumUSBDevices]Begin
+2025-09-03 12-29-26.0334[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 12-29-26.0335[EnumUSBDevices]End
+2025-09-03 12-29-26.0410[OpenPrinterUSB]Begin
+2025-09-03 12-29-26.0412[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 12-29-26.0420[OpenPrinterUSB]New device ID:00000101
+2025-09-03 12-29-26.0422[OpenPrinterUSB]End
+2025-09-03 12-29-26.0426[GetInfoDeviceModel]Begin
+2025-09-03 12-29-26.0430[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 12-29-26.0430[GetInfoDeviceModel]End
+2025-09-03 12-29-26.0431[GetInfoFirmwareVersion]Begin
+2025-09-03 12-29-26.0436[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 12-29-26.0437[GetInfoFirmwareVersion]End
+2025-09-03 12-29-26.0438[GetCapCommPortType]Begin
+2025-09-03 12-29-26.0441[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 12-29-26.0442[GetCapCommPortType]End
+2025-09-03 12-29-26.0443[GetCapPrinterResolution]Begin
+2025-09-03 12-29-26.0447[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 12-29-26.0448[GetCapPrinterResolution]End
+2025-09-03 12-29-26.0449[GetCapPrintWidth]Begin
+2025-09-03 12-29-26.0452[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 12-29-26.0453[GetCapPrintWidth]End
+2025-09-03 12-31-18.0892[]*****************************************
+2025-09-03 12-31-18.0893[]DLL Log Initialize. Verbosity: 6
+2025-09-03 12-31-18.0895[]*****************************************
+2025-09-03 12-31-18.0896[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 12-31-18.0897[]DLL Version: 1.07
+2025-09-03 12-31-18.0898[InitLibrary]Begin
+2025-09-03 12-31-18.0937[InitLibrary]Library SignID:00000101
+2025-09-03 12-31-18.0937[InitLibrary]Current SignID:00000101
+2025-09-03 12-31-18.0938[InitLibrary]End
+2025-09-03 12-31-18.0939[GetAPIVersion]Begin
+2025-09-03 12-31-18.0939[GetAPIVersion]API rel 1.07
+2025-09-03 12-31-18.0940[GetAPIVersion]End
+2025-09-03 12-31-18.0941[GetAPIVersionHwLibrary]Begin
+2025-09-03 12-31-18.0942[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 12-31-18.0944[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 12-31-18.0944[GetAPIVersionHwLibrary]End
+2025-09-03 12-31-18.0945[EnumUSBDevices]Begin
+2025-09-03 12-31-18.0953[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 12-31-18.0954[EnumUSBDevices]End
+2025-09-03 12-31-18.0956[OpenPrinterUSB]Begin
+2025-09-03 12-31-18.0957[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 12-31-18.0964[OpenPrinterUSB]New device ID:00000101
+2025-09-03 12-31-18.0965[OpenPrinterUSB]End
+2025-09-03 12-31-18.0970[GetInfoDeviceModel]Begin
+2025-09-03 12-31-18.0975[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 12-31-18.0976[GetInfoDeviceModel]End
+2025-09-03 12-31-18.0977[GetInfoFirmwareVersion]Begin
+2025-09-03 12-31-18.0983[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 12-31-18.0986[GetInfoFirmwareVersion]End
+2025-09-03 12-31-18.0988[GetCapCommPortType]Begin
+2025-09-03 12-31-18.0997[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 12-31-18.0998[GetCapCommPortType]End
+2025-09-03 12-31-19.0000[GetCapPrinterResolution]Begin
+2025-09-03 12-31-19.0006[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 12-31-19.0008[GetCapPrinterResolution]End
+2025-09-03 12-31-19.0014[GetCapPrintWidth]Begin
+2025-09-03 12-31-19.0021[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 12-31-19.0022[GetCapPrintWidth]End
+2025-09-03 12-34-20.0697[]*****************************************
+2025-09-03 12-34-20.0698[]DLL Log Initialize. Verbosity: 6
+2025-09-03 12-34-20.0699[]*****************************************
+2025-09-03 12-34-20.0700[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 12-34-20.0701[]DLL Version: 1.07
+2025-09-03 12-34-20.0701[InitLibrary]Begin
+2025-09-03 12-34-20.0729[InitLibrary]Library SignID:00000101
+2025-09-03 12-34-20.0730[InitLibrary]Current SignID:00000101
+2025-09-03 12-34-20.0730[InitLibrary]End
+2025-09-03 12-34-20.0731[GetAPIVersion]Begin
+2025-09-03 12-34-20.0732[GetAPIVersion]API rel 1.07
+2025-09-03 12-34-20.0732[GetAPIVersion]End
+2025-09-03 12-34-20.0733[GetAPIVersionHwLibrary]Begin
+2025-09-03 12-34-20.0735[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 12-34-20.0736[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 12-34-20.0736[GetAPIVersionHwLibrary]End
+2025-09-03 12-34-20.0737[EnumUSBDevices]Begin
+2025-09-03 12-34-20.0752[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 12-34-20.0756[EnumUSBDevices]End
+2025-09-03 12-34-20.0875[OpenPrinterUSB]Begin
+2025-09-03 12-34-20.0877[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 12-34-20.0884[OpenPrinterUSB]New device ID:00000101
+2025-09-03 12-34-20.0885[OpenPrinterUSB]End
+2025-09-03 12-34-20.0889[GetInfoDeviceModel]Begin
+2025-09-03 12-34-20.0891[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 12-34-20.0892[GetInfoDeviceModel]End
+2025-09-03 12-34-20.0893[GetInfoFirmwareVersion]Begin
+2025-09-03 12-34-20.0896[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 12-34-20.0897[GetInfoFirmwareVersion]End
+2025-09-03 12-34-20.0897[GetCapCommPortType]Begin
+2025-09-03 12-34-20.0902[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 12-34-20.0903[GetCapCommPortType]End
+2025-09-03 12-34-20.0904[GetCapPrinterResolution]Begin
+2025-09-03 12-34-20.0909[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 12-34-20.0911[GetCapPrinterResolution]End
+2025-09-03 12-34-20.0911[GetCapPrintWidth]Begin
+2025-09-03 12-34-20.0915[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 12-34-20.0916[GetCapPrintWidth]End
+2025-09-03 12-37-21.0043[]*****************************************
+2025-09-03 12-37-21.0048[]DLL Log Initialize. Verbosity: 6
+2025-09-03 12-37-21.0050[]*****************************************
+2025-09-03 12-37-21.0052[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 12-37-21.0054[]DLL Version: 1.07
+2025-09-03 12-37-21.0057[InitLibrary]Begin
+2025-09-03 12-37-21.0097[InitLibrary]Library SignID:00000101
+2025-09-03 12-37-21.0098[InitLibrary]Current SignID:00000101
+2025-09-03 12-37-21.0099[InitLibrary]End
+2025-09-03 12-37-21.0165[GetAPIVersion]Begin
+2025-09-03 12-37-21.0166[GetAPIVersion]API rel 1.07
+2025-09-03 12-37-21.0168[GetAPIVersion]End
+2025-09-03 12-37-21.0169[GetAPIVersionHwLibrary]Begin
+2025-09-03 12-37-21.0172[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 12-37-21.0173[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 12-37-21.0174[GetAPIVersionHwLibrary]End
+2025-09-03 12-37-21.0174[EnumUSBDevices]Begin
+2025-09-03 12-37-21.0181[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 12-37-21.0183[EnumUSBDevices]End
+2025-09-03 12-37-21.0183[OpenPrinterUSB]Begin
+2025-09-03 12-37-21.0184[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 12-37-21.0190[OpenPrinterUSB]New device ID:00000101
+2025-09-03 12-37-21.0191[OpenPrinterUSB]End
+2025-09-03 12-37-21.0194[GetInfoDeviceModel]Begin
+2025-09-03 12-37-21.0198[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 12-37-21.0199[GetInfoDeviceModel]End
+2025-09-03 12-37-21.0199[GetInfoFirmwareVersion]Begin
+2025-09-03 12-37-21.0203[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 12-37-21.0204[GetInfoFirmwareVersion]End
+2025-09-03 12-37-21.0204[GetCapCommPortType]Begin
+2025-09-03 12-37-21.0209[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 12-37-21.0209[GetCapCommPortType]End
+2025-09-03 12-37-21.0211[GetCapPrinterResolution]Begin
+2025-09-03 12-37-21.0213[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 12-37-21.0214[GetCapPrinterResolution]End
+2025-09-03 12-37-21.0215[GetCapPrintWidth]Begin
+2025-09-03 12-37-21.0217[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 12-37-21.0218[GetCapPrintWidth]End
+2025-09-03 13-02-24.0789[]*****************************************
+2025-09-03 13-02-24.0791[]DLL Log Initialize. Verbosity: 6
+2025-09-03 13-02-24.0792[]*****************************************
+2025-09-03 13-02-24.0794[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 13-02-24.0795[]DLL Version: 1.07
+2025-09-03 13-02-24.0798[InitLibrary]Begin
+2025-09-03 13-02-24.0852[InitLibrary]Library SignID:00000101
+2025-09-03 13-02-24.0852[InitLibrary]Current SignID:00000101
+2025-09-03 13-02-24.0853[InitLibrary]End
+2025-09-03 13-02-24.0854[GetAPIVersion]Begin
+2025-09-03 13-02-24.0856[GetAPIVersion]API rel 1.07
+2025-09-03 13-02-24.0857[GetAPIVersion]End
+2025-09-03 13-02-24.0858[GetAPIVersionHwLibrary]Begin
+2025-09-03 13-02-24.0861[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 13-02-24.0862[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 13-02-24.0863[GetAPIVersionHwLibrary]End
+2025-09-03 13-02-24.0907[EnumUSBDevices]Begin
+2025-09-03 13-02-24.0921[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 13-02-24.0922[EnumUSBDevices]End
+2025-09-03 13-02-24.0925[OpenPrinterUSB]Begin
+2025-09-03 13-02-24.0927[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 13-02-24.0936[OpenPrinterUSB]New device ID:00000101
+2025-09-03 13-02-24.0938[OpenPrinterUSB]End
+2025-09-03 13-02-24.0944[GetInfoDeviceModel]Begin
+2025-09-03 13-02-24.0950[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 13-02-24.0951[GetInfoDeviceModel]End
+2025-09-03 13-02-24.0953[GetInfoFirmwareVersion]Begin
+2025-09-03 13-02-24.0960[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 13-02-24.0961[GetInfoFirmwareVersion]End
+2025-09-03 13-02-24.0962[GetCapCommPortType]Begin
+2025-09-03 13-02-24.0968[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 13-02-24.0969[GetCapCommPortType]End
+2025-09-03 13-02-24.0970[GetCapPrinterResolution]Begin
+2025-09-03 13-02-24.0973[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 13-02-24.0974[GetCapPrinterResolution]End
+2025-09-03 13-02-24.0974[GetCapPrintWidth]Begin
+2025-09-03 13-02-24.0978[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 13-02-24.0979[GetCapPrintWidth]End
+2025-09-03 13-06-21.0536[]*****************************************
+2025-09-03 13-06-21.0541[]DLL Log Initialize. Verbosity: 6
+2025-09-03 13-06-21.0543[]*****************************************
+2025-09-03 13-06-21.0545[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 13-06-21.0546[]DLL Version: 1.07
+2025-09-03 13-06-21.0549[InitLibrary]Begin
+2025-09-03 13-06-21.0615[InitLibrary]Library SignID:00000101
+2025-09-03 13-06-21.0616[InitLibrary]Current SignID:00000101
+2025-09-03 13-06-21.0619[InitLibrary]End
+2025-09-03 13-06-21.0621[GetAPIVersion]Begin
+2025-09-03 13-06-21.0623[GetAPIVersion]API rel 1.07
+2025-09-03 13-06-21.0624[GetAPIVersion]End
+2025-09-03 13-06-21.0625[GetAPIVersionHwLibrary]Begin
+2025-09-03 13-06-21.0632[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 13-06-21.0634[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 13-06-21.0636[GetAPIVersionHwLibrary]End
+2025-09-03 13-06-21.0637[EnumUSBDevices]Begin
+2025-09-03 13-06-21.0650[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 13-06-21.0651[EnumUSBDevices]End
+2025-09-03 13-06-21.0652[OpenPrinterUSB]Begin
+2025-09-03 13-06-21.0653[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 13-06-21.0662[OpenPrinterUSB]New device ID:00000101
+2025-09-03 13-06-21.0664[OpenPrinterUSB]End
+2025-09-03 13-06-21.0671[GetInfoDeviceModel]Begin
+2025-09-03 13-06-21.0679[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 13-06-21.0681[GetInfoDeviceModel]End
+2025-09-03 13-06-21.0683[GetInfoFirmwareVersion]Begin
+2025-09-03 13-06-21.0690[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 13-06-21.0691[GetInfoFirmwareVersion]End
+2025-09-03 13-06-21.0692[GetCapCommPortType]Begin
+2025-09-03 13-06-21.0699[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 13-06-21.0701[GetCapCommPortType]End
+2025-09-03 13-06-21.0703[GetCapPrinterResolution]Begin
+2025-09-03 13-06-21.0712[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 13-06-21.0713[GetCapPrinterResolution]End
+2025-09-03 13-06-21.0715[GetCapPrintWidth]Begin
+2025-09-03 13-06-21.0724[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 13-06-21.0725[GetCapPrintWidth]End
+2025-09-03 13-33-15.0927[]*****************************************
+2025-09-03 13-33-15.0928[]DLL Log Initialize. Verbosity: 6
+2025-09-03 13-33-15.0928[]*****************************************
+2025-09-03 13-33-15.0929[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 13-33-15.0929[]DLL Version: 1.07
+2025-09-03 13-33-15.0929[InitLibrary]Begin
+2025-09-03 13-33-15.0948[InitLibrary]Library SignID:00000101
+2025-09-03 13-33-15.0948[InitLibrary]Current SignID:00000101
+2025-09-03 13-33-15.0949[InitLibrary]End
+2025-09-03 13-33-15.0950[GetAPIVersion]Begin
+2025-09-03 13-33-15.0951[GetAPIVersion]API rel 1.07
+2025-09-03 13-33-15.0951[GetAPIVersion]End
+2025-09-03 13-33-15.0952[GetAPIVersionHwLibrary]Begin
+2025-09-03 13-33-15.0953[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 13-33-15.0954[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 13-33-15.0954[GetAPIVersionHwLibrary]End
+2025-09-03 13-33-15.0955[EnumUSBDevices]Begin
+2025-09-03 13-33-15.0959[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 13-33-15.0960[EnumUSBDevices]End
+2025-09-03 13-33-15.0961[OpenPrinterUSB]Begin
+2025-09-03 13-33-15.0961[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 13-33-15.0966[OpenPrinterUSB]New device ID:00000101
+2025-09-03 13-33-15.0967[OpenPrinterUSB]End
+2025-09-03 13-33-15.0970[GetInfoDeviceModel]Begin
+2025-09-03 13-33-15.0972[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 13-33-15.0973[GetInfoDeviceModel]End
+2025-09-03 13-33-15.0973[GetInfoFirmwareVersion]Begin
+2025-09-03 13-33-15.0976[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 13-33-15.0977[GetInfoFirmwareVersion]End
+2025-09-03 13-33-15.0977[GetCapCommPortType]Begin
+2025-09-03 13-33-15.0979[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 13-33-15.0980[GetCapCommPortType]End
+2025-09-03 13-33-15.0980[GetCapPrinterResolution]Begin
+2025-09-03 13-33-15.0983[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 13-33-15.0985[GetCapPrinterResolution]End
+2025-09-03 13-33-15.0987[GetCapPrintWidth]Begin
+2025-09-03 13-33-15.0990[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 13-33-15.0991[GetCapPrintWidth]End
+2025-09-03 13-36-05.0956[]*****************************************
+2025-09-03 13-36-05.0958[]DLL Log Initialize. Verbosity: 6
+2025-09-03 13-36-05.0959[]*****************************************
+2025-09-03 13-36-05.0960[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 13-36-05.0961[]DLL Version: 1.07
+2025-09-03 13-36-05.0962[InitLibrary]Begin
+2025-09-03 13-36-05.0990[InitLibrary]Library SignID:00000101
+2025-09-03 13-36-05.0990[InitLibrary]Current SignID:00000101
+2025-09-03 13-36-05.0991[InitLibrary]End
+2025-09-03 13-36-05.0992[GetAPIVersion]Begin
+2025-09-03 13-36-05.0992[GetAPIVersion]API rel 1.07
+2025-09-03 13-36-05.0992[GetAPIVersion]End
+2025-09-03 13-36-05.0994[GetAPIVersionHwLibrary]Begin
+2025-09-03 13-36-05.0996[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 13-36-05.0997[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 13-36-05.0998[GetAPIVersionHwLibrary]End
+2025-09-03 13-36-05.0999[EnumUSBDevices]Begin
+2025-09-03 13-36-06.0004[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 13-36-06.0005[EnumUSBDevices]End
+2025-09-03 13-36-06.0006[OpenPrinterUSB]Begin
+2025-09-03 13-36-06.0007[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 13-36-06.0014[OpenPrinterUSB]New device ID:00000101
+2025-09-03 13-36-06.0014[OpenPrinterUSB]End
+2025-09-03 13-36-06.0018[GetInfoDeviceModel]Begin
+2025-09-03 13-36-06.0020[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 13-36-06.0021[GetInfoDeviceModel]End
+2025-09-03 13-36-06.0022[GetInfoFirmwareVersion]Begin
+2025-09-03 13-36-06.0025[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 13-36-06.0026[GetInfoFirmwareVersion]End
+2025-09-03 13-36-06.0026[GetCapCommPortType]Begin
+2025-09-03 13-36-06.0032[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 13-36-06.0033[GetCapCommPortType]End
+2025-09-03 13-36-06.0033[GetCapPrinterResolution]Begin
+2025-09-03 13-36-06.0036[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 13-36-06.0036[GetCapPrinterResolution]End
+2025-09-03 13-36-06.0037[GetCapPrintWidth]Begin
+2025-09-03 13-36-06.0040[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 13-36-06.0040[GetCapPrintWidth]End
+2025-09-03 13-39-55.0957[]*****************************************
+2025-09-03 13-39-55.0960[]DLL Log Initialize. Verbosity: 6
+2025-09-03 13-39-55.0960[]*****************************************
+2025-09-03 13-39-55.0963[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 13-39-55.0963[]DLL Version: 1.07
+2025-09-03 13-39-55.0964[InitLibrary]Begin
+2025-09-03 13-39-55.0983[InitLibrary]Library SignID:00000101
+2025-09-03 13-39-55.0985[InitLibrary]Current SignID:00000101
+2025-09-03 13-39-55.0986[InitLibrary]End
+2025-09-03 13-39-55.0987[GetAPIVersion]Begin
+2025-09-03 13-39-55.0987[GetAPIVersion]API rel 1.07
+2025-09-03 13-39-55.0988[GetAPIVersion]End
+2025-09-03 13-39-55.0988[GetAPIVersionHwLibrary]Begin
+2025-09-03 13-39-55.0990[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 13-39-55.0991[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 13-39-55.0991[GetAPIVersionHwLibrary]End
+2025-09-03 13-39-55.0992[EnumUSBDevices]Begin
+2025-09-03 13-39-56.0001[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 13-39-56.0002[EnumUSBDevices]End
+2025-09-03 13-39-56.0002[OpenPrinterUSB]Begin
+2025-09-03 13-39-56.0002[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 13-39-56.0008[OpenPrinterUSB]New device ID:00000101
+2025-09-03 13-39-56.0009[OpenPrinterUSB]End
+2025-09-03 13-39-56.0013[GetInfoDeviceModel]Begin
+2025-09-03 13-39-56.0017[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 13-39-56.0017[GetInfoDeviceModel]End
+2025-09-03 13-39-56.0018[GetInfoFirmwareVersion]Begin
+2025-09-03 13-39-56.0022[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 13-39-56.0022[GetInfoFirmwareVersion]End
+2025-09-03 13-39-56.0023[GetCapCommPortType]Begin
+2025-09-03 13-39-56.0027[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 13-39-56.0028[GetCapCommPortType]End
+2025-09-03 13-39-56.0028[GetCapPrinterResolution]Begin
+2025-09-03 13-39-56.0030[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 13-39-56.0030[GetCapPrinterResolution]End
+2025-09-03 13-39-56.0032[GetCapPrintWidth]Begin
+2025-09-03 13-39-56.0035[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 13-39-56.0035[GetCapPrintWidth]End
+2025-09-03 13-40-52.0226[]*****************************************
+2025-09-03 13-40-52.0227[]DLL Log Initialize. Verbosity: 6
+2025-09-03 13-40-52.0229[]*****************************************
+2025-09-03 13-40-52.0229[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 13-40-52.0230[]DLL Version: 1.07
+2025-09-03 13-40-52.0231[InitLibrary]Begin
+2025-09-03 13-40-52.0254[InitLibrary]Library SignID:00000101
+2025-09-03 13-40-52.0255[InitLibrary]Current SignID:00000101
+2025-09-03 13-40-52.0255[InitLibrary]End
+2025-09-03 13-40-52.0256[GetAPIVersion]Begin
+2025-09-03 13-40-52.0256[GetAPIVersion]API rel 1.07
+2025-09-03 13-40-52.0256[GetAPIVersion]End
+2025-09-03 13-40-52.0257[GetAPIVersionHwLibrary]Begin
+2025-09-03 13-40-52.0258[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 13-40-52.0259[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 13-40-52.0260[GetAPIVersionHwLibrary]End
+2025-09-03 13-40-52.0261[EnumUSBDevices]Begin
+2025-09-03 13-40-52.0266[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 13-40-52.0267[EnumUSBDevices]End
+2025-09-03 13-40-52.0267[OpenPrinterUSB]Begin
+2025-09-03 13-40-52.0268[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 13-40-52.0273[OpenPrinterUSB]New device ID:00000101
+2025-09-03 13-40-52.0273[OpenPrinterUSB]End
+2025-09-03 13-40-52.0275[GetInfoDeviceModel]Begin
+2025-09-03 13-40-52.0279[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 13-40-52.0279[GetInfoDeviceModel]End
+2025-09-03 13-40-52.0279[GetInfoFirmwareVersion]Begin
+2025-09-03 13-40-52.0282[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 13-40-52.0283[GetInfoFirmwareVersion]End
+2025-09-03 13-40-52.0284[GetCapCommPortType]Begin
+2025-09-03 13-40-52.0288[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 13-40-52.0289[GetCapCommPortType]End
+2025-09-03 13-40-52.0290[GetCapPrinterResolution]Begin
+2025-09-03 13-40-52.0293[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 13-40-52.0294[GetCapPrinterResolution]End
+2025-09-03 13-40-52.0294[GetCapPrintWidth]Begin
+2025-09-03 13-40-52.0296[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 13-40-52.0296[GetCapPrintWidth]End
+2025-09-03 13-46-02.0005[]*****************************************
+2025-09-03 13-46-02.0010[]DLL Log Initialize. Verbosity: 6
+2025-09-03 13-46-02.0010[]*****************************************
+2025-09-03 13-46-02.0010[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 13-46-02.0010[]DLL Version: 1.07
+2025-09-03 13-46-02.0011[InitLibrary]Begin
+2025-09-03 13-46-02.0041[InitLibrary]Library SignID:00000101
+2025-09-03 13-46-02.0042[InitLibrary]Current SignID:00000101
+2025-09-03 13-46-02.0042[InitLibrary]End
+2025-09-03 13-46-02.0044[GetAPIVersion]Begin
+2025-09-03 13-46-02.0044[GetAPIVersion]API rel 1.07
+2025-09-03 13-46-02.0045[GetAPIVersion]End
+2025-09-03 13-46-02.0046[GetAPIVersionHwLibrary]Begin
+2025-09-03 13-46-02.0049[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 13-46-02.0050[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 13-46-02.0051[GetAPIVersionHwLibrary]End
+2025-09-03 13-46-02.0052[EnumUSBDevices]Begin
+2025-09-03 13-46-02.0061[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 13-46-02.0062[EnumUSBDevices]End
+2025-09-03 13-46-02.0063[OpenPrinterUSB]Begin
+2025-09-03 13-46-02.0064[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 13-46-02.0069[OpenPrinterUSB]New device ID:00000101
+2025-09-03 13-46-02.0070[OpenPrinterUSB]End
+2025-09-03 13-46-02.0074[GetInfoDeviceModel]Begin
+2025-09-03 13-46-02.0077[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 13-46-02.0078[GetInfoDeviceModel]End
+2025-09-03 13-46-02.0078[GetInfoFirmwareVersion]Begin
+2025-09-03 13-46-02.0083[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 13-46-02.0084[GetInfoFirmwareVersion]End
+2025-09-03 13-46-02.0085[GetCapCommPortType]Begin
+2025-09-03 13-46-02.0092[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 13-46-02.0093[GetCapCommPortType]End
+2025-09-03 13-46-02.0094[GetCapPrinterResolution]Begin
+2025-09-03 13-46-02.0098[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 13-46-02.0099[GetCapPrinterResolution]End
+2025-09-03 13-46-02.0099[GetCapPrintWidth]Begin
+2025-09-03 13-46-02.0102[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 13-46-02.0102[GetCapPrintWidth]End
+2025-09-03 13-47-36.0252[]*****************************************
+2025-09-03 13-47-36.0260[]DLL Log Initialize. Verbosity: 6
+2025-09-03 13-47-36.0261[]*****************************************
+2025-09-03 13-47-36.0261[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 13-47-36.0262[]DLL Version: 1.07
+2025-09-03 13-47-36.0263[InitLibrary]Begin
+2025-09-03 13-47-36.0298[InitLibrary]Library SignID:00000101
+2025-09-03 13-47-36.0299[InitLibrary]Current SignID:00000101
+2025-09-03 13-47-36.0300[InitLibrary]End
+2025-09-03 13-47-36.0301[GetAPIVersion]Begin
+2025-09-03 13-47-36.0302[GetAPIVersion]API rel 1.07
+2025-09-03 13-47-36.0303[GetAPIVersion]End
+2025-09-03 13-47-36.0304[GetAPIVersionHwLibrary]Begin
+2025-09-03 13-47-36.0307[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 13-47-36.0308[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 13-47-36.0309[GetAPIVersionHwLibrary]End
+2025-09-03 13-47-36.0310[EnumUSBDevices]Begin
+2025-09-03 13-47-36.0320[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 13-47-36.0321[EnumUSBDevices]End
+2025-09-03 13-47-36.0322[OpenPrinterUSB]Begin
+2025-09-03 13-47-36.0323[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 13-47-36.0329[OpenPrinterUSB]New device ID:00000101
+2025-09-03 13-47-36.0330[OpenPrinterUSB]End
+2025-09-03 13-47-36.0335[GetInfoDeviceModel]Begin
+2025-09-03 13-47-36.0340[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 13-47-36.0341[GetInfoDeviceModel]End
+2025-09-03 13-47-36.0342[GetInfoFirmwareVersion]Begin
+2025-09-03 13-47-36.0347[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 13-47-36.0348[GetInfoFirmwareVersion]End
+2025-09-03 13-47-36.0349[GetCapCommPortType]Begin
+2025-09-03 13-47-36.0355[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 13-47-36.0356[GetCapCommPortType]End
+2025-09-03 13-47-36.0357[GetCapPrinterResolution]Begin
+2025-09-03 13-47-36.0362[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 13-47-36.0363[GetCapPrinterResolution]End
+2025-09-03 13-47-36.0364[GetCapPrintWidth]Begin
+2025-09-03 13-47-36.0366[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 13-47-36.0367[GetCapPrintWidth]End
+2025-09-03 14-07-48.0541[]*****************************************
+2025-09-03 14-07-48.0542[]DLL Log Initialize. Verbosity: 6
+2025-09-03 14-07-48.0543[]*****************************************
+2025-09-03 14-07-48.0543[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 14-07-48.0543[]DLL Version: 1.07
+2025-09-03 14-07-48.0544[InitLibrary]Begin
+2025-09-03 14-07-48.0563[InitLibrary]Library SignID:00000101
+2025-09-03 14-07-48.0564[InitLibrary]Current SignID:00000101
+2025-09-03 14-07-48.0564[InitLibrary]End
+2025-09-03 14-07-48.0565[GetAPIVersion]Begin
+2025-09-03 14-07-48.0566[GetAPIVersion]API rel 1.07
+2025-09-03 14-07-48.0566[GetAPIVersion]End
+2025-09-03 14-07-48.0567[GetAPIVersionHwLibrary]Begin
+2025-09-03 14-07-48.0568[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 14-07-48.0568[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 14-07-48.0570[GetAPIVersionHwLibrary]End
+2025-09-03 14-07-48.0570[EnumUSBDevices]Begin
+2025-09-03 14-07-48.0577[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 14-07-48.0577[EnumUSBDevices]End
+2025-09-03 14-07-48.0578[OpenPrinterUSB]Begin
+2025-09-03 14-07-48.0579[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 14-07-48.0585[OpenPrinterUSB]New device ID:00000101
+2025-09-03 14-07-48.0586[OpenPrinterUSB]End
+2025-09-03 14-07-48.0589[GetInfoDeviceModel]Begin
+2025-09-03 14-07-48.0591[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 14-07-48.0592[GetInfoDeviceModel]End
+2025-09-03 14-07-48.0592[GetInfoFirmwareVersion]Begin
+2025-09-03 14-07-48.0595[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 14-07-48.0596[GetInfoFirmwareVersion]End
+2025-09-03 14-07-48.0597[GetCapCommPortType]Begin
+2025-09-03 14-07-48.0602[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 14-07-48.0603[GetCapCommPortType]End
+2025-09-03 14-07-48.0604[GetCapPrinterResolution]Begin
+2025-09-03 14-07-48.0606[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 14-07-48.0607[GetCapPrinterResolution]End
+2025-09-03 14-07-48.0607[GetCapPrintWidth]Begin
+2025-09-03 14-07-48.0609[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 14-07-48.0609[GetCapPrintWidth]End
+2025-09-03 14-09-48.0766[]*****************************************
+2025-09-03 14-09-48.0768[]DLL Log Initialize. Verbosity: 6
+2025-09-03 14-09-48.0768[]*****************************************
+2025-09-03 14-09-48.0770[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 14-09-48.0771[]DLL Version: 1.07
+2025-09-03 14-09-48.0772[InitLibrary]Begin
+2025-09-03 14-09-48.0799[InitLibrary]Library SignID:00000101
+2025-09-03 14-09-48.0799[InitLibrary]Current SignID:00000101
+2025-09-03 14-09-48.0800[InitLibrary]End
+2025-09-03 14-09-48.0801[GetAPIVersion]Begin
+2025-09-03 14-09-48.0801[GetAPIVersion]API rel 1.07
+2025-09-03 14-09-48.0802[GetAPIVersion]End
+2025-09-03 14-09-48.0803[GetAPIVersionHwLibrary]Begin
+2025-09-03 14-09-48.0805[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 14-09-48.0806[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 14-09-48.0807[GetAPIVersionHwLibrary]End
+2025-09-03 14-09-48.0808[EnumUSBDevices]Begin
+2025-09-03 14-09-48.0813[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 14-09-48.0813[EnumUSBDevices]End
+2025-09-03 14-09-48.0814[OpenPrinterUSB]Begin
+2025-09-03 14-09-48.0814[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 14-09-48.0819[OpenPrinterUSB]New device ID:00000101
+2025-09-03 14-09-48.0819[OpenPrinterUSB]End
+2025-09-03 14-09-48.0822[GetInfoDeviceModel]Begin
+2025-09-03 14-09-48.0825[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 14-09-48.0825[GetInfoDeviceModel]End
+2025-09-03 14-09-48.0826[GetInfoFirmwareVersion]Begin
+2025-09-03 14-09-48.0828[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 14-09-48.0828[GetInfoFirmwareVersion]End
+2025-09-03 14-09-48.0829[GetCapCommPortType]Begin
+2025-09-03 14-09-48.0831[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 14-09-48.0832[GetCapCommPortType]End
+2025-09-03 14-09-48.0832[GetCapPrinterResolution]Begin
+2025-09-03 14-09-48.0834[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 14-09-48.0835[GetCapPrinterResolution]End
+2025-09-03 14-09-48.0836[GetCapPrintWidth]Begin
+2025-09-03 14-09-48.0839[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 14-09-48.0839[GetCapPrintWidth]End
+2025-09-03 14-12-53.0168[]*****************************************
+2025-09-03 14-12-53.0169[]DLL Log Initialize. Verbosity: 6
+2025-09-03 14-12-53.0171[]*****************************************
+2025-09-03 14-12-53.0172[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 14-12-53.0172[]DLL Version: 1.07
+2025-09-03 14-12-53.0172[InitLibrary]Begin
+2025-09-03 14-12-53.0191[InitLibrary]Library SignID:00000101
+2025-09-03 14-12-53.0192[InitLibrary]Current SignID:00000101
+2025-09-03 14-12-53.0192[InitLibrary]End
+2025-09-03 14-12-53.0193[GetAPIVersion]Begin
+2025-09-03 14-12-53.0193[GetAPIVersion]API rel 1.07
+2025-09-03 14-12-53.0194[GetAPIVersion]End
+2025-09-03 14-12-53.0194[GetAPIVersionHwLibrary]Begin
+2025-09-03 14-12-53.0196[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 14-12-53.0197[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 14-12-53.0197[GetAPIVersionHwLibrary]End
+2025-09-03 14-12-53.0198[EnumUSBDevices]Begin
+2025-09-03 14-12-53.0202[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 14-12-53.0203[EnumUSBDevices]End
+2025-09-03 14-12-53.0204[OpenPrinterUSB]Begin
+2025-09-03 14-12-53.0204[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 14-12-53.0209[OpenPrinterUSB]New device ID:00000101
+2025-09-03 14-12-53.0210[OpenPrinterUSB]End
+2025-09-03 14-12-53.0214[GetInfoDeviceModel]Begin
+2025-09-03 14-12-53.0217[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 14-12-53.0217[GetInfoDeviceModel]End
+2025-09-03 14-12-53.0218[GetInfoFirmwareVersion]Begin
+2025-09-03 14-12-53.0221[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 14-12-53.0222[GetInfoFirmwareVersion]End
+2025-09-03 14-12-53.0222[GetCapCommPortType]Begin
+2025-09-03 14-12-53.0228[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 14-12-53.0229[GetCapCommPortType]End
+2025-09-03 14-12-53.0230[GetCapPrinterResolution]Begin
+2025-09-03 14-12-53.0232[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 14-12-53.0232[GetCapPrinterResolution]End
+2025-09-03 14-12-53.0233[GetCapPrintWidth]Begin
+2025-09-03 14-12-53.0234[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 14-12-53.0236[GetCapPrintWidth]End
+2025-09-03 14-22-44.0215[]*****************************************
+2025-09-03 14-22-44.0217[]DLL Log Initialize. Verbosity: 6
+2025-09-03 14-22-44.0217[]*****************************************
+2025-09-03 14-22-44.0217[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 14-22-44.0218[]DLL Version: 1.07
+2025-09-03 14-22-44.0218[InitLibrary]Begin
+2025-09-03 14-22-44.0241[InitLibrary]Library SignID:00000101
+2025-09-03 14-22-44.0242[InitLibrary]Current SignID:00000101
+2025-09-03 14-22-44.0243[InitLibrary]End
+2025-09-03 14-22-44.0243[GetAPIVersion]Begin
+2025-09-03 14-22-44.0243[GetAPIVersion]API rel 1.07
+2025-09-03 14-22-44.0243[GetAPIVersion]End
+2025-09-03 14-22-44.0244[GetAPIVersionHwLibrary]Begin
+2025-09-03 14-22-44.0246[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 14-22-44.0246[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 14-22-44.0246[GetAPIVersionHwLibrary]End
+2025-09-03 14-22-44.0247[EnumUSBDevices]Begin
+2025-09-03 14-22-44.0252[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 14-22-44.0253[EnumUSBDevices]End
+2025-09-03 14-22-44.0254[OpenPrinterUSB]Begin
+2025-09-03 14-22-44.0255[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 14-22-44.0262[OpenPrinterUSB]New device ID:00000101
+2025-09-03 14-22-44.0263[OpenPrinterUSB]End
+2025-09-03 14-22-44.0266[GetInfoDeviceModel]Begin
+2025-09-03 14-22-44.0269[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 14-22-44.0270[GetInfoDeviceModel]End
+2025-09-03 14-22-44.0270[GetInfoFirmwareVersion]Begin
+2025-09-03 14-22-44.0274[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 14-22-44.0276[GetInfoFirmwareVersion]End
+2025-09-03 14-22-44.0277[GetCapCommPortType]Begin
+2025-09-03 14-22-44.0282[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 14-22-44.0284[GetCapCommPortType]End
+2025-09-03 14-22-44.0285[GetCapPrinterResolution]Begin
+2025-09-03 14-22-44.0290[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 14-22-44.0291[GetCapPrinterResolution]End
+2025-09-03 14-22-44.0293[GetCapPrintWidth]Begin
+2025-09-03 14-22-44.0297[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 14-22-44.0298[GetCapPrintWidth]End
+2025-09-03 14-25-00.0466[]*****************************************
+2025-09-03 14-25-00.0468[]DLL Log Initialize. Verbosity: 6
+2025-09-03 14-25-00.0469[]*****************************************
+2025-09-03 14-25-00.0469[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 14-25-00.0470[]DLL Version: 1.07
+2025-09-03 14-25-00.0471[InitLibrary]Begin
+2025-09-03 14-25-00.0512[InitLibrary]Library SignID:00000101
+2025-09-03 14-25-00.0513[InitLibrary]Current SignID:00000101
+2025-09-03 14-25-00.0514[InitLibrary]End
+2025-09-03 14-25-00.0514[GetAPIVersion]Begin
+2025-09-03 14-25-00.0517[GetAPIVersion]API rel 1.07
+2025-09-03 14-25-00.0517[GetAPIVersion]End
+2025-09-03 14-25-00.0518[GetAPIVersionHwLibrary]Begin
+2025-09-03 14-25-00.0523[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 14-25-00.0525[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 14-25-00.0526[GetAPIVersionHwLibrary]End
+2025-09-03 14-25-00.0527[EnumUSBDevices]Begin
+2025-09-03 14-25-00.0540[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 14-25-00.0541[EnumUSBDevices]End
+2025-09-03 14-25-00.0543[OpenPrinterUSB]Begin
+2025-09-03 14-25-00.0544[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 14-25-00.0554[OpenPrinterUSB]New device ID:00000101
+2025-09-03 14-25-00.0556[OpenPrinterUSB]End
+2025-09-03 14-25-00.0562[GetInfoDeviceModel]Begin
+2025-09-03 14-25-00.0566[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 14-25-00.0567[GetInfoDeviceModel]End
+2025-09-03 14-25-00.0568[GetInfoFirmwareVersion]Begin
+2025-09-03 14-25-00.0575[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 14-25-00.0576[GetInfoFirmwareVersion]End
+2025-09-03 14-25-00.0577[GetCapCommPortType]Begin
+2025-09-03 14-25-00.0582[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 14-25-00.0583[GetCapCommPortType]End
+2025-09-03 14-25-00.0584[GetCapPrinterResolution]Begin
+2025-09-03 14-25-00.0589[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 14-25-00.0591[GetCapPrinterResolution]End
+2025-09-03 14-25-00.0593[GetCapPrintWidth]Begin
+2025-09-03 14-25-00.0596[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 14-25-00.0597[GetCapPrintWidth]End
+2025-09-03 14-36-03.0125[]*****************************************
+2025-09-03 14-36-03.0128[]DLL Log Initialize. Verbosity: 6
+2025-09-03 14-36-03.0128[]*****************************************
+2025-09-03 14-36-03.0128[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 14-36-03.0130[]DLL Version: 1.07
+2025-09-03 14-36-03.0130[InitLibrary]Begin
+2025-09-03 14-36-03.0151[InitLibrary]Library SignID:00000101
+2025-09-03 14-36-03.0152[InitLibrary]Current SignID:00000101
+2025-09-03 14-36-03.0152[InitLibrary]End
+2025-09-03 14-36-03.0153[GetAPIVersion]Begin
+2025-09-03 14-36-03.0153[GetAPIVersion]API rel 1.07
+2025-09-03 14-36-03.0153[GetAPIVersion]End
+2025-09-03 14-36-03.0154[GetAPIVersionHwLibrary]Begin
+2025-09-03 14-36-03.0156[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 14-36-03.0157[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 14-36-03.0157[GetAPIVersionHwLibrary]End
+2025-09-03 14-36-03.0158[EnumUSBDevices]Begin
+2025-09-03 14-36-03.0162[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 14-36-03.0164[EnumUSBDevices]End
+2025-09-03 14-36-03.0164[OpenPrinterUSB]Begin
+2025-09-03 14-36-03.0165[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 14-36-03.0171[OpenPrinterUSB]New device ID:00000101
+2025-09-03 14-36-03.0171[OpenPrinterUSB]End
+2025-09-03 14-36-03.0174[GetInfoDeviceModel]Begin
+2025-09-03 14-36-03.0177[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 14-36-03.0178[GetInfoDeviceModel]End
+2025-09-03 14-36-03.0179[GetInfoFirmwareVersion]Begin
+2025-09-03 14-36-03.0183[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 14-36-03.0184[GetInfoFirmwareVersion]End
+2025-09-03 14-36-03.0185[GetCapCommPortType]Begin
+2025-09-03 14-36-03.0189[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 14-36-03.0190[GetCapCommPortType]End
+2025-09-03 14-36-03.0190[GetCapPrinterResolution]Begin
+2025-09-03 14-36-03.0195[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 14-36-03.0198[GetCapPrinterResolution]End
+2025-09-03 14-36-03.0199[GetCapPrintWidth]Begin
+2025-09-03 14-36-03.0202[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 14-36-03.0203[GetCapPrintWidth]End
+2025-09-03 14-36-24.0001[PrintImageFromPath]Begin
+2025-09-03 14-36-24.0003[PrintImageFromPath]<Image File Path>:src\main\resources\images\mpmrc.jpg
+2025-09-03 14-36-24.0004[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-09-03 14-36-24.0026[PrintImageFromPath]End
+2025-09-03 14-36-24.0028[PrintBarcode]Begin
+2025-09-03 14-36-24.0028[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc2QlBFUTlQMTQwMDAxOjE3NTY4OTAzODI2MTE6MTc1Njk3Njc4MjYxMTowMDEwOjAxOjAyOjAxOjAxOjA=
+2025-09-03 14-36-24.0028[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-03 14-36-24.0051[PrintBarcode]End
+2025-09-03 14-36-24.0054[PrintText]Begin
+2025-09-03 14-36-24.0054[PrintText]<Text to Print>:
+Date/Time        : 03-09-2025 14:36:22
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT
+Platform NO.     : 1
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W6BPEQ9P140001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-03 14-36-24.0055[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:20<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-03 14-36-24.0055[PrintText]<Add LF>:false
+2025-09-03 14-36-24.0059[PrintText]End
+2025-09-03 14-36-24.0060[Cut]Begin
+2025-09-03 14-36-24.0060[Cut]CutType:CUT_TOTAL
+2025-09-03 14-36-24.0061[Cut]End
+2025-09-03 14-39-46.0084[]*****************************************
+2025-09-03 14-39-46.0085[]DLL Log Initialize. Verbosity: 6
+2025-09-03 14-39-46.0086[]*****************************************
+2025-09-03 14-39-46.0086[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 14-39-46.0087[]DLL Version: 1.07
+2025-09-03 14-39-46.0087[InitLibrary]Begin
+2025-09-03 14-39-46.0110[InitLibrary]Library SignID:00000101
+2025-09-03 14-39-46.0111[InitLibrary]Current SignID:00000101
+2025-09-03 14-39-46.0111[InitLibrary]End
+2025-09-03 14-39-46.0112[GetAPIVersion]Begin
+2025-09-03 14-39-46.0112[GetAPIVersion]API rel 1.07
+2025-09-03 14-39-46.0113[GetAPIVersion]End
+2025-09-03 14-39-46.0113[GetAPIVersionHwLibrary]Begin
+2025-09-03 14-39-46.0115[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 14-39-46.0115[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 14-39-46.0115[GetAPIVersionHwLibrary]End
+2025-09-03 14-39-46.0116[EnumUSBDevices]Begin
+2025-09-03 14-39-46.0120[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 14-39-46.0121[EnumUSBDevices]End
+2025-09-03 14-39-46.0122[OpenPrinterUSB]Begin
+2025-09-03 14-39-46.0123[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 14-39-46.0127[OpenPrinterUSB]New device ID:00000101
+2025-09-03 14-39-46.0128[OpenPrinterUSB]End
+2025-09-03 14-39-46.0130[GetInfoDeviceModel]Begin
+2025-09-03 14-39-46.0133[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 14-39-46.0133[GetInfoDeviceModel]End
+2025-09-03 14-39-46.0134[GetInfoFirmwareVersion]Begin
+2025-09-03 14-39-46.0136[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 14-39-46.0137[GetInfoFirmwareVersion]End
+2025-09-03 14-39-46.0138[GetCapCommPortType]Begin
+2025-09-03 14-39-46.0140[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 14-39-46.0140[GetCapCommPortType]End
+2025-09-03 14-39-46.0141[GetCapPrinterResolution]Begin
+2025-09-03 14-39-46.0143[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 14-39-46.0144[GetCapPrinterResolution]End
+2025-09-03 14-39-46.0144[GetCapPrintWidth]Begin
+2025-09-03 14-39-46.0147[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 14-39-46.0148[GetCapPrintWidth]End
+2025-09-03 14-40-20.0962[]*****************************************
+2025-09-03 14-40-20.0963[]DLL Log Initialize. Verbosity: 6
+2025-09-03 14-40-20.0964[]*****************************************
+2025-09-03 14-40-20.0964[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 14-40-20.0964[]DLL Version: 1.07
+2025-09-03 14-40-20.0964[InitLibrary]Begin
+2025-09-03 14-40-20.0985[InitLibrary]Library SignID:00000101
+2025-09-03 14-40-20.0986[InitLibrary]Current SignID:00000101
+2025-09-03 14-40-20.0986[InitLibrary]End
+2025-09-03 14-40-20.0986[GetAPIVersion]Begin
+2025-09-03 14-40-20.0987[GetAPIVersion]API rel 1.07
+2025-09-03 14-40-20.0987[GetAPIVersion]End
+2025-09-03 14-40-20.0988[GetAPIVersionHwLibrary]Begin
+2025-09-03 14-40-20.0990[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 14-40-20.0991[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 14-40-20.0991[GetAPIVersionHwLibrary]End
+2025-09-03 14-40-20.0991[EnumUSBDevices]Begin
+2025-09-03 14-40-20.0996[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 14-40-20.0996[EnumUSBDevices]End
+2025-09-03 14-40-20.0998[OpenPrinterUSB]Begin
+2025-09-03 14-40-20.0999[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 14-40-21.0004[OpenPrinterUSB]New device ID:00000101
+2025-09-03 14-40-21.0005[OpenPrinterUSB]End
+2025-09-03 14-40-21.0008[GetInfoDeviceModel]Begin
+2025-09-03 14-40-21.0011[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 14-40-21.0012[GetInfoDeviceModel]End
+2025-09-03 14-40-21.0012[GetInfoFirmwareVersion]Begin
+2025-09-03 14-40-21.0015[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 14-40-21.0016[GetInfoFirmwareVersion]End
+2025-09-03 14-40-21.0016[GetCapCommPortType]Begin
+2025-09-03 14-40-21.0021[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 14-40-21.0023[GetCapCommPortType]End
+2025-09-03 14-40-21.0025[GetCapPrinterResolution]Begin
+2025-09-03 14-40-21.0027[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 14-40-21.0028[GetCapPrinterResolution]End
+2025-09-03 14-40-21.0029[GetCapPrintWidth]Begin
+2025-09-03 14-40-21.0034[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 14-40-21.0035[GetCapPrintWidth]End
+2025-09-03 14-51-11.0791[]*****************************************
+2025-09-03 14-51-11.0793[]DLL Log Initialize. Verbosity: 6
+2025-09-03 14-51-11.0794[]*****************************************
+2025-09-03 14-51-11.0795[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 14-51-11.0796[]DLL Version: 1.07
+2025-09-03 14-51-11.0797[InitLibrary]Begin
+2025-09-03 14-51-11.0841[InitLibrary]Library SignID:00000101
+2025-09-03 14-51-11.0842[InitLibrary]Current SignID:00000101
+2025-09-03 14-51-11.0843[InitLibrary]End
+2025-09-03 14-51-11.0846[GetAPIVersion]Begin
+2025-09-03 14-51-11.0847[GetAPIVersion]API rel 1.07
+2025-09-03 14-51-11.0848[GetAPIVersion]End
+2025-09-03 14-51-11.0850[GetAPIVersionHwLibrary]Begin
+2025-09-03 14-51-11.0857[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 14-51-11.0860[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 14-51-11.0861[GetAPIVersionHwLibrary]End
+2025-09-03 14-51-11.0863[EnumUSBDevices]Begin
+2025-09-03 14-51-11.0874[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 14-51-11.0876[EnumUSBDevices]End
+2025-09-03 14-51-11.0878[OpenPrinterUSB]Begin
+2025-09-03 14-51-11.0878[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 14-51-11.0895[OpenPrinterUSB]New device ID:00000101
+2025-09-03 14-51-11.0896[OpenPrinterUSB]End
+2025-09-03 14-51-11.0900[GetInfoDeviceModel]Begin
+2025-09-03 14-51-11.0903[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 14-51-11.0904[GetInfoDeviceModel]End
+2025-09-03 14-51-11.0904[GetInfoFirmwareVersion]Begin
+2025-09-03 14-51-11.0908[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 14-51-11.0908[GetInfoFirmwareVersion]End
+2025-09-03 14-51-11.0909[GetCapCommPortType]Begin
+2025-09-03 14-51-11.0914[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 14-51-11.0914[GetCapCommPortType]End
+2025-09-03 14-51-11.0915[GetCapPrinterResolution]Begin
+2025-09-03 14-51-11.0919[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 14-51-11.0919[GetCapPrinterResolution]End
+2025-09-03 14-51-11.0920[GetCapPrintWidth]Begin
+2025-09-03 14-51-11.0922[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 14-51-11.0922[GetCapPrintWidth]End
+2025-09-03 14-51-41.0852[PrintImageFromPath]Begin
+2025-09-03 14-51-41.0853[PrintImageFromPath]<Image File Path>:src\main\resources\images\mpmrc.jpg
+2025-09-03 14-51-41.0854[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-09-03 14-51-41.0873[PrintImageFromPath]End
+2025-09-03 14-51-41.0875[PrintBarcode]Begin
+2025-09-03 14-51-41.0876[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc2QlBFUTlQMTUwMDAxOjE3NTY4OTEzMDE0ODk6MTc1Njk3NzcwMTQ4OTowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-03 14-51-41.0876[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-03 14-51-41.0898[PrintBarcode]End
+2025-09-03 14-51-41.0901[PrintText]Begin
+2025-09-03 14-51-41.0901[PrintText]<Text to Print>:
+Date/Time        : 03-09-2025 14:51:41
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT
+Platform NO.     : 1
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W6BPEQ9P150001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-03 14-51-41.0902[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:20<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-03 14-51-41.0902[PrintText]<Add LF>:false
+2025-09-03 14-51-41.0906[PrintText]End
+2025-09-03 14-51-41.0908[Cut]Begin
+2025-09-03 14-51-41.0909[Cut]CutType:CUT_TOTAL
+2025-09-03 14-51-41.0911[Cut]End
+2025-09-03 14-51-41.0912[PrintImageFromPath]Begin
+2025-09-03 14-51-41.0913[PrintImageFromPath]<Image File Path>:src\main\resources\images\mpmrc.jpg
+2025-09-03 14-51-41.0913[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-09-03 14-51-41.0934[PrintImageFromPath]End
+2025-09-03 14-51-41.0935[PrintBarcode]Begin
+2025-09-03 14-51-41.0935[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc2QlBFUTlQMTUwMDAyOjE3NTY4OTEzMDE0ODk6MTc1Njk3NzcwMTQ4OTowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-03 14-51-41.0935[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-03 14-51-43.0983[PrintBarcode]End
+2025-09-03 14-51-43.0984[PrintText]Begin
+2025-09-03 14-51-43.0986[PrintText]<Text to Print>:
+Date/Time        : 03-09-2025 14:51:41
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT
+Platform NO.     : 1
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W6BPEQ9P150002
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-03 14-51-43.0987[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:20<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-03 14-51-43.0988[PrintText]<Add LF>:false
+2025-09-03 14-51-43.0993[PrintText]End
+2025-09-03 14-51-43.0994[Cut]Begin
+2025-09-03 14-51-43.0994[Cut]CutType:CUT_TOTAL
+2025-09-03 14-51-43.0997[Cut]End
+2025-09-03 14-53-04.0612[]*****************************************
+2025-09-03 14-53-04.0616[]DLL Log Initialize. Verbosity: 6
+2025-09-03 14-53-04.0617[]*****************************************
+2025-09-03 14-53-04.0618[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 14-53-04.0619[]DLL Version: 1.07
+2025-09-03 14-53-04.0621[InitLibrary]Begin
+2025-09-03 14-53-04.0681[InitLibrary]Library SignID:00000101
+2025-09-03 14-53-04.0683[InitLibrary]Current SignID:00000101
+2025-09-03 14-53-04.0685[InitLibrary]End
+2025-09-03 14-53-04.0687[GetAPIVersion]Begin
+2025-09-03 14-53-04.0689[GetAPIVersion]API rel 1.07
+2025-09-03 14-53-04.0691[GetAPIVersion]End
+2025-09-03 14-53-04.0694[GetAPIVersionHwLibrary]Begin
+2025-09-03 14-53-04.0702[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 14-53-04.0704[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 14-53-04.0704[GetAPIVersionHwLibrary]End
+2025-09-03 14-53-04.0705[EnumUSBDevices]Begin
+2025-09-03 14-53-04.0718[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 14-53-04.0719[EnumUSBDevices]End
+2025-09-03 14-53-04.0721[OpenPrinterUSB]Begin
+2025-09-03 14-53-04.0722[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 14-53-04.0730[OpenPrinterUSB]New device ID:00000101
+2025-09-03 14-53-04.0731[OpenPrinterUSB]End
+2025-09-03 14-53-04.0736[GetInfoDeviceModel]Begin
+2025-09-03 14-53-04.0742[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 14-53-04.0743[GetInfoDeviceModel]End
+2025-09-03 14-53-04.0745[GetInfoFirmwareVersion]Begin
+2025-09-03 14-53-04.0749[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 14-53-04.0751[GetInfoFirmwareVersion]End
+2025-09-03 14-53-04.0753[GetCapCommPortType]Begin
+2025-09-03 14-53-04.0759[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 14-53-04.0760[GetCapCommPortType]End
+2025-09-03 14-53-04.0763[GetCapPrinterResolution]Begin
+2025-09-03 14-53-04.0769[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 14-53-04.0770[GetCapPrinterResolution]End
+2025-09-03 14-53-04.0772[GetCapPrintWidth]Begin
+2025-09-03 14-53-04.0778[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 14-53-04.0779[GetCapPrintWidth]End
+2025-09-03 14-58-31.0939[]*****************************************
+2025-09-03 14-58-31.0941[]DLL Log Initialize. Verbosity: 6
+2025-09-03 14-58-31.0942[]*****************************************
+2025-09-03 14-58-31.0944[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 14-58-31.0945[]DLL Version: 1.07
+2025-09-03 14-58-31.0946[InitLibrary]Begin
+2025-09-03 14-58-32.0007[InitLibrary]Library SignID:00000101
+2025-09-03 14-58-32.0011[InitLibrary]Current SignID:00000101
+2025-09-03 14-58-32.0014[InitLibrary]End
+2025-09-03 14-58-32.0016[GetAPIVersion]Begin
+2025-09-03 14-58-32.0018[GetAPIVersion]API rel 1.07
+2025-09-03 14-58-32.0022[GetAPIVersion]End
+2025-09-03 14-58-32.0026[GetAPIVersionHwLibrary]Begin
+2025-09-03 14-58-32.0033[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 14-58-32.0034[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 14-58-32.0035[GetAPIVersionHwLibrary]End
+2025-09-03 14-58-32.0035[EnumUSBDevices]Begin
+2025-09-03 14-58-32.0042[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 14-58-32.0043[EnumUSBDevices]End
+2025-09-03 14-58-32.0043[OpenPrinterUSB]Begin
+2025-09-03 14-58-32.0044[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 14-58-32.0050[OpenPrinterUSB]New device ID:00000101
+2025-09-03 14-58-32.0051[OpenPrinterUSB]End
+2025-09-03 14-58-32.0056[GetInfoDeviceModel]Begin
+2025-09-03 14-58-32.0060[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 14-58-32.0061[GetInfoDeviceModel]End
+2025-09-03 14-58-32.0062[GetInfoFirmwareVersion]Begin
+2025-09-03 14-58-32.0065[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 14-58-32.0066[GetInfoFirmwareVersion]End
+2025-09-03 14-58-32.0066[GetCapCommPortType]Begin
+2025-09-03 14-58-32.0069[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 14-58-32.0070[GetCapCommPortType]End
+2025-09-03 14-58-32.0070[GetCapPrinterResolution]Begin
+2025-09-03 14-58-32.0073[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 14-58-32.0074[GetCapPrinterResolution]End
+2025-09-03 14-58-32.0075[GetCapPrintWidth]Begin
+2025-09-03 14-58-32.0078[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 14-58-32.0078[GetCapPrintWidth]End
+2025-09-03 15-04-14.0370[]*****************************************
+2025-09-03 15-04-14.0410[]DLL Log Initialize. Verbosity: 6
+2025-09-03 15-04-14.0412[]*****************************************
+2025-09-03 15-04-14.0413[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 15-04-14.0414[]DLL Version: 1.07
+2025-09-03 15-04-14.0415[InitLibrary]Begin
+2025-09-03 15-04-14.0533[InitLibrary]Library SignID:00000101
+2025-09-03 15-04-14.0537[InitLibrary]Current SignID:00000101
+2025-09-03 15-04-14.0539[InitLibrary]End
+2025-09-03 15-04-14.0540[GetAPIVersion]Begin
+2025-09-03 15-04-14.0541[GetAPIVersion]API rel 1.07
+2025-09-03 15-04-14.0543[GetAPIVersion]End
+2025-09-03 15-04-14.0545[GetAPIVersionHwLibrary]Begin
+2025-09-03 15-04-14.0550[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 15-04-14.0552[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 15-04-14.0555[GetAPIVersionHwLibrary]End
+2025-09-03 15-04-14.0560[EnumUSBDevices]Begin
+2025-09-03 15-04-14.0580[EnumUSBDevices]Found 1 USB Devices
+2025-09-03 15-04-14.0582[EnumUSBDevices]End
+2025-09-03 15-04-14.0583[OpenPrinterUSB]Begin
+2025-09-03 15-04-14.0586[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-03 15-04-14.0597[OpenPrinterUSB]New device ID:00000101
+2025-09-03 15-04-14.0598[OpenPrinterUSB]End
+2025-09-03 15-04-14.0609[GetInfoDeviceModel]Begin
+2025-09-03 15-04-14.0614[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-03 15-04-14.0615[GetInfoDeviceModel]End
+2025-09-03 15-04-14.0616[GetInfoFirmwareVersion]Begin
+2025-09-03 15-04-14.0623[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-03 15-04-14.0624[GetInfoFirmwareVersion]End
+2025-09-03 15-04-14.0626[GetCapCommPortType]Begin
+2025-09-03 15-04-14.0633[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-03 15-04-14.0634[GetCapCommPortType]End
+2025-09-03 15-04-14.0636[GetCapPrinterResolution]Begin
+2025-09-03 15-04-14.0642[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-03 15-04-14.0644[GetCapPrinterResolution]End
+2025-09-03 15-04-14.0645[GetCapPrintWidth]Begin
+2025-09-03 15-04-14.0650[GetCapPrintWidth]Cap Print Width:640
+2025-09-03 15-04-14.0651[GetCapPrintWidth]End
+2025-09-03 17-06-26.0798[]*****************************************
+2025-09-03 17-06-26.0798[]DLL Log Initialize. Verbosity: 6
+2025-09-03 17-06-26.0799[]*****************************************
+2025-09-03 17-06-26.0799[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 17-06-26.0799[]DLL Version: 1.07
+2025-09-03 17-06-26.0801[InitLibrary]Begin
+2025-09-03 17-06-26.0821[InitLibrary]Library SignID:00000101
+2025-09-03 17-06-26.0822[InitLibrary]Current SignID:00000101
+2025-09-03 17-06-26.0822[InitLibrary]End
+2025-09-03 17-06-26.0823[GetAPIVersion]Begin
+2025-09-03 17-06-26.0823[GetAPIVersion]API rel 1.07
+2025-09-03 17-06-26.0824[GetAPIVersion]End
+2025-09-03 17-06-26.0824[GetAPIVersionHwLibrary]Begin
+2025-09-03 17-06-26.0826[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 17-06-26.0827[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 17-06-26.0827[GetAPIVersionHwLibrary]End
+2025-09-03 17-06-26.0828[EnumUSBDevices]Begin
+2025-09-03 17-06-26.0831[EnumUSBDevices]Found 0 USB Devices
+2025-09-03 17-06-26.0831[EnumUSBDevices]End
+2025-09-03 17-08-33.0453[]*****************************************
+2025-09-03 17-08-33.0460[]DLL Log Initialize. Verbosity: 6
+2025-09-03 17-08-33.0461[]*****************************************
+2025-09-03 17-08-33.0462[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 17-08-33.0464[]DLL Version: 1.07
+2025-09-03 17-08-33.0464[InitLibrary]Begin
+2025-09-03 17-08-33.0516[InitLibrary]Library SignID:00000101
+2025-09-03 17-08-33.0516[InitLibrary]Current SignID:00000101
+2025-09-03 17-08-33.0516[InitLibrary]End
+2025-09-03 17-08-33.0521[GetAPIVersion]Begin
+2025-09-03 17-08-33.0521[GetAPIVersion]API rel 1.07
+2025-09-03 17-08-33.0521[GetAPIVersion]End
+2025-09-03 17-08-33.0521[GetAPIVersionHwLibrary]Begin
+2025-09-03 17-08-33.0530[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 17-08-33.0531[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 17-08-33.0532[GetAPIVersionHwLibrary]End
+2025-09-03 17-08-33.0534[EnumUSBDevices]Begin
+2025-09-03 17-08-33.0541[EnumUSBDevices]Found 0 USB Devices
+2025-09-03 17-08-33.0541[EnumUSBDevices]End
+2025-09-03 17-11-29.0825[]*****************************************
+2025-09-03 17-11-29.0825[]DLL Log Initialize. Verbosity: 6
+2025-09-03 17-11-29.0827[]*****************************************
+2025-09-03 17-11-29.0827[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 17-11-29.0828[]DLL Version: 1.07
+2025-09-03 17-11-29.0828[InitLibrary]Begin
+2025-09-03 17-11-29.0849[InitLibrary]Library SignID:00000101
+2025-09-03 17-11-29.0850[InitLibrary]Current SignID:00000101
+2025-09-03 17-11-29.0850[InitLibrary]End
+2025-09-03 17-11-29.0851[GetAPIVersion]Begin
+2025-09-03 17-11-29.0852[GetAPIVersion]API rel 1.07
+2025-09-03 17-11-29.0852[GetAPIVersion]End
+2025-09-03 17-11-29.0853[GetAPIVersionHwLibrary]Begin
+2025-09-03 17-11-29.0855[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 17-11-29.0855[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 17-11-29.0856[GetAPIVersionHwLibrary]End
+2025-09-03 17-11-29.0856[EnumUSBDevices]Begin
+2025-09-03 17-11-29.0860[EnumUSBDevices]Found 0 USB Devices
+2025-09-03 17-11-29.0860[EnumUSBDevices]End
+2025-09-03 17-13-43.0122[]*****************************************
+2025-09-03 17-13-43.0122[]DLL Log Initialize. Verbosity: 6
+2025-09-03 17-13-43.0123[]*****************************************
+2025-09-03 17-13-43.0123[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 17-13-43.0123[]DLL Version: 1.07
+2025-09-03 17-13-43.0124[InitLibrary]Begin
+2025-09-03 17-13-43.0142[InitLibrary]Library SignID:00000101
+2025-09-03 17-13-43.0143[InitLibrary]Current SignID:00000101
+2025-09-03 17-13-43.0144[InitLibrary]End
+2025-09-03 17-13-43.0144[GetAPIVersion]Begin
+2025-09-03 17-13-43.0145[GetAPIVersion]API rel 1.07
+2025-09-03 17-13-43.0145[GetAPIVersion]End
+2025-09-03 17-13-43.0145[GetAPIVersionHwLibrary]Begin
+2025-09-03 17-13-43.0147[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 17-13-43.0148[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 17-13-43.0149[GetAPIVersionHwLibrary]End
+2025-09-03 17-13-43.0149[EnumUSBDevices]Begin
+2025-09-03 17-13-43.0152[EnumUSBDevices]Found 0 USB Devices
+2025-09-03 17-13-43.0153[EnumUSBDevices]End
+2025-09-03 17-57-58.0225[]*****************************************
+2025-09-03 17-57-58.0227[]DLL Log Initialize. Verbosity: 6
+2025-09-03 17-57-58.0228[]*****************************************
+2025-09-03 17-57-58.0229[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 17-57-58.0231[]DLL Version: 1.07
+2025-09-03 17-57-58.0232[InitLibrary]Begin
+2025-09-03 17-57-58.0313[InitLibrary]Library SignID:00000101
+2025-09-03 17-57-58.0314[InitLibrary]Current SignID:00000101
+2025-09-03 17-57-58.0317[InitLibrary]End
+2025-09-03 17-57-58.0320[GetAPIVersion]Begin
+2025-09-03 17-57-58.0322[GetAPIVersion]API rel 1.07
+2025-09-03 17-57-58.0323[GetAPIVersion]End
+2025-09-03 17-57-58.0325[GetAPIVersionHwLibrary]Begin
+2025-09-03 17-57-58.0332[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 17-57-58.0333[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 17-57-58.0336[GetAPIVersionHwLibrary]End
+2025-09-03 17-57-58.0337[EnumUSBDevices]Begin
+2025-09-03 17-57-58.0348[EnumUSBDevices]Found 0 USB Devices
+2025-09-03 17-57-58.0382[EnumUSBDevices]End
+2025-09-03 17-58-37.0723[]*****************************************
+2025-09-03 17-58-37.0725[]DLL Log Initialize. Verbosity: 6
+2025-09-03 17-58-37.0726[]*****************************************
+2025-09-03 17-58-37.0726[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 17-58-37.0726[]DLL Version: 1.07
+2025-09-03 17-58-37.0727[InitLibrary]Begin
+2025-09-03 17-58-37.0746[InitLibrary]Library SignID:00000101
+2025-09-03 17-58-37.0747[InitLibrary]Current SignID:00000101
+2025-09-03 17-58-37.0747[InitLibrary]End
+2025-09-03 17-58-37.0747[GetAPIVersion]Begin
+2025-09-03 17-58-37.0748[GetAPIVersion]API rel 1.07
+2025-09-03 17-58-37.0748[GetAPIVersion]End
+2025-09-03 17-58-37.0748[GetAPIVersionHwLibrary]Begin
+2025-09-03 17-58-37.0752[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 17-58-37.0753[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 17-58-37.0753[GetAPIVersionHwLibrary]End
+2025-09-03 17-58-37.0754[EnumUSBDevices]Begin
+2025-09-03 17-58-37.0758[EnumUSBDevices]Found 0 USB Devices
+2025-09-03 17-58-37.0758[EnumUSBDevices]End
+2025-09-03 18-03-46.0124[]*****************************************
+2025-09-03 18-03-46.0125[]DLL Log Initialize. Verbosity: 6
+2025-09-03 18-03-46.0125[]*****************************************
+2025-09-03 18-03-46.0126[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 18-03-46.0126[]DLL Version: 1.07
+2025-09-03 18-03-46.0127[InitLibrary]Begin
+2025-09-03 18-03-46.0146[InitLibrary]Library SignID:00000101
+2025-09-03 18-03-46.0147[InitLibrary]Current SignID:00000101
+2025-09-03 18-03-46.0147[InitLibrary]End
+2025-09-03 18-03-46.0148[GetAPIVersion]Begin
+2025-09-03 18-03-46.0148[GetAPIVersion]API rel 1.07
+2025-09-03 18-03-46.0148[GetAPIVersion]End
+2025-09-03 18-03-46.0149[GetAPIVersionHwLibrary]Begin
+2025-09-03 18-03-46.0151[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 18-03-46.0152[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 18-03-46.0152[GetAPIVersionHwLibrary]End
+2025-09-03 18-03-46.0152[EnumUSBDevices]Begin
+2025-09-03 18-03-46.0156[EnumUSBDevices]Found 0 USB Devices
+2025-09-03 18-03-46.0156[EnumUSBDevices]End
+2025-09-03 18-08-09.0898[]*****************************************
+2025-09-03 18-08-09.0899[]DLL Log Initialize. Verbosity: 6
+2025-09-03 18-08-09.0900[]*****************************************
+2025-09-03 18-08-09.0900[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 18-08-09.0900[]DLL Version: 1.07
+2025-09-03 18-08-09.0902[InitLibrary]Begin
+2025-09-03 18-08-09.0921[InitLibrary]Library SignID:00000101
+2025-09-03 18-08-09.0921[InitLibrary]Current SignID:00000101
+2025-09-03 18-08-09.0922[InitLibrary]End
+2025-09-03 18-08-09.0922[GetAPIVersion]Begin
+2025-09-03 18-08-09.0923[GetAPIVersion]API rel 1.07
+2025-09-03 18-08-09.0923[GetAPIVersion]End
+2025-09-03 18-08-09.0924[GetAPIVersionHwLibrary]Begin
+2025-09-03 18-08-09.0925[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 18-08-09.0925[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 18-08-09.0926[GetAPIVersionHwLibrary]End
+2025-09-03 18-08-09.0926[EnumUSBDevices]Begin
+2025-09-03 18-08-09.0930[EnumUSBDevices]Found 0 USB Devices
+2025-09-03 18-08-09.0930[EnumUSBDevices]End
+2025-09-03 19-14-11.0651[]*****************************************
+2025-09-03 19-14-11.0652[]DLL Log Initialize. Verbosity: 6
+2025-09-03 19-14-11.0652[]*****************************************
+2025-09-03 19-14-11.0654[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 19-14-11.0654[]DLL Version: 1.07
+2025-09-03 19-14-11.0654[InitLibrary]Begin
+2025-09-03 19-14-11.0675[InitLibrary]Library SignID:00000101
+2025-09-03 19-14-11.0676[InitLibrary]Current SignID:00000101
+2025-09-03 19-14-11.0676[InitLibrary]End
+2025-09-03 19-14-11.0676[GetAPIVersion]Begin
+2025-09-03 19-14-11.0677[GetAPIVersion]API rel 1.07
+2025-09-03 19-14-11.0677[GetAPIVersion]End
+2025-09-03 19-14-11.0677[GetAPIVersionHwLibrary]Begin
+2025-09-03 19-14-11.0679[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 19-14-11.0680[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 19-14-11.0680[GetAPIVersionHwLibrary]End
+2025-09-03 19-14-11.0681[EnumUSBDevices]Begin
+2025-09-03 19-14-11.0685[EnumUSBDevices]Found 0 USB Devices
+2025-09-03 19-14-11.0685[EnumUSBDevices]End
+2025-09-03 19-21-45.0378[]*****************************************
+2025-09-03 19-21-45.0378[]DLL Log Initialize. Verbosity: 6
+2025-09-03 19-21-45.0380[]*****************************************
+2025-09-03 19-21-45.0380[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 19-21-45.0381[]DLL Version: 1.07
+2025-09-03 19-21-45.0381[InitLibrary]Begin
+2025-09-03 19-21-45.0400[InitLibrary]Library SignID:00000101
+2025-09-03 19-21-45.0400[InitLibrary]Current SignID:00000101
+2025-09-03 19-21-45.0401[InitLibrary]End
+2025-09-03 19-21-45.0401[GetAPIVersion]Begin
+2025-09-03 19-21-45.0402[GetAPIVersion]API rel 1.07
+2025-09-03 19-21-45.0402[GetAPIVersion]End
+2025-09-03 19-21-45.0402[GetAPIVersionHwLibrary]Begin
+2025-09-03 19-21-45.0405[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 19-21-45.0406[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 19-21-45.0406[GetAPIVersionHwLibrary]End
+2025-09-03 19-21-45.0407[EnumUSBDevices]Begin
+2025-09-03 19-21-45.0409[EnumUSBDevices]Found 0 USB Devices
+2025-09-03 19-21-45.0409[EnumUSBDevices]End
+2025-09-03 19-26-03.0358[]*****************************************
+2025-09-03 19-26-03.0358[]DLL Log Initialize. Verbosity: 6
+2025-09-03 19-26-03.0360[]*****************************************
+2025-09-03 19-26-03.0360[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM
+2025-09-03 19-26-03.0361[]DLL Version: 1.07
+2025-09-03 19-26-03.0361[InitLibrary]Begin
+2025-09-03 19-26-03.0382[InitLibrary]Library SignID:00000101
+2025-09-03 19-26-03.0382[InitLibrary]Current SignID:00000101
+2025-09-03 19-26-03.0383[InitLibrary]End
+2025-09-03 19-26-03.0384[GetAPIVersion]Begin
+2025-09-03 19-26-03.0385[GetAPIVersion]API rel 1.07
+2025-09-03 19-26-03.0385[GetAPIVersion]End
+2025-09-03 19-26-03.0385[GetAPIVersionHwLibrary]Begin
+2025-09-03 19-26-03.0387[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-03 19-26-03.0387[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-03 19-26-03.0388[GetAPIVersionHwLibrary]End
+2025-09-03 19-26-03.0388[EnumUSBDevices]Begin
+2025-09-03 19-26-03.0392[EnumUSBDevices]Found 0 USB Devices
+2025-09-03 19-26-03.0393[EnumUSBDevices]End
