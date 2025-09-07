@@ -191,18 +191,19 @@ public class StationSelectionController {
     private void calculateFare() {
         try {
             fare = 0;
+            this.quantity=1;
 
-            if (this.selectedDestination != null && this.ticketType != null && this.quantity > 0) {
+            if (this.selectedDestination != null && this.ticketType != null && this.quantity > 0) {;
                 int sourceId = Integer.parseInt(SystemConfig.getInstance().getCurrentStation().getStationId()) - 1;
                 int destId = Integer.parseInt(this.selectedDestination.getStationId()) - 1;
 
                 int baseFare = FareLine3.distanceMatrix[sourceId][destId];
-                int multiplier = this.ticketType.equals(TicketType.SINGLE) ? 1 : 2;
+//                int multiplier = this.ticketType.equals(TicketType.SINGLE) ? 1 : 2;
+                int amount = (this.ticketType.equals(TicketType.RETURN) ? 2 : 1) * this.quantity * FareLine3.distanceMatrix[sourceId][destId];
+                fare=(int)(agent.getBusinessRule().getFareMultiplayer()*amount);
 
-                fare = baseFare * this.quantity * multiplier;
-
-                Logger.info("Fare calculated: Base={}, Quantity={}, Multiplier={}, Total={}",
-                        baseFare, this.quantity, multiplier, fare);
+                Logger.info("Fare calculated: SourceID={}, DestID={}, BaseFare={}, TicketType={}, Quantity={}, TotalFare={}",
+                        sourceId, destId, baseFare, this.ticketType, this.quantity, fare);
             }
 
             // Update UI

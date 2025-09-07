@@ -467,12 +467,10 @@ public class Controller {
         }
 
         this.updatePeakHour(ZonedDateTime.now(ZoneId.systemDefault()));
-
         boolean isWeekDay=this.agent.getBusinessRule().getToday().getDayType().equals("WEEKDAYS");
-
-
         this.updateDateTime(isWeekDay);
         message.setText("");
+
 
         userId.setText(agent.getShift().getOperatorId());
         ToggleGroup toggleGroup = new ToggleGroup();

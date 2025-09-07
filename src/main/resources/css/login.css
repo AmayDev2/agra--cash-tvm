@@ -81,3 +81,10 @@
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 15, 0, 0, 5);
     -fx-padding: 25;
 }
+
+#logoPane {
+    -fx-background-image: url("../images/indore-bhopal-logo.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain; /* or cover if you want full coverage */
+    -fx-background-position:center;
+}

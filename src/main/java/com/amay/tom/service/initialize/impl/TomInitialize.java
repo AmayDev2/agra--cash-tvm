@@ -174,13 +174,13 @@ public class TomInitialize implements ITomInitialize {
         String dbUrl = envLoader.getSQLiteDatabasePath();
         String dbFileName = envLoader.getSQLiteDatabaseName();
         int noOfConnections = envLoader.getSQLiteDatabaseConnections();
-        SQLiteConnector sqLiteConnector = new SQLiteConnector(dbUrl, dbFileName, noOfConnections);
-        sqLiteConnector.setSQLiteConnection();
+//        SQLiteConnector sqLiteConnector = new SQLiteConnector(dbUrl, dbFileName, noOfConnections);
+//        sqLiteConnector.setSQLiteConnection();
 
-        Connection connection = sqLiteConnector.getConnection();
-        SqliteRepositoryImpl sqliteRepository = new SqliteRepositoryImpl(connection);
+//        Connection connection = sqLiteConnector.getConnection();
+//        SqliteRepositoryImpl sqliteRepository = new SqliteRepositoryImpl(connection);
         System.out.println("Connection established");
-        agent.setSqliteRepository(sqliteRepository);
+//        agent.setSqliteRepository(sqliteRepository);
 
         this.updateUI(++progress, "Connection with sqlite local DB stabled...");
     }
@@ -385,7 +385,7 @@ public class TomInitialize implements ITomInitialize {
                 // 3. SQLight DB
                 this.getSQLightDBConnection();
                 progress += 0.04;
-                this.updateUI(progress, "SQLight DB connected.");
+                this.updateUI(progress, "SQL DB connected.");
 
                 // 4. SQL DB
                 this.getSQLDBConnection();

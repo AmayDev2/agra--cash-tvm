@@ -22,6 +22,6 @@ public class Equipment {
     public Equipment(String equipmentId, String equipmentSerial) {
         this.equipmentId = equipmentId;
         this.equipmentSerial = equipmentSerial;
-        this.equipmentName= (equipmentId.startsWith("01", 4)?"TOM": equipmentId.startsWith("02", 4)?"EFO":"UNKNOWN") + " - " + equipmentSerial;
+        this.equipmentName= (equipmentId.startsWith("01", 4)?"TOM": equipmentId.startsWith("02", 4)?"EFO":equipmentId.startsWith("03", 4)?"TVM":"UNKNOWN") + " - " + equipmentSerial;
     }
 }

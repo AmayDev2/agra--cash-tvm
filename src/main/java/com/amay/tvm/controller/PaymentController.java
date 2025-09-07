@@ -644,7 +644,7 @@ public class PaymentController {
             Logger.info("Processing payment for order: {}", this.orderId);
 
             List<ProperTicket> properTickets = new ArrayList<>();
-            AtomicInteger totalFare = new AtomicInteger(fare*quantity);
+            AtomicInteger totalFare = new AtomicInteger(fare*requestedTicket.quantity());
 
             for (RequestedTicket requestedTicket : requestedTicketOrder.requestedTicket()) {
                 long issuedAt = Instant.now().toEpochMilli();

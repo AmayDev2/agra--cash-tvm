@@ -23,7 +23,7 @@ public class PDUController {
     private GridPane mainGrid;
     @FXML
     private PDUHeaderController pduHeaderController;
-//        @FXML private Label labelDate;
+
     @FXML
     private StackPane stackPane;
 

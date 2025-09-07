@@ -116,19 +116,19 @@ public class ShiftServiceImpl implements ShiftService {
             agent.getShiftIdGeneratorService().setTicketIdGeneratorService();
 
 
-            userAuth.getCurrentUser().getRoles().forEach(role -> {
-                System.out.println("Role: " + role);
-            });
+//            userAuth.getCurrentUser().getRoles().forEach(role -> {
+//                System.out.println("Role: " + role);
+//            });
             FXMLLoader fxmlLoader;
-            if(userAuth.hasRole(Role.MAINTENANCE.name())){
-                fxmlLoader= ViewFactory.getMaintenance();
-                fxmlLoader.setControllerFactory(controller -> new Maintenance(agent));
-                agent.getGrpcApiListener().sendAlarm(Alarm.MAINTENANCE_LOGIN);
-            }else {
+//            if(userAuth.hasRole(Role.MAINTENANCE.name())){
+//                fxmlLoader= ViewFactory.getMaintenance();
+//                fxmlLoader.setControllerFactory(controller -> new Maintenance(agent));
+//                agent.getGrpcApiListener().sendAlarm(Alarm.MAINTENANCE_LOGIN);
+//            }else {
                 fxmlLoader = ViewFactory.getTVMHomeScreen();
                 fxmlLoader.setControllerFactory(controller -> new TVMController(agent));
                 agent.getGrpcApiListener().sendAlarm(Alarm.OPERATION_LOGIN);
-            }
+//            }
             // load main screen
             return fxmlLoader;
 

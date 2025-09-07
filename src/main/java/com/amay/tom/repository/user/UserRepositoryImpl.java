@@ -33,16 +33,14 @@ public class UserRepositoryImpl extends UserRepository {
 
     @Override
     public void save(UserDto user) throws SQLException {
-//        user.setAccountExpiryDate(LocalDateTime.now().plusMonths(50));
-//        user.setCredentialsExpiryDate(LocalDateTime.now().plusMonths(50));
-//        user.setCreatedAt(LocalDateTime.now());
-//        user.setUpdatedAt(LocalDateTime.now());
+
         try {
             if(findByUsername(user.getUsername()).isPresent()){
                 update(user);
                 return;
             }
-        } catch (SQLException _) {
+        } catch (SQLException e) {
+            e.printStackTrace();
 
         }
 

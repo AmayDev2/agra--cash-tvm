@@ -2,7 +2,6 @@ package com.amay.printer;
 
 import com.amay.printer.Response.BaseResponse;
 import com.amay.printer.Response.ImagePrintResponse;
-import com.amay.tom.ViewFactory;
 import com.amay.tom.config.ENVURL;
 import com.amay.tom.config.SystemConfig;
 import com.amay.tom.model.QRTicket;
@@ -12,7 +11,6 @@ import javafx.scene.image.Image;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.List;
 
@@ -208,6 +206,17 @@ public class PrinterService implements PrinterInterface {
     }
 
     @Override
+    public PrinterStatus printerStatus() {
+        PrinterStatus ps = null;
+        try {
+            ps = cudev.GetPrinterFullStatus();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return ps;
+    }
+
+    @Override
     public BaseResponse printImageQRImageByText(QRTicket qrTicket) {
         ImagePrintResponse imagePrintResponse=new ImagePrintResponse();
         // print logo
@@ -268,7 +277,7 @@ public class PrinterService implements PrinterInterface {
             PrintFontSettings pfs=new PrintFontSettings();
             pfs.Emphasized=true;
             pfs.LeftMarginValue=10*10;
-            pfs.LineSpacing=20;
+            pfs.LineSpacing=30;
             pfs.CharWidth= PrintFontSettings.FontSize.FONT_SIZE_X1;
             pfs.CharHeight=PrintFontSettings.FontSize.FONT_SIZE_X1;
             pfs.Justification= PrintFontSettings.FontJustification.FONT_JUSTIFICATION_LEFT;

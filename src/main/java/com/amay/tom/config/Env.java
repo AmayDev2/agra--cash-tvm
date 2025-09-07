@@ -6,7 +6,7 @@ import com.amay.tom.model.equipment.entity.EquipmentPrivilege;
 public interface Env {
 
     // Project
-    String PROJECT_NAME = "567890";
+    String PROJECT_NAME = "";
 
     // Database
     String DATABASE_URL = "jdbc:h2:file:C:/tom-config/h2-db/tom_db;DB_CLOSE_ON_EXIT=FALSE";
@@ -15,75 +15,73 @@ public interface Env {
     String DATABASE_PASSWORD2 = "Admin@123";
 
     // SQLite
-    int SQLITE_DATABASE_CONNECTIONS = 5;
-    String SQLITE_DATABASE_PATH = "C:\\tom-config\\h2-db";
-    String SQLITE_DATABASE_NAME = "tomsqlite.db";
+    int SQLITE_DATABASE_CONNECTIONS = 0;
+    String SQLITE_DATABASE_PATH = "";
+    String SQLITE_DATABASE_NAME = "";
 
     // Equipment privileges file path
-    String EQUIPMENT_PRIVILEGES = "C:\\tom-config\\sle_privillage\\EquipmentPrivillages.json";
+    String EQUIPMENT_PRIVILEGES = "";
 
     // Station and Equipment
-    String STATION_ID_NEW = "01";
-    String EQUIPMENT_ID_NEW = "01010106";
-    String EQUIPMENT_SERIAL_NEW = "06";
-    String EQUIPMENT_TYPE = "01";
-    String LINE_NUMBER = "01";
+    String STATION_ID_NEW = "";
+    String EQUIPMENT_ID_NEW = "";
+    String EQUIPMENT_SERIAL_NEW = "";
+    String EQUIPMENT_TYPE = "";
+    String LINE_NUMBER = "";
 
     // Hardware
-    String QR_SCANNER_MODEL = "7161WP";
-    String THERMAL_PRINTER_MODEL = "Posiflex PP8802 Printer";
-    boolean PRINTER_CHECK_BEFORE_PRINT = true;
-    int SHIFT_TIME_PERIOD_IN_MINUTES = 3;
+    String QR_SCANNER_MODEL = "";
+    String THERMAL_PRINTER_MODEL = "";
+    boolean PRINTER_CHECK_BEFORE_PRINT = false;
+    int SHIFT_TIME_PERIOD_IN_MINUTES = 0;
 
     // Redis
-    String REDIS_HOST = "redis-19373.c241.us-east-1-4.ec2.cloud.redislabs.com";
-    int REDIS_PORT = 19373;
-    String REDIS_PASSWORD = "3BDsrSjfNJ9MaBy4xIojO8G0NchEfKOK";
+    String REDIS_HOST = "";
+    int REDIS_PORT = 0;
+    String REDIS_PASSWORD = "";
 
     // CCU Connection
-    String CCU_IP_ADDRESS = "192.168.1.43";
-    int CCU_PORT = 9000;
-    String CCU_REST_PORT = "5000";
+    String CCU_IP_ADDRESS = "";
+    int CCU_PORT = 0;
+    String CCU_REST_PORT = "";
 
     // SCU Connection
-    String SCU_IP_ADDRESS = "192.168.1.48";
-    int SCU_PORT = 9000;
-
+    String SCU_IP_ADDRESS = "";
+    int SCU_PORT = 0;
 
     // Ticket
-    String TICKET_NAME = "MPMRC";
-    String TICKET_IMAGES = "C:\\tom-config\\ticket_images";
+    String TICKET_NAME = "";
+    String TICKET_IMAGES = "";
 
     // Business rules
-    int REFUND_TIME = 40;
-    int CART_LIMIT = 5;
-    int ENTRY_EXIT_PENALTY = 10;
+    int REFUND_TIME = 0;
+    int CART_LIMIT = 0;
+    int ENTRY_EXIT_PENALTY = 0;
     int ADMINISTRATIVE_CHARGE = 0;
 
     // Update flag
-    boolean UPDATE = true;
+    boolean UPDATE = false;
 
     // Run command
-    String RUN_COMMAN = "java --module-path \"C:\\Program Files\\javafx-sdk-21.0.7\\lib\" "
-            + "--add-modules javafx.controls,javafx.fxml -jar  \"E:\\Amay Technosystems\\AFC\\Tom\\target\\Tom.jar\"";
+    String RUN_COMMAN = "";
 
     // FTP Configuration
-    String FTP_HOST = "192.168.1.43";
-    int FTP_PORT = 2222;
-    String FTP_USERNAME = "mpmrc";
-    String FTP_PASSWORD = "sw@mpmrc";
-    String FTP_REMOTE_FILE_PATH = "com/amay/tom/TOM.jar";
-    String FTP_LOCAL_PATH = "C:\\Users\\aradh\\Downloads\\Project\\TOM\\TOM\\tom\\target";
-    String LOCAL_FILE_NAME = "TOM_New.jar";
+    String FTP_HOST = "";
+    int FTP_PORT = 0;
+    String FTP_USERNAME = "";
+    String FTP_PASSWORD = "";
+    String FTP_REMOTE_FILE_PATH = "";
+    String FTP_LOCAL_PATH = "";
+    String LOCAL_FILE_NAME = "";
 
     // Application Settings
-    String APPLICATION_LAUNCHER_PATH = "C:/tom-config/launcher.bat";
-    String APPLICATION_PATH = "C:\\Users\\aradh\\Downloads\\Project\\TOM\\TOM\\tom\\target";
-    String CURRENT_FILE_NAME = "TOM.jar";
-    int LAUNCH_DELAY = 5;
-    String FXML_LIB = "C:/Program Files/javafx-sdk-21.0.7/lib";
+    String APPLICATION_LAUNCHER_PATH = "";
+    String APPLICATION_PATH = "";
+    String CURRENT_FILE_NAME = "";
+    int LAUNCH_DELAY = 0;
+    String FXML_LIB = "";
 
     // Methods to return objects for config or privileges
-    TicketConfigDTO getTicketConfig();            // returns TicketConfigDTO from TICKET_CONFIG_FILE
-    EquipmentPrivilege getEquipmentPrivilege();   // returns EquipmentPrivilege object from EQUIPMENT_PRIVILEGES file
+    TicketConfigDTO getTicketConfig();
+    EquipmentPrivilege getEquipmentPrivilege();
 }

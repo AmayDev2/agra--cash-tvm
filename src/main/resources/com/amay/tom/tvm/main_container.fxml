@@ -115,18 +115,21 @@
                                      GridPane.columnIndex="2" GridPane.rowIndex="0"
                                      prefWidth="340.0" prefHeight="80.0"
                                      styleClass="main-button"
+                                     disable="true"
                              onAction="#onClickNcmc"/>
 
                              <Button fx:id="balanceUpdateButton" text="Balance Update"
                                      GridPane.columnIndex="2" GridPane.rowIndex="1"
                                      prefWidth="340.0" prefHeight="80.0"
                                      styleClass="main-button"
+                                     disable="true"
                              onAction="#onClickBalanceUpdate"/>
 
                              <Button fx:id="cardInquiryButton" text="Card Inquiry"
                                      GridPane.columnIndex="2" GridPane.rowIndex="2"
                                      prefWidth="340.0" prefHeight="80.0"
                                      styleClass="main-button"
+                                     disable="true"
                              onAction="#onClickCardInquiry"/>
                          </children>
                      </GridPane>
