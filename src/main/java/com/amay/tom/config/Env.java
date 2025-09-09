@@ -9,7 +9,7 @@ public interface Env {
     String PROJECT_NAME = "";
 
     // Database
-    String DATABASE_URL = "jdbc:h2:file:C:/tom-config/h2-db/tom_db;DB_CLOSE_ON_EXIT=FALSE";
+    String DATABASE_URL = "jdbc:h2:file:C:/tvm-config/h2-db/tvm_db;DB_CLOSE_ON_EXIT=FALSE";
     String DATABASE_USERNAME = "root";
     String DATABASE_PASSWORD = "Admin@123";
     String DATABASE_PASSWORD2 = "Admin@123";

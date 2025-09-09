@@ -379,7 +379,7 @@ public class PaymentController {
                 Logger.error("No ticket request available");
                 return;
             }
-            buttonsDisability(true);
+//            buttonsDisability(true);
 //
             Logger.info("Confirming payment selection: {}", this.paymentMethod);
             this.createTicketRequest(requestedTicket);
@@ -674,7 +674,7 @@ public class PaymentController {
                 // Process payment using the configured payment method
                 PaymentResponse paymentResponse = (PaymentResponse) PaymentFactory
                         .getPaymentMedia(selectedPayment)
-                        .pay(totalFare.get(), requestedTicketOrder.orderId(), new Object[]{this.stackPane},agent.getTransactionRepository());
+                        .pay(totalFare.get(), requestedTicketOrder.orderId(), new Object[]{this.stackPane,agent.getTransactionRepository()});
 
                 if(!paymentResponse.isSuccess()){
                     buttonsDisability(false);

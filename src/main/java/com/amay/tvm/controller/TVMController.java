@@ -103,7 +103,7 @@ public class TVMController {
                             // Update the clock icon or other features if needed
                             if (!timeout && !agent.getBusinessRule().isActiveWorkingHour()) {
 //                                outOfWorkingHour();
-                                this.agent.getInternalListener().EOShift();
+//                                this.agent.getInternalListener().EOShift();
 
                                 //TODO: Show out of working hour screen
                             }

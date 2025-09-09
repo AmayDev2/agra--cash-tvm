@@ -198,7 +198,6 @@ public class BNRIntegration {
         AcceptAmountResponse acceptedAmount=null;
         try {
             acceptedAmount = acceptAmountV2(CASH_IN_AMOUNT);
-
         } catch (JxfsException e) {
             listener.setStatus(BNRStatus.FAILED);
             throw new RuntimeException(e);
@@ -796,29 +795,30 @@ public class BNRIntegration {
         boolean hasChange = false;
         startCashInTransaction();
 
+        try {
             data = cashIn(CASH_IN_AMOUNT, CASH_IN_CURRENCY);
             insertedAmount = data.getDenomination().getAmount(); //after cashIn function completion it gives total amount Accepted
-            int x=control.queryCashUnit();
-            Logger.debug("CASH UNIT : "+x);
+            int x = control.queryCashUnit();
+            Logger.debug("CASH UNIT : " + x);
 
             // Check if change needed
             if (insertedAmount > amount) {
                 long requiredChange = insertedAmount - amount;
                 acceptAmountResponse.setAcceptedAmount(insertedAmount);
                 hasChange = isDenominational(requiredChange); // do I have exchange?
-                int maxChangeAvailable= 0;
+                int maxChangeAvailable = 0;
                 // Return money, if bnr can't change it
                 if (!hasChange) {
 //                    --->>> get maximum change available in bnr
-                    HaveAmountObject haveAmountObject=getBnrHaveAmountObject();
-                    ReturnableAmountObject returnableAmountObject=CoinModuleInterface.INSTANCE.getMaxChangeableAmount(haveAmountObject,requiredChange/100);
-                    maxChangeAvailable=returnableAmountObject.totalAmount*100;
+                    HaveAmountObject haveAmountObject = getBnrHaveAmountObject();
+                    ReturnableAmountObject returnableAmountObject = CoinModuleInterface.INSTANCE.getMaxChangeableAmount(haveAmountObject, requiredChange / 100);
+                    maxChangeAvailable = returnableAmountObject.totalAmount * 100;
 
-                    int changeNeeded=(int) requiredChange - maxChangeAvailable;
-                    System.out.println("Unfortunately BNR can`t change this amount of bills "+changeNeeded);
-                    CoinResponseDecoder.CoinModuleDispenseResponse dispenseResponse=CoinModuleInterface.INSTANCE.dispense( changeNeeded/100);
+                    int changeNeeded = (int) requiredChange - maxChangeAvailable;
+                    System.out.println("Unfortunately BNR can`t change this amount of bills " + changeNeeded);
+                    CoinResponseDecoder.CoinModuleDispenseResponse dispenseResponse = CoinModuleInterface.INSTANCE.dispense(changeNeeded / 100);
                     Logger.info(dispenseResponse.toString());
-                    if(!dispenseResponse.success) {
+                    if (!dispenseResponse.success) {
                         //TODO: if coin module don't have any  change  process for role back
                         acceptAmountResponse.setStatus(false);
                         try {
@@ -828,16 +828,27 @@ public class BNRIntegration {
                         } catch (JxfsException e) {
                             e.printStackTrace();
                         }
-                    }else{
-                        acceptAmountResponse.setCoinChangedAmount(dispenseResponse.amountDispensed*100);
+                    } else {
+                        acceptAmountResponse.setCoinChangedAmount(dispenseResponse.amountDispensed * 100);
                         acceptAmountResponse.setStatus(true);
                     }
-                }else{
+                } else {
                     acceptAmountResponse.setStatus(true);
                 }
-            }else{
+            } else {
                 acceptAmountResponse.setStatus(true);
             }
+        } catch (Exception e) {
+            acceptAmountResponse.setStatus(false);
+            try {
+                cashInRollback();
+                acceptAmountResponse.setAcceptedAmount(0);
+                acceptAmountResponse.setRollback(true);
+            } catch (JxfsException ex) {
+                ex.printStackTrace();
+            }
+            Logger.error("Exception during cashIn : ", e);
+        }
 
         endCashInTransaction();
         return acceptAmountResponse;
@@ -897,6 +908,8 @@ public class BNRIntegration {
         });
         // If the result is not successful
         if (event.getResult() != IJxfsConst.JXFS_RC_SUCCESSFUL) {
+            Logger.error("CashIn failed with error: {} ", event.getResult());
+            bnrListener.informationToShow(BNRMessage.REFUSE_TO_ACCEPT);
             throw new MEIJxfsException(event.getResult(), event.getData());
         } else {
             result = (MEICashInOrder) event.getData();

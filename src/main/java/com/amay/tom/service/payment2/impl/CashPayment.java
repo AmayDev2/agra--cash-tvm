@@ -23,7 +23,7 @@ public class CashPayment implements PaymentMedia {
 
     @Override
     public Object pay(double amount, String orderId, Object... args) {
-        StackPane stackPane= (StackPane) args[0];
+        StackPane stackPane = (StackPane) args[0] ; // ✅ if first element is a StackPane
         TransactionRepository transactionRepository=(TransactionRepository) args[1];
         PaymentResponse paymentResponse=new PaymentResponse();
         try {

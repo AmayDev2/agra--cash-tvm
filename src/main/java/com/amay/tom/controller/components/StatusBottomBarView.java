@@ -52,8 +52,8 @@ public class StatusBottomBarView {
         Logger.debug("StatusBottomBarView initialized");
 //        softwareVersion.setText(versions.getVersion());
         softwareVersion.setText(masterConfigInfo.getTomSwVer());
-        fareTableVersion.setText(masterConfigInfo.getFareConfig());
-        parameterVersion.setText(masterConfigInfo.getConfigVer());
+//        fareTableVersion.setText(masterConfigInfo.getFareConfig());
+//        parameterVersion.setText(masterConfigInfo.getConfigVer());
     }
 
     public StatusBottomBarView(PeripheralMonitor peripheralMonitor, Versions versions, MasterConfigInfo masterConfigInfo) {

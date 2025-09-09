@@ -3,6 +3,7 @@ package com.amay.tvm.coin;
 
 import com.amay.tvm.coin.model.ModuleResponse;
 import com.amay.tvm.coin.service.CoinModuleService;
+import com.amay.tvm.coin.service.HoppersRegistry;
 
 import java.util.Scanner;
 
@@ -16,7 +17,7 @@ public class CoinModuleApplication {
 			service.connect(port);
 			System.out.println("Connected to " + port);
 			while (true) {
-				System.out.println("\n1) Poll Status  2) Get Version  3) Dispense  4) Dump  5) Buzzer On  6) Buzzer Off  7) Light On  8) Light Off  9) Exit");
+				System.out.println("\n1) Poll Status  2) Get Version  3) Dispense  4) Dump  5) Buzzer On  6) Buzzer Off  7) Light On  8) Light Off  9)Multitest   10) Exit");
 				System.out.print("Select: ");
 				String choice = sc.nextLine().trim();
 				try {
@@ -50,7 +51,20 @@ public class CoinModuleApplication {
 					} else if ("8".equals(choice)) {
 						ModuleResponse r = service.turnOffTrayLight();
 						System.out.println("Light Off: DATA=" + r.getData().length + " bytes");
-					} else if ("9".equals(choice)) {
+					} else if("9".equals(choice)) {
+//						service.dispenseCoin((byte) 3, (byte)2);
+						System.out.println("Sending multitest dispense commands to all hoppers...");
+						ModuleResponse r =service.dispenseCoin((byte) 3, (byte)1);
+						System.out.println("FIRST>>>>>>> Dispense done, DATA=" + r.getData().length + " bytes");
+						Thread.sleep(8000);
+						System.out.println("Sending Second Command...");
+						 r =service.dispenseCoin((byte) 2, (byte)1);
+						System.out.println("Sending Third Command...");
+						System.out.println("SECOND>>>>>>> Dispense done, DATA=" + r.getData().length + " bytes");
+						Thread.sleep(8000);
+						r=service.dispenseCoin((byte) 1, (byte)1);
+						System.out.println("Third>>>>>>> Dispense done, DATA=" + r.getData().length + " bytes");
+					}else if ("10".equals(choice)) {
 						break;
 					}
 				} catch (Exception ex) {

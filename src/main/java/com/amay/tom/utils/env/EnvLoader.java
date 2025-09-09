@@ -191,4 +191,8 @@ public class EnvLoader {
     public String getComPort() {
         return getOrDefault("COM_PORT", "COM2");
     }
+
+    public boolean getEnvironment() {
+        return Boolean.parseBoolean(getOrDefault("ENVIRONMENT", String.valueOf(true)));
+    }
 }

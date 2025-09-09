@@ -472,6 +472,7 @@ public class TomInitialize implements ITomInitialize {
                     agent.getVersionRepository().insert(MasterConfigInfoMapper.dtoToEntity(versionService.getActual()));
                 }
                 agent.setMasterConfigInfo(MasterConfigInfoMapper.entityToMasterConfigInfo(agent.getVersionRepository().findAll().getFirst()));
+                if(agent.getTomConfigRepository().findAll().size()>0)
                 agent.setTomConfig(TomConfigMapper.entityToModel(agent.getTomConfigRepository().findAll().getFirst()));
                 ScuDataMapper.setVersion(agent.getMasterConfigInfo());
                 progress += 0.04;
@@ -514,10 +515,15 @@ public class TomInitialize implements ITomInitialize {
                 progress += 0.03;
                 this.updateUI(progress, "Peripheral status pushed.");
 
-//                BNRIntegration.bnrOpen();
-//                CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort());
-
-//                PrinterCommandDispatcher.INSTANCE.setupPrinter();
+                if(envLoader.getEnvironment()) {
+                    try {
+                        BNRIntegration.bnrOpen();
+                        CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort());
+                        PrinterCommandDispatcher.INSTANCE.setupPrinter();
+                    } catch (RuntimeException e) {
+                        e.printStackTrace();
+                    }
+                }
 
                 // 22. Push Remaining Data & Finalize
                 this.pushRemainedDate();

@@ -9,10 +9,14 @@ import com.amay.tvm.coin.service.CoinModuleService;
 import com.amay.tvm.coin.service.CoinResponseDecoder;
 import com.amay.tvm.coin.service.HoppersRegistry;
 import com.amay.tvm.coin.service.MaxChangePossibleService;
+import javafx.application.Platform;
 import org.tinylog.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public enum CoinModuleInterface {
 	INSTANCE;
@@ -62,18 +66,47 @@ public enum CoinModuleInterface {
 		HaveAmountObject haveAmount = new HaveAmountObject(HoppersRegistry.INSTANCE.getHoppers());
 		haveAmount.totalAmount = amount;
 		ReturnableAmountObject result = new MaxChangePossibleService().getReturnableAmount(new ReturnableAmountObject(new ArrayList<>()),haveAmount, amount, 0);
+		System.out.println("Dispensing coins for amount: "+amount+", possible amount: "+result.totalAmount);
+		result.amountDetailList.forEach(ad -> Logger.info("Dispensing Denomination: {} x {} for", ad.getAmount(), ad.getQuantity(),amount));
 		if(result.totalAmount!=amount && !service.isConnected()){
 			return dispenseResponse;
 		}
 
+		int delayTime=0;
 		for(AmountDetail amountDetail:result.amountDetailList) {
+			Thread.sleep(delayTime); // wait before sending next command
+			delayTime=10000;
 			int hopper= Integer.parseInt(amountDetail.getContainerId());
+			Logger.info("Sending >>>>> Command to Hopper: {} for Quantity: {}", hopper, amountDetail.quantity);
 			ModuleResponse response= service.dispenseCoin((byte) hopper, (byte) amountDetail.quantity);
 			System.out.println("Dispense done, DATA=" + response.getData().length + " bytes");
 			CoinResponseDecoder.DispenseResult dispenseResult=CoinResponseDecoder.decodeDispenseResponse(response.getData());
 			HoppersRegistry.INSTANCE.updateHopper(hopper,dispenseResult.quantityDispensed);
 			list.add(dispenseResult);
 		}
+
+/*			ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
+			int delay = 0;
+
+			for (AmountDetail amountDetail : result.amountDetailList) {
+				int hopper = Integer.parseInt(amountDetail.getContainerId());
+				int quantity = amountDetail.quantity;
+
+				scheduler.schedule(() -> {
+					try {
+						ModuleResponse response = service.dispenseCoin((byte) hopper, (byte) quantity);
+						CoinResponseDecoder.DispenseResult dispenseResult =
+								CoinResponseDecoder.decodeDispenseResponse(response.getData());
+						HoppersRegistry.INSTANCE.updateHopper(hopper, dispenseResult.quantityDispensed);
+
+						list.add(dispenseResult);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}, delay, TimeUnit.MILLISECONDS);
+
+				delay += 8000; // space tasks by 8 seconds
+			}*/
 
 		boolean statue = false;  // NO NEED
 		for(CoinResponseDecoder.DispenseResult dispenseResult:list){

@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CashInsertProcessingController {
+    @FXML private Button skipPrintBtn;
     @FXML private FlowPane flowPaneInsertedNotes;
     @FXML private  Label remainedAmountText;
     @FXML private FlowPane flowPane;
@@ -170,6 +172,7 @@ public class CashInsertProcessingController {
 
     public void skipPrintReceipt(ActionEvent actionEvent)  {
         isSuccess = false;
+        skipPrintBtn.setDisable(true);
         try {
             BNRIntegration.cancel(flowPaneInsertedNotes.getChildren().isEmpty());
         } catch (JxfsException e) {
@@ -178,6 +181,7 @@ public class CashInsertProcessingController {
         PauseTransition pauseTransition = new PauseTransition(javafx.util.Duration.seconds(2));
         pauseTransition.setOnFinished(event -> Platform.runLater(()->this.stackPane.getChildren().removeLast()));
         pauseTransition.play();
+
         actionEvent.consume();
     }
 

@@ -91,6 +91,7 @@ public class CoinModuleService {
 		// After final response, send End command (no response expected)
 		byte endSeq = sequenceNumberManager.next();
 		ProtocolFrame end = CommandBuilder.createCoinChangeEndCommand(hopper, endSeq);
+		System.out.println("TX (end)     : " + HexUtil.toHex(end.toByteArray()));
 		try { comm.write(end.toByteArray()); } catch (Exception ignored) {}
 		return resp;
 	}

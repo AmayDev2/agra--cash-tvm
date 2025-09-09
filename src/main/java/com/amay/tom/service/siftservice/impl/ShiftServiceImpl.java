@@ -513,7 +513,7 @@ public class ShiftServiceImpl implements ShiftService {
             BufferedImage bufferedImage = ImageUtils.nodeToImage(node);
             String folderPath = NewFolder.createTodayFolder();
             ImageUtils.saveBufferedImage(bufferedImage, folderPath + "\\" + "shift_" + shiftId  + ".png");
-            ImplPrintTicket.printImage(bufferedImage);
+//            ImplPrintTicket.printImage(bufferedImage);
 
         } catch (RuntimeException | IOException e) {
             Logger.info("Could not save image for EOS report: " + e.getMessage());
