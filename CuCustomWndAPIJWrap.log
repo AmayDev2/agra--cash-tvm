@@ -8574,3 +8574,363 @@ Valid Upto       : 120 minutes after entry
 2025-09-08 14-03-51.0173[EnumUSBDevices]Begin
 2025-09-08 14-03-51.0178[EnumUSBDevices]Found 0 USB Devices
 2025-09-08 14-03-51.0178[EnumUSBDevices]End
+2025-09-09 11-46-06.0072[]*****************************************
+2025-09-09 11-46-06.0072[]DLL Log Initialize. Verbosity: 6
+2025-09-09 11-46-06.0079[]*****************************************
+2025-09-09 11-46-06.0081[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-09 11-46-06.0082[]DLL Version: 1.07
+2025-09-09 11-46-06.0083[InitLibrary]Begin
+2025-09-09 11-46-06.0102[InitLibrary]Library SignID:00000101
+2025-09-09 11-46-06.0103[InitLibrary]Current SignID:00000101
+2025-09-09 11-46-06.0103[InitLibrary]End
+2025-09-09 11-46-06.0104[GetAPIVersion]Begin
+2025-09-09 11-46-06.0104[GetAPIVersion]API rel 1.07
+2025-09-09 11-46-06.0104[GetAPIVersion]End
+2025-09-09 11-46-06.0105[GetAPIVersionHwLibrary]Begin
+2025-09-09 11-46-06.0107[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-09 11-46-06.0108[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-09 11-46-06.0108[GetAPIVersionHwLibrary]End
+2025-09-09 11-46-06.0108[EnumUSBDevices]Begin
+2025-09-09 11-46-06.0111[EnumUSBDevices]Found 0 USB Devices
+2025-09-09 11-46-06.0112[EnumUSBDevices]End
+2025-09-09 11-50-25.0242[]*****************************************
+2025-09-09 11-50-25.0242[]DLL Log Initialize. Verbosity: 6
+2025-09-09 11-50-25.0243[]*****************************************
+2025-09-09 11-50-25.0243[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-09 11-50-25.0243[]DLL Version: 1.07
+2025-09-09 11-50-25.0245[InitLibrary]Begin
+2025-09-09 11-50-25.0264[InitLibrary]Library SignID:00000101
+2025-09-09 11-50-25.0264[InitLibrary]Current SignID:00000101
+2025-09-09 11-50-25.0265[InitLibrary]End
+2025-09-09 11-50-25.0266[GetAPIVersion]Begin
+2025-09-09 11-50-25.0266[GetAPIVersion]API rel 1.07
+2025-09-09 11-50-25.0267[GetAPIVersion]End
+2025-09-09 11-50-25.0267[GetAPIVersionHwLibrary]Begin
+2025-09-09 11-50-25.0269[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-09 11-50-25.0269[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-09 11-50-25.0270[GetAPIVersionHwLibrary]End
+2025-09-09 11-50-25.0270[EnumUSBDevices]Begin
+2025-09-09 11-50-25.0274[EnumUSBDevices]Found 0 USB Devices
+2025-09-09 11-50-25.0275[EnumUSBDevices]End
+2025-09-09 11-55-04.0848[]*****************************************
+2025-09-09 11-55-04.0848[]DLL Log Initialize. Verbosity: 6
+2025-09-09 11-55-04.0849[]*****************************************
+2025-09-09 11-55-04.0849[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-09 11-55-04.0849[]DLL Version: 1.07
+2025-09-09 11-55-04.0850[InitLibrary]Begin
+2025-09-09 11-55-04.0869[InitLibrary]Library SignID:00000101
+2025-09-09 11-55-04.0869[InitLibrary]Current SignID:00000101
+2025-09-09 11-55-04.0871[InitLibrary]End
+2025-09-09 11-55-04.0871[GetAPIVersion]Begin
+2025-09-09 11-55-04.0872[GetAPIVersion]API rel 1.07
+2025-09-09 11-55-04.0872[GetAPIVersion]End
+2025-09-09 11-55-04.0873[GetAPIVersionHwLibrary]Begin
+2025-09-09 11-55-04.0875[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-09 11-55-04.0875[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-09 11-55-04.0875[GetAPIVersionHwLibrary]End
+2025-09-09 11-55-04.0875[EnumUSBDevices]Begin
+2025-09-09 11-55-04.0880[EnumUSBDevices]Found 1 USB Devices
+2025-09-09 11-55-04.0880[EnumUSBDevices]End
+2025-09-09 11-55-04.0882[OpenPrinterUSB]Begin
+2025-09-09 11-55-04.0882[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-09 11-55-04.0887[OpenPrinterUSB]New device ID:00000101
+2025-09-09 11-55-04.0888[OpenPrinterUSB]End
+2025-09-09 11-55-04.0890[GetInfoDeviceModel]Begin
+2025-09-09 11-55-04.0892[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-09 11-55-04.0893[GetInfoDeviceModel]End
+2025-09-09 11-55-04.0894[GetInfoFirmwareVersion]Begin
+2025-09-09 11-55-04.0897[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-09 11-55-04.0897[GetInfoFirmwareVersion]End
+2025-09-09 11-55-04.0898[GetCapCommPortType]Begin
+2025-09-09 11-55-04.0900[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-09 11-55-04.0901[GetCapCommPortType]End
+2025-09-09 11-55-04.0901[GetCapPrinterResolution]Begin
+2025-09-09 11-55-04.0903[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-09 11-55-04.0904[GetCapPrinterResolution]End
+2025-09-09 11-55-04.0904[GetCapPrintWidth]Begin
+2025-09-09 11-55-04.0907[GetCapPrintWidth]Cap Print Width:640
+2025-09-09 11-55-04.0907[GetCapPrintWidth]End
+2025-09-09 11-59-34.0179[]*****************************************
+2025-09-09 11-59-34.0180[]DLL Log Initialize. Verbosity: 6
+2025-09-09 11-59-34.0180[]*****************************************
+2025-09-09 11-59-34.0182[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-09 11-59-34.0182[]DLL Version: 1.07
+2025-09-09 11-59-34.0183[InitLibrary]Begin
+2025-09-09 11-59-34.0205[InitLibrary]Library SignID:00000101
+2025-09-09 11-59-34.0205[InitLibrary]Current SignID:00000101
+2025-09-09 11-59-34.0206[InitLibrary]End
+2025-09-09 11-59-34.0206[GetAPIVersion]Begin
+2025-09-09 11-59-34.0207[GetAPIVersion]API rel 1.07
+2025-09-09 11-59-34.0207[GetAPIVersion]End
+2025-09-09 11-59-34.0208[GetAPIVersionHwLibrary]Begin
+2025-09-09 11-59-34.0211[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-09 11-59-34.0212[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-09 11-59-34.0212[GetAPIVersionHwLibrary]End
+2025-09-09 11-59-34.0213[EnumUSBDevices]Begin
+2025-09-09 11-59-34.0219[EnumUSBDevices]Found 1 USB Devices
+2025-09-09 11-59-34.0220[EnumUSBDevices]End
+2025-09-09 11-59-34.0221[OpenPrinterUSB]Begin
+2025-09-09 11-59-34.0221[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-09 11-59-34.0226[OpenPrinterUSB]New device ID:00000101
+2025-09-09 11-59-34.0227[OpenPrinterUSB]End
+2025-09-09 11-59-34.0234[GetInfoDeviceModel]Begin
+2025-09-09 11-59-34.0236[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-09 11-59-34.0236[GetInfoDeviceModel]End
+2025-09-09 11-59-34.0237[GetInfoFirmwareVersion]Begin
+2025-09-09 11-59-34.0240[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-09 11-59-34.0241[GetInfoFirmwareVersion]End
+2025-09-09 11-59-34.0241[GetCapCommPortType]Begin
+2025-09-09 11-59-34.0245[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-09 11-59-34.0245[GetCapCommPortType]End
+2025-09-09 11-59-34.0246[GetCapPrinterResolution]Begin
+2025-09-09 11-59-34.0248[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-09 11-59-34.0249[GetCapPrinterResolution]End
+2025-09-09 11-59-34.0250[GetCapPrintWidth]Begin
+2025-09-09 11-59-34.0251[GetCapPrintWidth]Cap Print Width:640
+2025-09-09 11-59-34.0252[GetCapPrintWidth]End
+2025-09-09 12-00-58.0182[PrintImageFromPath]Begin
+2025-09-09 12-00-58.0186[PrintBarcode]Begin
+2025-09-09 12-00-58.0186[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc2TE1NVDhEMDgwMDAxOjE3NTczOTk0MTExMjc6MDowMDIwOjAxOjAyOjAxOjAxOjE=
+2025-09-09 12-00-58.0187[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-09 12-01-07.0232[PrintText]Begin
+2025-09-09 12-01-07.0233[PrintText]<Text to Print>:
+Date/Time        : 09-09-2025 12:00:11
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform NO.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 20/-
+Ticket No.       : 8W6LMMT8D080001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-09 12-01-07.0234[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-09 12-01-07.0234[PrintText]<Add LF>:false
+2025-09-09 12-04-16.0960[]*****************************************
+2025-09-09 12-04-16.0961[]DLL Log Initialize. Verbosity: 6
+2025-09-09 12-04-16.0961[]*****************************************
+2025-09-09 12-04-16.0962[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-09 12-04-16.0962[]DLL Version: 1.07
+2025-09-09 12-04-16.0963[InitLibrary]Begin
+2025-09-09 12-04-16.0986[InitLibrary]Library SignID:00000101
+2025-09-09 12-04-16.0987[InitLibrary]Current SignID:00000101
+2025-09-09 12-04-16.0987[InitLibrary]End
+2025-09-09 12-04-16.0988[GetAPIVersion]Begin
+2025-09-09 12-04-16.0988[GetAPIVersion]API rel 1.07
+2025-09-09 12-04-16.0988[GetAPIVersion]End
+2025-09-09 12-04-16.0990[GetAPIVersionHwLibrary]Begin
+2025-09-09 12-04-16.0992[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-09 12-04-16.0992[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-09 12-04-16.0992[GetAPIVersionHwLibrary]End
+2025-09-09 12-04-16.0993[EnumUSBDevices]Begin
+2025-09-09 12-04-16.0997[EnumUSBDevices]Found 1 USB Devices
+2025-09-09 12-04-16.0997[EnumUSBDevices]End
+2025-09-09 12-04-16.0998[OpenPrinterUSB]Begin
+2025-09-09 12-04-16.0998[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-09 12-04-17.0004[OpenPrinterUSB]New device ID:00000101
+2025-09-09 12-04-17.0004[OpenPrinterUSB]End
+2025-09-09 12-04-17.0007[GetInfoDeviceModel]Begin
+2025-09-09 12-04-17.0009[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-09 12-04-17.0010[GetInfoDeviceModel]End
+2025-09-09 12-04-17.0010[GetInfoFirmwareVersion]Begin
+2025-09-09 12-04-17.0012[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-09 12-04-17.0014[GetInfoFirmwareVersion]End
+2025-09-09 12-04-17.0014[GetCapCommPortType]Begin
+2025-09-09 12-04-17.0016[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-09 12-04-17.0018[GetCapCommPortType]End
+2025-09-09 12-04-17.0018[GetCapPrinterResolution]Begin
+2025-09-09 12-04-17.0020[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-09 12-04-17.0021[GetCapPrinterResolution]End
+2025-09-09 12-04-17.0021[GetCapPrintWidth]Begin
+2025-09-09 12-04-17.0023[GetCapPrintWidth]Cap Print Width:640
+2025-09-09 12-04-17.0024[GetCapPrintWidth]End
+2025-09-09 12-05-31.0602[PrintImageFromPath]Begin
+2025-09-09 12-05-31.0604[PrintBarcode]Begin
+2025-09-09 12-05-31.0605[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc2TE1NVDhEMDkwMDAxOjE3NTczOTk3MzA0NDk6MDowMDIwOjAxOjAzOjAxOjAxOjE=
+2025-09-09 12-05-31.0605[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-09 12-05-40.0648[PrintText]Begin
+2025-09-09 12-05-40.0649[PrintText]<Text to Print>:
+Date/Time        : 09-09-2025 12:05:30
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform NO.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 5
+Price            : Rs. 20/-
+Ticket No.       : 8W6LMMT8D090001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-09 12-05-40.0649[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-09 12-05-40.0650[PrintText]<Add LF>:false
+2025-09-09 12-06-39.0273[PrintImageFromPath]Begin
+2025-09-09 12-06-39.0274[PrintBarcode]Begin
+2025-09-09 12-06-39.0275[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc2TE1NVDhEMDkwMDAyOjE3NTczOTk3NjE2MDk6MDowMDIwOjAxOjAyOjAxOjAxOjE=
+2025-09-09 12-06-39.0275[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-09 12-06-48.0320[PrintText]Begin
+2025-09-09 12-06-48.0323[PrintText]<Text to Print>:
+Date/Time        : 09-09-2025 12:06:01
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform NO.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 20/-
+Ticket No.       : 8W6LMMT8D090002
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-09 12-06-48.0324[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-09 12-06-48.0324[PrintText]<Add LF>:false
+2025-09-09 12-09-04.0383[PrintImageFromPath]Begin
+2025-09-09 12-09-04.0384[PrintBarcode]Begin
+2025-09-09 12-09-04.0384[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc2TE1NVDhEMDkwMDAzOjE3NTczOTk5MzE0OTM6MDowMDIwOjAxOjAyOjAxOjAxOjE=
+2025-09-09 12-09-04.0385[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-09 12-09-13.0428[PrintText]Begin
+2025-09-09 12-09-13.0429[PrintText]<Text to Print>:
+Date/Time        : 09-09-2025 12:08:51
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform NO.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 20/-
+Ticket No.       : 8W6LMMT8D090003
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-09 12-09-13.0430[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-09 12-09-13.0431[PrintText]<Add LF>:false
+2025-09-09 12-23-28.0946[]*****************************************
+2025-09-09 12-23-28.0947[]DLL Log Initialize. Verbosity: 6
+2025-09-09 12-23-28.0947[]*****************************************
+2025-09-09 12-23-28.0947[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-09 12-23-28.0947[]DLL Version: 1.07
+2025-09-09 12-23-28.0949[InitLibrary]Begin
+2025-09-09 12-23-28.0968[InitLibrary]Library SignID:00000101
+2025-09-09 12-23-28.0968[InitLibrary]Current SignID:00000101
+2025-09-09 12-23-28.0970[InitLibrary]End
+2025-09-09 12-23-28.0971[GetAPIVersion]Begin
+2025-09-09 12-23-28.0971[GetAPIVersion]API rel 1.07
+2025-09-09 12-23-28.0971[GetAPIVersion]End
+2025-09-09 12-23-28.0972[GetAPIVersionHwLibrary]Begin
+2025-09-09 12-23-28.0975[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-09 12-23-28.0975[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-09 12-23-28.0976[GetAPIVersionHwLibrary]End
+2025-09-09 12-23-28.0976[EnumUSBDevices]Begin
+2025-09-09 12-23-28.0988[EnumUSBDevices]Found 1 USB Devices
+2025-09-09 12-23-28.0988[EnumUSBDevices]End
+2025-09-09 12-23-28.0989[OpenPrinterUSB]Begin
+2025-09-09 12-23-28.0990[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-09 12-23-28.0994[OpenPrinterUSB]New device ID:00000101
+2025-09-09 12-23-28.0994[OpenPrinterUSB]End
+2025-09-09 12-23-28.0997[GetInfoDeviceModel]Begin
+2025-09-09 12-23-28.0999[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-09 12-23-28.0999[GetInfoDeviceModel]End
+2025-09-09 12-23-29.0000[GetInfoFirmwareVersion]Begin
+2025-09-09 12-23-29.0004[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-09 12-23-29.0004[GetInfoFirmwareVersion]End
+2025-09-09 12-23-29.0004[GetCapCommPortType]Begin
+2025-09-09 12-23-29.0007[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-09 12-23-29.0008[GetCapCommPortType]End
+2025-09-09 12-23-29.0009[GetCapPrinterResolution]Begin
+2025-09-09 12-23-29.0010[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-09 12-23-29.0012[GetCapPrinterResolution]End
+2025-09-09 12-23-29.0012[GetCapPrintWidth]Begin
+2025-09-09 12-23-29.0014[GetCapPrintWidth]Cap Print Width:640
+2025-09-09 12-23-29.0014[GetCapPrintWidth]End
+2025-09-09 12-25-02.0815[PrintImageFromPath]Begin
+2025-09-09 12-25-02.0817[PrintBarcode]Begin
+2025-09-09 12-25-02.0818[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc2TE1NVDhEMTAwMDAxOjE3NTc0MDA4NzE4MzU6MDowMDIwOjAxOjAyOjAxOjAxOjE=
+2025-09-09 12-25-02.0818[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-09 12-25-11.0866[PrintText]Begin
+2025-09-09 12-25-11.0868[PrintText]<Text to Print>:
+Date/Time        : 09-09-2025 12:24:31
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform NO.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 20/-
+Ticket No.       : 8W6LMMT8D100001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-09 12-25-11.0869[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-09 12-25-11.0869[PrintText]<Add LF>:false
+2025-09-09 12-26-10.0305[]*****************************************
+2025-09-09 12-26-10.0306[]DLL Log Initialize. Verbosity: 6
+2025-09-09 12-26-10.0307[]*****************************************
+2025-09-09 12-26-10.0307[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-09 12-26-10.0308[]DLL Version: 1.07
+2025-09-09 12-26-10.0309[InitLibrary]Begin
+2025-09-09 12-26-10.0328[InitLibrary]Library SignID:00000101
+2025-09-09 12-26-10.0328[InitLibrary]Current SignID:00000101
+2025-09-09 12-26-10.0329[InitLibrary]End
+2025-09-09 12-26-10.0330[GetAPIVersion]Begin
+2025-09-09 12-26-10.0330[GetAPIVersion]API rel 1.07
+2025-09-09 12-26-10.0330[GetAPIVersion]End
+2025-09-09 12-26-10.0330[GetAPIVersionHwLibrary]Begin
+2025-09-09 12-26-10.0332[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-09 12-26-10.0334[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-09 12-26-10.0334[GetAPIVersionHwLibrary]End
+2025-09-09 12-26-10.0334[EnumUSBDevices]Begin
+2025-09-09 12-26-10.0338[EnumUSBDevices]Found 1 USB Devices
+2025-09-09 12-26-10.0339[EnumUSBDevices]End
+2025-09-09 12-26-10.0340[OpenPrinterUSB]Begin
+2025-09-09 12-26-10.0340[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-09 12-26-10.0346[OpenPrinterUSB]New device ID:00000101
+2025-09-09 12-26-10.0346[OpenPrinterUSB]End
+2025-09-09 12-26-10.0350[GetInfoDeviceModel]Begin
+2025-09-09 12-26-10.0352[GetInfoDeviceModel]Device Model:Custom K80
+2025-09-09 12-26-10.0354[GetInfoDeviceModel]End
+2025-09-09 12-26-10.0354[GetInfoFirmwareVersion]Begin
+2025-09-09 12-26-10.0356[GetInfoFirmwareVersion]Firmware Version:1.78
+2025-09-09 12-26-10.0357[GetInfoFirmwareVersion]End
+2025-09-09 12-26-10.0357[GetCapCommPortType]Begin
+2025-09-09 12-26-10.0362[GetCapCommPortType]Cap Communication Port Type:COMMTYPE_USB
+2025-09-09 12-26-10.0362[GetCapCommPortType]End
+2025-09-09 12-26-10.0362[GetCapPrinterResolution]Begin
+2025-09-09 12-26-10.0365[GetCapPrinterResolution]Cap Printer Resolution:204
+2025-09-09 12-26-10.0365[GetCapPrinterResolution]End
+2025-09-09 12-26-10.0366[GetCapPrintWidth]Begin
+2025-09-09 12-26-10.0367[GetCapPrintWidth]Cap Print Width:640
+2025-09-09 12-26-10.0368[GetCapPrintWidth]End
+2025-09-09 12-28-02.0994[PrintImageFromPath]Begin
+2025-09-09 12-28-02.0996[PrintBarcode]Begin
+2025-09-09 12-28-02.0997[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc2TE1NVDhEMTEwMDAxOjE3NTc0MDEwMzI5NjM6MDowMDIwOjAxOjAyOjAxOjAxOjE=
+2025-09-09 12-28-02.0997[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-09 12-28-12.0046[PrintText]Begin
+2025-09-09 12-28-12.0048[PrintText]<Text to Print>:
+Date/Time        : 09-09-2025 12:27:12
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform NO.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 20/-
+Ticket No.       : 8W6LMMT8D110001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-09 12-28-12.0049[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-09 12-28-12.0050[PrintText]<Add LF>:false

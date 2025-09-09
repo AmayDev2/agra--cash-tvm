@@ -666,6 +666,7 @@
                     <include>**/*.png</include>
                     <include>**/*.jpg</include> <!-- (optional) -->
                     <include>**/*.gif</include> <!-- (optional) -->
+                    <include>**/*.bmp</include> <!-- (optional) -->
                 </includes>
             </resource>
         </resources>

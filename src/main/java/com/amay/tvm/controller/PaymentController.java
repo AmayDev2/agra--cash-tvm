@@ -625,6 +625,9 @@ public class PaymentController {
     }
 
 
+    private ProperTicketOrder properTicketOrder;
+
+
 
     /**
      * Process payment with comprehensive error handling
@@ -670,49 +673,36 @@ public class PaymentController {
                 throw new RuntimeException("Total is 0 or less, cannot proceed with payment");
             }
 
-            new Thread(()-> {
-                // Process payment using the configured payment method
-                PaymentResponse paymentResponse = (PaymentResponse) PaymentFactory
+            properTicketOrder = new ProperTicketOrder(
+                    properTickets.toArray(new ProperTicket[0]),
+                    totalFare.get(),
+                    requestedTicketOrder.orderId()
+            );
+                         PaymentFactory
                         .getPaymentMedia(selectedPayment)
-                        .pay(totalFare.get(), requestedTicketOrder.orderId(), new Object[]{this.stackPane,agent.getTransactionRepository()});
+                        .pay(totalFare.get(), requestedTicketOrder.orderId(), new Object[]{this.stackPane,agent.getTransactionRepository(), this});
 
-                if(!paymentResponse.isSuccess()){
-                    buttonsDisability(false);
-//                    Logger.info("Payment response: {}", paymentResponse);
-//                    Platform.runLater(()-> {
-//                        Alert alert = new Alert(Alert.AlertType.ERROR);
-//                        alert.setTitle("Payment Failed");
-//                        alert.setHeaderText(null);
-//                        alert.setContentText("Payment failed. Please try again.");
-//                        alert.showAndWait();
-//                    });
-                    ProperTicketOrder properTicketOrder = new ProperTicketOrder(
-                            properTickets.toArray(new ProperTicket[0]),
-                            totalFare.get(),
-                            requestedTicketOrder.orderId()
-                    );
 
-                    // Generate and process tickets
-                    this.paymentFailedAndNavigate(properTicketOrder, paymentResponse);
-                }else{
-                   showWaiting();
-                    Logger.info("Payment response: {}", paymentResponse);
-                    ProperTicketOrder properTicketOrder = new ProperTicketOrder(
-                            properTickets.toArray(new ProperTicket[0]),
-                            totalFare.get(),
-                            requestedTicketOrder.orderId()
-                    );
-
-                    // Generate and process tickets
-                    this.processTicketsAndNavigate(properTicketOrder, paymentResponse);
-                }
-            }).start();
 
         } catch (Exception e) {
             Logger.error("Error processing payment: {}", e.getMessage());
             e.printStackTrace();
             // TODO: Show error to user
         }
+    }
+
+    public void eventListener(PaymentResponse paymentResponse){
+        if(!paymentResponse.isSuccess()){
+            buttonsDisability(false);
+            // Generate and process tickets
+            this.paymentFailedAndNavigate(properTicketOrder, paymentResponse);
+        }else{
+            showWaiting();
+            Logger.info("Payment response: {}", paymentResponse);
+            // Generate and process tickets
+            this.processTicketsAndNavigate(properTicketOrder, paymentResponse);
+        }
+
     }
 
     /**

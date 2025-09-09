@@ -10,6 +10,7 @@ import com.amay.tom.utils.helper.Helper;
 import com.google.protobuf.Any;
 import org.network.monitorandcontrol.tvm.TVMModeControl;
 import org.network.monitorandcontrol.tvm.TVMProtocol;
+import org.tinylog.Logger;
 
 public class CommandHandler {
 
@@ -22,6 +23,8 @@ public class CommandHandler {
     }
 
     public void handleCommand(org.network.monitorandcontrol.CommandType commandType, TVMProtocol value) {
+
+        Logger.info("Handling command: " + commandType);
         switch (commandType){
             case GET_DEVICE_INFO:
                 System.out.println("GET_DEVICE_INFO");

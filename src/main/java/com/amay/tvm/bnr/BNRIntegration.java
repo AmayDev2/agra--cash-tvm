@@ -1,6 +1,7 @@
 package com.amay.tvm.bnr;
 
 
+import com.amay.tom.service.payment2.impl.CashPayment;
 import com.amay.tvm.coin.CoinModuleInterface;
 import com.amay.tvm.coin.model.AmountDetail;
 import com.amay.tvm.coin.model.HaveAmountObject;
@@ -183,7 +184,7 @@ public class BNRIntegration {
     }
 
 
-    public static boolean cashIn(int amount,IBNRListener listener) {
+    public static boolean cashIn(CashPayment paymentInstance,int amount, IBNRListener listener) {
         BNRIntegration.bnrListener=listener;
         try {
             endCashInTransaction();
@@ -281,36 +282,20 @@ public class BNRIntegration {
             }
         }
         if(maxDenomination>0) {
-//            if(isDenominational(maxDenomination)) {
                 if(!isDenominationalPossible(maxDenomination)){
-                    Logger.info("Denomination  not  possible for max denomination : {}", maxDenomination);
+                    bnrListener.informationToShow("Please Insert exact amount.");
+                    Logger.info("Denomination not  possible for max denomination : {}", maxDenomination);
                     for (int i = index;i<vector.size() ; i++) {
                         vector.get(i).setEnableDenomination(false);
                     }
                 }else {
                     Logger.info("Denomination possible for max denomination : {}", maxDenomination);
                 }
-//            }
         }
 
-//        vector.sort(Comparator.comparingInt((MEIDenominationInfo a) -> a.getCashType().getValue()).reversed());
-//        for(MEIDenominationInfo x:vector){
-//            if(x.isEnableDenomination()){
-//                HaveAmountObject haveAmountObject = null;
-//                try {
-//                    haveAmountObject = getBnrHaveAmountObject();
-//                    boolean MaxRefundable=CoinModuleInterface.INSTANCE.isDenominationPossible(haveAmountObject.amountDetailList,(int)(x.getCashType().getValue()-amount)/100);
-//                    x.setEnableDenomination( x.isEnableDenomination() && MaxRefundable);
-//                } catch (JxfsException e) {
-//                    e.printStackTrace();
-//                }
-//                break;
-//            }
-//        }
         Logger.info("Marking denomination for amount final order : {}", amount);
-        vector.forEach(a -> Logger.info(String.valueOf(a.getCashType().getValue()+" "+a.isEnableDenomination())));
-//
-//        vector.sort(Comparator.comparingInt((MEIDenominationInfo a) -> a.getCashType().getValue()).reversed());
+        vector.forEach(a -> System.out.println(String.valueOf(a.getCashType().getValue()+" "+a.isEnableDenomination())));
+
     }
 
     private static boolean isDenominationalPossible(int maxDenomination) {

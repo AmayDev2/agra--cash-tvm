@@ -11,6 +11,7 @@ import com.amay.tvm.backend.repository.TransactionRepository;
 import com.amay.tvm.bnr.BNRIntegration;
 import com.amay.tvm.bnr.BNRListener;
 import com.amay.tvm.controller.CashInsertProcessingController;
+import com.amay.tvm.controller.PaymentController;
 import com.amay.tvm.controller.SessionCompletion;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -21,11 +22,13 @@ import java.util.UUID;
 
 public class CashPayment implements PaymentMedia {
 
+    private PaymentResponse paymentResponse;
     @Override
     public Object pay(double amount, String orderId, Object... args) {
         StackPane stackPane = (StackPane) args[0] ; // ✅ if first element is a StackPane
         TransactionRepository transactionRepository=(TransactionRepository) args[1];
-        PaymentResponse paymentResponse=new PaymentResponse();
+        PaymentController paymentController=(PaymentController) args[2];
+        paymentResponse=new PaymentResponse();
         try {
             System.out.println("Cash Payment: " + amount + " OrderId: " + orderId);
                  paymentResponse.setOrderId(orderId)
@@ -42,22 +45,34 @@ public class CashPayment implements PaymentMedia {
             FXMLLoader fxmlLoader = ViewFactory.getCashPaymentView();
             CashInsertProcessingController cashInsertProcessingController=new CashInsertProcessingController((int)amount,stackPane);
             fxmlLoader.setControllerFactory((x)->cashInsertProcessingController);
-            Platform.runLater(()->{try { stackPane.getChildren().add(fxmlLoader.load());}catch (Exception e){
+            Platform.runLater(()->{
+                try {
+                stackPane.getChildren().add(fxmlLoader.load());}catch (Exception e){
                 Logger.debug("BNR FAILED : "+e.getMessage());
                 throw new RuntimeException(" Cash Insert View Couldn't load");
             }});
 
-            boolean status=BNRIntegration.cashIn((int)amount,new BNRListener(cashInsertProcessingController));
-            if(!status){
-                throw new RuntimeException(" Transaction couldn't be succeed");
+            new Thread(()-> {
+                boolean status = BNRIntegration.cashIn(this, (int) amount, new BNRListener(cashInsertProcessingController));
+                if(status){
+                    paymentResponse.setStatus(TransactionStatus.SUCCESS.name()).setSuccess(true);
+                }else{
+                    paymentResponse.setStatus(TransactionStatus.FAILED.name()).setSuccess(false);
+                }
+                saveInDbPaymentCompletion(paymentResponse,transactionRepository);
+                Platform.runLater(()->{stackPane.getChildren().removeLast();});
+                paymentController.eventListener(paymentResponse);
             }
+            ).start();
 
-            return paymentResponse.setStatus(TransactionStatus.SUCCESS.name()).setSuccess(true);
         }catch (Exception e){
-            return  paymentResponse.setStatus(TransactionStatus.FAILED.name());
-        }finally {
             saveInDbPaymentCompletion(paymentResponse,transactionRepository);
             Platform.runLater(()->{stackPane.getChildren().removeLast();});
         }
+        return paymentResponse;// don't read this
     }
+
+
+
+
 }

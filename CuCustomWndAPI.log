@@ -17227,3 +17227,373 @@
 2025/09/08-14:03:51.175:[000104B4#00000000#5] > [EnumUSBDevices] Begin
 2025/09/08-14:03:51.176:[000104B4#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
 2025/09/08-14:03:51.176:[000104B4#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/09/09-11:46:06.085:[00021F50#00000000#5] > [InitLibrary] Begin
+2025/09/09-11:46:06.085:[00021F50#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/09/09-11:46:06.086:[00021F50#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/09/09-11:46:06.086:[00021F50#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/09/09-11:46:06.086:[00021F50#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/09/09-11:46:06.087:[00021F50#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/09/09-11:46:06.087:[00021F50#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/09/09-11:46:06.088:[00021F50#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/09/09-11:46:06.088:[00021F50#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/09/09-11:46:06.088:[00021F50#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/09/09-11:46:06.088:[00021F50#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/09/09-11:46:06.090:[00021F50#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/09/09-11:46:06.090:[00021F50#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/09/09-11:46:06.090:[00021F50#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/09/09-11:46:06.100:[00021F50#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/09/09-11:46:06.101:[00021F50#00000000#5] > [InitLibrary] End [0/Ok]
+2025/09/09-11:46:06.101:[00021F50#00000000#5] > [GetVariable] Begin
+2025/09/09-11:46:06.102:[00021F50#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/09/09-11:46:06.102:[00021F50#00000000#5] > [GetVariable] End [0/Ok]
+2025/09/09-11:46:06.106:[00021F50#00000000#5] > [GetAPIVersion] Begin
+2025/09/09-11:46:06.106:[00021F50#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/09/09-11:46:06.107:[00021F50#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/09/09-11:46:06.109:[00021F50#00000000#5] > [EnumUSBDevices] Begin
+2025/09/09-11:46:06.109:[00021F50#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/09/09-11:46:06.109:[00021F50#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/09/09-11:46:06.110:[00021F50#00000000#5] > [EnumUSBDevices] Begin
+2025/09/09-11:46:06.110:[00021F50#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/09/09-11:46:06.110:[00021F50#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/09/09-11:50:25.247:[00027294#00000000#5] > [InitLibrary] Begin
+2025/09/09-11:50:25.248:[00027294#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/09/09-11:50:25.248:[00027294#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/09/09-11:50:25.248:[00027294#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/09/09-11:50:25.248:[00027294#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/09/09-11:50:25.249:[00027294#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/09/09-11:50:25.249:[00027294#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/09/09-11:50:25.250:[00027294#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/09/09-11:50:25.250:[00027294#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/09/09-11:50:25.250:[00027294#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/09/09-11:50:25.251:[00027294#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/09/09-11:50:25.251:[00027294#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/09/09-11:50:25.251:[00027294#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/09/09-11:50:25.252:[00027294#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/09/09-11:50:25.261:[00027294#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/09/09-11:50:25.261:[00027294#00000000#5] > [InitLibrary] End [0/Ok]
+2025/09/09-11:50:25.262:[00027294#00000000#5] > [GetVariable] Begin
+2025/09/09-11:50:25.263:[00027294#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/09/09-11:50:25.263:[00027294#00000000#5] > [GetVariable] End [0/Ok]
+2025/09/09-11:50:25.267:[00027294#00000000#5] > [GetAPIVersion] Begin
+2025/09/09-11:50:25.268:[00027294#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/09/09-11:50:25.268:[00027294#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/09/09-11:50:25.271:[00027294#00000000#5] > [EnumUSBDevices] Begin
+2025/09/09-11:50:25.271:[00027294#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/09/09-11:50:25.272:[00027294#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/09/09-11:50:25.272:[00027294#00000000#5] > [EnumUSBDevices] Begin
+2025/09/09-11:50:25.272:[00027294#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/09/09-11:50:25.272:[00027294#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/09/09-11:55:04.853:[000166F4#00000000#5] > [InitLibrary] Begin
+2025/09/09-11:55:04.853:[000166F4#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/09/09-11:55:04.854:[000166F4#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/09/09-11:55:04.854:[000166F4#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/09/09-11:55:04.854:[000166F4#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/09/09-11:55:04.855:[000166F4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/09/09-11:55:04.855:[000166F4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/09/09-11:55:04.856:[000166F4#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/09/09-11:55:04.856:[000166F4#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/09/09-11:55:04.857:[000166F4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/09/09-11:55:04.857:[000166F4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/09/09-11:55:04.857:[000166F4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/09/09-11:55:04.858:[000166F4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/09/09-11:55:04.858:[000166F4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/09/09-11:55:04.866:[000166F4#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/09/09-11:55:04.867:[000166F4#00000000#5] > [InitLibrary] End [0/Ok]
+2025/09/09-11:55:04.868:[000166F4#00000000#5] > [GetVariable] Begin
+2025/09/09-11:55:04.868:[000166F4#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/09/09-11:55:04.868:[000166F4#00000000#5] > [GetVariable] End [0/Ok]
+2025/09/09-11:55:04.874:[000166F4#00000000#5] > [GetAPIVersion] Begin
+2025/09/09-11:55:04.874:[000166F4#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/09/09-11:55:04.875:[000166F4#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/09/09-11:55:04.877:[000166F4#00000000#5] > [EnumUSBDevices] Begin
+2025/09/09-11:55:04.878:[000166F4#00000000#4] > [EnumUSBDevices] Found 1 USB Devices:
+2025/09/09-11:55:04.878:[000166F4#00000000#4] > [EnumUSBDevices] 01 - 0237:K80_USB_NUM.:_0 [CUSTOM K80]
+2025/09/09-11:55:04.878:[000166F4#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/09/09-11:55:04.878:[000166F4#00000000#5] > [EnumUSBDevices] Begin
+2025/09/09-11:55:04.879:[000166F4#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/09/09-11:55:04.883:[000166F4#00000000#5] > [OpenPrinterUSB] Begin
+2025/09/09-11:55:04.884:[000166F4#00000000#4] > [DevOnlyOpenPrinterUSB] Opening Port mode TXRX_STS
+2025/09/09-11:55:04.885:[000166F4#00000000#4] > [CComPort::FixAvailableInterfaces] Printer ID/GSI from I0: 0x0237
+2025/09/09-11:55:04.887:[000166F4#00000000#5] > [OpenPrinterUSB] End [0/Ok]
+2025/09/09-11:55:04.891:[000166F4#00000000#5] > [GetInfoDeviceModel] Begin
+2025/09/09-11:55:04.891:[000166F4#00000000#4] > [GetInfoDeviceModel] DeviceID:00000101
+2025/09/09-11:55:04.892:[000166F4#00000000#4] > [GetInfoDeviceModel] Device Model: Custom K80
+2025/09/09-11:55:04.892:[000166F4#00000000#5] > [GetInfoDeviceModel] End [0/Ok]
+2025/09/09-11:55:04.894:[000166F4#00000000#5] > [GetInfoFirmwareVersion] Begin
+2025/09/09-11:55:04.894:[000166F4#00000000#4] > [GetInfoFirmwareVersion] DeviceID:00000101
+2025/09/09-11:55:04.896:[000166F4#00000000#4] > [GetInfoFirmwareVersion] Printer FW Release: 1.78
+2025/09/09-11:55:04.896:[000166F4#00000000#5] > [GetInfoFirmwareVersion] End [0/Ok]
+2025/09/09-11:55:04.899:[000166F4#00000000#5] > [GetCapCommPortType] Begin
+2025/09/09-11:55:04.899:[000166F4#00000000#4] > [GetCapCommPortType] DeviceID:00000101
+2025/09/09-11:55:04.899:[000166F4#00000000#4] > [GetCapCommPortType] Capability -> Comm Port Type:1
+2025/09/09-11:55:04.900:[000166F4#00000000#5] > [GetCapCommPortType] End [0/Ok]
+2025/09/09-11:55:04.902:[000166F4#00000000#5] > [GetCapPrinterResolution] Begin
+2025/09/09-11:55:04.902:[000166F4#00000000#4] > [GetCapPrinterResolution] DeviceID:00000101
+2025/09/09-11:55:04.902:[000166F4#00000000#4] > [GetCapPrinterResolution] Print resolution: 204
+2025/09/09-11:55:04.903:[000166F4#00000000#5] > [GetCapPrinterResolution] End [0/Ok]
+2025/09/09-11:55:04.904:[000166F4#00000000#5] > [GetCapPrintWidth] Begin
+2025/09/09-11:55:04.905:[000166F4#00000000#4] > [GetCapPrintWidth] DeviceID:00000101
+2025/09/09-11:55:04.905:[000166F4#00000000#4] > [GetCapPrintWidth] Print width: 640
+2025/09/09-11:55:04.907:[000166F4#00000000#5] > [GetCapPrintWidth] End [0/Ok]
+2025/09/09-11:59:34.184:[0000CCC8#00000000#5] > [InitLibrary] Begin
+2025/09/09-11:59:34.185:[0000CCC8#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/09/09-11:59:34.185:[0000CCC8#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/09/09-11:59:34.185:[0000CCC8#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/09/09-11:59:34.186:[0000CCC8#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/09/09-11:59:34.186:[0000CCC8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/09/09-11:59:34.188:[0000CCC8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/09/09-11:59:34.189:[0000CCC8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/09/09-11:59:34.189:[0000CCC8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/09/09-11:59:34.189:[0000CCC8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/09/09-11:59:34.191:[0000CCC8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/09/09-11:59:34.191:[0000CCC8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/09/09-11:59:34.191:[0000CCC8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/09/09-11:59:34.192:[0000CCC8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/09/09-11:59:34.202:[0000CCC8#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/09/09-11:59:34.203:[0000CCC8#00000000#5] > [InitLibrary] End [0/Ok]
+2025/09/09-11:59:34.204:[0000CCC8#00000000#5] > [GetVariable] Begin
+2025/09/09-11:59:34.204:[0000CCC8#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/09/09-11:59:34.204:[0000CCC8#00000000#5] > [GetVariable] End [0/Ok]
+2025/09/09-11:59:34.209:[0000CCC8#00000000#5] > [GetAPIVersion] Begin
+2025/09/09-11:59:34.210:[0000CCC8#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/09/09-11:59:34.210:[0000CCC8#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/09/09-11:59:34.214:[0000CCC8#00000000#5] > [EnumUSBDevices] Begin
+2025/09/09-11:59:34.215:[0000CCC8#00000000#4] > [EnumUSBDevices] Found 1 USB Devices:
+2025/09/09-11:59:34.215:[0000CCC8#00000000#4] > [EnumUSBDevices] 01 - 0237:K80_USB_NUM.:_0 [CUSTOM K80]
+2025/09/09-11:59:34.217:[0000CCC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/09/09-11:59:34.218:[0000CCC8#00000000#5] > [EnumUSBDevices] Begin
+2025/09/09-11:59:34.218:[0000CCC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/09/09-11:59:34.222:[0000CCC8#00000000#5] > [OpenPrinterUSB] Begin
+2025/09/09-11:59:34.223:[0000CCC8#00000000#4] > [DevOnlyOpenPrinterUSB] Opening Port mode TXRX_STS
+2025/09/09-11:59:34.225:[0000CCC8#00000000#4] > [CComPort::FixAvailableInterfaces] Printer ID/GSI from I0: 0x0237
+2025/09/09-11:59:34.226:[0000CCC8#00000000#5] > [OpenPrinterUSB] End [0/Ok]
+2025/09/09-11:59:34.235:[0000CCC8#00000000#5] > [GetInfoDeviceModel] Begin
+2025/09/09-11:59:34.235:[0000CCC8#00000000#4] > [GetInfoDeviceModel] DeviceID:00000101
+2025/09/09-11:59:34.235:[0000CCC8#00000000#4] > [GetInfoDeviceModel] Device Model: Custom K80
+2025/09/09-11:59:34.236:[0000CCC8#00000000#5] > [GetInfoDeviceModel] End [0/Ok]
+2025/09/09-11:59:34.238:[0000CCC8#00000000#5] > [GetInfoFirmwareVersion] Begin
+2025/09/09-11:59:34.238:[0000CCC8#00000000#4] > [GetInfoFirmwareVersion] DeviceID:00000101
+2025/09/09-11:59:34.239:[0000CCC8#00000000#4] > [GetInfoFirmwareVersion] Printer FW Release: 1.78
+2025/09/09-11:59:34.240:[0000CCC8#00000000#5] > [GetInfoFirmwareVersion] End [0/Ok]
+2025/09/09-11:59:34.243:[0000CCC8#00000000#5] > [GetCapCommPortType] Begin
+2025/09/09-11:59:34.243:[0000CCC8#00000000#4] > [GetCapCommPortType] DeviceID:00000101
+2025/09/09-11:59:34.243:[0000CCC8#00000000#4] > [GetCapCommPortType] Capability -> Comm Port Type:1
+2025/09/09-11:59:34.243:[0000CCC8#00000000#5] > [GetCapCommPortType] End [0/Ok]
+2025/09/09-11:59:34.247:[0000CCC8#00000000#5] > [GetCapPrinterResolution] Begin
+2025/09/09-11:59:34.247:[0000CCC8#00000000#4] > [GetCapPrinterResolution] DeviceID:00000101
+2025/09/09-11:59:34.247:[0000CCC8#00000000#4] > [GetCapPrinterResolution] Print resolution: 204
+2025/09/09-11:59:34.248:[0000CCC8#00000000#5] > [GetCapPrinterResolution] End [0/Ok]
+2025/09/09-11:59:34.250:[0000CCC8#00000000#5] > [GetCapPrintWidth] Begin
+2025/09/09-11:59:34.250:[0000CCC8#00000000#4] > [GetCapPrintWidth] DeviceID:00000101
+2025/09/09-11:59:34.250:[0000CCC8#00000000#4] > [GetCapPrintWidth] Print width: 640
+2025/09/09-11:59:34.251:[0000CCC8#00000000#5] > [GetCapPrintWidth] End [0/Ok]
+2025/09/09-12:00:58.189:[0000CCC8#00000000#5] > [PrintBarcodeString] Begin
+2025/09/09-12:00:58.189:[0000CCC8#00000000#4] > [PrintBarcodeString] DeviceID:00000101
+2025/09/09-12:00:58.190:[0000CCC8#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/09/09-12:00:59.202:[0000CCC8#00000000#6] >      [CPrnBaseWndAPI::IgnoreTextCommand] Write Command Error
+2025/09/09-12:01:07.226:[0000CCC8#00000000#6] >      [CPrnBaseWndAPI::IgnoreTextCommand] Write Command Error
+2025/09/09-12:01:07.227:[0000CCC8#00000000#2] > [PrintBarcodeString] Print Barcode error
+2025/09/09-12:01:07.235:[0000CCC8#00000000#5] > [PrintTextEx] Begin
+2025/09/09-12:01:07.236:[0000CCC8#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/09/09-12:01:08.249:[0000CCC8#00000000#2] > [PrintTextEx] Send Text error
+2025/09/09-12:04:16.965:[0000A840#00000000#5] > [InitLibrary] Begin
+2025/09/09-12:04:16.966:[0000A840#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/09/09-12:04:16.967:[0000A840#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/09/09-12:04:16.967:[0000A840#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/09/09-12:04:16.968:[0000A840#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/09/09-12:04:16.970:[0000A840#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/09/09-12:04:16.970:[0000A840#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/09/09-12:04:16.971:[0000A840#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/09/09-12:04:16.972:[0000A840#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/09/09-12:04:16.972:[0000A840#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/09/09-12:04:16.973:[0000A840#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/09/09-12:04:16.973:[0000A840#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/09/09-12:04:16.975:[0000A840#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/09/09-12:04:16.975:[0000A840#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/09/09-12:04:16.983:[0000A840#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/09/09-12:04:16.984:[0000A840#00000000#5] > [InitLibrary] End [0/Ok]
+2025/09/09-12:04:16.984:[0000A840#00000000#5] > [GetVariable] Begin
+2025/09/09-12:04:16.986:[0000A840#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/09/09-12:04:16.986:[0000A840#00000000#5] > [GetVariable] End [0/Ok]
+2025/09/09-12:04:16.991:[0000A840#00000000#5] > [GetAPIVersion] Begin
+2025/09/09-12:04:16.991:[0000A840#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/09/09-12:04:16.992:[0000A840#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/09/09-12:04:16.994:[0000A840#00000000#5] > [EnumUSBDevices] Begin
+2025/09/09-12:04:16.994:[0000A840#00000000#4] > [EnumUSBDevices] Found 1 USB Devices:
+2025/09/09-12:04:16.995:[0000A840#00000000#4] > [EnumUSBDevices] 01 - 0237:K80_USB_NUM.:_0 [CUSTOM K80]
+2025/09/09-12:04:16.995:[0000A840#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/09/09-12:04:16.995:[0000A840#00000000#5] > [EnumUSBDevices] Begin
+2025/09/09-12:04:16.996:[0000A840#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/09/09-12:04:17.000:[0000A840#00000000#5] > [OpenPrinterUSB] Begin
+2025/09/09-12:04:17.001:[0000A840#00000000#4] > [DevOnlyOpenPrinterUSB] Opening Port mode TXRX_STS
+2025/09/09-12:04:17.002:[0000A840#00000000#4] > [CComPort::FixAvailableInterfaces] Printer ID/GSI from I0: 0x0237
+2025/09/09-12:04:17.004:[0000A840#00000000#5] > [OpenPrinterUSB] End [0/Ok]
+2025/09/09-12:04:17.008:[0000A840#00000000#5] > [GetInfoDeviceModel] Begin
+2025/09/09-12:04:17.008:[0000A840#00000000#4] > [GetInfoDeviceModel] DeviceID:00000101
+2025/09/09-12:04:17.008:[0000A840#00000000#4] > [GetInfoDeviceModel] Device Model: Custom K80
+2025/09/09-12:04:17.009:[0000A840#00000000#5] > [GetInfoDeviceModel] End [0/Ok]
+2025/09/09-12:04:17.011:[0000A840#00000000#5] > [GetInfoFirmwareVersion] Begin
+2025/09/09-12:04:17.011:[0000A840#00000000#4] > [GetInfoFirmwareVersion] DeviceID:00000101
+2025/09/09-12:04:17.012:[0000A840#00000000#4] > [GetInfoFirmwareVersion] Printer FW Release: 1.78
+2025/09/09-12:04:17.012:[0000A840#00000000#5] > [GetInfoFirmwareVersion] End [0/Ok]
+2025/09/09-12:04:17.015:[0000A840#00000000#5] > [GetCapCommPortType] Begin
+2025/09/09-12:04:17.015:[0000A840#00000000#4] > [GetCapCommPortType] DeviceID:00000101
+2025/09/09-12:04:17.016:[0000A840#00000000#4] > [GetCapCommPortType] Capability -> Comm Port Type:1
+2025/09/09-12:04:17.016:[0000A840#00000000#5] > [GetCapCommPortType] End [0/Ok]
+2025/09/09-12:04:17.019:[0000A840#00000000#5] > [GetCapPrinterResolution] Begin
+2025/09/09-12:04:17.019:[0000A840#00000000#4] > [GetCapPrinterResolution] DeviceID:00000101
+2025/09/09-12:04:17.019:[0000A840#00000000#4] > [GetCapPrinterResolution] Print resolution: 204
+2025/09/09-12:04:17.020:[0000A840#00000000#5] > [GetCapPrinterResolution] End [0/Ok]
+2025/09/09-12:04:17.022:[0000A840#00000000#5] > [GetCapPrintWidth] Begin
+2025/09/09-12:04:17.022:[0000A840#00000000#4] > [GetCapPrintWidth] DeviceID:00000101
+2025/09/09-12:04:17.022:[0000A840#00000000#4] > [GetCapPrintWidth] Print width: 640
+2025/09/09-12:04:17.023:[0000A840#00000000#5] > [GetCapPrintWidth] End [0/Ok]
+2025/09/09-12:05:31.606:[0000A840#00000000#5] > [PrintBarcodeString] Begin
+2025/09/09-12:05:31.606:[0000A840#00000000#4] > [PrintBarcodeString] DeviceID:00000101
+2025/09/09-12:05:31.607:[0000A840#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/09/09-12:05:32.620:[0000A840#00000000#6] >      [CPrnBaseWndAPI::IgnoreTextCommand] Write Command Error
+2025/09/09-12:05:40.645:[0000A840#00000000#6] >      [CPrnBaseWndAPI::IgnoreTextCommand] Write Command Error
+2025/09/09-12:05:40.646:[0000A840#00000000#2] > [PrintBarcodeString] Print Barcode error
+2025/09/09-12:05:40.650:[0000A840#00000000#5] > [PrintTextEx] Begin
+2025/09/09-12:05:40.651:[0000A840#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/09/09-12:05:41.662:[0000A840#00000000#2] > [PrintTextEx] Send Text error
+2025/09/09-12:06:39.276:[0000A840#00000000#5] > [PrintBarcodeString] Begin
+2025/09/09-12:06:39.276:[0000A840#00000000#4] > [PrintBarcodeString] DeviceID:00000101
+2025/09/09-12:06:39.277:[0000A840#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/09/09-12:06:40.290:[0000A840#00000000#6] >      [CPrnBaseWndAPI::IgnoreTextCommand] Write Command Error
+2025/09/09-12:06:48.315:[0000A840#00000000#6] >      [CPrnBaseWndAPI::IgnoreTextCommand] Write Command Error
+2025/09/09-12:06:48.319:[0000A840#00000000#2] > [PrintBarcodeString] Print Barcode error
+2025/09/09-12:06:48.325:[0000A840#00000000#5] > [PrintTextEx] Begin
+2025/09/09-12:06:48.325:[0000A840#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/09/09-12:06:49.338:[0000A840#00000000#2] > [PrintTextEx] Send Text error
+2025/09/09-12:09:04.385:[0000A840#00000000#5] > [PrintBarcodeString] Begin
+2025/09/09-12:09:04.385:[0000A840#00000000#4] > [PrintBarcodeString] DeviceID:00000101
+2025/09/09-12:09:04.387:[0000A840#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/09/09-12:09:05.400:[0000A840#00000000#6] >      [CPrnBaseWndAPI::IgnoreTextCommand] Write Command Error
+2025/09/09-12:09:13.423:[0000A840#00000000#6] >      [CPrnBaseWndAPI::IgnoreTextCommand] Write Command Error
+2025/09/09-12:09:13.425:[0000A840#00000000#2] > [PrintBarcodeString] Print Barcode error
+2025/09/09-12:09:13.431:[0000A840#00000000#5] > [PrintTextEx] Begin
+2025/09/09-12:09:13.433:[0000A840#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/09/09-12:09:14.445:[0000A840#00000000#2] > [PrintTextEx] Send Text error
+2025/09/09-12:23:28.950:[0002397C#00000000#5] > [InitLibrary] Begin
+2025/09/09-12:23:28.951:[0002397C#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/09/09-12:23:28.951:[0002397C#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/09/09-12:23:28.951:[0002397C#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/09/09-12:23:28.953:[0002397C#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/09/09-12:23:28.953:[0002397C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/09/09-12:23:28.954:[0002397C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/09/09-12:23:28.954:[0002397C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/09/09-12:23:28.954:[0002397C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/09/09-12:23:28.955:[0002397C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/09/09-12:23:28.955:[0002397C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/09/09-12:23:28.955:[0002397C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/09/09-12:23:28.956:[0002397C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/09/09-12:23:28.956:[0002397C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/09/09-12:23:28.965:[0002397C#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/09/09-12:23:28.966:[0002397C#00000000#5] > [InitLibrary] End [0/Ok]
+2025/09/09-12:23:28.967:[0002397C#00000000#5] > [GetVariable] Begin
+2025/09/09-12:23:28.967:[0002397C#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/09/09-12:23:28.968:[0002397C#00000000#5] > [GetVariable] End [0/Ok]
+2025/09/09-12:23:28.973:[0002397C#00000000#5] > [GetAPIVersion] Begin
+2025/09/09-12:23:28.973:[0002397C#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/09/09-12:23:28.973:[0002397C#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/09/09-12:23:28.983:[0002397C#00000000#5] > [EnumUSBDevices] Begin
+2025/09/09-12:23:28.984:[0002397C#00000000#4] > [EnumUSBDevices] Found 1 USB Devices:
+2025/09/09-12:23:28.984:[0002397C#00000000#4] > [EnumUSBDevices] 01 - 0237:K80_USB_NUM.:_0 [CUSTOM K80]
+2025/09/09-12:23:28.986:[0002397C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/09/09-12:23:28.986:[0002397C#00000000#5] > [EnumUSBDevices] Begin
+2025/09/09-12:23:28.986:[0002397C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/09/09-12:23:28.990:[0002397C#00000000#5] > [OpenPrinterUSB] Begin
+2025/09/09-12:23:28.991:[0002397C#00000000#4] > [DevOnlyOpenPrinterUSB] Opening Port mode TXRX_STS
+2025/09/09-12:23:28.992:[0002397C#00000000#4] > [CComPort::FixAvailableInterfaces] Printer ID/GSI from I0: 0x0237
+2025/09/09-12:23:28.993:[0002397C#00000000#5] > [OpenPrinterUSB] End [0/Ok]
+2025/09/09-12:23:28.997:[0002397C#00000000#5] > [GetInfoDeviceModel] Begin
+2025/09/09-12:23:28.998:[0002397C#00000000#4] > [GetInfoDeviceModel] DeviceID:00000101
+2025/09/09-12:23:28.998:[0002397C#00000000#4] > [GetInfoDeviceModel] Device Model: Custom K80
+2025/09/09-12:23:28.999:[0002397C#00000000#5] > [GetInfoDeviceModel] End [0/Ok]
+2025/09/09-12:23:29.001:[0002397C#00000000#5] > [GetInfoFirmwareVersion] Begin
+2025/09/09-12:23:29.001:[0002397C#00000000#4] > [GetInfoFirmwareVersion] DeviceID:00000101
+2025/09/09-12:23:29.003:[0002397C#00000000#4] > [GetInfoFirmwareVersion] Printer FW Release: 1.78
+2025/09/09-12:23:29.003:[0002397C#00000000#5] > [GetInfoFirmwareVersion] End [0/Ok]
+2025/09/09-12:23:29.006:[0002397C#00000000#5] > [GetCapCommPortType] Begin
+2025/09/09-12:23:29.006:[0002397C#00000000#4] > [GetCapCommPortType] DeviceID:00000101
+2025/09/09-12:23:29.007:[0002397C#00000000#4] > [GetCapCommPortType] Capability -> Comm Port Type:1
+2025/09/09-12:23:29.007:[0002397C#00000000#5] > [GetCapCommPortType] End [0/Ok]
+2025/09/09-12:23:29.009:[0002397C#00000000#5] > [GetCapPrinterResolution] Begin
+2025/09/09-12:23:29.010:[0002397C#00000000#4] > [GetCapPrinterResolution] DeviceID:00000101
+2025/09/09-12:23:29.010:[0002397C#00000000#4] > [GetCapPrinterResolution] Print resolution: 204
+2025/09/09-12:23:29.010:[0002397C#00000000#5] > [GetCapPrinterResolution] End [0/Ok]
+2025/09/09-12:23:29.013:[0002397C#00000000#5] > [GetCapPrintWidth] Begin
+2025/09/09-12:23:29.013:[0002397C#00000000#4] > [GetCapPrintWidth] DeviceID:00000101
+2025/09/09-12:23:29.014:[0002397C#00000000#4] > [GetCapPrintWidth] Print width: 640
+2025/09/09-12:23:29.014:[0002397C#00000000#5] > [GetCapPrintWidth] End [0/Ok]
+2025/09/09-12:25:02.819:[0002397C#00000000#5] > [PrintBarcodeString] Begin
+2025/09/09-12:25:02.820:[0002397C#00000000#4] > [PrintBarcodeString] DeviceID:00000101
+2025/09/09-12:25:02.821:[0002397C#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/09/09-12:25:03.834:[0002397C#00000000#6] >      [CPrnBaseWndAPI::IgnoreTextCommand] Write Command Error
+2025/09/09-12:25:11.857:[0002397C#00000000#6] >      [CPrnBaseWndAPI::IgnoreTextCommand] Write Command Error
+2025/09/09-12:25:11.859:[0002397C#00000000#2] > [PrintBarcodeString] Print Barcode error
+2025/09/09-12:25:11.871:[0002397C#00000000#5] > [PrintTextEx] Begin
+2025/09/09-12:25:11.871:[0002397C#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/09/09-12:25:12.883:[0002397C#00000000#2] > [PrintTextEx] Send Text error
+2025/09/09-12:26:10.310:[00012D10#00000000#5] > [InitLibrary] Begin
+2025/09/09-12:26:10.310:[00012D10#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/09/09-12:26:10.312:[00012D10#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/09/09-12:26:10.312:[00012D10#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/09/09-12:26:10.312:[00012D10#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/09/09-12:26:10.312:[00012D10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/09/09-12:26:10.313:[00012D10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/09/09-12:26:10.313:[00012D10#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/09/09-12:26:10.314:[00012D10#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/09/09-12:26:10.314:[00012D10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/09/09-12:26:10.314:[00012D10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/09/09-12:26:10.315:[00012D10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/09/09-12:26:10.315:[00012D10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/09/09-12:26:10.315:[00012D10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/09/09-12:26:10.326:[00012D10#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/09/09-12:26:10.327:[00012D10#00000000#5] > [InitLibrary] End [0/Ok]
+2025/09/09-12:26:10.327:[00012D10#00000000#5] > [GetVariable] Begin
+2025/09/09-12:26:10.327:[00012D10#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/09/09-12:26:10.327:[00012D10#00000000#5] > [GetVariable] End [0/Ok]
+2025/09/09-12:26:10.332:[00012D10#00000000#5] > [GetAPIVersion] Begin
+2025/09/09-12:26:10.332:[00012D10#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/09/09-12:26:10.332:[00012D10#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/09/09-12:26:10.335:[00012D10#00000000#5] > [EnumUSBDevices] Begin
+2025/09/09-12:26:10.335:[00012D10#00000000#4] > [EnumUSBDevices] Found 1 USB Devices:
+2025/09/09-12:26:10.337:[00012D10#00000000#4] > [EnumUSBDevices] 01 - 0237:K80_USB_NUM.:_0 [CUSTOM K80]
+2025/09/09-12:26:10.337:[00012D10#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/09/09-12:26:10.337:[00012D10#00000000#5] > [EnumUSBDevices] Begin
+2025/09/09-12:26:10.337:[00012D10#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/09/09-12:26:10.341:[00012D10#00000000#5] > [OpenPrinterUSB] Begin
+2025/09/09-12:26:10.342:[00012D10#00000000#4] > [DevOnlyOpenPrinterUSB] Opening Port mode TXRX_STS
+2025/09/09-12:26:10.344:[00012D10#00000000#4] > [CComPort::FixAvailableInterfaces] Printer ID/GSI from I0: 0x0237
+2025/09/09-12:26:10.345:[00012D10#00000000#5] > [OpenPrinterUSB] End [0/Ok]
+2025/09/09-12:26:10.351:[00012D10#00000000#5] > [GetInfoDeviceModel] Begin
+2025/09/09-12:26:10.352:[00012D10#00000000#4] > [GetInfoDeviceModel] DeviceID:00000101
+2025/09/09-12:26:10.352:[00012D10#00000000#4] > [GetInfoDeviceModel] Device Model: Custom K80
+2025/09/09-12:26:10.352:[00012D10#00000000#5] > [GetInfoDeviceModel] End [0/Ok]
+2025/09/09-12:26:10.355:[00012D10#00000000#5] > [GetInfoFirmwareVersion] Begin
+2025/09/09-12:26:10.355:[00012D10#00000000#4] > [GetInfoFirmwareVersion] DeviceID:00000101
+2025/09/09-12:26:10.355:[00012D10#00000000#4] > [GetInfoFirmwareVersion] Printer FW Release: 1.78
+2025/09/09-12:26:10.356:[00012D10#00000000#5] > [GetInfoFirmwareVersion] End [0/Ok]
+2025/09/09-12:26:10.359:[00012D10#00000000#5] > [GetCapCommPortType] Begin
+2025/09/09-12:26:10.360:[00012D10#00000000#4] > [GetCapCommPortType] DeviceID:00000101
+2025/09/09-12:26:10.360:[00012D10#00000000#4] > [GetCapCommPortType] Capability -> Comm Port Type:1
+2025/09/09-12:26:10.361:[00012D10#00000000#5] > [GetCapCommPortType] End [0/Ok]
+2025/09/09-12:26:10.362:[00012D10#00000000#5] > [GetCapPrinterResolution] Begin
+2025/09/09-12:26:10.364:[00012D10#00000000#4] > [GetCapPrinterResolution] DeviceID:00000101
+2025/09/09-12:26:10.364:[00012D10#00000000#4] > [GetCapPrinterResolution] Print resolution: 204
+2025/09/09-12:26:10.364:[00012D10#00000000#5] > [GetCapPrinterResolution] End [0/Ok]
+2025/09/09-12:26:10.366:[00012D10#00000000#5] > [GetCapPrintWidth] Begin
+2025/09/09-12:26:10.366:[00012D10#00000000#4] > [GetCapPrintWidth] DeviceID:00000101
+2025/09/09-12:26:10.367:[00012D10#00000000#4] > [GetCapPrintWidth] Print width: 640
+2025/09/09-12:26:10.367:[00012D10#00000000#5] > [GetCapPrintWidth] End [0/Ok]
+2025/09/09-12:28:02.998:[00012D10#00000000#5] > [PrintBarcodeString] Begin
+2025/09/09-12:28:02.998:[00012D10#00000000#4] > [PrintBarcodeString] DeviceID:00000101
+2025/09/09-12:28:02.999:[00012D10#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/09/09-12:28:04.013:[00012D10#00000000#6] >      [CPrnBaseWndAPI::IgnoreTextCommand] Write Command Error
+2025/09/09-12:28:12.036:[00012D10#00000000#6] >      [CPrnBaseWndAPI::IgnoreTextCommand] Write Command Error
+2025/09/09-12:28:12.039:[00012D10#00000000#2] > [PrintBarcodeString] Print Barcode error
+2025/09/09-12:28:12.051:[00012D10#00000000#5] > [PrintTextEx] Begin
+2025/09/09-12:28:12.051:[00012D10#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/09/09-12:28:13.064:[00012D10#00000000#2] > [PrintTextEx] Send Text error
