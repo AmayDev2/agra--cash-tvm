@@ -17,7 +17,7 @@
    <children>
       <BorderPane fx:id="borderPane" maxWidth="1024.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0" >
          <top>
-            <AnchorPane maxWidth="1024.0" minHeight="110.0" minWidth="1024.0" prefHeight="110.0" prefWidth="1024.0" styleClass="header" style="-fx-background-color;" BorderPane.alignment="CENTER">
+            <AnchorPane maxWidth="1024.0" minHeight="110.0" minWidth="1024.0" prefHeight="110.0" prefWidth="1024.0" styleClass="header" BorderPane.alignment="CENTER">
                 <children>
                     <Label fx:id="labelStationName" alignment="CENTER" contentDisplay="CENTER" layoutX="339.0" layoutY="15.0" prefHeight="49.0" prefWidth="347.0" style="-fx-font-size: 30;" text="Gandhi Nagar" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="339.0" AnchorPane.rightAnchor="338.0" AnchorPane.topAnchor="15.0">
                         <font>

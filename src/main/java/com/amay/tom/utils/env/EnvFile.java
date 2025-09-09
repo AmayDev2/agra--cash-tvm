@@ -55,8 +55,12 @@ public class EnvFile {
         }
 
         public static String getQRScannerModel() {
-            return getValueOrDefault("QR_SCANNER_MODEL", Env.QR_SCANNER_MODEL);
+            return getValueOrDefault("QR_SCANNER_MODEL", Env.COIN_MODULE);
         }
+
+    public static String getComPort() {
+        return getValueOrDefault("COM_PORT", Env.COM_PORT);
+    }
 
         public static String getEquipmentType() {
             return getValueOrDefault("EQUIPMENT_TYPE", Env.EQUIPMENT_TYPE);

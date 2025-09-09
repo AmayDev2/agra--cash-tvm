@@ -52,12 +52,12 @@ public class CommandHandler {
 
     private void handelModeControl(Any requestData) {
         try {
-           TVMModeControl tomModeControl = requestData.unpack(TVMModeControl.class);
-            System.out.println("Mode Control: " + tomModeControl);
-            System.out.println("Operation Mode : "+tomModeControl.getOperationMode()+"  - "+"Special Mode : "+tomModeControl.getSpecialMode()+"qr"+tomModeControl.getQrSaleMode()+"card"+tomModeControl.getCardProcessMode());
-            String commands=tomModeControl.toString();
+           TVMModeControl tvmModeControl = requestData.unpack(TVMModeControl.class);
+            System.out.println("Mode Control: " + tvmModeControl);
+            System.out.println("Operation Mode : "+tvmModeControl.getOperationMode()+"  - "+"Special Mode : "+tvmModeControl.getSpecialMode()+"qr"+tvmModeControl.getQrSaleMode()+"card"+tvmModeControl.getCardProcessMode());
+            String commands=tvmModeControl.toString();
             if(commands.contains("special_mode")){
-            switch (tomModeControl.getSpecialMode()) {
+            switch (tvmModeControl.getSpecialMode()) {
                 case SHUT_DOWN:
                     remote = new Remote(new ShutdownCommand(applicationService));
                     break;
@@ -79,13 +79,13 @@ public class CommandHandler {
                 default:
                     System.out.println("UNKNOWN_COMMAND");
             }}else {
-                switch (tomModeControl.getOperationMode()) {
+                switch (tvmModeControl.getOperationMode()) {
                     case IN_SERVICE:
-                        if(tomModeControl.getQrSaleMode() && tomModeControl.getCardProcessMode()){
+                        if(tvmModeControl.getQrSaleMode() && tvmModeControl.getCardProcessMode()){
                             remote = new Remote(new InServiceBothCommand(applicationService));
-                        }else if(tomModeControl.getQrSaleMode()){
+                        }else if(tvmModeControl.getQrSaleMode()){
                             remote = new Remote(new InServiceQRCommand(applicationService));
-                        }else if(tomModeControl.getCardProcessMode()){
+                        }else if(tvmModeControl.getCardProcessMode()){
                             remote = new Remote(new InServiceCardCommand(applicationService));
                         }else{
                             remote = new Remote(new InServiceNoSaleCommand(applicationService));

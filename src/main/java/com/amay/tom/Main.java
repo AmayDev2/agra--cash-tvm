@@ -33,25 +33,15 @@ public class Main extends Application {
     private IApplicationService applicationService ;
 
 
+
     @Override
     public void init() throws Exception {
         Logger.debug("Application init called");
+        Logger.tag("BUSINESS").info("Business event processed successfully");
+        Logger.tag("APPLICATION").info("Application started on port 8080");
+
         super.init();
         EnvFile.loadEnv();
-//        SQLiteConnection.INSTANCE.setSQLiteConnection();
-//        QRDataArray.readQRTicketFile();
-//        try {
-//            applicationService=new ApplicationService(new SystemControl());
-//            new RedisListener(applicationService,RedisConnectionPool.getJedisPool()).startSCUEventListener(
-//                    Channels.COMMAND_CHANNEL.name(), Channels.NOTIFICATION_CHANNEL.name());
-//        } catch (Exception e) {
-//            Logger.error("Error in starting RedisListener: {}", e);
-//        }
-//        ticketsRepository.testInsert(SQLiteConnection.INSTANCE.getConnection());
-//        RedisSubscriberService redisSubscriberService = new RedisSubscriberService(RedisConnectionPool.getJedisPool());
-//        redisSubscriberService.startListening("channel1", "channel2");
-
-
 
     }
 

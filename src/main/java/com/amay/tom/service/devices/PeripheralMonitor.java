@@ -7,6 +7,8 @@ import com.amay.tom.service.devices.DeviceStatusListener;
 import com.amay.tom.service.devices.device.PrinterStatus;
 import com.amay.tom.utils.env.EnvFile;
 import com.amay.tom.utils.helper.Helper;
+import com.amay.tvm.bnr.BNRIntegration;
+import com.fazecast.jSerialComm.SerialPort;
 import lombok.Getter;
 import org.tinylog.Logger;
 
@@ -63,7 +65,9 @@ public class PeripheralMonitor implements Runnable {
     public void run() {
         deviceStatus = new int[8];
         scanner_connected = scannerConnected();
-//        printer_connected = getPrinterStatus();
+        printer_connected = getPrinterStatus();
+        cash_drawer_connected=coinNoduleConnected();
+        ups_connected = bnrConnected();
         scu_connected = ConnectionStatus.CONNECTED.equals(this.grpcApiListener.getConnectionStatus());
         ccu_connected = ConnectionStatus.CONNECTED.equals(this.ccuGrpcApiListener.getConnectionStatus());
         pdu_connected = poleDisplayConnected();
@@ -87,16 +91,31 @@ public class PeripheralMonitor implements Runnable {
         }
     }
 
+    private boolean bnrConnected() {
+        return BNRIntegration.isConnected();
+    }
+
     private static boolean PRINTER = false;
     public static boolean scannerConnected() {
-       /* SerialPort[] serialPorts = SerialPort.getCommPorts();
+        SerialPort[] serialPorts = SerialPort.getCommPorts();
         for (SerialPort serialPort : serialPorts) {
-            if (serialPort.getPortDescription().equals(EnvFile.getQRScannerModel())) {
+            if (serialPort.getSystemPortName().equals(EnvFile.getComPort())) {
                 return true;
             }
         }
-        return false;*/
-        return isUsbDeviceConnected("1EAB", "0003");
+        return false;
+//        return isUsbDeviceConnected("1EAB", "0003");
+    }
+
+    public static boolean coinNoduleConnected() {
+        SerialPort[] serialPorts = SerialPort.getCommPorts();
+        for (SerialPort serialPort : serialPorts) {
+            if (serialPort.getSystemPortName().equals(EnvFile.getComPort())) {
+                return true;
+            }
+        }
+        return false;
+//        return isUsbDeviceConnected("1EAB", "0003");
     }
 
 

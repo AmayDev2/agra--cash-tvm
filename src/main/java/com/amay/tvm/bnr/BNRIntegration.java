@@ -150,6 +150,17 @@ public class BNRIntegration {
         return true;
     }//main
 
+    public static boolean isConnected(){
+        try {
+            if(control!=null && control.getStatus().isOpen() ){
+                return true;
+            }
+        } catch (JxfsException e) {
+            throw new RuntimeException(e);
+        }
+        return false;
+    }
+
     public static boolean  bnrOpen(){
     boolean status=false;
         try {

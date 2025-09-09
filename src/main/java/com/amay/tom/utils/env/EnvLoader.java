@@ -72,10 +72,10 @@ public class EnvLoader {
     public String getLineNumber() {
         return getOrDefault("LINE_NUMBER", LINE_NUMBER);
     }
-
-    public String getQrScannerModel() {
-        return getOrDefault("QR_SCANNER_MODEL", QR_SCANNER_MODEL);
-    }
+//
+//    public String getQrScannerModel() {
+//        return getOrDefault("QR_SCANNER_MODEL", QR_SCANNER_MODEL);
+//    }
 
     public String getThermalPrinterModel() {
         return getOrDefault("THERMAL_PRINTER_MODEL", THERMAL_PRINTER_MODEL);

@@ -194,7 +194,7 @@ public class TVMController {
 
             }else if(currentMode!=newStatus &&  newStatus == DeviceOperationMode.STATION_CLOSE) {
                 FXMLLoader loader= ViewFactory.getSpecialModeScreen();
-                loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData,"Station Closed"));
+                loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData,"STATION CLOSED"));
                 try {
                     stackPane.getChildren().clear();
                     stackPane.getChildren().add(loader.load());
@@ -202,6 +202,24 @@ public class TVMController {
                     e.printStackTrace();
                 }
 
+            }else if(currentMode!=newStatus &&  newStatus == DeviceOperationMode.OUT_OF_SERVICE) {
+                FXMLLoader loader= ViewFactory.getSpecialModeScreen();
+                loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData,"OUT OF SERVICE"));
+                try {
+                    stackPane.getChildren().clear();
+                    stackPane.getChildren().add(loader.load());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }else if(currentMode!=newStatus &&  newStatus == DeviceOperationMode.MAINTENANCE) {
+                FXMLLoader loader= ViewFactory.getSpecialModeScreen();
+                loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData,"UNDER MAINTENANCE"));
+                try {
+                    stackPane.getChildren().clear();
+                    stackPane.getChildren().add(loader.load());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
             currentMode = newStatus;
 

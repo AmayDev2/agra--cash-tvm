@@ -14,12 +14,14 @@ import io.grpc.stub.ClientResponseObserver;
 import io.grpc.stub.StreamObserver;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
+import lombok.extern.slf4j.Slf4j;
 import org.network.monitorandcontrol.MonitorAndControlGrpc;
 import org.network.monitorandcontrol.tvm.TVMProtocol;
 import org.tinylog.Logger;
 
 import static java.util.concurrent.CompletableFuture.runAsync;
 
+@Slf4j
 public class GrpcControlMonitoringService {
 
     private MonitorAndControlGrpc.MonitorAndControlStub asyncStub = null;
@@ -153,10 +155,10 @@ public class GrpcControlMonitoringService {
     public void sendMessage(TVMProtocol message) {
         try {
             if (requestObserver != null && getConnectionStatus() == ConnectionStatus.CONNECTED) {
-                Logger.info("Sending message to server: {}", message);
+                Logger.info("Sending message to server: {} {}", message,chanelName);
                 requestObserver.onNext(message);
             } else {
-                Logger.warn("Cannot send message - not connected. Status: {}", getConnectionStatus());
+                Logger.warn("Cannot send message - not connected. Status: {} {}", getConnectionStatus(),chanelName);
             }
         } catch (Exception e) {
             Logger.error("Error sending message: {}", e.getMessage());
@@ -237,10 +239,10 @@ public class GrpcControlMonitoringService {
                         setConnectionStatus(ConnectionStatus.CONNECTING); // FIXED: Use setter
                         runAsync(() -> notConnected(), threadPool.getSingleThread());
                     } else {
-                        setConnectionStatus(ConnectionStatus.ERROR);
+                        setConnectionStatus(ConnectionStatus.DISCONNECTED);
                     }
                 } else {
-                    setConnectionStatus(ConnectionStatus.ERROR);
+                    setConnectionStatus(ConnectionStatus.DISCONNECTED);
                 }
             }
 
@@ -282,6 +284,7 @@ public class GrpcControlMonitoringService {
     }
 
     public String getChanelName(){
-        return this.chanelName;
+        Logger.info("Channel Name : {}", chanelName);
+        return chanelName;
     }
 }

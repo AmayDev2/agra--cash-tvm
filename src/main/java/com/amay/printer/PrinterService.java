@@ -8,9 +8,15 @@ import com.amay.tom.model.QRTicket;
 import com.amay.tom.repository.StationData;
 import com.custom.wndapijwrap.*;
 import javafx.scene.image.Image;
+import org.tinylog.Logger;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.util.Arrays;
 import java.util.List;
 
@@ -172,6 +178,27 @@ public class PrinterService implements PrinterInterface {
             }
         return imagePrintResponse;
     }
+
+//    private static String extractImage(String resourcePath){
+//        try{
+//            String imagePath;
+//            InputStream in = PrinterService.class.getResourceAsStream("/images/MPMRC.bmp");
+//            Path tempFile = Files.createTempFile("printer_image", ".bmp");
+//            Files.copy(in, tempFile, StandardCopyOption.REPLACE_EXISTING);
+//            imagePath = tempFile.toAbsolutePath().toString();
+//            // return imagePath to print ticket
+//            return imagePath;
+//
+//        }catch (Exception e ){
+//            if(e instanceof IOException)
+//                Logger.error(e, "Ticket Logo not found: " + resourcePath);
+//            else {
+//                Logger.error(e, "Error extracting image: "+e.getMessage());
+//                e.printStackTrace();
+//            }
+//        }
+//        return IMAGE_URL;
+//}
 
 
     private void printImageByPath(){

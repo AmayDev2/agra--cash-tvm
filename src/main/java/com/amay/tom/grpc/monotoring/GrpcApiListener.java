@@ -132,6 +132,7 @@ public class GrpcApiListener implements RemoteListener {
                 .setCardProcessMode(card)
                 .build();
         grpcControlMonitoringService.sendMessage(RequestHandler.setOperationMode(builder));
+        this.sendPeripheralStatus(agent.getDeviceStatusListener().getDeviceStatus());
     }
 
     public void sendVersionInfo(MasterConfigInfo masterConfigInfo){
@@ -150,10 +151,10 @@ public class GrpcApiListener implements RemoteListener {
                 .build();
 
         TVMParameterVersion parameterVersion = TVMParameterVersion.newBuilder()
-                .clearReaderInfo()
+//                .clearReaderInfo()
                 .setVersionInfo(aVersionInfo).build();
 
-        log.info("GRPC Channel name for PARAMETER_VERSION send via monitoring : {}", grpcControlMonitoringService.getChanelName());
+        Logger.info("GRPC Channel name for PARAMETER_VERSION send via monitoring : {}", grpcControlMonitoringService.getChanelName());
 
         grpcControlMonitoringService.sendMessage(RequestHandler.setParameterVersion(parameterVersion));
     }

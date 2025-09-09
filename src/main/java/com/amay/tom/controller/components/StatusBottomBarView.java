@@ -13,6 +13,10 @@ import org.tinylog.Logger;
 
 public class StatusBottomBarView {
     @FXML
+    private  Button coinModule;
+    @FXML
+    private  Button bnr;
+    @FXML
     private Text fareTableVersion;
     @FXML
     private Text softwareVersion;
@@ -80,8 +84,8 @@ public class StatusBottomBarView {
         setPeripheralStatus(ccuConnectedImage, deviceStatus[3] == 1);
         setPeripheralStatus(readerConnectedImage, deviceStatus[4] == 1);
         setPeripheralStatus(pduConnectedImage, deviceStatus[5] == 1);
-        setPeripheralStatus(cashDrawerConnectedImage, deviceStatus[6] == 1);
-        setPeripheralStatus(upsConnectedImage, deviceStatus[7] == 1);
+        setPeripheralStatus(coinModule, deviceStatus[6] == 1);
+        setPeripheralStatus(bnr, deviceStatus[7] == 1);
     }
 }
 
