@@ -61,8 +61,8 @@ public class Main extends Application {
 
 
 
-        System.out.println("java version: "+System.getProperty("java.version"));
-        System.out.println("javafx.version: " + System.getProperty("javafx.version"));
+        //System.out.println("java version: "+System.getProperty("java.version"));
+        //System.out.println("javafx.version: " + System.getProperty("javafx.version"));
 
 
 
@@ -114,6 +114,7 @@ public class Main extends Application {
             stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
             stage.setTitle("TVM Application");
             stage.setScene(scene);
+
 
             // Add window closing event handler to prevent Alt+F4
             stage.setOnCloseRequest(event -> {
@@ -198,6 +199,8 @@ public class Main extends Application {
 
 //        PDUController controller = pduLoader.getController();
                 Scene pduScene = new Scene(pduLoader.load(), 640, 448);
+                // Add global key filter
+                new KeypadHandler().attach(pduScene);
 
                 Stage pduStage = new Stage();
                 pduStage.setScene(pduScene);
@@ -213,26 +216,12 @@ public class Main extends Application {
 
                 pduStage.show();
 
-//        new Thread(() -> {
-//            try {
-//                AtomicInteger i= new AtomicInteger();
-//                while (true) {
-//                    Thread.sleep(3000); // Update every second
-//                    Platform.runLater(() -> {
-//                        controller.setText("Initializing PDU controller..."+(i.incrementAndGet()));
-//                    });
-//                }
-//
-//            } catch (Exception e) {
-//                Logger.error("Error initializing PDU controller: {}", e);
-//                e.printStackTrace();
-//            }
-//        }).start();
-
 
             } else {
                 Logger.warn("Second screen not detected. PDU screen will not be launched.");
             }
+
+
 
         }catch (Exception e){
             Logger.error("Error in loading main scene: {}", e);
@@ -240,6 +229,19 @@ public class Main extends Application {
         }
 
     }
+
+
+    private void shiftFocusTo(Stage stage) {
+        if (stage != null) {
+            Platform.runLater(() -> {
+                stage.setAlwaysOnTop(true);
+                stage.toFront();
+                stage.requestFocus();
+                stage.setFullScreen(true);
+            });
+        }
+    }
+
 
     public static void main(String[] args) throws IOException {
 //        EnvFile.loadEnv();

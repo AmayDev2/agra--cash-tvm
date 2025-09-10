@@ -8,7 +8,7 @@ public class ClientLoggingInterceptor implements ClientInterceptor {
     public <ReqT, RespT> ClientCall<ReqT, RespT> interceptCall(
             MethodDescriptor<ReqT, RespT> method, CallOptions callOptions, Channel next) {
 
-        System.out.println("Calling method: " + method.getFullMethodName());
+        //System.out.println("Calling method: " + method.getFullMethodName());
 
         // Proceed with the call
         return next.newCall(method, callOptions);

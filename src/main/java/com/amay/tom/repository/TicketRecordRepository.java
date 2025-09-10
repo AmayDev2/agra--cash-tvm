@@ -25,7 +25,7 @@ public class TicketRecordRepository {
             statement.setString(3, ticketRecord.getSiftdate());
             statement.setInt(4, ticketRecord.getSift());
             statement.executeUpdate();
-            System.out.println("Ticket record created successfully.");
+            //System.out.println("Ticket record created successfully.");
         }catch (Exception e){
             Logger.error("ticket creation {}",e.getMessage());
         }
@@ -41,7 +41,7 @@ public class TicketRecordRepository {
             statement.setString(3, String.valueOf(ticketRecord.getSiftdate()));
             statement.setInt(4, ticketRecord.getSift());
             statement.executeUpdate();
-            System.out.println("Ticket record upserted successfully.");
+            //System.out.println("Ticket record upserted successfully.");
         }
     }
 
@@ -85,7 +85,7 @@ public class TicketRecordRepository {
                 ticketRecord.setSift(resultSet.getInt("sift"));
                 ticketRecords.add(ticketRecord);
 
-//                System.out.println(ticketRecord);
+//                //System.out.println(ticketRecord);
             }
             return ticketRecords;
         }
@@ -132,7 +132,7 @@ public class TicketRecordRepository {
                 ticketRecord.setSift(resultSet.getInt("sift"));
                 ticketRecords.add(ticketRecord);
 
-//                System.out.println(ticketRecord);
+//                //System.out.println(ticketRecord);
             }
             return ticketRecords;
         }
@@ -147,9 +147,9 @@ public class TicketRecordRepository {
             statement.setString(4, ticketRecord.getSiftdate());
             int rowsUpdated = statement.executeUpdate();
             if (rowsUpdated > 0) {
-                System.out.println("Ticket record updated successfully.");
+                //System.out.println("Ticket record updated successfully.");
             } else {
-                System.out.println("No ticket record found with the given details.");
+                //System.out.println("No ticket record found with the given details.");
             }
         }
     }
@@ -160,9 +160,9 @@ public class TicketRecordRepository {
             statement.setInt(1, ticketRecord.getPid());
             int rowsUpdated = statement.executeUpdate();
             if (rowsUpdated > 0) {
-                System.out.println("Ticket record updated successfully.");
+                //System.out.println("Ticket record updated successfully.");
             } else {
-                System.out.println("No ticket record found with the given details.");
+                //System.out.println("No ticket record found with the given details.");
             }
         }
     }
@@ -175,9 +175,9 @@ public class TicketRecordRepository {
             statement.setString(3, sift);
             int rowsDeleted = statement.executeUpdate();
             if (rowsDeleted > 0) {
-                System.out.println("Ticket record deleted successfully.");
+                //System.out.println("Ticket record deleted successfully.");
             } else {
-                System.out.println("No ticket record found with the given details.");
+                //System.out.println("No ticket record found with the given details.");
             }
         }
     }

@@ -21,7 +21,7 @@ public class CancelService implements ICancelService {
     }
     @Override
     public boolean markTicketCancelByOrderId(String orderId) {
-        System.out.println("Order id : "+orderId);
+        //System.out.println("Order id : "+orderId);
         ticketsRepository.markTicketCancelByOrderId(orderId);
         Logger.debug("Marked ticket as cancel for order id {}",orderId);
 //        agent.getScuService().markTicketCancelByOrderId(orderId);
@@ -30,7 +30,7 @@ public class CancelService implements ICancelService {
 
     @Override
     public void getCancelTicketInfo(String orderId) {
-        System.out.println("getCancelTicketInfo Order id : "+orderId);
+        //System.out.println("getCancelTicketInfo Order id : "+orderId);
         ticketList.addAll(ticketsRepository.getTicketByOrderId(orderId));
     }
 

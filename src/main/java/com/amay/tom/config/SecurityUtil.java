@@ -19,7 +19,7 @@ public class SecurityUtil {
         String raw = "TestUser456";
         String hashed = encodePassword(raw);
 
-        System.out.println("Hashed: " + hashed);
-        System.out.println("Matches: " + matches(raw, hashed));
+        //System.out.println("Hashed: " + hashed);
+        //System.out.println("Matches: " + matches(raw, hashed));
     }
 }

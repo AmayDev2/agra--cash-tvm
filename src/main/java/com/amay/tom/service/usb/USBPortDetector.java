@@ -28,7 +28,7 @@ public class USBPortDetector {
                 listDevices((UsbHub) device);
             } else {
                 // If this is a device, print its information
-                System.out.println("Device found: " + device);
+                //System.out.println("Device found: " + device);
             }
         }
     }

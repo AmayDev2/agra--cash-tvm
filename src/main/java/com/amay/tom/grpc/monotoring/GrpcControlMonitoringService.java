@@ -7,6 +7,7 @@ import com.amay.tom.grpc.monotoring.RequestHandler;
 import com.amay.tom.service.qrService2.DataPushService;
 import com.amay.tom.service.tom.IApplicationService;
 import com.amay.tom.threadpool.ThreadPool;
+import com.amay.tvm.backend.enums.LoggerTag;
 import io.grpc.Status;
 import io.grpc.StatusRuntimeException;
 import io.grpc.stub.ClientCallStreamObserver;
@@ -42,7 +43,7 @@ public class GrpcControlMonitoringService {
                                         CCUMonitoringConnector ccuMonitoringConnector,
                                         ThreadPool threadPool, String chanelName,
                                         DataPushService dataPushService) {
-        Logger.info("GrpcControlMonitoringService constructor called");
+        Logger.tag(LoggerTag.APP).debug("GrpcControlMonitoringService constructor called");
         this.chanelName = chanelName;
         this.asyncStub = asyncStub;
         this.ccuMonitoringConnector = ccuMonitoringConnector;
@@ -73,14 +74,14 @@ public class GrpcControlMonitoringService {
     public void setConnectionStatus(ConnectionStatus status) {
         ConnectionStatus oldStatus = this.connectionStatus.get();
         this.connectionStatus.set(status);
-        Logger.info("Connection status changed from {} to {} for channel: {}",
+        Logger.tag(LoggerTag.APP).debug("Connection status changed from {} to {} for channel: {}",
                 oldStatus, status, chanelName);
     }
 
     // ADDED: Setup connection status listener
     private void setupConnectionStatusListener() {
         connectionStatus.addListener((observable, oldValue, newValue) -> {
-            Logger.info("Connection status listener triggered: {} -> {} for channel: {}",
+            Logger.tag(LoggerTag.APP).debug("Connection status listener triggered: {} -> {} for channel: {}",
                     oldValue, newValue, chanelName);
 
             switch (newValue) {
@@ -94,23 +95,24 @@ public class GrpcControlMonitoringService {
 
     // ADDED: Connection status handlers
     private void onConnected() {
-        Logger.info("✅ Successfully connected to monitoring service on channel: {}", chanelName);
+        Logger.tag(LoggerTag.APP).info("✅ Successfully connected to monitoring service on channel: {}", chanelName);
+        this.initialConnectionRequest(RequestHandler.getInitialRequest());
         // Additional connected logic here
         dataPushService.pushData();
     }
 
     private void onDisconnected() {
-        Logger.warn("❌ Disconnected from monitoring service on channel: {}", chanelName);
+        Logger.tag(LoggerTag.APP).warn("❌ Disconnected from monitoring service on channel: {}", chanelName);
         // Additional disconnected logic here
     }
 
     private void onConnecting() {
-        Logger.info("🔄 Attempting to connect to monitoring service on channel: {}", chanelName);
+        Logger.tag(LoggerTag.APP).debug("🔄 Attempting to connect to monitoring service on channel: {}", chanelName);
         // Additional connecting logic here
     }
 
     private void onConnectionError() {
-        Logger.error("💥 Connection error occurred on channel: {}", chanelName);
+        Logger.tag(LoggerTag.APP).error("💥 Connection error occurred on channel: {}", chanelName);
         // Additional error handling logic here
     }
 
@@ -119,20 +121,20 @@ public class GrpcControlMonitoringService {
             setConnectionStatus(ConnectionStatus.CONNECTING);
             ccuMonitoringConnector.reconnect();
             this.asyncStub = ccuMonitoringConnector.getAsyncStub();
-            Logger.info("Reconnection initiated for channel: {}", chanelName);
+            Logger.tag(LoggerTag.APP).debug("Reconnection initiated for channel: {}", chanelName);
         } catch (Exception e) {
-            Logger.error("Error during reconnection: {}", e.getMessage());
+            Logger.tag(LoggerTag.APP).error("Error during reconnection: {}", e.getMessage());
             setConnectionStatus(ConnectionStatus.ERROR);
         }
     }
 
     private void notConnected() {
         try {
-            Logger.info("Monitoring service not connected, reconnecting...");
+            Logger.tag(LoggerTag.APP).debug("Monitoring service not connected, reconnecting...");
             setConnectionStatus(ConnectionStatus.CONNECTING); // FIXED: Use setter
             Thread.sleep(5000);
         } catch (InterruptedException e) {
-            Logger.error("Error in sleep: {}", e.getMessage());
+            Logger.tag(LoggerTag.APP).error("Error in sleep: {}", e.getMessage());
             Thread.currentThread().interrupt(); // ADDED: Proper interrupt handling
             return;
         }
@@ -143,11 +145,9 @@ public class GrpcControlMonitoringService {
             }
 
             requestObserver = tvmStreamObserver();
-            Logger.info("Reconnected to monitoring service");
-            this.initialConnectionRequest(RequestHandler.getInitialRequest());
 
         } catch (Exception e) {
-            Logger.error("Error during reconnection process: {}", e.getMessage());
+            Logger.tag(LoggerTag.APP).error("Error during reconnection process: {}", e.getMessage());
             setConnectionStatus(ConnectionStatus.ERROR);
         }
     }
@@ -155,27 +155,27 @@ public class GrpcControlMonitoringService {
     public void sendMessage(TVMProtocol message) {
         try {
             if (requestObserver != null && getConnectionStatus() == ConnectionStatus.CONNECTED) {
-                Logger.info("Sending message to server: {} {}", message,chanelName);
+                Logger.tag(LoggerTag.APP).debug("Sending message to server: {} [{}]", message,chanelName);
                 requestObserver.onNext(message);
             } else {
-                Logger.warn("Cannot send message - not connected. Status: {} {}", getConnectionStatus(),chanelName);
+                Logger.tag(LoggerTag.APP).warn("Cannot send message - not connected. Status: {} {}", getConnectionStatus(),chanelName);
             }
         } catch (Exception e) {
-            Logger.error("Error sending message: {}", e.getMessage());
+            Logger.tag(LoggerTag.APP).error("Error sending message: {}", e.getMessage());
             setConnectionStatus(ConnectionStatus.ERROR);
         }
     }
 
     public void initialConnectionRequest(TVMProtocol message) {
         try {
-            Logger.info("Sending initial request to server: {}", message);
+            Logger.tag(LoggerTag.APP).debug("Sending initial request to server: {}", message);
             if (requestObserver != null) {
                 requestObserver.onNext(message);
             } else {
-                Logger.error("RequestObserver is null, cannot send initial request");
+                Logger.tag(LoggerTag.APP).error("RequestObserver is null, cannot send initial request");
             }
         } catch (Exception e) {
-            Logger.error("Error sending initial request: {}", e.getMessage());
+            Logger.tag(LoggerTag.APP).error("Error sending initial request: {}", e.getMessage());
             setConnectionStatus(ConnectionStatus.ERROR);
         }
     }
@@ -187,12 +187,12 @@ public class GrpcControlMonitoringService {
                 setConnectionStatus(ConnectionStatus.DISCONNECTED);
             }
         } catch (Exception e) {
-            Logger.error("Error marking stream complete: {}", e.getMessage());
+            Logger.tag(LoggerTag.APP).error("Error marking stream complete: {}", e.getMessage());
         }
     }
 
     private StreamObserver<TVMProtocol> tvmStreamObserver() {
-        Logger.info("Creating stream observer for monitoring server on channel: {}", chanelName);
+        Logger.tag(LoggerTag.APP).debug("Creating stream observer for monitoring server on channel: {}", chanelName);
 
         return asyncStub.tvmStream(new ClientResponseObserver<TVMProtocol, TVMProtocol>() {
 
@@ -203,7 +203,7 @@ public class GrpcControlMonitoringService {
                 // Flow control handling
                 requestStream.setOnReadyHandler(() -> {
                     if (requestStream.isReady()) {
-                        Logger.info("✅ Stream is ready to send messages (onReady) for channel: {}", chanelName);
+                        Logger.tag(LoggerTag.APP).debug("✅ Stream is ready to send messages (onReady) for channel: {}", chanelName);
                         setConnectionStatus(ConnectionStatus.CONNECTED); // FIXED: Set to CONNECTED when ready
                     }
                 });
@@ -212,7 +212,7 @@ public class GrpcControlMonitoringService {
             @Override
             public void onNext(TVMProtocol value) {
                 try {
-                    Logger.info("Received command from server: {}", value);
+                    Logger.tag(LoggerTag.APP).debug("Received command from server: {}", value);
 
                     // Ensure we're marked as connected when receiving messages
                     if (getConnectionStatus() != ConnectionStatus.CONNECTED) {
@@ -221,13 +221,13 @@ public class GrpcControlMonitoringService {
 
                     commandHandler.handleCommand(value.getCommandType(), value);
                 } catch (Exception e) {
-                    Logger.error("Error handling received command: {}", e.getMessage());
+                    Logger.tag(LoggerTag.APP).error("Error handling received command: {}", e.getMessage());
                 }
             }
 
             @Override
             public void onError(Throwable t) {
-                Logger.error("Error from server: {} {}", t.getMessage(), chanelName, t);
+                Logger.tag(LoggerTag.APP).error("Error from server: {} {}", t.getMessage(), chanelName, t);
                 setConnectionStatus(ConnectionStatus.DISCONNECTED); // FIXED: Use setter
 
                 if (t instanceof StatusRuntimeException statusException) {
@@ -235,7 +235,7 @@ public class GrpcControlMonitoringService {
                     if (code == Status.Code.UNAVAILABLE
                             || code == Status.Code.DEADLINE_EXCEEDED
                             || code == Status.Code.UNKNOWN) {
-                        Logger.error("Server is unavailable: {}", t.getMessage());
+                        Logger.tag(LoggerTag.APP).error("Server is unavailable: {}", t.getMessage());
                         setConnectionStatus(ConnectionStatus.CONNECTING); // FIXED: Use setter
                         runAsync(() -> notConnected(), threadPool.getSingleThread());
                     } else {
@@ -249,14 +249,14 @@ public class GrpcControlMonitoringService {
             @Override
             public void onCompleted() {
                 setConnectionStatus(ConnectionStatus.DISCONNECTED); // FIXED: Use setter
-                Logger.info("Server has completed sending messages for channel: {}", chanelName);
+                Logger.tag(LoggerTag.APP).debug("Server has completed sending messages for channel: {}", chanelName);
             }
         });
     }
 
     public void shutdown() {
         try {
-            Logger.info("Shutting down GrpcControlMonitoringService for channel: {}", chanelName);
+            Logger.tag(LoggerTag.APP).debug("Shutting down GrpcControlMonitoringService for channel: {}", chanelName);
             setConnectionStatus(ConnectionStatus.DISCONNECTED);
 
             if (requestObserver != null) {
@@ -267,9 +267,9 @@ public class GrpcControlMonitoringService {
                 ccuMonitoringConnector.shutdown();
             }
 
-            Logger.info("GrpcControlMonitoringService shutdown complete for channel: {}", chanelName);
+            Logger.tag(LoggerTag.APP).debug("GrpcControlMonitoringService shutdown complete for channel: {}", chanelName);
         } catch (Exception e) {
-            Logger.error("Error during shutdown: {}", e.getMessage());
+            Logger.tag(LoggerTag.APP).error("Error during shutdown: {}", e.getMessage());
         }
     }
 
@@ -284,7 +284,6 @@ public class GrpcControlMonitoringService {
     }
 
     public String getChanelName(){
-        Logger.info("Channel Name : {}", chanelName);
         return chanelName;
     }
 }

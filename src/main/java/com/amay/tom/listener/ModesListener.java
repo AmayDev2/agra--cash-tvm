@@ -19,7 +19,7 @@ public class ModesListener implements RemoteListener {
     private final EquipmentPrivilege equipmentPrivilege;
     private final Agent agent;
     public ModesListener(Agent agent) {
-        System.out.println("ModesListener");
+        //System.out.println("ModesListener");
         this.equipmentPrivilege = agent.getEquipmentPrivilege();
         this.agent = agent;
 
@@ -27,7 +27,7 @@ public class ModesListener implements RemoteListener {
 
     @Override
     public void sunleBhai(Class<?> commandClass) throws ServiceNotFoundException {
-        System.out.println("sunle bhai"+commandClass.getName());
+        //System.out.println("sunle bhai"+commandClass.getName());
         if(commandClass.equals(EmergencyCommand.class)){
             setEmergencyMode();
         }

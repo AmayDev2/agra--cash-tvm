@@ -6,6 +6,7 @@ import com.amay.tom.config.ENVURL;
 import com.amay.tom.config.SystemConfig;
 import com.amay.tom.model.QRTicket;
 import com.amay.tom.repository.StationData;
+import com.amay.tvm.backend.enums.LoggerTag;
 import com.custom.wndapijwrap.*;
 import javafx.scene.image.Image;
 import org.tinylog.Logger;
@@ -34,31 +35,31 @@ public class PrinterService implements PrinterInterface {
         try
         {
             // Direct DLL loading approach
-            System.out.println("Attempting to load native library CuCustomWndAPI.dll...");
+            //System.out.println("Attempting to load native library CuCustomWndAPI.dll...");
 
             // Method 1: Try to load from lib/Printer directory
             try {
                 String dllPath = "E:\\Amay Technosystems\\AFC\\BackupTVM\\AgraCashTVM\\.";
-                System.out.println("Trying to load from: " + dllPath);
+                //System.out.println("Trying to load from: " + dllPath);
                 System.load(dllPath);
-                System.out.println("SUCCESS: Native library loaded from lib/Printer directory!");
+                //System.out.println("SUCCESS: Native library loaded from lib/Printer directory!");
             } catch (UnsatisfiedLinkError e1) {
-                System.out.println("Failed to load from lib/Printer: " + e1.getMessage());
+                //System.out.println("Failed to load from lib/Printer: " + e1.getMessage());
 
                 // Method 2: Try to load from absolute path
                 try {
                     String absolutePath = System.getProperty("user.dir") + "/.";
-                    System.out.println("Trying to load from absolute path: " + absolutePath);
+                    //System.out.println("Trying to load from absolute path: " + absolutePath);
                     System.load(absolutePath);
-                    System.out.println("SUCCESS: Native library loaded from absolute path!");
+                    //System.out.println("SUCCESS: Native library loaded from absolute path!");
                 } catch (UnsatisfiedLinkError e2) {
-                    System.out.println("Failed to load from absolute path: " + e2.getMessage());
+                    //System.out.println("Failed to load from absolute path: " + e2.getMessage());
 
                     // Method 3: Try to load using System.loadLibrary
                     try {
-                        System.out.println("Trying to load using System.loadLibrary...");
+                        //System.out.println("Trying to load using System.loadLibrary...");
                         System.loadLibrary("CuCustomWndAPI");
-                        System.out.println("SUCCESS: Native library loaded using System.loadLibrary!");
+                        //System.out.println("SUCCESS: Native library loaded using System.loadLibrary!");
                     } catch (UnsatisfiedLinkError e3) {
                         System.err.println("ERROR: All methods failed to load native library!");
                         System.err.println("Error 1: " + e1.getMessage());
@@ -82,17 +83,17 @@ public class PrinterService implements PrinterInterface {
             }
             //Init the library
             cucjwrap.InitLibrary();
-            System.out.println("");
-            System.out.println("CuCustomWndAPIJWrap Api version:"+cucjwrap.GetAPIVersion());
+            //System.out.println("");
+            //System.out.println("CuCustomWndAPIJWrap Api version:"+cucjwrap.GetAPIVersion());
             //Get DLLs versions
             String strdllrels = cucjwrap.GetAPIVersionHwLibrary();
-            System.out.println("low level DLL version:"+strdllrels);
-            System.out.println("");
+            //System.out.println("low level DLL version:"+strdllrels);
+            //System.out.println("");
             openConnection();
         }
         catch(Exception e)
         {
-            System.out.println("*** EXCEPTION: " + e);
+            //System.out.println("*** EXCEPTION: " + e);
         }
     }
 
@@ -102,7 +103,7 @@ public class PrinterService implements PrinterInterface {
             //If was open, close it
             if (cudev != null)
             {
-                System.out.println("Previous device closed");
+                //System.out.println("Previous device closed");
                 cudev.Terminate();
                 cudev = null;
             }
@@ -113,39 +114,40 @@ public class PrinterService implements PrinterInterface {
             {
 
 
-                System.out.println("Try to connect USB device: "+udevArray[0]+" ...");
+                //System.out.println("Try to connect USB device: "+udevArray[0]+" ...");
                 //Open the 1st Device found
                 cudev = cucjwrap.OpenPrinterUSB(udevArray[0]);
-                System.out.println("OK!");
-                System.out.println("Device Connected");
+                //System.out.println("OK!");
+                //System.out.println("Device Connected");
                 printDeviceInfo(cudev);
             }
             else
-                System.out.println("No devices found");
+                //System.out.println("No devices found");
+                Logger.tag(LoggerTag.APP).debug("No Printer devices found");
         }
         catch(Exception ctse)
         {
-            System.out.println("*** EXCEPTION: " + ctse + " ("+ctse.getMessage()+")");
+            //System.out.println("*** EXCEPTION: " + ctse + " ("+ctse.getMessage()+")");
         }
     }
 
     private void printDeviceInfo(CuCustomWndDevice cudev) {
-            try
-            {
-                System.out.println("Model: "+cudev.GetInfoDeviceModel());
-                System.out.println("FW Release: "+cudev.GetInfoFirmwareVersion());
-                System.out.println("Port Type: "+cudev.GetCapCommPortType());
-                System.out.println("Print Resolution: "+cudev.GetCapPrinterResolution());
-                System.out.println("Print Width: "+cudev.GetCapPrintWidth());
-            }
-            catch(CuCustomWndAPIJWrapException ctse)
-            {
-                System.out.println("*** EXCEPTION: " + ctse + " ("+ctse.getMessage()+")");
-            }
-            catch(Exception e)
-            {
-                System.out.println("*** EXCEPTION: " + e);
-            }
+//            try
+//            {
+//                //System.out.println("Model: "+cudev.GetInfoDeviceModel());
+//                //System.out.println("FW Release: "+cudev.GetInfoFirmwareVersion());
+//                //System.out.println("Port Type: "+cudev.GetCapCommPortType());
+//                //System.out.println("Print Resolution: "+cudev.GetCapPrinterResolution());
+//                //System.out.println("Print Width: "+cudev.GetCapPrintWidth());
+//            }
+//            catch(CuCustomWndAPIJWrapException ctse)
+//            {
+//                //System.out.println("*** EXCEPTION: " + ctse + " ("+ctse.getMessage()+")");
+//            }
+//            catch(Exception e)
+//            {
+//                //System.out.println("*** EXCEPTION: " + e);
+//            }
 
     }
 
@@ -294,10 +296,10 @@ public class PrinterService implements PrinterInterface {
     private void printText(QRTicket qrTicket) {
 
         if (qrTicket == null) {
-            System.out.println("QRTicket is null. Skipping data population.");
+            //System.out.println("QRTicket is null. Skipping data population.");
             return;
         }
-        System.out.println("Populating ticket data...");
+        //System.out.println("Populating ticket data...");
 
         String formatted = getFormatted(qrTicket);
         try {
@@ -333,11 +335,11 @@ public class PrinterService implements PrinterInterface {
         // Use text block instead of escaped \n
         String ticketData = """
             
-            Date/Time        : %s
+            Date-Time        : %s
             Payment Type     : %s
             Salepoint Id     : %s
             Type             : %s %s
-            Platform NO.     : %s
+            Platform No.     : %s
             From             : %s
             To               : %s
             Price            : %s

@@ -5,6 +5,7 @@ import com.amay.tom.listener.PrintProgressListener;
 import com.amay.tom.model.GeneratedTicket;
 import com.amay.tom.model.payment.PaymentResponse;
 import com.amay.tom.service.ticketprint.PrintTicketService;
+import com.amay.tvm.backend.enums.LoggerTag;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,6 +15,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
+import org.tinylog.Logger;
 
 import java.util.ArrayList;
 
@@ -47,7 +49,7 @@ public class SessionCompletion {
     }
 
     public void printTicket(){
-        new Thread(()-> Platform.runLater(()-> this.printTicketService.printTicket((x,y)->System.out.println("Please wait, printing..."+x+"/"+y)))).start();
+        new Thread(()-> Platform.runLater(()-> this.printTicketService.printTicket((x,y)-> Logger.tag(LoggerTag.APP).debug("Please wait, printing..."+x+"/"+y)))).start();
     }
 
 
@@ -65,7 +67,7 @@ public class SessionCompletion {
 
 
     public void printReceipt(ActionEvent actionEvent) {
-        System.out.println("Printing receipt...");
+        //System.out.println("Printing receipt...");
         actionEvent.consume();
     }
 

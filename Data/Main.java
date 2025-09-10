@@ -75,8 +75,8 @@ public class Main extends Application {
 
 
 
-        System.out.println("java version: "+System.getProperty("java.version"));
-        System.out.println("javafx.version: " + System.getProperty("javafx.version"));
+        //System.out.println("java version: "+System.getProperty("java.version"));
+        //System.out.println("javafx.version: " + System.getProperty("javafx.version"));
 
 
 

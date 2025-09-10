@@ -28,8 +28,7 @@ public class ApplicationService  implements IApplicationService {
     public void notifyListener(Class<?> listenerClass, Class<?> commandClass)  {
         remoteListeners.stream()
                 .filter(listenerClass :: isInstance)
-                .findFirst()
-                .ifPresent(listener -> {
+                .forEach(listener -> {
                     try {
                          listener.sunleBhai(commandClass);
                     } catch (ServiceNotFoundException e) {

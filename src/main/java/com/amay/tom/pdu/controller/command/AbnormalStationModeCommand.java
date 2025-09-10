@@ -19,7 +19,7 @@ public class AbnormalStationModeCommand implements PDUCommand {
 
     @Override
     public void execute(PDUController pduController) {
-        System.out.println("Station mode for command  "+stationMode.getDeviceStatusName());
+        //System.out.println("Station mode for command  "+stationMode.getDeviceStatusName());
         if(DeviceOperationMode.STATION_CLOSE.equals(stationMode)){
             FXMLLoader loader=ViewFactory.getAbnormalStationMode();
             loader.setControllerFactory(x->new AbnormalStationModeController(StationMode.STATION_CLOSED));

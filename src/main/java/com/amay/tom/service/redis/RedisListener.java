@@ -53,13 +53,13 @@ public class RedisListener {
                 switch (channelEnum) {
                     case COMMAND_CHANNEL:
                                 sendCommand(message);
-//                        System.out.println("Received command: " + message + "\n");
+//                        //System.out.println("Received command: " + message + "\n");
                         break;
                     case NOTIFICATION_CHANNEL:
-                        System.out.println("Received notification: " + message + "\n");
+                        //System.out.println("Received notification: " + message + "\n");
                         break;
                     default:
-                        System.out.println("Received message from " + channel + ": " + message + "\n");
+                        //System.out.println("Received message from " + channel + ": " + message + "\n");
                         break;
                 }
                 } catch (Exception e) {
@@ -79,7 +79,7 @@ public class RedisListener {
 
             @Override
             public void ping() {
-                   System.out.println("Ping received");
+                   //System.out.println("Ping received");
             }
 
         }, channels);
@@ -101,7 +101,7 @@ public class RedisListener {
 
     private void sendCommand(String message) {
 
-        System.out.println("Received command: " + RedisMessage.class + "\n");
+        //System.out.println("Received command: " + RedisMessage.class + "\n");
 
         RedisMessage redisMessage= (RedisMessage) Helper.JSONtoObject(message, RedisMessage.class);
         assert redisMessage != null;
@@ -121,7 +121,7 @@ public class RedisListener {
 //                remote.normalMode();
                 break;
             default:
-                System.out.println("Received command: " + message + "\n");
+                //System.out.println("Received command: " + message + "\n");
         }
 
         remote.pressButton();

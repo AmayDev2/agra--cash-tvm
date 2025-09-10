@@ -27,7 +27,7 @@ public class QRDataArray {
             String json = mapper.writeValueAsString(qrDataArray);
 
             // Print or use the JSON object as needed
-            System.out.println(json);
+            //System.out.println(json);
             // Create a new file
 
             File file = new File("output.json");

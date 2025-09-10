@@ -25,7 +25,7 @@ public class JsonFileWriterUtil {
             // Create parent directories if they don't exist
             file.getParentFile().mkdirs();
             objectMapper.writeValue(file, object);
-            System.out.println("JSON saved to: " + file.getAbsolutePath());
+            //System.out.println("JSON saved to: " + file.getAbsolutePath());
         } catch (IOException e) {
             System.err.println("Failed to write JSON to file: " + filePath);
             e.printStackTrace();

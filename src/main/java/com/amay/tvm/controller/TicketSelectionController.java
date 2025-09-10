@@ -138,7 +138,7 @@ public class TicketSelectionController {
     @FXML
     private void  confirmSelection(ActionEvent actionEvent) {
         if (selectedDestination == null) {
-            System.out.println("No station selected");
+            //System.out.println("No station selected");
             return;
         }
         try {

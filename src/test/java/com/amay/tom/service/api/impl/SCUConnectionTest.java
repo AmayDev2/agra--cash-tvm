@@ -12,6 +12,6 @@
 //    void sendDeviceStatus() {
 //        IApi api=SCUConnection.INSTANCE;
 //
-//        System.out.println(api.sendDeviceStatus(new int[]{0,1,1,1}));
+//        //System.out.println(api.sendDeviceStatus(new int[]{0,1,1,1}));
 //    }
 //}

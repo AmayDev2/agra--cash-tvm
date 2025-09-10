@@ -31,12 +31,12 @@ public class NewFolder {
         if (!folder.exists()) {
             // If the folder doesn't exist, create it
             if (folder.mkdirs()) {
-                System.out.println("Folder created: " + folderPath);
+                //System.out.println("Folder created: " + folderPath);
             } else {
-                System.out.println("Failed to create folder: " + folderPath);
+                //System.out.println("Failed to create folder: " + folderPath);
             }
         } else {
-            System.out.println("Folder already exists: " + folderPath);
+            //System.out.println("Folder already exists: " + folderPath);
         }
 
         return folderPath;
@@ -69,7 +69,7 @@ public class NewFolder {
             }
         }
 
-        System.out.println("Ticket image not found for ticket ID: " + ticketId);
+        //System.out.println("Ticket image not found for ticket ID: " + ticketId);
         return null;
     }
 }

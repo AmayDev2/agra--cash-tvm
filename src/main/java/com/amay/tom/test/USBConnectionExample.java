@@ -9,7 +9,7 @@ public class USBConnectionExample {
         try {
             // Get the USB services
             UsbServices services = UsbHostManager.getUsbServices();
-            System.out.println("USB Service Implementation: " + services.getImpDescription());
+            //System.out.println("USB Service Implementation: " + services.getImpDescription());
 
             // Get the root USB hub
             UsbHub rootHub = services.getRootUsbHub();
@@ -25,7 +25,7 @@ public class USBConnectionExample {
         List<UsbDevice> devices = (List<UsbDevice>) hub.getAttachedUsbDevices();
 
         for (UsbDevice device : devices) {
-            System.out.println("Device: " + device);
+            //System.out.println("Device: " + device);
 
             // Check if the device is a hub and list its devices
             if (device.isUsbHub()) {

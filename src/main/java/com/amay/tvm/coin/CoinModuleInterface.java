@@ -1,6 +1,7 @@
 package com.amay.tvm.coin;
 
 
+import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.coin.model.AmountDetail;
 import com.amay.tvm.coin.model.HaveAmountObject;
 import com.amay.tvm.coin.model.ModuleResponse;
@@ -66,7 +67,7 @@ public enum CoinModuleInterface {
 		HaveAmountObject haveAmount = new HaveAmountObject(HoppersRegistry.INSTANCE.getHoppers());
 		haveAmount.totalAmount = amount;
 		ReturnableAmountObject result = new MaxChangePossibleService().getReturnableAmount(new ReturnableAmountObject(new ArrayList<>()),haveAmount, amount, 0);
-		System.out.println("Dispensing coins for amount: "+amount+", possible amount: "+result.totalAmount);
+		//System.out.println("Dispensing coins for amount: "+amount+", possible amount: "+result.totalAmount);
 		result.amountDetailList.forEach(ad -> Logger.info("Dispensing Denomination: {} x {} for", ad.getAmount(), ad.getQuantity(),amount));
 		if(result.totalAmount!=amount && !service.isConnected()){
 			return dispenseResponse;
@@ -77,9 +78,9 @@ public enum CoinModuleInterface {
 			Thread.sleep(delayTime); // wait before sending next command
 			delayTime=10000;
 			int hopper= Integer.parseInt(amountDetail.getContainerId());
-			Logger.info("Sending >>>>> Command to Hopper: {} for Quantity: {}", hopper, amountDetail.quantity);
+			Logger.tag(LoggerTag.APP).info("Sending >>>>> Command to Hopper: {} for Quantity: {}", hopper, amountDetail.quantity);
 			ModuleResponse response= service.dispenseCoin((byte) hopper, (byte) amountDetail.quantity);
-			System.out.println("Dispense done, DATA=" + response.getData().length + " bytes");
+			Logger.tag(LoggerTag.BUSS).info("Dispense done, DATA=" + response.getData().length + " bytes");
 			CoinResponseDecoder.DispenseResult dispenseResult=CoinResponseDecoder.decodeDispenseResponse(response.getData());
 			HoppersRegistry.INSTANCE.updateHopper(hopper,dispenseResult.quantityDispensed);
 			list.add(dispenseResult);
@@ -117,7 +118,7 @@ public enum CoinModuleInterface {
 		dispenseResponse.success=statue;
 		dispenseResponse.setTotalAmount();
 
-		System.out.println("Dispense response: "+dispenseResponse);
+		Logger.tag(LoggerTag.BUSS).info("Dispense response: "+dispenseResponse);
 		}catch (Exception e){
 			Logger.error("ERROR DURING DISPENSE COINS : ",e.getMessage());
 		}
@@ -126,10 +127,16 @@ public enum CoinModuleInterface {
 
 	public ReturnableAmountObject getMaxChangeableAmount(HaveAmountObject haveAmountObject, long amount){
 		ReturnableAmountObject result = new MaxChangePossibleService().getReturnableAmount(new ReturnableAmountObject(new ArrayList<>()),haveAmountObject, (int) amount, 0);
-		System.out.println("Max changeable amount for "+amount+" is "+result.totalAmount);
+		Logger.tag(LoggerTag.BUSS).info("Max changeable amount for {} is {}",amount,result.totalAmount);
 		return result;
 
 	}
+
+    public void dumpHopper(int hopperId) {
+		ModuleResponse response=service.dumpHopper((byte) hopperId);
+		Logger.tag(LoggerTag.BUSS).info("Dispense done, DATA=" + response.getData().length + " bytes");
+		HoppersRegistry.INSTANCE.resetHopper(hopperId);
+    }
 }
 
 

@@ -28,7 +28,7 @@ public class DBUserRepo {
             statement.setString(2, user.getPassword());
             statement.setString(3, user.getRole());
             statement.executeUpdate();
-            System.out.println("User created successfully.");
+            //System.out.println("User created successfully.");
         }
     }
 
@@ -45,7 +45,7 @@ public class DBUserRepo {
                     user.setRole(resultSet.getString("role"));
                     return user;
                 } else {
-                    System.out.println("User not found.");
+                    //System.out.println("User not found.");
                     return null;
                 }
             }
@@ -65,7 +65,7 @@ public class DBUserRepo {
                     user.setRole(resultSet.getString("role"));
                     return user;
                 } else {
-                    System.out.println("User not found.");
+                    //System.out.println("User not found.");
                     return null;
                 }
             }
@@ -81,9 +81,9 @@ public class DBUserRepo {
 //            statement.setInt(4, user.getUId());
             int rowsUpdated = statement.executeUpdate();
             if (rowsUpdated > 0) {
-                System.out.println("User updated successfully.");
+                //System.out.println("User updated successfully.");
             } else {
-                System.out.println("No user found with the given ID.");
+                //System.out.println("No user found with the given ID.");
             }
         }
     }
@@ -94,9 +94,9 @@ public class DBUserRepo {
             statement.setInt(1, uId);
             int rowsDeleted = statement.executeUpdate();
             if (rowsDeleted > 0) {
-                System.out.println("User deleted successfully.");
+                //System.out.println("User deleted successfully.");
             } else {
-                System.out.println("No user found with the given ID.");
+                //System.out.println("No user found with the given ID.");
             }
         }
     }
@@ -132,9 +132,9 @@ public class DBUserRepo {
                     userPrivilegeDto.setQrPaidTicket(resultSet.getBoolean("qr_paid_ticket"));
                     userPrivilegeDto.setTvm(resultSet.getBoolean("tvm"));
 
-                    System.out.println("User privileges retrieved successfully." + userPrivilegeDto.toString());
+                    //System.out.println("User privileges retrieved successfully." + userPrivilegeDto.toString());
                 } else {
-                    System.out.println("User not found.");
+                    //System.out.println("User not found.");
                 }
             } catch (SQLException e) {
                 throw new RuntimeException(e);

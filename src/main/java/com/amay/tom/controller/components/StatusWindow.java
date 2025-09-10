@@ -67,31 +67,31 @@ public class StatusWindow {
         testButton.setDisable(true);
         switch (statusWindowModel.getTitle()) {
             case "EFT":
-                System.out.println("EFT operation performed");
+                //System.out.println("EFT operation performed");
                 break;
             case "QR Printer":
-                System.out.println("QR Printer operation performed");
+                //System.out.println("QR Printer operation performed");
                 BufferedImage bufferedImage= this.findTicket("test");
-                ImplPrintTicket.printImageMaintenance(bufferedImage,
-                        EnvFile.getThermalPrinterModel(),   // printer name (or null for default)
-                        "png",             // image format
-                        true,              // auto-scale to fit page
-                        300,               // DPI
-                        0,                 // margin in mm
-                        true               // verbose logging
-                        );
+//                ImplPrintTicket.printImageMaintenance(bufferedImage,
+//                        EnvFile.getThermalPrinterModel(),   // printer name (or null for default)
+//                        "png",             // image format
+//                        true,              // auto-scale to fit page
+//                        300,               // DPI
+//                        0,                 // margin in mm
+//                        true               // verbose logging
+//                        );
                 break;
             case "Receipt printer":
-                System.out.println("Receipt printer operation performed");
+                //System.out.println("Receipt printer operation performed");
                 break;
             case "CSE":
-                System.out.println("CSE operation performed");
+                //System.out.println("CSE operation performed");
                 break;
             case "Pole":
-                System.out.println("Pole operation performed");
+                //System.out.println("Pole operation performed");
                 break;
             case "QR Scanner":
-                System.out.println("QR Scanner operation performed");
+                //System.out.println("QR Scanner operation performed");
                 Platform.runLater(() -> statusTextLabel.setText("Scanning QR code..."));
                 threadPool.getSingleThread().execute(() -> {
                     Thread.currentThread().setName("QR Scanner Thread");
@@ -128,7 +128,7 @@ public class StatusWindow {
             }
 
         }
-            System.out.println("Ticket image not found for ticket ID: " + ticketId);
+            //System.out.println("Ticket image not found for ticket ID: " + ticketId);
         testButton.setDisable(false);
             return null;
 
@@ -146,7 +146,7 @@ public class StatusWindow {
             Logger.error("No serial ports available.");
         } else {
             // Print the available serial ports
-            System.out.println("Available Serial Ports:");
+            //System.out.println("Available Serial Ports:");
             for (SerialPort serialPort : serialPorts) {
                 Logger.info("Serial Port: {} {} {}", serialPort.getSystemPortName(), serialPort.getDescriptivePortName(), serialPort.getPortDescription());
                 if(serialPort.getPortDescription().equals(EnvFile.getQRScannerModel())){
@@ -200,7 +200,7 @@ public class StatusWindow {
                 chosenPort.closePort();
                 Logger.debug("Serial port closed.");
             } else {
-                System.out.println("Error opening serial port.");
+                //System.out.println("Error opening serial port.");
             }
         }
         testButton.setDisable(false);

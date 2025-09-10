@@ -19,7 +19,7 @@ public class TransactionIdGeneratorService {
         if(count.get() >= 99) {
             throw new SQLException("Shift ID limit reached for the day: " + currentDayPrefix);
         }
-        System.out.println("Shift Id: " + count);
+        //System.out.println("Shift Id: " + count);
         this.shiftId = currentDayPrefix+String.format("%02d", count.addAndGet(1));
     }
 

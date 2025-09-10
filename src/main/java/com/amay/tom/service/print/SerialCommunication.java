@@ -9,12 +9,12 @@ public class SerialCommunication {
         SerialPort[] serialPorts = SerialPort.getCommPorts();
 
         if (serialPorts.length == 0) {
-            System.out.println("No serial ports found.");
+            //System.out.println("No serial ports found.");
         } else {
             // Print the available serial ports
-            System.out.println("Available Serial Ports:");
+            //System.out.println("Available Serial Ports:");
             for (SerialPort serialPort : serialPorts) {
-                System.out.println(serialPort.getSystemPortName());
+                //System.out.println(serialPort.getSystemPortName());
             }
 
             // Choose the first serial port (you can modify this based on your needs)
@@ -22,7 +22,7 @@ public class SerialCommunication {
 
             // Open the chosen serial port
             if (chosenPort.openPort()) {
-                System.out.println("Serial port " + chosenPort.getSystemPortName() + " opened successfully.");
+                //System.out.println("Serial port " + chosenPort.getSystemPortName() + " opened successfully.");
 
                 // Set serial port parameters (baud rate, data bits, stop bits, parity)
                 chosenPort.setBaudRate(9600);
@@ -50,7 +50,7 @@ public class SerialCommunication {
                             // Process the received data (replace this with your own logic)
                             if (bytesRead > 0) {
                                 String receivedData = new String(buffer, 0, bytesRead);
-                                System.out.println("Received data: " + receivedData);
+                                //System.out.println("Received data: " + receivedData);
                             }
 
                             // Wait for data to be available
@@ -67,7 +67,7 @@ public class SerialCommunication {
                 readerThread.start();
 
                 // Wait for the user to press enter to stop the program
-                System.out.println("Press enter to exit.");
+                //System.out.println("Press enter to exit.");
                 try {
                     System.in.read();
                 } catch (Exception e) {
@@ -79,9 +79,9 @@ public class SerialCommunication {
 
                 // Close the serial port when done
                 chosenPort.closePort();
-                System.out.println("Serial port closed.");
+                //System.out.println("Serial port closed.");
             } else {
-                System.out.println("Error opening serial port.");
+                //System.out.println("Error opening serial port.");
             }
         }
     }

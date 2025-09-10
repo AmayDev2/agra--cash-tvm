@@ -170,7 +170,7 @@ public class QRTOperations {
             Pane root = loader.load();
             ControllerAdapter.INSTANCE.setChildInCenterAnchorPane(root);
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            //System.out.println(e.getMessage());
         }
     }
 
@@ -206,7 +206,7 @@ public class QRTOperations {
         ticketDto.setActive(ticketRefundResponseV1.getTicketAnalysis().getTicket().getIsActive());
         ticketDto.setQuantity(ticketRefundResponseV1.getTicketAnalysis().getTicket().getQuantity());
 
-        System.out.println("Ticket DTO1234 : "+ticketDto.toString());
+        //System.out.println("Ticket DTO1234 : "+ticketDto.toString());
     return ticketDto;
     }
 

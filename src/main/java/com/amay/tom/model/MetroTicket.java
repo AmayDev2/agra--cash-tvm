@@ -151,7 +151,7 @@ public class MetroTicket {
 
     public String getDestination() {
         String dest = this.destination.getStationId();
-//        System.out.println(dest);
+//        //System.out.println(dest);
         return dest;
     }
 

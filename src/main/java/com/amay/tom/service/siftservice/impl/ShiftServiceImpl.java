@@ -117,7 +117,7 @@ public class ShiftServiceImpl implements ShiftService {
 
 
 //            userAuth.getCurrentUser().getRoles().forEach(role -> {
-//                System.out.println("Role: " + role);
+//                //System.out.println("Role: " + role);
 //            });
             FXMLLoader fxmlLoader;
 //            if(userAuth.hasRole(Role.MAINTENANCE.name())){
@@ -178,7 +178,7 @@ public class ShiftServiceImpl implements ShiftService {
 
         shift.setImprest_money(String.valueOf(FareMedium.IMPREST_MONEY.getFareMediumTotal()));
 
-        System.out.println("FareMedium : "+FareMedium.IMPREST_MONEY.getFareMediumTotal());
+        //System.out.println("FareMedium : "+FareMedium.IMPREST_MONEY.getFareMediumTotal());
 
         // remove user privilege and user auth
         this.agent.setUserPrivilege(null);
@@ -394,19 +394,19 @@ public class ShiftServiceImpl implements ShiftService {
         totalAmount =totalCashTransactions+totalCardTransactions+totalUpiTransactions;
 
         // Output or further process the computed values as needed
-        System.out.println("Single Journey Tickets: " + noOfSJT + " Quantity: " + qSJT + " Amount: " + amountSJT);
-        System.out.println("Return Journey Tickets: " + noOfRJT + " Quantity: " + qRJT + " Amount: " + amountRJT);
-        System.out.println("Group Tickets: " + noOfGroup + " Quantity: " + qGroup + " Amount: " + amountGroup);
-        System.out.println("Free Tickets: " + noOfFree + " Quantity: " + qFree + " Amount: " + amountFree);
-        System.out.println("Paid Tickets: " + noOfPaid + " Quantity: " + qPaid + " Amount: " + amountPaid);
-        System.out.println("Canceled Tickets: " + noOfCanceled + " Quantity: " + qCanceled + " Amount: " + amountCanceled);
-        System.out.println("Adjusted Tickets: " + noOfAdjusted + " Quantity: " + qAdjusted + " Amount: " + amountAdjusted);
-        System.out.println("Replaced Tickets: " + noOfReplaced + " Quantity: " + qReplaced + " Amount: " + amountReplaced);
-        System.out.println("Refund Tickets: " + noOfRefund + " Quantity: " + qRefunded + " Amount: " + amountRefunded);
-        System.out.println("Last Transaction: " + lastTransaction);
-        System.out.println("Imprest Money"+FareMedium.IMPREST_MONEY.getFareMediumTotal());
-        System.out.println("Total Amount: " + totalAmount);
-        System.out.println("Total Amount After Imprest Money: " + (totalAmount-FareMedium.IMPREST_MONEY.getFareMediumTotal()));
+        //System.out.println("Single Journey Tickets: " + noOfSJT + " Quantity: " + qSJT + " Amount: " + amountSJT);
+        //System.out.println("Return Journey Tickets: " + noOfRJT + " Quantity: " + qRJT + " Amount: " + amountRJT);
+        //System.out.println("Group Tickets: " + noOfGroup + " Quantity: " + qGroup + " Amount: " + amountGroup);
+        //System.out.println("Free Tickets: " + noOfFree + " Quantity: " + qFree + " Amount: " + amountFree);
+        //System.out.println("Paid Tickets: " + noOfPaid + " Quantity: " + qPaid + " Amount: " + amountPaid);
+        //System.out.println("Canceled Tickets: " + noOfCanceled + " Quantity: " + qCanceled + " Amount: " + amountCanceled);
+        //System.out.println("Adjusted Tickets: " + noOfAdjusted + " Quantity: " + qAdjusted + " Amount: " + amountAdjusted);
+        //System.out.println("Replaced Tickets: " + noOfReplaced + " Quantity: " + qReplaced + " Amount: " + amountReplaced);
+        //System.out.println("Refund Tickets: " + noOfRefund + " Quantity: " + qRefunded + " Amount: " + amountRefunded);
+        //System.out.println("Last Transaction: " + lastTransaction);
+        //System.out.println("Imprest Money"+FareMedium.IMPREST_MONEY.getFareMediumTotal());
+        //System.out.println("Total Amount: " + totalAmount);
+        //System.out.println("Total Amount After Imprest Money: " + (totalAmount-FareMedium.IMPREST_MONEY.getFareMediumTotal()));
 
         FXMLLoader fxmlLoader = ViewFactory.getEOS();
         int finalAmountSJT = amountSJT;
@@ -524,7 +524,7 @@ public class ShiftServiceImpl implements ShiftService {
 
     @Override
     public void pauseShift() {
-        System.out.println("sunliyaa");
+        //System.out.println("sunliyaa");
         agent.getGrpcApiListener().sendAlarm(Alarm.SHIFT_PAUSE);
         LocalDateTime currentTime = LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
         // update 4 columns endTime,endReason,updatedAt,status

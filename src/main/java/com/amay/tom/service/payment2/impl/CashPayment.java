@@ -4,6 +4,7 @@ import com.amay.tom.ViewFactory;
 import com.amay.tom.enums.PayMethod;
 import com.amay.tom.model.payment.PaymentResponse;
 import com.amay.tom.service.payment2.PaymentMedia;
+import com.amay.tom.threadpool.ThreadPool;
 import com.amay.tvm.backend.enums.TransactionStatus;
 import com.amay.tvm.backend.mapper.TransactionMapper;
 import com.amay.tvm.backend.model.Transaction;
@@ -18,7 +19,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.StackPane;
 import org.tinylog.Logger;
 
+import javax.script.Compilable;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 public class CashPayment implements PaymentMedia {
 
@@ -28,9 +31,10 @@ public class CashPayment implements PaymentMedia {
         StackPane stackPane = (StackPane) args[0] ; // ✅ if first element is a StackPane
         TransactionRepository transactionRepository=(TransactionRepository) args[1];
         PaymentController paymentController=(PaymentController) args[2];
+        ThreadPool threadPool=(ThreadPool) args[3];
         paymentResponse=new PaymentResponse();
         try {
-            System.out.println("Cash Payment: " + amount + " OrderId: " + orderId);
+            //System.out.println("Cash Payment: " + amount + " OrderId: " + orderId);
                  paymentResponse.setOrderId(orderId)
                 .setAmount((int)amount)
                 .setTransactionId("CASH_"+UUID.randomUUID())
@@ -51,8 +55,8 @@ public class CashPayment implements PaymentMedia {
                 Logger.debug("BNR FAILED : "+e.getMessage());
                 throw new RuntimeException(" Cash Insert View Couldn't load");
             }});
-
-            new Thread(()-> {
+            CompletableFuture.runAsync(()->
+             {
                 boolean status = BNRIntegration.cashIn(this, (int) amount, new BNRListener(cashInsertProcessingController));
                 if(status){
                     paymentResponse.setStatus(TransactionStatus.SUCCESS.name()).setSuccess(true);
@@ -62,8 +66,7 @@ public class CashPayment implements PaymentMedia {
                 saveInDbPaymentCompletion(paymentResponse,transactionRepository);
                 Platform.runLater(()->{stackPane.getChildren().removeLast();});
                 paymentController.eventListener(paymentResponse);
-            }
-            ).start();
+            },threadPool.getFixedThreadPool());
 
         }catch (Exception e){
             saveInDbPaymentCompletion(paymentResponse,transactionRepository);

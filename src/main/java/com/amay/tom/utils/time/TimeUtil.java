@@ -237,8 +237,8 @@ public class TimeUtil {
 
         Instant now = Instant.now();
 
-        System.out.println("Expiry Time: " + expiryTime);
-        System.out.println("Current Time: " + now);
+        //System.out.println("Expiry Time: " + expiryTime);
+        //System.out.println("Current Time: " + now);
 
         return expiryTime.isAfter(now);
     }

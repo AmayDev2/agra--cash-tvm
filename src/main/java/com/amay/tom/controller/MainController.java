@@ -150,7 +150,7 @@ public class MainController {
 //        tCountText.setText(String.valueOf(selectedNoOfPassenger));
             Station[] st=mainUIService.getStationDetails();
             for (Station station:st){
-                System.out.println(station.getStationName());
+                //System.out.println(station.getStationName());
             }
 //        // Populate destination menu
         for (Station station : mainUIService.getStationDetails()) {
@@ -256,7 +256,7 @@ public class MainController {
     TicketType selectedTicketType=null;
     @FXML
     public void onSJTClick(ActionEvent actionEvent) {
-        System.out.println("Listener for SJT button");
+        //System.out.println("Listener for SJT button");
         sjt.setSelected(true);
         rjt.setSelected(false);
         group.setSelected(false);
@@ -269,7 +269,7 @@ public class MainController {
         rjt.setSelected(true);
         sjt.setSelected(false);
         group.setSelected(false);
-        System.out.println("Listener for RJT button");
+        //System.out.println("Listener for RJT button");
     }
 
     @FXML
@@ -279,7 +279,7 @@ public class MainController {
         sjt.setSelected(false);
         rjt.setSelected(false);
 
-        System.out.println("Listener for Group button");
+        //System.out.println("Listener for Group button");
     }
 
 

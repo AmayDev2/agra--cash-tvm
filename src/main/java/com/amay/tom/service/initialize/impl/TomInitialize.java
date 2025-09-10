@@ -179,7 +179,7 @@ public class TomInitialize implements ITomInitialize {
 
 //        Connection connection = sqLiteConnector.getConnection();
 //        SqliteRepositoryImpl sqliteRepository = new SqliteRepositoryImpl(connection);
-        System.out.println("Connection established");
+        //System.out.println("Connection established");
 //        agent.setSqliteRepository(sqliteRepository);
 
         this.updateUI(++progress, "Connection with sqlite local DB stabled...");
@@ -198,7 +198,7 @@ public class TomInitialize implements ITomInitialize {
         Connection connection = sqlConnector.getConnection();
         agent.setConnection(connection);
         SqlGlobalRepository sqlRepository = new SqlRepositoryImpl(connection);
-        System.out.println("Connection established");
+        //System.out.println("Connection established");
         agent.setSqlGlobalRepository(sqlRepository);
         this.updateUI(++progress, "Connection with sql local DB stabled...");
     }
@@ -225,7 +225,7 @@ public class TomInitialize implements ITomInitialize {
         this.updateUI(progress, "Setting up  ccu monitoring service...");
         String ccuIp = envLoader.getCcuIpAddress();
         int ccuPort = envLoader.getCcuPort();
-        System.out.println("CCU IP "+ccuIp + " " + ccuPort);
+        //System.out.println("CCU IP "+ccuIp + " " + ccuPort);
         CCUMonitoringConnector ccuMonitoringConnector = new CCUMonitoringConnector(ccuIp, ccuPort,true);
         MonitorAndControlStub monitorAndControlStub = ccuMonitoringConnector.getAsyncStub();
         this.updateUI(progress, "sep1 done...");
@@ -517,6 +517,8 @@ public class TomInitialize implements ITomInitialize {
 
                 if(envLoader.getEnvironment()) {
                     try {
+                        progress += 0.03;
+                        this.updateUI(progress, "Connecting BNR,COIN MODULE & PRINTER.");
                         BNRIntegration.bnrOpen();
                         CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort());
                         PrinterCommandDispatcher.INSTANCE.setupPrinter();
@@ -648,7 +650,7 @@ public class TomInitialize implements ITomInitialize {
         this.updateUI(progress, "Getting master version...");
         try {
             String masterVersion = this.apiConnection.getMasterVersion();
-//            System.out.println("masterVersion : "+masterVersion);
+//            //System.out.println("masterVersion : "+masterVersion);
             if (masterVersion == null) {
                 throw new RuntimeException("Master Config version not found.");
             }
@@ -726,13 +728,13 @@ public class TomInitialize implements ITomInitialize {
 
         );
 
-        System.out.println("Launching detached updater: " + command);
+        //System.out.println("Launching detached updater: " + command);
 
         try {
             new ProcessBuilder(command)
                     .inheritIO()
                     .start();                                   // Don't wait—detached
-            System.out.println("Updater launched successfully. Exiting application...");
+            //System.out.println("Updater launched successfully. Exiting application...");
             // Exit immediately so the batch can run independently
             new Remote(new AppCloseCommand(applicationService)).pressButton();
         } catch (IOException e) {
@@ -771,7 +773,7 @@ public class TomInitialize implements ITomInitialize {
 
                 String vmName = ManagementFactory.getRuntimeMXBean().getName(); // e.g. "12345@hostname"
                 long pid = Long.parseLong(vmName.split("@")[0]);
-                System.out.println("Current PID = " + pid);
+                //System.out.println("Current PID = " + pid);
 
                 callLauncher(launcher, dir, oldFilename, delay, this.envLoader.getFTPLocalPath(), this.envLoader.getLocalFileName(), runCommand, String.valueOf(pid), applicationService);
             }
@@ -877,12 +879,12 @@ public class TomInitialize implements ITomInitialize {
     private boolean loadTicketConfig( boolean isUpdate) {
     try {
     TicketConfig.INSTANT.getTicketConfig();
-    System.out.println("Ticket  Config  "+TicketConfig.INSTANT.getProductTypeDefDTO().toString());
+    //System.out.println("Ticket  Config  "+TicketConfig.INSTANT.getProductTypeDefDTO().toString());
     if(isUpdate) {
         String profileResponse = this.apiConnection.getTicketConfig();
         TicketConfigDTO configData = (TicketConfigDTO) Helper.JSONtoObject(profileResponse, TicketConfigDTO.class);
         if (configData == null) {
-            System.out.println("TicketConfigDTO is null");
+            //System.out.println("TicketConfigDTO is null");
             this.updateUI(progress, "TicketConfigDTO is null");
             throw new RuntimeException("TicketConfigDTO is null");
         }
@@ -919,7 +921,7 @@ public class TomInitialize implements ITomInitialize {
                 StationData1[] stationsData = Helper.JSONtoObjectAR(profileResponse, StationData1[].class);
                 List<Station> stations = new ArrayList<>();
                 if (stationsData == null || stationsData.length == 0) {
-                    System.out.println("No stations data found");
+                    //System.out.println("No stations data found");
                     this.updateUI(++progress, "No stations data found");
                     throw new RuntimeException("No stations data found");
                 }
@@ -992,18 +994,18 @@ public class TomInitialize implements ITomInitialize {
             if (isUpdate) {
                 String faretable = this.apiConnection.getFareTable();
                 if (faretable == null || faretable.isEmpty()) {
-                    System.out.println("Fare table response is empty or null");
+                    //System.out.println("Fare table response is empty or null");
                     return false;
                 }
                 FareMatrixDTO fareMatrixDTO = (FareMatrixDTO) Helper.JSONtoObject(faretable, FareMatrixDTO.class);
                 JSONObject json = new JSONObject(faretable);
                 if (fareMatrixDTO == null) {
-                    System.out.println("FareMatrixDTO is null");
+                    //System.out.println("FareMatrixDTO is null");
                     return false;
                 }
                 int[][] distanceMatrix = new int[fareMatrixDTO.matrix().size()][fareMatrixDTO.matrix().size()];
                 int row = -1;
-                System.out.println("Fare Matrix Size: " + fareMatrixDTO.matrix().size());
+                //System.out.println("Fare Matrix Size: " + fareMatrixDTO.matrix().size());
                 agent.getFareTableRepository().deleteAll();
 
                 for (var x : fareMatrixDTO.stationId()) {
@@ -1012,9 +1014,9 @@ public class TomInitialize implements ITomInitialize {
                     for (var y : fareMatrixDTO.stationId()) {
                         distanceMatrix[row][++col] = fareMatrixDTO.matrix().get(x).get(y);
                         agent.getFareTableRepository().insert(new FareRowEntity(String.valueOf(row),String.valueOf(col),distanceMatrix[row][col]));
-                        System.out.print(fareMatrixDTO.matrix().get(x).get(y) + " ");
+                        //System.out.print(fareMatrixDTO.matrix().get(x).get(y) + " ");
                     }
-                    System.out.println();
+                    //System.out.println();
                 }
 
 //                FareLine3.saveData("distanceMatrix.ser", distanceMatrix);
@@ -1107,7 +1109,7 @@ public class TomInitialize implements ITomInitialize {
         try {
         String userWithProfileResponse = this.apiConnection.getAllUserWithProfile();
         Users[] userWithProfile = Helper.JSONtoObjectAR(userWithProfileResponse, Users[].class);
-        System.out.println("loaded User  "+ Arrays.toString(Arrays.stream(userWithProfile).toArray()));
+        //System.out.println("loaded User  "+ Arrays.toString(Arrays.stream(userWithProfile).toArray()));
 
         List<UserDto> userDtoList = new ArrayList<>();
         List<UserPrivilegeDto> userPrivilegeList = new ArrayList<>();
@@ -1125,8 +1127,8 @@ public class TomInitialize implements ITomInitialize {
         }
 
         // Example usage (logging or further processing)
-        System.out.println("Mapped " + userDtoList.size() + " users.");
-        System.out.println("Mapped " + userPrivilegeList.size() + " privilege sets.");
+        //System.out.println("Mapped " + userDtoList.size() + " users.");
+        //System.out.println("Mapped " + userPrivilegeList.size() + " privilege sets.");
 
 
             UserRepository userRepository=  new UserRepositoryImpl(

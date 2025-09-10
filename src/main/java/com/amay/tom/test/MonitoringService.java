@@ -24,7 +24,7 @@ public class MonitoringService {
                              MonitoringConnector ccuMonitoringConnector
 //                                        ThreadPool threadPool
     ) {
-        System.out.println("GrpcControlMonitoringService constructor called");
+        //System.out.println("GrpcControlMonitoringService constructor called");
         this.asyncStub=asyncStub;
         requestObserver = trStreamObserver();
 //        commandHandler=new CommandHandler(applicationService);
@@ -39,13 +39,13 @@ public class MonitoringService {
 
 //    private void notConnected() {
 //        try{
-//       //     System.out.println("Monitoring service not connected, reconnecting...");
+//       //     //System.out.println("Monitoring service not connected, reconnecting...");
 //            connectionStatus = ConnectionStatus.CONNECTING;
 //            Thread.sleep(5000);
 //        }catch (InterruptedException e){
 //         //   Logger.error("Error in sleep: {}", e.getMessage());
 //        }
-////        System.out.println("shutdown {}, terminated {}",
+////        //System.out.println("shutdown {}, terminated {}",
 ////                ccuMonitoringConnector.isChannelShutdown() ,
 ////                ccuMonitoringConnector.isChannelTerminated());
 //
@@ -53,17 +53,17 @@ public class MonitoringService {
 //            this.reconnect();
 //        }
 //        requestObserver = tomStreamObserver();
-//  //      System.out.println("Reconnected to monitoring service");
+//  //      //System.out.println("Reconnected to monitoring service");
 //        this.initialConnectionRequest(RequestHandler.getInitialRequest());
 //    }
 
     public void sendMessage(org.network.monitorandcontrol.tr.TRProtocol message) {
-       System.out.println("Sending message to server: "+message);
+       //System.out.println("Sending message to server: "+message);
         requestObserver.onNext(message);
     }
 
     public void initialConnectionRequest(org.network.monitorandcontrol.tr.TRProtocol message) {
-   //     System.out.println("Sending initial request to server: {}", message);
+   //     //System.out.println("Sending initial request to server: {}", message);
         requestObserver.onNext(message);
     }
 
@@ -73,14 +73,14 @@ public class MonitoringService {
 
     private StreamObserver<org.network.monitorandcontrol.tr.TRProtocol>  trStreamObserver() {
 //        connectionStatus = ConnectionStatus.CONNECTED;
-     //   System.out.println("Connection established with monitoring server");
+     //   //System.out.println("Connection established with monitoring server");
 
         return asyncStub.trStream(new StreamObserver<org.network.monitorandcontrol.tr.TRProtocol>() {
 
             @Override
             public void onNext(org.network.monitorandcontrol.tr.TRProtocol value) {
 
-                System.out.println("Received command for TR from server: "+ value);
+                //System.out.println("Received command for TR from server: "+ value);
 //                commandHandler.handleCommand(value.getCommandType(),value);
             }
 
@@ -103,7 +103,7 @@ public class MonitoringService {
             @Override
             public void onCompleted() {
 //                connectionStatus = ConnectionStatus.DISCONNECTED;
-                System.out.println("Server has completed sending messages");
+                //System.out.println("Server has completed sending messages");
             }
         });
     }

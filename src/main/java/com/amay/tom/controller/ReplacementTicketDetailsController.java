@@ -119,7 +119,7 @@ public class ReplacementTicketDetailsController {
                 
             }
 
-            System.out.println("Image :" + this.bufferedImage);
+            //System.out.println("Image :" + this.bufferedImage);
 
             if (this.ticketsDto.isActive()
 //                    && /*EnvFile.getPrinterCheck() &&*/

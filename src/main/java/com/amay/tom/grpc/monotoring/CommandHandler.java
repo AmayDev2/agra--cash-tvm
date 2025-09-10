@@ -27,24 +27,24 @@ public class CommandHandler {
         Logger.info("Handling command: " + commandType);
         switch (commandType){
             case GET_DEVICE_INFO:
-                System.out.println("GET_DEVICE_INFO");
+                //System.out.println("GET_DEVICE_INFO");
                 remote= new Remote(new DeviceInfoCommand(applicationService));
                 break;
             case MODE_CONTROL:
-                System.out.println("MODE_CONTROL");
+                //System.out.println("MODE_CONTROL");
                 handelModeControl(value.getRequestData());
                 break;
             case GET_DEVICE_VERSIONS:
                 remote=new Remote(new VersionCommand(applicationService));
-                System.out.println("GET_DEVICE_VERSIONS");
+                //System.out.println("GET_DEVICE_VERSIONS");
                 break;
             case GET_PERIPHERAL_STATUS:
                 remote=new Remote(new PheStatusCommand(applicationService));
-                System.out.println("GET_PERIPHERAL_STATUS");
+                //System.out.println("GET_PERIPHERAL_STATUS");
                 break;
             default:
 
-                System.out.println("UNKNOWN : "+commandType);
+                //System.out.println("UNKNOWN : "+commandType);
 
         }
         remote.pressButton();
@@ -53,8 +53,8 @@ public class CommandHandler {
     private void handelModeControl(Any requestData) {
         try {
            TVMModeControl tvmModeControl = requestData.unpack(TVMModeControl.class);
-            System.out.println("Mode Control: " + tvmModeControl);
-            System.out.println("Operation Mode : "+tvmModeControl.getOperationMode()+"  - "+"Special Mode : "+tvmModeControl.getSpecialMode()+"qr"+tvmModeControl.getQrSaleMode()+"card"+tvmModeControl.getCardProcessMode());
+            //System.out.println("Mode Control: " + tvmModeControl);
+            //System.out.println("Operation Mode : "+tvmModeControl.getOperationMode()+"  - "+"Special Mode : "+tvmModeControl.getSpecialMode()+"qr"+tvmModeControl.getQrSaleMode()+"card"+tvmModeControl.getCardProcessMode());
             String commands=tvmModeControl.toString();
             if(commands.contains("special_mode")){
             switch (tvmModeControl.getSpecialMode()) {
@@ -77,7 +77,7 @@ public class CommandHandler {
                     remote = new Remote(new NoStationModeCommand(applicationService));
                     break;
                 default:
-                    System.out.println("UNKNOWN_COMMAND");
+                    //System.out.println("UNKNOWN_COMMAND");
             }}else {
                 switch (tvmModeControl.getOperationMode()) {
                     case IN_SERVICE:
@@ -102,11 +102,11 @@ public class CommandHandler {
                         });
                         break;
                     default:
-                        System.out.println("UNKNOWN_COMMAND");
+                        //System.out.println("UNKNOWN_COMMAND");
 
             }}
         }catch (Exception e){
-            System.out.println("Error in handelModeControl: " + e.getMessage());
+            //System.out.println("Error in handelModeControl: " + e.getMessage());
         }
 
 
@@ -115,7 +115,7 @@ public class CommandHandler {
 
     private void sendCommand(String message) {
 
-        System.out.println("Received command: " + RedisMessage.class + "\n");
+        //System.out.println("Received command: " + RedisMessage.class + "\n");
 
         RedisMessage redisMessage= (RedisMessage) Helper.JSONtoObject(message, RedisMessage.class);
         assert redisMessage != null;
@@ -135,7 +135,7 @@ public class CommandHandler {
 //                remote.normalMode();
                 break;
             default:
-                System.out.println("Received command: " + message + "\n");
+                //System.out.println("Received command: " + message + "\n");
         }
 
         remote.pressButton();

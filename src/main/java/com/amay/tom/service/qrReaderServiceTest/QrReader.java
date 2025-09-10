@@ -53,7 +53,7 @@ public class QrReader extends Thread {
             Logger.error("No serial ports available.");
         } else {
             // Print the available serial ports
-            System.out.println("Available Serial Ports:");
+            //System.out.println("Available Serial Ports:");
             for (SerialPort serialPort : serialPorts) {
                 Logger.info("Serial Port: {} {} {}", serialPort.getSystemPortName(), serialPort.getDescriptivePortName(), serialPort.getPortDescription());
                 if(serialPort.getPortDescription().equals(EnvFile.getQRScannerModel())){
@@ -113,7 +113,7 @@ public class QrReader extends Thread {
                 chosenPort.closePort();
                 Logger.debug("Serial port closed.");
             } else {
-                System.out.println("Error opening serial port.");
+                //System.out.println("Error opening serial port.");
                 notifyListeners("MDNzdDAxZXEwOWVxMzIxc3QwMXN0MDgwMzI0MzAxNDQ4MDEwMDMwQTAxMDAwMDAwMDYw");
             }
         }

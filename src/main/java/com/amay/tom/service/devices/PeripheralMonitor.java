@@ -7,6 +7,7 @@ import com.amay.tom.service.devices.DeviceStatusListener;
 import com.amay.tom.service.devices.device.PrinterStatus;
 import com.amay.tom.utils.env.EnvFile;
 import com.amay.tom.utils.helper.Helper;
+import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.bnr.BNRIntegration;
 import com.fazecast.jSerialComm.SerialPort;
 import lombok.Getter;
@@ -50,7 +51,7 @@ public class PeripheralMonitor implements Runnable {
     }
 
     public void addDeviceStatusListener(DeviceStatusListener listener) {
-        Logger.debug("Adding device status listener {} {}", listener, this);
+        Logger.tag(LoggerTag.APP).debug("Adding device status listener {} {}", listener, this);
         listeners.add(listener);
 
     }
@@ -81,12 +82,12 @@ public class PeripheralMonitor implements Runnable {
         deviceStatus[6] = cash_drawer_connected ? 1 : 0;
         deviceStatus[7] = ups_connected ? 1 : 0;
 
-        Logger.debug("Peripherals status: {}", Helper.ObjectToJson(deviceStatus));
+        Logger.tag(LoggerTag.APP).info("Peripherals status: {}", Helper.ObjectToJson(deviceStatus));
 
 
         // notify the all subscribers/listeners
         for (DeviceStatusListener listener : listeners) {
-            Logger.debug("Pushing stratus to: {} {}", listeners.size(),listener);
+            Logger.tag(LoggerTag.APP).debug("Pushing stratus to: {} {}", listeners.size(),listener);
             listener.onDeviceStatusChanged(deviceStatus);
         }
     }
@@ -184,10 +185,10 @@ public class PeripheralMonitor implements Runnable {
 
         // Check the number of devices
         if (devices.length > 1) {
-//            System.out.println("A secondary display is connected.");
+//            //System.out.println("A secondary display is connected.");
             return true;
         } else {
-//            System.out.println("No secondary display detected.");
+//            //System.out.println("No secondary display detected.");
             return false;
         }
     }

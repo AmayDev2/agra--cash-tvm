@@ -73,14 +73,14 @@ public class StationMatrixUtil {
     }
 
     public void printMatrix() {
-        System.out.println("Distance Matrix:");
+        //System.out.println("Distance Matrix:");
 
 
         for (int[] row : distanceMatrix) {
             for (int val : row) {
-                System.out.printf("%4d", val);
+                //System.out.printf("%4d", val);
             }
-            System.out.println();
+            //System.out.println();
         }
     }
 }

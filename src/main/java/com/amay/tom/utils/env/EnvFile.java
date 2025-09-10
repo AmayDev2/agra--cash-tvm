@@ -166,9 +166,9 @@ public class EnvFile {
                 if (countStr != null && !countStr.isEmpty()) {
                     count = Integer.parseInt(countStr);
                 }
-                System.out.println("Count: " + count);
+                //System.out.println("Count: " + count);
             } catch (Exception e) {
-                System.out.println("Error in getting SQLITE_DATABASE_CONNECTIONS");
+                //System.out.println("Error in getting SQLITE_DATABASE_CONNECTIONS");
                 e.printStackTrace();
             }
             return count;

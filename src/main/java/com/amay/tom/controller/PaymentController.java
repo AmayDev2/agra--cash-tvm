@@ -745,12 +745,12 @@ public class PaymentController implements PaymentControllerListener {
 
     @FXML
     void onAmountUpdate(InputMethodEvent event) {
-//        System.out.println("Amount updated");
+//        //System.out.println("Amount updated");
     }
 
     @FXML
     void onBalanceUpdate(ActionEvent event) {
-        System.out.println("Balance updated");
+        //System.out.println("Balance updated");
     }
 
     @FXML

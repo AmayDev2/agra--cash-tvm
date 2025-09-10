@@ -84,7 +84,7 @@ public class SFTPDownloader {
                 }
 
                 Files.deleteIfExists(zipPath);
-                System.out.println("Unzipped and deleted: " + zipFilePath);
+                //System.out.println("Unzipped and deleted: " + zipFilePath);
             } catch (IOException e) {
                 e.printStackTrace();
             }

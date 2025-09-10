@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.FlowPane?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-<VBox prefHeight="600.0" prefWidth="1024.0" spacing="20" style="-fx-background-color: white;" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tvm.controller.CashInsertProcessingController">
+<VBox prefHeight="600.0" prefWidth="1024.0" spacing="20" style="-fx-background-color: white;" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tvm.controller.CashInsertProcessingController">
 
     <!-- Title -->
     <Label fx:id="eventTitle" alignment="CENTER" maxWidth="Infinity" style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #1d8aca;" text="Please Insert Cash" />
@@ -73,8 +65,8 @@
     </GridPane>
 
     <!-- Bottom Action -->
-    <HBox alignment="CENTER_RIGHT" spacing="20">
-        <Button fx:id="skipPrintBtn" onAction="#skipPrintReceipt" prefHeight="60.0" prefWidth="250.0" style="-fx-background-color: #e63946; -fx-background-radius: 30; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Cancel Payment" />
+    <HBox alignment="CENTER" spacing="20">
+        <Button fx:id="skipPrintBtn" visible="false" onAction="#skipPrintReceipt" prefHeight="60.0" prefWidth="250.0" style="-fx-background-color: #e63946; -fx-background-radius: 30; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Cancel Payment" />
     </HBox>
 
 

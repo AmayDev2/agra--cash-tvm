@@ -177,7 +177,7 @@ public class Controller {
         this.userPrivilege = agent.getUserPrivilege();
         this.equipmentPrivilege = agent.getEquipmentPrivilege();
 //        agent.getPeripheralMonitor().addDeviceStatusListener(new UIDeviceListener(this));
-        System.out.println("Controller Constructor :" + userPrivilege);
+        //System.out.println("Controller Constructor :" + userPrivilege);
         qrControllerService = new QRControllerService(agent,borderPane,this);
     }
 
@@ -238,7 +238,7 @@ public class Controller {
         group.setSelected(false);
 
 
-        System.out.println("Listener for cancel button");
+        //System.out.println("Listener for cancel button");
         event.consume();
     }
 
@@ -271,7 +271,7 @@ public class Controller {
 
     @FXML
     public void onSJTClick(ActionEvent actionEvent) {
-        System.out.println("Listener for SJT button");
+        //System.out.println("Listener for SJT button");
         sjt.setSelected(true);
         rjt.setSelected(false);
         group.setSelected(false);
@@ -289,7 +289,7 @@ public class Controller {
         group.setSelected(false);
         selectedNoOfPassenger = 1;
         this.setTicketCount();
-        System.out.println("Listener for RJT button");
+        //System.out.println("Listener for RJT button");
         actionEvent.consume();
     }
 
@@ -302,7 +302,7 @@ public class Controller {
         selectedNoOfPassenger = MIN_GROUP_TICKET_PASSENGER;
         this.setTicketCount();
 
-        System.out.println("Listener for Group button");
+        //System.out.println("Listener for Group button");
         actionEvent.consume();
     }
 
@@ -444,7 +444,7 @@ public class Controller {
         MAX_GROUP_TICKET_PASSENGER=TicketType.GROUP.getProduct().getMaxTicket();
         controller = this;
         setOperationModeListener();
-        System.out.println("Controller Initialized "+controller.hashCode()+" "+agent.getDeviceStatus().getCurrentStatus());
+        //System.out.println("Controller Initialized "+controller.hashCode()+" "+agent.getDeviceStatus().getCurrentStatus());
         userPrivilege(userPrivilege,equipmentPrivilege);
         updateStock();
         setStockManagement();

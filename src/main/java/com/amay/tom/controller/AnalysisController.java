@@ -177,8 +177,8 @@ public class AnalysisController {
                 analysisMessage.setText("");
 
 
-                System.out.println("Ticket Status  "+ticketRefundResponseV1.getTicketAnalysis().getTicket().getProductId()+" "
-                        +ticketRefundResponseV1.getTicketAnalysis().getTicket().getStatus()+" "+ticketRefundResponseV1.getTicketAnalysis().getTicket().getIsActive());
+                //System.out.println("Ticket Status  "+ticketRefundResponseV1.getTicketAnalysis().getTicket().getProductId()+" "
+//                        +ticketRefundResponseV1.getTicketAnalysis().getTicket().getStatus()+" "+ticketRefundResponseV1.getTicketAnalysis().getTicket().getIsActive());
 
                 ticket.setTicketNo(ticketRefundResponseV1.getTicketAnalysis().getTicket().getTicketId());
                 ticket.setInitiateDateTime(ticketRefundResponseV1.getTicketAnalysis().getTicket().getTicketIssue());
@@ -192,7 +192,7 @@ public class AnalysisController {
 
 
                 isAdjusted.set(ticketRefundResponseV1.getTicketAnalysis().getTicket().getIsAdjusted());
-                System.out.println("Ticket Adjusted Status "+isAdjusted);
+                //System.out.println("Ticket Adjusted Status "+isAdjusted);
 
                 aTicketAnalysis.set(AnalysisTicketMapper.toDTO(ticketRefundResponseV1.getTicketAnalysis()));
 //                this.isAdjusted=isAdjusted;

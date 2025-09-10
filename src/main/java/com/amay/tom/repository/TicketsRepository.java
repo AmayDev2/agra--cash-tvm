@@ -34,7 +34,7 @@ public class TicketsRepository {
 //
 //            statement.executeUpdate();
 //        } catch (SQLException e) {
-//            System.out.println("Error inserting test data: " + e.getMessage());
+//            //System.out.println("Error inserting test data: " + e.getMessage());
 //        }
 //    }
 
@@ -75,7 +75,7 @@ public class TicketsRepository {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("Error getting last ticket number: " + e.getMessage());
+            //System.out.println("Error getting last ticket number: " + e.getMessage());
             return null;
         }
     }
@@ -141,7 +141,7 @@ public class TicketsRepository {
     public List<QRTicket> getTicketByOrderId(Connection connection, String orderId) {
         String sql = "SELECT * FROM tickets  WHERE ticket_cancel =false AND order_id = ?";
         List<QRTicket> qrTickets = new ArrayList<>();
-        System.out.println("Order ID: " + orderId);
+        //System.out.println("Order ID: " + orderId);
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, orderId);
 

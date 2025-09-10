@@ -50,7 +50,7 @@ public class SerialCommunication implements SerialCommunicationInterface {
 		// Toggle DTR/RTS to reset some devices
 		try { port.setDTR(); port.clearDTR(); port.setDTR(); } catch (Throwable ignored) {}
 		try { port.setRTS(); port.clearRTS(); port.setRTS(); } catch (Throwable ignored) {}
-		System.out.println("PORT OPEN  : " + portName + " baud=" + baudRate + " dataBits=" + dataBits + " stopBits=" + stopBits + " parity=" + parity);
+		//System.out.println("PORT OPEN  : " + portName + " baud=" + baudRate + " dataBits=" + dataBits + " stopBits=" + stopBits + " parity=" + parity);
 	}
 
 	@Override
@@ -70,7 +70,7 @@ public class SerialCommunication implements SerialCommunicationInterface {
 		if (!isConnected()) throw new CommunicationException("Port not open");
 		// No purge constants available in all jSerialComm versions; skip purge here
 		int written = port.writeBytes(data, data.length);
-		System.out.println("PORT WRITE: " + written + " bytes");
+		//System.out.println("PORT WRITE: " + written + " bytes");
 		if (written != data.length) throw new CommunicationException("Short write: " + written + "/" + data.length);
 	}
 
@@ -121,7 +121,7 @@ public class SerialCommunication implements SerialCommunicationInterface {
 				int prevTotal = total;
 				total += read;
 				byte[] chunk = Arrays.copyOfRange(buffer, prevTotal, total);
-				System.out.println("PORT READ  : " + read + " bytes -> " + HexUtil.toHex(chunk));
+				//System.out.println("PORT READ  : " + read + " bytes -> " + HexUtil.toHex(chunk));
 				for (int i = prevTotal; i < total; i++) {
 					byte b = buffer[i];
 					if (startIndex < 0) {
@@ -149,7 +149,7 @@ public class SerialCommunication implements SerialCommunicationInterface {
 			try { Thread.sleep(5); } catch (InterruptedException ignored) {}
 		}
 		byte[] partial = Arrays.copyOfRange(buffer, 0, total);
-		System.out.println("PORT TIMEOUT, partial RX: " + HexUtil.toHex(partial));
+		//System.out.println("PORT TIMEOUT, partial RX: " + HexUtil.toHex(partial));
 		throw new CommunicationException("Timeout waiting for ETX");
 	}
 }

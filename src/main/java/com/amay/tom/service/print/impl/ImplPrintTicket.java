@@ -28,26 +28,26 @@ public class ImplPrintTicket{
         PrintService[] printServices = PrintServiceLookup.lookupPrintServices(null, null);
 
         // List all available print services
-        System.out.println("Available print services:");
+        //System.out.println("Available print services:");
         for (PrintService service : printServices) {
-            System.out.println(" - " + service.getName());
+            //System.out.println(" - " + service.getName());
         }
 
         if (printServices.length == 0) {
-            System.out.println("No printer found.");
+            //System.out.println("No printer found.");
             return;
         }
 
         // Get the default print service
         PrintService printService = PrintServiceLookup.lookupDefaultPrintService();
         if (printService == null) {
-            System.out.println("Default printer not found.");
+            //System.out.println("Default printer not found.");
             return;
         }
 
         // Create a print job
         DocPrintJob job = printService.createPrintJob();
-        System.out.println("Printing to " + printService.getName());
+        //System.out.println("Printing to " + printService.getName());
 
         PrintRequestAttributeSet attr = new HashPrintRequestAttributeSet();
         MediaPrintableArea printableArea = new MediaPrintableArea(0, 0, 54, 70, MediaPrintableArea.MM);
@@ -62,9 +62,9 @@ public class ImplPrintTicket{
         // Print the text
         try {
             job.print(doc, attr);
-            System.out.println("Text printed successfully.");
+            //System.out.println("Text printed successfully.");
         } catch (PrintException e) {
-            System.out.println("Error printing text: " + e.getMessage());
+            //System.out.println("Error printing text: " + e.getMessage());
         }
     }
 
@@ -78,7 +78,7 @@ public class ImplPrintTicket{
 
         // Create a Doc object representing your document
 //        Doc doc = new SimpleDoc(documentData, flavor, null);
-        System.out.println(job.getPrinter().getName());
+        //System.out.println(job.getPrinter().getName());
         if (job != null) {
             try {
 //                job.showPageSetupDialog(null);
@@ -89,14 +89,14 @@ public class ImplPrintTicket{
                 if (success) {
                     job.endJob();
                 } else {
-                    System.out.println("Failed to print page.");
+                    //System.out.println("Failed to print page.");
                 }
             } catch (Exception e) {
-                System.out.println("Error printing: " + e.getMessage());
+                //System.out.println("Error printing: " + e.getMessage());
                 e.printStackTrace();
             }
         } else {
-            System.out.println("Error creating printer job.");
+            //System.out.println("Error creating printer job.");
         }
     }
 
@@ -122,22 +122,22 @@ public class ImplPrintTicket{
         DocFlavor flavor = DocFlavor.BYTE_ARRAY.PNG;
         PrintService[] printServices = PrintServiceLookup.lookupPrintServices(flavor, null);
         if (printServices.length == 0) {
-            System.out.println("No printer found.");
+            //System.out.println("No printer found.");
             return;
         }
 
         // Get the default print service
         PrintService printService = PrintServiceLookup.lookupDefaultPrintService();
         if (printService == null) {
-            System.out.println("Default printer not found.");
+            //System.out.println("Default printer not found.");
             return;
         }
 
         // Create a print job
         DocPrintJob job = printService.createPrintJob();
 
-//        System.out.println("Printing to " + printService.getName());
-        System.out.println("Resolution: " + resizedImage.getWidth() + "x" + resizedImage.getHeight() + " dpi");
+//        //System.out.println("Printing to " + printService.getName());
+        //System.out.println("Resolution: " + resizedImage.getWidth() + "x" + resizedImage.getHeight() + " dpi");
 
         PrintRequestAttributeSet attr = new HashPrintRequestAttributeSet();
         MediaPrintableArea printableArea = new MediaPrintableArea(0, 0, 74, resizedImage.getHeight(), MediaPrintableArea.MM);
@@ -155,7 +155,7 @@ public class ImplPrintTicket{
         // Print the image
         try {
             job.print(doc, attr);
-            System.out.println("Image printed successfully.");
+            //System.out.println("Image printed successfully.");
         } catch (Exception e){
             Logger.error("Error printing image: {}",e.getMessage());
         }
@@ -173,78 +173,79 @@ public class ImplPrintTicket{
 
 
 
-    public static void printImageMaintenance(BufferedImage image,
-                                             String printerName,
-                                             String imageFormat,
-                                             boolean autoScale,
-                                             int dpi,
-                                             float marginMM,
-                                             boolean verbose) {
-        if (image == null) {
-            System.err.println("❌ No image to print.");
-            return;
-        }
 
-        try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
-            // 1. Convert image to byte array
-            ImageIO.write(image, imageFormat, baos);
-            byte[] imageBytes = baos.toByteArray();
-
-            // 2. Define print flavor
-            DocFlavor flavor = new DocFlavor.INPUT_STREAM(imageFormat.equalsIgnoreCase("png")
-                    ? "image/png" : "image/jpeg");
-
-            // 3. Find the printer by name (or fallback to default)
-            PrintService printService = findPrintService(printerName, flavor)
-                    .orElse(PrintServiceLookup.lookupDefaultPrintService());
-
-            if (printService == null) {
-                System.err.println("❌ No printer found.");
-                return;
-            }
-
-            // 4. Check if format is supported
-            if (!printService.isDocFlavorSupported(flavor)) {
-                System.err.printf("❌ Printer '%s' does not support %s format.%n", printService.getName(), imageFormat);
-                return;
-            }
-
-            // 5. Build print attributes
-            PrintRequestAttributeSet attr = new HashPrintRequestAttributeSet();
-            attr.add(new PrinterResolution(dpi, dpi, PrinterResolution.DPI));
-            attr.add(OrientationRequested.LANDSCAPE);
-
-            attr.add(PrintQuality.HIGH);
-
-            // Calculate scaling if needed
-            if (autoScale) {
-                int widthMM = (int) ((image.getWidth() / (dpi / 25.4)));
-                int heightMM = (int) ((image.getHeight() / (dpi / 25.4)));
-                attr.add(new MediaPrintableArea(marginMM, marginMM,
-                        widthMM - 2 * marginMM, heightMM - 2 * marginMM,
-                        MediaPrintableArea.MM));
-            } else {
-                attr.add(new MediaPrintableArea(marginMM, marginMM, 74, image.getHeight(), MediaPrintableArea.MM));
-            }
-
-            // 6. Print job
-            DocPrintJob job = printService.createPrintJob();
-            Doc doc = new SimpleDoc(new java.io.ByteArrayInputStream(imageBytes), flavor, null);
-
-            if (verbose) {
-                System.out.printf("🖨️ Printing to: %s (%dx%d px, %s format)%n",
-                        printService.getName(), image.getWidth(), image.getHeight(), imageFormat.toUpperCase());
-            }
-
-            job.print(doc, attr);
-            System.out.println("✅ Image printed successfully.");
-
-        } catch (PrintException e) {
-            System.err.printf("🛑 Print failed: %s%n", e.getMessage());
-        } catch (IOException e) {
-            System.err.printf("🛑 Image conversion failed: %s%n", e.getMessage());
-        }
-    }
+//    public static void printImageMaintenance(BufferedImage image,
+//                                             String printerName,
+//                                             String imageFormat,
+//                                             boolean autoScale,
+//                                             int dpi,
+//                                             float marginMM,
+//                                             boolean verbose) {
+//        if (image == null) {
+//            System.err.println("❌ No image to print.");
+//            return;
+//        }
+//
+//        try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
+//            // 1. Convert image to byte array
+//            ImageIO.write(image, imageFormat, baos);
+//            byte[] imageBytes = baos.toByteArray();
+//
+//            // 2. Define print flavor
+//            DocFlavor flavor = new DocFlavor.INPUT_STREAM(imageFormat.equalsIgnoreCase("png")
+//                    ? "image/png" : "image/jpeg");
+//
+//            // 3. Find the printer by name (or fallback to default)
+//            PrintService printService = findPrintService(printerName, flavor)
+//                    .orElse(PrintServiceLookup.lookupDefaultPrintService());
+//
+//            if (printService == null) {
+//                System.err.println("❌ No printer found.");
+//                return;
+//            }
+//
+//            // 4. Check if format is supported
+//            if (!printService.isDocFlavorSupported(flavor)) {
+//                System.err.printf("❌ Printer '%s' does not support %s format.%n", printService.getName(), imageFormat);
+//                return;
+//            }
+//
+//            // 5. Build print attributes
+//            PrintRequestAttributeSet attr = new HashPrintRequestAttributeSet();
+//            attr.add(new PrinterResolution(dpi, dpi, PrinterResolution.DPI));
+//            attr.add(OrientationRequested.LANDSCAPE);
+//
+//            attr.add(PrintQuality.HIGH);
+//
+//            // Calculate scaling if needed
+//            if (autoScale) {
+//                int widthMM = (int) ((image.getWidth() / (dpi / 25.4)));
+//                int heightMM = (int) ((image.getHeight() / (dpi / 25.4)));
+//                attr.add(new MediaPrintableArea(marginMM, marginMM,
+//                        widthMM - 2 * marginMM, heightMM - 2 * marginMM,
+//                        MediaPrintableArea.MM));
+//            } else {
+//                attr.add(new MediaPrintableArea(marginMM, marginMM, 74, image.getHeight(), MediaPrintableArea.MM));
+//            }
+//
+//            // 6. Print job
+//            DocPrintJob job = printService.createPrintJob();
+//            Doc doc = new SimpleDoc(new java.io.ByteArrayInputStream(imageBytes), flavor, null);
+//
+//            if (verbose) {
+//                //System.out.printf("🖨️ Printing to: %s (%dx%d px, %s format)%n",
+//                        printService.getName(), image.getWidth(), image.getHeight(), imageFormat.toUpperCase());
+//            }
+//
+//            job.print(doc, attr);
+//            //System.out.println("✅ Image printed successfully.");
+//
+//        } catch (PrintException e) {
+//            System.err.printf("🛑 Print failed: %s%n", e.getMessage());
+//        } catch (IOException e) {
+//            System.err.printf("🛑 Image conversion failed: %s%n", e.getMessage());
+//        }
+//    }
 
 
     @Deprecated
@@ -274,7 +275,7 @@ public class ImplPrintTicket{
             Doc doc = new SimpleDoc(escposData, flavor, null);
 
             job.print(doc, null);
-            System.out.println("Image printed successfully without margins.");
+            //System.out.println("Image printed successfully without margins.");
         } catch (Exception e) {
             Logger.error("Error printing image: {}", e.getMessage());
             throw new RuntimeException("Error printing image: " + e.getMessage(), e);
@@ -356,22 +357,22 @@ public class ImplPrintTicket{
         DocFlavor flavor = DocFlavor.BYTE_ARRAY.PNG;
         PrintService[] printServices = PrintServiceLookup.lookupPrintServices(flavor, null);
         if (printServices.length == 0) {
-            System.out.println("No printer found.");
+            //System.out.println("No printer found.");
             return;
         }
 
         // Get the default print service
         PrintService printService = PrintServiceLookup.lookupDefaultPrintService();
         if (printService == null) {
-            System.out.println("Default printer not found.");
+            //System.out.println("Default printer not found.");
             throw new RuntimeException("Default printer not found.");
         }
 
         // Create a print job
         DocPrintJob job = printService.createPrintJob();
 
-//        System.out.println("Printing to " + printService.getName());
-        System.out.println("Resolution: " + resizedImage.getWidth() + "x" + resizedImage.getHeight() + " dpi");
+//        //System.out.println("Printing to " + printService.getName());
+        //System.out.println("Resolution: " + resizedImage.getWidth() + "x" + resizedImage.getHeight() + " dpi");
 
 
 
@@ -392,7 +393,7 @@ public class ImplPrintTicket{
         // Print the image
         try {
             job.print(doc, attr);
-            System.out.println("Image printed successfully.");
+            //System.out.println("Image printed successfully.");
 //            FareMedium.QR.incrementQRSaleByOne();
         } catch (Exception e){
             Logger.error("Error printing image: {}",e.getMessage());

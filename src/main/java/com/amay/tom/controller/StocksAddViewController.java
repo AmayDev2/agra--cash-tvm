@@ -114,7 +114,7 @@ public class StocksAddViewController {
     void onClickNCMCEmpty(ActionEvent event) {
 
         FareMedium.NCMC.setFareMediumTotal(0);
-        System.out.println("NCMC Empty Clicked"+FareMedium.NCMC.getFareMediumTotal());
+        //System.out.println("NCMC Empty Clicked"+FareMedium.NCMC.getFareMediumTotal());
         this.updateStock();
 
         Logger.info("NCMC Empty Clicked");
@@ -127,7 +127,7 @@ public class StocksAddViewController {
         try {
             if(Integer.parseInt(ncmcValue.getText())>0 && FareMedium.NCMC.getFareMediumTotal()+Integer.parseInt(ncmcValue.getText())<=MAX_STOCK  ) {
                 FareMedium.NCMC.addFareMediumTotal(Integer.parseInt(ncmcValue.getText()));
-                System.out.println("NCMC Update Clicked" + FareMedium.NCMC.getFareMediumTotal());
+                //System.out.println("NCMC Update Clicked" + FareMedium.NCMC.getFareMediumTotal());
                 this.updateStock();
                 ncmcValue.setText("");
 
@@ -146,7 +146,7 @@ public class StocksAddViewController {
     void onClickQREmpty(ActionEvent event) {
         FareMedium.QR.setFareMediumTotal(0);
         updateStock();
-        System.out.println("QR Empty Clicked" + FareMedium.QR.getFareMediumTotal());
+        //System.out.println("QR Empty Clicked" + FareMedium.QR.getFareMediumTotal());
         com.amay.tom.controller.Controller.getController().updateStock();
 
     }
@@ -160,7 +160,7 @@ public class StocksAddViewController {
 //                FareMedium.QR.addFareMediumTotal(Integer.parseInt(qrValue.getText()));
 //                this.updateStock();
 //                qrValue.setText("");
-//                System.out.println("QR Update Clicked" + FareMedium.QR.getFareMediumTotal());
+//                //System.out.println("QR Update Clicked" + FareMedium.QR.getFareMediumTotal());
 //                Logger.info("QR Added: {}", FareMedium.QR.getFareMediumTotal());
 //                Controller.getController().updateStock();
 //            }
@@ -194,7 +194,7 @@ public class StocksAddViewController {
                 FareMedium.IMPREST_MONEY.addFareMediumTotal(Integer.parseInt(imprestMoneyValue.getText()));
                 this.updateStock();
                 imprestMoneyValue.setText("");
-                System.out.println("Imprest Update Clicked " + FareMedium.IMPREST_MONEY.getFareMediumTotal());
+                //System.out.println("Imprest Update Clicked " + FareMedium.IMPREST_MONEY.getFareMediumTotal());
                 Logger.info("Imprest Added: {}", FareMedium.IMPREST_MONEY.getFareMediumTotal());
                 com.amay.tom.controller.Controller.getController().updateStock();
             }
@@ -209,7 +209,7 @@ public class StocksAddViewController {
     private void onClickImprestMoneyClearButton(ActionEvent actionEvent) {
 
         FareMedium.IMPREST_MONEY.setFareMediumTotal(0);
-        System.out.println("NCMC Empty Clicked"+FareMedium.IMPREST_MONEY.getFareMediumTotal());
+        //System.out.println("NCMC Empty Clicked"+FareMedium.IMPREST_MONEY.getFareMediumTotal());
         this.updateStock();
         Logger.info("IMPREST MONEY Empty Clicked");
         Controller.getController().updateStock();

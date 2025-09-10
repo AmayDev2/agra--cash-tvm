@@ -8,7 +8,7 @@ public class Fare {
 
     public static int getFare(Station sourceStation, Station destinationStation){
         int fare= FareLine3.distanceMatrix[Integer.parseInt(sourceStation.getStationId().substring(2))-1][Integer.parseInt(destinationStation.getStationId().substring(2))-1];
-        System.out.println("Fare: "+fare);
+        //System.out.println("Fare: "+fare);
         return fare;
     }
 
@@ -16,7 +16,7 @@ public class Fare {
 
     public static int getTotalFare(Station sourceStation, Station destinationStation, int noOfPassenger){
         int fare= FareLine3.distanceMatrix[Integer.parseInt(sourceStation.getStationId().substring(2))-1][Integer.parseInt(destinationStation.getStationId().substring(2))-1];
-        System.out.println("Fare: "+fare*noOfPassenger);
+        //System.out.println("Fare: "+fare*noOfPassenger);
         return fare*noOfPassenger;
     }
 
@@ -25,7 +25,7 @@ public class Fare {
             return 0;
         }
         int fare= FareLine3.distanceMatrix[Integer.parseInt(sourceStation.getStationId().substring(2))-1][Integer.parseInt(destinationStation.getStationId().substring(2))-1]*noOfPassenger;
-        System.out.println("Fare: "+fare);
+        //System.out.println("Fare: "+fare);
         if(ticketType.equals(TicketType.RETURN)){
             fare= fare*2;
         }

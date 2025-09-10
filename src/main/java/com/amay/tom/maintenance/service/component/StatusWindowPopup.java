@@ -52,7 +52,7 @@ public class StatusWindowPopup implements StatusWindowPopupListener {
 //            scene.setFill(Color.TRANSPARENT); // Set the scene fill to transparent
             popupStage.setScene(scene);
         } catch (Exception e) {
-            System.out.println("Error in loading popup"+e.getMessage());
+            //System.out.println("Error in loading popup"+e.getMessage());
             e.printStackTrace();
         }
 

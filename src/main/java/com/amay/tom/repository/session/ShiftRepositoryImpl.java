@@ -49,10 +49,10 @@ public class ShiftRepositoryImpl extends ShiftRepository {
             pstmt.setTimestamp(13, shift.getUpdatedAt() != null ? shift.getUpdatedAt() : null);
             pstmt.setString(14,shift.getImprest_money());
             pstmt.setString(15,shift.getConfig_version());
-            System.out.println(pstmt);
+            //System.out.println(pstmt);
             // Execute the update
             int affectedRows = pstmt.executeUpdate();
-            System.out.println(affectedRows);
+            //System.out.println(affectedRows);
 //
 //            // Check if the update was successful and if keys are generated
 //            if (affectedRows > 0) {
@@ -141,7 +141,7 @@ public class ShiftRepositoryImpl extends ShiftRepository {
             pstmt.setTimestamp(4, shift.getUpdatedAt() != null ? shift.getUpdatedAt() : null);
             pstmt.setString(5, shift.getShiftId());
             pstmt.setString(6, shift.getOperatorId());
-            System.out.println(pstmt);
+            //System.out.println(pstmt);
             pstmt.executeUpdate();
         }
     }
@@ -162,7 +162,7 @@ public class ShiftRepositoryImpl extends ShiftRepository {
         try(Statement stmt = connection.createStatement()){
             ResultSet rs = stmt.executeQuery("SELECT shift_id FROM "+TABLE_NAME+" ORDER BY shift_id DESC LIMIT 1");
             if(rs.next()){
-                System.out.println("Last Shift Id : "+rs.getString("shift_id"));
+                //System.out.println("Last Shift Id : "+rs.getString("shift_id"));
                 return rs.getString("shift_id");
             }
         }
@@ -181,7 +181,7 @@ public class ShiftRepositoryImpl extends ShiftRepository {
             ResultSet rs = stmt.executeQuery(query);
             if (rs.next()) {
                 int count = rs.getInt("count");
-                System.out.println("Count for prefix [" + shiftPrefix + "]: " + count);
+                //System.out.println("Count for prefix [" + shiftPrefix + "]: " + count);
                 return count;
             }
         }
@@ -197,10 +197,10 @@ public class ShiftRepositoryImpl extends ShiftRepository {
             pstmt.setString(3, shift.getShiftId());
             pstmt.setString(4, shift.getOperatorId());
 //            pstmt.setTimestamp(5, shift.getStartTime());
-            System.out.println(pstmt);
+            //System.out.println(pstmt);
 
             int affectedRows = pstmt.executeUpdate();
-            System.out.println("Resume Paused : "+affectedRows);
+            //System.out.println("Resume Paused : "+affectedRows);
         }
     }
 
@@ -210,7 +210,7 @@ public class ShiftRepositoryImpl extends ShiftRepository {
         try(Statement stmt = connection.createStatement()){
             ResultSet rs = stmt.executeQuery(FIND_LAST_SHIFT_ID_SQL);
             if(rs.next()){
-                System.out.println("Last Shift Id : "+rs.getString("shift_id"));
+                //System.out.println("Last Shift Id : "+rs.getString("shift_id"));
                 return Optional.ofNullable(rs.getString("shift_id"));
             }
         } catch (RuntimeException | SQLException e) {
@@ -225,7 +225,7 @@ public class ShiftRepositoryImpl extends ShiftRepository {
         try(Statement stmt = connection.createStatement()){
             ResultSet rs = stmt.executeQuery(FIND_LAST_SHIFT);
             if(rs.next()){
-                System.out.println("Last Shift Id : "+rs.getString("shift_id"));
+                //System.out.println("Last Shift Id : "+rs.getString("shift_id"));
                 return Optional.ofNullable(rs.getString("shift_id"));
             }
         } catch (RuntimeException | SQLException e) {
@@ -243,7 +243,7 @@ public class ShiftRepositoryImpl extends ShiftRepository {
             pstmt.setString(3, shiftDto.getCurrentStatus());
             pstmt.setTimestamp(4, shiftDto.getUpdatedAt() != null ? shiftDto.getUpdatedAt() : null);
             pstmt.setString(5, shiftDto.getShiftId());
-            System.out.println(pstmt);
+            //System.out.println(pstmt);
 
             int affectedRows = pstmt.executeUpdate();
             return affectedRows > 0;

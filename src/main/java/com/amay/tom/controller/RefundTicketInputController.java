@@ -49,11 +49,11 @@ package com.amay.tom.controller;//package com.amay.tom.controller;
 //
 //    public boolean isWithin30Minutes(long epochMilliseconds) {
 //        Instant expiryTime = Instant.ofEpochMilli(epochMilliseconds).plusSeconds(EnvFile.getRefundTime() * 60);
-//        System.out.println("expireTime "+expiryTime);
+//        //System.out.println("expireTime "+expiryTime);
 //
 //        Instant now = Instant.now();
 //
-//        System.out.println("Now "+now );
+//        //System.out.println("Now "+now );
 //
 //        return expiryTime.isAfter(now);
 //    }
@@ -78,14 +78,14 @@ package com.amay.tom.controller;//package com.amay.tom.controller;
 ////            qrCode)
 //            TicketRefundResponseV1 ticketRefundResponseV1 = scuService.getTicketByNumber(ticketRequestV1);
 //
-//            System.out.println(ticketRefundResponseV1.getResponseMetaData().getErrorCode());
+//            //System.out.println(ticketRefundResponseV1.getResponseMetaData().getErrorCode());
 //
 //            if (!ticketRefundResponseV1.getResponseMetaData().getErrorCode().equals("200")) {
-//               System.out.println("Ticket Response is Null");
+//               //System.out.println("Ticket Response is Null");
 //                return;
 //            }
 //
-//            System.out.println("Ticket Status  "+ticketRefundResponseV1.getTicket().getTicketType()+" "
+//            //System.out.println("Ticket Status  "+ticketRefundResponseV1.getTicket().getTicketType()+" "
 //                    +ticketRefundResponseV1.getTicket().getStatus()+" "+ticketRefundResponseV1.getTicket().getIsActive());
 //
 //            ticket.setTicketNo(ticketRefundResponseV1.getTicket().getTicketNumber());

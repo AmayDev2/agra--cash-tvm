@@ -59,7 +59,7 @@ public class SystemConfig {
     }
 
     public static String getLastOrderId() {
-        System.out.println("Get last order id "+lastOrderId);
+        //System.out.println("Get last order id "+lastOrderId);
         return lastOrderId;
     }
 

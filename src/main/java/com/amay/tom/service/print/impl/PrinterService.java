@@ -176,7 +176,7 @@ public class PrinterService implements Printable {
         // Find the specified print service
         PrintService service = findPrintService(printerName, printServices);
         if (service == null) {
-            System.out.println("Printer not found: " + printerName);
+            //System.out.println("Printer not found: " + printerName);
             return;
         }
 
@@ -189,7 +189,7 @@ public class PrinterService implements Printable {
         // Print the image
         try {
             job.print(doc, null);
-            System.out.println("Image printed successfully.");
+            //System.out.println("Image printed successfully.");
         } catch (PrintException e) {
             e.printStackTrace();
         }

@@ -48,7 +48,7 @@
 //
 //                // Calculate upload speed
 //                double speedMBps = fileSize / (1024.0 * 1024.0) / uploadTimeSeconds;
-//                System.out.printf("Upload speed: %.2f MB per second\n", speedMBps);
+//                //System.out.printf("Upload speed: %.2f MB per second\n", speedMBps);
 //
 //                flag[0] = false;
 //            }
@@ -70,7 +70,7 @@
 //                // Calculate remaining file size
 //                long remainingBytes = fileSize - bytesReadTotal;
 //                double remainingSizeMB = (double) remainingBytes / (1024.0 * 1024.0);
-//                System.out.printf("Remaining file size: %.2f MB\n", remainingSizeMB);
+//                //System.out.printf("Remaining file size: %.2f MB\n", remainingSizeMB);
 //
 //                // Wait for 5 seconds
 ////                try {
@@ -115,8 +115,8 @@
 //            public void onNext(FileChunk value) {
 //                try {
 //                    filesize[0] +=value.getChunk().size()/(1024*1024);
-//                    System.out.println("Writing chunk to file "+value.getChunk().size()/(1024*1024));
-//                    System.out.println("Writing chunk to file "+ filesize[0] );
+//                    //System.out.println("Writing chunk to file "+value.getChunk().size()/(1024*1024));
+//                    //System.out.println("Writing chunk to file "+ filesize[0] );
 //                    outputStream.write(value.getChunk().toByteArray());
 //                } catch (IOException e) {
 //                    e.printStackTrace();
@@ -134,8 +134,8 @@
 //                Duration duration = Duration.between(start, end);
 //                double downloadTimeSeconds = duration.toMillis() / 1000.0;
 //                flag[0] = false;
-//                System.out.println("Total size: "+filesize[0]);
-//                System.out.printf("Download time: %.2f seconds\n", downloadTimeSeconds);
+//                //System.out.println("Total size: "+filesize[0]);
+//                //System.out.printf("Download time: %.2f seconds\n", downloadTimeSeconds);
 //
 //                // Close the output stream when download completes
 //                try {

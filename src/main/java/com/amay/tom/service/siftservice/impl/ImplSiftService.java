@@ -134,7 +134,7 @@ public enum ImplSiftService implements SiftService {
                 ShiftHeader.getInstance().setInstance(SystemConfig.getInstance().getCurrentStation().getStationName(),SystemConfig.getInstance().getCurrentEquipment().getEquipmentSerial(),shiftDetail.getOperatorId(),shiftDetail.getShiftId(),shiftDetail.getShiftStart().toString());
 
                 Logger.info("Force shutdown detected. Shift id {}",shiftDetail.getShiftId());
-                System.out.println(shiftDetail.toString());
+                //System.out.println(shiftDetail.toString());
                 return true;
 
             }

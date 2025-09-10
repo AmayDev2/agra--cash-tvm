@@ -159,7 +159,7 @@ public class TicketsRepositoryImpl extends TicketsRepository {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("Error getting last ticket number: " + e.getMessage());
+            //System.out.println("Error getting last ticket number: " + e.getMessage());
             return null;
         }
     }

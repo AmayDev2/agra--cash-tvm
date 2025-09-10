@@ -99,7 +99,7 @@ public class PrintTicketService {
 //            }
             PrinterCommandDispatcher.INSTANCE.printText(qrTicket);
         }
-        //System.out.println("sold stock :"+FareMedium.QR.getFareMediumSale()+" "+FareMedium.NCMC.getFareMediumSale());
+        ////System.out.println("sold stock :"+FareMedium.QR.getFareMediumSale()+" "+FareMedium.NCMC.getFareMediumSale());
         //agent.getScuService().pushTotalStock(ScuDataMapper.getStockSoldRequest(agent.getShift().getShiftId(),agent.getSystemConfig().getCurrentEquipment().getEquipmentId(),FareMedium.QR.getFareMediumSale(),FareMedium.NCMC.getFareMediumSale()));
     }
 

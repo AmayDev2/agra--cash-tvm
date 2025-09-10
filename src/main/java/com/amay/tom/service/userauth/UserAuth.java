@@ -25,11 +25,11 @@ public class UserAuth {
 //        PasswordService passwordService = new PasswordService();
 //
 //        boolean isMatch = passwordService.verifyPassword(user.getPassword(), password);
-//        System.out.println("Password Match: " + isMatch);
+//        //System.out.println("Password Match: " + isMatch);
 //        if (isMatch) {
 //            currentUser = user;
 //
-//           System.out.println("User Privilege: "+user.toString());
+//           //System.out.println("User Privilege: "+user.toString());
 //            UserPrivilege userPrivilege= userDetailsService.loadUserPrivilege(username);
 //            if(userPrivilege.isQrFreeTicket()  || userPrivilege.isQrPaidTicket() || userPrivilege.isQrTicketAdjustment()
 //            || userPrivilege.isQrTicketAnalysis() || userPrivilege.isQrTicketIssue() || userPrivilege.isQrTicketCancellation()

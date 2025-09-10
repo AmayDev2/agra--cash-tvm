@@ -21,7 +21,7 @@ public class RedisConnectionPool {
         poolConfig.setMinIdle(1); // Minimum number of idle connections in the pool
         poolConfig.setTestOnBorrow(true); // Test the connection before borrowing it from the pool
 
-        System.out.println("REDIS_HOST: " + REDIS_HOST);
+        //System.out.println("REDIS_HOST: " + REDIS_HOST);
 
         // Create the JedisPool
         jedisPool = new JedisPool(poolConfig, REDIS_HOST, REDIS_PORT, 2000, REDIS_PASSWORD);
@@ -47,6 +47,6 @@ public class RedisConnectionPool {
     }
 
     public static void totalConnections() {
-        System.out.println("Total connections: " + jedisPool.getNumActive());
+        //System.out.println("Total connections: " + jedisPool.getNumActive());
     }
 }

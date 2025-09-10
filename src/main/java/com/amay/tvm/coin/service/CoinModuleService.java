@@ -1,6 +1,7 @@
 package com.amay.tvm.coin.service;
 
 
+import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.coin.commands.CommandBuilder;
 import com.amay.tvm.coin.communication.SerialCommunication;
 import com.amay.tvm.coin.communication.SerialCommunicationInterface;
@@ -12,6 +13,7 @@ import com.amay.tvm.coin.protocol.ProtocolFrame;
 import com.amay.tvm.coin.protocol.ResponseParser;
 import com.amay.tvm.coin.protocol.SequenceNumberManager;
 import com.amay.tvm.coin.util.HexUtil;
+import org.tinylog.Logger;
 
 public class CoinModuleService {
 	private final SerialCommunicationInterface comm;
@@ -34,22 +36,22 @@ public class CoinModuleService {
 //		boolean escapeEnabled = Boolean.parseBoolean(System.getProperty("protocol.escape", "false"));
 		boolean escapeEnabled=DataEscapeUtil.isEscapeEnabled(frame);
 		byte[] escaped = escapeEnabled ? DataEscapeUtil.escapeFrame(raw) : raw;
-		System.out.println("TX (raw)     : " + HexUtil.toHex(raw));
-		System.out.println("TX (escaped) : " + HexUtil.toHex(escaped) + (escapeEnabled ? "" : " (disabled)"));
+		Logger.tag(LoggerTag.BUSS).info("TX (raw)     : " + HexUtil.toHex(raw));
+		Logger.tag(LoggerTag.BUSS).info("TX (escaped) : " + HexUtil.toHex(escaped) + (escapeEnabled ? "" : " (disabled)"));
 		comm.write(escaped);
 		byte[] in;
 		try {
 			in = comm.readUntilETX(timeoutMs);
 		} catch (Exception ex) {
-			System.out.println("RX: <no frame> (" + ex.getMessage() + ")");
+			Logger.tag(LoggerTag.BUSS).info("RX: <no frame> (" + ex.getMessage() + ")");
 			throw ex;
 		}
-		System.out.println("RX (escaped) : " + HexUtil.toHex(in));
+		Logger.tag(LoggerTag.BUSS).info("RX (escaped) : " + HexUtil.toHex(in));
 		// Always unescape incoming (device may send DLE-prefixed controls even if we don't escape on TX)
 		byte[] unescaped = DataEscapeUtil.unescapeFrame(in);
-		System.out.println("RX (raw)     : " + HexUtil.toHex(unescaped));
+		Logger.tag(LoggerTag.BUSS).info("RX (raw)     : " + HexUtil.toHex(unescaped));
 		ProtocolFrame parsed = ProtocolFrame.parse(unescaped);
-		System.out.println(
+		Logger.tag(LoggerTag.BUSS).info(
 			"RX (parsed)  : CMD=" + HexUtil.toHex(parsed.getCommand()) +
 			" SN=" + HexUtil.toHex(parsed.getSequenceNumber()) +
 			" DATA=" + HexUtil.toHex(parsed.getData())
@@ -91,7 +93,7 @@ public class CoinModuleService {
 		// After final response, send End command (no response expected)
 		byte endSeq = sequenceNumberManager.next();
 		ProtocolFrame end = CommandBuilder.createCoinChangeEndCommand(hopper, endSeq);
-		System.out.println("TX (end)     : " + HexUtil.toHex(end.toByteArray()));
+		Logger.tag(LoggerTag.BUSS).info("TX (end)     : " + HexUtil.toHex(end.toByteArray()));
 		try { comm.write(end.toByteArray()); } catch (Exception ignored) {}
 		return resp;
 	}
@@ -99,8 +101,22 @@ public class CoinModuleService {
 	public ModuleResponse dumpHopper(byte hopper) {
 		byte seq = sequenceNumberManager.next();
 		ProtocolFrame start = CommandBuilder.createCoinDumpStartCommand(hopper, seq);
-		/* In a full implementation, loop on progress responses until final */
-		sendAndReceive(start, ProtocolConstants.LONG_OPERATION_TIMEOUT_MS);
+		ModuleResponse resp;
+		while (true) {
+			resp = sendAndReceive(start, ProtocolConstants.LONG_OPERATION_TIMEOUT_MS);
+			if (!(resp instanceof CoinChangeResponse)) break;
+			CoinChangeResponse ccr = (CoinChangeResponse) resp;
+			if (ccr.isProgress()) {
+				try { Thread.sleep(ProtocolConstants.LONG_OPERATION_PROGRESS_MS); } catch (InterruptedException ignored) {}
+				// continue waiting; device keeps sending progress frames for same SN
+				continue;
+			}
+			if (ccr.isFinal()) {
+				break;
+			}
+			// Unexpected; break to avoid infinite loop
+			break;
+		}
 		byte endSeq = sequenceNumberManager.next();
 		ProtocolFrame end = CommandBuilder.createCoinDumpEndCommand(endSeq);
 		return sendAndReceive(end, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);

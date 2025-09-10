@@ -680,7 +680,7 @@ public class PaymentController {
             );
                          PaymentFactory
                         .getPaymentMedia(selectedPayment)
-                        .pay(totalFare.get(), requestedTicketOrder.orderId(), new Object[]{this.stackPane,agent.getTransactionRepository(), this});
+                        .pay(totalFare.get(), requestedTicketOrder.orderId(), new Object[]{this.stackPane,agent.getTransactionRepository(), this,agent.getThreadPool()});
 
 
 

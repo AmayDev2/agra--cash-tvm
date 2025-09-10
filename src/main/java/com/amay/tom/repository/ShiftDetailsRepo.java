@@ -30,7 +30,7 @@ public class ShiftDetailsRepo {
 
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.executeUpdate();
-            System.out.println("Shift details table created successfully.");
+            //System.out.println("Shift details table created successfully.");
         }catch (Exception e){
             Logger.error("Shift details table creation {}",e.getMessage());
         }
@@ -40,7 +40,7 @@ public class ShiftDetailsRepo {
         String sql = "DROP TABLE IF EXISTS shift_details";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.executeUpdate();
-            System.out.println("Shift details table dropped successfully.");
+            //System.out.println("Shift details table dropped successfully.");
         }catch (Exception e){
             Logger.error("Shift details table drop {}",e.getMessage());
         }
@@ -64,9 +64,9 @@ public class ShiftDetailsRepo {
                         generatedKey = generatedKeys.getInt(1); // Assuming shift_id is an integer
                     }
                 }
-                System.out.println("Shift details created successfully.");
+                //System.out.println("Shift details created successfully.");
             } else {
-                System.out.println("Failed to create shift details.");
+                //System.out.println("Failed to create shift details.");
             }
         } catch (Exception e) {
             Logger.error("Shift details creation {}", e.getMessage());
@@ -85,7 +85,7 @@ public class ShiftDetailsRepo {
             statement.setString(6, shiftDetail.getShiftStatus());
             statement.setInt(7, shiftDetail.getShiftId());
             statement.executeUpdate();
-            System.out.println("Shift details updated successfully.");
+            //System.out.println("Shift details updated successfully.");
         }catch (Exception e){
             Logger.error("Shift details update {}",e.getMessage());
         }
@@ -99,7 +99,7 @@ public class ShiftDetailsRepo {
             statement.setString(1, shiftStatus);
             statement.setInt(2, shiftId);
             statement.executeUpdate();
-            System.out.println("Shift status updated successfully.");
+            //System.out.println("Shift status updated successfully.");
             return readShiftDetails(connection, shiftId);
         }catch (Exception e){
             Logger.error("Shift status update {}",e.getMessage());
@@ -119,7 +119,7 @@ public class ShiftDetailsRepo {
 //            statement.setString(6, shiftDetail.getShiftStatus());
 //            statement.setInt(7, shiftDetail.getShiftId());
 //            statement.executeUpdate();
-//            System.out.println("Shift details updated successfully.");
+//            //System.out.println("Shift details updated successfully.");
 //        }catch (Exception e){
 //            Logger.error("Shift details update {}",e.getMessage());
 //        }
@@ -132,7 +132,7 @@ public class ShiftDetailsRepo {
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
 //            statement.setString(1, shiftId);
 //            statement.executeUpdate();
-            System.out.println("Shift details deleted successfully.");
+            //System.out.println("Shift details deleted successfully.");
         }catch (Exception e){
             Logger.error("Shift details deletion {}",e.getMessage());
         }

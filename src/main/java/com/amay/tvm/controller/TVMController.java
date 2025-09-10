@@ -103,7 +103,7 @@ public class TVMController {
                             // Update the clock icon or other features if needed
                             if (!timeout && !agent.getBusinessRule().isActiveWorkingHour()) {
 //                                outOfWorkingHour();
-//                                this.agent.getInternalListener().EOShift();
+                                this.agent.getInternalListener().EOShift();
 
                                 //TODO: Show out of working hour screen
                             }
@@ -177,7 +177,7 @@ public class TVMController {
 
     //TODO: Implement the logic to update the service mode
     private void setOperationMode(DeviceOperationMode newStatus){
-        System.out.println("TVMController setOperationMode: " + newStatus);
+        //System.out.println("TVMController setOperationMode: " + newStatus);
         Platform.runLater(() -> {
             if( currentMode!=newStatus && newStatus == DeviceOperationMode.IN_SERVICE){
                 stackPane.getChildren().clear();

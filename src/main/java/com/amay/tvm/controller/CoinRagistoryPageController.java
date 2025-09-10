@@ -1,7 +1,10 @@
 package com.amay.tvm.controller;
 
+import com.amay.tvm.coin.CoinModuleInterface;
 import com.amay.tvm.coin.service.HoppersRegistry;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
@@ -44,7 +47,7 @@ public class CoinRagistoryPageController {
 
             refreshTotals();
         } catch (NumberFormatException e) {
-            System.out.println("Invalid input in hopper quantity fields");
+            //System.out.println("Invalid input in hopper quantity fields");
         }
     }
 
@@ -72,5 +75,13 @@ public class CoinRagistoryPageController {
 
             refreshTotals();
         }
+    }
+
+    @FXML private void dumpHopper(ActionEvent actionEvent) {
+        Button button= (Button) actionEvent.getSource();
+        int hopperId = Integer.parseInt(button.getId().replace("dumpHopper", ""));
+        CoinModuleInterface.INSTANCE.dumpHopper(hopperId);
+        refreshTotals();
+        actionEvent.consume();
     }
 }

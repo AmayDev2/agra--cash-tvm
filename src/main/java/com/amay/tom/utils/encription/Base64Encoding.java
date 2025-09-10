@@ -9,7 +9,7 @@ public class Base64Encoding {
     public static String encode(String originalString){
         // Encode a string to Base64
         String encodedString = Base64.getEncoder().encodeToString(originalString.getBytes());
-        System.out.println("Encoded string: " + encodedString);
+        //System.out.println("Encoded string: " + encodedString);
         return encodedString;
     }
 

@@ -54,7 +54,7 @@ public class AgaraTicketController {
 
 //    public AgaraTicketController(QRTicket qrTicket) {
 //        this.qrTicket = qrTicket;
-//        System.out.println("TicketController initialized with QRTicket");
+//        //System.out.println("TicketController initialized with QRTicket");
 //    }
 
     @FXML
@@ -65,10 +65,10 @@ public class AgaraTicketController {
 
     public void updateTicketData(QRTicket qrTicket) {
         if (qrTicket == null) {
-            System.out.println("QRTicket is null. Skipping data population.");
+            //System.out.println("QRTicket is null. Skipping data population.");
             return;
         }
-        System.out.println("Populating ticket data...");
+        //System.out.println("Populating ticket data...");
         ticketNumberText.setText(qrTicket.getTicketNo());
         salepointText.setText(SystemConfig.getInstance().getCurrentEquipment().getEquipmentId());
         paymentTypeText.setText(qrTicket.getFareMode());

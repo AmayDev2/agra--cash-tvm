@@ -32,9 +32,9 @@ public class StationData {
             for (int i=0;i<stationList.size();i++) {
                 String stationId = stationList.get(i).getStationId();
                 String stationName = stationList.get(i).getStationName();
-                System.out.println("Station code: " + stationId);
-                System.out.println("Station name: " + stationName);
-                System.out.println();
+                //System.out.println("Station code: " + stationId);
+                //System.out.println("Station name: " + stationName);
+                //System.out.println();
                 stations[i]=new Station(stationId,stationName);
             }
     }

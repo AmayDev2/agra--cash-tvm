@@ -8,4 +8,6 @@ public interface IBNRListener {
     void compareTotalAmountAndChange(int totalAcceptedAmount,int change);
     void setStatus(BNRStatus status);
     void setAllowedNotes(List<Integer> list);
+
+    void disableCancelButton();
 }

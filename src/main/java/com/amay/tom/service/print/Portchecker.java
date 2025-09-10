@@ -11,7 +11,7 @@ public class Portchecker
 
       // use the for loop to print the available serial ports
         for(SerialPort S : AvailablePorts) {
-            System.out.println("\n  " + S.toString());
+            //System.out.println("\n  " + S.toString());
         }
 
 //      SerialPort MySerialPort = AvailablePorts[1];
@@ -21,18 +21,18 @@ public class Portchecker
 //
 //
 //        if (MySerialPort.isOpen()) {
-//        	System.out.println("OPEN "+ MySerialPort.getSystemPortName());        	//Check whether port open/not
+//        	//System.out.println("OPEN "+ MySerialPort.getSystemPortName());        	//Check whether port open/not
 ////            ImplPrintTicket PrintHelper = null;
 ////        ImplPrintTicket.printHelloWorld();
 //        }else {
-//        	System.out.println(" Port not open ");
+//        	//System.out.println(" Port not open ");
 //        }
 //        MySerialPort.closePort(); //Close the port
 //
 //        if (MySerialPort.isOpen()) {
-//        	System.out.println(" is Open ");
+//        	//System.out.println(" is Open ");
 //        }else {
-//        	System.out.println("\n Port not open ");
+//        	//System.out.println("\n Port not open ");
 //        }
   }
 }

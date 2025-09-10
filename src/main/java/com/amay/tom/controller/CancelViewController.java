@@ -65,7 +65,7 @@ public class CancelViewController {
 
     public void onClearClick(MouseEvent mouseEvent) {
 
-        System.out.println("Clearing the grid view");
+        //System.out.println("Clearing the grid view");
         cancelService.markTicketCancelByOrderId(SystemConfig.getLastOrderId());
 //        TODO: agent.getScuService().markLastOrderCancel();
         gridView.setVisible(false);

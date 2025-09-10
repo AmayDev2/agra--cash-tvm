@@ -142,14 +142,14 @@ public class TicketAnalysisDetailsController {
             if (newToggle != null) {
                 RadioButton selected = (RadioButton) newToggle;
                 String selectedValue = selected.getText();
-                System.out.println("Selected: " + selectedValue);
+                //System.out.println("Selected: " + selectedValue);
 
                 // You can trigger custom logic here
                 if (selected == paid) {
                     Platform.runLater(()->setTicketDetails(this.qrTicket,this.aTicketAnalysisDTO));
-                    System.out.println("Paid selected");
+                    //System.out.println("Paid selected");
                 } else if (selected == unpaid) {
-                    System.out.println("Unpaid selected");
+                    //System.out.println("Unpaid selected");
                     Platform.runLater(()->setTicketDetails(this.qrTicket,this.aTicketAnalysisDTO));
                 }
             }
@@ -229,7 +229,7 @@ public class TicketAnalysisDetailsController {
         adjustedCount.setText(String.valueOf(aTicketAnalysisDTO.getTicketHistory().getAdjustCount()));
 
         final Validation validation=new QRValidation();
-        System.out.println("Setting ticket details"+qrTicket.toString());
+        //System.out.println("Setting ticket details"+qrTicket.toString());
         this.ticketId.setText(qrTicket.getTicketId());
         this.origin.setText(qrTicket.getInStation().getStationName());
         this.destination.setText(qrTicket.getOutStation().getStationName());
@@ -440,7 +440,7 @@ public class TicketAnalysisDetailsController {
 
     @FXML
     private void onClickAdjust(ActionEvent actionEvent) {
-        System.out.println("Adjust button clicked 1");
+        //System.out.println("Adjust button clicked 1");
         try {
         FXMLLoader fxmlLoader = ViewFactory.getPayment();
         com.amay.tom.controller.PaymentController paymentController=new com.amay.tom.controller.PaymentController(this.agent);
@@ -469,7 +469,7 @@ public class TicketAnalysisDetailsController {
 
     @FXML
     private void onClickFreeAdjust(ActionEvent actionEvent) {
-        System.out.println("Free Adjust button clicked 1");
+        //System.out.println("Free Adjust button clicked 1");
         try {
             FXMLLoader fxmlLoader = ViewFactory.getPayment();
             com.amay.tom.controller.PaymentController paymentController=new PaymentController(this.agent);

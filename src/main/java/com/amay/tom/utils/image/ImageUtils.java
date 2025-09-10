@@ -16,7 +16,7 @@ public class ImageUtils {
         File outputFile = new File(outputPath);
         try {
             ImageIO.write(image, format, outputFile);
-            System.out.println("Image saved successfully.");
+            //System.out.println("Image saved successfully.");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -59,7 +59,7 @@ public class ImageUtils {
         File outputFile = new File(outputPath);
         try {
             ImageIO.write(image, "png", outputFile);
-            System.out.println("Image saved successfully.");
+            //System.out.println("Image saved successfully.");
         } catch (IOException e) {
             e.printStackTrace();
         }

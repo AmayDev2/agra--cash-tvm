@@ -15,7 +15,7 @@ public class FareLine3 {
 //    public static void saveData(String fileName) {
 //        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(EnvFile.getDistanceMatrixFilePath()+fileName))) {
 //            oos.writeObject(distanceMatrix);
-//            System.out.println("Data saved successfully.");
+//            //System.out.println("Data saved successfully.");
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
@@ -24,7 +24,7 @@ public class FareLine3 {
 //        FareLine3.distanceMatrix=distanceMatrix;
 //        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(EnvFile.getDistanceMatrixFilePath() +fileName))) {
 //            oos.writeObject(distanceMatrix);
-//            System.out.println("Data saved successfully.");
+//            //System.out.println("Data saved successfully.");
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
@@ -38,7 +38,7 @@ public class FareLine3 {
             FareTableRepository fareTableRepository = agent.getFareTableRepository();
             List<FareRowEntity> fareRowEntities = fareTableRepository.findAll();
             distanceMatrix =  FaretableMapper.entityToMatrix(fareRowEntities,agent.getFareTableRepository().getUniqueSourceCount());
-            System.out.println("Data retrieved successfully.");
+            //System.out.println("Data retrieved successfully.");
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }

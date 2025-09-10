@@ -34,17 +34,17 @@ public class TicketController2 {
 
     public TicketController2(QRTicket qrTicket) {
         this.qrTicket = qrTicket;
-        System.out.println("TicketController2.TicketController2");
+        //System.out.println("TicketController2.TicketController2");
     }
 
     @FXML
     private void initialize() {
-        System.out.println("TicketController2.initialize");
+        //System.out.println("TicketController2.initialize");
         logo.setImage(new Image("file:E:\\Amay Technosystems\\Tom\\amaylogo.png"));
 
 
         //**********************************************
-        System.out.println("TicketController2.setData");
+        //System.out.println("TicketController2.setData");
         ticketID.setText(ticketID.getText().split(":")[0]+": "+qrTicket.getTicketNo());
         deviceID.setText(deviceID.getText().split(":")[0]+": "+qrTicket.getFareMode());
         fare.setText("₹ "+qrTicket.getPrice()+"/-");
@@ -59,7 +59,7 @@ public class TicketController2 {
     }
 
     public void setTicketDetails(QRTicket qrTicket){
-        System.out.println("TicketController2.setData");
+        //System.out.println("TicketController2.setData");
         ticketID.setText(ticketID.getText().split(":")[0]+": "+qrTicket.getTicketNo());
         deviceID.setText(deviceID.getText().split(":")[0]+": "+qrTicket.getFareMode());
         fare.setText("₹ "+qrTicket.getPrice()+"/-");

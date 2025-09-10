@@ -38,4 +38,9 @@ public class BNRListener implements IBNRListener {
     public void setAllowedNotes(List<Integer> list) {
         controller.setAcceptableNote(list);
     }
+
+    @Override
+    public void disableCancelButton() {
+        controller.disableCancelButton();
+    }
 }

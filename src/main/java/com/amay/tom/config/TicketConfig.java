@@ -15,7 +15,7 @@ TicketConfig {
     public void getTicketConfig() {
         ticketConfigDTO = new TicketConfigDTO();///objectMapper.readValue(new File(EnvFile.getTicketConfigFile()),TicketConfigDTO.class);
         // Print station details
-        System.out.println(ticketConfigDTO.toString());
+        //System.out.println(ticketConfigDTO.toString());
     }
 
     public TicketConfigDTO getProductTypeDefDTO() {
