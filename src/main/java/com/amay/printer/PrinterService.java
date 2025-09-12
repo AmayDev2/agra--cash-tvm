@@ -7,6 +7,7 @@ import com.amay.tom.config.SystemConfig;
 import com.amay.tom.model.QRTicket;
 import com.amay.tom.repository.StationData;
 import com.amay.tvm.backend.enums.LoggerTag;
+import com.amay.tvm.ui.Images;
 import com.custom.wndapijwrap.*;
 import javafx.scene.image.Image;
 import org.tinylog.Logger;
@@ -204,7 +205,7 @@ public class PrinterService implements PrinterInterface {
 
 
     private void printImageByPath(){
-        String path= ENVURL.CONFIG+"images"+ File.separator+"ticket_logo.jpg";
+        String path= Images.PROJECT_LOGO_FOR_TICKET;
         try {
             PrintImageSettings pis = new PrintImageSettings();
             pis.PrintScaleMode = PrintImageSettings.ImageScale.IMAGE_SCALE_NONE;

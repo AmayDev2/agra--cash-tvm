@@ -10,6 +10,10 @@ public class HaveAmountObject{
     }
     public HaveAmountObject(List<AmountDetail> amountDetailList){
         this.amountDetailList=amountDetailList;
+        totalAmount=amountDetailList.stream()
+                .mapToInt(amountDetail -> amountDetail.getAmount()*amountDetail.getQuantity())
+                .sum();
+
     }
     public AmountDetail[] getArrayOfAmountDetails(){
         return amountDetailList.toArray(AmountDetail[]::new);

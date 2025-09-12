@@ -46,7 +46,6 @@ public enum CoinModuleInterface {
 
 		// Original test case - modified for standard denominations
 		HaveAmountObject haveAmount = new HaveAmountObject(list);
-		haveAmount.totalAmount = amount;
 
 		HaveAmountObject combinedHaveAmount = new HaveAmountObject(new ArrayList<>());
 		combinedHaveAmount.totalAmount = amount;
@@ -67,6 +66,7 @@ public enum CoinModuleInterface {
 		HaveAmountObject haveAmount = new HaveAmountObject(HoppersRegistry.INSTANCE.getHoppers());
 		haveAmount.totalAmount = amount;
 		ReturnableAmountObject result = new MaxChangePossibleService().getReturnableAmount(new ReturnableAmountObject(new ArrayList<>()),haveAmount, amount, 0);
+
 		//System.out.println("Dispensing coins for amount: "+amount+", possible amount: "+result.totalAmount);
 		result.amountDetailList.forEach(ad -> Logger.info("Dispensing Denomination: {} x {} for", ad.getAmount(), ad.getQuantity(),amount));
 		if(result.totalAmount!=amount && !service.isConnected()){

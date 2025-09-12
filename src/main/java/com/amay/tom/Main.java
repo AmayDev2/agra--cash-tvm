@@ -204,11 +204,10 @@ public class Main extends Application {
 
                 Stage pduStage = new Stage();
                 pduStage.setScene(pduScene);
-                pduStage.setTitle("Amay PDU Monitor");
+                pduStage.setTitle("PDU Monitor");
                 pduStage.setX(screen2Bounds.getMinX());
                 pduStage.setY(screen2Bounds.getMinY());
                 pduStage.setFullScreen(true);
-//            pduStage.setAlwaysOnTop(true);
                 pduStage.setFullScreenExitHint(null);
                 pduStage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
                 pduStage.initStyle(StageStyle.UNDECORATED);

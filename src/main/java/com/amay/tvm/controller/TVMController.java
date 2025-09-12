@@ -6,6 +6,7 @@ import com.amay.tom.config.SystemConfig;
 import com.amay.tom.controller.components.StatusBottomBarView;
 import com.amay.tom.enums.DeviceOperationMode;
 import com.amay.tom.model.TicketType;
+import com.amay.tom.pdu.controller.StationMode;
 import com.amay.tom.repository.StationData;
 import com.amay.tvm.util.Snackbar;
 import javafx.animation.KeyFrame;
@@ -50,7 +51,7 @@ public class TVMController {
     private StationData stationData;
     DeviceOperationMode currentMode;
 
-    private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("hh:mm:ss a");
+    private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("hh:mm:ss");
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd MMMM, yyyy");
 
 
@@ -184,7 +185,7 @@ public class TVMController {
                 stackPane.getChildren().add(home);
             }else if(currentMode!=newStatus &&  newStatus == DeviceOperationMode.EMERGENCY) {
                 FXMLLoader loader= ViewFactory.getSpecialModeScreen();
-                loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData,"⚠ EMERGENCY MODE ACTIVATED ⚠"));
+                loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData, StationMode.EMERGENCY));
                 try {
                     stackPane.getChildren().clear();
                     stackPane.getChildren().add(loader.load());
@@ -194,7 +195,7 @@ public class TVMController {
 
             }else if(currentMode!=newStatus &&  newStatus == DeviceOperationMode.STATION_CLOSE) {
                 FXMLLoader loader= ViewFactory.getSpecialModeScreen();
-                loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData,"STATION CLOSED"));
+                loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData,StationMode.STATION_CLOSED));
                 try {
                     stackPane.getChildren().clear();
                     stackPane.getChildren().add(loader.load());
@@ -204,7 +205,7 @@ public class TVMController {
 
             }else if(currentMode!=newStatus &&  newStatus == DeviceOperationMode.OUT_OF_SERVICE) {
                 FXMLLoader loader= ViewFactory.getSpecialModeScreen();
-                loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData,"OUT OF SERVICE"));
+                loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData,StationMode.OUT_OF_SERVICE));
                 try {
                     stackPane.getChildren().clear();
                     stackPane.getChildren().add(loader.load());
@@ -213,7 +214,7 @@ public class TVMController {
                 }
             }else if(currentMode!=newStatus &&  newStatus == DeviceOperationMode.MAINTENANCE) {
                 FXMLLoader loader= ViewFactory.getSpecialModeScreen();
-                loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData,"UNDER MAINTENANCE"));
+                loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData,StationMode.MAINTENANCE));
                 try {
                     stackPane.getChildren().clear();
                     stackPane.getChildren().add(loader.load());

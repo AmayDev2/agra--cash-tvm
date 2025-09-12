@@ -30,12 +30,10 @@ public class ModesListener implements RemoteListener {
         //System.out.println("sunle bhai"+commandClass.getName());
         if(commandClass.equals(EmergencyCommand.class)){
             setEmergencyMode();
-        }
-        else if (commandClass.equals(StationClosedCommand.class)){
+        }else if (commandClass.equals(StationClosedCommand.class)){
             setStationClosedMode();
         } else if(commandClass.equals(InServiceBothCommand.class)){
             setInServiceBoth();
-
         }  else if(commandClass.equals(InServiceQRCommand.class)){
             setInServiceQR();
         } else if(commandClass.equals(InServiceCardCommand.class)){

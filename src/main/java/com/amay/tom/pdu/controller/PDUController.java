@@ -48,9 +48,6 @@ public class PDUController {
     }
 
     public void setStation(Station station) {
-        Label titleLabel = (Label) header.lookup("#labelStationName"); // fx:id in header.fxml
-        if (titleLabel != null) {
-            Platform.runLater(()->titleLabel.setText(station.getStationName()));
-        }
+
     }
 }

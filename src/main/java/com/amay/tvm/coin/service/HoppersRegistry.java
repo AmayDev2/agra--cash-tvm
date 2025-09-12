@@ -4,6 +4,7 @@ import com.amay.tvm.coin.model.AmountDetail;
 import lombok.Getter;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -46,4 +47,8 @@ public enum HoppersRegistry {
     public int getAmount(String number) {
         return hoppers.stream().filter(hopper -> hopper.getContainerId().equals(number)).findFirst().map(hopper -> hopper.amount).orElse(0);
     }
+
+//    public List<AmountDetail> getHopperOfMaxAmount() {
+//        return Collections.singletonList(hoppers.stream().max(Comparator.comparingInt(hopper -> hopper.getAmount() * hopper.getAmount())).orElse((AmountDetail) List.of()));
+//    }
 }
