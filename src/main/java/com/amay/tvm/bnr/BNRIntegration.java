@@ -63,12 +63,15 @@ public class BNRIntegration {
 
     }
 
+    private static boolean isAllowed;
+
     //TODO: FIX THIS METHOD
  public static void cancel(boolean empty) throws JxfsException {
+     isAllowed=false;
 
         try {
             control.cancel(1);
-            Thread.sleep(1000);
+            Thread.sleep(100);
         } catch (JxfsException e) {
             Logger.debug(e.getMessage());
         } catch (InterruptedException e) {
@@ -197,14 +200,14 @@ public class BNRIntegration {
 
     public static boolean cashIn(CashPayment paymentInstance,int amount, IBNRListener listener) {
         BNRIntegration.bnrListener=listener;
+        isAllowed=true;
         try {
             endCashInTransaction();
-//            control.open();
             haveAmountObject=getBnrHaveAmountObject();
         } catch (JxfsException e) {
             e.printStackTrace();
         }
-        ACCEPTED_AMOUNT=0;
+        ACCEPTED_AMOUNT=0;subscribeEvents();
         //System.out.print("Insert amount to pay : ");
          CASH_IN_AMOUNT=amount* 100L;
         AcceptAmountResponse acceptedAmount=null;
@@ -245,7 +248,7 @@ public class BNRIntegration {
                 list.add(x.getCashType().getValue()/100);
             });
 
-            bnrListener.setAllowedNotes(list.stream().toList());
+            bnrListener.setAllowedNotes(list.stream().sorted().toList());
         }
 
         Logger.tag(LoggerTag.APP).debug("Update Denomination Info : "+event.getResult());
@@ -518,19 +521,19 @@ public class BNRIntegration {
         control.addIntermediateListener(new IJxfsIntermediateListener() {
             public void intermediateOccurred(JxfsIntermediateEvent IE) {
                 if(MEIJxfsCode.BNRXFS_I_CDR_SUB_CASH_IN.getCode()==IE.getReason() && IE.getData() instanceof MEICashInOrder data) {
-                    Logger.tag(LoggerTag.APP).debug("You`ve inserted(partial) : " + data.getDenomination().getAmount() + " " + CASH_IN_CURRENCY);
-                    bnrListener.acceptedAmount((int) data.getDenomination().getAmount());   //PAISA-> RUPEE : Last inserted amount of note
-                    bnrListener.informationToShow("Inserted Note is of : ₹ "+data.getDenomination().getAmount()/100+"/-");
-                    ACCEPTED_AMOUNT+=data.getDenomination().getAmount();
-                    mark(CASH_IN_AMOUNT-ACCEPTED_AMOUNT);
-                    Logger.tag(LoggerTag.APP).debug("Insertable Notes Are :-");
-                    Set<Integer> list=new HashSet<>();
-                    vector.stream().filter(JxfsDenominationInfo::isEnableDenomination).forEach(x->{
-                        //System.out.print(x.getCashType().getValue()/100 +" , ");
-                        list.add(x.getCashType().getValue()/100);
-                    });
-
-                    bnrListener.setAllowedNotes(list.stream().toList());
+//                    Logger.tag(LoggerTag.APP).debug("You`ve inserted(partial) : " + data.getDenomination().getAmount() + " " + CASH_IN_CURRENCY);
+//                    bnrListener.acceptedAmount((int) data.getDenomination().getAmount());   //PAISA-> RUPEE : Last inserted amount of note
+//                    bnrListener.informationToShow("Inserted Note is of : ₹ "+data.getDenomination().getAmount()/100+"/-");
+//                    ACCEPTED_AMOUNT+=data.getDenomination().getAmount();
+//                    mark(CASH_IN_AMOUNT-ACCEPTED_AMOUNT);
+//                    Logger.tag(LoggerTag.APP).debug("Insertable Notes Are :-");
+//                    Set<Integer> list=new HashSet<>();
+//                    vector.stream().filter(JxfsDenominationInfo::isEnableDenomination).forEach(x->{
+//                        //System.out.print(x.getCashType().getValue()/100 +" , ");
+//                        list.add(x.getCashType().getValue()/100);
+//                    });
+//
+//                    bnrListener.setAllowedNotes(list.stream().toList());
                 }else  if(MEIJxfsCode.XFS_I_CDR_INPUT_REFUSED.getCode()==IE.getReason() ) {
                     //
                     Logger.tag(LoggerTag.APP).debug("Refused to accept");
@@ -782,18 +785,24 @@ public class BNRIntegration {
         private int coinChangedAmount;
     }
 
+    static final  int MAX_CASH_IN_ATTEMPT=15;
     public static AcceptAmountResponse acceptAmountV2(long amount) throws JxfsException {
         AcceptAmountResponse acceptAmountResponse=new AcceptAmountResponse();
-        queryDenomination(amount);
+
         MEICashInOrder data = null;
         long insertedAmount = 0;
         boolean hasChange = false;
         startCashInTransaction();
 
         try {
-            data = cashIn(CASH_IN_AMOUNT, CASH_IN_CURRENCY);
-            insertedAmount = data.getDenomination().getAmount(); //after cashIn function completion it gives total amount Accepted
-            bnrListener.compareTotalAmountAndChange((int)insertedAmount, (int) (insertedAmount - CASH_IN_AMOUNT));
+            for(int cashInCount=0;isAllowed && cashInCount<MAX_CASH_IN_ATTEMPT && insertedAmount<amount;cashInCount++) {
+                queryDenomination(amount-insertedAmount);
+                data = cashInOneByOne(1, CASH_IN_CURRENCY);
+                insertedAmount+= data.getDenomination().getAmount(); //after cashIn function completion it gives total amount Accepted
+                Logger.tag(LoggerTag.APP).debug("You`ve inserted(partial) : " + data.getDenomination().getAmount() + " " + CASH_IN_CURRENCY);
+                bnrListener.acceptedAmount((int) data.getDenomination().getAmount());   //PAISA-> RUPEE : Last inserted amount of note
+                bnrListener.informationToShow("Inserted Note is of : ₹ " + data.getDenomination().getAmount() / 100 + "/-");
+            }
             bnrListener.disableCancelButton();
 
             // Check if change needed
@@ -815,7 +824,7 @@ public class BNRIntegration {
                     CoinResponseDecoder.CoinModuleDispenseResponse dispenseResponse = CoinModuleInterface.INSTANCE.dispense(changeNeeded / 100);
                     Logger.tag(LoggerTag.APP).info(dispenseResponse.toString());
                     if (!dispenseResponse.success) {
-                        //TODO: if coin module don't have any  change  process for role back
+                        //TODO: if coin module don't have any  change  process for role-back
                         acceptAmountResponse.setStatus(false);
                         try {
                             cashInRollback();
@@ -906,6 +915,33 @@ public class BNRIntegration {
         // If the result is not successful
         if (event.getResult() != IJxfsConst.JXFS_RC_SUCCESSFUL) {
             Logger.error("CashIn failed with error: {} ", event.getResult());
+            bnrListener.informationToShow(BNRMessage.REFUSE_TO_ACCEPT);
+            throw new MEIJxfsException(event.getResult(), event.getData());
+        } else {
+            result = (MEICashInOrder) event.getData();
+        }//if
+        return result;
+    }//cashIn
+
+
+
+    private static MEICashInOrder cashInOneByOne(long amount, String currencyCode) throws JxfsException {
+        MEICashInOrder result = null;
+        JxfsOperationCompleteEvent event = null;
+
+        final JxfsDenomination denomination = new JxfsDenomination(null, amount, 0);
+        final JxfsCurrency jxfsCurrency = new JxfsCurrency(new JxfsCurrencyCode(
+                currencyCode == null ? "" : currencyCode), 0);
+
+        // Run cashIn operation
+        event = helper.run(new ISynchronousOperation() {
+            public int run(JxfsATM deviceControl) throws JxfsException {
+                return ((JxfsATM) deviceControl).cashIn(new JxfsCashInOrder(denomination, jxfsCurrency));
+            }//run
+        });
+        // If the result is not successful
+        if (event.getResult() != IJxfsConst.JXFS_RC_SUCCESSFUL) {
+            Logger.tag(LoggerTag.APP).error("CashIn failed with error: {} ", event.getResult());
             bnrListener.informationToShow(BNRMessage.REFUSE_TO_ACCEPT);
             throw new MEIJxfsException(event.getResult(), event.getData());
         } else {

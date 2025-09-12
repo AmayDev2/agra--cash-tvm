@@ -9270,3 +9270,35 @@ Valid Upto       : 120 minutes after entry
 2025-09-12 15-45-41.0820[EnumUSBDevices]Begin
 2025-09-12 15-45-41.0836[EnumUSBDevices]Found 0 USB Devices
 2025-09-12 15-45-41.0836[EnumUSBDevices]End
+2025-09-12 16-11-32.0253[]*****************************************
+2025-09-12 16-11-32.0256[]DLL Log Initialize. Verbosity: 6
+2025-09-12 16-11-32.0257[]*****************************************
+2025-09-12 16-11-32.0258[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-12 16-11-32.0258[]DLL Version: 1.07
+2025-09-12 16-11-32.0258[InitLibrary]Begin
+2025-09-12 16-11-32.0282[InitLibrary]Library SignID:00000101
+2025-09-12 16-11-32.0283[InitLibrary]Current SignID:00000101
+2025-09-12 16-11-32.0283[InitLibrary]End
+2025-09-12 16-11-32.0284[GetAPIVersionHwLibrary]Begin
+2025-09-12 16-11-32.0287[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-12 16-11-32.0288[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-12 16-11-32.0289[GetAPIVersionHwLibrary]End
+2025-09-12 16-11-32.0289[EnumUSBDevices]Begin
+2025-09-12 16-11-32.0295[EnumUSBDevices]Found 0 USB Devices
+2025-09-12 16-11-32.0296[EnumUSBDevices]End
+2025-09-12 16-39-49.0105[]*****************************************
+2025-09-12 16-39-49.0142[]DLL Log Initialize. Verbosity: 6
+2025-09-12 16-39-49.0142[]*****************************************
+2025-09-12 16-39-49.0143[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-12 16-39-49.0143[]DLL Version: 1.07
+2025-09-12 16-39-49.0143[InitLibrary]Begin
+2025-09-12 16-39-49.0168[InitLibrary]Library SignID:00000101
+2025-09-12 16-39-49.0169[InitLibrary]Current SignID:00000101
+2025-09-12 16-39-49.0169[InitLibrary]End
+2025-09-12 16-39-49.0171[GetAPIVersionHwLibrary]Begin
+2025-09-12 16-39-49.0174[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-12 16-39-49.0175[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-12 16-39-49.0176[GetAPIVersionHwLibrary]End
+2025-09-12 16-39-49.0177[EnumUSBDevices]Begin
+2025-09-12 16-39-49.0185[EnumUSBDevices]Found 0 USB Devices
+2025-09-12 16-39-49.0186[EnumUSBDevices]End

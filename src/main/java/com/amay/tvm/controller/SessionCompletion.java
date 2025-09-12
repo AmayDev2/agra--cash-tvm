@@ -60,7 +60,7 @@ public class SessionCompletion {
         printTicketService = new PrintTicketService(generatedTicket, paymentResponse, agent);
         if(!paymentResponse.isSuccess()){
             eventTitleText="Transaction Failed";
-            image="file://images/tvm/failed.png";
+            image="/images/tvm/failed.png";
         }
     }
 

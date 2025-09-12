@@ -177,11 +177,11 @@ public class CashInsertProcessingController {
         } catch (JxfsException e) {
             Logger.tag(LoggerTag.APP).debug(e.getMessage());
         }
-        PauseTransition pauseTransition = new PauseTransition(javafx.util.Duration.seconds(1));
-        pauseTransition.setOnFinished(event -> Platform.runLater(() ->
-                this.stackPane.getChildren().removeLast())
-        );
-        pauseTransition.play();
+//        PauseTransition pauseTransition = new PauseTransition(javafx.util.Duration.seconds(1));
+//        pauseTransition.setOnFinished(event -> Platform.runLater(() ->
+//                this.stackPane.getChildren().removeLast())
+//        );
+//        pauseTransition.play();
         actionEvent.consume();
     }
 
