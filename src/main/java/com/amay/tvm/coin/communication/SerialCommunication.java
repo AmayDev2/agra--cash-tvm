@@ -1,9 +1,11 @@
 package com.amay.tvm.coin.communication;
 
 
+import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.coin.constants.ProtocolConstants;
 import com.amay.tvm.coin.util.HexUtil;
 import com.fazecast.jSerialComm.SerialPort;
+import org.tinylog.Logger;
 
 import java.util.Arrays;
 
@@ -121,7 +123,7 @@ public class SerialCommunication implements SerialCommunicationInterface {
 				int prevTotal = total;
 				total += read;
 				byte[] chunk = Arrays.copyOfRange(buffer, prevTotal, total);
-				//System.out.println("PORT READ  : " + read + " bytes -> " + HexUtil.toHex(chunk));
+				Logger.tag(LoggerTag.APP).info("PORT READ  : " + read + " bytes -> " + HexUtil.toHex(chunk));
 				for (int i = prevTotal; i < total; i++) {
 					byte b = buffer[i];
 					if (startIndex < 0) {
@@ -149,7 +151,7 @@ public class SerialCommunication implements SerialCommunicationInterface {
 			try { Thread.sleep(5); } catch (InterruptedException ignored) {}
 		}
 		byte[] partial = Arrays.copyOfRange(buffer, 0, total);
-		//System.out.println("PORT TIMEOUT, partial RX: " + HexUtil.toHex(partial));
+		Logger.tag(LoggerTag.APP).error("PORT TIMEOUT, partial RX: " + HexUtil.toHex(partial));
 		throw new CommunicationException("Timeout waiting for ETX");
 	}
 }

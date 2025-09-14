@@ -48,7 +48,7 @@ public enum HoppersRegistry {
         return hoppers.stream().filter(hopper -> hopper.getContainerId().equals(number)).findFirst().map(hopper -> hopper.amount).orElse(0);
     }
 
-//    public List<AmountDetail> getHopperOfMaxAmount() {
-//        return Collections.singletonList(hoppers.stream().max(Comparator.comparingInt(hopper -> hopper.getAmount() * hopper.getAmount())).orElse((AmountDetail) List.of()));
-//    }
+    public List<AmountDetail> getHopperOfMaxAmount() {
+        return Collections.singletonList(hoppers.stream().max(Comparator.comparingInt(hopper -> hopper.getAmount() * hopper.getQuantity())).orElse((AmountDetail) List.of()));
+    }
 }

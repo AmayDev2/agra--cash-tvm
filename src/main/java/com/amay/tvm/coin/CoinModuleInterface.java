@@ -35,27 +35,24 @@ public enum CoinModuleInterface {
 	public boolean isDenominationPossible(List<AmountDetail> list,int amount){
 		// Original test case - modified for standard denominations
 		HaveAmountObject haveAmount = new HaveAmountObject(list);
-		haveAmount.totalAmount = amount;
 		ReturnableAmountObject result = new MaxChangePossibleService().getReturnableAmount(new ReturnableAmountObject(new ArrayList<>()),haveAmount, amount, 0);
 		return result.totalAmount == amount;
 	}
 
 	public boolean isDenominationPossibleAll(List<AmountDetail> list,int amount){
 		HaveAmountObject haveAmountCoin = new HaveAmountObject(HoppersRegistry.INSTANCE.getHoppers());
-		haveAmountCoin.totalAmount = amount;
 
 		// Original test case - modified for standard denominations
 		HaveAmountObject haveAmount = new HaveAmountObject(list);
 
 		HaveAmountObject combinedHaveAmount = new HaveAmountObject(new ArrayList<>());
-		combinedHaveAmount.totalAmount = amount;
 		combinedHaveAmount.amountDetailList.addAll(haveAmount.amountDetailList);
 		combinedHaveAmount.amountDetailList.addAll(haveAmountCoin.amountDetailList);
 
 		combinedHaveAmount.amountDetailList.sort((o1, o2) -> Integer.compare(o2.getAmount(), o1.getAmount())); // Sort in descending order of amount
 
 		ReturnableAmountObject result = new MaxChangePossibleService().getReturnableAmount(new ReturnableAmountObject(new ArrayList<>()),combinedHaveAmount, amount, 0);
-		result.amountDetailList.forEach(ad -> Logger.info("Using Denomination: {} x {} for", ad.getAmount(), ad.getQuantity(),amount));
+		result.amountDetailList.forEach(ad -> Logger.info("Using Denomination: {} x {} for {}", ad.getAmount(), ad.getQuantity(),amount));
 		return result.totalAmount == amount;
 	}
 
@@ -64,10 +61,11 @@ public enum CoinModuleInterface {
 		CoinResponseDecoder.CoinModuleDispenseResponse dispenseResponse=new CoinResponseDecoder.CoinModuleDispenseResponse(false,0,"msg",list);;
 		try{
 		HaveAmountObject haveAmount = new HaveAmountObject(HoppersRegistry.INSTANCE.getHoppers());
-		haveAmount.totalAmount = amount;
-		ReturnableAmountObject result = new MaxChangePossibleService().getReturnableAmount(new ReturnableAmountObject(new ArrayList<>()),haveAmount, amount, 0);
+		MaxChangePossibleService maxChangePossibleService=	new MaxChangePossibleService();
+		ReturnableAmountObject result = maxChangePossibleService.getReturnableAmount(new ReturnableAmountObject(new ArrayList<>()),haveAmount, amount, 0);
+		if(result.getAmountDetailList().size()>1)maxChangePossibleService.optimizeForSingleHoper(result,haveAmount);
 
-		//System.out.println("Dispensing coins for amount: "+amount+", possible amount: "+result.totalAmount);
+		Logger.tag(LoggerTag.BUSS).info("Dispensing coins for amount: "+amount+", possible amount: "+result.totalAmount);
 		result.amountDetailList.forEach(ad -> Logger.info("Dispensing Denomination: {} x {} for", ad.getAmount(), ad.getQuantity(),amount));
 		if(result.totalAmount!=amount && !service.isConnected()){
 			return dispenseResponse;
@@ -114,13 +112,13 @@ public enum CoinModuleInterface {
 			statue=statue || dispenseResult.success;
 		}
 
-		dispenseResponse.message="Dispense completed";
+		dispenseResponse.message=statue?"Dispense completed":"Dispense Failed";
 		dispenseResponse.success=statue;
 		dispenseResponse.setTotalAmount();
 
 		Logger.tag(LoggerTag.BUSS).info("Dispense response: "+dispenseResponse);
 		}catch (Exception e){
-			Logger.error("ERROR DURING DISPENSE COINS : ",e.getMessage());
+			Logger.tag(LoggerTag.APP).error("ERROR DURING DISPENSE COINS : ",e.getMessage());
 		}
 		return dispenseResponse;
 	}

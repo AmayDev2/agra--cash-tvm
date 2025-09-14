@@ -33,7 +33,6 @@ public class CoinModuleService {
 
 	private ModuleResponse sendAndReceive(ProtocolFrame frame, int timeoutMs) {
 		byte[] raw = frame.toByteArray();
-//		boolean escapeEnabled = Boolean.parseBoolean(System.getProperty("protocol.escape", "false"));
 		boolean escapeEnabled=DataEscapeUtil.isEscapeEnabled(frame);
 		byte[] escaped = escapeEnabled ? DataEscapeUtil.escapeFrame(raw) : raw;
 		Logger.tag(LoggerTag.BUSS).info("TX (raw)     : " + HexUtil.toHex(raw));
@@ -90,6 +89,7 @@ public class CoinModuleService {
 			// Unexpected; break to avoid infinite loop
 			break;
 		}
+
 		// After final response, send End command (no response expected)
 		byte endSeq = sequenceNumberManager.next();
 		ProtocolFrame end = CommandBuilder.createCoinChangeEndCommand(hopper, endSeq);

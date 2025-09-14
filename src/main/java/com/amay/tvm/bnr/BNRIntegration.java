@@ -68,6 +68,7 @@ public class BNRIntegration {
     //TODO: FIX THIS METHOD
  public static void cancel(boolean empty) throws JxfsException {
      isAllowed=false;
+     bnrListener.informationToShow(BNRMessage.CANCEL_TRYING);
 
         try {
             control.cancel(1);
@@ -78,17 +79,8 @@ public class BNRIntegration {
             e.printStackTrace();
         }
 
-     bnrListener.informationToShow(BNRMessage.CANCEL_TRYING);
 
-        if(!empty) {
-            try {
-                cashInRollback();
-            } catch (JxfsException e) {
-                Logger.debug(e.getMessage());
-            }
-        }
-//            endCashInTransaction();
-            bnrListener.informationToShow(BNRMessage.CANCELED);
+     bnrListener.informationToShow(BNRMessage.CANCELED);
         }
 
     /**************************************************************************
@@ -207,7 +199,8 @@ public class BNRIntegration {
         } catch (JxfsException e) {
             e.printStackTrace();
         }
-        ACCEPTED_AMOUNT=0;subscribeEvents();
+        ACCEPTED_AMOUNT=0;
+        subscribeEvents();
         //System.out.print("Insert amount to pay : ");
          CASH_IN_AMOUNT=amount* 100L;
         AcceptAmountResponse acceptedAmount=null;
@@ -275,8 +268,8 @@ public class BNRIntegration {
 
     private static void mark(long amount){
         vector.sort(Comparator.comparingInt(a -> a.getCashType().getValue()));
-        Logger.tag(LoggerTag.APP).debug("Amount to pay : {}", amount);
-        vector.forEach(a -> Logger.tag(LoggerTag.APP).debug(String.valueOf(a.getCashType().getValue()+" : "+a.isEnableDenomination())));
+        Logger.tag(LoggerTag.APP).info("Amount to pay : {}", amount);
+        vector.forEach(a -> Logger.tag(LoggerTag.APP).info(String.valueOf(a.getCashType().getValue()+" : "+a.isEnableDenomination())));
 
         long note=amount;
         for(MEIDenominationInfo x:vector){
@@ -297,9 +290,9 @@ public class BNRIntegration {
         if(maxDenomination>0) {
                 if(!isDenominationalPossible(maxDenomination)){
                     bnrListener.informationToShow(BNRMessage.EXACT_AMOUNT_TO_ENTER);
-                    Logger.tag(LoggerTag.APP).debug("Denomination not  possible for max denomination : {}", maxDenomination);
+                    Logger.tag(LoggerTag.APP).info("Denomination not  possible for max denomination : {}", maxDenomination);
                     for (MEIDenominationInfo x : vector) {
-                        x.setEnableDenomination(x.getCashType().getValue()<=maxDenomination);
+                        x.setEnableDenomination(x.getCashType().getValue()<=amount);
                     }
                 }else {
                     Logger.tag(LoggerTag.APP).debug("Denomination possible for max denomination : {}", maxDenomination);
@@ -307,7 +300,7 @@ public class BNRIntegration {
         }
 
         Logger.tag(LoggerTag.APP).debug("Marking denomination for amount final order : {}", amount);
-        vector.forEach(a -> Logger.tag(LoggerTag.APP).debug(String.valueOf(a.getCashType().getValue()+" : "+a.isEnableDenomination())));
+        vector.forEach(a -> Logger.tag(LoggerTag.APP).info(String.valueOf(a.getCashType().getValue()+" : "+a.isEnableDenomination())));
 
     }
 
@@ -871,6 +864,8 @@ public class BNRIntegration {
      ***************************************************************************/
     private static void startCashInTransaction() throws JxfsException {
 
+        control.cancel(1);
+
 
         var event=helper.run(new ISynchronousOperation() {
             public int run(JxfsATM control) throws JxfsException {
@@ -1200,7 +1195,7 @@ public class BNRIntegration {
         bnrHaveAmount.amountDetailList.sort(Comparator.comparingInt(AmountDetail::getAmount).reversed());
 
         Logger.tag(LoggerTag.APP).debug("TOTAL SUM : "+sum.get());
-        bnrHaveAmount.totalAmount=sum.get();
+//        bnrHaveAmount.totalAmount=sum.get();
         return bnrHaveAmount;
 
     }//observeCashUnit

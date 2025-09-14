@@ -1,7 +1,10 @@
 package com.amay.tvm.coin.model;
 
+import lombok.Getter;
+
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class HaveAmountObject{
     public List<AmountDetail> amountDetailList;
@@ -10,13 +13,15 @@ public class HaveAmountObject{
     }
     public HaveAmountObject(List<AmountDetail> amountDetailList){
         this.amountDetailList=amountDetailList;
-        totalAmount=amountDetailList.stream()
-                .mapToInt(amountDetail -> amountDetail.getAmount()*amountDetail.getQuantity())
-                .sum();
+
 
     }
     public AmountDetail[] getArrayOfAmountDetails(){
         return amountDetailList.toArray(AmountDetail[]::new);
     }
-    public int totalAmount;
+    public int getTotalAmount() {
+        return amountDetailList.stream()
+                .mapToInt(amountDetail -> amountDetail.getAmount()*amountDetail.getQuantity())
+                .sum();
+    }
 }

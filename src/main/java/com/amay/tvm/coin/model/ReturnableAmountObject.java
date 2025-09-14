@@ -1,8 +1,11 @@
 package com.amay.tvm.coin.model;
 
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
 public class ReturnableAmountObject{
     public List<AmountDetail> amountDetailList;
     public int totalAmount;

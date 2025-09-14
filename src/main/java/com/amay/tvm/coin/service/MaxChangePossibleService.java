@@ -5,6 +5,10 @@ import com.amay.tvm.coin.model.AmountDetail;
 import com.amay.tvm.coin.model.HaveAmountObject;
 import com.amay.tvm.coin.model.ReturnableAmountObject;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+
 public class MaxChangePossibleService {
 
     public ReturnableAmountObject getReturnableAmount(ReturnableAmountObject returnableAmountObject,
@@ -18,9 +22,9 @@ public class MaxChangePossibleService {
         }
 
         // If we don't have enough total amount available
-        if (haveAmountObject.totalAmount < totalReturnableAmount) {
+        if (haveAmountObject.getTotalAmount() < totalReturnableAmount) {
             // Return maximum possible with available amount
-            return getReturnableAmount(returnableAmountObject, haveAmountObject, haveAmountObject.totalAmount, index);
+            return getReturnableAmount(returnableAmountObject, haveAmountObject, haveAmountObject.getTotalAmount(), index);
         }
 
         AmountDetail currentDenomination = haveAmountObject.getArrayOfAmountDetails()[index];
@@ -43,5 +47,24 @@ public class MaxChangePossibleService {
 
         // Continue with remaining amount and next denomination
         return getReturnableAmount(returnableAmountObject, haveAmountObject, totalReturnableAmount, index + 1);
+    }
+
+    public void optimizeForSingleHoper(ReturnableAmountObject returnableAmount, HaveAmountObject haveAmount) {
+        if(returnableAmount.getTotalAmount()<=0)return;
+        Collections.reverse(haveAmount.amountDetailList);
+        //check for availability
+                haveAmount.amountDetailList.stream()
+                .filter(amountDetail ->
+                        amountDetail.getTotalAmount() >= returnableAmount.getTotalAmount() &&
+                                returnableAmount.getTotalAmount() % amountDetail.getAmount() == 0
+                )
+                .findFirst().ifPresent(matched-> {
+                    returnableAmount.getAmountDetailList().clear();
+                    int amount=matched.getAmount();
+                    int quantity=returnableAmount.getTotalAmount()/matched.getAmount();
+                    returnableAmount.getAmountDetailList().add(new AmountDetail(amount,amount*quantity ,quantity));
+
+                });
+
     }
 }

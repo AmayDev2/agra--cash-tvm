@@ -16,7 +16,7 @@ public class AmountDetail{
 
     public AmountDetail(int amount, int totalAmount, int quantity) {
         this.amount=amount;
-        this.totalAmount=totalAmount;
+        this.totalAmount=amount*quantity;
         this.quantity=quantity;
     }
 

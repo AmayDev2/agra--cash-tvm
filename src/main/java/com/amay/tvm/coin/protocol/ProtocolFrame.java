@@ -16,6 +16,16 @@ public class ProtocolFrame {
 		this.sequenceNumber = sequenceNumber;
 		this.data = data == null ? new byte[0] : Arrays.copyOf(data, data.length);
 	}
+	public byte[] getCompleteData() {
+		byte[] complete = new byte[2 + data.length]; // CMD + SN + DATA
+		complete[0] = command;
+		complete[1] = sequenceNumber;
+
+		// Manually copy elements of data[] into complete[]
+        System.arraycopy(data, 0, complete, 2, data.length);
+		return complete;
+	}
+
 
 	public byte getCommand() { return command; }
 	public byte getSequenceNumber() { return sequenceNumber; }
