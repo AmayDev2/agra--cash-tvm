@@ -9,15 +9,22 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @Accessors(chain = true)
 public class AmountDetail{
-    public int amount;
-    public int totalAmount;
-    public int quantity;
+    private int amount;
+    private int totalAmount;
+    private int quantity;
     private String containerId;
 
     public AmountDetail(int amount, int totalAmount, int quantity) {
         this.amount=amount;
-        this.totalAmount=amount*quantity;
         this.quantity=quantity;
+        this.totalAmount=amount*quantity;
     }
 
+    public int getTotalAmount(){
+        return amount*quantity;
+    }
+
+    public void addQuantity(int dispensedQuantity) {
+        this.quantity+=dispensedQuantity;
+    }
 }

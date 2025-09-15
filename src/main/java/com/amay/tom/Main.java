@@ -193,7 +193,7 @@ public class Main extends Application {
             var screens = javafx.stage.Screen.getScreens();
 
             if (screens.size() >=1) { //0205000301AB04A803
-                Rectangle2D screen2Bounds = screens.get(0).getVisualBounds();
+                Rectangle2D screen2Bounds = screens.get(1).getVisualBounds();
 
                 FXMLLoader pduLoader = new FXMLLoader(Main.class.getResource("pdu/main_container.fxml"));
 

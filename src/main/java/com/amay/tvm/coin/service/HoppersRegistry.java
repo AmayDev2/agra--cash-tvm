@@ -18,15 +18,15 @@ public enum HoppersRegistry {
         hoppers.add(new AmountDetail(amountHop1,amountHop1*hop1CoinQuantity,hop1CoinQuantity).setContainerId("1"));
         hoppers.add(new AmountDetail(amountHop2,amountHop2*hop2CoinQuantity,hop2CoinQuantity).setContainerId("2"));
         hoppers.add(new AmountDetail(amountHop3,amountHop3*hop3CoinQuantity,hop3CoinQuantity).setContainerId("3"));
-        hoppers.sort((hop11, hop22)->Integer.compare(hop22.amount,hop11.amount)); //DEC
+        hoppers.sort((hop11, hop22)->Integer.compare(hop22.getAmount(),hop11.getAmount())); //DEC
     }
 
     public String getHopperQuantity(String id){
-        return hoppers.stream().filter(hopper -> hopper.getContainerId().equals(id)).findFirst().map(hopper -> String.valueOf(hopper.quantity)).orElse("0");
+        return hoppers.stream().filter(hopper -> hopper.getContainerId().equals(id)).findFirst().map(hopper -> String.valueOf(hopper.getQuantity())).orElse("0");
     }
 
     public void resetHopper(int hopperId) {
-        hoppers.stream().filter(hopper -> hopper.getContainerId().equals(String.valueOf(hopperId))).findFirst().ifPresent(hopper -> hopper.quantity=0);
+        hoppers.stream().filter(hopper -> hopper.getContainerId().equals(String.valueOf(hopperId))).findFirst().ifPresent(hopper -> hopper.setQuantity(0));
     }
 
     public void updateHopper(int hopperId,int dispensedQuantity) {
@@ -37,15 +37,15 @@ public enum HoppersRegistry {
     }
 
     private void addQuantity(AmountDetail hopper, int dispensedQuantity) {
-        hopper.quantity+=dispensedQuantity;
+        hopper.addQuantity(dispensedQuantity);
     }
 
     private void deductQuantity(AmountDetail hopper, int dispensedQuantity) {
-        hopper.quantity-=dispensedQuantity;
+        hopper.addQuantity(-dispensedQuantity);
     }
 
     public int getAmount(String number) {
-        return hoppers.stream().filter(hopper -> hopper.getContainerId().equals(number)).findFirst().map(hopper -> hopper.amount).orElse(0);
+        return hoppers.stream().filter(hopper -> hopper.getContainerId().equals(number)).findFirst().map(AmountDetail::getAmount).orElse(0);
     }
 
     public List<AmountDetail> getHopperOfMaxAmount() {

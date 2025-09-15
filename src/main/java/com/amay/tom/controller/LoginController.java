@@ -90,7 +90,7 @@ public class LoginController {
                                 }
                         );
 
-//                       checkForWorkingHours();
+                       checkForWorkingHours();
                         }
                 )
         );
@@ -126,7 +126,7 @@ public class LoginController {
                         if (now.getSecond() == 0) {
                             // Update the clock icon or other features if needed
                             if (agent.getBusinessRule().isActiveWorkingHour()) {
-                                loginButtonClicked();
+//                                loginButtonClicked();
                                 // Stop the timeline once condition is met
                                 timeline.stop();
                                 timeline=null;

@@ -75,6 +75,7 @@ public class CoinModuleService {
 		ProtocolFrame start = CommandBuilder.createCoinDispenseCommand(hopper, quantity, seq);
 		ModuleResponse resp;
 		while (true) {
+			Logger.tag(LoggerTag.APP).info("Sending Partial Command");
 			resp = sendAndReceive(start, ProtocolConstants.LONG_OPERATION_TIMEOUT_MS);
 			if (!(resp instanceof CoinChangeResponse)) break;
 			CoinChangeResponse ccr = (CoinChangeResponse) resp;

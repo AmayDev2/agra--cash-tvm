@@ -100,9 +100,9 @@ public final class DataEscapeUtil {
 
     public static boolean isEscapeEnabled(ProtocolFrame frame) { //0205000101AB04AA03 dis
 		if (frame == null) return false;
-		byte[] dataForEscape = frame.getData();
-		if(frame.getCommand() == ProtocolConstants.STX || frame.getCommand() == ProtocolConstants.ETX || frame.getCommand()  == ProtocolConstants.DLE
-		|| frame.getSequenceNumber() == ProtocolConstants.STX || frame.getSequenceNumber() == ProtocolConstants.ETX || frame.getSequenceNumber()  == ProtocolConstants.DLE)return true;
+		byte[] dataForEscape = frame.getCompleteData();
+//		if(frame.getCommand() == ProtocolConstants.STX || frame.getCommand() == ProtocolConstants.ETX || frame.getCommand()  == ProtocolConstants.DLE
+//		|| frame.getSequenceNumber() == ProtocolConstants.STX || frame.getSequenceNumber() == ProtocolConstants.ETX || frame.getSequenceNumber()  == ProtocolConstants.DLE)return true;
 		if (dataForEscape == null) return false;
 		for (byte b : dataForEscape) {
 			Logger.tag(LoggerTag.APP).info(" For Escape Data byte: 0x{}", String.format("%02X", b));

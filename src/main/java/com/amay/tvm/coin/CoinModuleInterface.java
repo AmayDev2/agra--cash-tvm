@@ -63,7 +63,10 @@ public enum CoinModuleInterface {
 		HaveAmountObject haveAmount = new HaveAmountObject(HoppersRegistry.INSTANCE.getHoppers());
 		MaxChangePossibleService maxChangePossibleService=	new MaxChangePossibleService();
 		ReturnableAmountObject result = maxChangePossibleService.getReturnableAmount(new ReturnableAmountObject(new ArrayList<>()),haveAmount, amount, 0);
-		if(result.getAmountDetailList().size()>1)maxChangePossibleService.optimizeForSingleHoper(result,haveAmount);
+		if(result.getAmountDetailList().size()>1){
+			maxChangePossibleService.optimizeForSingleHoper(result,haveAmount);
+			Logger.tag(LoggerTag.BUSS).info("Update to one hopper");
+		}
 
 		Logger.tag(LoggerTag.BUSS).info("Dispensing coins for amount: "+amount+", possible amount: "+result.totalAmount);
 		result.amountDetailList.forEach(ad -> Logger.info("Dispensing Denomination: {} x {} for", ad.getAmount(), ad.getQuantity(),amount));
@@ -74,10 +77,10 @@ public enum CoinModuleInterface {
 		int delayTime=0;
 		for(AmountDetail amountDetail:result.amountDetailList) {
 			Thread.sleep(delayTime); // wait before sending next command
-			delayTime=10000;
+			delayTime=8000;
 			int hopper= Integer.parseInt(amountDetail.getContainerId());
-			Logger.tag(LoggerTag.APP).info("Sending >>>>> Command to Hopper: {} for Quantity: {}", hopper, amountDetail.quantity);
-			ModuleResponse response= service.dispenseCoin((byte) hopper, (byte) amountDetail.quantity);
+			Logger.tag(LoggerTag.APP).info("Sending >>>>> Command to Hopper: {} for Quantity: {}", hopper, amountDetail.getQuantity());
+			ModuleResponse response= service.dispenseCoin((byte) hopper, (byte) amountDetail.getQuantity());
 			Logger.tag(LoggerTag.BUSS).info("Dispense done, DATA=" + response.getData().length + " bytes");
 			CoinResponseDecoder.DispenseResult dispenseResult=CoinResponseDecoder.decodeDispenseResponse(response.getData());
 			HoppersRegistry.INSTANCE.updateHopper(hopper,dispenseResult.quantityDispensed);

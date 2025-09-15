@@ -31,15 +31,15 @@ public class MaxChangePossibleService {
 
         // Calculate maximum quantity we can use of current denomination
         int maxPossibleQuantity = Math.min(
-                totalReturnableAmount / currentDenomination.amount,  // Based on amount needed
-                currentDenomination.quantity                         // Based on availability
+                totalReturnableAmount / currentDenomination.getAmount(),  // Based on amount needed
+                currentDenomination.getQuantity()                        // Based on availability
         );
 
         if (maxPossibleQuantity > 0) {
             // Use maximum possible of current denomination
-            int amountUsed = currentDenomination.amount * maxPossibleQuantity;
+            int amountUsed = currentDenomination.getAmount() * maxPossibleQuantity;
             returnableAmountObject.amountDetailList.add(
-                    new AmountDetail(currentDenomination.amount, amountUsed, maxPossibleQuantity).setContainerId(currentDenomination.getContainerId())
+                    new AmountDetail(currentDenomination.getAmount(), amountUsed, maxPossibleQuantity).setContainerId(currentDenomination.getContainerId())
             );
             returnableAmountObject.totalAmount += amountUsed;
             totalReturnableAmount -= amountUsed;
@@ -62,7 +62,7 @@ public class MaxChangePossibleService {
                     returnableAmount.getAmountDetailList().clear();
                     int amount=matched.getAmount();
                     int quantity=returnableAmount.getTotalAmount()/matched.getAmount();
-                    returnableAmount.getAmountDetailList().add(new AmountDetail(amount,amount*quantity ,quantity));
+                    returnableAmount.getAmountDetailList().add(new AmountDetail(amount,amount*quantity ,quantity).setContainerId(matched.getContainerId()));
 
                 });
 
