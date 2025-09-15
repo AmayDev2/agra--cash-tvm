@@ -1,5 +1,7 @@
 package com.amay.tvm.coin.service;
 
+import com.amay.tvm.backend.entity.CoinAmountEntity;
+import com.amay.tvm.backend.repository.CoinAmountRepository;
 import com.amay.tvm.coin.model.AmountDetail;
 import lombok.Getter;
 
@@ -13,11 +15,17 @@ public enum HoppersRegistry {
     INSTANCE;
     @Getter
     private List<AmountDetail> hoppers;
-    public void setHoppers(int amountHop1,int amountHop2,int amountHop3,  int hop1CoinQuantity, int hop2CoinQuantity, int hop3CoinQuantity){
+    public void setHoppers(int amountHop1, int amountHop2, int amountHop3, int hop1CoinQuantity, int hop2CoinQuantity, int hop3CoinQuantity, CoinAmountRepository coinAmountRepository){
         hoppers=new ArrayList<>();
         hoppers.add(new AmountDetail(amountHop1,amountHop1*hop1CoinQuantity,hop1CoinQuantity).setContainerId("1"));
         hoppers.add(new AmountDetail(amountHop2,amountHop2*hop2CoinQuantity,hop2CoinQuantity).setContainerId("2"));
         hoppers.add(new AmountDetail(amountHop3,amountHop3*hop3CoinQuantity,hop3CoinQuantity).setContainerId("3"));
+        //        CoinAmountEntity coinAmountEntity=coinAmountRepository.findById("1");
+//        hoppers.add(new AmountDetail(coinAmountEntity.getUnitAmount(),coinAmountEntity.getUnitAmount()*coinAmountEntity.getQuantity(),coinAmountEntity.getQuantity()).setContainerId(coinAmountEntity.getContainerId()));
+//        coinAmountEntity=coinAmountRepository.findById("2");
+//        hoppers.add(new AmountDetail(coinAmountEntity.getUnitAmount(),coinAmountEntity.getUnitAmount()*coinAmountEntity.getQuantity(),coinAmountEntity.getQuantity()).setContainerId(coinAmountEntity.getContainerId()));
+//        coinAmountEntity=coinAmountRepository.findById("3");
+//        hoppers.add(new AmountDetail(coinAmountEntity.getUnitAmount(),coinAmountEntity.getUnitAmount()*coinAmountEntity.getQuantity(),coinAmountEntity.getQuantity()).setContainerId(coinAmountEntity.getContainerId()));
         hoppers.sort((hop11, hop22)->Integer.compare(hop22.getAmount(),hop11.getAmount())); //DEC
     }
 

@@ -17,4 +17,8 @@ public interface Env {
     public static final int FARE_PER_SJT = 20;
     public static final int FARE_PER_RJT = 35;
     public static final int FARE_PER_GT  = 50;
+
+    int hop1=5;
+    int hop2=10;
+    int hop3=10;
 }

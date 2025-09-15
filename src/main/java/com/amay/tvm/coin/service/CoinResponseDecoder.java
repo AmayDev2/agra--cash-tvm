@@ -2,11 +2,14 @@ package com.amay.tvm.coin.service;
 
 
 
+import lombok.ToString;
+
 import java.util.Arrays;
 import java.util.List;
 
 public class CoinResponseDecoder {
 
+    @ToString
     public static class CoinModuleDispenseResponse {
         public boolean success;
         public int amountDispensed;

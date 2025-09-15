@@ -40,6 +40,7 @@ import com.amay.tom.service.siftservice.ShiftService;
 import com.amay.tom.service.tom.IApplicationService;
 import com.amay.tom.service.userauth.UserAuth;
 import com.amay.tom.threadpool.ThreadPool;
+import com.amay.tvm.backend.repository.CoinAmountRepository;
 import com.amay.tvm.backend.repository.TransactionRepository;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -90,6 +91,7 @@ public class Agent {
     private CalendarConfigRepository calendarConfigRepository;
     private PeakTimeConfigRepository peakTimeConfigRepository;
     private StationRepository stationRepository;
+    private CoinAmountRepository coinAmountRepository;
     private FareTableRepository fareTableRepository;
     private TomConfigRepository tomConfigRepository;
     private ShiftRepository shiftRepository;

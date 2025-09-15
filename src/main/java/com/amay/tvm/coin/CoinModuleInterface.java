@@ -2,6 +2,7 @@ package com.amay.tvm.coin;
 
 
 import com.amay.tvm.backend.enums.LoggerTag;
+import com.amay.tvm.backend.repository.CoinAmountRepository;
 import com.amay.tvm.coin.model.AmountDetail;
 import com.amay.tvm.coin.model.HaveAmountObject;
 import com.amay.tvm.coin.model.ModuleResponse;
@@ -10,22 +11,18 @@ import com.amay.tvm.coin.service.CoinModuleService;
 import com.amay.tvm.coin.service.CoinResponseDecoder;
 import com.amay.tvm.coin.service.HoppersRegistry;
 import com.amay.tvm.coin.service.MaxChangePossibleService;
-import javafx.application.Platform;
 import org.tinylog.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 public enum CoinModuleInterface {
 	INSTANCE;
 	CoinModuleService service;
-	public CoinModuleService setupCoinModule(String comPort){
+	public CoinModuleService setupCoinModule(String comPort, CoinAmountRepository coinAmountRepository){
 		service = new CoinModuleService();
 		service.connect(comPort);
-		HoppersRegistry.INSTANCE.setHoppers(5,10,10,     0,0,0);
+		HoppersRegistry.INSTANCE.setHoppers(5,10,10,     0,0,0,coinAmountRepository);
 		return service;
 	}
 	public void closeCoinModule(){
@@ -119,7 +116,7 @@ public enum CoinModuleInterface {
 		dispenseResponse.success=statue;
 		dispenseResponse.setTotalAmount();
 
-		Logger.tag(LoggerTag.BUSS).info("Dispense response: "+dispenseResponse);
+		Logger.tag(LoggerTag.BUSS).info("Dispense response: "+dispenseResponse.amountDispensed+" "+dispenseResponse.success);
 		}catch (Exception e){
 			Logger.tag(LoggerTag.APP).error("ERROR DURING DISPENSE COINS : ",e.getMessage());
 		}

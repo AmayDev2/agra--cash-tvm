@@ -33,7 +33,7 @@ public class PDUController {
     public void initialize() {
         this.sceneManager = new SceneManager(stackPane);
         try {
-            HoppersRegistry.INSTANCE.setHoppers(5,10,10,     0,0,0);
+            HoppersRegistry.INSTANCE.setHoppers(5,10,10,     0,0,0,null);
             FXMLLoader loader=ViewFactory.getHopper();
             stackPane.getChildren().removeLast();
             stackPane.getChildren().add(loader.load());

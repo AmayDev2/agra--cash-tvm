@@ -807,12 +807,11 @@ public class BNRIntegration {
                 // Return money, if bnr can't change it
                 if (!hasChange) {
 //                    --->>> get maximum change available in bnr
-                    HaveAmountObject haveAmountObject = getBnrHaveAmountObject();
                     ReturnableAmountObject returnableAmountObject = CoinModuleInterface.INSTANCE.getMaxChangeableAmount(haveAmountObject, requiredChange / 100);
                     maxChangeAvailable = returnableAmountObject.totalAmount * 100;
 
                     int changeNeeded = (int) requiredChange - maxChangeAvailable;
-                    Logger.tag(LoggerTag.APP).debug("Unfortunately BNR can`t change this amount of bills " + changeNeeded);
+                    Logger.tag(LoggerTag.APP).info("Unfortunately BNR can`t change this amount of bills " + changeNeeded);
                     bnrListener.informationToShow(BNRMessage.COLLECT_COINS+changeNeeded/100);
                     CoinResponseDecoder.CoinModuleDispenseResponse dispenseResponse = CoinModuleInterface.INSTANCE.dispense(changeNeeded / 100);
                     Logger.tag(LoggerTag.APP).info(dispenseResponse.toString());
@@ -1185,9 +1184,9 @@ public class BNRIntegration {
                             .filter(x1->x1.getCount()!=0)
                             .findFirst().ifPresent(p -> {
                                 Logger.tag(LoggerTag.APP).debug(x.getCashTypeDescription().split(" ")[1]+"*"+p.getCount() + " -> " + Integer.parseInt(x.getCashTypeDescription().split(" ")[1]) * p.getCount()+" : "+x.getPhysicalName());
-                                sum.getAndAdd(Integer.parseInt(x.getCashTypeDescription().split(" ")[1]) * p.getCount());
+//                                sum.getAndAdd(Integer.parseInt(x.getCashTypeDescription().split(" ")[1]) * p.getCount());
                                 int amount=Integer.parseInt(x.getCashTypeDescription().split(" ")[1])/100;
-                                int quantity=p.getCount();
+                                int quantity=p.getCount();  //geting the count RC+escrow
                                 bnrHaveAmount.amountDetailList.add(new AmountDetail(amount,amount*quantity,quantity));
                             });
                 });

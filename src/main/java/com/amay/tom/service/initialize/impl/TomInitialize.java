@@ -88,6 +88,8 @@ import com.amay.tom.utils.StationData1;
 import com.amay.tom.utils.env.EnvFile;
 import com.amay.tom.utils.env.EnvLoader;
 import com.amay.tom.utils.helper.Helper;
+import com.amay.tvm.backend.repository.CoinAmountRepository;
+import com.amay.tvm.backend.repository.CoinAmountRepositoryImpl;
 import com.amay.tvm.backend.repository.TransactionRepository;
 import com.amay.tvm.backend.repository.TransactionRepositoryImpl;
 import com.amay.tvm.bnr.BNRIntegration;
@@ -520,7 +522,7 @@ public class TomInitialize implements ITomInitialize {
                         progress += 0.03;
                         this.updateUI(progress, "Connecting BNR,COIN MODULE & PRINTER.");
                         PrinterCommandDispatcher.INSTANCE.setupPrinter();
-                        CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort());
+                        CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort(),agent.getCoinAmountRepository());
                         BNRIntegration.bnrOpen();
                     } catch (RuntimeException e) {
                         e.printStackTrace();
@@ -983,6 +985,8 @@ public class TomInitialize implements ITomInitialize {
         agent.setShiftRepository(shiftRepository);
         TransactionRepository transactionRepository = new TransactionRepositoryImpl(agent.getConnection());
         agent.setTransactionRepository(transactionRepository);
+        CoinAmountRepository coinAmountRepository= new CoinAmountRepositoryImpl(agent.getConnection());
+        agent.setCoinAmountRepository(coinAmountRepository);
         return true;
     }
 
