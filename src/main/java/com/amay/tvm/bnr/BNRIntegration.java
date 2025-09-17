@@ -19,6 +19,7 @@ import com.jxfs.general.JxfsDeviceManager;
 import com.jxfs.general.JxfsRemoteDeviceInformation;
 import com.mei.bnr.consts.error.BnrXfsErrorCode;
 import com.mei.bnr.jxfs.device.*;
+import com.mei.bnr.jxfs.device.state.IModuleState;
 import com.mei.bnr.jxfs.device.state.MEIModuleStatus;
 import com.mei.bnr.jxfs.drivers.BnrUsbDriver;
 import com.mei.bnr.jxfs.service.IDirectIOConsts;
@@ -148,10 +149,18 @@ public class BNRIntegration {
     public static boolean isConnected(){
         try {
             if(control!=null && control.getStatus().isOpen() ){
+//                observeModules();
+                ArrayList<Integer> modules = getModules();
+                for (Integer module : modules) {
+                    MEIModuleStatus meiModuleStatus=getStatus(module);
+                    IModuleState.ModuleOperationalState moduleOperationalState=meiModuleStatus.getModuleOperationalState();
+//                    meiModuleStatus.getElements().getFirst().getElements().getFirst().getElementOperationalState();
+                    Logger.tag(LoggerTag.APP).debug("Module " + IIdentification.ModuleIdentificationEnum.getById(module)+" "+moduleOperationalState+" "+meiModuleStatus.getErrorCodeDescription());
+                }
                 return true;
             }
         } catch (JxfsException e) {
-            throw new RuntimeException(e);
+           Logger.tag(LoggerTag.APP).error(e.getMessage());
         }
         return false;
     }
@@ -778,7 +787,7 @@ public class BNRIntegration {
         private int coinChangedAmount;
     }
 
-    static final  int MAX_CASH_IN_ATTEMPT=15;
+    static final  int MAX_CASH_IN_ATTEMPT=20;
     public static AcceptAmountResponse acceptAmountV2(long amount) throws JxfsException {
         AcceptAmountResponse acceptAmountResponse=new AcceptAmountResponse();
 
@@ -798,6 +807,11 @@ public class BNRIntegration {
             }
             bnrListener.disableCancelButton();
 
+            if(insertedAmount<amount){
+                throw new RuntimeException("Cant process input amount is less than required");
+            }
+
+
             // Check if change needed
             if (insertedAmount > amount) {
                 long requiredChange = insertedAmount - amount;
@@ -811,7 +825,7 @@ public class BNRIntegration {
                     maxChangeAvailable = returnableAmountObject.totalAmount * 100;
 
                     int changeNeeded = (int) requiredChange - maxChangeAvailable;
-                    Logger.tag(LoggerTag.APP).info("Unfortunately BNR can`t change this amount of bills " + changeNeeded);
+                    Logger.tag(LoggerTag.APP).error("Unfortunately BNR can`t change this amount of bills " + changeNeeded);
                     bnrListener.informationToShow(BNRMessage.COLLECT_COINS+changeNeeded/100);
                     CoinResponseDecoder.CoinModuleDispenseResponse dispenseResponse = CoinModuleInterface.INSTANCE.dispense(changeNeeded / 100);
                     Logger.tag(LoggerTag.APP).info(dispenseResponse.toString());
@@ -836,7 +850,8 @@ public class BNRIntegration {
             } else {
                 acceptAmountResponse.setStatus(true);
             }
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             acceptAmountResponse.setStatus(false);
             try {
                 cashInRollback();

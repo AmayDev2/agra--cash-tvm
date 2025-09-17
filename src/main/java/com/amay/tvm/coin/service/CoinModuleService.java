@@ -7,6 +7,7 @@ import com.amay.tvm.coin.communication.SerialCommunication;
 import com.amay.tvm.coin.communication.SerialCommunicationInterface;
 import com.amay.tvm.coin.constants.ProtocolConstants;
 import com.amay.tvm.coin.model.CoinChangeResponse;
+import com.amay.tvm.coin.model.CoinDumpResponse;
 import com.amay.tvm.coin.model.ModuleResponse;
 import com.amay.tvm.coin.protocol.DataEscapeUtil;
 import com.amay.tvm.coin.protocol.ProtocolFrame;
@@ -95,6 +96,7 @@ public class CoinModuleService {
 		byte endSeq = sequenceNumberManager.next();
 		ProtocolFrame end = CommandBuilder.createCoinChangeEndCommand(hopper, endSeq);
 		Logger.tag(LoggerTag.BUSS).info("TX (end)     : " + HexUtil.toHex(end.toByteArray()));
+		sendAndReceive(end, 0);
 		try { comm.write(end.toByteArray()); } catch (Exception ignored) {}
 		return resp;
 	}
@@ -105,8 +107,8 @@ public class CoinModuleService {
 		ModuleResponse resp;
 		while (true) {
 			resp = sendAndReceive(start, ProtocolConstants.LONG_OPERATION_TIMEOUT_MS);
-			if (!(resp instanceof CoinChangeResponse)) break;
-			CoinChangeResponse ccr = (CoinChangeResponse) resp;
+			if (!(resp instanceof CoinDumpResponse)) break;
+			CoinDumpResponse ccr = (CoinDumpResponse) resp;
 			if (ccr.isProgress()) {
 				try { Thread.sleep(ProtocolConstants.LONG_OPERATION_PROGRESS_MS); } catch (InterruptedException ignored) {}
 				// continue waiting; device keeps sending progress frames for same SN
@@ -120,7 +122,10 @@ public class CoinModuleService {
 		}
 		byte endSeq = sequenceNumberManager.next();
 		ProtocolFrame end = CommandBuilder.createCoinDumpEndCommand(endSeq);
-		return sendAndReceive(end, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
+		Logger.tag(LoggerTag.BUSS).info("TX (end)     : " + HexUtil.toHex(end.toByteArray()));
+		sendAndReceive(end, 0);
+		try { comm.write(end.toByteArray()); } catch (Exception ignored) {}
+		return resp;
 	}
 
 	public ModuleResponse turnOnBuzzer() { return controlBuzzer(true); }

@@ -3,10 +3,7 @@ package com.amay.tvm.coin;
 
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.backend.repository.CoinAmountRepository;
-import com.amay.tvm.coin.model.AmountDetail;
-import com.amay.tvm.coin.model.HaveAmountObject;
-import com.amay.tvm.coin.model.ModuleResponse;
-import com.amay.tvm.coin.model.ReturnableAmountObject;
+import com.amay.tvm.coin.model.*;
 import com.amay.tvm.coin.service.CoinModuleService;
 import com.amay.tvm.coin.service.CoinResponseDecoder;
 import com.amay.tvm.coin.service.HoppersRegistry;
@@ -19,14 +16,28 @@ import java.util.List;
 public enum CoinModuleInterface {
 	INSTANCE;
 	CoinModuleService service;
+	private boolean isPoolingAllowed=true;
+	private String comPort;
 	public CoinModuleService setupCoinModule(String comPort, CoinAmountRepository coinAmountRepository){
 		service = new CoinModuleService();
-		service.connect(comPort);
 		HoppersRegistry.INSTANCE.setHoppers(5,10,10,     0,0,0,coinAmountRepository);
+		this.comPort=comPort;
+		connect(comPort);
 		return service;
 	}
 	public void closeCoinModule(){
 		service.disconnect();
+	}
+	private void connect(String comPort){
+		try{
+			service.connect(comPort);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void reconnect(){
+		connect(comPort);
 	}
 
 	public boolean isDenominationPossible(List<AmountDetail> list,int amount){
@@ -54,6 +65,7 @@ public enum CoinModuleInterface {
 	}
 
 	public CoinResponseDecoder.CoinModuleDispenseResponse dispense(int amount){
+		isPoolingAllowed=false;
 		List<CoinResponseDecoder.DispenseResult> list=new ArrayList<>();
 		CoinResponseDecoder.CoinModuleDispenseResponse dispenseResponse=new CoinResponseDecoder.CoinModuleDispenseResponse(false,0,"msg",list);;
 		try{
@@ -84,28 +96,7 @@ public enum CoinModuleInterface {
 			list.add(dispenseResult);
 		}
 
-/*			ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
-			int delay = 0;
 
-			for (AmountDetail amountDetail : result.amountDetailList) {
-				int hopper = Integer.parseInt(amountDetail.getContainerId());
-				int quantity = amountDetail.quantity;
-
-				scheduler.schedule(() -> {
-					try {
-						ModuleResponse response = service.dispenseCoin((byte) hopper, (byte) quantity);
-						CoinResponseDecoder.DispenseResult dispenseResult =
-								CoinResponseDecoder.decodeDispenseResponse(response.getData());
-						HoppersRegistry.INSTANCE.updateHopper(hopper, dispenseResult.quantityDispensed);
-
-						list.add(dispenseResult);
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
-				}, delay, TimeUnit.MILLISECONDS);
-
-				delay += 8000; // space tasks by 8 seconds
-			}*/
 
 		boolean statue = false;  // NO NEED
 		for(CoinResponseDecoder.DispenseResult dispenseResult:list){
@@ -119,6 +110,8 @@ public enum CoinModuleInterface {
 		Logger.tag(LoggerTag.BUSS).info("Dispense response: "+dispenseResponse.amountDispensed+" "+dispenseResponse.success);
 		}catch (Exception e){
 			Logger.tag(LoggerTag.APP).error("ERROR DURING DISPENSE COINS : ",e.getMessage());
+		}finally {
+			isPoolingAllowed=true;
 		}
 		return dispenseResponse;
 	}
@@ -130,11 +123,29 @@ public enum CoinModuleInterface {
 
 	}
 
-    public void dumpHopper(int hopperId) {
-		ModuleResponse response=service.dumpHopper((byte) hopperId);
-		Logger.tag(LoggerTag.BUSS).info("Dispense done, DATA=" + response.getData().length + " bytes");
-		HoppersRegistry.INSTANCE.resetHopper(hopperId);
+    public void dumpHopper(int hopperId){
+		isPoolingAllowed=true;
+		Logger.tag(LoggerTag.APP).info("Requesting Dump "+hopperId);
+		try {
+			CoinDumpResponse response = (CoinDumpResponse) service.dumpHopper((byte) hopperId);
+			Logger.tag(LoggerTag.BUSS).info("Dump done, DATA=" + response.getData().length + " bytes");
+			Logger.tag(LoggerTag.APP).info("Response Dump " + response.toString());
+			HoppersRegistry.INSTANCE.resetHopper(hopperId);
+		}catch (Exception e){
+			Logger.tag(LoggerTag.APP).error(e.getMessage());
+		}finally {
+				isPoolingAllowed=true;
+		}
+
     }
+
+	public boolean pooling(){
+		if(!isPoolingAllowed)return null != service;
+		PollingStatusResponse pollingStatusResponse=(PollingStatusResponse) service.pollStatus();
+		Logger.tag(LoggerTag.APP).info(pollingStatusResponse.toString());
+		return true;
+
+	}
 }
 
 

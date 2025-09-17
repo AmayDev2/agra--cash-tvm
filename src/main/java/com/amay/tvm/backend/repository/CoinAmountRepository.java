@@ -25,7 +25,7 @@ public abstract class CoinAmountRepository {
             "VALUES (?, ?, ?, ?, ?)";
 
     protected static final String SELECT_BY_ID_SQL = "SELECT * FROM " + TABLE_NAME + " WHERE containerId = ?";
-    protected static final String UPDATE_SQL = "UPDATE " + TABLE_NAME + " SET unitAmount=?, quantity=?, updatedAt=? WHERE containerId=?";
+    protected static final String UPDATE_SQL = "UPDATE " + TABLE_NAME + " SET  quantity=?, updatedAt=? WHERE containerId=?";
     protected static final String DELETE_BY_ID_SQL = "DELETE FROM " + TABLE_NAME + " WHERE containerId = ?";
     protected static final String SELECT_ALL_FROM_SQL = "SELECT * FROM " + TABLE_NAME + " WHERE createdAt >= ? ORDER BY createdAt DESC";
 

@@ -36,7 +36,7 @@ public class CoinAmountRepositoryImpl extends CoinAmountRepository {
         hoppersList.add(new CoinAmountEntity().setUnitAmount(Env.hop2).setQuantity(0).setContainerId("2"));
         hoppersList.add(new CoinAmountEntity().setUnitAmount(Env.hop3).setQuantity(0).setContainerId("3"));
         for(CoinAmountEntity coinAmount:hoppersList){
-            save(coinAmount);
+            if(null==findById(coinAmount.getContainerId()))save(coinAmount);
         }
     }
 
@@ -74,10 +74,9 @@ public class CoinAmountRepositoryImpl extends CoinAmountRepository {
     @Override
     public void update(CoinAmountEntity coinAmount) {
         try (PreparedStatement pstmt = connection.prepareStatement(UPDATE_SQL)) {
-            pstmt.setInt(1, coinAmount.getUnitAmount());
-            pstmt.setInt(2, coinAmount.getQuantity());
-            pstmt.setTimestamp(3, Timestamp.valueOf(LocalDateTime.now()));
-            pstmt.setString(4, coinAmount.getContainerId());
+            pstmt.setInt(1, coinAmount.getQuantity());
+            pstmt.setTimestamp(2, Timestamp.valueOf(LocalDateTime.now()));
+            pstmt.setString(3, coinAmount.getContainerId());
             pstmt.executeUpdate();
         } catch (SQLException e) {
             Logger.error("Error updating CoinAmountEntity: {}", e.getMessage());

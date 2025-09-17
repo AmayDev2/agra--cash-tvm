@@ -35,7 +35,7 @@ public class CoinModuleApplication {
 						ModuleResponse r = service.dispenseCoin(hopper, qty);
 						System.out.println("Dispense done, DATA=" + r.getData().length + " bytes");
 					} else if ("4".equals(choice)) {
-						//System.out.print("Hopper (1-3): ");
+						System.out.print("Hopper (1-3): ");
 						byte hopper = Byte.parseByte(sc.nextLine().trim());
 						ModuleResponse r = service.dumpHopper(hopper);
 						System.out.println("Dump done, DATA=" + r.getData().length + " bytes");

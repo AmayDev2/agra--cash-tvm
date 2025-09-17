@@ -1,17 +1,22 @@
 package com.amay.tom.pdu.controller;
 
 import com.amay.tom.ViewFactory;
+import com.amay.tom.controller.LoginController;
 import com.amay.tom.model.station.Station;
 import com.amay.tom.pdu.controller.PDUHeaderController;
 import com.amay.tom.pdu.controller.service.SceneManager;
+import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.coin.service.HoppersRegistry;
+import com.amay.tvm.controller.MaintenanceLoginController;
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
+import org.tinylog.Logger;
 
 import java.io.IOException;
 
@@ -29,25 +34,35 @@ public class PDUController {
 
     private SceneManager sceneManager;
 
+    public PDUController(){
+
+    }
+
     @FXML
     public void initialize() {
         this.sceneManager = new SceneManager(stackPane);
-        try {
-            HoppersRegistry.INSTANCE.setHoppers(5,10,10,     0,0,0,null);
-            FXMLLoader loader=ViewFactory.getHopper();
-            stackPane.getChildren().removeLast();
-            stackPane.getChildren().add(loader.load());
-        } catch (IOException e) {
-            e.getMessage();
+
+        try{
+            Logger.tag(LoggerTag.APP).debug("Loading Maintenance Screen");
+            MaintenanceLoginController maintenanceLoginController= new MaintenanceLoginController(sceneManager);
+            FXMLLoader fxmlLoader=ViewFactory.getMaintenanceLogin();
+            fxmlLoader.setControllerFactory((x)->maintenanceLoginController);
+            sceneManager.addToRoot(fxmlLoader);
+            Logger.tag(LoggerTag.APP).debug("Loaded Maintenance Screen !!!");
+        }catch(Exception e){
+            Logger.tag(LoggerTag.APP).error("Loading Maintenance Screen {}",e.getMessage());
         }
 
     }
 
     public void showView(FXMLLoader fxmlPath) {
-        sceneManager.switchTo(fxmlPath);
+//        sceneManager.switchTo(fxmlPath);
     }
 
     public void setStation(Station station) {
 
+
     }
+
+
 }

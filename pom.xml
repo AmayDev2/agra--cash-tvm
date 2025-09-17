@@ -166,22 +166,13 @@
 
         <!--      bnr-->
 
-<!--        printer-->
-
-<!--        <dependency>-->
-<!--            <groupId>com.custom</groupId>-->
-<!--            <artifactId>CuCustomWndAPIJWrap</artifactId>-->
-<!--            <version>1.0.0</version>-->
-<!--            <scope>system</scope>-->
-<!--            <systemPath>${project.basedir}/lib/Printer/CuCustomWndAPIJWrap.jar</systemPath>-->
-<!--        </dependency>-->
 
         <dependency>
             <groupId>com.custom</groupId>
             <artifactId>wndapijwrap</artifactId>
             <version>1.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/CuCustomWndAPIJWrap.jar</systemPath>
+            <systemPath>${project.basedir}/lib/CuCustomWndAPIJWrap.jar</systemPath>
         </dependency>
 
         <!-- grpc dependency -->
@@ -674,6 +665,7 @@
                     <include>**/*.gif</include> <!-- (optional) -->
                     <include>**/*.bmp</include> <!-- (optional) -->
                     <include>**/*.properties</include>
+                    <include>**/*.dll</include>
                 </includes>
             </resource>
         </resources>

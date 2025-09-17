@@ -19,11 +19,46 @@ public class SceneManager {
     public void switchTo(FXMLLoader fxmlLoader) {
             Platform.runLater(() -> {
                 try {
-                    container.getChildren().setAll((Node) fxmlLoader.load());
+                    container.getChildren().set(container.getChildren().size()-1,(Node) fxmlLoader.load());
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
             });
+    }
+
+    public void addToRoot(FXMLLoader fxmlLoader) {
+        Platform.runLater(() -> {
+            try {
+               container.getChildren().clear();
+               container.getChildren().add(container.getChildren().size(), fxmlLoader.load());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+
+    public void addToScene(FXMLLoader fxmlLoader) {
+        Platform.runLater(() -> {
+            try {
+                container.getChildren().add(fxmlLoader.load());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+
+    public void addWaiting(Node node) {
+        Platform.runLater(() -> {
+            container.getChildren().add(node);
+        });
+    }
+
+
+
+    public void back() {
+        Platform.runLater(() -> {
+            container.getChildren().removeLast();
+        });
     }
 }
 

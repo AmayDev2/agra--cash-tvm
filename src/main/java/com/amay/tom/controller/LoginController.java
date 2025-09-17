@@ -17,11 +17,13 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.tinylog.Logger;
@@ -33,6 +35,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
 public class LoginController {
+    @FXML private VBox vbox;
     @FXML private Label equipmentId;
     @FXML private Label csn;
 
@@ -90,7 +93,7 @@ public class LoginController {
                                 }
                         );
 
-                       checkForWorkingHours();
+//                       checkForWorkingHours();
                         }
                 )
         );
@@ -123,10 +126,10 @@ public class LoginController {
                         timeLabel.setText(timeFormatter.format(now));
                         dateLabel.setText(dateFormatter.format(now));
 
-                        if (now.getSecond() == 0) {
+                        if (now.getSecond() %5==0) {
                             // Update the clock icon or other features if needed
                             if (agent.getBusinessRule().isActiveWorkingHour()) {
-//                                loginButtonClicked();
+                                loginButtonClicked();
                                 // Stop the timeline once condition is met
                                 timeline.stop();
                                 timeline=null;
@@ -153,7 +156,7 @@ public class LoginController {
         String userPass= null;//passwordField.getText();
 
 
-        userName= SystemConfig.getInstance().getCurrentEquipment().getEquipmentId();
+        userName= "TVM"+SystemConfig.getInstance().getCurrentEquipment().getEquipmentId();
         userPass="tvm_user";
 
 

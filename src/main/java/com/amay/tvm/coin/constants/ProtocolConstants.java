@@ -26,7 +26,7 @@ public final class ProtocolConstants {
 	// Timeouts (milliseconds)
 	public static final int DEFAULT_READ_TIMEOUT_MS = 5000;
 	public static final int LONG_OPERATION_PROGRESS_MS = 350;
-	public static final int LONG_OPERATION_TIMEOUT_MS = 30_000;
+	public static final int LONG_OPERATION_TIMEOUT_MS = 60_000;
 
 	// Coin change COM State values
 	public static final byte COM_STATE_SUCCESS = 0x00;

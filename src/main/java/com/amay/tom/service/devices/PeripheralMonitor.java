@@ -9,6 +9,7 @@ import com.amay.tom.utils.env.EnvFile;
 import com.amay.tom.utils.helper.Helper;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.bnr.BNRIntegration;
+import com.amay.tvm.coin.CoinModuleInterface;
 import com.fazecast.jSerialComm.SerialPort;
 import lombok.Getter;
 import org.tinylog.Logger;
@@ -109,14 +110,12 @@ public class PeripheralMonitor implements Runnable {
     }
 
     public static boolean coinNoduleConnected() {
-        SerialPort[] serialPorts = SerialPort.getCommPorts();
-        for (SerialPort serialPort : serialPorts) {
-            if (serialPort.getSystemPortName().equals(EnvFile.getComPort())) {
-                return true;
-            }
+        try {
+            return CoinModuleInterface.INSTANCE.pooling();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return false;
-//        return isUsbDeviceConnected("1EAB", "0003");
     }
 
 

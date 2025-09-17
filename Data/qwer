@@ -1,0 +1,11 @@
+event = {JxfsOperationCompleteEvent@9836} "OCEvent( at Mon Sep 15 16:49:33 IST 2025oID=6107idID=86r=6087xr=-1d=Denomination:\n\n - amount = 0\n - cashBox = 4000\n)@40ed8999"
+ operationID = 6107
+ identificationID = 86
+ resultcode = 6087
+ extended_resultcode = -1
+ data = {MEIDenomination@9840} "Denomination:\n\n - amount = 0\n - cashBox = 4000\n"
+  items = {Vector@9844}  size = 0
+  amount = 0
+  cashBox = 4000
+ when = {Date@9841} "Mon Sep 15 16:49:33 IST 2025"
+ source = {JxfsATM@9842} "com.jxfs.control.cdr.JxfsATM associated service: com.mei.bnr.jxfs.service.BnrService@7f943599\nOpEventQueue: com.jxfs.control.OpEventQueue@48d07aef\nStatusEventQueue: com.jxfs.control.StatusEventQueue@2174537c"

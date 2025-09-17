@@ -517,17 +517,17 @@ public class TomInitialize implements ITomInitialize {
                 progress += 0.03;
                 this.updateUI(progress, "Peripheral status pushed.");
 
-                if(envLoader.getEnvironment()) {
+//                if(envLoader.getEnvironment()) {
                     try {
                         progress += 0.03;
                         this.updateUI(progress, "Connecting BNR,COIN MODULE & PRINTER.");
-                        PrinterCommandDispatcher.INSTANCE.setupPrinter();
-                        CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort(),agent.getCoinAmountRepository());
                         BNRIntegration.bnrOpen();
                     } catch (RuntimeException e) {
                         e.printStackTrace();
                     }
-                }
+//                }
+                PrinterCommandDispatcher.INSTANCE.setupPrinter();
+                CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort(),agent.getCoinAmountRepository());
 
                 // 22. Push Remaining Data & Finalize
                 this.pushRemainedDate();

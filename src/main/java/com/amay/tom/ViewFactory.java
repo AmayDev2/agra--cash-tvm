@@ -266,5 +266,9 @@ public class ViewFactory {
     public static FXMLLoader getHopper(){
         return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/tvm/coin_ragistory_page.fxml"));
     }
+
+    public static FXMLLoader getMaintenanceLogin() {
+        return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/pdu/welcome_screen.fxml"));
+    }
 }
 

@@ -64,7 +64,15 @@ public class SerialCommunication implements SerialCommunicationInterface {
 
 	@Override
 	public boolean isConnected() {
-		return port != null && port.isOpen();
+		if(port != null){
+			if(!port.isOpen()){
+				port.openPort();
+				return false;
+			}
+
+		}
+		return true;
+
 	}
 
 	@Override
@@ -104,6 +112,7 @@ public class SerialCommunication implements SerialCommunicationInterface {
 
 	@Override
 	public byte[] readUntilETX(int readTimeoutMs) throws CommunicationException {
+		if(readTimeoutMs<=0)return new byte[]{};
 		if (!isConnected()) throw new CommunicationException("Port not open");
 		port.setComPortTimeouts(SerialPort.TIMEOUT_READ_BLOCKING, readTimeoutMs, 0);
 		byte[] buffer = new byte[512];
@@ -111,6 +120,7 @@ public class SerialCommunication implements SerialCommunicationInterface {
 		int startIndex = -1;
 		boolean escapeNext = false;
 		long start = System.currentTimeMillis();
+		Logger.tag(LoggerTag.APP).info(System.currentTimeMillis() - start+" "+readTimeoutMs);
 		while (System.currentTimeMillis() - start < readTimeoutMs) {
 			int available = port.bytesAvailable();
 			if (available > 0) {

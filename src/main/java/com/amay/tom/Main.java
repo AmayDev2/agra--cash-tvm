@@ -59,13 +59,6 @@ public class Main extends Application {
     public void start(@SuppressWarnings("exports") Stage stage) throws IOException {
         applicationService=new ApplicationService(new SystemControl());
 
-
-
-        //System.out.println("java version: "+System.getProperty("java.version"));
-        //System.out.println("javafx.version: " + System.getProperty("javafx.version"));
-
-
-
         try {
 
             FXMLLoader fxmlLoader =new FXMLLoader(Main.class.getResource("initialize/tom-initialize-view.fxml"));
@@ -192,7 +185,7 @@ public class Main extends Application {
 
             var screens = javafx.stage.Screen.getScreens();
 
-            if (screens.size() >=1) { //0205000301AB04A803
+            if (screens.size() >0) { //0205000301AB04A803
                 Rectangle2D screen2Bounds = screens.get(0).getVisualBounds();
 
                 FXMLLoader pduLoader = new FXMLLoader(Main.class.getResource("pdu/main_container.fxml"));
