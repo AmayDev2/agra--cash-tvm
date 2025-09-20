@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<VBox   maxHeight="Infinity" alignment="CENTER" styleClass="vbox" stylesheets="@../../../../css/login.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.pdu.controller.MaintenanceLogin" >
+        <GridPane alignment="CENTER" hgap="10" prefWidth="Infinity" vgap="10">
+<!--            <Label text="User ID" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="1">-->
+<!--                <font>-->
+<!--                    <Font size="14.0" />-->
+<!--                </font></Label>-->
+            <TextField fx:id="usernameField" alignment="CENTER" promptText="Enter User ID" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+<!--            <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2">-->
+<!--                <font>-->
+<!--                    <Font size="14.0" />-->
+<!--                </font></Label>-->
+            <PasswordField fx:id="passwordField" alignment="CENTER" onKeyPressed="#handleEnterPress" promptText="Enter Password" styleClass="password-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button alignment="CENTER" contentDisplay="CENTER" onAction="#loginButtonClicked" styleClass="button" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <font>
+                    <Font size="18.0" />
+                </font></Button>
+
+            <Text fx:id="messageLabel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints halignment="CENTER" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+    </VBox>
+

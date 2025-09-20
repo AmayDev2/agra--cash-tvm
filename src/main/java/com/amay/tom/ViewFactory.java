@@ -267,8 +267,13 @@ public class ViewFactory {
         return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/tvm/coin_ragistory_page.fxml"));
     }
 
-    public static FXMLLoader getMaintenanceLogin() {
+    public static FXMLLoader getWelcomeLogin() {
         return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/pdu/welcome_screen.fxml"));
     }
+
+    public static FXMLLoader getMaintenanceLogin() {
+        return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/pdu/login_screen.fxml"));
+    }
+
 }
 

@@ -31,7 +31,7 @@ import java.util.List;
 @Slf4j
 public class GrpcApiListener implements RemoteListener {
 
-    private Agent agent;
+    private final Agent agent;
     private final GrpcControlMonitoringService grpcControlMonitoringService;
     public GrpcApiListener(GrpcControlMonitoringService grpcControlMonitoringService, Agent agent) {
         // TODO implement here

@@ -13,133 +13,141 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane fx:id="mainRootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" stylesheets="@css/structure.css"  xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tvm.controller.TVMController">
-   <children>
-      <BorderPane fx:id="borderPane" maxWidth="1024.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0" >
-         <top>
-            <AnchorPane maxWidth="1024.0" minHeight="110.0" minWidth="1024.0" prefHeight="110.0" prefWidth="1024.0" styleClass="header" BorderPane.alignment="CENTER">
-                <children>
-                    <Label fx:id="labelStationName" alignment="CENTER" contentDisplay="CENTER" layoutX="339.0" layoutY="15.0" prefHeight="49.0" prefWidth="347.0" style="-fx-font-size: 30;" text="Gandhi Nagar" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="339.0" AnchorPane.rightAnchor="338.0" AnchorPane.topAnchor="15.0">
-                        <font>
-                            <Font name="System Bold" size="40.0" />
-                        </font>
-                        <effect>
-                            <ColorAdjust />
-                        </effect>
-                        <styleClass>
-                            <String fx:value="text-bold" />
-                            <String fx:value="text-primary" />
-                        </styleClass>
-                    </Label>
-                    <AnchorPane fx:id="logoPane"
-                                styleClass="logo-pane"
-                                prefWidth="227.0" prefHeight="100.0"
-                                AnchorPane.leftAnchor="20.0"
-                                AnchorPane.topAnchor="10.0"
-                                AnchorPane.bottomAnchor="10.0"/>
-                    <Label fx:id="lableTime" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="794.0" layoutY="26.0" prefWidth="200.0" style="-fx-font-size: 18; -fx-font-weight: bold;" styleClass="text-secondary" text="11:11:11 AM" textAlignment="RIGHT" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="26.0">
-                        <font>
-                            <Font size="32.0" />
-                        </font>
-                    </Label>
-                    <Label fx:id="labelDate" alignment="CENTER_RIGHT" layoutX="800.0" layoutY="51.0" prefWidth="200.0" style="-fx-font-size: 18; -fx-font-weight: bold;" styleClass="text-secondary" text="10 November,2000" textAlignment="RIGHT" AnchorPane.bottomAnchor="36.0" AnchorPane.rightAnchor="24.0">
-                        <font>
-                            <Font size="32.0" />
-                        </font>
-                    </Label>
-                </children>
+<AnchorPane fx:id="mainRootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="768.0" prefWidth="1024.0" stylesheets="@css/structure.css"
+            xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.amay.tvm.controller.TVMController">
+    <BorderPane fx:id="borderPane" maxWidth="1024.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0">
+        <top>
+            <AnchorPane maxWidth="1024.0" minHeight="110.0" minWidth="1024.0" prefHeight="110.0" prefWidth="1024.0"
+                        styleClass="header" BorderPane.alignment="CENTER">
+                <Label fx:id="labelStationName" alignment="CENTER" contentDisplay="CENTER" layoutX="339.0"
+                       layoutY="15.0" prefHeight="49.0" prefWidth="347.0" style="-fx-font-size: 30;"
+                       text="Gandhi Nagar" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="50.0"
+                       AnchorPane.leftAnchor="339.0" AnchorPane.rightAnchor="338.0" AnchorPane.topAnchor="15.0">
+                    <font>
+                        <Font name="System Bold" size="40.0"/>
+                    </font>
+                    <effect>
+                        <ColorAdjust/>
+                    </effect>
+                    <styleClass>
+                        <String fx:value="text-bold"/>
+                        <String fx:value="text-primary"/>
+                    </styleClass>
+                </Label>
+                <AnchorPane fx:id="logoPane"
+                            styleClass="logo-pane"
+                            prefWidth="227.0" prefHeight="100.0"
+                            AnchorPane.leftAnchor="20.0"
+                            AnchorPane.topAnchor="10.0"
+                            AnchorPane.bottomAnchor="10.0"/>
+                <Label fx:id="lableTime" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="794.0"
+                       layoutY="26.0" prefWidth="200.0" style="-fx-font-size: 18; -fx-font-weight: bold;"
+                       styleClass="text-secondary" text="11:11:11 AM" textAlignment="RIGHT"
+                       AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="26.0">
+                    <font>
+                        <Font size="32.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="labelDate" alignment="CENTER_RIGHT" layoutX="800.0" layoutY="51.0" prefWidth="200.0"
+                       style="-fx-font-size: 18; -fx-font-weight: bold;" styleClass="text-secondary"
+                       text="10 November,2000" textAlignment="RIGHT" AnchorPane.bottomAnchor="36.0"
+                       AnchorPane.rightAnchor="24.0">
+                    <font>
+                        <Font size="32.0"/>
+                    </font>
+                </Label>
             </AnchorPane>
-         </top>
-         <center>
+        </top>
+        <center>
 
-             <StackPane xmlns:fx="http://javafx.com/fxml" fx:id="stackPane"
-                        prefWidth="1024.0" prefHeight="518.0" minWidth="1024.0" minHeight="518.0">
+            <StackPane xmlns:fx="http://javafx.com/fxml" fx:id="stackPane"
+                       prefWidth="1024.0" prefHeight="518.0" minWidth="1024.0" minHeight="518.0">
 
-                 <!-- Watermark pane (faint background image) -->
-                 <children>
-                     <Pane mouseTransparent="true" pickOnBounds="false"
-                           style="-fx-background-image: url('/images/indoor-bhopal-logo.png');
-                     -fx-background-repeat: no-repeat;
-                     -fx-background-position: center;
-                     -fx-background-size: 60% 60%;
-                     -fx-opacity: 0.12;
-                     -fx-pref-width: 100%;
-                     -fx-pref-height: 100%;" />
+                <!-- Watermark pane (faint background image) -->
+                <!--                     <Pane mouseTransparent="true" pickOnBounds="false"-->
+                <!--                           style="-fx-background-image: url('/images/indoor-bhopal-logo.png');-->
+                <!--                     -fx-background-repeat: no-repeat;-->
+                <!--                     -fx-background-position: center;-->
+                <!--                     -fx-background-size: 60% 60%;-->
+                <!--                     -fx-opacity: 0.12;-->
+                <!--                     -fx-pref-width: 100%;-->
+                <!--                     -fx-pref-height: 100%;" />-->
 
-                     <!-- Main Grid: left buttons | divider | right buttons -->
-                     <GridPane fx:id="home" hgap="40" vgap="10" alignment="CENTER"
-                               maxWidth="1024.0" minWidth="1024.0" prefWidth="1024.0"
-                               maxHeight="618.0" minHeight="618.0" prefHeight="618.0"
-                               style="-fx-padding: 30 60 30 60;">
+                <!-- Main Grid: left buttons | divider | right buttons -->
+                <GridPane fx:id="home" hgap="40" vgap="10" alignment="CENTER"
+                          maxWidth="1024.0" minWidth="1024.0" prefWidth="1024.0"
+                          maxHeight="618.0" minHeight="618.0" prefHeight="618.0"
+                          style="-fx-padding: 30 60 30 60;">
 
-                         <columnConstraints>
-                             <ColumnConstraints percentWidth="45" halignment="CENTER"/>
-                             <ColumnConstraints percentWidth="10" halignment="CENTER"/>
-                             <ColumnConstraints percentWidth="45" halignment="CENTER"/>
-                         </columnConstraints>
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="45" halignment="CENTER"/>
+                        <ColumnConstraints percentWidth="10" halignment="CENTER"/>
+                        <ColumnConstraints percentWidth="45" halignment="CENTER"/>
+                    </columnConstraints>
 
-                         <rowConstraints>
-                             <RowConstraints percentHeight="25" vgrow="SOMETIMES"/>
-                             <RowConstraints percentHeight="25" vgrow="SOMETIMES"/>
-                             <RowConstraints percentHeight="25" vgrow="SOMETIMES"/>
-                         </rowConstraints>
+                    <rowConstraints>
+                        <RowConstraints percentHeight="25" vgrow="SOMETIMES"/>
+                        <RowConstraints percentHeight="25" vgrow="SOMETIMES"/>
+                        <RowConstraints percentHeight="25" vgrow="SOMETIMES"/>
+                    </rowConstraints>
 
-                         <children>
-                             <!-- LEFT column buttons -->
-                             <Button fx:id="sjtButton" text="SINGLE JOURNEY"
-                                     GridPane.columnIndex="0" GridPane.rowIndex="0"
-                                     prefWidth="340.0" prefHeight="80.0"
-                                     styleClass="main-button"
-                                        onAction="#onClickSjtButton"/>
+                    <children>
+                        <!-- LEFT column buttons -->
+                        <Button fx:id="sjtButton" text="SINGLE JOURNEY"
+                                GridPane.columnIndex="0" GridPane.rowIndex="0"
+                                prefWidth="340.0" prefHeight="80.0"
+                                styleClass="main-button"
+                                onAction="#onClickSjtButton"/>
 
-                             <Button fx:id="rjtButton" text="RETURN JOURNEY"
-                                     GridPane.columnIndex="0" GridPane.rowIndex="1"
-                                     prefWidth="340.0" prefHeight="80.0"
-                                     styleClass="main-button"
-                             onAction="#onClickRjtButton"/>
+                        <Button fx:id="rjtButton" text="RETURN JOURNEY"
+                                GridPane.columnIndex="0" GridPane.rowIndex="1"
+                                prefWidth="340.0" prefHeight="80.0"
+                                styleClass="main-button"
+                                onAction="#onClickRjtButton"/>
 
-                             <Button fx:id="gtButton" text="GROUP JOURNEY"
-                                     GridPane.columnIndex="0" GridPane.rowIndex="2"
-                                     prefWidth="340.0" prefHeight="80.0"
-                                     styleClass="main-button"
-                             onAction="#onClickGtButton"/>
+                        <Button fx:id="gtButton" text="GROUP JOURNEY"
+                                GridPane.columnIndex="0" GridPane.rowIndex="2"
+                                prefWidth="340.0" prefHeight="80.0"
+                                styleClass="main-button"
+                                onAction="#onClickGtButton"/>
 
-                             <!-- Center divider (rounded Rectangle) -->
-                             <Rectangle GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.rowSpan="3"
-                                        width="12" height="360"
-                                        arcWidth="12" arcHeight="12"
-                                        style="-fx-fill: rgba(120,120,120,0.72); -fx-stroke: transparent;"/>
+                        <!-- Center divider (rounded Rectangle) -->
+                        <Rectangle GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.rowSpan="3"
+                                   width="12" height="360"
+                                   arcWidth="12" arcHeight="12"
+                                   style="-fx-fill: rgba(120,120,120,0.72); -fx-stroke: transparent;"/>
 
-                             <!-- RIGHT column buttons -->
-                             <Button fx:id="ncmcButton" text="NCMC Topup"
-                                     GridPane.columnIndex="2" GridPane.rowIndex="0"
-                                     prefWidth="340.0" prefHeight="80.0"
-                                     styleClass="main-button"
-                                     disable="true"
-                             onAction="#onClickNcmc"/>
+                        <!-- RIGHT column buttons -->
+                        <Button fx:id="ncmcButton" text="NCMC Topup"
+                                GridPane.columnIndex="2" GridPane.rowIndex="0"
+                                prefWidth="340.0" prefHeight="80.0"
+                                styleClass="main-button"
+                                disable="true"
+                                onAction="#onClickNcmc"/>
 
-                             <Button fx:id="balanceUpdateButton" text="Balance Update"
-                                     GridPane.columnIndex="2" GridPane.rowIndex="1"
-                                     prefWidth="340.0" prefHeight="80.0"
-                                     styleClass="main-button"
-                                     disable="true"
-                             onAction="#onClickBalanceUpdate"/>
+                        <Button fx:id="balanceUpdateButton" text="Balance Update"
+                                GridPane.columnIndex="2" GridPane.rowIndex="1"
+                                prefWidth="340.0" prefHeight="80.0"
+                                styleClass="main-button"
+                                disable="true"
+                                onAction="#onClickBalanceUpdate"/>
 
-                             <Button fx:id="cardInquiryButton" text="Card Inquiry"
-                                     GridPane.columnIndex="2" GridPane.rowIndex="2"
-                                     prefWidth="340.0" prefHeight="80.0"
-                                     styleClass="main-button"
-                                     disable="true"
-                             onAction="#onClickCardInquiry"/>
-                         </children>
-                     </GridPane>
-                 </children>
-             </StackPane>
+                        <Button fx:id="cardInquiryButton" text="Card Inquiry"
+                                GridPane.columnIndex="2" GridPane.rowIndex="2"
+                                prefWidth="340.0" prefHeight="80.0"
+                                styleClass="main-button"
+                                disable="true"
+                                onAction="#onClickCardInquiry"/>
+                    </children>
+                </GridPane>
+            </StackPane>
 
-         </center>
-         <bottom>
-            <AnchorPane maxHeight="50.0" maxWidth="1024.0" minHeight="50.0" minWidth="1024.0" prefHeight="50.0" prefWidth="1024.0" style="-fx-background-color: #CCE4FF;" BorderPane.alignment="CENTER" />
-         </bottom>
-      </BorderPane>
-   </children>
+        </center>
+        <bottom>
+          <AnchorPane maxHeight="50.0" maxWidth="1024.0" minHeight="50.0" minWidth="1024.0" prefHeight="50.0"
+                      prefWidth="1024.0" style="-fx-background-color: #CCE4FF;" BorderPane.alignment="CENTER"/>
+        </bottom>
+    </BorderPane>
 </AnchorPane>

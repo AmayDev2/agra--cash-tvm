@@ -4,10 +4,14 @@ import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.config.SystemConfig;
 import com.amay.tom.controller.components.StatusBottomBarView;
+import com.amay.tom.enums.Alarm;
 import com.amay.tom.enums.DeviceOperationMode;
 import com.amay.tom.model.TicketType;
 import com.amay.tom.pdu.controller.StationMode;
+import com.amay.tom.pdu.controller.command.PDUCommandDispatcher;
 import com.amay.tom.repository.StationData;
+import com.amay.tvm.bnr.BNRIntegration;
+import com.amay.tvm.coin.CoinModuleInterface;
 import com.amay.tvm.util.Snackbar;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -21,6 +25,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
+import org.network.monitorandcontrol.OperationMode;
+import org.network.monitorandcontrol.SpecialMode;
 import org.tinylog.Logger;
 
 
@@ -164,64 +170,77 @@ public class TVMController {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-//
 //        actionEvent.consume();
 //    }
 
 
     private void setOperationModeListener(){
-        setOperationMode(agent.getDeviceStatus().getCurrentStatus());
+//        setOperationMode(agent.getDeviceStatus().getCurrentStatus());
 
 
         agent.getDeviceStatus().addDeviceStatusListener(this::setOperationMode);
     }
 
     //TODO: Implement the logic to update the service mode
-    private void setOperationMode(DeviceOperationMode newStatus){
+    private void setOperationMode(DeviceOperationMode newStatus) {
         //System.out.println("TVMController setOperationMode: " + newStatus);
         Platform.runLater(() -> {
-            if( currentMode!=newStatus && newStatus == DeviceOperationMode.IN_SERVICE){
-                stackPane.getChildren().clear();
-                stackPane.getChildren().add(home);
-            }else if(currentMode!=newStatus &&  newStatus == DeviceOperationMode.EMERGENCY) {
-                FXMLLoader loader= ViewFactory.getSpecialModeScreen();
-                loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData, StationMode.EMERGENCY));
-                try {
-                    stackPane.getChildren().clear();
-                    stackPane.getChildren().add(loader.load());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+            if (currentMode != newStatus && newStatus == DeviceOperationMode.IN_SERVICE) {
+//                stackPane.getChildren().clear();
+//                stackPane.getChildren().add(home);
+                borderPane.setCenter(stackPane);
+                agent.getGrpcApiListener().sendAlarm(Alarm.IN_SERVICE);
+                agent.getGrpcApiListener().sendOperationMode(OperationMode.IN_SERVICE);
+                agent.getGrpcApiListener().sendPeripheralStatus(agent.getPeripheralMonitor().getDeviceStatus());
+            } else {
+                
+                if (currentMode != newStatus && newStatus == DeviceOperationMode.EMERGENCY) {
+                    FXMLLoader loader = ViewFactory.getSpecialModeScreen();
+                    loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData, StationMode.EMERGENCY));
 
-            }else if(currentMode!=newStatus &&  newStatus == DeviceOperationMode.STATION_CLOSE) {
-                FXMLLoader loader= ViewFactory.getSpecialModeScreen();
-                loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData,StationMode.STATION_CLOSED));
-                try {
-                    stackPane.getChildren().clear();
-                    stackPane.getChildren().add(loader.load());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                    try {
+                        borderPane.setCenter(loader.load());
+                        agent.getGrpcApiListener().sendAlarm(Alarm.EMERGENCY);
+                        agent.getGrpcApiListener().sendSpecialMode(SpecialMode.EMERGENCY);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
 
-            }else if(currentMode!=newStatus &&  newStatus == DeviceOperationMode.OUT_OF_SERVICE) {
-                FXMLLoader loader= ViewFactory.getSpecialModeScreen();
-                loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData,StationMode.OUT_OF_SERVICE));
-                try {
-                    stackPane.getChildren().clear();
-                    stackPane.getChildren().add(loader.load());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }else if(currentMode!=newStatus &&  newStatus == DeviceOperationMode.MAINTENANCE) {
-                FXMLLoader loader= ViewFactory.getSpecialModeScreen();
-                loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData,StationMode.MAINTENANCE));
-                try {
-                    stackPane.getChildren().clear();
-                    stackPane.getChildren().add(loader.load());
-                } catch (Exception e) {
-                    e.printStackTrace();
+                } else if (currentMode != newStatus && newStatus == DeviceOperationMode.STATION_CLOSE) {
+                    FXMLLoader loader = ViewFactory.getSpecialModeScreen();
+                    loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData, StationMode.STATION_CLOSED));
+                    try {
+                        borderPane.setCenter(loader.load());
+                        agent.getGrpcApiListener().sendAlarm(Alarm.STATION_CLOSE);
+                        agent.getGrpcApiListener().sendSpecialMode(SpecialMode.STATION_CLOSED_MODE);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                } else if (currentMode != newStatus && newStatus == DeviceOperationMode.OUT_OF_SERVICE) {
+                    FXMLLoader loader = ViewFactory.getSpecialModeScreen();
+                    loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData, StationMode.OUT_OF_SERVICE));
+                    try {
+                        borderPane.setCenter(loader.load());
+                        agent.getGrpcApiListener().sendAlarm(Alarm.OUT_OF_SERVICE);
+                        agent.getGrpcApiListener().sendOperationMode(OperationMode.OUT_OF_SERVICE);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                } else if (currentMode != newStatus && newStatus == DeviceOperationMode.MAINTENANCE) {
+                    FXMLLoader loader = ViewFactory.getSpecialModeScreen();
+                    loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData, StationMode.MAINTENANCE));
+                    try {
+                        borderPane.setCenter(loader.load());
+                        newStatus.performAction();
+                        agent.getGrpcApiListener().sendAlarm(Alarm.MAINTENANCE_MODE);
+                        agent.getGrpcApiListener().sendOperationMode(OperationMode.MAINTENANCE);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
             }
+
             currentMode = newStatus;
 
         });

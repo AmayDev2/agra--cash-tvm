@@ -2,6 +2,8 @@ package com.amay.tom.enums;
 
 
 import com.amay.tom.model.equipment.entity.EquipmentPrivilege;
+import com.amay.tom.pdu.controller.command.PDUCommandDispatcher;
+import com.amay.tom.pdu.controller.command.PassAgentCommand;
 import lombok.Getter;
 
 // Enum to represent the different device operation modes
@@ -12,10 +14,20 @@ public enum DeviceOperationMode {
         public void performAction(EquipmentPrivilege equipmentPrivilege) {
 
         }
+        @Override
+        public void performAction() {
+            // check login performed in last 30 sec
+            // peripheral status
+
+        }
     },
     PAUSE(2, "Pause", "red") {
         @Override
         public void performAction(EquipmentPrivilege equipmentPrivilege) {
+
+        }
+        @Override
+        public void performAction() {
 
         }
     },
@@ -24,10 +36,18 @@ public enum DeviceOperationMode {
         public void performAction(EquipmentPrivilege equipmentPrivilege) {
 
         }
+        @Override
+        public void performAction() {
+
+        }
     },
     TEST(4, "Test", "blue") {
         @Override
         public void performAction(EquipmentPrivilege equipmentPrivilege) {
+
+        }
+        @Override
+        public void performAction() {
 
         }
     },
@@ -36,10 +56,18 @@ public enum DeviceOperationMode {
         public void performAction(EquipmentPrivilege equipmentPrivilege) {
 
         }
+        @Override
+        public void performAction() {
+
+        }
     },
     OUT_OF_SERVICE(6, "Out Of Service", "red") {
         @Override
         public void performAction(EquipmentPrivilege equipmentPrivilege) {
+
+        }
+        @Override
+        public void performAction() {
 
         }
     },
@@ -48,10 +76,18 @@ public enum DeviceOperationMode {
         public void performAction(EquipmentPrivilege equipmentPrivilege) {
 
         }
+        @Override
+        public void performAction() {
+
+        }
     },
     STATION_CLOSE(8, "Station Closed", "red") {
         @Override
         public void performAction(EquipmentPrivilege equipmentPrivilege) {
+
+        }
+        @Override
+        public void performAction() {
 
         }
     },
@@ -60,10 +96,18 @@ public enum DeviceOperationMode {
         public void performAction(EquipmentPrivilege equipmentPrivilege) {
 
         }
+        @Override
+        public void performAction() {
+
+        }
     },
     SHIFT_NOT_ACTIVE(10, "Shift Not Active", "yellow") {
         @Override
         public void performAction(EquipmentPrivilege equipmentPrivilege) {
+
+        }
+        @Override
+        public void performAction() {
 
         }
     };
@@ -72,6 +116,7 @@ public enum DeviceOperationMode {
     private final String deviceStatusName;
     private final String color;
     public abstract void performAction(EquipmentPrivilege equipmentPrivilege);
+    public abstract void performAction();
 
 
     DeviceOperationMode(int deviceStatusId, String deviceStatusName, String color) {

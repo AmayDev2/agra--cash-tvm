@@ -139,12 +139,29 @@ public enum CoinModuleInterface {
 
     }
 
-	public boolean pooling(){
-		if(!isPoolingAllowed)return null != service;
-		PollingStatusResponse pollingStatusResponse=(PollingStatusResponse) service.pollStatus();
+	private PollingStatusResponse pollingStatusResponse;
+	public PollingStatusResponse pooling(){
+		if(!isPoolingAllowed)return pollingStatusResponse;
+		pollingStatusResponse=(PollingStatusResponse) service.pollStatus();
 		Logger.tag(LoggerTag.APP).info(pollingStatusResponse.toString());
-		return true;
+		return pollingStatusResponse;
 
+	}
+
+
+	public void turnOffBuzzer() {
+		service.turnOffTrayLight();
+
+		Logger.tag(LoggerTag.APP).warn("TURN OFF BUZZER");
+	}
+
+	public void turnOnBuzzer() {
+		service.turnOnTrayLight();
+		Logger.tag(LoggerTag.APP).warn("TURN ON BUZZER");
+	}
+
+	public void buzzerStatus() {
+		service.buzzerStatus();
 	}
 }
 

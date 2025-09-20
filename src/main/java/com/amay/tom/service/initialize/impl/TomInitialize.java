@@ -485,6 +485,11 @@ public class TomInitialize implements ITomInitialize {
                 progress += 0.03;
                 this.updateUI(progress, "Environment loaded.");
 
+                // 20. Check Station Mode
+                this.checkStationMode();
+                progress += 0.03;
+                this.updateUI(progress, "Station mode checked.");
+
                 // 16. CCU Transaction
                 this.setCCUTransactionConnection();
                 progress += 0.03;
@@ -507,17 +512,13 @@ public class TomInitialize implements ITomInitialize {
                 progress += 0.03;
                 this.updateUI(progress, "SCU monitoring service set.");
 
-                // 20. Check Station Mode
-                this.checkStationMode();
-                progress += 0.03;
-                this.updateUI(progress, "Station mode checked.");
 
                 // 21. Peripheral Status
                 this.peripheralDeviceStatus();
                 progress += 0.03;
                 this.updateUI(progress, "Peripheral status pushed.");
 
-//                if(envLoader.getEnvironment()) {
+                if(envLoader.getEnvironment()) {
                     try {
                         progress += 0.03;
                         this.updateUI(progress, "Connecting BNR,COIN MODULE & PRINTER.");
@@ -525,7 +526,7 @@ public class TomInitialize implements ITomInitialize {
                     } catch (RuntimeException e) {
                         e.printStackTrace();
                     }
-//                }
+                }
                 PrinterCommandDispatcher.INSTANCE.setupPrinter();
                 CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort(),agent.getCoinAmountRepository());
 
@@ -904,8 +905,6 @@ public class TomInitialize implements ITomInitialize {
 
     @Override
     public void checkStationMode() {
-        //check station mode
-//        new Remote(new InServiceCardCommand(applicationService));
         DeviceStatus deviceStatus = new DeviceStatus(DeviceOperationMode.IN_SERVICE);
         agent.setDeviceStatus(deviceStatus);
     }
@@ -1162,6 +1161,7 @@ public class TomInitialize implements ITomInitialize {
         deviceStatusListener = new ImpDeviceStatusListener(grpcApiListener);
         peripheralMonitor.addDeviceStatusListener(deviceStatusListener);
         agent.setDeviceStatusListener(deviceStatusListener);
+        peripheralMonitor.addDeviceStatusListener(agent.getDeviceStatus());
 
         // Schedule the peripheral monitor to run every 5 seconds
         agent.getThreadPool().getScheduler().scheduleAtFixedRate(peripheralMonitor, 0, 5, TimeUnit.SECONDS);

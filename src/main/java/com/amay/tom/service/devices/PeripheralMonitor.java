@@ -10,6 +10,7 @@ import com.amay.tom.utils.helper.Helper;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.bnr.BNRIntegration;
 import com.amay.tvm.coin.CoinModuleInterface;
+import com.amay.tvm.coin.model.PollingStatusResponse;
 import com.fazecast.jSerialComm.SerialPort;
 import lombok.Getter;
 import org.tinylog.Logger;
@@ -41,8 +42,9 @@ public class PeripheralMonitor implements Runnable {
     @Getter
     private boolean ups_connected;
     @Getter
-    private int[] deviceStatus;
-    private GrpcApiListener ccuGrpcApiListener, grpcApiListener;
+    private int[] deviceStatus,previousDeviceStatus;
+    private final GrpcApiListener ccuGrpcApiListener;
+    private final GrpcApiListener grpcApiListener;
 
     private final List<DeviceStatusListener> listeners = new ArrayList<>();
 
@@ -66,9 +68,10 @@ public class PeripheralMonitor implements Runnable {
     @Override
     public void run() {
         deviceStatus = new int[8];
-        scanner_connected = scannerConnected();
+        boolean[] tvm=coinNoduleConnected();
+        scanner_connected = tvm[1]; //door
         printer_connected = getPrinterStatus();
-        cash_drawer_connected=coinNoduleConnected();
+        cash_drawer_connected=tvm[0];
         ups_connected = bnrConnected();
         scu_connected = ConnectionStatus.CONNECTED.equals(this.grpcApiListener.getConnectionStatus());
         ccu_connected = ConnectionStatus.CONNECTED.equals(this.ccuGrpcApiListener.getConnectionStatus());
@@ -84,6 +87,7 @@ public class PeripheralMonitor implements Runnable {
         deviceStatus[7] = ups_connected ? 1 : 0;
 
         Logger.tag(LoggerTag.APP).info("Peripherals status: {}", Helper.ObjectToJson(deviceStatus));
+
 
 
         // notify the all subscribers/listeners
@@ -109,13 +113,14 @@ public class PeripheralMonitor implements Runnable {
 //        return isUsbDeviceConnected("1EAB", "0003");
     }
 
-    public static boolean coinNoduleConnected() {
+    public static boolean[] coinNoduleConnected() {
         try {
-            return CoinModuleInterface.INSTANCE.pooling();
+            PollingStatusResponse pollingStatusResponse=CoinModuleInterface.INSTANCE.pooling();
+            return new boolean[]{true,!pollingStatusResponse.isMaintenanceDoorOpen()};
         } catch (Exception e) {
-            e.printStackTrace();
+            Logger.tag(LoggerTag.APP).error(e.getMessage());
         }
-        return false;
+        return new boolean[]{false,true};
     }
 
 

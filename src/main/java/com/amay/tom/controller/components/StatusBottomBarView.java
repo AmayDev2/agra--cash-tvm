@@ -48,7 +48,7 @@ public class StatusBottomBarView {
 
     private Versions versions;
 
-    private MasterConfigInfo masterConfigInfo;
+    private final MasterConfigInfo masterConfigInfo;
 
 
     @FXML

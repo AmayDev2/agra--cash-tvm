@@ -42,12 +42,17 @@ public final class CommandBuilder {
 	}
 
 	public static ProtocolFrame createControlBuzzerCommand(boolean on, byte sequence) {
-		byte[] data = new byte[] { 0x01, (byte)(on ? 0x01 : 0x00) };
+		byte[] data = new byte[] {  (byte)(on ? 0x01 : 0x02),0x00 };
+		return new ProtocolFrame(ProtocolConstants.CMD_CONTROL, sequence, data);
+	}
+
+	public static ProtocolFrame createStatusBuzzerCommand( byte sequence) {
+		byte[] data = new byte[] {  0x00, 0x00 };
 		return new ProtocolFrame(ProtocolConstants.CMD_CONTROL, sequence, data);
 	}
 
 	public static ProtocolFrame createControlTrayLightCommand(boolean on, byte sequence) {
-		byte[] data = new byte[] { 0x02, (byte)(on ? 0x01 : 0x00) };
+		byte[] data = new byte[] { 0x00, (byte)(on ? 0x01 : 0x02) };
 		return new ProtocolFrame(ProtocolConstants.CMD_CONTROL, sequence, data);
 	}
 

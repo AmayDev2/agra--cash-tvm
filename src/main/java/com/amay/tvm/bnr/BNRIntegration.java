@@ -148,7 +148,8 @@ public class BNRIntegration {
 
     public static boolean isConnected(){
         try {
-            if(control!=null && control.getStatus().isOpen() ){
+            if(control!=null && helper!=null && control.getStatus().isOpen()  ){
+                Logger.tag(LoggerTag.APP).debug(getDeviceStatus().isBusy()+" "+getDeviceStatus().isUserError()+" "+" "+getDeviceStatus().isNoDevice()+" "+getDeviceStatus().isOnLine()+" "+getDeviceStatus().isHardwareError());
 //                observeModules();
                 ArrayList<Integer> modules = getModules();
                 for (Integer module : modules) {
@@ -160,7 +161,8 @@ public class BNRIntegration {
                 return true;
             }
         } catch (JxfsException e) {
-           Logger.tag(LoggerTag.APP).error(e.getMessage());
+//            bnrClose();
+           Logger.tag(LoggerTag.APP).error("IsConnected Error : "+e.getErrorCode() +"  "+e.getMessage());
         }
         return false;
     }
@@ -217,7 +219,8 @@ public class BNRIntegration {
             acceptedAmount = acceptAmountV2(CASH_IN_AMOUNT);
         } catch (JxfsException e) {
             listener.setStatus(BNRStatus.FAILED);
-            throw new RuntimeException(e);
+//            throw new RuntimeException(e);
+            return false;
         }
         Logger.tag(LoggerTag.APP).debug("You`ve inserted Total "+acceptedAmount+"} {"+CASH_IN_CURRENCY);
         if ( !acceptedAmount.isRollback() && hasChange(acceptedAmount.acceptedAmount-acceptedAmount.coinChangedAmount)) {
@@ -864,6 +867,7 @@ public class BNRIntegration {
         }
 
         endCashInTransaction();
+
         return acceptAmountResponse;
     }//acceptAmount
 
@@ -948,6 +952,10 @@ public class BNRIntegration {
                 return ((JxfsATM) deviceControl).cashIn(new JxfsCashInOrder(denomination, jxfsCurrency));
             }//run
         });
+//        int JXFS_E_CLOSED = 1002; closed, power cut -> Reset
+        // 1020 IO ->  Open
+        // OUT of Service -> closed ; inservice ->  Open
+        // Maintenance -> tran cancel
         // If the result is not successful
         if (event.getResult() != IJxfsConst.JXFS_RC_SUCCESSFUL) {
             Logger.tag(LoggerTag.APP).error("CashIn failed with error: {} ", event.getResult());

@@ -16,6 +16,6 @@ public class HeaderCommand implements PDUCommand {
 
     @Override
     public void execute(PDUController pduController) {
-        Platform.runLater(() -> pduController.setStation(this.station));
+//        Platform.runLater(() -> pduController.setStation(this.station));
     }
 }

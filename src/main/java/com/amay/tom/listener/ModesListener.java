@@ -75,13 +75,14 @@ public class ModesListener implements RemoteListener {
     private void setMaintenanceMode() {
         agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.MAINTENANCE);
         agent.getGrpcApiListener().sendAlarm(Alarm.MAINTENANCE_MODE);
+        agent.getGrpcApiListener().sendOperationMode(OperationMode.MAINTENANCE);
 
     }
 
     private void setTestMode() {
         agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.TEST);
         agent.getGrpcApiListener().sendAlarm(Alarm.TEST_MODE);
-
+        agent.getGrpcApiListener().sendOperationMode(OperationMode.TEST);
 
     }
 

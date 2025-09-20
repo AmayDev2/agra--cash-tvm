@@ -140,10 +140,22 @@ public class CoinModuleService {
 		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
 	}
 
+	private ModuleResponse statusBuzzer() {
+		byte seq = sequenceNumberManager.next();
+		ProtocolFrame frame = CommandBuilder.createStatusBuzzerCommand( seq);
+		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
+	}
+
 	private ModuleResponse controlTrayLight(boolean on) {
 		byte seq = sequenceNumberManager.next();
 		ProtocolFrame frame = CommandBuilder.createControlTrayLightCommand(on, seq);
 		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
+	}
+
+	public ModuleResponse buzzerStatus() {
+
+		return statusBuzzer();
+
 	}
 }
 

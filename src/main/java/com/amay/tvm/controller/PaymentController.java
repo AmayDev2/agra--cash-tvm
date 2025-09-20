@@ -20,6 +20,7 @@ import com.amay.tom.service.qrService2.QRTicketFactory;
 import com.amay.tom.service.qrService2.QRTicketService;
 import com.amay.tom.service.qrService2.TicketInfo;
 
+import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.utils.TicketUtils;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -697,7 +698,7 @@ public class PaymentController {
             // Generate and process tickets
             this.paymentFailedAndNavigate(properTicketOrder, paymentResponse);
         }else{
-            showWaiting();
+//            showWaiting();
             Logger.info("Payment response: {}", paymentResponse);
             // Generate and process tickets
             this.processTicketsAndNavigate(properTicketOrder, paymentResponse);
@@ -746,7 +747,7 @@ public class PaymentController {
                 try {
                     this.stackPane.getChildren().add(fxmlLoader.load());
                 } catch (IOException e) {
-                    e.getMessage();
+                    Logger.tag(LoggerTag.APP).error("Success Page Loading error : "+e.getMessage());
                 }
                 this.borderPane.setCenter(this.stackPane);
                     });

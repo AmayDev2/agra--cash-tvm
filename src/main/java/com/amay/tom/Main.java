@@ -5,6 +5,8 @@ package com.amay.tom;
 import com.amay.tom.controller.TomInitializeViewController;
 import com.amay.tom.database.DatabaseConnector;
 import com.amay.tom.database.RedisConnectionPool;
+import com.amay.tom.pdu.controller.PDUController;
+import com.amay.tom.pdu.controller.command.PDUCommandDispatcher;
 import com.amay.tom.repository.QRDataArray;
 import com.amay.tom.repository.TicketsRepository;
 import com.amay.tom.service.tom.ApplicationService;
@@ -64,6 +66,7 @@ public class Main extends Application {
             FXMLLoader fxmlLoader =new FXMLLoader(Main.class.getResource("initialize/tom-initialize-view.fxml"));
             fxmlLoader.setControllerFactory(param -> new TomInitializeViewController(applicationService));
             Scene scene = new Scene(fxmlLoader.load(), 1024, 768);
+            scene.getStylesheets().add(getClass().getResource("/com/amay/tom/tvm/css/theme.css").toExternalForm());
 
             // Add key event filter to prevent system keys
             scene.addEventFilter(KeyEvent.ANY, event -> {
@@ -185,15 +188,20 @@ public class Main extends Application {
 
             var screens = javafx.stage.Screen.getScreens();
 
-            if (screens.size() >0) { //0205000301AB04A803
-                Rectangle2D screen2Bounds = screens.get(0).getVisualBounds();
+            if (screens.size() >1) { //0205000301AB04A803
+                Rectangle2D screen2Bounds = screens.get(1).getVisualBounds();
 
                 FXMLLoader pduLoader = new FXMLLoader(Main.class.getResource("pdu/main_container.fxml"));
 
-//        PDUController controller = pduLoader.getController();
+
+                PDUController controller = new PDUController();
+                pduLoader.setControllerFactory((x)->controller);
                 Scene pduScene = new Scene(pduLoader.load(), 640, 448);
+
                 // Add global key filter
                 new KeypadHandler().attach(pduScene);
+
+                PDUCommandDispatcher.INSTANCE.setController(controller);
 
                 Stage pduStage = new Stage();
                 pduStage.setScene(pduScene);
@@ -205,8 +213,8 @@ public class Main extends Application {
                 pduStage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
                 pduStage.initStyle(StageStyle.UNDECORATED);
 
-
                 pduStage.show();
+
 
 
             } else {

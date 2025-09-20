@@ -1,11 +1,11 @@
 /* ========== AnchorPane Background with Gradient ========== */
-.anchor-pane {
+/*.anchor-pane {
     -fx-background-color: linear-gradient(to bottom right, #4B3D9B, #d5cff7);
-}
+}*/
 
 /* ========== VBox Card Style ========== */
 .vbox {
-    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-color: Transparent;
     -fx-alignment: center;
     -fx-spacing: 20;
     -fx-padding: 30;
@@ -55,6 +55,11 @@
 }
 
 .button:hover {
+    -fx-background-color:#4B3D9B;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
+}
+
+.button:focused {
     -fx-background-color:#4B3D9B;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
 }

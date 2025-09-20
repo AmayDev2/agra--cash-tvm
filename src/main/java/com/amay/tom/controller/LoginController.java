@@ -5,6 +5,8 @@ import com.amay.tom.agent.Agent;
 import com.amay.tom.config.SystemConfig;
 import com.amay.tom.exceptions.EmptyUsernameOrPasswordException;
 import com.amay.tom.exceptions.UsernameNotFoundException;
+import com.amay.tom.pdu.controller.command.PDUCommandDispatcher;
+import com.amay.tom.pdu.controller.command.PassAgentCommand;
 import com.amay.tom.repository.session.ShiftRepositoryImpl;
 import com.amay.tom.repository.user.UserRepositoryImpl;
 import com.amay.tom.service.siftservice.ShiftService;
@@ -68,6 +70,11 @@ public class LoginController {
                         new UserDetailsService(
                                 new UserRepositoryImpl(
                                         agent.getConnection()))),new ShiftRepositoryImpl(agent.getConnection()));
+
+        this.agent.setShiftService(this.shiftService);
+
+        //TODO> Pass shiftService to maintenance
+        PDUCommandDispatcher.INSTANCE.dispatch(new PassAgentCommand(this.agent));
     }
 
     private Stage mainStage;
@@ -85,7 +92,7 @@ public class LoginController {
                                     // Trigger your event or logic here
                                     this.shiftService.markLastShiftAsCompleted(shift);
 
-                                    this.shiftService.printEOSReport(shift);
+//                                    this.shiftService.printEOSReport(shift);
 
                                 },
                                 () -> {
@@ -150,7 +157,7 @@ public class LoginController {
     //    @FXML
     void loginButtonClicked() {
         mainStage = (Stage) anchorPane.getScene().getWindow();
-        mainStage.getScene().getStylesheets().add(getClass().getResource("/com/amay/tom/tvm/css/theme.css").toExternalForm());
+
         this.shiftService.setMainStage(mainStage);
         String userName= null;//usernameField.getText();
         String userPass= null;//passwordField.getText();
