@@ -41,6 +41,8 @@ import java.util.Optional;
 
 public class MaintenanceLogin {
     @FXML
+    private Button login;
+    @FXML
     private HBox peripheralStatusHBox;
 
 
@@ -243,13 +245,14 @@ public class MaintenanceLogin {
                         if (controller.usernameField != null) {
                             controller.usernameField.getScene().getWindow().requestFocus();
                             controller.usernameField.requestFocus();
-                        } else {
-                            this.task.cancelScheduled();
+//                            controller.login.fire();
                         }
                     });
 
                     this.task.start();
 
+                }else{
+                    this.task.cancelScheduled();
                 }
 
             }

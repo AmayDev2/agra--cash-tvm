@@ -29,6 +29,7 @@ public class DeviceStatus implements DeviceStatusListener {
     @Override
     public void onDeviceStatusChanged(int[] deviceStatus) {
         if (deviceStatus[0] == 1) {
+            Logger.tag(LoggerTag.APP).debug("Trigger to maintenance");
             notifyListeners(this.operationModeDeciderService.requestAndGetAppliedOperationMode(
                     new OperationMode(OperationModeSource.TRIGGER,DeviceOperationMode.IN_SERVICE)));
         } else {

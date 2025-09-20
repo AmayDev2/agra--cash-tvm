@@ -474,7 +474,7 @@ public class TomInitialize implements ITomInitialize {
                     agent.getVersionRepository().insert(MasterConfigInfoMapper.dtoToEntity(versionService.getActual()));
                 }
                 agent.setMasterConfigInfo(MasterConfigInfoMapper.entityToMasterConfigInfo(agent.getVersionRepository().findAll().getFirst()));
-                if(agent.getTomConfigRepository().findAll().size()>0)
+//                if(agent.getTomConfigRepository().findAll().size()>0)
                 agent.setTomConfig(TomConfigMapper.entityToModel(agent.getTomConfigRepository().findAll().getFirst()));
                 ScuDataMapper.setVersion(agent.getMasterConfigInfo());
                 progress += 0.04;
@@ -1161,6 +1161,7 @@ public class TomInitialize implements ITomInitialize {
         deviceStatusListener = new ImpDeviceStatusListener(grpcApiListener);
         peripheralMonitor.addDeviceStatusListener(deviceStatusListener);
         agent.setDeviceStatusListener(deviceStatusListener);
+        peripheralMonitor.addDeviceStatusListener(agent.getDeviceStatus());
 
         // Schedule the peripheral monitor to run every 5 seconds
         agent.getThreadPool().getScheduler().scheduleAtFixedRate(peripheralMonitor, 0, 5, TimeUnit.SECONDS);

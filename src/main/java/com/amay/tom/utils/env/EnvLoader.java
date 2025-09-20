@@ -197,6 +197,6 @@ public class EnvLoader {
     }
 
     public boolean getEnvironment() {
-        return Boolean.parseBoolean(getOrDefault("ENVIRONMENT", String.valueOf(false)));
+        return Boolean.parseBoolean(getOrDefault("ENVIRONMENT", String.valueOf(true)));
     }
 }

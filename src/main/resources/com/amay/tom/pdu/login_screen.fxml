@@ -17,7 +17,7 @@
 <!--                    <Font size="14.0" />-->
 <!--                </font></Label>-->
             <PasswordField fx:id="passwordField" alignment="CENTER" onKeyPressed="#handleEnterPress" promptText="Enter Password" styleClass="password-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button alignment="CENTER" contentDisplay="CENTER" onAction="#loginButtonClicked" styleClass="button" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="login" alignment="CENTER" contentDisplay="CENTER" onAction="#loginButtonClicked" styleClass="button" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="3">
                 <font>
                     <Font size="18.0" />
                 </font></Button>
