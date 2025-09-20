@@ -44,7 +44,7 @@ public class SFTPDownloader {
             channelSftp.get(remoteFilePath, localFilePath, new ProgressMonitor(progressCallback));
 
             //Unzip the downloaded zip
-//            unzip(localFilePath);
+            unzip(localFilePath);
 
             progressCallback.accept(1.0, "Download complete: " + localFilePath.replace("\\", "/"));
         } catch (Exception ex) {
@@ -59,35 +59,42 @@ public class SFTPDownloader {
     }
 
 
-        public static void unzip(String zipFilePath) {
-            Path zipPath = Paths.get(zipFilePath);
-            Path destDir = zipPath.getParent(); // same folder as .zip file
+    public static void unzip(String zipFilePath) {
+        Path zipPath = Paths.get(zipFilePath);
+        Path destDir = zipPath.getParent(); // same folder as .zip file
 
-            try (ZipInputStream zis = new ZipInputStream(new FileInputStream(zipFilePath))) {
-                ZipEntry entry;
-                while ((entry = zis.getNextEntry()) != null) {
-                    Path newFilePath = destDir.resolve(entry.getName());
+        try (ZipInputStream zis = new ZipInputStream(new FileInputStream(zipFilePath))) {
+            ZipEntry entry;
+            while ((entry = zis.getNextEntry()) != null) {
+                String fileName = Paths.get(entry.getName()).getFileName().toString();
+                int dotIdx = fileName.lastIndexOf(".");
+                String baseName = dotIdx==-1?fileName:fileName.substring(0,dotIdx);
+                String newFileName = baseName+"_New.jar";
+                Path newFilePath = destDir.resolve(newFileName);
 
-                    if (entry.isDirectory()) {
-                        Files.createDirectories(newFilePath);
-                    } else {
-                        Files.createDirectories(newFilePath.getParent());
-                        try (BufferedOutputStream bos = new BufferedOutputStream(Files.newOutputStream(newFilePath))) {
-                            byte[] buffer = new byte[1024];
-                            int len;
-                            while ((len = zis.read(buffer)) > 0) {
-                                bos.write(buffer, 0, len);
-                            }
+                if (entry.isDirectory()) {
+                    Files.createDirectories(newFilePath);
+                } else {
+                    Files.createDirectories(newFilePath.getParent());
+                    try (BufferedOutputStream bos = new BufferedOutputStream(Files.newOutputStream(newFilePath))) {
+                        byte[] buffer = new byte[1024];
+                        int len;
+                        while ((len = zis.read(buffer)) > 0) {
+                            bos.write(buffer, 0, len);
                         }
                     }
-                    zis.closeEntry();
                 }
-
-                Files.deleteIfExists(zipPath);
-                //System.out.println("Unzipped and deleted: " + zipFilePath);
-            } catch (IOException e) {
-                e.printStackTrace();
+                zis.closeEntry();
             }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        try {
+            Files.deleteIfExists(zipPath);
+            System.out.println("Unzipped and deleted: " + zipFilePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
 

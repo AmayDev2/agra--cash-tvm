@@ -160,6 +160,10 @@ public class EnvLoader {
         return getOrDefault("FTP_LOCAL_PATH", FTP_LOCAL_PATH);
     }
 
+    public String getLocalZipName() {
+        return getOrDefault("LOCAL_ZIP_NAME", LOCAL_ZIP_NAME);
+    }
+
     public String getLocalFileName() {
         return getOrDefault("LOCAL_FILE_NAME", LOCAL_FILE_NAME);
     }
@@ -193,6 +197,6 @@ public class EnvLoader {
     }
 
     public boolean getEnvironment() {
-        return Boolean.parseBoolean(getOrDefault("ENVIRONMENT", String.valueOf(true)));
+        return Boolean.parseBoolean(getOrDefault("ENVIRONMENT", String.valueOf(false)));
     }
 }

@@ -752,14 +752,14 @@ public class TomInitialize implements ITomInitialize {
     private boolean updateSoftware( boolean isUpdate)  {
         this.updateUI(progress, "Checking for software updates...");
         try {
-            isUpdate=false;
+//            isUpdate=true;
             if(isUpdate) {
                 String host = this.envLoader.getFTPHost();//"localhost";
                 int port = this.envLoader.getFTPPort();//2222;
                 String username = this.envLoader.getFTPUsername();//"sftpuser";
                 String password = this.envLoader.getFTPPassword();//"sftp123";
                 String remoteFilePath = this.envLoader.getFTPRemoteFilePath();//"test/Tom.jar"; // Path on the SFTP server
-                String localFilePath = this.envLoader.getFTPLocalPath() + "/" + this.envLoader.getLocalFileName();// "Tom_New.jar"; // Local path to save the file
+                String localFilePath = this.envLoader.getFTPLocalPath() + "\\" +  this.envLoader.getLocalZipName();// "Tom_New.jar"; // Local path to save the file
                 SFTPDownloader.downloadFile(host, port, username, password, remoteFilePath, localFilePath, updateProgress);
 
                 String launcher = this.envLoader.getApplicationLauncherPath();
@@ -1161,7 +1161,6 @@ public class TomInitialize implements ITomInitialize {
         deviceStatusListener = new ImpDeviceStatusListener(grpcApiListener);
         peripheralMonitor.addDeviceStatusListener(deviceStatusListener);
         agent.setDeviceStatusListener(deviceStatusListener);
-        peripheralMonitor.addDeviceStatusListener(agent.getDeviceStatus());
 
         // Schedule the peripheral monitor to run every 5 seconds
         agent.getThreadPool().getScheduler().scheduleAtFixedRate(peripheralMonitor, 0, 5, TimeUnit.SECONDS);

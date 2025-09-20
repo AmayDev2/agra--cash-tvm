@@ -38,7 +38,7 @@ public class ShiftRepositoryImpl extends ShiftRepository {
             pstmt.setString(2, shift.getOperatorId());
             pstmt.setString(3, shift.getDeviceId());
             pstmt.setString(4, shift.getDeviceSerial());
-            pstmt.setTimestamp(5, shift.getCreatedAt() != null ?shift.getCreatedAt() : null);
+            pstmt.setTimestamp(5, shift.getCreatedAt() != null ? shift.getCreatedAt() : null);
             pstmt.setTimestamp(6, shift.getStartTime() != null ? shift.getStartTime() : null);
             pstmt.setTimestamp(7, shift.getEndTime() != null ? shift.getEndTime() : null);
             pstmt.setString(8, shift.getSerialNo());
@@ -46,7 +46,7 @@ public class ShiftRepositoryImpl extends ShiftRepository {
             pstmt.setString(10, shift.getLineNo());
             pstmt.setString(11, shift.getReason());
             pstmt.setString(12, shift.getCurrentStatus());
-            pstmt.setTimestamp(13, shift.getUpdatedAt() != null ? shift.getUpdatedAt() : null);
+            pstmt.setTimestamp(13, shift.getUpdatedAt() != null ? shift.getUpdatedAt() : null); // maps to update_at
             pstmt.setString(14,shift.getImprest_money());
             pstmt.setString(15,shift.getConfig_version());
             //System.out.println(pstmt);
