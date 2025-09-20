@@ -73,6 +73,7 @@ public interface Env {
     String FTP_REMOTE_FILE_PATH = "";
     String FTP_LOCAL_PATH = "";
     String LOCAL_FILE_NAME = "";
+    String LOCAL_ZIP_NAME = "";
 
     // Application Settings
     String APPLICATION_LAUNCHER_PATH = "";

@@ -517,7 +517,7 @@ public class TomInitialize implements ITomInitialize {
                 progress += 0.03;
                 this.updateUI(progress, "Peripheral status pushed.");
 
-//                if(envLoader.getEnvironment()) {
+                if(envLoader.getEnvironment()) {
                     try {
                         progress += 0.03;
                         this.updateUI(progress, "Connecting BNR,COIN MODULE & PRINTER.");
@@ -525,9 +525,9 @@ public class TomInitialize implements ITomInitialize {
                     } catch (RuntimeException e) {
                         e.printStackTrace();
                     }
-//                }
-                PrinterCommandDispatcher.INSTANCE.setupPrinter();
-                CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort(),agent.getCoinAmountRepository());
+                }
+//                PrinterCommandDispatcher.INSTANCE.setupPrinter();
+//                CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort(),agent.getCoinAmountRepository());
 
                 // 22. Push Remaining Data & Finalize
                 this.pushRemainedDate();
@@ -751,14 +751,14 @@ public class TomInitialize implements ITomInitialize {
     private boolean updateSoftware( boolean isUpdate)  {
         this.updateUI(progress, "Checking for software updates...");
         try {
-            isUpdate=false;
+            isUpdate=true;
             if(isUpdate) {
                 String host = this.envLoader.getFTPHost();//"localhost";
                 int port = this.envLoader.getFTPPort();//2222;
                 String username = this.envLoader.getFTPUsername();//"sftpuser";
                 String password = this.envLoader.getFTPPassword();//"sftp123";
                 String remoteFilePath = this.envLoader.getFTPRemoteFilePath();//"test/Tom.jar"; // Path on the SFTP server
-                String localFilePath = this.envLoader.getFTPLocalPath() + "/" + this.envLoader.getLocalFileName();// "Tom_New.jar"; // Local path to save the file
+                String localFilePath = this.envLoader.getFTPLocalPath() + "\\" +  this.envLoader.getLocalZipName();// "Tom_New.jar"; // Local path to save the file
                 SFTPDownloader.downloadFile(host, port, username, password, remoteFilePath, localFilePath, updateProgress);
 
                 String launcher = this.envLoader.getApplicationLauncherPath();
