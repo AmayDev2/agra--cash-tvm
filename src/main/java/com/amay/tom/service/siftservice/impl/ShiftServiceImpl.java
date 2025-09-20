@@ -1,5 +1,7 @@
 package com.amay.tom.service.siftservice.impl;
 
+import com.amay.printer.PrinterCommandDispatcher;
+import com.amay.printer.ShiftReportData;
 import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.config.SystemConfig;
@@ -463,61 +465,30 @@ public class ShiftServiceImpl implements ShiftService {
         String shiftStartTime= startTime.get();
         String shiftEndTime= endTime.get();
         try {
-            VBox node=fxmlLoader.load();
 
-            EOSReport eosReport = (EOSReport) fxmlLoader.getController();
+            PrinterCommandDispatcher.INSTANCE.printText(
+                    ShiftReportData.builder()
+                            .stationName(SystemConfig.getInstance().getCurrentStation().getStationName())
+                            .shiftId(shiftId)
+                            .startTime(shiftStartTime)
+                            .endTime(shiftEndTime)
+                            .equipmentId(shift.getDeviceId())
+                            .operatorId(operatorId)
+                            .impressMoney(String.valueOf(FareMedium.IMPREST_MONEY.getFareMediumTotal()))
+                            .sjtCashCount(String.valueOf(finalNoOfSJT))
+                            .sjtCashAmount(String.valueOf(finalAmountSJT))
+                            .rjtCashCount(String.valueOf(finalNoOfRJT))
+                            .rjtCashAmount(String.valueOf(finalAmountRJT))
+                            .gtCashAmount(String.valueOf(finalNoOfGroup))
+                            .gtCashAmount(String.valueOf(finalAmountGroup))
+                            .qrTotalCount(String.valueOf(finalAmountSJT+finalAmountRJT+finalAmountGroup))
+                            .qrTotalAmount(String.valueOf(finalNoOfSJT+finalNoOfRJT+finalNoOfGroup))
+                            .build()
+            );
 
-         eosReport.setEOSReport(
-                shiftId,
-                finalNoOfSJT, finalAmountSJT,
-                finalNoOfRJT, finalAmountRJT,
-                finalNoOfGroup, finalAmountGroup,
-                finalNoOfFree, finalAmountFree,
-                finalNoOfPaid, finalAmountPaid,
-                finalNoOfCanceled, finalAmountCanceled,
-                finalNoOfAdjusted, finalAmountAdjusted,
-                finalNoOfReplaced, finalAmountReplaced,
-                finalNoOfRefund, finalAmountRefunded,
-                finalLastTransaction,
-                (FareMedium.IMPREST_MONEY.getFareMediumTotal()),
-                agent, finalTotalAmount,finalSubTotalCount,
-                SystemConfig.getInstance().getCurrentStation().getStationName(),
-                shiftStartTime,
-                shiftEndTime,
-                 operatorId,sjtRefundCount,sjtRefundAmount,
-                 rjtRefundCount,rjtRefundAmount,groupRefundCount,groupRefundAmount,
-                 finalNoOfQrCashAdjusted,
-                 finalNoOfQrUpiAdjusted,
-                 finalNoOfQrPosAdjusted,
-                 finalNoOfPaidExitCash,
-                 finalNoOfPaidExitUpi,
-                 finalNoOfPaidExitPos,
-                 finalNoOfNcmcCashAdjusted,
-                 finalNoOfNcmcUpiAdjusted,
-                 finalNoOfNcmcPosAdjusted,
-                 finalQrCashAmountAdjusted,
-                 finalQrUpiAmountAdjusted,
-                 finalQrPosAmountAdjusted,
-                 finalPaidExitCashAmount,
-                 finalPaidExitUpiAmount,
-                 finalPaidExitPosAmount,
-                 finalNcmcCashAmountAdjusted,
-                 finalNcmcUpiAmountAdjusted,
-                 finalNcmcPosAmountAdjusted,
-                 finalTotalCardTransactions,
-                 finalTotalUpiTransactions,
-                 finalTotalCashTransactions,
-                 finalFreeAdjustCount
-         );
 
-            BufferedImage bufferedImage = ImageUtils.nodeToImage(node);
-            String folderPath = NewFolder.createTodayFolder();
-            ImageUtils.saveBufferedImage(bufferedImage, folderPath + "\\" + "shift_" + shiftId  + ".png");
-//            ImplPrintTicket.printImage(bufferedImage);
-
-        } catch (RuntimeException | IOException e) {
+        } catch (RuntimeException e) {
             Logger.info("Could not save image for EOS report: " + e.getMessage());
-            e.printStackTrace();
         }
 
     }

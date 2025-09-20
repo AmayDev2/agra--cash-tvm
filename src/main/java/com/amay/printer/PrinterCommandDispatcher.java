@@ -27,5 +27,8 @@ public enum PrinterCommandDispatcher {
     public BaseResponse printText(QRTicket qrTicket){
         return  printerInterface.printImageByText(qrTicket);
     }
+    public BaseResponse printText(ShiftReportData shiftReportData){
+        return  printerInterface.printImageByText(shiftReportData);
+    }
 
 }

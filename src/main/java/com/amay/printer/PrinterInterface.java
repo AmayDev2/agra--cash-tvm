@@ -12,6 +12,8 @@ public interface PrinterInterface {
     void getStatus();
     BaseResponse printImage(BufferedImage image);
 
+    BaseResponse printImageByText(ShiftReportData shiftReportData);
+
     PrinterStatus printerStatus();
 
     BaseResponse printImageQRImageByText(QRTicket qrTicket);

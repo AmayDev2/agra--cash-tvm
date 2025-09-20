@@ -82,7 +82,6 @@ public class MaintenanceLogin {
     private BuzzerTask buzzerTask;
 
     public MaintenanceLogin(Agent agent, SceneManager sceneManager) {
-        CoinModuleInterface.INSTANCE.turnOffBuzzer();
         this.sceneManager=sceneManager;
         this.agent = agent;
         currentStation = SystemConfig.getInstance().getCurrentStation();

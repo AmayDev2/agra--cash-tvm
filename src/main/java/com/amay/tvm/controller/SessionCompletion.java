@@ -30,7 +30,7 @@ public class SessionCompletion {
     private  String image;
 
 
-    private BorderPane borderPane;
+//    private BorderPane borderPane;
     private StackPane stackPane;
     private GridPane gridPane;
     private PrintTicketService printTicketService;
@@ -56,7 +56,7 @@ public class SessionCompletion {
     public SessionCompletion(StackPane stackPane, BorderPane borderPane,ArrayList<GeneratedTicket> generatedTicket,
                              PaymentResponse paymentResponse, Agent agent){
         this.stackPane=stackPane;
-        this.borderPane = borderPane;
+//        this.borderPane = borderPane;
         printTicketService = new PrintTicketService(generatedTicket, paymentResponse, agent);
         if(!paymentResponse.isSuccess()){
             eventTitleText="Transaction Failed";
@@ -73,7 +73,7 @@ public class SessionCompletion {
     public void skipPrintReceipt(ActionEvent actionEvent) {
         this.stackPane.getChildren().clear();
         this.stackPane.getChildren().add(gridPane);
-        this.borderPane.setCenter(this.stackPane);
+//        this.borderPane.setCenter(this.stackPane);
         actionEvent.consume();
     }
 }

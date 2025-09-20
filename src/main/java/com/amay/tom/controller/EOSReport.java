@@ -3,8 +3,13 @@ package com.amay.tom.controller;
 import com.amay.tom.Main;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.config.SystemConfig;
+import com.amay.tom.model.Equipment;
+import com.amay.tom.model.session.Shift;
+import com.amay.tom.model.station.Station;
 import javafx.fxml.FXML;
 import javafx.scene.text.Text;
+import org.checkerframework.checker.units.qual.A;
+import org.checkerframework.checker.units.qual.C;
 import org.tinylog.Logger;
 
 import java.time.LocalDateTime;
@@ -326,6 +331,7 @@ try {
         revenue.setText(String.valueOf(rev));
         finalTotal.setText(finalAmt);
     }
+
 
 
 

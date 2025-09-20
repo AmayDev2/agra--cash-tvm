@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+//NEW STATION SELECTION
 public class TicketSelectionController {
     @FXML
     private GridPane stationGrid;
@@ -117,7 +118,7 @@ public class TicketSelectionController {
     @FXML
     private void navigateToHomePage(ActionEvent actionEvent) {
         int count = pane.getChildren().size();
-        this.addBottomBarView();
+//        this.addBottomBarView();
         if (count > 0) {
             pane.getChildren().remove(count - 1); // remove top-most child
         }
@@ -129,8 +130,8 @@ public class TicketSelectionController {
         try {
             FXMLLoader fxmlLoader = ViewFactory.getBottomNav();
             fxmlLoader.setControllerFactory(x -> new StatusBottomBarView(agent.getPeripheralMonitor(), agent.getVersions(),agent.getMasterConfigInfo()));
-            borderPane.setBottom(fxmlLoader.load());
-        } catch (RuntimeException | IOException e) {
+//            borderPane.setBottom(fxmlLoader.load());
+        } catch (RuntimeException e) {
             System.err.println("Error loading bottom navigation view: " + e.getMessage());
         }
     }

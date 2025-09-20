@@ -309,7 +309,7 @@ public class StationSelectionController {
             ));
 
             this.stackPane.getChildren().add(fxmlLoader.load());
-            this.borderPane.setCenter(this.stackPane);
+//            this.borderPane.setCenter(this.stackPane);
 
         } catch (RuntimeException | IOException e) {
             Logger.error("Error confirming selection: {}", e.getMessage());

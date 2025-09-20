@@ -78,7 +78,7 @@ public class PaymentController {
 
     // Core application components
     private StackPane stackPane;
-    private BorderPane borderPane;
+//    private BorderPane borderPane;
     private Agent agent;
     private StationData stationData;
 
@@ -104,7 +104,7 @@ public class PaymentController {
                              TicketType ticketType ,int fare
     ) {
         this.stackPane = stackPane;
-        this.borderPane = borderPane;
+//        this.borderPane = borderPane;
         this.agent = agent;
         this.stationData = stationData;
         this.selectedDestination = selectedDestination;
@@ -134,7 +134,7 @@ public class PaymentController {
      */
     public PaymentController(StackPane stackPane, BorderPane borderPane) {
         this.stackPane = stackPane;
-        this.borderPane = borderPane;
+//        this.borderPane = borderPane;
     }
 
     /**
@@ -143,6 +143,7 @@ public class PaymentController {
     @FXML
     void initialize() {
         try {
+            setPaymentOptions();
             // Initialize UI labels
             if (SystemConfig.getInstance().getCurrentStation() != null && selectedDestination != null) {
 
@@ -175,6 +176,10 @@ public class PaymentController {
         } catch (Exception e) {
             Logger.error("Error initializing PaymentController: {}", e.getMessage());
         }
+    }
+
+    private void setPaymentOptions() {
+            onClickCash.setDisable(!agent.getPeripheralMonitor().isUps_connected());
     }
 
     /**
@@ -409,7 +414,7 @@ public class PaymentController {
             Platform.runLater(() -> {
                 if (count > 0) {
                     this.stackPane.getChildren().remove(count - 1);
-                    this.borderPane.setCenter(this.stackPane);
+//                    this.borderPane.setCenter(this.stackPane);
                 }
             });
         } catch (Exception e) {
@@ -734,7 +739,7 @@ public class PaymentController {
 
             SessionCompletion sessionCompletion = new SessionCompletion(
                     this.stackPane,
-                    this.borderPane,
+                    null,
                     generatedTickets,
                     paymentResponse,
                     agent
@@ -749,14 +754,13 @@ public class PaymentController {
                 } catch (IOException e) {
                     Logger.tag(LoggerTag.APP).error("Success Page Loading error : "+e.getMessage());
                 }
-                this.borderPane.setCenter(this.stackPane);
+//                this.borderPane.setCenter(this.stackPane);
                     });
 
             Logger.info("Successfully navigated to completion screen");
 
         } catch (RuntimeException e) {
             Logger.error("Error processing tickets and navigation: {}", e.getMessage());
-            e.printStackTrace();
         }
     }
 
@@ -777,7 +781,7 @@ public class PaymentController {
 
             SessionCompletion sessionCompletion = new SessionCompletion(
                     this.stackPane,
-                    this.borderPane,
+                    null,
                     generatedTickets,
                     paymentResponse,
                     agent
@@ -790,9 +794,9 @@ public class PaymentController {
                 try {
                     this.stackPane.getChildren().add(fxmlLoader.load());
                 } catch (IOException e) {
-                    e.getMessage();
+                    Logger.tag(LoggerTag.APP).error(e.getMessage());
                 }
-                this.borderPane.setCenter(this.stackPane);
+//                this.borderPane.setCenter(this.stackPane);
             });
 
             Logger.info("Successfully navigated to completion screen");

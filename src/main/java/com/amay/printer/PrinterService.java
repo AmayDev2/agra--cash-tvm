@@ -2,7 +2,6 @@ package com.amay.printer;
 
 import com.amay.printer.Response.BaseResponse;
 import com.amay.printer.Response.ImagePrintResponse;
-import com.amay.tom.config.ENVURL;
 import com.amay.tom.config.SystemConfig;
 import com.amay.tom.model.QRTicket;
 import com.amay.tom.repository.StationData;
@@ -14,11 +13,6 @@ import org.tinylog.Logger;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
 import java.util.Arrays;
 import java.util.List;
 
@@ -182,26 +176,6 @@ public class PrinterService implements PrinterInterface {
         return imagePrintResponse;
     }
 
-//    private static String extractImage(String resourcePath){
-//        try{
-//            String imagePath;
-//            InputStream in = PrinterService.class.getResourceAsStream("/images/MPMRC.bmp");
-//            Path tempFile = Files.createTempFile("printer_image", ".bmp");
-//            Files.copy(in, tempFile, StandardCopyOption.REPLACE_EXISTING);
-//            imagePath = tempFile.toAbsolutePath().toString();
-//            // return imagePath to print ticket
-//            return imagePath;
-//
-//        }catch (Exception e ){
-//            if(e instanceof IOException)
-//                Logger.error(e, "Ticket Logo not found: " + resourcePath);
-//            else {
-//                Logger.error(e, "Error extracting image: "+e.getMessage());
-//                e.printStackTrace();
-//            }
-//        }
-//        return IMAGE_URL;
-//}
 
 
     private void printImageByPath(){
@@ -231,6 +205,17 @@ public class PrinterService implements PrinterInterface {
             this.printText(qrTicket);
             imagePrintResponse.setSuccess(true);
 
+        return imagePrintResponse;
+    }
+
+    @Override
+    public BaseResponse printImageByText(ShiftReportData shiftReportData) {
+        ImagePrintResponse imagePrintResponse=new ImagePrintResponse();
+        // print logo
+        this.printImageByPath();
+        // print bottom message
+        this.printText(shiftReportData);
+        imagePrintResponse.setSuccess(true);
 
         return imagePrintResponse;
     }
@@ -294,6 +279,8 @@ public class PrinterService implements PrinterInterface {
         return imagePrintResponse;
     }
 
+
+
     private void printText(QRTicket qrTicket) {
 
         if (qrTicket == null) {
@@ -319,6 +306,102 @@ public class PrinterService implements PrinterInterface {
             e.printStackTrace();
         }
 
+
+    }
+
+    private void printText(ShiftReportData shiftReportData){
+        String formated=getShiftReportTemplate();
+        formated=fillTheData(formated,shiftReportData);
+
+        try {
+            PrintFontSettings pfs=new PrintFontSettings();
+            pfs.Emphasized=true;
+            pfs.LeftMarginValue=10*10;
+            pfs.LineSpacing=30;
+            pfs.CharWidth= PrintFontSettings.FontSize.FONT_SIZE_X1;
+            pfs.CharHeight=PrintFontSettings.FontSize.FONT_SIZE_X1;
+            pfs.Justification= PrintFontSettings.FontJustification.FONT_JUSTIFICATION_LEFT;
+            pfs.CharFontType=PrintFontSettings.FontType.FONT_TYPE_2;
+
+            cudev.PrintText(formated,pfs);
+            cudev.Cut(CuCustomWndDevice.CutType.CUT_TOTAL);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private String fillTheData(String receiptTemplate, ShiftReportData shiftReportData) {
+          return String.format(receiptTemplate,
+                shiftReportData.getStationName(),
+                shiftReportData.getShiftId(),
+                shiftReportData.getStartTime(),
+                shiftReportData.getEndTime(),
+                shiftReportData.getEquipmentId(),
+                shiftReportData.getOperatorId(),
+                shiftReportData.getImpressMoney(),
+
+                shiftReportData.getSjtCashCount(),
+                shiftReportData.getSjtCashAmount(),
+                shiftReportData.getRjtCashCount(),
+                shiftReportData.getRjtCashAmount(),
+                shiftReportData.getGtCashCount(),
+                shiftReportData.getGtCashAmount(),
+                shiftReportData.getSjtUpiCount(),
+                shiftReportData.getSjtUpiAmount(),
+                shiftReportData.getRjtUpiCount(),
+                shiftReportData.getRjtUpiAmount(),
+                shiftReportData.getGtUpiCount(),
+                shiftReportData.getGtUpiAmount(),
+                shiftReportData.getSjtPosCount(),
+                shiftReportData.getSjtPosAmount(),
+                shiftReportData.getRjtPosCount(),
+                shiftReportData.getRjtPosAmount(),
+                shiftReportData.getGtPosCount(),
+                shiftReportData.getGtPosAmount(),
+                shiftReportData.getQrTotalCount(),
+                shiftReportData.getQrTotalAmount(),
+
+                shiftReportData.getNcmcCashCount(),
+                shiftReportData.getNcmcCashAmount(),
+                shiftReportData.getNcmcUpiCount(),
+                shiftReportData.getNcmcUpiAmount(),
+                shiftReportData.getNcmcPosCount(),
+                shiftReportData.getNcmcPosAmount(),
+                shiftReportData.getNcmcTotalCount(),
+                shiftReportData.getNcmcTotalAmount(),
+
+                shiftReportData.getRs10Count(),
+                shiftReportData.getRs10Amount(),
+                shiftReportData.getRs20Count(),
+                shiftReportData.getRs20Amount(),
+                shiftReportData.getRs50Count(),
+                shiftReportData.getRs50Amount(),
+                shiftReportData.getRs100Count(),
+                shiftReportData.getRs100Amount(),
+                shiftReportData.getRs200Count(),
+                shiftReportData.getRs200Amount(),
+                shiftReportData.getRs500Count(),
+                shiftReportData.getRs500Amount(),
+                shiftReportData.getBankTotalCount(),
+                shiftReportData.getBankTotalAmount(),
+
+                shiftReportData.getHopper1Count(),
+                shiftReportData.getHopper1Amount(),
+                shiftReportData.getHopper2Count(),
+                shiftReportData.getHopper2Amount(),
+                shiftReportData.getHopper3Count(),
+                shiftReportData.getHopper3Amount(),
+                shiftReportData.getCoinTotalCount(),
+                shiftReportData.getCoinTotalAmount(),
+
+                shiftReportData.getTotalCashSales(),
+                shiftReportData.getTotalUpiSales(),
+                shiftReportData.getTotalPosSales(),
+                shiftReportData.getTotalRevenue(),
+                shiftReportData.getAvailableCash(),
+                shiftReportData.getPrintTime()
+        );
 
     }
 
@@ -404,6 +487,102 @@ public class PrinterService implements PrinterInterface {
         }
         return new BaseResponse().setSuccess(true).setError("Successfully Complete CUT");
     }
+
+    private static String getShiftReportTemplate() {
+        String receiptTemplate = """
+            ================================
+                    INDORE METRO
+                 END OF SHIFT REPORT
+            ================================
+            
+            Station: %s
+            Shift ID: %s
+            Start: %s
+            End: %s
+            Equipment: %s
+            Operator: %s
+            
+            ================================
+            START BALANCE
+            ================================
+            Impress Money:        Rs. %s
+            
+            ================================
+            QR SALE TRANSACTIONS
+            ================================
+            Transaction    Cnt    Amount
+            --------------------------------
+            SJT Cash        %s     Rs.  %s
+            RJT Cash        %s     Rs.  %s
+            GT Cash         %s     Rs.  %s
+            SJT UPI         %s     Rs.  %s
+            RJT UPI         %s     Rs.  %s
+            GT UPI          %s     Rs.  %s
+            SJT POS         %s     Rs.  %s
+            RJT POS         %s     Rs.  %s
+            GT POS          %s     Rs.  %s
+            --------------------------------
+            Total           %s     Rs.  %s
+            
+            ================================
+            NCMC TRANSACTIONS
+            ================================
+            Transaction    Cnt    Amount
+            --------------------------------
+            NCMC Top Up Cash %s    Rs.  %s
+            NCMC Top Up UPI  %s    Rs.  %s
+            NCMC Top Up POS  %s    Rs.  %s
+            --------------------------------
+            Total           %s     Rs.  %s
+            
+            ================================
+            BANK NOTE DETAILS
+            ================================
+            Bill Type    Cnt    Amount
+            --------------------------------
+            Rs. 10        %s     Rs.  %s
+            Rs. 20        %s     Rs.  %s
+            Rs. 50        %s     Rs.  %s
+            Rs. 100       %s     Rs. %s
+            Rs. 200       %s     Rs. %s
+            Rs. 500       %s     Rs. %s
+            --------------------------------
+            Total         %s     Rs. %s
+            
+            ================================
+            COIN DETAILS
+            ================================
+            Coin Type    Cnt    Amount
+            --------------------------------
+            Rs. 1         %s     Rs.   %s
+            Rs. 5         %s     Rs.   %s
+            Rs. 10        %s     Rs.  %s
+            --------------------------------
+            Total         %s     Rs.  %s
+            
+            ================================
+            SHIFT SUMMARY
+            ================================
+            Total Sale by Cash:   Rs.  %s
+            Total Sale by UPI:    Rs.  %s
+            Total Sale by POS:    Rs.  %s
+            --------------------------------
+            Total Revenue:        Rs. %s
+            
+            Available Cash:       Rs.  %s
+            
+            ================================
+                 THANK YOU
+               INDORE METRO
+            ================================
+            
+            Print Time: %s
+            
+            """;
+
+        return receiptTemplate;
+    }
+
 
 
 }

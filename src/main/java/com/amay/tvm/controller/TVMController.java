@@ -175,9 +175,6 @@ public class TVMController {
 
 
     private void setOperationModeListener(){
-//        setOperationMode(agent.getDeviceStatus().getCurrentStatus());
-
-
         agent.getDeviceStatus().addDeviceStatusListener(this::setOperationMode);
     }
 
@@ -193,6 +190,8 @@ public class TVMController {
                 agent.getGrpcApiListener().sendOperationMode(OperationMode.IN_SERVICE);
                 agent.getGrpcApiListener().sendPeripheralStatus(agent.getPeripheralMonitor().getDeviceStatus());
             } else {
+
+
                 
                 if (currentMode != newStatus && newStatus == DeviceOperationMode.EMERGENCY) {
                     FXMLLoader loader = ViewFactory.getSpecialModeScreen();
@@ -249,7 +248,7 @@ public class TVMController {
 
 
     public void onClickSjtButton(ActionEvent actionEvent) {
-        borderPane.setBottom(null);
+//        borderPane.setBottom(null);
 
         FXMLLoader loader=  ViewFactory.getTicketSelectionView();
         loader.setControllerFactory(c -> new TicketSelectionController(borderPane, stackPane, agent, stationData, TicketType.SINGLE));
@@ -263,7 +262,7 @@ public class TVMController {
     }
 
     public void onClickRjtButton(ActionEvent actionEvent) {
-        borderPane.setBottom(null);
+//        borderPane.setBottom(null);
         FXMLLoader loader=  ViewFactory.getTicketSelectionView();
         loader.setControllerFactory(c -> new TicketSelectionController(borderPane, stackPane, agent, stationData, TicketType.RETURN));
         try {
@@ -276,7 +275,7 @@ public class TVMController {
     }
 
     public void onClickGtButton(ActionEvent actionEvent) {
-        borderPane.setBottom(null);
+//        borderPane.setBottom(null);
         FXMLLoader loader=  ViewFactory.getTicketSelectionView();
         loader.setControllerFactory(c -> new TicketSelectionController(borderPane, stackPane, agent, stationData, TicketType.GROUP));
         try {
