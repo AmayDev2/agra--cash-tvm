@@ -26,5 +26,5 @@ public interface PrinterInterface {
     BaseResponse printImageByText(QRTicket qrTicket);
 
 
-
+    BaseResponse printTicketsWithPayReceipt(List<QRTicket> qrTickets, PayReceipt payReceipt);
 }

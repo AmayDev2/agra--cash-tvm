@@ -82,6 +82,7 @@ public enum CoinModuleInterface {
 		if(result.totalAmount!=amount && !service.isConnected()){
 			return dispenseResponse;
 		}
+			service.end();
 
 		int delayTime=0;
 		for(AmountDetail amountDetail:result.amountDetailList) {
@@ -141,6 +142,7 @@ public enum CoinModuleInterface {
 
 	private PollingStatusResponse pollingStatusResponse;
 	public PollingStatusResponse pooling(){
+
 		if(!isPoolingAllowed)return pollingStatusResponse;
 		pollingStatusResponse=(PollingStatusResponse) service.pollStatus();
 		Logger.tag(LoggerTag.APP).info(pollingStatusResponse.toString());
@@ -150,13 +152,13 @@ public enum CoinModuleInterface {
 
 
 	public void turnOffBuzzer() {
-		service.turnOffTrayLight();
+		service.turnOffBuzzer();
 
 		Logger.tag(LoggerTag.APP).warn("TURN OFF BUZZER");
 	}
 
 	public void turnOnBuzzer() {
-		service.turnOnTrayLight();
+		service.turnOnBuzzer();
 		Logger.tag(LoggerTag.APP).warn("TURN ON BUZZER");
 	}
 

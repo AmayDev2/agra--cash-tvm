@@ -38,6 +38,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 import org.amaytechnosystems.ShiftStatus;
+import org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException;
 import org.tinylog.Logger;
 
 import java.awt.image.BufferedImage;
@@ -135,7 +136,11 @@ public class ShiftServiceImpl implements ShiftService {
             return fxmlLoader;
 
 
-        } catch (Exception usernameNotFoundException) {
+        }
+//        catch (JdbcSQLIntegrityConstraintViolationException e){
+//
+//        }
+        catch (Exception usernameNotFoundException) {
             agent.getGrpcApiListener().sendAlarm(Alarm.LOGIN_FAILED);
             agent.getCcuGrpcApiListener().sendAlarm(Alarm.LOGIN_FAILED);
             throw  usernameNotFoundException;

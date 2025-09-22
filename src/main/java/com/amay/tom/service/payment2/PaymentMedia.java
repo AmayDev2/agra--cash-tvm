@@ -2,6 +2,7 @@ package com.amay.tom.service.payment2;
 
 import com.amay.tom.enums.PayMethod;
 import com.amay.tom.model.payment.PaymentResponse;
+import com.amay.tom.utils.time.TimeUtil;
 import com.amay.tvm.backend.entity.TransactionEntity;
 import com.amay.tvm.backend.enums.TransactionStatus;
 import com.amay.tvm.backend.enums.TransactionSubStatus;
@@ -26,11 +27,13 @@ public interface PaymentMedia {
     }
 
     default void saveInDbPaymentCompletion(PaymentResponse paymentResponse, TransactionRepository transactionRepository){
+        paymentResponse.setTransactionTimeEpoch(Instant.now().toEpochMilli());
+        paymentResponse.setTransactionTime(TimeUtil.epochMilliToFormattedSystemLocalDateTime(paymentResponse.getTransactionTimeEpoch(),"dd-MM-yyyy HH:mm:ss"));
         TransactionEntity transaction=transactionRepository.findById(paymentResponse.getTransactionId());
         transaction.setTransactionId(paymentResponse.getRemoteTransactionId());
         transaction.setStatus(TransactionStatus.valueOf(paymentResponse.getStatus()));
         transaction.setSubStatus(TransactionSubStatus.NONE);
-        transaction.setTransactionCompleteTime(Instant.now().toEpochMilli());
+        transaction.setTransactionCompleteTime(paymentResponse.getTransactionTimeEpoch());
         transactionRepository.update(transaction);
     }
 

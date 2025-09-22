@@ -4,6 +4,7 @@ import com.amay.tom.config.SystemConfig;
 import com.amay.tom.enums.PayMethod;
 import com.amay.tom.model.QRTicket;
 import com.amay.tom.model.adjust.AdjustedTicket;
+import com.amay.tom.model.payment.PaymentResponse;
 import com.amay.tom.model.session.Shift;
 import com.amay.tom.model.tickets.PostGeneratedTicket;
 import com.amay.tom.model.tickets.TicketsDto;
@@ -402,7 +403,7 @@ public class ScuDataMapper {
                 .build();
     }
 
-    public static TicketRequestV1 createTicketIssueRequest(String orderId, String transactionId, PostGeneratedTicket postGeneratedTicket, Shift shift) {
+    public static TicketRequestV1 createTicketIssueRequest(String orderId, String transactionId, PostGeneratedTicket postGeneratedTicket, Shift shift, PaymentResponse paymentResponse) {
 
         String ipAddress = "Unknown";
         try {
@@ -456,7 +457,7 @@ public class ScuDataMapper {
                 .setDiscount(0)
                 .setProductId( postGeneratedTicket.getProperTicket().getTicketType().getTicketTypeId())
                 .setQuantity( postGeneratedTicket.getProperTicket().getQuantity())
-                .setPaymentMode(PayMethod.CASH.name())
+                .setPaymentMode(paymentResponse.getPaymentMode())
                 .setQrData( postGeneratedTicket.getQrCodeString())
                 .build();
 

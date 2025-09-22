@@ -7,10 +7,9 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="mainRootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" stylesheets="@css/structure.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tvm.controller.TVMController">
-    <BorderPane fx:id="borderPane" maxWidth="1024.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0">
+    <BorderPane fx:id="borderPane" stylesheets="@css/structure.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tvm.controller.TVMController">
         <top>
-            <AnchorPane maxWidth="1024.0" minHeight="110.0" minWidth="1024.0" prefHeight="110.0" prefWidth="1024.0" styleClass="header" BorderPane.alignment="CENTER">
+            <AnchorPane  styleClass="header" BorderPane.alignment="CENTER">
                 <Label fx:id="labelStationName" alignment="CENTER" contentDisplay="CENTER" layoutX="339.0" layoutY="15.0" prefHeight="49.0" prefWidth="347.0" style="-fx-font-size: 30;" text="Gandhi Nagar" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="339.0" AnchorPane.rightAnchor="338.0" AnchorPane.topAnchor="15.0">
                     <font>
                         <Font name="System Bold" size="40.0" />
@@ -78,4 +77,3 @@
           <AnchorPane maxHeight="50.0" maxWidth="1024.0" minHeight="50.0" minWidth="1024.0" prefHeight="50.0" prefWidth="1024.0" style="-fx-background-color: #CCE4FF;" BorderPane.alignment="CENTER" />
         </bottom>
     </BorderPane>
-</AnchorPane>

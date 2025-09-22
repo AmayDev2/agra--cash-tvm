@@ -4,6 +4,7 @@ import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.config.SystemConfig;
 import com.amay.tom.enums.PaymentMethod;
+import com.amay.tom.exceptions.PaymentNotDoneException;
 import com.amay.tom.model.GeneratedTicket;
 import com.amay.tom.model.station.Station;
 import com.amay.tom.model.TicketType;
@@ -225,12 +226,12 @@ public class PaymentController {
 
             // ToggleButton automatically handles selection state
             if (onClickCash.isSelected()) {
-                this.paymentMethod = PaymentMethod.CASH;
-                this.payType(this.paymentMethod);
+                this.paymentMethod = PaymentMethod.UPI;
+                this.selectedPayment=new UPIPaymentMethod();
             } else {
                 // If deselected, clear payment method
                 this.paymentMethod = null;
-                this.selectedPayment = new UPIPaymentMethod(); // Reset to default
+                this.selectedPayment = null;
             }
 
         } catch (Exception e) {
@@ -250,10 +251,10 @@ public class PaymentController {
 
             if (onClickUPI.isSelected()) {
                 this.paymentMethod = PaymentMethod.UPI;
-                this.payType(this.paymentMethod);
+                this.selectedPayment=new UPIPaymentMethod();
             } else {
                 this.paymentMethod = null;
-                this.selectedPayment = new UPIPaymentMethod(); // Reset to default
+                this.selectedPayment = null;
             }
 
         } catch (Exception e) {
@@ -273,10 +274,10 @@ public class PaymentController {
 
             if (onClickCard.isSelected()) {
                 this.paymentMethod = PaymentMethod.CARD;
-                this.payType(this.paymentMethod);
+                this.selectedPayment=new CashPaymentMethod();
             } else {
                 this.paymentMethod = null;
-                this.selectedPayment = new UPIPaymentMethod(); // Reset to default
+                this.selectedPayment = null;
             }
 
         } catch (Exception e) {
@@ -389,6 +390,7 @@ public class PaymentController {
 //
             Logger.info("Confirming payment selection: {}", this.paymentMethod);
             this.createTicketRequest(requestedTicket);
+
 
         } catch (Exception e) {
             Logger.error("Unexpected error during confirmation: {}", e.getMessage());
@@ -598,35 +600,36 @@ public class PaymentController {
     private void showWaiting() {
 
 //        // Create spinner
-//        ProgressIndicator spinner = new ProgressIndicator();
-//        spinner.setStyle(
-//                "-fx-progress-color: cyan;" +  // updated color
-//                        "-fx-scale-x: 8;" +
-//                        "-fx-scale-y: 8;"
-//        );
-//
-//        // Create text label
-//        Label loadingText = new Label("Generating Tickets...");
-//        loadingText.setStyle("-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: gold;"); // complementary color
-//
-//        // Put both inside a StackPane
-//        StackPane spinnerWithText = new StackPane(spinner, loadingText);
-//        StackPane.setAlignment(loadingText, Pos.CENTER);
-//
-//        // Optional: semi-transparent background
-//        spinnerWithText.setStyle("-fx-background-color: rgba(0, 0, 0, 0.3);");
-//
-//        // Add overlay
-//        Platform.runLater(()->this.stackPane.getChildren().add(spinnerWithText));
-        FXMLLoader fxmlLoader = ViewFactory.getTxnProcess();
+        ProgressIndicator spinner = new ProgressIndicator();
+        spinner.setStyle(
+                "-fx-progress-color: cyan;" +  // updated color
+                        "-fx-scale-x: 8;" +
+                        "-fx-scale-y: 8;"
+        );
 
-        Platform.runLater(() -> {
-            try {
-                this.stackPane.getChildren().add(fxmlLoader.load());
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        });
+        // Create text label
+        Label loadingText = new Label("Generating Tickets...");
+        loadingText.setStyle("-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: gold;"); // complementary color
+
+        // Put both inside a StackPane
+        StackPane spinnerWithText = new StackPane(spinner, loadingText);
+        StackPane.setAlignment(loadingText, Pos.CENTER);
+
+        // Optional: semi-transparent background
+        spinnerWithText.setStyle("-fx-background-color: rgba(0, 0, 0, 0.3);");
+
+        // Add overlay
+        Platform.runLater(()->this.stackPane.getChildren().add(spinnerWithText));
+
+//        FXMLLoader fxmlLoader = ViewFactory.getTxnProcess();
+//
+//        Platform.runLater(() -> {
+//            try {
+//                this.stackPane.getChildren().add(fxmlLoader.load());
+//            } catch (IOException e) {
+//                throw new RuntimeException(e);
+//            }
+//        });
 
     }
 
@@ -703,7 +706,7 @@ public class PaymentController {
             // Generate and process tickets
             this.paymentFailedAndNavigate(properTicketOrder, paymentResponse);
         }else{
-//            showWaiting();
+            showWaiting();
             Logger.info("Payment response: {}", paymentResponse);
             // Generate and process tickets
             this.processTicketsAndNavigate(properTicketOrder, paymentResponse);
@@ -731,7 +734,7 @@ public class PaymentController {
             );
 
             generatedTickets.forEach(ticket -> {
-                Logger.info("Generated ticket: {}", ticket);
+                Logger.tag(LoggerTag.APP).info("Generated ticket: {}", ticket);
             });
 
             // Navigate to completion screen
@@ -748,19 +751,24 @@ public class PaymentController {
             Platform.runLater(()-> {
                         fxmlLoader.setControllerFactory(param -> sessionCompletion);
                         sessionCompletion.printTicket();
-
-                try {
-                    this.stackPane.getChildren().add(fxmlLoader.load());
-                } catch (IOException e) {
-                    Logger.tag(LoggerTag.APP).error("Success Page Loading error : "+e.getMessage());
-                }
-//                this.borderPane.setCenter(this.stackPane);
+                            try {
+                                this.stackPane.getChildren().add(fxmlLoader.load());
+                            } catch (IOException e) {
+                                Logger.tag(LoggerTag.APP).error("Success Page Loading error : "+e.getMessage());
+                                throw new RuntimeException(e.getMessage());
+                            }
                     });
 
             Logger.info("Successfully navigated to completion screen");
 
-        } catch (RuntimeException e) {
+        }catch (PaymentNotDoneException paymentNotDoneException) {
+            Logger.error("Error processing tickets and navigation: {}", paymentNotDoneException.getMessage());
+            // Generate Pay receipt
+            this.paymentFailedAndNavigate(properTicketOrder, paymentResponse);
+
+        }catch (RuntimeException e) {
             Logger.error("Error processing tickets and navigation: {}", e.getMessage());
+            this.paymentFailedAndNavigate(properTicketOrder, paymentResponse);
         }
     }
 
@@ -790,20 +798,18 @@ public class PaymentController {
             Platform.runLater(()-> {
                 fxmlLoader.setControllerFactory(param -> sessionCompletion);
                 sessionCompletion.printTicket();
-
                 try {
                     this.stackPane.getChildren().add(fxmlLoader.load());
                 } catch (IOException e) {
                     Logger.tag(LoggerTag.APP).error(e.getMessage());
                 }
-//                this.borderPane.setCenter(this.stackPane);
             });
 
+//                 this.stackPane.getChildren().add(fxmlLoader.load());
             Logger.info("Successfully navigated to completion screen");
 
         } catch (RuntimeException e) {
-            Logger.error("Error processing tickets and navigation: {}", e.getMessage());
-            e.printStackTrace();
+            Logger.tag(LoggerTag.APP).error("Error processing tickets and navigation: {}", e.getMessage());
         }
     }
 
@@ -827,6 +833,15 @@ public class PaymentController {
             display.setText("");
             quantity=minTicket;
         }
+    }
+
+//    quantity=0;
+//            labelFare.setText("₹ " + (0));
+//            labelCount.setText("0");
+//}
+
+    private void setPay(int quantity){
+//        btnSubmit.setVisible(quantity>0);
     }
 
     public void handleDecrement() {

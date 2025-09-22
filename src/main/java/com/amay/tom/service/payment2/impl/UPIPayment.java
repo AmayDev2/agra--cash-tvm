@@ -20,13 +20,14 @@ public class UPIPayment implements PaymentMedia {
         PaymentResponse paymentResponse= new PaymentResponse()
                 .setOrderId(orderId)
                 .setAmount((int)amount)
-                .setTransactionId("UPI"+UUID.randomUUID().toString())
+                .setTransactionId("UPI_"+UUID.randomUUID().toString())
                 .setRemoteTransactionId(UUID.randomUUID().toString())
                 .setPaymentMode(PayMethod.UPI.name())
                 .setSuccess(true)
                 .setStatus("SUCCESS");
         saveInDbPaymentInitialization(paymentResponse,transactionRepository);
         saveInDbPaymentCompletion(paymentResponse,transactionRepository);
+
 
         new Thread(()->{
             try {

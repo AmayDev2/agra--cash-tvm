@@ -10,4 +10,6 @@ public interface IBNRListener {
     void setAllowedNotes(List<Integer> list);
 
     void disableCancelButton();
+
+    void getAcceptedAmount();
 }

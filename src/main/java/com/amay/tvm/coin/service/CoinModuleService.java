@@ -96,7 +96,7 @@ public class CoinModuleService {
 		byte endSeq = sequenceNumberManager.next();
 		ProtocolFrame end = CommandBuilder.createCoinChangeEndCommand(hopper, endSeq);
 		Logger.tag(LoggerTag.BUSS).info("TX (end)     : " + HexUtil.toHex(end.toByteArray()));
-		sendAndReceive(end, 0);
+//		sendAndReceive(end, 0);
 		try { comm.write(end.toByteArray()); } catch (Exception ignored) {}
 		return resp;
 	}
@@ -123,7 +123,7 @@ public class CoinModuleService {
 		byte endSeq = sequenceNumberManager.next();
 		ProtocolFrame end = CommandBuilder.createCoinDumpEndCommand(endSeq);
 		Logger.tag(LoggerTag.BUSS).info("TX (end)     : " + HexUtil.toHex(end.toByteArray()));
-		sendAndReceive(end, 0);
+//		sendAndReceive(end, 0);
 		try { comm.write(end.toByteArray()); } catch (Exception ignored) {}
 		return resp;
 	}
@@ -155,6 +155,10 @@ public class CoinModuleService {
 	public ModuleResponse buzzerStatus() {
 
 		return statusBuzzer();
+
+	}
+
+	public void end() {
 
 	}
 }

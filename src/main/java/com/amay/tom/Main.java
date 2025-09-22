@@ -60,12 +60,14 @@ public class Main extends Application {
     @Override
     public void start(@SuppressWarnings("exports") Stage stage) throws IOException {
         applicationService=new ApplicationService(new SystemControl());
+        var screens = javafx.stage.Screen.getScreens();
+
 
         try {
 
             FXMLLoader fxmlLoader =new FXMLLoader(Main.class.getResource("initialize/tom-initialize-view.fxml"));
             fxmlLoader.setControllerFactory(param -> new TomInitializeViewController(applicationService));
-            Scene scene = new Scene(fxmlLoader.load(), 1024, 768);
+            Scene scene = new Scene(fxmlLoader.load(), screens.getFirst().getOutputScaleX(),  screens.getFirst().getOutputScaleY());
             scene.getStylesheets().add(getClass().getResource("/com/amay/tom/tvm/css/theme.css").toExternalForm());
 
             // Add key event filter to prevent system keys
@@ -186,7 +188,7 @@ public class Main extends Application {
             stage.show();
 
 
-            var screens = javafx.stage.Screen.getScreens();
+
 
             if (screens.size() >1) { //0205000301AB04A803
                 Rectangle2D screen2Bounds = screens.get(1).getVisualBounds();

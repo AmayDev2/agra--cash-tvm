@@ -15,9 +15,12 @@ public class PaymentResponse {
     private String orderId;
     private String transactionId;
     private String remoteTransactionId;
-    private LocalDateTime transactionTime;
+    private String transactionTime;
+    private long transactionTimeEpoch;
     private int amount;
     private String paymentMode;
     private String status;
     private boolean isSuccess;
+    //FOR BNR
+    private int denomination;
 }

@@ -32,7 +32,7 @@ public class ScuService {
                       TomTransactionServiceGrpc.TomTransactionServiceBlockingStub blockingStub, String chanelName) {
         this.scuGrpcConnector = scuGrpcConnector;
         this.blockingStub = blockingStub;
-//        this.blockingStub=this.blockingStub.withDeadlineAfter(2, TimeUnit.SECONDS);
+        this.blockingStub.withDeadlineAfter(2, TimeUnit.SECONDS);
         this.chanelName = chanelName;
     }
 

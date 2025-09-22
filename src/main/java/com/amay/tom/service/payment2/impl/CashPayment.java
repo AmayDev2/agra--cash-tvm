@@ -57,12 +57,22 @@ public class CashPayment implements PaymentMedia {
             }});
             CompletableFuture.runAsync(()->
              {
-                boolean status = BNRIntegration.cashIn(this, (int) amount, new BNRListener(cashInsertProcessingController));
-                if(status){
+                BNRIntegration.AcceptAmountResponse response = BNRIntegration.cashIn(this, (int) amount, new BNRListener(cashInsertProcessingController));
+                if(response.isStatus()){
                     paymentResponse.setStatus(TransactionStatus.SUCCESS.name()).setSuccess(true);
+                    paymentResponse.setDenomination((int) (response.getAcceptedAmount()-(
+                            response.getDispensedAmount()
+                                    +response.getActualCoinChangedAmount()
+                                    +response.getAmountToPay()))/100);
                 }else{
                     paymentResponse.setStatus(TransactionStatus.FAILED.name()).setSuccess(false);
+                    paymentResponse.setDenomination((int) response.getAcceptedAmount()/100);
                 }
+
+                // Denomination must be > 0 for  receipt print
+                 // This  may be < 0 if the required amount is not inserted with transaction failed status
+
+
                 saveInDbPaymentCompletion(paymentResponse,transactionRepository);
                 Platform.runLater(()->{stackPane.getChildren().removeLast();});
                 paymentController.eventListener(paymentResponse);

@@ -209,6 +209,44 @@ public class PrinterService implements PrinterInterface {
     }
 
     @Override
+    public BaseResponse printTicketsWithPayReceipt(List<QRTicket> qrTickets, PayReceipt payReceipt) {
+        ImagePrintResponse imagePrintResponse=new ImagePrintResponse();
+        try {
+            qrTickets.forEach(qrTicket -> {
+                this.printImageByPath();
+                this.printQR(qrTicket.getQrCodeData());
+                this.printTextWithException(qrTicket);
+                imagePrintResponse.getImagesName().add(qrTicket.getTicketNo());
+            });
+            imagePrintResponse.setSuccess(true);
+            printReceipt(payReceipt);
+        }catch(Exception exception){
+            Logger.tag(LoggerTag.APP).error("Printer error {}", exception.fillInStackTrace());
+        }
+        return imagePrintResponse;
+
+    }
+
+    private void printReceipt(PayReceipt payReceipt) throws Exception {
+        this.printImageByPath();
+        String formatted = payReceipt.formatedText();
+            PrintFontSettings pfs=new PrintFontSettings();
+            pfs.Emphasized=true;
+            pfs.LeftMarginValue=10*10;
+            pfs.LineSpacing=30;
+            pfs.CharWidth= PrintFontSettings.FontSize.FONT_SIZE_X1;
+            pfs.CharHeight=PrintFontSettings.FontSize.FONT_SIZE_X1;
+            pfs.Justification= PrintFontSettings.FontJustification.FONT_JUSTIFICATION_LEFT;
+            pfs.CharFontType=PrintFontSettings.FontType.FONT_TYPE_2;
+
+            cudev.PrintText(formatted,pfs);
+            cudev.Cut(CuCustomWndDevice.CutType.CUT_TOTAL);
+
+    }
+
+
+
+    @Override
     public BaseResponse printImageByText(ShiftReportData shiftReportData) {
         ImagePrintResponse imagePrintResponse=new ImagePrintResponse();
         // print logo
@@ -277,6 +315,36 @@ public class PrinterService implements PrinterInterface {
 
 
         return imagePrintResponse;
+    }
+
+
+    private void printTextWithException(QRTicket qrTicket)  {
+
+        if (qrTicket == null) {
+            //System.out.println("QRTicket is null. Skipping data population.");
+            return;
+        }
+        //System.out.println("Populating ticket data...");
+
+        String formatted = getFormatted(qrTicket);
+            PrintFontSettings pfs=new PrintFontSettings();
+            pfs.Emphasized=true;
+            pfs.LeftMarginValue=10*10;
+            pfs.LineSpacing=30;
+            pfs.CharWidth= PrintFontSettings.FontSize.FONT_SIZE_X1;
+            pfs.CharHeight=PrintFontSettings.FontSize.FONT_SIZE_X1;
+            pfs.Justification= PrintFontSettings.FontJustification.FONT_JUSTIFICATION_LEFT;
+            pfs.CharFontType=PrintFontSettings.FontType.FONT_TYPE_2;
+
+        try {
+            cudev.PrintText(formatted,pfs);
+            cudev.Cut(CuCustomWndDevice.CutType.CUT_TOTAL);
+        } catch (Exception e) {
+            Logger.tag(LoggerTag.APP).error("Cut Error : {}",e.getMessage());
+            throw new RuntimeException(e);
+        }
+
+
     }
 
 

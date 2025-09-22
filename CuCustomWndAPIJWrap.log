@@ -2175,3 +2175,3076 @@
 2025-09-20 16-46-58.0713[EnumUSBDevices]Begin
 2025-09-20 16-46-58.0716[EnumUSBDevices]Found 0 USB Devices
 2025-09-20 16-46-58.0717[EnumUSBDevices]End
+2025-09-20 20-27-31.0983[]*****************************************
+2025-09-20 20-27-31.0984[]DLL Log Initialize. Verbosity: 6
+2025-09-20 20-27-31.0985[]*****************************************
+2025-09-20 20-27-31.0986[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-20 20-27-31.0986[]DLL Version: 1.07
+2025-09-20 20-27-31.0987[InitLibrary]Begin
+2025-09-20 20-27-32.0012[InitLibrary]Library SignID:00000101
+2025-09-20 20-27-32.0013[InitLibrary]Current SignID:00000101
+2025-09-20 20-27-32.0013[InitLibrary]End
+2025-09-20 20-27-32.0014[GetAPIVersionHwLibrary]Begin
+2025-09-20 20-27-32.0016[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-20 20-27-32.0016[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-20 20-27-32.0017[GetAPIVersionHwLibrary]End
+2025-09-20 20-27-32.0017[EnumUSBDevices]Begin
+2025-09-20 20-27-32.0022[EnumUSBDevices]Found 0 USB Devices
+2025-09-20 20-27-32.0023[EnumUSBDevices]End
+2025-09-20 20-31-12.0931[]*****************************************
+2025-09-20 20-31-12.0932[]DLL Log Initialize. Verbosity: 6
+2025-09-20 20-31-12.0933[]*****************************************
+2025-09-20 20-31-12.0934[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-20 20-31-12.0934[]DLL Version: 1.07
+2025-09-20 20-31-12.0935[InitLibrary]Begin
+2025-09-20 20-31-12.0951[InitLibrary]Library SignID:00000101
+2025-09-20 20-31-12.0953[InitLibrary]Current SignID:00000101
+2025-09-20 20-31-12.0953[InitLibrary]End
+2025-09-20 20-31-12.0953[GetAPIVersionHwLibrary]Begin
+2025-09-20 20-31-12.0957[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-20 20-31-12.0957[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-20 20-31-12.0958[GetAPIVersionHwLibrary]End
+2025-09-20 20-31-12.0958[EnumUSBDevices]Begin
+2025-09-20 20-31-12.0961[EnumUSBDevices]Found 0 USB Devices
+2025-09-20 20-31-12.0962[EnumUSBDevices]End
+2025-09-20 20-35-21.0261[]*****************************************
+2025-09-20 20-35-21.0261[]DLL Log Initialize. Verbosity: 6
+2025-09-20 20-35-21.0262[]*****************************************
+2025-09-20 20-35-21.0262[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-20 20-35-21.0263[]DLL Version: 1.07
+2025-09-20 20-35-21.0263[InitLibrary]Begin
+2025-09-20 20-35-21.0283[InitLibrary]Library SignID:00000101
+2025-09-20 20-35-21.0283[InitLibrary]Current SignID:00000101
+2025-09-20 20-35-21.0285[InitLibrary]End
+2025-09-20 20-35-21.0285[GetAPIVersionHwLibrary]Begin
+2025-09-20 20-35-21.0287[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-20 20-35-21.0288[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-20 20-35-21.0288[GetAPIVersionHwLibrary]End
+2025-09-20 20-35-21.0289[EnumUSBDevices]Begin
+2025-09-20 20-35-21.0292[EnumUSBDevices]Found 0 USB Devices
+2025-09-20 20-35-21.0293[EnumUSBDevices]End
+2025-09-20 20-48-31.0788[]*****************************************
+2025-09-20 20-48-31.0790[]DLL Log Initialize. Verbosity: 6
+2025-09-20 20-48-31.0790[]*****************************************
+2025-09-20 20-48-31.0791[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-20 20-48-31.0791[]DLL Version: 1.07
+2025-09-20 20-48-31.0792[InitLibrary]Begin
+2025-09-20 20-48-31.0812[InitLibrary]Library SignID:00000101
+2025-09-20 20-48-31.0812[InitLibrary]Current SignID:00000101
+2025-09-20 20-48-31.0813[InitLibrary]End
+2025-09-20 20-48-31.0813[GetAPIVersionHwLibrary]Begin
+2025-09-20 20-48-31.0815[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-20 20-48-31.0816[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-20 20-48-31.0816[GetAPIVersionHwLibrary]End
+2025-09-20 20-48-31.0817[EnumUSBDevices]Begin
+2025-09-20 20-48-31.0821[EnumUSBDevices]Found 0 USB Devices
+2025-09-20 20-48-31.0823[EnumUSBDevices]End
+2025-09-20 21-14-01.0245[]*****************************************
+2025-09-20 21-14-01.0246[]DLL Log Initialize. Verbosity: 6
+2025-09-20 21-14-01.0247[]*****************************************
+2025-09-20 21-14-01.0247[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-20 21-14-01.0248[]DLL Version: 1.07
+2025-09-20 21-14-01.0248[InitLibrary]Begin
+2025-09-20 21-14-01.0269[InitLibrary]Library SignID:00000101
+2025-09-20 21-14-01.0269[InitLibrary]Current SignID:00000101
+2025-09-20 21-14-01.0269[InitLibrary]End
+2025-09-20 21-14-01.0271[GetAPIVersionHwLibrary]Begin
+2025-09-20 21-14-01.0274[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-20 21-14-01.0274[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-20 21-14-01.0274[GetAPIVersionHwLibrary]End
+2025-09-20 21-14-01.0276[EnumUSBDevices]Begin
+2025-09-20 21-14-01.0279[EnumUSBDevices]Found 0 USB Devices
+2025-09-20 21-14-01.0280[EnumUSBDevices]End
+2025-09-20 21-30-27.0545[]*****************************************
+2025-09-20 21-30-27.0546[]DLL Log Initialize. Verbosity: 6
+2025-09-20 21-30-27.0546[]*****************************************
+2025-09-20 21-30-27.0548[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-20 21-30-27.0548[]DLL Version: 1.07
+2025-09-20 21-30-27.0548[InitLibrary]Begin
+2025-09-20 21-30-27.0570[InitLibrary]Library SignID:00000101
+2025-09-20 21-30-27.0572[InitLibrary]Current SignID:00000101
+2025-09-20 21-30-27.0572[InitLibrary]End
+2025-09-20 21-30-27.0573[GetAPIVersionHwLibrary]Begin
+2025-09-20 21-30-27.0575[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-20 21-30-27.0575[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-20 21-30-27.0576[GetAPIVersionHwLibrary]End
+2025-09-20 21-30-27.0576[EnumUSBDevices]Begin
+2025-09-20 21-30-27.0581[EnumUSBDevices]Found 0 USB Devices
+2025-09-20 21-30-27.0581[EnumUSBDevices]End
+2025-09-20 21-40-12.0368[]*****************************************
+2025-09-20 21-40-12.0369[]DLL Log Initialize. Verbosity: 6
+2025-09-20 21-40-12.0369[]*****************************************
+2025-09-20 21-40-12.0370[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-20 21-40-12.0370[]DLL Version: 1.07
+2025-09-20 21-40-12.0371[InitLibrary]Begin
+2025-09-20 21-40-12.0388[InitLibrary]Library SignID:00000101
+2025-09-20 21-40-12.0389[InitLibrary]Current SignID:00000101
+2025-09-20 21-40-12.0389[InitLibrary]End
+2025-09-20 21-40-12.0390[GetAPIVersionHwLibrary]Begin
+2025-09-20 21-40-12.0392[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-20 21-40-12.0393[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-20 21-40-12.0393[GetAPIVersionHwLibrary]End
+2025-09-20 21-40-12.0394[EnumUSBDevices]Begin
+2025-09-20 21-40-12.0397[EnumUSBDevices]Found 0 USB Devices
+2025-09-20 21-40-12.0398[EnumUSBDevices]End
+2025-09-20 21-50-04.0218[]*****************************************
+2025-09-20 21-50-04.0219[]DLL Log Initialize. Verbosity: 6
+2025-09-20 21-50-04.0220[]*****************************************
+2025-09-20 21-50-04.0222[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-20 21-50-04.0222[]DLL Version: 1.07
+2025-09-20 21-50-04.0224[InitLibrary]Begin
+2025-09-20 21-50-04.0274[InitLibrary]Library SignID:00000101
+2025-09-20 21-50-04.0276[InitLibrary]Current SignID:00000101
+2025-09-20 21-50-04.0279[InitLibrary]End
+2025-09-20 21-50-04.0280[GetAPIVersionHwLibrary]Begin
+2025-09-20 21-50-04.0285[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-20 21-50-04.0287[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-20 21-50-04.0288[GetAPIVersionHwLibrary]End
+2025-09-20 21-50-04.0289[EnumUSBDevices]Begin
+2025-09-20 21-50-04.0299[EnumUSBDevices]Found 0 USB Devices
+2025-09-20 21-50-04.0300[EnumUSBDevices]End
+2025-09-20 21-51-45.0537[]*****************************************
+2025-09-20 21-51-45.0538[]DLL Log Initialize. Verbosity: 6
+2025-09-20 21-51-45.0538[]*****************************************
+2025-09-20 21-51-45.0539[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-20 21-51-45.0539[]DLL Version: 1.07
+2025-09-20 21-51-45.0540[InitLibrary]Begin
+2025-09-20 21-51-45.0559[InitLibrary]Library SignID:00000101
+2025-09-20 21-51-45.0559[InitLibrary]Current SignID:00000101
+2025-09-20 21-51-45.0560[InitLibrary]End
+2025-09-20 21-51-45.0561[GetAPIVersionHwLibrary]Begin
+2025-09-20 21-51-45.0564[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-20 21-51-45.0564[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-20 21-51-45.0565[GetAPIVersionHwLibrary]End
+2025-09-20 21-51-45.0565[EnumUSBDevices]Begin
+2025-09-20 21-51-45.0570[EnumUSBDevices]Found 0 USB Devices
+2025-09-20 21-51-45.0570[EnumUSBDevices]End
+2025-09-20 22-05-16.0610[]*****************************************
+2025-09-20 22-05-16.0611[]DLL Log Initialize. Verbosity: 6
+2025-09-20 22-05-16.0611[]*****************************************
+2025-09-20 22-05-16.0613[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-20 22-05-16.0613[]DLL Version: 1.07
+2025-09-20 22-05-16.0614[InitLibrary]Begin
+2025-09-20 22-05-16.0638[InitLibrary]Library SignID:00000101
+2025-09-20 22-05-16.0639[InitLibrary]Current SignID:00000101
+2025-09-20 22-05-16.0639[InitLibrary]End
+2025-09-20 22-05-16.0641[GetAPIVersionHwLibrary]Begin
+2025-09-20 22-05-16.0643[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-20 22-05-16.0643[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-20 22-05-16.0645[GetAPIVersionHwLibrary]End
+2025-09-20 22-05-16.0645[EnumUSBDevices]Begin
+2025-09-20 22-05-16.0650[EnumUSBDevices]Found 0 USB Devices
+2025-09-20 22-05-16.0651[EnumUSBDevices]End
+2025-09-20 21-09-10.0833[]*****************************************
+2025-09-20 21-09-10.0834[]DLL Log Initialize. Verbosity: 6
+2025-09-20 21-09-10.0834[]*****************************************
+2025-09-20 21-09-10.0836[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-20 21-09-10.0836[]DLL Version: 1.07
+2025-09-20 21-09-10.0836[InitLibrary]Begin
+2025-09-20 21-09-10.0855[InitLibrary]Library SignID:00000101
+2025-09-20 21-09-10.0856[InitLibrary]Current SignID:00000101
+2025-09-20 21-09-10.0857[InitLibrary]End
+2025-09-20 21-09-10.0857[GetAPIVersionHwLibrary]Begin
+2025-09-20 21-09-10.0859[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-20 21-09-10.0860[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-20 21-09-10.0860[GetAPIVersionHwLibrary]End
+2025-09-20 21-09-10.0860[EnumUSBDevices]Begin
+2025-09-20 21-09-10.0866[EnumUSBDevices]Found 0 USB Devices
+2025-09-20 21-09-10.0866[EnumUSBDevices]End
+2025-09-20 21-20-38.0532[]*****************************************
+2025-09-20 21-20-38.0533[]DLL Log Initialize. Verbosity: 6
+2025-09-20 21-20-38.0533[]*****************************************
+2025-09-20 21-20-38.0534[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-20 21-20-38.0534[]DLL Version: 1.07
+2025-09-20 21-20-38.0534[InitLibrary]Begin
+2025-09-20 21-20-38.0555[InitLibrary]Library SignID:00000101
+2025-09-20 21-20-38.0557[InitLibrary]Current SignID:00000101
+2025-09-20 21-20-38.0557[InitLibrary]End
+2025-09-20 21-20-38.0558[GetAPIVersionHwLibrary]Begin
+2025-09-20 21-20-38.0561[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-20 21-20-38.0562[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-20 21-20-38.0562[GetAPIVersionHwLibrary]End
+2025-09-20 21-20-38.0563[EnumUSBDevices]Begin
+2025-09-20 21-20-38.0566[EnumUSBDevices]Found 0 USB Devices
+2025-09-20 21-20-38.0567[EnumUSBDevices]End
+2025-09-20 21-25-08.0020[]*****************************************
+2025-09-20 21-25-08.0021[]DLL Log Initialize. Verbosity: 6
+2025-09-20 21-25-08.0021[]*****************************************
+2025-09-20 21-25-08.0022[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-20 21-25-08.0022[]DLL Version: 1.07
+2025-09-20 21-25-08.0022[InitLibrary]Begin
+2025-09-20 21-25-08.0040[InitLibrary]Library SignID:00000101
+2025-09-20 21-25-08.0041[InitLibrary]Current SignID:00000101
+2025-09-20 21-25-08.0041[InitLibrary]End
+2025-09-20 21-25-08.0042[GetAPIVersionHwLibrary]Begin
+2025-09-20 21-25-08.0044[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-20 21-25-08.0044[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-20 21-25-08.0044[GetAPIVersionHwLibrary]End
+2025-09-20 21-25-08.0045[EnumUSBDevices]Begin
+2025-09-20 21-25-08.0048[EnumUSBDevices]Found 0 USB Devices
+2025-09-20 21-25-08.0049[EnumUSBDevices]End
+2025-09-19 21-28-01.0299[]*****************************************
+2025-09-19 21-28-01.0300[]DLL Log Initialize. Verbosity: 6
+2025-09-19 21-28-01.0300[]*****************************************
+2025-09-19 21-28-01.0300[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-19 21-28-01.0302[]DLL Version: 1.07
+2025-09-19 21-28-01.0302[InitLibrary]Begin
+2025-09-19 21-28-01.0325[InitLibrary]Library SignID:00000101
+2025-09-19 21-28-01.0326[InitLibrary]Current SignID:00000101
+2025-09-19 21-28-01.0327[InitLibrary]End
+2025-09-19 21-28-01.0327[GetAPIVersionHwLibrary]Begin
+2025-09-19 21-28-01.0329[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-19 21-28-01.0330[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-19 21-28-01.0330[GetAPIVersionHwLibrary]End
+2025-09-19 21-28-01.0331[EnumUSBDevices]Begin
+2025-09-19 21-28-01.0335[EnumUSBDevices]Found 0 USB Devices
+2025-09-19 21-28-01.0336[EnumUSBDevices]End
+2025-09-20 22-37-47.0664[]*****************************************
+2025-09-20 22-37-47.0665[]DLL Log Initialize. Verbosity: 6
+2025-09-20 22-37-47.0666[]*****************************************
+2025-09-20 22-37-47.0666[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-20 22-37-47.0667[]DLL Version: 1.07
+2025-09-20 22-37-47.0667[InitLibrary]Begin
+2025-09-20 22-37-47.0685[InitLibrary]Library SignID:00000101
+2025-09-20 22-37-47.0685[InitLibrary]Current SignID:00000101
+2025-09-20 22-37-47.0687[InitLibrary]End
+2025-09-20 22-37-47.0687[GetAPIVersionHwLibrary]Begin
+2025-09-20 22-37-47.0689[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-20 22-37-47.0689[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-20 22-37-47.0689[GetAPIVersionHwLibrary]End
+2025-09-20 22-37-47.0690[EnumUSBDevices]Begin
+2025-09-20 22-37-47.0693[EnumUSBDevices]Found 0 USB Devices
+2025-09-20 22-37-47.0693[EnumUSBDevices]End
+2025-09-19 22-40-19.0715[]*****************************************
+2025-09-19 22-40-19.0716[]DLL Log Initialize. Verbosity: 6
+2025-09-19 22-40-19.0717[]*****************************************
+2025-09-19 22-40-19.0717[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-19 22-40-19.0718[]DLL Version: 1.07
+2025-09-19 22-40-19.0718[InitLibrary]Begin
+2025-09-19 22-40-19.0740[InitLibrary]Library SignID:00000101
+2025-09-19 22-40-19.0740[InitLibrary]Current SignID:00000101
+2025-09-19 22-40-19.0741[InitLibrary]End
+2025-09-19 22-40-19.0742[GetAPIVersionHwLibrary]Begin
+2025-09-19 22-40-19.0745[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-19 22-40-19.0745[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-19 22-40-19.0746[GetAPIVersionHwLibrary]End
+2025-09-19 22-40-19.0746[EnumUSBDevices]Begin
+2025-09-19 22-40-19.0751[EnumUSBDevices]Found 0 USB Devices
+2025-09-19 22-40-19.0751[EnumUSBDevices]End
+2025-09-20 22-50-05.0014[]*****************************************
+2025-09-20 22-50-05.0015[]DLL Log Initialize. Verbosity: 6
+2025-09-20 22-50-05.0015[]*****************************************
+2025-09-20 22-50-05.0016[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-20 22-50-05.0016[]DLL Version: 1.07
+2025-09-20 22-50-05.0016[InitLibrary]Begin
+2025-09-20 22-50-05.0040[InitLibrary]Library SignID:00000101
+2025-09-20 22-50-05.0041[InitLibrary]Current SignID:00000101
+2025-09-20 22-50-05.0041[InitLibrary]End
+2025-09-20 22-50-05.0042[GetAPIVersionHwLibrary]Begin
+2025-09-20 22-50-05.0043[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-20 22-50-05.0044[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-20 22-50-05.0045[GetAPIVersionHwLibrary]End
+2025-09-20 22-50-05.0045[EnumUSBDevices]Begin
+2025-09-20 22-50-05.0049[EnumUSBDevices]Found 0 USB Devices
+2025-09-20 22-50-05.0049[EnumUSBDevices]End
+2025-09-20 21-51-36.0720[]*****************************************
+2025-09-20 21-51-36.0722[]DLL Log Initialize. Verbosity: 6
+2025-09-20 21-51-36.0723[]*****************************************
+2025-09-20 21-51-36.0723[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-20 21-51-36.0724[]DLL Version: 1.07
+2025-09-20 21-51-36.0724[InitLibrary]Begin
+2025-09-20 21-51-36.0743[InitLibrary]Library SignID:00000101
+2025-09-20 21-51-36.0744[InitLibrary]Current SignID:00000101
+2025-09-20 21-51-36.0745[InitLibrary]End
+2025-09-20 21-51-36.0745[GetAPIVersionHwLibrary]Begin
+2025-09-20 21-51-36.0746[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-20 21-51-36.0748[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-20 21-51-36.0748[GetAPIVersionHwLibrary]End
+2025-09-20 21-51-36.0749[EnumUSBDevices]Begin
+2025-09-20 21-51-36.0751[EnumUSBDevices]Found 0 USB Devices
+2025-09-20 21-51-36.0751[EnumUSBDevices]End
+2025-09-19 21-59-18.0018[]*****************************************
+2025-09-19 21-59-18.0021[]DLL Log Initialize. Verbosity: 6
+2025-09-19 21-59-18.0022[]*****************************************
+2025-09-19 21-59-18.0024[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-19 21-59-18.0026[]DLL Version: 1.07
+2025-09-19 21-59-18.0027[InitLibrary]Begin
+2025-09-19 21-59-18.0067[InitLibrary]Library SignID:00000101
+2025-09-19 21-59-18.0068[InitLibrary]Current SignID:00000101
+2025-09-19 21-59-18.0069[InitLibrary]End
+2025-09-19 21-59-18.0070[GetAPIVersionHwLibrary]Begin
+2025-09-19 21-59-18.0075[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-19 21-59-18.0076[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-19 21-59-18.0077[GetAPIVersionHwLibrary]End
+2025-09-19 21-59-18.0078[EnumUSBDevices]Begin
+2025-09-19 21-59-18.0086[EnumUSBDevices]Found 0 USB Devices
+2025-09-19 21-59-18.0087[EnumUSBDevices]End
+2025-09-19 21-03-13.0782[]*****************************************
+2025-09-19 21-03-13.0783[]DLL Log Initialize. Verbosity: 6
+2025-09-19 21-03-13.0783[]*****************************************
+2025-09-19 21-03-13.0784[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-19 21-03-13.0784[]DLL Version: 1.07
+2025-09-19 21-03-13.0784[InitLibrary]Begin
+2025-09-19 21-03-13.0804[InitLibrary]Library SignID:00000101
+2025-09-19 21-03-13.0804[InitLibrary]Current SignID:00000101
+2025-09-19 21-03-13.0805[InitLibrary]End
+2025-09-19 21-03-13.0805[GetAPIVersionHwLibrary]Begin
+2025-09-19 21-03-13.0808[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-19 21-03-13.0808[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-19 21-03-13.0809[GetAPIVersionHwLibrary]End
+2025-09-19 21-03-13.0809[EnumUSBDevices]Begin
+2025-09-19 21-03-13.0813[EnumUSBDevices]Found 0 USB Devices
+2025-09-19 21-03-13.0814[EnumUSBDevices]End
+2025-09-19 21-09-15.0863[]*****************************************
+2025-09-19 21-09-15.0864[]DLL Log Initialize. Verbosity: 6
+2025-09-19 21-09-15.0864[]*****************************************
+2025-09-19 21-09-15.0865[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-19 21-09-15.0865[]DLL Version: 1.07
+2025-09-19 21-09-15.0865[InitLibrary]Begin
+2025-09-19 21-09-15.0887[InitLibrary]Library SignID:00000101
+2025-09-19 21-09-15.0888[InitLibrary]Current SignID:00000101
+2025-09-19 21-09-15.0888[InitLibrary]End
+2025-09-19 21-09-15.0889[GetAPIVersionHwLibrary]Begin
+2025-09-19 21-09-15.0890[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-19 21-09-15.0891[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-19 21-09-15.0892[GetAPIVersionHwLibrary]End
+2025-09-19 21-09-15.0892[EnumUSBDevices]Begin
+2025-09-19 21-09-15.0896[EnumUSBDevices]Found 0 USB Devices
+2025-09-19 21-09-15.0897[EnumUSBDevices]End
+2025-09-21 21-14-42.0504[]*****************************************
+2025-09-21 21-14-42.0505[]DLL Log Initialize. Verbosity: 6
+2025-09-21 21-14-42.0506[]*****************************************
+2025-09-21 21-14-42.0507[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-21 21-14-42.0507[]DLL Version: 1.07
+2025-09-21 21-14-42.0508[InitLibrary]Begin
+2025-09-21 21-14-42.0537[InitLibrary]Library SignID:00000101
+2025-09-21 21-14-42.0537[InitLibrary]Current SignID:00000101
+2025-09-21 21-14-42.0538[InitLibrary]End
+2025-09-21 21-14-42.0539[GetAPIVersionHwLibrary]Begin
+2025-09-21 21-14-42.0542[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-21 21-14-42.0542[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-21 21-14-42.0543[GetAPIVersionHwLibrary]End
+2025-09-21 21-14-42.0544[EnumUSBDevices]Begin
+2025-09-21 21-14-42.0549[EnumUSBDevices]Found 0 USB Devices
+2025-09-21 21-14-42.0550[EnumUSBDevices]End
+2025-09-20 23-25-00.0547[]*****************************************
+2025-09-20 23-25-00.0548[]DLL Log Initialize. Verbosity: 6
+2025-09-20 23-25-00.0549[]*****************************************
+2025-09-20 23-25-00.0549[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-20 23-25-00.0550[]DLL Version: 1.07
+2025-09-20 23-25-00.0550[InitLibrary]Begin
+2025-09-20 23-25-00.0577[InitLibrary]Library SignID:00000101
+2025-09-20 23-25-00.0577[InitLibrary]Current SignID:00000101
+2025-09-20 23-25-00.0578[InitLibrary]End
+2025-09-20 23-25-00.0578[GetAPIVersionHwLibrary]Begin
+2025-09-20 23-25-00.0581[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-20 23-25-00.0581[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-20 23-25-00.0583[GetAPIVersionHwLibrary]End
+2025-09-20 23-25-00.0584[EnumUSBDevices]Begin
+2025-09-20 23-25-00.0589[EnumUSBDevices]Found 0 USB Devices
+2025-09-20 23-25-00.0589[EnumUSBDevices]End
+2025-09-20 20-27-01.0136[]*****************************************
+2025-09-20 20-27-01.0137[]DLL Log Initialize. Verbosity: 6
+2025-09-20 20-27-01.0138[]*****************************************
+2025-09-20 20-27-01.0138[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-20 20-27-01.0140[]DLL Version: 1.07
+2025-09-20 20-27-01.0140[InitLibrary]Begin
+2025-09-20 20-27-01.0162[InitLibrary]Library SignID:00000101
+2025-09-20 20-27-01.0163[InitLibrary]Current SignID:00000101
+2025-09-20 20-27-01.0164[InitLibrary]End
+2025-09-20 20-27-01.0165[GetAPIVersionHwLibrary]Begin
+2025-09-20 20-27-01.0167[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-20 20-27-01.0168[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-20 20-27-01.0168[GetAPIVersionHwLibrary]End
+2025-09-20 20-27-01.0168[EnumUSBDevices]Begin
+2025-09-20 20-27-01.0174[EnumUSBDevices]Found 0 USB Devices
+2025-09-20 20-27-01.0174[EnumUSBDevices]End
+2025-09-21 20-29-21.0135[]*****************************************
+2025-09-21 20-29-21.0136[]DLL Log Initialize. Verbosity: 6
+2025-09-21 20-29-21.0137[]*****************************************
+2025-09-21 20-29-21.0138[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-21 20-29-21.0139[]DLL Version: 1.07
+2025-09-21 20-29-21.0139[InitLibrary]Begin
+2025-09-21 20-29-21.0166[InitLibrary]Library SignID:00000101
+2025-09-21 20-29-21.0167[InitLibrary]Current SignID:00000101
+2025-09-21 20-29-21.0167[InitLibrary]End
+2025-09-21 20-29-21.0169[GetAPIVersionHwLibrary]Begin
+2025-09-21 20-29-21.0172[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-21 20-29-21.0172[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-21 20-29-21.0173[GetAPIVersionHwLibrary]End
+2025-09-21 20-29-21.0174[EnumUSBDevices]Begin
+2025-09-21 20-29-21.0178[EnumUSBDevices]Found 0 USB Devices
+2025-09-21 20-29-21.0179[EnumUSBDevices]End
+2025-09-20 23-42-28.0009[]*****************************************
+2025-09-20 23-42-28.0010[]DLL Log Initialize. Verbosity: 6
+2025-09-20 23-42-28.0011[]*****************************************
+2025-09-20 23-42-28.0011[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-20 23-42-28.0011[]DLL Version: 1.07
+2025-09-20 23-42-28.0013[InitLibrary]Begin
+2025-09-20 23-42-28.0037[InitLibrary]Library SignID:00000101
+2025-09-20 23-42-28.0038[InitLibrary]Current SignID:00000101
+2025-09-20 23-42-28.0039[InitLibrary]End
+2025-09-20 23-42-28.0039[GetAPIVersionHwLibrary]Begin
+2025-09-20 23-42-28.0042[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-20 23-42-28.0043[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-20 23-42-28.0044[GetAPIVersionHwLibrary]End
+2025-09-20 23-42-28.0044[EnumUSBDevices]Begin
+2025-09-20 23-42-28.0051[EnumUSBDevices]Found 0 USB Devices
+2025-09-20 23-42-28.0051[EnumUSBDevices]End
+2025-09-21 21-44-02.0110[]*****************************************
+2025-09-21 21-44-02.0111[]DLL Log Initialize. Verbosity: 6
+2025-09-21 21-44-02.0111[]*****************************************
+2025-09-21 21-44-02.0112[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-21 21-44-02.0113[]DLL Version: 1.07
+2025-09-21 21-44-02.0113[InitLibrary]Begin
+2025-09-21 21-44-02.0138[InitLibrary]Library SignID:00000101
+2025-09-21 21-44-02.0139[InitLibrary]Current SignID:00000101
+2025-09-21 21-44-02.0139[InitLibrary]End
+2025-09-21 21-44-02.0139[GetAPIVersionHwLibrary]Begin
+2025-09-21 21-44-02.0142[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-21 21-44-02.0143[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-21 21-44-02.0143[GetAPIVersionHwLibrary]End
+2025-09-21 21-44-02.0143[EnumUSBDevices]Begin
+2025-09-21 21-44-02.0148[EnumUSBDevices]Found 0 USB Devices
+2025-09-21 21-44-02.0149[EnumUSBDevices]End
+2025-09-10 21-48-17.0301[]*****************************************
+2025-09-10 21-48-17.0301[]DLL Log Initialize. Verbosity: 6
+2025-09-10 21-48-17.0302[]*****************************************
+2025-09-10 21-48-17.0302[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-10 21-48-17.0303[]DLL Version: 1.07
+2025-09-10 21-48-17.0304[InitLibrary]Begin
+2025-09-10 21-48-17.0325[InitLibrary]Library SignID:00000101
+2025-09-10 21-48-17.0327[InitLibrary]Current SignID:00000101
+2025-09-10 21-48-17.0327[InitLibrary]End
+2025-09-10 21-48-17.0329[GetAPIVersionHwLibrary]Begin
+2025-09-10 21-48-17.0331[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-10 21-48-17.0332[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-10 21-48-17.0332[GetAPIVersionHwLibrary]End
+2025-09-10 21-48-17.0333[EnumUSBDevices]Begin
+2025-09-10 21-48-17.0336[EnumUSBDevices]Found 0 USB Devices
+2025-09-10 21-48-17.0338[EnumUSBDevices]End
+2025-09-10 21-54-14.0149[]*****************************************
+2025-09-10 21-54-14.0151[]DLL Log Initialize. Verbosity: 6
+2025-09-10 21-54-14.0152[]*****************************************
+2025-09-10 21-54-14.0154[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-10 21-54-14.0155[]DLL Version: 1.07
+2025-09-10 21-54-14.0156[InitLibrary]Begin
+2025-09-10 21-54-14.0199[InitLibrary]Library SignID:00000101
+2025-09-10 21-54-14.0201[InitLibrary]Current SignID:00000101
+2025-09-10 21-54-14.0202[InitLibrary]End
+2025-09-10 21-54-14.0203[GetAPIVersionHwLibrary]Begin
+2025-09-10 21-54-14.0209[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-10 21-54-14.0210[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-10 21-54-14.0212[GetAPIVersionHwLibrary]End
+2025-09-10 21-54-14.0213[EnumUSBDevices]Begin
+2025-09-10 21-54-14.0224[EnumUSBDevices]Found 0 USB Devices
+2025-09-10 21-54-14.0224[EnumUSBDevices]End
+2025-09-10 21-58-46.0228[]*****************************************
+2025-09-10 21-58-46.0230[]DLL Log Initialize. Verbosity: 6
+2025-09-10 21-58-46.0231[]*****************************************
+2025-09-10 21-58-46.0233[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-10 21-58-46.0234[]DLL Version: 1.07
+2025-09-10 21-58-46.0235[InitLibrary]Begin
+2025-09-10 21-58-46.0274[InitLibrary]Library SignID:00000101
+2025-09-10 21-58-46.0275[InitLibrary]Current SignID:00000101
+2025-09-10 21-58-46.0276[InitLibrary]End
+2025-09-10 21-58-46.0277[GetAPIVersionHwLibrary]Begin
+2025-09-10 21-58-46.0281[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-10 21-58-46.0282[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-10 21-58-46.0284[GetAPIVersionHwLibrary]End
+2025-09-10 21-58-46.0284[EnumUSBDevices]Begin
+2025-09-10 21-58-46.0290[EnumUSBDevices]Found 0 USB Devices
+2025-09-10 21-58-46.0292[EnumUSBDevices]End
+2025-09-21 00-04-03.0433[]*****************************************
+2025-09-21 00-04-03.0434[]DLL Log Initialize. Verbosity: 6
+2025-09-21 00-04-03.0435[]*****************************************
+2025-09-21 00-04-03.0435[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-21 00-04-03.0435[]DLL Version: 1.07
+2025-09-21 00-04-03.0436[InitLibrary]Begin
+2025-09-21 00-04-03.0453[InitLibrary]Library SignID:00000101
+2025-09-21 00-04-03.0454[InitLibrary]Current SignID:00000101
+2025-09-21 00-04-03.0454[InitLibrary]End
+2025-09-21 00-04-03.0455[GetAPIVersionHwLibrary]Begin
+2025-09-21 00-04-03.0456[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-21 00-04-03.0457[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-21 00-04-03.0457[GetAPIVersionHwLibrary]End
+2025-09-21 00-04-03.0458[EnumUSBDevices]Begin
+2025-09-21 00-04-03.0461[EnumUSBDevices]Found 0 USB Devices
+2025-09-21 00-04-03.0461[EnumUSBDevices]End
+2025-09-21 09-05-31.0302[]*****************************************
+2025-09-21 09-05-31.0303[]DLL Log Initialize. Verbosity: 6
+2025-09-21 09-05-31.0303[]*****************************************
+2025-09-21 09-05-31.0304[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-21 09-05-31.0304[]DLL Version: 1.07
+2025-09-21 09-05-31.0304[InitLibrary]Begin
+2025-09-21 09-05-31.0319[InitLibrary]Library SignID:00000101
+2025-09-21 09-05-31.0320[InitLibrary]Current SignID:00000101
+2025-09-21 09-05-31.0320[InitLibrary]End
+2025-09-21 09-05-31.0321[GetAPIVersionHwLibrary]Begin
+2025-09-21 09-05-31.0322[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-21 09-05-31.0323[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-21 09-05-31.0323[GetAPIVersionHwLibrary]End
+2025-09-21 09-05-31.0323[EnumUSBDevices]Begin
+2025-09-21 09-05-31.0326[EnumUSBDevices]Found 0 USB Devices
+2025-09-21 09-05-31.0327[EnumUSBDevices]End
+2025-09-22 09-08-20.0992[]*****************************************
+2025-09-22 09-08-20.0998[]DLL Log Initialize. Verbosity: 6
+2025-09-22 09-08-20.0998[]*****************************************
+2025-09-22 09-08-20.0999[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 09-08-20.0999[]DLL Version: 1.07
+2025-09-22 09-08-21.0000[InitLibrary]Begin
+2025-09-22 09-08-21.0015[InitLibrary]Library SignID:00000101
+2025-09-22 09-08-21.0016[InitLibrary]Current SignID:00000101
+2025-09-22 09-08-21.0017[InitLibrary]End
+2025-09-22 09-08-21.0017[GetAPIVersionHwLibrary]Begin
+2025-09-22 09-08-21.0018[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 09-08-21.0019[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 09-08-21.0019[GetAPIVersionHwLibrary]End
+2025-09-22 09-08-21.0020[EnumUSBDevices]Begin
+2025-09-22 09-08-21.0022[EnumUSBDevices]Found 0 USB Devices
+2025-09-22 09-08-21.0023[EnumUSBDevices]End
+2025-09-22 09-15-18.0141[]*****************************************
+2025-09-22 09-15-18.0143[]DLL Log Initialize. Verbosity: 6
+2025-09-22 09-15-18.0143[]*****************************************
+2025-09-22 09-15-18.0143[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 09-15-18.0143[]DLL Version: 1.07
+2025-09-22 09-15-18.0144[InitLibrary]Begin
+2025-09-22 09-15-18.0157[InitLibrary]Library SignID:00000101
+2025-09-22 09-15-18.0157[InitLibrary]Current SignID:00000101
+2025-09-22 09-15-18.0158[InitLibrary]End
+2025-09-22 09-15-18.0158[GetAPIVersionHwLibrary]Begin
+2025-09-22 09-15-18.0159[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 09-15-18.0160[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 09-15-18.0160[GetAPIVersionHwLibrary]End
+2025-09-22 09-15-18.0160[EnumUSBDevices]Begin
+2025-09-22 09-15-18.0163[EnumUSBDevices]Found 0 USB Devices
+2025-09-22 09-15-18.0163[EnumUSBDevices]End
+2025-09-16 10-11-59.0538[]*****************************************
+2025-09-16 10-11-59.0538[]DLL Log Initialize. Verbosity: 6
+2025-09-16 10-11-59.0539[]*****************************************
+2025-09-16 10-11-59.0539[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-16 10-11-59.0539[]DLL Version: 1.07
+2025-09-16 10-11-59.0539[InitLibrary]Begin
+2025-09-16 10-11-59.0554[InitLibrary]Library SignID:00000101
+2025-09-16 10-11-59.0555[InitLibrary]Current SignID:00000101
+2025-09-16 10-11-59.0555[InitLibrary]End
+2025-09-16 10-11-59.0555[GetAPIVersionHwLibrary]Begin
+2025-09-16 10-11-59.0557[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-16 10-11-59.0557[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-16 10-11-59.0558[GetAPIVersionHwLibrary]End
+2025-09-16 10-11-59.0558[EnumUSBDevices]Begin
+2025-09-16 10-11-59.0561[EnumUSBDevices]Found 0 USB Devices
+2025-09-16 10-11-59.0561[EnumUSBDevices]End
+2025-09-16 10-15-15.0264[]*****************************************
+2025-09-16 10-15-15.0264[]DLL Log Initialize. Verbosity: 6
+2025-09-16 10-15-15.0265[]*****************************************
+2025-09-16 10-15-15.0265[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-16 10-15-15.0265[]DLL Version: 1.07
+2025-09-16 10-15-15.0265[InitLibrary]Begin
+2025-09-16 10-15-15.0279[InitLibrary]Library SignID:00000101
+2025-09-16 10-15-15.0279[InitLibrary]Current SignID:00000101
+2025-09-16 10-15-15.0280[InitLibrary]End
+2025-09-16 10-15-15.0280[GetAPIVersionHwLibrary]Begin
+2025-09-16 10-15-15.0282[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-16 10-15-15.0282[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-16 10-15-15.0282[GetAPIVersionHwLibrary]End
+2025-09-16 10-15-15.0283[EnumUSBDevices]Begin
+2025-09-16 10-15-15.0285[EnumUSBDevices]Found 0 USB Devices
+2025-09-16 10-15-15.0285[EnumUSBDevices]End
+2025-09-16 10-17-08.0633[]*****************************************
+2025-09-16 10-17-08.0634[]DLL Log Initialize. Verbosity: 6
+2025-09-16 10-17-08.0634[]*****************************************
+2025-09-16 10-17-08.0634[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-16 10-17-08.0635[]DLL Version: 1.07
+2025-09-16 10-17-08.0635[InitLibrary]Begin
+2025-09-16 10-17-08.0648[InitLibrary]Library SignID:00000101
+2025-09-16 10-17-08.0648[InitLibrary]Current SignID:00000101
+2025-09-16 10-17-08.0649[InitLibrary]End
+2025-09-16 10-17-08.0649[GetAPIVersionHwLibrary]Begin
+2025-09-16 10-17-08.0650[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-16 10-17-08.0651[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-16 10-17-08.0651[GetAPIVersionHwLibrary]End
+2025-09-16 10-17-08.0651[EnumUSBDevices]Begin
+2025-09-16 10-17-08.0654[EnumUSBDevices]Found 0 USB Devices
+2025-09-16 10-17-08.0655[EnumUSBDevices]End
+2025-09-16 21-43-53.0636[]*****************************************
+2025-09-16 21-43-53.0637[]DLL Log Initialize. Verbosity: 6
+2025-09-16 21-43-53.0638[]*****************************************
+2025-09-16 21-43-53.0638[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-16 21-43-53.0638[]DLL Version: 1.07
+2025-09-16 21-43-53.0639[InitLibrary]Begin
+2025-09-16 21-43-53.0652[InitLibrary]Library SignID:00000101
+2025-09-16 21-43-53.0652[InitLibrary]Current SignID:00000101
+2025-09-16 21-43-53.0652[InitLibrary]End
+2025-09-16 21-43-53.0653[GetAPIVersionHwLibrary]Begin
+2025-09-16 21-43-53.0655[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-16 21-43-53.0655[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-16 21-43-53.0655[GetAPIVersionHwLibrary]End
+2025-09-16 21-43-53.0655[EnumUSBDevices]Begin
+2025-09-16 21-43-53.0658[EnumUSBDevices]Found 0 USB Devices
+2025-09-16 21-43-53.0658[EnumUSBDevices]End
+2025-09-14 21-45-46.0629[]*****************************************
+2025-09-14 21-45-46.0629[]DLL Log Initialize. Verbosity: 6
+2025-09-14 21-45-46.0629[]*****************************************
+2025-09-14 21-45-46.0629[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-14 21-45-46.0629[]DLL Version: 1.07
+2025-09-14 21-45-46.0629[InitLibrary]Begin
+2025-09-14 21-45-46.0677[InitLibrary]Library SignID:00000101
+2025-09-14 21-45-46.0679[InitLibrary]Current SignID:00000101
+2025-09-14 21-45-46.0679[InitLibrary]End
+2025-09-14 21-45-46.0679[GetAPIVersionHwLibrary]Begin
+2025-09-14 21-45-46.0679[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-14 21-45-46.0679[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-14 21-45-46.0679[GetAPIVersionHwLibrary]End
+2025-09-14 21-45-46.0679[EnumUSBDevices]Begin
+2025-09-14 21-45-46.0693[EnumUSBDevices]Found 0 USB Devices
+2025-09-14 21-45-46.0693[EnumUSBDevices]End
+2025-09-14 22-12-09.0155[]*****************************************
+2025-09-14 22-12-09.0158[]DLL Log Initialize. Verbosity: 6
+2025-09-14 22-12-09.0158[]*****************************************
+2025-09-14 22-12-09.0158[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-14 22-12-09.0158[]DLL Version: 1.07
+2025-09-14 22-12-09.0158[InitLibrary]Begin
+2025-09-14 22-12-09.0197[InitLibrary]Library SignID:00000101
+2025-09-14 22-12-09.0204[InitLibrary]Current SignID:00000101
+2025-09-14 22-12-09.0206[InitLibrary]End
+2025-09-14 22-12-09.0206[GetAPIVersionHwLibrary]Begin
+2025-09-14 22-12-09.0206[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-14 22-12-09.0213[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-14 22-12-09.0213[GetAPIVersionHwLibrary]End
+2025-09-14 22-12-09.0213[EnumUSBDevices]Begin
+2025-09-14 22-12-09.0225[EnumUSBDevices]Found 0 USB Devices
+2025-09-14 22-12-09.0225[EnumUSBDevices]End
+2025-09-14 22-01-13.0684[]*****************************************
+2025-09-14 22-01-13.0685[]DLL Log Initialize. Verbosity: 6
+2025-09-14 22-01-13.0685[]*****************************************
+2025-09-14 22-01-13.0686[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-14 22-01-13.0687[]DLL Version: 1.07
+2025-09-14 22-01-13.0688[InitLibrary]Begin
+2025-09-14 22-01-13.0708[InitLibrary]Library SignID:00000101
+2025-09-14 22-01-13.0708[InitLibrary]Current SignID:00000101
+2025-09-14 22-01-13.0708[InitLibrary]End
+2025-09-14 22-01-13.0709[GetAPIVersionHwLibrary]Begin
+2025-09-14 22-01-13.0711[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-14 22-01-13.0711[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-14 22-01-13.0712[GetAPIVersionHwLibrary]End
+2025-09-14 22-01-13.0712[EnumUSBDevices]Begin
+2025-09-14 22-01-13.0718[EnumUSBDevices]Found 0 USB Devices
+2025-09-14 22-01-13.0718[EnumUSBDevices]End
+2025-09-14 21-59-11.0759[]*****************************************
+2025-09-14 21-59-11.0761[]DLL Log Initialize. Verbosity: 6
+2025-09-14 21-59-11.0761[]*****************************************
+2025-09-14 21-59-11.0762[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-14 21-59-11.0763[]DLL Version: 1.07
+2025-09-14 21-59-11.0763[InitLibrary]Begin
+2025-09-14 21-59-11.0785[InitLibrary]Library SignID:00000101
+2025-09-14 21-59-11.0785[InitLibrary]Current SignID:00000101
+2025-09-14 21-59-11.0786[InitLibrary]End
+2025-09-14 21-59-11.0786[GetAPIVersionHwLibrary]Begin
+2025-09-14 21-59-11.0788[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-14 21-59-11.0788[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-14 21-59-11.0789[GetAPIVersionHwLibrary]End
+2025-09-14 21-59-11.0789[EnumUSBDevices]Begin
+2025-09-14 21-59-11.0794[EnumUSBDevices]Found 0 USB Devices
+2025-09-14 21-59-11.0794[EnumUSBDevices]End
+2025-09-14 21-59-39.0862[]*****************************************
+2025-09-14 21-59-39.0863[]DLL Log Initialize. Verbosity: 6
+2025-09-14 21-59-39.0863[]*****************************************
+2025-09-14 21-59-39.0865[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-14 21-59-39.0865[]DLL Version: 1.07
+2025-09-14 21-59-39.0866[InitLibrary]Begin
+2025-09-14 21-59-39.0886[InitLibrary]Library SignID:00000101
+2025-09-14 21-59-39.0887[InitLibrary]Current SignID:00000101
+2025-09-14 21-59-39.0888[InitLibrary]End
+2025-09-14 21-59-39.0888[GetAPIVersionHwLibrary]Begin
+2025-09-14 21-59-39.0891[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-14 21-59-39.0891[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-14 21-59-39.0891[GetAPIVersionHwLibrary]End
+2025-09-14 21-59-39.0893[EnumUSBDevices]Begin
+2025-09-14 21-59-39.0896[EnumUSBDevices]Found 0 USB Devices
+2025-09-14 21-59-39.0896[EnumUSBDevices]End
+2025-09-26 09-19-02.0021[]*****************************************
+2025-09-26 09-19-02.0022[]DLL Log Initialize. Verbosity: 6
+2025-09-26 09-19-02.0023[]*****************************************
+2025-09-26 09-19-02.0023[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 09-19-02.0023[]DLL Version: 1.07
+2025-09-26 09-19-02.0024[InitLibrary]Begin
+2025-09-26 09-19-02.0046[InitLibrary]Library SignID:00000101
+2025-09-26 09-19-02.0047[InitLibrary]Current SignID:00000101
+2025-09-26 09-19-02.0047[InitLibrary]End
+2025-09-26 09-19-02.0048[GetAPIVersionHwLibrary]Begin
+2025-09-26 09-19-02.0050[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 09-19-02.0051[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 09-19-02.0051[GetAPIVersionHwLibrary]End
+2025-09-26 09-19-02.0051[EnumUSBDevices]Begin
+2025-09-26 09-19-02.0055[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 09-19-02.0055[EnumUSBDevices]End
+2025-09-26 09-25-14.0220[]*****************************************
+2025-09-26 09-25-14.0222[]DLL Log Initialize. Verbosity: 6
+2025-09-26 09-25-14.0223[]*****************************************
+2025-09-26 09-25-14.0224[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 09-25-14.0225[]DLL Version: 1.07
+2025-09-26 09-25-14.0227[InitLibrary]Begin
+2025-09-26 09-25-14.0277[InitLibrary]Library SignID:00000101
+2025-09-26 09-25-14.0279[InitLibrary]Current SignID:00000101
+2025-09-26 09-25-14.0281[InitLibrary]End
+2025-09-26 09-25-14.0282[GetAPIVersionHwLibrary]Begin
+2025-09-26 09-25-14.0288[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 09-25-14.0291[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 09-25-14.0292[GetAPIVersionHwLibrary]End
+2025-09-26 09-25-14.0293[EnumUSBDevices]Begin
+2025-09-26 09-25-14.0304[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 09-25-14.0306[EnumUSBDevices]End
+2025-09-26 09-31-31.0222[]*****************************************
+2025-09-26 09-31-31.0222[]DLL Log Initialize. Verbosity: 6
+2025-09-26 09-31-31.0223[]*****************************************
+2025-09-26 09-31-31.0223[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 09-31-31.0223[]DLL Version: 1.07
+2025-09-26 09-31-31.0224[InitLibrary]Begin
+2025-09-26 09-31-31.0244[InitLibrary]Library SignID:00000101
+2025-09-26 09-31-31.0245[InitLibrary]Current SignID:00000101
+2025-09-26 09-31-31.0245[InitLibrary]End
+2025-09-26 09-31-31.0247[GetAPIVersionHwLibrary]Begin
+2025-09-26 09-31-31.0248[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 09-31-31.0250[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 09-31-31.0250[GetAPIVersionHwLibrary]End
+2025-09-26 09-31-31.0251[EnumUSBDevices]Begin
+2025-09-26 09-31-31.0254[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 09-31-31.0255[EnumUSBDevices]End
+2025-09-26 09-35-47.0461[]*****************************************
+2025-09-26 09-35-47.0462[]DLL Log Initialize. Verbosity: 6
+2025-09-26 09-35-47.0462[]*****************************************
+2025-09-26 09-35-47.0463[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 09-35-47.0463[]DLL Version: 1.07
+2025-09-26 09-35-47.0464[InitLibrary]Begin
+2025-09-26 09-35-47.0486[InitLibrary]Library SignID:00000101
+2025-09-26 09-35-47.0486[InitLibrary]Current SignID:00000101
+2025-09-26 09-35-47.0487[InitLibrary]End
+2025-09-26 09-35-47.0487[GetAPIVersionHwLibrary]Begin
+2025-09-26 09-35-47.0490[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 09-35-47.0491[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 09-35-47.0491[GetAPIVersionHwLibrary]End
+2025-09-26 09-35-47.0491[EnumUSBDevices]Begin
+2025-09-26 09-35-47.0494[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 09-35-47.0495[EnumUSBDevices]End
+2025-09-26 09-41-57.0170[]*****************************************
+2025-09-26 09-41-57.0171[]DLL Log Initialize. Verbosity: 6
+2025-09-26 09-41-57.0171[]*****************************************
+2025-09-26 09-41-57.0172[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 09-41-57.0172[]DLL Version: 1.07
+2025-09-26 09-41-57.0172[InitLibrary]Begin
+2025-09-26 09-41-57.0193[InitLibrary]Library SignID:00000101
+2025-09-26 09-41-57.0194[InitLibrary]Current SignID:00000101
+2025-09-26 09-41-57.0195[InitLibrary]End
+2025-09-26 09-41-57.0195[GetAPIVersionHwLibrary]Begin
+2025-09-26 09-41-57.0197[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 09-41-57.0197[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 09-41-57.0198[GetAPIVersionHwLibrary]End
+2025-09-26 09-41-57.0198[EnumUSBDevices]Begin
+2025-09-26 09-41-57.0203[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 09-41-57.0204[EnumUSBDevices]End
+2025-09-26 09-44-56.0496[]*****************************************
+2025-09-26 09-44-56.0497[]DLL Log Initialize. Verbosity: 6
+2025-09-26 09-44-56.0498[]*****************************************
+2025-09-26 09-44-56.0498[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 09-44-56.0498[]DLL Version: 1.07
+2025-09-26 09-44-56.0499[InitLibrary]Begin
+2025-09-26 09-44-56.0517[InitLibrary]Library SignID:00000101
+2025-09-26 09-44-56.0517[InitLibrary]Current SignID:00000101
+2025-09-26 09-44-56.0518[InitLibrary]End
+2025-09-26 09-44-56.0519[GetAPIVersionHwLibrary]Begin
+2025-09-26 09-44-56.0521[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 09-44-56.0522[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 09-44-56.0522[GetAPIVersionHwLibrary]End
+2025-09-26 09-44-56.0523[EnumUSBDevices]Begin
+2025-09-26 09-44-56.0527[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 09-44-56.0528[EnumUSBDevices]End
+2025-09-26 09-49-41.0334[]*****************************************
+2025-09-26 09-49-41.0336[]DLL Log Initialize. Verbosity: 6
+2025-09-26 09-49-41.0336[]*****************************************
+2025-09-26 09-49-41.0336[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 09-49-41.0337[]DLL Version: 1.07
+2025-09-26 09-49-41.0337[InitLibrary]Begin
+2025-09-26 09-49-41.0358[InitLibrary]Library SignID:00000101
+2025-09-26 09-49-41.0359[InitLibrary]Current SignID:00000101
+2025-09-26 09-49-41.0359[InitLibrary]End
+2025-09-26 09-49-41.0359[GetAPIVersionHwLibrary]Begin
+2025-09-26 09-49-41.0362[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 09-49-41.0362[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 09-49-41.0363[GetAPIVersionHwLibrary]End
+2025-09-26 09-49-41.0363[EnumUSBDevices]Begin
+2025-09-26 09-49-41.0366[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 09-49-41.0367[EnumUSBDevices]End
+2025-09-26 09-52-57.0412[]*****************************************
+2025-09-26 09-52-57.0413[]DLL Log Initialize. Verbosity: 6
+2025-09-26 09-52-57.0414[]*****************************************
+2025-09-26 09-52-57.0414[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 09-52-57.0414[]DLL Version: 1.07
+2025-09-26 09-52-57.0414[InitLibrary]Begin
+2025-09-26 09-52-57.0434[InitLibrary]Library SignID:00000101
+2025-09-26 09-52-57.0434[InitLibrary]Current SignID:00000101
+2025-09-26 09-52-57.0434[InitLibrary]End
+2025-09-26 09-52-57.0435[GetAPIVersionHwLibrary]Begin
+2025-09-26 09-52-57.0436[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 09-52-57.0438[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 09-52-57.0438[GetAPIVersionHwLibrary]End
+2025-09-26 09-52-57.0439[EnumUSBDevices]Begin
+2025-09-26 09-52-57.0443[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 09-52-57.0443[EnumUSBDevices]End
+2025-09-26 09-55-06.0376[]*****************************************
+2025-09-26 09-55-06.0377[]DLL Log Initialize. Verbosity: 6
+2025-09-26 09-55-06.0378[]*****************************************
+2025-09-26 09-55-06.0378[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 09-55-06.0379[]DLL Version: 1.07
+2025-09-26 09-55-06.0379[InitLibrary]Begin
+2025-09-26 09-55-06.0401[InitLibrary]Library SignID:00000101
+2025-09-26 09-55-06.0401[InitLibrary]Current SignID:00000101
+2025-09-26 09-55-06.0401[InitLibrary]End
+2025-09-26 09-55-06.0403[GetAPIVersionHwLibrary]Begin
+2025-09-26 09-55-06.0404[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 09-55-06.0405[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 09-55-06.0405[GetAPIVersionHwLibrary]End
+2025-09-26 09-55-06.0406[EnumUSBDevices]Begin
+2025-09-26 09-55-06.0410[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 09-55-06.0411[EnumUSBDevices]End
+2025-09-26 10-00-03.0097[]*****************************************
+2025-09-26 10-00-03.0097[]DLL Log Initialize. Verbosity: 6
+2025-09-26 10-00-03.0098[]*****************************************
+2025-09-26 10-00-03.0098[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 10-00-03.0099[]DLL Version: 1.07
+2025-09-26 10-00-03.0100[InitLibrary]Begin
+2025-09-26 10-00-03.0118[InitLibrary]Library SignID:00000101
+2025-09-26 10-00-03.0119[InitLibrary]Current SignID:00000101
+2025-09-26 10-00-03.0120[InitLibrary]End
+2025-09-26 10-00-03.0120[GetAPIVersionHwLibrary]Begin
+2025-09-26 10-00-03.0123[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 10-00-03.0123[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 10-00-03.0123[GetAPIVersionHwLibrary]End
+2025-09-26 10-00-03.0124[EnumUSBDevices]Begin
+2025-09-26 10-00-03.0128[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 10-00-03.0129[EnumUSBDevices]End
+2025-09-26 15-58-54.0465[]*****************************************
+2025-09-26 15-58-54.0466[]DLL Log Initialize. Verbosity: 6
+2025-09-26 15-58-54.0467[]*****************************************
+2025-09-26 15-58-54.0467[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 15-58-54.0469[]DLL Version: 1.07
+2025-09-26 15-58-54.0469[InitLibrary]Begin
+2025-09-26 15-58-54.0490[InitLibrary]Library SignID:00000101
+2025-09-26 15-58-54.0491[InitLibrary]Current SignID:00000101
+2025-09-26 15-58-54.0491[InitLibrary]End
+2025-09-26 15-58-54.0492[GetAPIVersionHwLibrary]Begin
+2025-09-26 15-58-54.0495[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 15-58-54.0496[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 15-58-54.0496[GetAPIVersionHwLibrary]End
+2025-09-26 15-58-54.0497[EnumUSBDevices]Begin
+2025-09-26 15-58-54.0501[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 15-58-54.0503[EnumUSBDevices]End
+2025-09-26 16-03-47.0204[]*****************************************
+2025-09-26 16-03-47.0205[]DLL Log Initialize. Verbosity: 6
+2025-09-26 16-03-47.0206[]*****************************************
+2025-09-26 16-03-47.0206[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 16-03-47.0207[]DLL Version: 1.07
+2025-09-26 16-03-47.0207[InitLibrary]Begin
+2025-09-26 16-03-47.0231[InitLibrary]Library SignID:00000101
+2025-09-26 16-03-47.0231[InitLibrary]Current SignID:00000101
+2025-09-26 16-03-47.0232[InitLibrary]End
+2025-09-26 16-03-47.0232[GetAPIVersionHwLibrary]Begin
+2025-09-26 16-03-47.0235[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 16-03-47.0236[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 16-03-47.0237[GetAPIVersionHwLibrary]End
+2025-09-26 16-03-47.0237[EnumUSBDevices]Begin
+2025-09-26 16-03-47.0243[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 16-03-47.0243[EnumUSBDevices]End
+2025-09-26 16-06-33.0934[]*****************************************
+2025-09-26 16-06-33.0935[]DLL Log Initialize. Verbosity: 6
+2025-09-26 16-06-33.0936[]*****************************************
+2025-09-26 16-06-33.0937[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 16-06-33.0937[]DLL Version: 1.07
+2025-09-26 16-06-33.0938[InitLibrary]Begin
+2025-09-26 16-06-33.0963[InitLibrary]Library SignID:00000101
+2025-09-26 16-06-33.0964[InitLibrary]Current SignID:00000101
+2025-09-26 16-06-33.0965[InitLibrary]End
+2025-09-26 16-06-33.0966[GetAPIVersionHwLibrary]Begin
+2025-09-26 16-06-33.0968[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 16-06-33.0969[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 16-06-33.0970[GetAPIVersionHwLibrary]End
+2025-09-26 16-06-33.0970[EnumUSBDevices]Begin
+2025-09-26 16-06-33.0976[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 16-06-33.0977[EnumUSBDevices]End
+2025-09-26 16-08-50.0729[]*****************************************
+2025-09-26 16-08-50.0731[]DLL Log Initialize. Verbosity: 6
+2025-09-26 16-08-50.0732[]*****************************************
+2025-09-26 16-08-50.0733[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 16-08-50.0734[]DLL Version: 1.07
+2025-09-26 16-08-50.0735[InitLibrary]Begin
+2025-09-26 16-08-50.0784[InitLibrary]Library SignID:00000101
+2025-09-26 16-08-50.0785[InitLibrary]Current SignID:00000101
+2025-09-26 16-08-50.0786[InitLibrary]End
+2025-09-26 16-08-50.0786[GetAPIVersionHwLibrary]Begin
+2025-09-26 16-08-50.0790[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 16-08-50.0790[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 16-08-50.0791[GetAPIVersionHwLibrary]End
+2025-09-26 16-08-50.0793[EnumUSBDevices]Begin
+2025-09-26 16-08-50.0803[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 16-08-50.0804[EnumUSBDevices]End
+2025-09-26 16-11-31.0716[]*****************************************
+2025-09-26 16-11-31.0718[]DLL Log Initialize. Verbosity: 6
+2025-09-26 16-11-31.0718[]*****************************************
+2025-09-26 16-11-31.0720[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 16-11-31.0720[]DLL Version: 1.07
+2025-09-26 16-11-31.0720[InitLibrary]Begin
+2025-09-26 16-11-31.0746[InitLibrary]Library SignID:00000101
+2025-09-26 16-11-31.0747[InitLibrary]Current SignID:00000101
+2025-09-26 16-11-31.0748[InitLibrary]End
+2025-09-26 16-11-31.0748[GetAPIVersionHwLibrary]Begin
+2025-09-26 16-11-31.0751[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 16-11-31.0751[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 16-11-31.0752[GetAPIVersionHwLibrary]End
+2025-09-26 16-11-31.0752[EnumUSBDevices]Begin
+2025-09-26 16-11-31.0756[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 16-11-31.0757[EnumUSBDevices]End
+2025-09-26 16-30-19.0193[]*****************************************
+2025-09-26 16-30-19.0194[]DLL Log Initialize. Verbosity: 6
+2025-09-26 16-30-19.0195[]*****************************************
+2025-09-26 16-30-19.0196[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 16-30-19.0197[]DLL Version: 1.07
+2025-09-26 16-30-19.0197[InitLibrary]Begin
+2025-09-26 16-30-19.0227[InitLibrary]Library SignID:00000101
+2025-09-26 16-30-19.0228[InitLibrary]Current SignID:00000101
+2025-09-26 16-30-19.0229[InitLibrary]End
+2025-09-26 16-30-19.0229[GetAPIVersionHwLibrary]Begin
+2025-09-26 16-30-19.0232[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 16-30-19.0233[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 16-30-19.0233[GetAPIVersionHwLibrary]End
+2025-09-26 16-30-19.0234[EnumUSBDevices]Begin
+2025-09-26 16-30-19.0238[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 16-30-19.0239[EnumUSBDevices]End
+2025-09-26 18-31-56.0091[]*****************************************
+2025-09-26 18-31-56.0092[]DLL Log Initialize. Verbosity: 6
+2025-09-26 18-31-56.0093[]*****************************************
+2025-09-26 18-31-56.0093[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 18-31-56.0093[]DLL Version: 1.07
+2025-09-26 18-31-56.0094[InitLibrary]Begin
+2025-09-26 18-31-56.0111[InitLibrary]Library SignID:00000101
+2025-09-26 18-31-56.0111[InitLibrary]Current SignID:00000101
+2025-09-26 18-31-56.0112[InitLibrary]End
+2025-09-26 18-31-56.0112[GetAPIVersionHwLibrary]Begin
+2025-09-26 18-31-56.0114[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 18-31-56.0114[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 18-31-56.0115[GetAPIVersionHwLibrary]End
+2025-09-26 18-31-56.0115[EnumUSBDevices]Begin
+2025-09-26 18-31-56.0118[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 18-31-56.0118[EnumUSBDevices]End
+2025-09-26 18-41-49.0918[]*****************************************
+2025-09-26 18-41-49.0918[]DLL Log Initialize. Verbosity: 6
+2025-09-26 18-41-49.0918[]*****************************************
+2025-09-26 18-41-49.0920[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 18-41-49.0920[]DLL Version: 1.07
+2025-09-26 18-41-49.0920[InitLibrary]Begin
+2025-09-26 18-41-49.0932[InitLibrary]Library SignID:00000101
+2025-09-26 18-41-49.0933[InitLibrary]Current SignID:00000101
+2025-09-26 18-41-49.0934[InitLibrary]End
+2025-09-26 18-41-49.0934[GetAPIVersionHwLibrary]Begin
+2025-09-26 18-41-49.0935[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 18-41-49.0935[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 18-41-49.0936[GetAPIVersionHwLibrary]End
+2025-09-26 18-41-49.0936[EnumUSBDevices]Begin
+2025-09-26 18-41-49.0939[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 18-41-49.0939[EnumUSBDevices]End
+2025-09-26 18-48-57.0197[]*****************************************
+2025-09-26 18-48-57.0201[]DLL Log Initialize. Verbosity: 6
+2025-09-26 18-48-57.0202[]*****************************************
+2025-09-26 18-48-57.0203[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 18-48-57.0203[]DLL Version: 1.07
+2025-09-26 18-48-57.0204[InitLibrary]Begin
+2025-09-26 18-48-57.0247[InitLibrary]Library SignID:00000101
+2025-09-26 18-48-57.0247[InitLibrary]Current SignID:00000101
+2025-09-26 18-48-57.0248[InitLibrary]End
+2025-09-26 18-48-57.0250[GetAPIVersionHwLibrary]Begin
+2025-09-26 18-48-57.0252[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 18-48-57.0253[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 18-48-57.0253[GetAPIVersionHwLibrary]End
+2025-09-26 18-48-57.0254[EnumUSBDevices]Begin
+2025-09-26 18-48-57.0258[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 18-48-57.0259[EnumUSBDevices]End
+2025-09-26 23-53-47.0846[]*****************************************
+2025-09-26 23-53-47.0849[]DLL Log Initialize. Verbosity: 6
+2025-09-26 23-53-47.0849[]*****************************************
+2025-09-26 23-53-47.0850[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-26 23-53-47.0850[]DLL Version: 1.07
+2025-09-26 23-53-47.0851[InitLibrary]Begin
+2025-09-26 23-53-47.0877[InitLibrary]Library SignID:00000101
+2025-09-26 23-53-47.0877[InitLibrary]Current SignID:00000101
+2025-09-26 23-53-47.0878[InitLibrary]End
+2025-09-26 23-53-47.0880[GetAPIVersionHwLibrary]Begin
+2025-09-26 23-53-47.0881[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-26 23-53-47.0882[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-26 23-53-47.0882[GetAPIVersionHwLibrary]End
+2025-09-26 23-53-47.0883[EnumUSBDevices]Begin
+2025-09-26 23-53-47.0889[EnumUSBDevices]Found 0 USB Devices
+2025-09-26 23-53-47.0889[EnumUSBDevices]End
+2025-09-27 09-55-33.0310[]*****************************************
+2025-09-27 09-55-33.0311[]DLL Log Initialize. Verbosity: 6
+2025-09-27 09-55-33.0311[]*****************************************
+2025-09-27 09-55-33.0312[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-27 09-55-33.0312[]DLL Version: 1.07
+2025-09-27 09-55-33.0312[InitLibrary]Begin
+2025-09-27 09-55-33.0326[InitLibrary]Library SignID:00000101
+2025-09-27 09-55-33.0326[InitLibrary]Current SignID:00000101
+2025-09-27 09-55-33.0327[InitLibrary]End
+2025-09-27 09-55-33.0327[GetAPIVersionHwLibrary]Begin
+2025-09-27 09-55-33.0328[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-27 09-55-33.0329[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-27 09-55-33.0329[GetAPIVersionHwLibrary]End
+2025-09-27 09-55-33.0329[EnumUSBDevices]Begin
+2025-09-27 09-55-33.0331[EnumUSBDevices]Found 0 USB Devices
+2025-09-27 09-55-33.0331[EnumUSBDevices]End
+2025-09-27 12-18-04.0728[]*****************************************
+2025-09-27 12-18-04.0729[]DLL Log Initialize. Verbosity: 6
+2025-09-27 12-18-04.0731[]*****************************************
+2025-09-27 12-18-04.0731[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-27 12-18-04.0731[]DLL Version: 1.07
+2025-09-27 12-18-04.0732[InitLibrary]Begin
+2025-09-27 12-18-04.0749[InitLibrary]Library SignID:00000101
+2025-09-27 12-18-04.0750[InitLibrary]Current SignID:00000101
+2025-09-27 12-18-04.0750[InitLibrary]End
+2025-09-27 12-18-04.0751[GetAPIVersionHwLibrary]Begin
+2025-09-27 12-18-04.0752[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-27 12-18-04.0752[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-27 12-18-04.0752[GetAPIVersionHwLibrary]End
+2025-09-27 12-18-04.0753[EnumUSBDevices]Begin
+2025-09-27 12-18-04.0756[EnumUSBDevices]Found 0 USB Devices
+2025-09-27 12-18-04.0756[EnumUSBDevices]End
+2025-09-27 21-22-21.0608[]*****************************************
+2025-09-27 21-22-21.0610[]DLL Log Initialize. Verbosity: 6
+2025-09-27 21-22-21.0610[]*****************************************
+2025-09-27 21-22-21.0612[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-27 21-22-21.0612[]DLL Version: 1.07
+2025-09-27 21-22-21.0613[InitLibrary]Begin
+2025-09-27 21-22-21.0638[InitLibrary]Library SignID:00000101
+2025-09-27 21-22-21.0638[InitLibrary]Current SignID:00000101
+2025-09-27 21-22-21.0639[InitLibrary]End
+2025-09-27 21-22-21.0639[GetAPIVersionHwLibrary]Begin
+2025-09-27 21-22-21.0641[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-27 21-22-21.0642[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-27 21-22-21.0643[GetAPIVersionHwLibrary]End
+2025-09-27 21-22-21.0643[EnumUSBDevices]Begin
+2025-09-27 21-22-21.0647[EnumUSBDevices]Found 0 USB Devices
+2025-09-27 21-22-21.0648[EnumUSBDevices]End
+2025-09-27 21-28-34.0042[]*****************************************
+2025-09-27 21-28-34.0043[]DLL Log Initialize. Verbosity: 6
+2025-09-27 21-28-34.0044[]*****************************************
+2025-09-27 21-28-34.0044[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-27 21-28-34.0045[]DLL Version: 1.07
+2025-09-27 21-28-34.0046[InitLibrary]Begin
+2025-09-27 21-28-34.0065[InitLibrary]Library SignID:00000101
+2025-09-27 21-28-34.0066[InitLibrary]Current SignID:00000101
+2025-09-27 21-28-34.0067[InitLibrary]End
+2025-09-27 21-28-34.0067[GetAPIVersionHwLibrary]Begin
+2025-09-27 21-28-34.0069[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-27 21-28-34.0069[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-27 21-28-34.0070[GetAPIVersionHwLibrary]End
+2025-09-27 21-28-34.0070[EnumUSBDevices]Begin
+2025-09-27 21-28-34.0074[EnumUSBDevices]Found 0 USB Devices
+2025-09-27 21-28-34.0075[EnumUSBDevices]End
+2025-09-27 21-35-10.0827[]*****************************************
+2025-09-27 21-35-10.0828[]DLL Log Initialize. Verbosity: 6
+2025-09-27 21-35-10.0828[]*****************************************
+2025-09-27 21-35-10.0828[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-27 21-35-10.0829[]DLL Version: 1.07
+2025-09-27 21-35-10.0830[InitLibrary]Begin
+2025-09-27 21-35-10.0849[InitLibrary]Library SignID:00000101
+2025-09-27 21-35-10.0850[InitLibrary]Current SignID:00000101
+2025-09-27 21-35-10.0850[InitLibrary]End
+2025-09-27 21-35-10.0850[GetAPIVersionHwLibrary]Begin
+2025-09-27 21-35-10.0852[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-27 21-35-10.0853[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-27 21-35-10.0853[GetAPIVersionHwLibrary]End
+2025-09-27 21-35-10.0853[EnumUSBDevices]Begin
+2025-09-27 21-35-10.0857[EnumUSBDevices]Found 0 USB Devices
+2025-09-27 21-35-10.0858[EnumUSBDevices]End
+2025-09-27 21-37-08.0213[]*****************************************
+2025-09-27 21-37-08.0214[]DLL Log Initialize. Verbosity: 6
+2025-09-27 21-37-08.0214[]*****************************************
+2025-09-27 21-37-08.0214[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-27 21-37-08.0216[]DLL Version: 1.07
+2025-09-27 21-37-08.0216[InitLibrary]Begin
+2025-09-27 21-37-08.0236[InitLibrary]Library SignID:00000101
+2025-09-27 21-37-08.0236[InitLibrary]Current SignID:00000101
+2025-09-27 21-37-08.0237[InitLibrary]End
+2025-09-27 21-37-08.0237[GetAPIVersionHwLibrary]Begin
+2025-09-27 21-37-08.0238[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-27 21-37-08.0239[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-27 21-37-08.0239[GetAPIVersionHwLibrary]End
+2025-09-27 21-37-08.0239[EnumUSBDevices]Begin
+2025-09-27 21-37-08.0243[EnumUSBDevices]Found 0 USB Devices
+2025-09-27 21-37-08.0244[EnumUSBDevices]End
+2025-09-27 21-38-56.0091[]*****************************************
+2025-09-27 21-38-56.0092[]DLL Log Initialize. Verbosity: 6
+2025-09-27 21-38-56.0093[]*****************************************
+2025-09-27 21-38-56.0093[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-27 21-38-56.0093[]DLL Version: 1.07
+2025-09-27 21-38-56.0095[InitLibrary]Begin
+2025-09-27 21-38-56.0118[InitLibrary]Library SignID:00000101
+2025-09-27 21-38-56.0118[InitLibrary]Current SignID:00000101
+2025-09-27 21-38-56.0119[InitLibrary]End
+2025-09-27 21-38-56.0120[GetAPIVersionHwLibrary]Begin
+2025-09-27 21-38-56.0124[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-27 21-38-56.0124[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-27 21-38-56.0124[GetAPIVersionHwLibrary]End
+2025-09-27 21-38-56.0126[EnumUSBDevices]Begin
+2025-09-27 21-38-56.0129[EnumUSBDevices]Found 0 USB Devices
+2025-09-27 21-38-56.0131[EnumUSBDevices]End
+2025-09-27 21-44-11.0919[]*****************************************
+2025-09-27 21-44-11.0919[]DLL Log Initialize. Verbosity: 6
+2025-09-27 21-44-11.0921[]*****************************************
+2025-09-27 21-44-11.0922[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-27 21-44-11.0922[]DLL Version: 1.07
+2025-09-27 21-44-11.0923[InitLibrary]Begin
+2025-09-27 21-44-11.0946[InitLibrary]Library SignID:00000101
+2025-09-27 21-44-11.0946[InitLibrary]Current SignID:00000101
+2025-09-27 21-44-11.0947[InitLibrary]End
+2025-09-27 21-44-11.0947[GetAPIVersionHwLibrary]Begin
+2025-09-27 21-44-11.0950[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-27 21-44-11.0951[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-27 21-44-11.0951[GetAPIVersionHwLibrary]End
+2025-09-27 21-44-11.0952[EnumUSBDevices]Begin
+2025-09-27 21-44-11.0956[EnumUSBDevices]Found 0 USB Devices
+2025-09-27 21-44-11.0956[EnumUSBDevices]End
+2025-09-27 21-47-41.0190[]*****************************************
+2025-09-27 21-47-41.0191[]DLL Log Initialize. Verbosity: 6
+2025-09-27 21-47-41.0191[]*****************************************
+2025-09-27 21-47-41.0191[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-27 21-47-41.0191[]DLL Version: 1.07
+2025-09-27 21-47-41.0192[InitLibrary]Begin
+2025-09-27 21-47-41.0214[InitLibrary]Library SignID:00000101
+2025-09-27 21-47-41.0215[InitLibrary]Current SignID:00000101
+2025-09-27 21-47-41.0215[InitLibrary]End
+2025-09-27 21-47-41.0215[GetAPIVersionHwLibrary]Begin
+2025-09-27 21-47-41.0218[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-27 21-47-41.0219[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-27 21-47-41.0219[GetAPIVersionHwLibrary]End
+2025-09-27 21-47-41.0219[EnumUSBDevices]Begin
+2025-09-27 21-47-41.0222[EnumUSBDevices]Found 0 USB Devices
+2025-09-27 21-47-41.0223[EnumUSBDevices]End
+2025-09-27 21-52-13.0253[]*****************************************
+2025-09-27 21-52-13.0254[]DLL Log Initialize. Verbosity: 6
+2025-09-27 21-52-13.0255[]*****************************************
+2025-09-27 21-52-13.0255[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-27 21-52-13.0256[]DLL Version: 1.07
+2025-09-27 21-52-13.0256[InitLibrary]Begin
+2025-09-27 21-52-13.0276[InitLibrary]Library SignID:00000101
+2025-09-27 21-52-13.0277[InitLibrary]Current SignID:00000101
+2025-09-27 21-52-13.0278[InitLibrary]End
+2025-09-27 21-52-13.0278[GetAPIVersionHwLibrary]Begin
+2025-09-27 21-52-13.0281[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-27 21-52-13.0282[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-27 21-52-13.0282[GetAPIVersionHwLibrary]End
+2025-09-27 21-52-13.0283[EnumUSBDevices]Begin
+2025-09-27 21-52-13.0288[EnumUSBDevices]Found 0 USB Devices
+2025-09-27 21-52-13.0288[EnumUSBDevices]End
+2025-09-27 21-55-14.0014[]*****************************************
+2025-09-27 21-55-14.0016[]DLL Log Initialize. Verbosity: 6
+2025-09-27 21-55-14.0017[]*****************************************
+2025-09-27 21-55-14.0017[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-27 21-55-14.0018[]DLL Version: 1.07
+2025-09-27 21-55-14.0018[InitLibrary]Begin
+2025-09-27 21-55-14.0036[InitLibrary]Library SignID:00000101
+2025-09-27 21-55-14.0037[InitLibrary]Current SignID:00000101
+2025-09-27 21-55-14.0037[InitLibrary]End
+2025-09-27 21-55-14.0038[GetAPIVersionHwLibrary]Begin
+2025-09-27 21-55-14.0041[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-27 21-55-14.0041[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-27 21-55-14.0042[GetAPIVersionHwLibrary]End
+2025-09-27 21-55-14.0042[EnumUSBDevices]Begin
+2025-09-27 21-55-14.0044[EnumUSBDevices]Found 0 USB Devices
+2025-09-27 21-55-14.0045[EnumUSBDevices]End
+2025-09-27 22-02-37.0759[]*****************************************
+2025-09-27 22-02-37.0761[]DLL Log Initialize. Verbosity: 6
+2025-09-27 22-02-37.0762[]*****************************************
+2025-09-27 22-02-37.0763[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-27 22-02-37.0764[]DLL Version: 1.07
+2025-09-27 22-02-37.0766[InitLibrary]Begin
+2025-09-27 22-02-37.0789[InitLibrary]Library SignID:00000101
+2025-09-27 22-02-37.0790[InitLibrary]Current SignID:00000101
+2025-09-27 22-02-37.0791[InitLibrary]End
+2025-09-27 22-02-37.0792[GetAPIVersionHwLibrary]Begin
+2025-09-27 22-02-37.0795[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-27 22-02-37.0796[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-27 22-02-37.0796[GetAPIVersionHwLibrary]End
+2025-09-27 22-02-37.0797[EnumUSBDevices]Begin
+2025-09-27 22-02-37.0802[EnumUSBDevices]Found 0 USB Devices
+2025-09-27 22-02-37.0803[EnumUSBDevices]End
+2025-09-27 21-53-55.0165[]*****************************************
+2025-09-27 21-53-55.0166[]DLL Log Initialize. Verbosity: 6
+2025-09-27 21-53-55.0167[]*****************************************
+2025-09-27 21-53-55.0169[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-27 21-53-55.0170[]DLL Version: 1.07
+2025-09-27 21-53-55.0170[InitLibrary]Begin
+2025-09-27 21-53-55.0193[InitLibrary]Library SignID:00000101
+2025-09-27 21-53-55.0194[InitLibrary]Current SignID:00000101
+2025-09-27 21-53-55.0194[InitLibrary]End
+2025-09-27 21-53-55.0195[GetAPIVersionHwLibrary]Begin
+2025-09-27 21-53-55.0197[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-27 21-53-55.0197[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-27 21-53-55.0197[GetAPIVersionHwLibrary]End
+2025-09-27 21-53-55.0199[EnumUSBDevices]Begin
+2025-09-27 21-53-55.0202[EnumUSBDevices]Found 1 USB Devices
+2025-09-27 21-53-55.0203[EnumUSBDevices]End
+2025-09-27 21-53-55.0204[OpenPrinterUSB]Begin
+2025-09-27 21-53-55.0204[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-27 21-53-55.0210[OpenPrinterUSB]New device ID:00000101
+2025-09-27 21-53-55.0211[OpenPrinterUSB]End
+2025-09-22 10-40-13.0597[]*****************************************
+2025-09-22 10-40-13.0600[]DLL Log Initialize. Verbosity: 6
+2025-09-22 10-40-13.0601[]*****************************************
+2025-09-22 10-40-13.0602[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 10-40-13.0604[]DLL Version: 1.07
+2025-09-22 10-40-13.0605[InitLibrary]Begin
+2025-09-22 10-40-13.0645[InitLibrary]Library SignID:00000101
+2025-09-22 10-40-13.0646[InitLibrary]Current SignID:00000101
+2025-09-22 10-40-13.0647[InitLibrary]End
+2025-09-22 10-40-13.0648[GetAPIVersionHwLibrary]Begin
+2025-09-22 10-40-13.0651[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 10-40-13.0652[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 10-40-13.0653[GetAPIVersionHwLibrary]End
+2025-09-22 10-40-13.0654[EnumUSBDevices]Begin
+2025-09-22 10-40-13.0660[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 10-40-13.0661[EnumUSBDevices]End
+2025-09-22 10-40-13.0661[OpenPrinterUSB]Begin
+2025-09-22 10-40-13.0663[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 10-40-13.0669[OpenPrinterUSB]New device ID:00000101
+2025-09-22 10-40-13.0670[OpenPrinterUSB]End
+2025-09-22 10-41-18.0493[PrintImageFromPath]Begin
+2025-09-22 10-41-18.0496[PrintBarcode]Begin
+2025-09-22 10-41-18.0496[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMDMwMDAxOjE3NTg1MTc4NzcyNjU6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 10-41-18.0497[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 10-41-18.0519[PrintBarcode]End
+2025-09-22 10-41-18.0522[PrintText]Begin
+2025-09-22 10-41-18.0523[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 10:41:17
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH030001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 10-41-18.0524[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 10-41-18.0524[PrintText]<Add LF>:false
+2025-09-22 10-41-18.0530[PrintText]End
+2025-09-22 10-41-18.0531[Cut]Begin
+2025-09-22 10-41-18.0531[Cut]CutType:CUT_TOTAL
+2025-09-22 10-41-18.0533[Cut]End
+2025-09-22 10-41-18.0534[PrintImageFromPath]Begin
+2025-09-22 10-44-25.0553[PrintImageFromPath]Begin
+2025-09-22 10-44-25.0554[PrintBarcode]Begin
+2025-09-22 10-44-25.0554[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMDMwMDAyOjE3NTg1MTgwNjQ0Njk6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 10-44-25.0555[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 10-44-25.0579[PrintBarcode]End
+2025-09-22 10-44-25.0579[PrintText]Begin
+2025-09-22 10-44-25.0581[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 10:44:24
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH030002
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 10-44-25.0581[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 10-44-25.0582[PrintText]<Add LF>:false
+2025-09-22 10-44-25.0585[PrintText]End
+2025-09-22 10-44-25.0586[Cut]Begin
+2025-09-22 10-44-25.0586[Cut]CutType:CUT_TOTAL
+2025-09-22 10-44-25.0589[Cut]End
+2025-09-22 10-44-25.0590[PrintImageFromPath]Begin
+2025-09-22 10-45-33.0717[]*****************************************
+2025-09-22 10-45-33.0717[]DLL Log Initialize. Verbosity: 6
+2025-09-22 10-45-33.0718[]*****************************************
+2025-09-22 10-45-33.0718[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 10-45-33.0721[]DLL Version: 1.07
+2025-09-22 10-45-33.0722[InitLibrary]Begin
+2025-09-22 10-45-33.0761[InitLibrary]Library SignID:00000101
+2025-09-22 10-45-33.0762[InitLibrary]Current SignID:00000101
+2025-09-22 10-45-33.0763[InitLibrary]End
+2025-09-22 10-45-33.0764[GetAPIVersionHwLibrary]Begin
+2025-09-22 10-45-33.0769[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 10-45-33.0770[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 10-45-33.0772[GetAPIVersionHwLibrary]End
+2025-09-22 10-45-33.0773[EnumUSBDevices]Begin
+2025-09-22 10-45-33.0781[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 10-45-33.0782[EnumUSBDevices]End
+2025-09-22 10-45-33.0784[OpenPrinterUSB]Begin
+2025-09-22 10-45-33.0784[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 10-45-33.0792[OpenPrinterUSB]New device ID:00000101
+2025-09-22 10-45-33.0793[OpenPrinterUSB]End
+2025-09-22 10-46-24.0053[PrintImageFromPath]Begin
+2025-09-22 10-46-24.0058[PrintBarcode]Begin
+2025-09-22 10-46-24.0059[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMDQwMDAxOjE3NTg1MTgxODI3Mjg6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 10-46-24.0060[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 10-46-24.0086[PrintBarcode]End
+2025-09-22 10-46-24.0089[PrintText]Begin
+2025-09-22 10-46-24.0090[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 10:46:22
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH040001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 10-46-24.0091[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 10-46-24.0092[PrintText]<Add LF>:false
+2025-09-22 10-46-24.0097[PrintText]End
+2025-09-22 10-46-24.0099[Cut]Begin
+2025-09-22 10-46-24.0100[Cut]CutType:CUT_PARTIAL
+2025-09-22 10-47-57.0665[]*****************************************
+2025-09-22 10-47-57.0666[]DLL Log Initialize. Verbosity: 6
+2025-09-22 10-47-57.0667[]*****************************************
+2025-09-22 10-47-57.0667[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 10-47-57.0668[]DLL Version: 1.07
+2025-09-22 10-47-57.0668[InitLibrary]Begin
+2025-09-22 10-47-57.0686[InitLibrary]Library SignID:00000101
+2025-09-22 10-47-57.0687[InitLibrary]Current SignID:00000101
+2025-09-22 10-47-57.0688[InitLibrary]End
+2025-09-22 10-47-57.0689[GetAPIVersionHwLibrary]Begin
+2025-09-22 10-47-57.0691[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 10-47-57.0691[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 10-47-57.0691[GetAPIVersionHwLibrary]End
+2025-09-22 10-47-57.0692[EnumUSBDevices]Begin
+2025-09-22 10-47-57.0696[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 10-47-57.0696[EnumUSBDevices]End
+2025-09-22 10-47-57.0697[OpenPrinterUSB]Begin
+2025-09-22 10-47-57.0697[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 10-47-57.0703[OpenPrinterUSB]New device ID:00000101
+2025-09-22 10-47-57.0704[OpenPrinterUSB]End
+2025-09-22 10-48-11.0617[PrintImageFromPath]Begin
+2025-09-22 10-48-11.0624[PrintBarcode]Begin
+2025-09-22 10-48-11.0625[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMDUwMDAxOjE3NTg1MTgyOTAzNjQ6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 10-48-11.0626[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 10-48-11.0647[PrintBarcode]End
+2025-09-22 10-48-11.0649[PrintText]Begin
+2025-09-22 10-48-11.0651[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 10:48:10
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH050001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 10-48-11.0652[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 10-48-11.0652[PrintText]<Add LF>:false
+2025-09-22 10-48-11.0657[PrintText]End
+2025-09-22 10-48-11.0658[Cut]Begin
+2025-09-22 10-48-11.0658[Cut]CutType:CUT_TOTAL
+2025-09-22 10-48-11.0660[Cut]End
+2025-09-22 10-48-11.0660[PrintImageFromPath]Begin
+2025-09-22 10-49-24.0336[PrintImageFromPath]Begin
+2025-09-22 10-49-24.0336[PrintBarcode]Begin
+2025-09-22 10-49-24.0338[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMDUwMDAyOjE3NTg1MTgzNjMyNjU6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 10-49-24.0338[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 10-49-24.0361[PrintBarcode]End
+2025-09-22 10-49-24.0362[PrintText]Begin
+2025-09-22 10-49-24.0363[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 10:49:23
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH050002
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 10-49-24.0363[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 10-49-24.0363[PrintText]<Add LF>:false
+2025-09-22 10-49-24.0366[PrintText]End
+2025-09-22 10-49-24.0367[Cut]Begin
+2025-09-22 10-49-24.0367[Cut]CutType:CUT_TOTAL
+2025-09-22 10-49-24.0369[Cut]End
+2025-09-22 10-49-24.0369[PrintImageFromPath]Begin
+2025-09-22 10-49-24.0370[PrintBarcode]Begin
+2025-09-22 10-49-24.0370[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMDUwMDAzOjE3NTg1MTgzNjMyNjU6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 10-49-24.0371[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 10-49-24.0395[PrintBarcode]End
+2025-09-22 10-49-24.0395[PrintText]Begin
+2025-09-22 10-49-24.0396[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 10:49:23
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH050003
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 10-49-24.0396[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 10-49-24.0397[PrintText]<Add LF>:false
+2025-09-22 10-49-24.0399[PrintText]End
+2025-09-22 10-49-24.0400[Cut]Begin
+2025-09-22 10-49-24.0400[Cut]CutType:CUT_TOTAL
+2025-09-22 10-49-24.0402[Cut]End
+2025-09-22 10-49-24.0402[PrintImageFromPath]Begin
+2025-09-22 10-50-52.0971[]*****************************************
+2025-09-22 10-50-52.0972[]DLL Log Initialize. Verbosity: 6
+2025-09-22 10-50-52.0973[]*****************************************
+2025-09-22 10-50-52.0974[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 10-50-52.0974[]DLL Version: 1.07
+2025-09-22 10-50-52.0975[InitLibrary]Begin
+2025-09-22 10-50-52.0995[InitLibrary]Library SignID:00000101
+2025-09-22 10-50-52.0996[InitLibrary]Current SignID:00000101
+2025-09-22 10-50-52.0997[InitLibrary]End
+2025-09-22 10-50-52.0997[GetAPIVersionHwLibrary]Begin
+2025-09-22 10-50-53.0001[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 10-50-53.0001[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 10-50-53.0002[GetAPIVersionHwLibrary]End
+2025-09-22 10-50-53.0003[EnumUSBDevices]Begin
+2025-09-22 10-50-53.0007[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 10-50-53.0008[EnumUSBDevices]End
+2025-09-22 10-50-53.0008[OpenPrinterUSB]Begin
+2025-09-22 10-50-53.0009[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 10-50-53.0014[OpenPrinterUSB]New device ID:00000101
+2025-09-22 10-50-53.0014[OpenPrinterUSB]End
+2025-09-22 10-52-14.0599[PrintImageFromPath]Begin
+2025-09-22 10-52-14.0602[PrintBarcode]Begin
+2025-09-22 10-52-14.0602[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMDYwMDAxOjE3NTg1MTg1MzMzODU6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 10-52-14.0603[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 10-52-14.0625[PrintBarcode]End
+2025-09-22 10-52-14.0627[PrintText]Begin
+2025-09-22 10-52-14.0627[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 10:52:13
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH060001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 10-52-14.0629[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 10-52-14.0630[PrintText]<Add LF>:false
+2025-09-22 10-52-14.0634[PrintText]End
+2025-09-22 10-52-14.0636[Cut]Begin
+2025-09-22 10-52-14.0637[Cut]CutType:CUT_TOTAL
+2025-09-22 10-52-14.0639[Cut]End
+2025-09-22 10-52-14.0640[PrintImageFromPath]Begin
+2025-09-22 10-52-14.0641[PrintText]Begin
+2025-09-22 10-52-14.0643[PrintText]<Text to Print>:        PAY RECEIPT
+
+Denomination    : 20
+Order Id    : ORD8W774MBNH060001
+Tran Id : UPI96d57d40-fa8f-4758-b57a-1b3d98632165
+Payment Mode    : UPI
+Amount  : 10
+Time    : null
+TVM     : 01010301
+
+
+2025-09-22 10-52-14.0643[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 10-52-14.0644[PrintText]<Add LF>:false
+2025-09-22 10-52-14.0646[PrintText]End
+2025-09-22 10-52-14.0647[Cut]Begin
+2025-09-22 10-52-14.0647[Cut]CutType:CUT_TOTAL
+2025-09-22 10-52-14.0647[Cut]End
+2025-09-22 11-00-20.0139[]*****************************************
+2025-09-22 11-00-20.0140[]DLL Log Initialize. Verbosity: 6
+2025-09-22 11-00-20.0141[]*****************************************
+2025-09-22 11-00-20.0142[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 11-00-20.0142[]DLL Version: 1.07
+2025-09-22 11-00-20.0143[InitLibrary]Begin
+2025-09-22 11-00-20.0163[InitLibrary]Library SignID:00000101
+2025-09-22 11-00-20.0164[InitLibrary]Current SignID:00000101
+2025-09-22 11-00-20.0164[InitLibrary]End
+2025-09-22 11-00-20.0165[GetAPIVersionHwLibrary]Begin
+2025-09-22 11-00-20.0167[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 11-00-20.0167[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 11-00-20.0167[GetAPIVersionHwLibrary]End
+2025-09-22 11-00-20.0169[EnumUSBDevices]Begin
+2025-09-22 11-00-20.0172[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 11-00-20.0173[EnumUSBDevices]End
+2025-09-22 11-00-20.0173[OpenPrinterUSB]Begin
+2025-09-22 11-00-20.0174[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 11-00-20.0179[OpenPrinterUSB]New device ID:00000101
+2025-09-22 11-00-20.0179[OpenPrinterUSB]End
+2025-09-22 11-01-08.0960[PrintImageFromPath]Begin
+2025-09-22 11-01-08.0964[PrintBarcode]Begin
+2025-09-22 11-01-08.0965[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMDcwMDAxOjE3NTg1MTkwNjc3MTE6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 11-01-08.0966[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 11-01-08.0990[PrintBarcode]End
+2025-09-22 11-01-08.0994[PrintText]Begin
+2025-09-22 11-01-08.0995[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 11:01:07
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH070001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 11-01-08.0996[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 11-01-08.0997[PrintText]<Add LF>:false
+2025-09-22 11-01-09.0003[PrintText]End
+2025-09-22 11-01-09.0004[Cut]Begin
+2025-09-22 11-01-09.0005[Cut]CutType:CUT_PARTIAL
+2025-09-22 11-02-03.0792[PrintImageFromPath]Begin
+2025-09-22 11-02-03.0793[PrintBarcode]Begin
+2025-09-22 11-02-03.0794[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMDcwMDAyOjE3NTg1MTkxMjI3MjA6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 11-02-03.0795[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 11-02-04.0504[PrintText]Begin
+2025-09-22 11-02-04.0505[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 11:02:02
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH070002
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 11-02-04.0506[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 11-02-04.0507[PrintText]<Add LF>:false
+2025-09-22 11-02-32.0524[]*****************************************
+2025-09-22 11-02-32.0526[]DLL Log Initialize. Verbosity: 6
+2025-09-22 11-02-32.0526[]*****************************************
+2025-09-22 11-02-32.0527[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 11-02-32.0528[]DLL Version: 1.07
+2025-09-22 11-02-32.0528[InitLibrary]Begin
+2025-09-22 11-02-32.0550[InitLibrary]Library SignID:00000101
+2025-09-22 11-02-32.0551[InitLibrary]Current SignID:00000101
+2025-09-22 11-02-32.0551[InitLibrary]End
+2025-09-22 11-02-32.0552[GetAPIVersionHwLibrary]Begin
+2025-09-22 11-02-32.0554[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 11-02-32.0554[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 11-02-32.0554[GetAPIVersionHwLibrary]End
+2025-09-22 11-02-32.0555[EnumUSBDevices]Begin
+2025-09-22 11-02-32.0561[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 11-02-32.0561[EnumUSBDevices]End
+2025-09-22 11-02-32.0561[OpenPrinterUSB]Begin
+2025-09-22 11-02-32.0561[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 11-02-32.0566[OpenPrinterUSB]New device ID:00000101
+2025-09-22 11-02-32.0566[OpenPrinterUSB]End
+2025-09-22 11-02-49.0963[PrintImageFromPath]Begin
+2025-09-22 11-02-49.0965[PrintBarcode]Begin
+2025-09-22 11-02-49.0965[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMDgwMDAxOjE3NTg1MTkxNjg3NzA6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 11-02-49.0966[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 11-02-49.0988[PrintBarcode]End
+2025-09-22 11-02-49.0991[PrintText]Begin
+2025-09-22 11-02-49.0992[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 11:02:48
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH080001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 11-02-49.0992[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 11-02-49.0993[PrintText]<Add LF>:false
+2025-09-22 11-02-49.0997[PrintText]End
+2025-09-22 11-02-49.0999[Cut]Begin
+2025-09-22 11-02-50.0000[Cut]CutType:CUT_PARTIAL
+2025-09-22 11-04-14.0189[]*****************************************
+2025-09-22 11-04-14.0190[]DLL Log Initialize. Verbosity: 6
+2025-09-22 11-04-14.0191[]*****************************************
+2025-09-22 11-04-14.0191[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 11-04-14.0192[]DLL Version: 1.07
+2025-09-22 11-04-14.0194[InitLibrary]Begin
+2025-09-22 11-04-14.0229[InitLibrary]Library SignID:00000101
+2025-09-22 11-04-14.0230[InitLibrary]Current SignID:00000101
+2025-09-22 11-04-14.0231[InitLibrary]End
+2025-09-22 11-04-14.0231[GetAPIVersionHwLibrary]Begin
+2025-09-22 11-04-14.0235[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 11-04-14.0235[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 11-04-14.0236[GetAPIVersionHwLibrary]End
+2025-09-22 11-04-14.0238[EnumUSBDevices]Begin
+2025-09-22 11-04-14.0245[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 11-04-14.0246[EnumUSBDevices]End
+2025-09-22 11-04-14.0247[OpenPrinterUSB]Begin
+2025-09-22 11-04-14.0247[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 11-04-14.0256[OpenPrinterUSB]New device ID:00000101
+2025-09-22 11-04-14.0257[OpenPrinterUSB]End
+2025-09-22 11-05-21.0833[PrintImageFromPath]Begin
+2025-09-22 11-05-21.0837[PrintBarcode]Begin
+2025-09-22 11-05-21.0838[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMDkwMDAxOjE3NTg1MTkzMjA2MDQ6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 11-05-21.0838[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 11-05-21.0874[PrintBarcode]End
+2025-09-22 11-05-21.0883[PrintText]Begin
+2025-09-22 11-05-21.0884[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 11:05:20
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH090001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 11-05-21.0886[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 11-05-21.0887[PrintText]<Add LF>:false
+2025-09-22 11-05-21.0895[PrintText]End
+2025-09-22 11-05-21.0896[Cut]Begin
+2025-09-22 11-05-21.0898[Cut]CutType:CUT_PARTIAL
+2025-09-22 11-26-49.0283[]*****************************************
+2025-09-22 11-26-49.0284[]DLL Log Initialize. Verbosity: 6
+2025-09-22 11-26-49.0285[]*****************************************
+2025-09-22 11-26-49.0285[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 11-26-49.0286[]DLL Version: 1.07
+2025-09-22 11-26-49.0287[InitLibrary]Begin
+2025-09-22 11-26-49.0308[InitLibrary]Library SignID:00000101
+2025-09-22 11-26-49.0309[InitLibrary]Current SignID:00000101
+2025-09-22 11-26-49.0310[InitLibrary]End
+2025-09-22 11-26-49.0311[GetAPIVersionHwLibrary]Begin
+2025-09-22 11-26-49.0314[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 11-26-49.0315[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 11-26-49.0315[GetAPIVersionHwLibrary]End
+2025-09-22 11-26-49.0316[EnumUSBDevices]Begin
+2025-09-22 11-26-49.0322[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 11-26-49.0322[EnumUSBDevices]End
+2025-09-22 11-26-49.0323[OpenPrinterUSB]Begin
+2025-09-22 11-26-49.0324[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 11-26-49.0330[OpenPrinterUSB]New device ID:00000101
+2025-09-22 11-26-49.0331[OpenPrinterUSB]End
+2025-09-22 11-27-05.0148[PrintImageFromPath]Begin
+2025-09-22 11-27-05.0153[PrintBarcode]Begin
+2025-09-22 11-27-05.0154[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMTAwMDAxOjE3NTg1MjA2MjM4ODk6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 11-27-05.0155[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 11-27-05.0181[PrintBarcode]End
+2025-09-22 11-27-05.0183[PrintText]Begin
+2025-09-22 11-27-05.0184[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 11:27:03
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH100001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 11-27-05.0185[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 11-27-05.0186[PrintText]<Add LF>:false
+2025-09-22 11-27-05.0189[PrintText]End
+2025-09-22 11-27-05.0191[Cut]Begin
+2025-09-22 11-27-05.0192[Cut]CutType:CUT_PARTIAL
+2025-09-22 11-28-00.0687[]*****************************************
+2025-09-22 11-28-00.0688[]DLL Log Initialize. Verbosity: 6
+2025-09-22 11-28-00.0688[]*****************************************
+2025-09-22 11-28-00.0689[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 11-28-00.0690[]DLL Version: 1.07
+2025-09-22 11-28-00.0690[InitLibrary]Begin
+2025-09-22 11-28-00.0708[InitLibrary]Library SignID:00000101
+2025-09-22 11-28-00.0708[InitLibrary]Current SignID:00000101
+2025-09-22 11-28-00.0709[InitLibrary]End
+2025-09-22 11-28-00.0709[GetAPIVersionHwLibrary]Begin
+2025-09-22 11-28-00.0710[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 11-28-00.0711[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 11-28-00.0711[GetAPIVersionHwLibrary]End
+2025-09-22 11-28-00.0713[EnumUSBDevices]Begin
+2025-09-22 11-28-00.0716[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 11-28-00.0717[EnumUSBDevices]End
+2025-09-22 11-28-00.0717[OpenPrinterUSB]Begin
+2025-09-22 11-28-00.0718[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 11-28-00.0723[OpenPrinterUSB]New device ID:00000101
+2025-09-22 11-28-00.0723[OpenPrinterUSB]End
+2025-09-22 11-28-15.0877[PrintImageFromPath]Begin
+2025-09-22 11-28-15.0881[PrintBarcode]Begin
+2025-09-22 11-28-15.0882[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMTEwMDAxOjE3NTg1MjA2OTQ2ODQ6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 11-28-15.0882[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 11-28-15.0903[PrintBarcode]End
+2025-09-22 11-28-15.0906[PrintText]Begin
+2025-09-22 11-28-15.0906[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 11:28:14
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH110001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 11-28-15.0907[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 11-28-15.0907[PrintText]<Add LF>:false
+2025-09-22 11-28-15.0911[PrintText]End
+2025-09-22 11-28-15.0912[Cut]Begin
+2025-09-22 11-28-15.0913[Cut]CutType:CUT_TOTAL
+2025-09-22 11-28-15.0914[Cut]End
+2025-09-22 11-28-15.0915[PrintImageFromPath]Begin
+2025-09-22 11-28-45.0778[PrintImageFromPath]Begin
+2025-09-22 11-28-45.0780[PrintBarcode]Begin
+2025-09-22 11-28-45.0780[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMTEwMDAyOjE3NTg1MjA3MjQ3MDA6MDowMDIwOjAxOjAzOjAxOjAxOjE=
+2025-09-22 11-28-45.0781[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 11-28-45.0804[PrintBarcode]End
+2025-09-22 11-28-45.0804[PrintText]Begin
+2025-09-22 11-28-45.0806[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 11:28:44
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 5
+Price            : Rs. 20/-
+Ticket No.       : 8W774MBNH110002
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 11-28-45.0806[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 11-28-45.0807[PrintText]<Add LF>:false
+2025-09-22 11-28-45.0811[PrintText]End
+2025-09-22 11-28-45.0812[Cut]Begin
+2025-09-22 11-28-45.0812[Cut]CutType:CUT_TOTAL
+2025-09-22 11-28-45.0814[Cut]End
+2025-09-22 11-28-45.0815[PrintImageFromPath]Begin
+2025-09-22 11-29-53.0112[]*****************************************
+2025-09-22 11-29-53.0113[]DLL Log Initialize. Verbosity: 6
+2025-09-22 11-29-53.0113[]*****************************************
+2025-09-22 11-29-53.0114[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 11-29-53.0115[]DLL Version: 1.07
+2025-09-22 11-29-53.0115[InitLibrary]Begin
+2025-09-22 11-29-53.0133[InitLibrary]Library SignID:00000101
+2025-09-22 11-29-53.0134[InitLibrary]Current SignID:00000101
+2025-09-22 11-29-53.0134[InitLibrary]End
+2025-09-22 11-29-53.0134[GetAPIVersionHwLibrary]Begin
+2025-09-22 11-29-53.0136[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 11-29-53.0138[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 11-29-53.0138[GetAPIVersionHwLibrary]End
+2025-09-22 11-29-53.0139[EnumUSBDevices]Begin
+2025-09-22 11-29-53.0142[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 11-29-53.0142[EnumUSBDevices]End
+2025-09-22 11-29-53.0144[OpenPrinterUSB]Begin
+2025-09-22 11-29-53.0144[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 11-29-53.0149[OpenPrinterUSB]New device ID:00000101
+2025-09-22 11-29-53.0150[OpenPrinterUSB]End
+2025-09-22 11-30-09.0471[PrintImageFromPath]Begin
+2025-09-22 11-30-09.0479[PrintBarcode]Begin
+2025-09-22 11-30-09.0480[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMTIwMDAxOjE3NTg1MjA4MDgxNzI6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 11-30-09.0480[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 11-30-09.0505[PrintBarcode]End
+2025-09-22 11-30-09.0507[PrintText]Begin
+2025-09-22 11-30-09.0508[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 11:30:08
+Payment Type     : Cash
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH120001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 11-30-09.0510[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 11-30-09.0511[PrintText]<Add LF>:false
+2025-09-22 11-30-09.0515[PrintText]End
+2025-09-22 11-30-09.0516[Cut]Begin
+2025-09-22 11-30-09.0516[Cut]CutType:CUT_TOTAL
+2025-09-22 11-30-09.0518[Cut]End
+2025-09-22 11-30-09.0519[PrintImageFromPath]Begin
+2025-09-22 11-52-37.0421[]*****************************************
+2025-09-22 11-52-37.0424[]DLL Log Initialize. Verbosity: 6
+2025-09-22 11-52-37.0424[]*****************************************
+2025-09-22 11-52-37.0425[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 11-52-37.0426[]DLL Version: 1.07
+2025-09-22 11-52-37.0427[InitLibrary]Begin
+2025-09-22 11-52-37.0467[InitLibrary]Library SignID:00000101
+2025-09-22 11-52-37.0468[InitLibrary]Current SignID:00000101
+2025-09-22 11-52-37.0470[InitLibrary]End
+2025-09-22 11-52-37.0472[GetAPIVersionHwLibrary]Begin
+2025-09-22 11-52-37.0475[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 11-52-37.0476[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 11-52-37.0478[GetAPIVersionHwLibrary]End
+2025-09-22 11-52-37.0479[EnumUSBDevices]Begin
+2025-09-22 11-52-37.0487[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 11-52-37.0488[EnumUSBDevices]End
+2025-09-22 11-52-37.0490[OpenPrinterUSB]Begin
+2025-09-22 11-52-37.0491[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 11-52-37.0499[OpenPrinterUSB]New device ID:00000101
+2025-09-22 11-52-37.0501[OpenPrinterUSB]End
+2025-09-22 11-53-48.0050[]*****************************************
+2025-09-22 11-53-48.0051[]DLL Log Initialize. Verbosity: 6
+2025-09-22 11-53-48.0051[]*****************************************
+2025-09-22 11-53-48.0051[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 11-53-48.0052[]DLL Version: 1.07
+2025-09-22 11-53-48.0052[InitLibrary]Begin
+2025-09-22 11-53-48.0083[InitLibrary]Library SignID:00000101
+2025-09-22 11-53-48.0084[InitLibrary]Current SignID:00000101
+2025-09-22 11-53-48.0085[InitLibrary]End
+2025-09-22 11-53-48.0086[GetAPIVersionHwLibrary]Begin
+2025-09-22 11-53-48.0087[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 11-53-48.0088[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 11-53-48.0088[GetAPIVersionHwLibrary]End
+2025-09-22 11-53-48.0090[EnumUSBDevices]Begin
+2025-09-22 11-53-48.0095[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 11-53-48.0096[EnumUSBDevices]End
+2025-09-22 11-53-48.0096[OpenPrinterUSB]Begin
+2025-09-22 11-53-48.0097[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 11-53-48.0102[OpenPrinterUSB]New device ID:00000101
+2025-09-22 11-53-48.0103[OpenPrinterUSB]End
+2025-09-22 11-54-46.0147[PrintImageFromPath]Begin
+2025-09-22 11-54-46.0149[PrintBarcode]Begin
+2025-09-22 11-54-46.0150[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMTQwMDAxOjE3NTg1MjIyODQ4OTM6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 11-54-46.0151[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 11-54-46.0174[PrintBarcode]End
+2025-09-22 11-54-46.0178[PrintText]Begin
+2025-09-22 11-54-46.0178[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 11:54:44
+Payment Type     : UPI
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH140001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 11-54-46.0179[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 11-54-46.0179[PrintText]<Add LF>:false
+2025-09-22 11-54-46.0184[PrintText]End
+2025-09-22 11-54-46.0185[Cut]Begin
+2025-09-22 11-54-46.0186[Cut]CutType:CUT_TOTAL
+2025-09-22 11-54-46.0188[Cut]End
+2025-09-22 11-54-46.0188[PrintImageFromPath]Begin
+2025-09-22 11-54-46.0189[PrintText]Begin
+2025-09-22 11-54-46.0189[PrintText]<Text to Print>:        PAY RECEIPT
+
+Denomination    : 20
+Order Id    : ORD8W774MBNH140001
+Tran Id : UPI_17738011-307d-480a-ac68-01e15f881bf1
+Payment Mode    : UPI
+Amount  : 10
+Time    : 2025-09-22T11:54:44.903
+TVM     : 01010301
+
+2025-09-22 11-54-46.0190[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 11-54-46.0190[PrintText]<Add LF>:false
+2025-09-22 11-54-46.0194[PrintText]End
+2025-09-22 11-54-46.0194[Cut]Begin
+2025-09-22 11-54-46.0195[Cut]CutType:CUT_TOTAL
+2025-09-22 11-54-46.0197[Cut]End
+2025-09-22 11-59-14.0608[]*****************************************
+2025-09-22 11-59-14.0609[]DLL Log Initialize. Verbosity: 6
+2025-09-22 11-59-14.0610[]*****************************************
+2025-09-22 11-59-14.0611[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 11-59-14.0612[]DLL Version: 1.07
+2025-09-22 11-59-14.0612[InitLibrary]Begin
+2025-09-22 11-59-14.0640[InitLibrary]Library SignID:00000101
+2025-09-22 11-59-14.0640[InitLibrary]Current SignID:00000101
+2025-09-22 11-59-14.0641[InitLibrary]End
+2025-09-22 11-59-14.0642[GetAPIVersionHwLibrary]Begin
+2025-09-22 11-59-14.0644[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 11-59-14.0645[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 11-59-14.0645[GetAPIVersionHwLibrary]End
+2025-09-22 11-59-14.0646[EnumUSBDevices]Begin
+2025-09-22 11-59-14.0651[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 11-59-14.0651[EnumUSBDevices]End
+2025-09-22 11-59-14.0652[OpenPrinterUSB]Begin
+2025-09-22 11-59-14.0652[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 11-59-14.0659[OpenPrinterUSB]New device ID:00000101
+2025-09-22 11-59-14.0659[OpenPrinterUSB]End
+2025-09-22 11-59-30.0160[PrintImageFromPath]Begin
+2025-09-22 11-59-30.0164[PrintBarcode]Begin
+2025-09-22 11-59-30.0165[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMTUwMDAxOjE3NTg1MjI1Njg5MDA6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 11-59-30.0166[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 11-59-30.0193[PrintBarcode]End
+2025-09-22 11-59-30.0197[PrintText]Begin
+2025-09-22 11-59-30.0198[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 11:59:28
+Payment Type     : UPI
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH150001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 11-59-30.0199[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 11-59-30.0200[PrintText]<Add LF>:false
+2025-09-22 11-59-30.0205[PrintText]End
+2025-09-22 11-59-30.0208[Cut]Begin
+2025-09-22 11-59-30.0209[Cut]CutType:CUT_TOTAL
+2025-09-22 11-59-30.0212[Cut]End
+2025-09-22 11-59-30.0212[PrintImageFromPath]Begin
+2025-09-22 11-59-30.0213[PrintText]Begin
+2025-09-22 11-59-30.0213[PrintText]<Text to Print>:            PAYMENT RECEIPT
+
+Denomination    : 20
+Order Id        : ORD8W774MBNH150001
+Transaction Id  : UPI_1893fce7
+Payment Mode    : UPI
+Amount          : 10
+Date-Time       : 2025-09-22T11:59:28.910
+TVM             : 01010301
+
+2025-09-22 11-59-30.0215[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 11-59-30.0215[PrintText]<Add LF>:false
+2025-09-22 11-59-30.0219[PrintText]End
+2025-09-22 11-59-30.0219[Cut]Begin
+2025-09-22 11-59-30.0219[Cut]CutType:CUT_TOTAL
+2025-09-22 11-59-30.0222[Cut]End
+2025-09-22 12-00-06.0410[PrintImageFromPath]Begin
+2025-09-22 12-00-06.0412[PrintBarcode]Begin
+2025-09-22 12-00-06.0412[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMTUwMDAyOjE3NTg1MjI2MDUzMjk6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 12-00-06.0413[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 12-00-06.0438[PrintBarcode]End
+2025-09-22 12-00-06.0439[PrintText]Begin
+2025-09-22 12-00-06.0439[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 12:00:05
+Payment Type     : UPI
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH150002
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 12-00-06.0439[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 12-00-06.0440[PrintText]<Add LF>:false
+2025-09-22 12-00-06.0445[PrintText]End
+2025-09-22 12-00-06.0446[Cut]Begin
+2025-09-22 12-00-06.0446[Cut]CutType:CUT_TOTAL
+2025-09-22 12-00-06.0448[Cut]End
+2025-09-22 12-00-06.0449[PrintImageFromPath]Begin
+2025-09-22 12-00-06.0450[PrintText]Begin
+2025-09-22 12-00-06.0450[PrintText]<Text to Print>:            PAYMENT RECEIPT
+
+Denomination    : 20
+Order Id        : ORD8W774MBNH150002
+Transaction Id  : UPI_df511687
+Payment Mode    : UPI
+Amount          : 10
+Date-Time       : 2025-09-22T12:00:05.330
+TVM             : 01010301
+
+2025-09-22 12-00-06.0451[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 12-00-06.0452[PrintText]<Add LF>:false
+2025-09-22 12-00-06.0455[PrintText]End
+2025-09-22 12-00-06.0456[Cut]Begin
+2025-09-22 12-00-06.0457[Cut]CutType:CUT_TOTAL
+2025-09-22 12-00-06.0460[Cut]End
+2025-09-22 12-08-10.0420[]*****************************************
+2025-09-22 12-08-10.0422[]DLL Log Initialize. Verbosity: 6
+2025-09-22 12-08-10.0422[]*****************************************
+2025-09-22 12-08-10.0424[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 12-08-10.0424[]DLL Version: 1.07
+2025-09-22 12-08-10.0425[InitLibrary]Begin
+2025-09-22 12-08-10.0450[InitLibrary]Library SignID:00000101
+2025-09-22 12-08-10.0451[InitLibrary]Current SignID:00000101
+2025-09-22 12-08-10.0451[InitLibrary]End
+2025-09-22 12-08-10.0452[GetAPIVersionHwLibrary]Begin
+2025-09-22 12-08-10.0454[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 12-08-10.0455[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 12-08-10.0455[GetAPIVersionHwLibrary]End
+2025-09-22 12-08-10.0456[EnumUSBDevices]Begin
+2025-09-22 12-08-10.0460[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 12-08-10.0460[EnumUSBDevices]End
+2025-09-22 12-08-10.0461[OpenPrinterUSB]Begin
+2025-09-22 12-08-10.0461[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 12-08-10.0466[OpenPrinterUSB]New device ID:00000101
+2025-09-22 12-08-10.0468[OpenPrinterUSB]End
+2025-09-22 12-10-35.0900[PrintImageFromPath]Begin
+2025-09-22 12-10-35.0904[PrintText]Begin
+2025-09-22 12-10-35.0906[PrintText]<Text to Print>:            PAYMENT RECEIPT
+
+Denomination    : 20
+Order Id        : ORD8W774MBNH160001
+Transaction Id  : UPI_1327d39a
+Payment Mode    : UPI
+Amount          : 20
+Date-Time       : 2025-09-22T12:10:34.775
+TVM             : 01010301
+
+2025-09-22 12-10-35.0906[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 12-10-35.0908[PrintText]<Add LF>:false
+2025-09-22 12-10-35.0912[PrintText]End
+2025-09-22 12-10-35.0913[Cut]Begin
+2025-09-22 12-10-35.0914[Cut]CutType:CUT_TOTAL
+2025-09-22 12-10-35.0917[Cut]End
+2025-09-22 12-13-11.0008[]*****************************************
+2025-09-22 12-13-11.0010[]DLL Log Initialize. Verbosity: 6
+2025-09-22 12-13-11.0011[]*****************************************
+2025-09-22 12-13-11.0011[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 12-13-11.0013[]DLL Version: 1.07
+2025-09-22 12-13-11.0013[InitLibrary]Begin
+2025-09-22 12-13-11.0038[InitLibrary]Library SignID:00000101
+2025-09-22 12-13-11.0039[InitLibrary]Current SignID:00000101
+2025-09-22 12-13-11.0040[InitLibrary]End
+2025-09-22 12-13-11.0040[GetAPIVersionHwLibrary]Begin
+2025-09-22 12-13-11.0042[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 12-13-11.0043[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 12-13-11.0044[GetAPIVersionHwLibrary]End
+2025-09-22 12-13-11.0045[EnumUSBDevices]Begin
+2025-09-22 12-13-11.0050[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 12-13-11.0050[EnumUSBDevices]End
+2025-09-22 12-13-11.0051[OpenPrinterUSB]Begin
+2025-09-22 12-13-11.0051[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 12-13-11.0058[OpenPrinterUSB]New device ID:00000101
+2025-09-22 12-13-11.0058[OpenPrinterUSB]End
+2025-09-22 12-14-01.0790[PrintImageFromPath]Begin
+2025-09-22 12-14-01.0795[PrintText]Begin
+2025-09-22 12-14-01.0796[PrintText]<Text to Print>:            PAYMENT RECEIPT
+
+Denomination    : 20
+Order Id        : ORD8W774MBNH170001
+Transaction Id  : 6adb
+Payment Mode    : UPI
+Amount          : 10
+Status          : SUCCESS
+Date-Time       : 2025-09-22T12:14:00.731
+TVM             : 01010301
+
+2025-09-22 12-14-01.0796[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 12-14-01.0797[PrintText]<Add LF>:false
+2025-09-22 12-14-01.0800[PrintText]End
+2025-09-22 12-14-01.0802[Cut]Begin
+2025-09-22 12-14-01.0802[Cut]CutType:CUT_TOTAL
+2025-09-22 12-14-01.0805[Cut]End
+2025-09-22 12-18-51.0947[]*****************************************
+2025-09-22 12-18-51.0949[]DLL Log Initialize. Verbosity: 6
+2025-09-22 12-18-51.0950[]*****************************************
+2025-09-22 12-18-51.0951[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 12-18-51.0952[]DLL Version: 1.07
+2025-09-22 12-18-51.0954[InitLibrary]Begin
+2025-09-22 12-18-51.0997[InitLibrary]Library SignID:00000101
+2025-09-22 12-18-51.0998[InitLibrary]Current SignID:00000101
+2025-09-22 12-18-52.0000[InitLibrary]End
+2025-09-22 12-18-52.0001[GetAPIVersionHwLibrary]Begin
+2025-09-22 12-18-52.0006[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 12-18-52.0007[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 12-18-52.0008[GetAPIVersionHwLibrary]End
+2025-09-22 12-18-52.0010[EnumUSBDevices]Begin
+2025-09-22 12-18-52.0019[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 12-18-52.0020[EnumUSBDevices]End
+2025-09-22 12-18-52.0021[OpenPrinterUSB]Begin
+2025-09-22 12-18-52.0023[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 12-18-52.0032[OpenPrinterUSB]New device ID:00000101
+2025-09-22 12-18-52.0034[OpenPrinterUSB]End
+2025-09-22 12-20-52.0852[PrintImageFromPath]Begin
+2025-09-22 12-20-52.0855[PrintText]Begin
+2025-09-22 12-20-52.0856[PrintText]<Text to Print>:            PAYMENT RECEIPT
+
+Denomination    : 20
+Order Id        : ORD8W774MBNH180001
+Transaction Id  : f417
+Payment Mode    : UPI
+Amount          : 10
+Status          : FAILED
+Date-Time       : 2025-09-22T12:20:51.776
+TVM             : 01010301
+
+2025-09-22 12-20-52.0856[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 12-20-52.0857[PrintText]<Add LF>:false
+2025-09-22 12-20-52.0861[PrintText]End
+2025-09-22 12-20-52.0862[Cut]Begin
+2025-09-22 12-20-52.0862[Cut]CutType:CUT_TOTAL
+2025-09-22 12-20-52.0864[Cut]End
+2025-09-22 12-23-26.0863[]*****************************************
+2025-09-22 12-23-26.0865[]DLL Log Initialize. Verbosity: 6
+2025-09-22 12-23-26.0866[]*****************************************
+2025-09-22 12-23-26.0866[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 12-23-26.0867[]DLL Version: 1.07
+2025-09-22 12-23-26.0867[InitLibrary]Begin
+2025-09-22 12-23-26.0892[InitLibrary]Library SignID:00000101
+2025-09-22 12-23-26.0893[InitLibrary]Current SignID:00000101
+2025-09-22 12-23-26.0893[InitLibrary]End
+2025-09-22 12-23-26.0894[GetAPIVersionHwLibrary]Begin
+2025-09-22 12-23-26.0897[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 12-23-26.0898[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 12-23-26.0898[GetAPIVersionHwLibrary]End
+2025-09-22 12-23-26.0899[EnumUSBDevices]Begin
+2025-09-22 12-23-26.0903[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 12-23-26.0904[EnumUSBDevices]End
+2025-09-22 12-23-26.0904[OpenPrinterUSB]Begin
+2025-09-22 12-23-26.0905[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 12-23-26.0911[OpenPrinterUSB]New device ID:00000101
+2025-09-22 12-23-26.0911[OpenPrinterUSB]End
+2025-09-22 12-25-08.0691[PrintImageFromPath]Begin
+2025-09-22 12-25-08.0694[PrintText]Begin
+2025-09-22 12-25-08.0695[PrintText]<Text to Print>:            PAYMENT RECEIPT
+
+Denomination    : 20
+Order Id        : ORD8W774MBNH190001
+Transaction Id  : a449
+Payment Mode    : UPI
+Amount          : 10
+Status          : FAILED
+Date-Time       : 22-09-2025 12:25:07
+TVM             : 01010301
+
+2025-09-22 12-25-08.0696[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 12-25-08.0696[PrintText]<Add LF>:false
+2025-09-22 12-25-08.0700[PrintText]End
+2025-09-22 12-25-08.0702[Cut]Begin
+2025-09-22 12-25-08.0702[Cut]CutType:CUT_TOTAL
+2025-09-22 12-25-08.0703[Cut]End
+2025-09-22 12-32-25.0985[]*****************************************
+2025-09-22 12-32-25.0988[]DLL Log Initialize. Verbosity: 6
+2025-09-22 12-32-25.0988[]*****************************************
+2025-09-22 12-32-25.0989[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 12-32-25.0989[]DLL Version: 1.07
+2025-09-22 12-32-25.0991[InitLibrary]Begin
+2025-09-22 12-32-26.0014[InitLibrary]Library SignID:00000101
+2025-09-22 12-32-26.0014[InitLibrary]Current SignID:00000101
+2025-09-22 12-32-26.0015[InitLibrary]End
+2025-09-22 12-32-26.0016[GetAPIVersionHwLibrary]Begin
+2025-09-22 12-32-26.0018[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 12-32-26.0018[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 12-32-26.0018[GetAPIVersionHwLibrary]End
+2025-09-22 12-32-26.0019[EnumUSBDevices]Begin
+2025-09-22 12-32-26.0025[EnumUSBDevices]Found 0 USB Devices
+2025-09-22 12-32-26.0026[EnumUSBDevices]End
+2025-09-22 12-33-43.0017[]*****************************************
+2025-09-22 12-33-43.0019[]DLL Log Initialize. Verbosity: 6
+2025-09-22 12-33-43.0019[]*****************************************
+2025-09-22 12-33-43.0020[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 12-33-43.0020[]DLL Version: 1.07
+2025-09-22 12-33-43.0022[InitLibrary]Begin
+2025-09-22 12-33-43.0043[InitLibrary]Library SignID:00000101
+2025-09-22 12-33-43.0044[InitLibrary]Current SignID:00000101
+2025-09-22 12-33-43.0044[InitLibrary]End
+2025-09-22 12-33-43.0045[GetAPIVersionHwLibrary]Begin
+2025-09-22 12-33-43.0047[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 12-33-43.0047[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 12-33-43.0048[GetAPIVersionHwLibrary]End
+2025-09-22 12-33-43.0048[EnumUSBDevices]Begin
+2025-09-22 12-33-43.0054[EnumUSBDevices]Found 0 USB Devices
+2025-09-22 12-33-43.0056[EnumUSBDevices]End
+2025-09-22 12-47-55.0189[]*****************************************
+2025-09-22 12-47-55.0190[]DLL Log Initialize. Verbosity: 6
+2025-09-22 12-47-55.0191[]*****************************************
+2025-09-22 12-47-55.0191[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 12-47-55.0191[]DLL Version: 1.07
+2025-09-22 12-47-55.0192[InitLibrary]Begin
+2025-09-22 12-47-55.0209[InitLibrary]Library SignID:00000101
+2025-09-22 12-47-55.0210[InitLibrary]Current SignID:00000101
+2025-09-22 12-47-55.0210[InitLibrary]End
+2025-09-22 12-47-55.0211[GetAPIVersionHwLibrary]Begin
+2025-09-22 12-47-55.0213[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 12-47-55.0214[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 12-47-55.0214[GetAPIVersionHwLibrary]End
+2025-09-22 12-47-55.0215[EnumUSBDevices]Begin
+2025-09-22 12-47-55.0217[EnumUSBDevices]Found 0 USB Devices
+2025-09-22 12-47-55.0218[EnumUSBDevices]End
+2025-09-22 12-52-43.0958[]*****************************************
+2025-09-22 12-52-43.0958[]DLL Log Initialize. Verbosity: 6
+2025-09-22 12-52-43.0958[]*****************************************
+2025-09-22 12-52-43.0959[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 12-52-43.0959[]DLL Version: 1.07
+2025-09-22 12-52-43.0959[InitLibrary]Begin
+2025-09-22 12-52-43.0974[InitLibrary]Library SignID:00000101
+2025-09-22 12-52-43.0974[InitLibrary]Current SignID:00000101
+2025-09-22 12-52-43.0975[InitLibrary]End
+2025-09-22 12-52-43.0975[GetAPIVersionHwLibrary]Begin
+2025-09-22 12-52-43.0976[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 12-52-43.0977[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 12-52-43.0977[GetAPIVersionHwLibrary]End
+2025-09-22 12-52-43.0977[EnumUSBDevices]Begin
+2025-09-22 12-52-43.0980[EnumUSBDevices]Found 0 USB Devices
+2025-09-22 12-52-43.0980[EnumUSBDevices]End
+2025-09-22 12-53-58.0368[]*****************************************
+2025-09-22 12-53-58.0368[]DLL Log Initialize. Verbosity: 6
+2025-09-22 12-53-58.0369[]*****************************************
+2025-09-22 12-53-58.0369[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 12-53-58.0369[]DLL Version: 1.07
+2025-09-22 12-53-58.0370[InitLibrary]Begin
+2025-09-22 12-53-58.0385[InitLibrary]Library SignID:00000101
+2025-09-22 12-53-58.0386[InitLibrary]Current SignID:00000101
+2025-09-22 12-53-58.0386[InitLibrary]End
+2025-09-22 12-53-58.0386[GetAPIVersionHwLibrary]Begin
+2025-09-22 12-53-58.0387[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 12-53-58.0387[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 12-53-58.0388[GetAPIVersionHwLibrary]End
+2025-09-22 12-53-58.0388[EnumUSBDevices]Begin
+2025-09-22 12-53-58.0390[EnumUSBDevices]Found 0 USB Devices
+2025-09-22 12-53-58.0392[EnumUSBDevices]End
+2025-09-22 12-54-52.0225[]*****************************************
+2025-09-22 12-54-52.0225[]DLL Log Initialize. Verbosity: 6
+2025-09-22 12-54-52.0225[]*****************************************
+2025-09-22 12-54-52.0227[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 12-54-52.0227[]DLL Version: 1.07
+2025-09-22 12-54-52.0227[InitLibrary]Begin
+2025-09-22 12-54-52.0243[InitLibrary]Library SignID:00000101
+2025-09-22 12-54-52.0244[InitLibrary]Current SignID:00000101
+2025-09-22 12-54-52.0245[InitLibrary]End
+2025-09-22 12-54-52.0245[GetAPIVersionHwLibrary]Begin
+2025-09-22 12-54-52.0246[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 12-54-52.0246[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 12-54-52.0248[GetAPIVersionHwLibrary]End
+2025-09-22 12-54-52.0248[EnumUSBDevices]Begin
+2025-09-22 12-54-52.0252[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 12-54-52.0252[EnumUSBDevices]End
+2025-09-22 12-54-52.0254[OpenPrinterUSB]Begin
+2025-09-22 12-54-52.0254[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 12-54-52.0259[OpenPrinterUSB]New device ID:00000101
+2025-09-22 12-54-52.0259[OpenPrinterUSB]End
+2025-09-22 12-56-14.0908[PrintImageFromPath]Begin
+2025-09-22 12-56-35.0768[PrintImageFromPath]Begin
+2025-09-22 12-56-35.0771[PrintBarcode]Begin
+2025-09-22 12-56-35.0771[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMjUwMDAxOjE3NTg1MjU5ODMyNzU6MDowMDIwOjAxOjAyOjAyOjAxOjE=
+2025-09-22 12-56-35.0772[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 12-56-35.0797[PrintBarcode]End
+2025-09-22 12-56-35.0800[PrintText]Begin
+2025-09-22 12-56-35.0801[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 12:56:23
+Payment Type     : CASH
+Salepoint Id     : 01010301
+Type             : RJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 20/-
+Ticket No.       : 8W774MBNH250001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 12-56-35.0801[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 12-56-35.0801[PrintText]<Add LF>:false
+2025-09-22 12-56-35.0805[PrintText]End
+2025-09-22 12-56-35.0806[Cut]Begin
+2025-09-22 12-56-35.0807[Cut]CutType:CUT_TOTAL
+2025-09-22 12-56-35.0809[Cut]End
+2025-09-22 12-56-35.0810[PrintImageFromPath]Begin
+2025-09-22 12-56-35.0811[PrintText]Begin
+2025-09-22 12-56-35.0811[PrintText]<Text to Print>:
+            PAYMENT RECEIPT
+
+Denomination    : 1000
+Order Id        : ORD8W774MBNH250002
+Transaction Id  : b17a
+Payment Mode    : CASH
+Amount          : 20
+Status          : SUCCESS
+Date-Time       : 22-09-2025 12:56:35
+TVM             : 01010301
+
+2025-09-22 12-56-35.0812[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 12-56-35.0812[PrintText]<Add LF>:false
+2025-09-22 12-56-35.0816[PrintText]End
+2025-09-22 12-56-35.0817[Cut]Begin
+2025-09-22 12-56-35.0817[Cut]CutType:CUT_TOTAL
+2025-09-22 12-56-35.0818[Cut]End
+2025-09-22 12-58-33.0859[PrintImageFromPath]Begin
+2025-09-22 12-58-43.0283[PrintImageFromPath]Begin
+2025-09-22 12-59-31.0139[PrintImageFromPath]Begin
+2025-09-22 12-59-31.0140[PrintBarcode]Begin
+2025-09-22 12-59-31.0140[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMjUwMDAyOjE3NTg1MjYxNjMxMjg6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 12-59-31.0140[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 12-59-31.0160[PrintBarcode]End
+2025-09-22 12-59-31.0161[PrintText]Begin
+2025-09-22 12-59-31.0161[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 12:59:23
+Payment Type     : CASH
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH250002
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 12-59-31.0161[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 12-59-31.0161[PrintText]<Add LF>:false
+2025-09-22 12-59-31.0165[PrintText]End
+2025-09-22 12-59-31.0165[Cut]Begin
+2025-09-22 12-59-31.0166[Cut]CutType:CUT_TOTAL
+2025-09-22 12-59-31.0168[Cut]End
+2025-09-22 12-59-31.0168[PrintImageFromPath]Begin
+2025-09-22 13-08-12.0916[PrintImageFromPath]Begin
+2025-09-22 13-08-12.0917[PrintText]Begin
+2025-09-22 13-08-12.0918[PrintText]<Text to Print>:
+            PAYMENT RECEIPT
+
+Denomination    : 2000
+Order Id        : ORD8W774MBNH250006
+Transaction Id  : 99c6
+Payment Mode    : CASH
+Amount          : 20
+Status          : SUCCESS
+Date-Time       : 22-09-2025 13:08:10
+TVM             : 01010301
+
+2025-09-22 13-08-12.0918[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 13-08-12.0919[PrintText]<Add LF>:false
+2025-09-22 13-08-12.0925[PrintText]End
+2025-09-22 13-08-12.0925[Cut]Begin
+2025-09-22 13-08-12.0926[Cut]CutType:CUT_TOTAL
+2025-09-22 13-08-12.0928[Cut]End
+2025-09-22 13-09-24.0514[]*****************************************
+2025-09-22 13-09-24.0515[]DLL Log Initialize. Verbosity: 6
+2025-09-22 13-09-24.0515[]*****************************************
+2025-09-22 13-09-24.0516[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 13-09-24.0516[]DLL Version: 1.07
+2025-09-22 13-09-24.0516[InitLibrary]Begin
+2025-09-22 13-09-24.0532[InitLibrary]Library SignID:00000101
+2025-09-22 13-09-24.0533[InitLibrary]Current SignID:00000101
+2025-09-22 13-09-24.0533[InitLibrary]End
+2025-09-22 13-09-24.0534[GetAPIVersionHwLibrary]Begin
+2025-09-22 13-09-24.0536[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 13-09-24.0536[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 13-09-24.0536[GetAPIVersionHwLibrary]End
+2025-09-22 13-09-24.0537[EnumUSBDevices]Begin
+2025-09-22 13-09-24.0540[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 13-09-24.0541[EnumUSBDevices]End
+2025-09-22 13-09-24.0541[OpenPrinterUSB]Begin
+2025-09-22 13-09-24.0541[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 13-09-24.0546[OpenPrinterUSB]New device ID:00000101
+2025-09-22 13-09-24.0546[OpenPrinterUSB]End
+2025-09-22 13-10-09.0706[PrintImageFromPath]Begin
+2025-09-22 13-10-09.0712[PrintBarcode]Begin
+2025-09-22 13-10-09.0713[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMjYwMDAxOjE3NTg1MjY3OTc5MjE6MDowMDIwOjAxOjAzOjAxOjAxOjE=
+2025-09-22 13-10-09.0714[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 13-10-09.0737[PrintBarcode]End
+2025-09-22 13-10-09.0740[PrintText]Begin
+2025-09-22 13-10-09.0741[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 13:09:57
+Payment Type     : CASH
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 5
+Price            : Rs. 20/-
+Ticket No.       : 8W774MBNH260001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 13-10-09.0741[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 13-10-09.0742[PrintText]<Add LF>:false
+2025-09-22 13-10-09.0745[PrintText]End
+2025-09-22 13-10-09.0747[Cut]Begin
+2025-09-22 13-10-09.0747[Cut]CutType:CUT_TOTAL
+2025-09-22 13-10-09.0750[Cut]End
+2025-09-22 13-10-09.0750[PrintImageFromPath]Begin
+2025-09-22 13-15-02.0570[PrintImageFromPath]Begin
+2025-09-22 13-15-02.0572[PrintText]Begin
+2025-09-22 13-15-02.0573[PrintText]<Text to Print>:
+            PAYMENT RECEIPT
+
+Denomination    : 3000
+Order Id        : ORD8W774MBNH260002
+Transaction Id  : 212f
+Payment Mode    : CASH
+Amount          : 20
+Status          : SUCCESS
+Date-Time       : 22-09-2025 13:14:50
+TVM             : 01010301
+
+2025-09-22 13-15-02.0573[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 13-15-02.0574[PrintText]<Add LF>:false
+2025-09-22 13-15-42.0198[]*****************************************
+2025-09-22 13-15-42.0200[]DLL Log Initialize. Verbosity: 6
+2025-09-22 13-15-42.0200[]*****************************************
+2025-09-22 13-15-42.0201[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 13-15-42.0201[]DLL Version: 1.07
+2025-09-22 13-15-42.0202[InitLibrary]Begin
+2025-09-22 13-15-42.0221[InitLibrary]Library SignID:00000101
+2025-09-22 13-15-42.0222[InitLibrary]Current SignID:00000101
+2025-09-22 13-15-42.0222[InitLibrary]End
+2025-09-22 13-15-42.0222[GetAPIVersionHwLibrary]Begin
+2025-09-22 13-15-42.0225[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 13-15-42.0226[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 13-15-42.0226[GetAPIVersionHwLibrary]End
+2025-09-22 13-15-42.0226[EnumUSBDevices]Begin
+2025-09-22 13-15-42.0231[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 13-15-42.0231[EnumUSBDevices]End
+2025-09-22 13-15-42.0231[OpenPrinterUSB]Begin
+2025-09-22 13-15-42.0232[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 13-15-42.0236[OpenPrinterUSB]New device ID:00000101
+2025-09-22 13-15-42.0238[OpenPrinterUSB]End
+2025-09-22 13-16-19.0939[PrintImageFromPath]Begin
+2025-09-22 13-16-19.0944[PrintBarcode]Begin
+2025-09-22 13-16-19.0945[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMjcwMDAxOjE3NTg1MjcxNjkzMTE6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 13-16-19.0947[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 13-16-19.0968[PrintBarcode]End
+2025-09-22 13-16-19.0972[PrintText]Begin
+2025-09-22 13-16-19.0973[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 13:16:09
+Payment Type     : CASH
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH270001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 13-16-19.0974[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 13-16-19.0975[PrintText]<Add LF>:false
+2025-09-22 13-16-19.0979[PrintText]End
+2025-09-22 13-16-19.0981[Cut]Begin
+2025-09-22 13-16-19.0981[Cut]CutType:CUT_TOTAL
+2025-09-22 13-16-19.0983[Cut]End
+2025-09-22 13-16-19.0983[PrintImageFromPath]Begin
+2025-09-22 13-17-02.0853[PrintImageFromPath]Begin
+2025-09-22 13-17-02.0854[PrintBarcode]Begin
+2025-09-22 13-17-02.0854[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMjcwMDAyOjE3NTg1MjcxOTU3OTM6MDowMDIwOjAxOjAyOjAyOjAxOjE=
+2025-09-22 13-17-02.0855[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 13-17-02.0875[PrintBarcode]End
+2025-09-22 13-17-02.0876[PrintText]Begin
+2025-09-22 13-17-02.0876[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 13:16:35
+Payment Type     : CASH
+Salepoint Id     : 01010301
+Type             : RJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 20/-
+Ticket No.       : 8W774MBNH270002
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 13-17-02.0877[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 13-17-02.0877[PrintText]<Add LF>:false
+2025-09-22 13-17-02.0880[PrintText]End
+2025-09-22 13-17-02.0880[Cut]Begin
+2025-09-22 13-17-02.0880[Cut]CutType:CUT_TOTAL
+2025-09-22 13-17-02.0883[Cut]End
+2025-09-22 13-17-02.0883[PrintImageFromPath]Begin
+2025-09-22 13-17-02.0883[PrintText]Begin
+2025-09-22 13-17-02.0884[PrintText]<Text to Print>:
+            PAYMENT RECEIPT
+
+Denomination    : 2000
+Order Id        : ORD8W774MBNH270002
+Transaction Id  : e592
+Payment Mode    : CASH
+Amount          : 20
+Status          : SUCCESS
+Date-Time       : 22-09-2025 13:17:02
+TVM             : 01010301
+
+2025-09-22 13-17-02.0884[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 13-17-02.0884[PrintText]<Add LF>:false
+2025-09-22 13-17-02.0887[PrintText]End
+2025-09-22 13-17-02.0887[Cut]Begin
+2025-09-22 13-17-02.0888[Cut]CutType:CUT_TOTAL
+2025-09-22 13-17-02.0889[Cut]End
+2025-09-22 13-34-49.0175[]*****************************************
+2025-09-22 13-34-49.0176[]DLL Log Initialize. Verbosity: 6
+2025-09-22 13-34-49.0176[]*****************************************
+2025-09-22 13-34-49.0178[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 13-34-49.0178[]DLL Version: 1.07
+2025-09-22 13-34-49.0179[InitLibrary]Begin
+2025-09-22 13-34-49.0197[InitLibrary]Library SignID:00000101
+2025-09-22 13-34-49.0198[InitLibrary]Current SignID:00000101
+2025-09-22 13-34-49.0199[InitLibrary]End
+2025-09-22 13-34-49.0199[GetAPIVersionHwLibrary]Begin
+2025-09-22 13-34-49.0202[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 13-34-49.0202[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 13-34-49.0203[GetAPIVersionHwLibrary]End
+2025-09-22 13-34-49.0203[EnumUSBDevices]Begin
+2025-09-22 13-34-49.0206[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 13-34-49.0207[EnumUSBDevices]End
+2025-09-22 13-34-49.0207[OpenPrinterUSB]Begin
+2025-09-22 13-34-49.0208[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 13-34-49.0213[OpenPrinterUSB]New device ID:00000101
+2025-09-22 13-34-49.0213[OpenPrinterUSB]End
+2025-09-22 13-35-37.0156[PrintImageFromPath]Begin
+2025-09-22 13-35-37.0158[PrintBarcode]Begin
+2025-09-22 13-35-37.0159[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMjgwMDAxOjE3NTg1MjgzMTg5NDg6MDowMDIwOjAxOjAyOjAyOjAxOjE=
+2025-09-22 13-35-37.0159[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 13-35-37.0179[PrintBarcode]End
+2025-09-22 13-35-37.0182[PrintText]Begin
+2025-09-22 13-35-37.0183[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 13:35:18
+Payment Type     : CASH
+Salepoint Id     : 01010301
+Type             : RJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 20/-
+Ticket No.       : 8W774MBNH280001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 13-35-37.0183[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 13-35-37.0184[PrintText]<Add LF>:false
+2025-09-22 13-35-37.0188[PrintText]End
+2025-09-22 13-35-37.0190[Cut]Begin
+2025-09-22 13-35-37.0191[Cut]CutType:CUT_TOTAL
+2025-09-22 13-35-37.0193[Cut]End
+2025-09-22 13-35-37.0193[PrintImageFromPath]Begin
+2025-09-22 13-35-37.0194[PrintText]Begin
+2025-09-22 13-35-37.0195[PrintText]<Text to Print>:
+            PAYMENT RECEIPT
+
+Denomination    : 3000
+Order Id        : ORD8W774MBNH280001
+Transaction Id  : c45b
+Payment Mode    : CASH
+Amount          : 20
+Status          : SUCCESS
+Date-Time       : 22-09-2025 13:35:36
+TVM             : 01010301
+
+2025-09-22 13-35-37.0195[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 13-35-37.0196[PrintText]<Add LF>:false
+2025-09-22 13-35-37.0199[PrintText]End
+2025-09-22 13-35-37.0199[Cut]Begin
+2025-09-22 13-35-37.0200[Cut]CutType:CUT_TOTAL
+2025-09-22 13-35-37.0202[Cut]End
+2025-09-22 13-38-46.0630[]*****************************************
+2025-09-22 13-38-46.0630[]DLL Log Initialize. Verbosity: 6
+2025-09-22 13-38-46.0631[]*****************************************
+2025-09-22 13-38-46.0631[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 13-38-46.0632[]DLL Version: 1.07
+2025-09-22 13-38-46.0632[InitLibrary]Begin
+2025-09-22 13-38-46.0649[InitLibrary]Library SignID:00000101
+2025-09-22 13-38-46.0649[InitLibrary]Current SignID:00000101
+2025-09-22 13-38-46.0650[InitLibrary]End
+2025-09-22 13-38-46.0650[GetAPIVersionHwLibrary]Begin
+2025-09-22 13-38-46.0652[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 13-38-46.0653[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 13-38-46.0653[GetAPIVersionHwLibrary]End
+2025-09-22 13-38-46.0653[EnumUSBDevices]Begin
+2025-09-22 13-38-46.0657[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 13-38-46.0657[EnumUSBDevices]End
+2025-09-22 13-38-46.0657[OpenPrinterUSB]Begin
+2025-09-22 13-38-46.0658[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 13-38-46.0663[OpenPrinterUSB]New device ID:00000101
+2025-09-22 13-38-46.0663[OpenPrinterUSB]End
+2025-09-22 13-39-50.0162[]*****************************************
+2025-09-22 13-39-50.0163[]DLL Log Initialize. Verbosity: 6
+2025-09-22 13-39-50.0163[]*****************************************
+2025-09-22 13-39-50.0163[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 13-39-50.0164[]DLL Version: 1.07
+2025-09-22 13-39-50.0164[InitLibrary]Begin
+2025-09-22 13-39-50.0183[InitLibrary]Library SignID:00000101
+2025-09-22 13-39-50.0184[InitLibrary]Current SignID:00000101
+2025-09-22 13-39-50.0184[InitLibrary]End
+2025-09-22 13-39-50.0185[GetAPIVersionHwLibrary]Begin
+2025-09-22 13-39-50.0186[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 13-39-50.0186[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 13-39-50.0188[GetAPIVersionHwLibrary]End
+2025-09-22 13-39-50.0188[EnumUSBDevices]Begin
+2025-09-22 13-39-50.0192[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 13-39-50.0192[EnumUSBDevices]End
+2025-09-22 13-39-50.0192[OpenPrinterUSB]Begin
+2025-09-22 13-39-50.0194[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 13-39-50.0199[OpenPrinterUSB]New device ID:00000101
+2025-09-22 13-39-50.0199[OpenPrinterUSB]End
+2025-09-22 13-47-27.0912[PrintImageFromPath]Begin
+2025-09-22 13-47-27.0918[PrintBarcode]Begin
+2025-09-22 13-47-27.0919[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMzAwMDAxOjE3NTg1MjkwMTY2ODM6MDowMDYwOjAxOjAzOjAzOjAzOjE=
+2025-09-22 13-47-27.0921[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 13-47-27.0944[PrintBarcode]End
+2025-09-22 13-47-27.0949[PrintText]Begin
+2025-09-22 13-47-27.0952[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 13:46:56
+Payment Type     : CASH
+Salepoint Id     : 01010301
+Type             : Group Ticket  (3)
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 5
+Price            : Rs. 60/-
+Ticket No.       : 8W774MBNH300001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 13-47-27.0953[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 13-47-27.0954[PrintText]<Add LF>:false
+2025-09-22 13-47-27.0958[PrintText]End
+2025-09-22 13-47-27.0960[Cut]Begin
+2025-09-22 13-47-27.0961[Cut]CutType:CUT_TOTAL
+2025-09-22 13-47-27.0965[Cut]End
+2025-09-22 13-47-27.0966[PrintImageFromPath]Begin
+2025-09-22 13-47-27.0968[PrintText]Begin
+2025-09-22 13-47-27.0968[PrintText]<Text to Print>:
+            PAYMENT RECEIPT
+
+Denomination    : 4000
+Order Id        : ORD8W774MBNH300001
+Transaction Id  : 51ec
+Payment Mode    : CASH
+Amount          : 60
+Status          : SUCCESS
+Date-Time       : 22-09-2025 13:47:27
+TVM             : 01010301
+
+2025-09-22 13-47-27.0970[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 13-47-27.0970[PrintText]<Add LF>:false
+2025-09-22 13-47-27.0974[PrintText]End
+2025-09-22 13-47-27.0975[Cut]Begin
+2025-09-22 13-47-27.0976[Cut]CutType:CUT_TOTAL
+2025-09-22 13-47-27.0979[Cut]End
+2025-09-22 13-52-17.0204[]*****************************************
+2025-09-22 13-52-17.0205[]DLL Log Initialize. Verbosity: 6
+2025-09-22 13-52-17.0205[]*****************************************
+2025-09-22 13-52-17.0205[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 13-52-17.0206[]DLL Version: 1.07
+2025-09-22 13-52-17.0206[InitLibrary]Begin
+2025-09-22 13-52-17.0219[InitLibrary]Library SignID:00000101
+2025-09-22 13-52-17.0219[InitLibrary]Current SignID:00000101
+2025-09-22 13-52-17.0220[InitLibrary]End
+2025-09-22 13-52-17.0220[GetAPIVersionHwLibrary]Begin
+2025-09-22 13-52-17.0221[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 13-52-17.0221[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 13-52-17.0222[GetAPIVersionHwLibrary]End
+2025-09-22 13-52-17.0222[EnumUSBDevices]Begin
+2025-09-22 13-52-17.0225[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 13-52-17.0226[EnumUSBDevices]End
+2025-09-22 13-52-17.0226[OpenPrinterUSB]Begin
+2025-09-22 13-52-17.0226[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 13-52-17.0231[OpenPrinterUSB]New device ID:00000101
+2025-09-22 13-52-17.0231[OpenPrinterUSB]End
+2025-09-22 13-53-21.0824[PrintImageFromPath]Begin
+2025-09-22 13-53-21.0826[PrintBarcode]Begin
+2025-09-22 13-53-21.0826[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMzEwMDAxOjE3NTg1MjkzODIxNDY6MDowMDIwOjAxOjAyOjAyOjAxOjE=
+2025-09-22 13-53-21.0827[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 13-53-21.0847[PrintBarcode]End
+2025-09-22 13-53-21.0849[PrintText]Begin
+2025-09-22 13-53-21.0850[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 13:53:02
+Payment Type     : CASH
+Salepoint Id     : 01010301
+Type             : RJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 20/-
+Ticket No.       : 8W774MBNH310001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 13-53-21.0851[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 13-53-21.0851[PrintText]<Add LF>:false
+2025-09-22 13-53-21.0855[PrintText]End
+2025-09-22 13-53-21.0856[Cut]Begin
+2025-09-22 13-53-21.0856[Cut]CutType:CUT_TOTAL
+2025-09-22 13-53-21.0858[Cut]End
+2025-09-22 13-53-21.0858[PrintImageFromPath]Begin
+2025-09-22 13-53-21.0859[PrintText]Begin
+2025-09-22 13-53-21.0859[PrintText]<Text to Print>:
+            PAYMENT RECEIPT
+
+Denomination    : 3000
+Order Id        : ORD8W774MBNH310001
+Transaction Id  : b073
+Payment Mode    : CASH
+Amount          : 20
+Status          : SUCCESS
+Date-Time       : 22-09-2025 13:53:21
+TVM             : 01010301
+
+2025-09-22 13-53-21.0859[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 13-53-21.0860[PrintText]<Add LF>:false
+2025-09-22 13-53-21.0862[PrintText]End
+2025-09-22 13-53-21.0862[Cut]Begin
+2025-09-22 13-53-21.0863[Cut]CutType:CUT_TOTAL
+2025-09-22 13-53-21.0864[Cut]End
+2025-09-22 14-05-21.0432[]*****************************************
+2025-09-22 14-05-21.0433[]DLL Log Initialize. Verbosity: 6
+2025-09-22 14-05-21.0434[]*****************************************
+2025-09-22 14-05-21.0434[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 14-05-21.0434[]DLL Version: 1.07
+2025-09-22 14-05-21.0434[InitLibrary]Begin
+2025-09-22 14-05-21.0449[InitLibrary]Library SignID:00000101
+2025-09-22 14-05-21.0450[InitLibrary]Current SignID:00000101
+2025-09-22 14-05-21.0450[InitLibrary]End
+2025-09-22 14-05-21.0450[GetAPIVersionHwLibrary]Begin
+2025-09-22 14-05-21.0452[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 14-05-21.0452[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 14-05-21.0452[GetAPIVersionHwLibrary]End
+2025-09-22 14-05-21.0453[EnumUSBDevices]Begin
+2025-09-22 14-05-21.0455[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 14-05-21.0456[EnumUSBDevices]End
+2025-09-22 14-05-21.0456[OpenPrinterUSB]Begin
+2025-09-22 14-05-21.0456[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 14-05-21.0460[OpenPrinterUSB]New device ID:00000101
+2025-09-22 14-05-21.0460[OpenPrinterUSB]End
+2025-09-22 14-06-04.0175[PrintImageFromPath]Begin
+2025-09-22 14-06-04.0178[PrintBarcode]Begin
+2025-09-22 14-06-04.0178[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMzIwMDAxOjE3NTg1MzAxNDc0NzM6MDowMDYwOjAxOjA1OjAyOjAxOjE=
+2025-09-22 14-06-04.0178[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 14-06-04.0198[PrintBarcode]End
+2025-09-22 14-06-04.0201[PrintText]Begin
+2025-09-22 14-06-04.0202[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 14:05:47
+Payment Type     : CASH
+Salepoint Id     : 01010301
+Type             : RJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 3
+Price            : Rs. 60/-
+Ticket No.       : 8W774MBNH320001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 14-06-04.0202[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 14-06-04.0203[PrintText]<Add LF>:false
+2025-09-22 14-06-04.0207[PrintText]End
+2025-09-22 14-06-04.0207[Cut]Begin
+2025-09-22 14-06-04.0208[Cut]CutType:CUT_TOTAL
+2025-09-22 14-06-04.0209[Cut]End
+2025-09-22 14-06-04.0209[PrintImageFromPath]Begin
+2025-09-22 14-06-04.0210[PrintText]Begin
+2025-09-22 14-06-04.0210[PrintText]<Text to Print>:
+            PAYMENT RECEIPT
+
+Denomination    : 40
+Order Id        : ORD8W774MBNH320001
+Transaction Id  : 20ad
+Payment Mode    : CASH
+Amount          : 60
+Status          : SUCCESS
+Date-Time       : 22-09-2025 14:06:04
+TVM             : 01010301
+
+2025-09-22 14-06-04.0210[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 14-06-04.0210[PrintText]<Add LF>:false
+2025-09-22 14-06-04.0213[PrintText]End
+2025-09-22 14-06-04.0214[Cut]Begin
+2025-09-22 14-06-04.0214[Cut]CutType:CUT_TOTAL
+2025-09-22 14-06-04.0215[Cut]End
+2025-09-22 14-11-47.0026[PrintImageFromPath]Begin
+2025-09-22 14-11-47.0026[PrintBarcode]Begin
+2025-09-22 14-11-47.0027[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMzIwMDAyOjE3NTg1MzA0NzI0MTI6MDowMDYwOjAxOjA1OjAyOjAxOjE=
+2025-09-22 14-11-47.0027[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 14-11-47.0046[PrintBarcode]End
+2025-09-22 14-11-47.0047[PrintText]Begin
+2025-09-22 14-11-47.0047[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 14:11:12
+Payment Type     : CASH
+Salepoint Id     : 01010301
+Type             : RJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 3
+Price            : Rs. 60/-
+Ticket No.       : 8W774MBNH320002
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 14-11-47.0047[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 14-11-47.0047[PrintText]<Add LF>:false
+2025-09-22 14-11-47.0050[PrintText]End
+2025-09-22 14-11-47.0050[Cut]Begin
+2025-09-22 14-11-47.0050[Cut]CutType:CUT_TOTAL
+2025-09-22 14-11-47.0051[Cut]End
+2025-09-22 14-11-47.0051[PrintImageFromPath]Begin
+2025-09-22 14-12-46.0012[PrintImageFromPath]Begin
+2025-09-22 14-12-46.0013[PrintBarcode]Begin
+2025-09-22 14-12-46.0013[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMzIwMDAzOjE3NTg1MzA1NDk2NTE6MDowMDEwOjAxOjAyOjAxOjAxOjE=
+2025-09-22 14-12-46.0013[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 14-12-46.0033[PrintBarcode]End
+2025-09-22 14-12-46.0033[PrintText]Begin
+2025-09-22 14-12-46.0033[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 14:12:29
+Payment Type     : CASH
+Salepoint Id     : 01010301
+Type             : SJT 
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 6
+Price            : Rs. 10/-
+Ticket No.       : 8W774MBNH320003
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 14-12-46.0033[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 14-12-46.0033[PrintText]<Add LF>:false
+2025-09-22 14-12-46.0036[PrintText]End
+2025-09-22 14-12-46.0036[Cut]Begin
+2025-09-22 14-12-46.0036[Cut]CutType:CUT_TOTAL
+2025-09-22 14-12-46.0037[Cut]End
+2025-09-22 14-12-46.0037[PrintImageFromPath]Begin
+2025-09-22 14-13-19.0427[PrintImageFromPath]Begin
+2025-09-22 14-13-38.0780[PrintImageFromPath]Begin
+2025-09-22 14-13-51.0815[PrintImageFromPath]Begin
+2025-09-22 14-15-03.0411[PrintImageFromPath]Begin
+2025-09-22 14-15-03.0412[PrintBarcode]Begin
+2025-09-22 14-15-03.0412[PrintBarcode]<Brc Text>:MDEwMTAzMDE6OFc3NzRNQk5IMzIwMDA0OjE3NTg1MzA2NjU0ODI6MDowMDYwOjAxOjA1OjAzOjAyOjE=
+2025-09-22 14-15-03.0412[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-09-22 14-15-03.0431[PrintBarcode]End
+2025-09-22 14-15-03.0432[PrintText]Begin
+2025-09-22 14-15-03.0432[PrintText]<Text to Print>:
+Date-Time        : 22-09-2025 14:14:25
+Payment Type     : CASH
+Salepoint Id     : 01010301
+Type             : Group Ticket  (2)
+Platform No.     : 2
+From             : Gandhi Nagar
+To               : Super Corridor 3
+Price            : Rs. 60/-
+Ticket No.       : 8W774MBNH320004
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-09-22 14-15-03.0433[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 14-15-03.0433[PrintText]<Add LF>:false
+2025-09-22 14-15-03.0435[PrintText]End
+2025-09-22 14-15-03.0435[Cut]Begin
+2025-09-22 14-15-03.0435[Cut]CutType:CUT_TOTAL
+2025-09-22 14-15-03.0437[Cut]End
+2025-09-22 14-15-03.0437[PrintImageFromPath]Begin
+2025-09-22 14-15-57.0185[PrintImageFromPath]Begin
+2025-09-22 14-17-12.0682[]*****************************************
+2025-09-22 14-17-12.0683[]DLL Log Initialize. Verbosity: 6
+2025-09-22 14-17-12.0684[]*****************************************
+2025-09-22 14-17-12.0685[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 14-17-12.0685[]DLL Version: 1.07
+2025-09-22 14-17-12.0685[InitLibrary]Begin
+2025-09-22 14-17-12.0700[InitLibrary]Library SignID:00000101
+2025-09-22 14-17-12.0700[InitLibrary]Current SignID:00000101
+2025-09-22 14-17-12.0701[InitLibrary]End
+2025-09-22 14-17-12.0701[GetAPIVersionHwLibrary]Begin
+2025-09-22 14-17-12.0702[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 14-17-12.0703[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 14-17-12.0703[GetAPIVersionHwLibrary]End
+2025-09-22 14-17-12.0704[EnumUSBDevices]Begin
+2025-09-22 14-17-12.0708[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 14-17-12.0709[EnumUSBDevices]End
+2025-09-22 14-17-12.0709[OpenPrinterUSB]Begin
+2025-09-22 14-17-12.0709[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 14-17-12.0713[OpenPrinterUSB]New device ID:00000101
+2025-09-22 14-17-12.0713[OpenPrinterUSB]End
+2025-09-22 14-23-11.0128[PrintImageFromPath]Begin
+2025-09-22 14-25-01.0405[PrintImageFromPath]Begin
+2025-09-22 14-25-21.0804[]*****************************************
+2025-09-22 14-25-21.0805[]DLL Log Initialize. Verbosity: 6
+2025-09-22 14-25-21.0805[]*****************************************
+2025-09-22 14-25-21.0805[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 14-25-21.0806[]DLL Version: 1.07
+2025-09-22 14-25-21.0806[InitLibrary]Begin
+2025-09-22 14-25-21.0819[InitLibrary]Library SignID:00000101
+2025-09-22 14-25-21.0819[InitLibrary]Current SignID:00000101
+2025-09-22 14-25-21.0821[InitLibrary]End
+2025-09-22 14-25-21.0821[GetAPIVersionHwLibrary]Begin
+2025-09-22 14-25-21.0823[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 14-25-21.0823[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 14-25-21.0823[GetAPIVersionHwLibrary]End
+2025-09-22 14-25-21.0823[EnumUSBDevices]Begin
+2025-09-22 14-25-21.0827[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 14-25-21.0828[EnumUSBDevices]End
+2025-09-22 14-25-21.0828[OpenPrinterUSB]Begin
+2025-09-22 14-25-21.0833[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 14-25-21.0837[OpenPrinterUSB]New device ID:00000101
+2025-09-22 14-25-21.0838[OpenPrinterUSB]End
+2025-09-22 14-27-53.0160[]*****************************************
+2025-09-22 14-27-53.0161[]DLL Log Initialize. Verbosity: 6
+2025-09-22 14-27-53.0161[]*****************************************
+2025-09-22 14-27-53.0162[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 14-27-53.0162[]DLL Version: 1.07
+2025-09-22 14-27-53.0162[InitLibrary]Begin
+2025-09-22 14-27-53.0176[InitLibrary]Library SignID:00000101
+2025-09-22 14-27-53.0177[InitLibrary]Current SignID:00000101
+2025-09-22 14-27-53.0177[InitLibrary]End
+2025-09-22 14-27-53.0177[GetAPIVersionHwLibrary]Begin
+2025-09-22 14-27-53.0178[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 14-27-53.0179[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 14-27-53.0179[GetAPIVersionHwLibrary]End
+2025-09-22 14-27-53.0180[EnumUSBDevices]Begin
+2025-09-22 14-27-53.0183[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 14-27-53.0184[EnumUSBDevices]End
+2025-09-22 14-27-53.0184[OpenPrinterUSB]Begin
+2025-09-22 14-27-53.0184[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 14-27-53.0188[OpenPrinterUSB]New device ID:00000101
+2025-09-22 14-27-53.0188[OpenPrinterUSB]End
+2025-09-22 14-28-36.0727[PrintImageFromPath]Begin
+2025-09-22 14-28-59.0027[PrintImageFromPath]Begin
+2025-09-22 14-34-25.0095[PrintImageFromPath]Begin
+2025-09-22 14-34-51.0543[]*****************************************
+2025-09-22 14-34-51.0546[]DLL Log Initialize. Verbosity: 6
+2025-09-22 14-34-51.0546[]*****************************************
+2025-09-22 14-34-51.0547[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 14-34-51.0547[]DLL Version: 1.07
+2025-09-22 14-34-51.0548[InitLibrary]Begin
+2025-09-22 14-34-51.0569[InitLibrary]Library SignID:00000101
+2025-09-22 14-34-51.0570[InitLibrary]Current SignID:00000101
+2025-09-22 14-34-51.0572[InitLibrary]End
+2025-09-22 14-34-51.0572[GetAPIVersionHwLibrary]Begin
+2025-09-22 14-34-51.0574[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 14-34-51.0576[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 14-34-51.0577[GetAPIVersionHwLibrary]End
+2025-09-22 14-34-51.0578[EnumUSBDevices]Begin
+2025-09-22 14-34-51.0583[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 14-34-51.0583[EnumUSBDevices]End
+2025-09-22 14-34-51.0584[OpenPrinterUSB]Begin
+2025-09-22 14-34-51.0585[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 14-34-51.0591[OpenPrinterUSB]New device ID:00000101
+2025-09-22 14-34-51.0591[OpenPrinterUSB]End
+2025-09-22 14-36-05.0039[]*****************************************
+2025-09-22 14-36-05.0041[]DLL Log Initialize. Verbosity: 6
+2025-09-22 14-36-05.0042[]*****************************************
+2025-09-22 14-36-05.0042[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 14-36-05.0042[]DLL Version: 1.07
+2025-09-22 14-36-05.0042[InitLibrary]Begin
+2025-09-22 14-36-05.0058[InitLibrary]Library SignID:00000101
+2025-09-22 14-36-05.0058[InitLibrary]Current SignID:00000101
+2025-09-22 14-36-05.0059[InitLibrary]End
+2025-09-22 14-36-05.0059[GetAPIVersionHwLibrary]Begin
+2025-09-22 14-36-05.0061[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 14-36-05.0061[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 14-36-05.0061[GetAPIVersionHwLibrary]End
+2025-09-22 14-36-05.0062[EnumUSBDevices]Begin
+2025-09-22 14-36-05.0065[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 14-36-05.0065[EnumUSBDevices]End
+2025-09-22 14-36-05.0066[OpenPrinterUSB]Begin
+2025-09-22 14-36-05.0067[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 14-36-05.0070[OpenPrinterUSB]New device ID:00000101
+2025-09-22 14-36-05.0071[OpenPrinterUSB]End
+2025-09-22 14-37-24.0250[PrintImageFromPath]Begin
+2025-09-22 14-38-24.0971[PrintImageFromPath]Begin
+2025-09-22 14-41-28.0990[PrintImageFromPath]Begin
+2025-09-22 14-45-45.0426[PrintImageFromPath]Begin
+2025-09-22 14-46-02.0558[]*****************************************
+2025-09-22 14-46-02.0558[]DLL Log Initialize. Verbosity: 6
+2025-09-22 14-46-02.0559[]*****************************************
+2025-09-22 14-46-02.0559[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-09-22 14-46-02.0559[]DLL Version: 1.07
+2025-09-22 14-46-02.0560[InitLibrary]Begin
+2025-09-22 14-46-02.0574[InitLibrary]Library SignID:00000101
+2025-09-22 14-46-02.0574[InitLibrary]Current SignID:00000101
+2025-09-22 14-46-02.0575[InitLibrary]End
+2025-09-22 14-46-02.0575[GetAPIVersionHwLibrary]Begin
+2025-09-22 14-46-02.0577[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-09-22 14-46-02.0577[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-09-22 14-46-02.0577[GetAPIVersionHwLibrary]End
+2025-09-22 14-46-02.0578[EnumUSBDevices]Begin
+2025-09-22 14-46-02.0580[EnumUSBDevices]Found 1 USB Devices
+2025-09-22 14-46-02.0581[EnumUSBDevices]End
+2025-09-22 14-46-02.0582[OpenPrinterUSB]Begin
+2025-09-22 14-46-02.0582[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-09-22 14-46-02.0585[OpenPrinterUSB]New device ID:00000101
+2025-09-22 14-46-02.0585[OpenPrinterUSB]End
+2025-09-22 14-47-18.0042[PrintImageFromPath]Begin
+2025-09-22 14-47-18.0044[PrintText]Begin
+2025-09-22 14-47-18.0044[PrintText]<Text to Print>:
+            PAYMENT RECEIPT
+
+Denomination    : 10
+Order Id        : ORD8W774MBNH380001
+Transaction Id  : 4c2a
+Payment Mode    : CASH
+Amount          : 20
+Status          : FAILED
+Date-Time       : 22-09-2025 14:47:18
+TVM             : 01010301
+
+2025-09-22 14-47-18.0045[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-09-22 14-47-18.0045[PrintText]<Add LF>:false
+2025-09-22 14-47-18.0048[PrintText]End
+2025-09-22 14-47-18.0049[Cut]Begin
+2025-09-22 14-47-18.0049[Cut]CutType:CUT_TOTAL
+2025-09-22 14-47-18.0051[Cut]End

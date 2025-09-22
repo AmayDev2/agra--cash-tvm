@@ -5,16 +5,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 
-<HBox prefHeight="680.0" prefWidth="1024.0" spacing="20" style="-fx-background-color: #ffffff;" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tvm.controller.PaymentController">
+<GridPane alignment="CENTER" style="-fx-background-color: #ffffff;" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tvm.controller.PaymentController">
 
     <!-- LEFT COLUMN: NumPad + Quantity + Actions -->
-    <VBox fx:id="leftColumn" alignment="TOP_LEFT" prefWidth="420.0" spacing="10">
+    <VBox fx:id="leftColumn" alignment="CENTER" spacing="20" GridPane.columnIndex="0" GridPane.halignment="LEFT" VBox.vgrow="ALWAYS">
         <padding>
             <Insets bottom="10.0" left="60.0" right="40.0" top="40.0" />
         </padding>
 
         <!-- Quantity row: Label - Decrement - Display - Increment -->
-        <HBox alignment="CENTER_LEFT" spacing="12">
+        <HBox alignment="CENTER" spacing="12">
 <!--            <Label styleClass="details-tag" text="Quantity" GridPane.columnIndex="3" GridPane.rowIndex="0" style="-fx-font-size:14px; -fx-font-weight:bold;" />-->
             <Button fx:id="btnDecrement" maxHeight="65" maxWidth="65" minHeight="65" minWidth="65" onAction="#handleDecrement" prefHeight="65" prefWidth="65" style="-fx-font-size:18; -fx-background-radius:6; -fx-background-color:#6b6b6b; -fx-text-fill:white;" text="-" />
             <TextField fx:id="display" alignment="CENTER" editable="false" prefHeight="65" prefWidth="120" style="-fx-font-size:16; -fx-background-radius:6; -fx-border-radius:6; -fx-border-color: #cccccc;" />
@@ -30,7 +30,7 @@
 
 
         <!-- Add Ticket & Confirm Buttons -->
-        <HBox alignment="CENTER_LEFT" spacing="20">
+        <HBox alignment="CENTER" spacing="20">
 <!--            <padding>-->
 <!--&lt;!&ndash;                <Insets top="10.0" />&ndash;&gt;-->
 <!--            </padding>-->
@@ -44,7 +44,7 @@
 <!--        <Region prefHeight="8" VBox.vgrow="NEVER" />-->
 
         <!-- Numpad (visual style like the photo) -->
-        <GridPane fx:id="numpad" alignment="TOP_LEFT" hgap="30" vgap="26">
+        <GridPane fx:id="numpad" alignment="CENTER" hgap="25.0" vgap="25.0">
             <!-- Row 0 -->
             <Button fx:id="btn1" onAction="#handleNumberClick" prefHeight="72" prefWidth="72" styleClass="numpad" text="1" GridPane.columnIndex="0" GridPane.rowIndex="0" />
             <Button fx:id="btn2" onAction="#handleNumberClick" prefHeight="72" prefWidth="72" styleClass="numpad" text="2" GridPane.columnIndex="1" GridPane.rowIndex="0" />
@@ -79,24 +79,24 @@
     </VBox>
 
     <!-- Vertical divider like the grey bar in the photo -->
-    <VBox alignment="CENTER" prefWidth="20">
-        <Rectangle arcHeight="6" arcWidth="6" fill="#bdbdbd" height="480" width="8" />
+    <VBox alignment="CENTER" prefWidth="20" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+        <Rectangle arcHeight="6" arcWidth="6" fill="#bdbdbd" height="520" width="8" />
     </VBox>
 
     <!-- RIGHT COLUMN: Summary + Payment + Action Buttons -->
-    <VBox fx:id="rightColumn" alignment="TOP_CENTER" prefWidth="560.0" spacing="18">
+    <VBox fx:id="rightColumn" alignment="CENTER" spacing="18" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
         <padding>
             <Insets bottom="40.0" left="40.0" right="60.0" top="40.0" />
         </padding>
 
         <!-- "Order Summary" heading -->
-        <Label alignment="CENTER_LEFT" style="-fx-font-size:20px; -fx-font-weight:bold; -fx-alignment: CENTER_LEFT;" text="Order Summary" />
+        <Label alignment="CENTER" style="-fx-font-size:20px; -fx-font-weight:bold; -fx-alignment: CENTER_LEFT;" text="Order Summary" />
 
         <!-- Summary card with rounded background -->
         <StackPane prefHeight="150" prefWidth="480" style="-fx-padding:18;">
             <Region prefHeight="150" prefWidth="480" style="-fx-background-color: rgba(245, 228, 214, 0.95);                    -fx-background-radius:12;                    -fx-border-radius:12;" />
 
-            <GridPane alignment="TOP_LEFT" hgap="10" maxWidth="440" vgap="10">
+            <GridPane alignment="CENTER" hgap="10" maxWidth="440" vgap="10">
                 <padding>
                     <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
                 </padding>
@@ -135,7 +135,7 @@
 
 
         <!-- Payment selection header (large underline) -->
-        <VBox alignment="CENTER_LEFT" prefWidth="520" spacing="6">
+        <VBox alignment="CENTER" prefWidth="520" spacing="6">
             <Label style="-fx-font-size:24; -fx-font-weight:bold; -fx-underline:true;" text="SELECT PAYMENT METHOD" />
             <Separator prefWidth="520" />
         </VBox>
@@ -157,4 +157,12 @@
             <Button fx:id="btnSubmit" onAction="#confirmSelection" prefHeight="52" prefWidth="140" styleClass="pay" text="Pay" />
         </HBox>
     </VBox>
-</HBox>
+   <columnConstraints>
+      <ColumnConstraints percentWidth="48.0" />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints valignment="TOP" vgrow="ALWAYS" />
+   </rowConstraints>
+</GridPane>

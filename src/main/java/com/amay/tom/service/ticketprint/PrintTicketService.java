@@ -1,7 +1,11 @@
 package com.amay.tom.service.ticketprint;
 
+import com.amay.printer.PayReceipt;
 import com.amay.printer.PrinterCommandDispatcher;
+import com.amay.printer.Response.BaseResponse;
+import com.amay.printer.Response.ImagePrintResponse;
 import com.amay.tom.agent.Agent;
+import com.amay.tom.config.SystemConfig;
 import com.amay.tom.listener.PrintProgressListener;
 import com.amay.tom.model.GeneratedTicket;
 import com.amay.tom.model.QRTicket;
@@ -18,6 +22,7 @@ import com.amay.tom.service.qrservice.QRService;
 import com.amay.tom.utils.folder.NewFolder;
 import com.amay.tom.utils.image.ImageUtils;
 import com.amay.tom.utils.time.TimeUtil;
+import com.amay.tvm.backend.enums.LoggerTag;
 import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
@@ -26,6 +31,8 @@ import org.tinylog.Logger;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class PrintTicketService {
@@ -47,23 +54,6 @@ public class PrintTicketService {
     }
 
     public void printTicket(PrintProgressListener listener) {
-        if(generatedTicket.isEmpty())return;
-        if(this.generatedTicket.getFirst() instanceof AdjustedTicket){
-            Logger.debug("Adjusted Ticket info :"+this.generatedTicket.getFirst().toString());
-            TicketInfo ticketInfo= ((AdjustedTicket) this.generatedTicket.getFirst()).getTicketInfo();
-            UIQRTicket uiqrTicket = new UIQRTicket();
-            uiqrTicket.setTicketId(ticketInfo.getQrTicketV2().getTicketId());
-            uiqrTicket.setIssuedAt(TimeUtil.epochMilliToFormattedSystemTime(String.valueOf(ticketInfo.getQrTicketV2().getIssueAt()), "dd-MM-yyyy HH:mm:ss"));
-            uiqrTicket.setValidUntil(TimeUtil.epochMilliToFormattedSystemTime(String.valueOf(ticketInfo.getQrTicketV2().getValidUntil()), "dd-MM-yyyy HH:mm:ss"));
-            uiqrTicket.setPrice(String.valueOf(ticketInfo.getQrTicketV2().getAmount()));
-            uiqrTicket.setQuantity(String.valueOf(ticketInfo.getQrTicketV2().getQuantity()));
-            uiqrTicket.setSource(ticketInfo.getQrTicketV2().getInStation().getStationName());
-            uiqrTicket.setDestination(ticketInfo.getQrTicketV2().getOutStation().getStationName());
-            uiqrTicket.setTicketType(ticketInfo.getQrTicketV2().getTicketType());
-            uiqrTicket.setQrCode(this.getQRImage(((AdjustedTicket) this.generatedTicket.getFirst()).getEncryptedQR(), ticketInfo.getQrTicketV2().getTicketId()));
-            uiqrTicket.setQrData(ticketInfo.getQrData());
-            this.uiqrTickets.add(uiqrTicket);
-        }else {
             for (GeneratedTicket ticket : generatedTicket) {
                 PostGeneratedTicket postGeneratedTicket = (PostGeneratedTicket) ticket;
                 UIQRTicket uiqrTicket = new UIQRTicket();
@@ -79,17 +69,53 @@ public class PrintTicketService {
                 uiqrTicket.setQrData(postGeneratedTicket.getQrCodeString());
                 this.uiqrTickets.add(uiqrTicket);
             }
-            this.tempPrintTicket(listener,this.uiqrTickets.size());
+                printTicketWithReceipt(listener);
+    }
 
+    private void printTicketWithReceipt(PrintProgressListener runnable){
+        AtomicInteger count = new AtomicInteger();
+        List<QRTicket> qrTickets = getQrTickets();
+        ImagePrintResponse response=(ImagePrintResponse)PrinterCommandDispatcher.INSTANCE.printText(qrTickets,paymentResponse.getDenomination()>0?new PayReceipt() {
+            @Override
+            public String formatedText() {
+        String formated= """ 
+                                    
+                                    PAYMENT RECEIPT
+                                 
+                        Denomination    : %s
+                        Order Id        : %s
+                        Transaction Id  : %s
+                        Payment Mode    : %s
+                        Amount          : %s
+                        Status          : %s
+                        Date-Time       : %s
+                        TVM             : %s  
+                        """;
+        return String.format(formated,paymentResponse.getDenomination(),paymentResponse.getOrderId(),paymentResponse.getTransactionId().split("-")[1],paymentResponse.getPaymentMode(),paymentResponse.getAmount(),paymentResponse.isSuccess()?"SUCCESS":"FAILED",paymentResponse.getTransactionTime(), SystemConfig.getInstance().getCurrentEquipment().getEquipmentId());
+            }
+        }:null);
+
+        if(!response.isSuccess()){
+            Logger.tag(LoggerTag.APP).error("Could not print all tickets :{}", Arrays.toString(response.getImagesName().toArray()));
         }
 
+    }
 
+    private List<QRTicket> getQrTickets() {
+        List<QRTicket> qrTickets=new ArrayList<>();
+        for (UIQRTicket uiqrTicket : uiqrTickets) {
+            QRTicket qrTicket = new QRTicket(uiqrTicket.getTicketId(), uiqrTicket.getIssuedAt(), uiqrTicket.getValidUntil(), uiqrTicket.getSource(), uiqrTicket.getDestination(), uiqrTicket.getTicketType().getTicketTypeName(), paymentResponse.getPaymentMode(), uiqrTicket.getPrice(), uiqrTicket.getQrCode());
+            qrTicket.setQty(Integer.parseInt(uiqrTicket.getQuantity()));
+            qrTicket.setQrCodeData(uiqrTicket.getQrData());
+           qrTickets.add(qrTicket);
+        }
+        return qrTickets;
     }
 
     private void tempPrintTicket(PrintProgressListener runnable, int size){
         AtomicInteger count = new AtomicInteger();
         for (UIQRTicket uiqrTicket : uiqrTickets) {
-            QRTicket qrTicket = new QRTicket(uiqrTicket.getTicketId(), uiqrTicket.getIssuedAt(), uiqrTicket.getValidUntil(), uiqrTicket.getSource(), uiqrTicket.getDestination(), uiqrTicket.getTicketType().getTicketTypeName(), "Cash", uiqrTicket.getPrice(), uiqrTicket.getQrCode());
+            QRTicket qrTicket = new QRTicket(uiqrTicket.getTicketId(), uiqrTicket.getIssuedAt(), uiqrTicket.getValidUntil(), uiqrTicket.getSource(), uiqrTicket.getDestination(), uiqrTicket.getTicketType().getTicketTypeName(), paymentResponse.getPaymentMode(), uiqrTicket.getPrice(), uiqrTicket.getQrCode());
             qrTicket.setQty(Integer.parseInt(uiqrTicket.getQuantity()));
             qrTicket.setQrCodeData(uiqrTicket.getQrData());
 //            try {

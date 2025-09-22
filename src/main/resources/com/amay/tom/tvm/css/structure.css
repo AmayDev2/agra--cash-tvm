@@ -28,6 +28,10 @@
     -fx-translate-y: 2px;
 }
 
+.page-view{
+ -fx-padding: 20 20 20 20;
+}
+
 
 
 .nav-button {
@@ -35,6 +39,8 @@
     -fx-border-radius: 16px;
     -fx-border-color: rgba(0,0,0,0.06);
     -fx-border-width: 1;
+     -fx-pref-width: 250px;   /* width */
+     -fx-pref-height: 60px;   /* height */
 
     -fx-text-fill: #fff;
     -fx-font-family: 'Segoe UI', 'Arial';
@@ -53,12 +59,17 @@
 }
 
 .heading-label {
-    -fx-font-family: 'Segoe UI', 'Arial';
-    -fx-font-size: 24px;
+    -fx-font-size: 34px;
     -fx-font-weight: bold;
     -fx-alignment: center;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0, 0, 2);
 }
+
+.msg-label {
+    -fx-font-size: 24px;
+    -fx-alignment: center;
+}
+
 
 .numpad {
     -fx-background-radius:10;

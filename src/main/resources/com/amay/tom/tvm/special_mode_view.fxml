@@ -21,15 +21,6 @@
            GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="0"
            GridPane.valignment="CENTER"/>
 
-    <!-- Back Button -->
-    <!--        <HBox alignment="CENTER" spacing="10.0" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="2">-->
-    <!--            <children>-->
-    <!--      -->
-    <!--              &lt;!&ndash; Call Help Button &ndash;&gt;-->
-    <!--              <Button fx:id="callHelpButton" onAction="#onCallHelp" styleClass="button-emergency" text="Call for Help" />-->
-    <!--                <Button fx:id="backButton" onAction="#onBackToHome" styleClass="button-back" text="Back to Home" />-->
-    <!--            </children>-->
-    <!--        </HBox>-->
     <Label fx:id="messageLabel" styleClass="message_label" text="Please leave the Station Immediately"
            GridPane.columnIndex="0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="2"
            GridPane.valignment="CENTER"/>

@@ -321,4 +321,16 @@ public class TimeUtil {
         return now.toEpochMilli();
     }
 
+    public static String epochMilliToFormattedSystemLocalDateTime(long transactionTimeEpoch, String format) {
+        // Convert epoch millis to LocalDateTime in system default zone
+        LocalDateTime dateTime = LocalDateTime.ofInstant(
+                Instant.ofEpochMilli(transactionTimeEpoch),
+                ZoneId.systemDefault()
+        );
+
+        SimpleDateFormat formatter = new SimpleDateFormat(format==null?DATE_FORMAT:format);
+        return formatter.format(new Date(transactionTimeEpoch));
+
+
+    }
 }

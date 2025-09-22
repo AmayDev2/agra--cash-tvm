@@ -111,6 +111,27 @@ public class TransactionRepositoryImpl extends TransactionRepository {
         return transactions;
     }
 
+    @Override
+    public boolean verify(String orderId, String transactionId, int amount) {
+        boolean isValid = false;
+        try (PreparedStatement pstmt = connection.prepareStatement(VERIFY_PAYMENT_TRANSACTION)) {
+            // assuming your query has 4 placeholders: status, orderId, transactionId, amount
+            pstmt.setString(1, TransactionStatus.SUCCESS.name());
+            pstmt.setString(2, orderId);
+            pstmt.setString(3, transactionId);
+            pstmt.setInt(4, amount);
+
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    isValid= rs.getBoolean("isValid"); // <-- column alias from query
+                }
+            }
+        } catch (SQLException e) {
+            Logger.debug("Error executing query: {}", e.getMessage(), e);
+        }
+        return isValid;
+    }
+
     private TransactionEntity mapRow(ResultSet rs) throws SQLException {
         TransactionEntity TransactionEntity = new TransactionEntity();
         TransactionEntity.setId(rs.getString("transactionUniqueId"));

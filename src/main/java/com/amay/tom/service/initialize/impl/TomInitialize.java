@@ -408,8 +408,8 @@ public class TomInitialize implements ITomInitialize {
                 Thread.sleep(1000);
 
                 // 7. Update Software
-                if(this.updateSoftware((versionService.getExpected()!=null) && (!versionService.getMasterConfigInfoCheck().isTomSwVer()))) {
-                    versionService.getActual().setTomSwVer(versionService.getExpected().getTomSwVer());
+                if(this.updateSoftware((versionService.getExpected()!=null) && (!versionService.getMasterConfigInfoCheck().isTvmSwVer()))) {
+                    versionService.getActual().setTvmSwVer(versionService.getExpected().getTvmSwVer());
                 }
                 progress += 0.05;
                 this.updateUI(progress, "Software update done.");
@@ -679,7 +679,7 @@ public class TomInitialize implements ITomInitialize {
             Logger.error(e.getMessage());
         }
         if(null== myMasterConfigInfoDTO) myMasterConfigInfoDTO = new MasterConfigInfoDTO();
-        myMasterConfigInfoDTO.setTomSwVer(this.agent.getVersions().getVersion());
+        myMasterConfigInfoDTO.setTvmSwVer(this.agent.getVersions().getVersion());
 
 
         // call Version service to get boolean
@@ -700,7 +700,7 @@ public class TomInitialize implements ITomInitialize {
         String vendor   = pkg.getImplementationVendor();
         this.agent.setVersions(
                 new Versions(
-                        version==null ? "1.6.4" : version
+                        version==null ? "1.1.0" : version
                 )
         );
     }

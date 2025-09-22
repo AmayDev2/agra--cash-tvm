@@ -22,6 +22,8 @@ import java.util.ArrayList;
 public class SessionCompletion {
     public Label totalAmount;
     public Label remainedAmount;
+    @FXML private Label msgDisp;
+    private String messageToShow;
 
     @FXML private Label eventTitle;
     @FXML private ImageView event;
@@ -44,12 +46,14 @@ public class SessionCompletion {
         if(image!=null){
             event.setImage(new Image(image));
             eventTitle.setText(eventTitleText);
+            msgDisp.setText(messageToShow);
         }
 
     }
 
     public void printTicket(){
-        new Thread(()-> Platform.runLater(()-> this.printTicketService.printTicket((x,y)-> Logger.tag(LoggerTag.APP).debug("Please wait, printing..."+x+"/"+y)))).start();
+        new Thread(()-> Platform.runLater(()->
+                this.printTicketService.printTicket((x,y)-> Logger.tag(LoggerTag.APP).debug("Please wait, printing..."+x+"/"+y)))).start();
     }
 
 
@@ -58,17 +62,21 @@ public class SessionCompletion {
         this.stackPane=stackPane;
 //        this.borderPane = borderPane;
         printTicketService = new PrintTicketService(generatedTicket, paymentResponse, agent);
+        if(paymentResponse.getDenomination()>0){
+            messageToShow="Collect pay-receipt,for remaining change!!!";
+        }
         if(!paymentResponse.isSuccess()){
-            eventTitleText="Transaction Failed";
+            eventTitleText="Transaction Canceled";
+
             image="/images/tvm/failed.png";
         }
     }
 
 
 
-    public void printReceipt(ActionEvent actionEvent) {
-        actionEvent.consume();
-    }
+//    public void printReceipt(ActionEvent actionEvent) {
+//        actionEvent.consume();
+//    }
 
     public void skipPrintReceipt(ActionEvent actionEvent) {
         this.stackPane.getChildren().clear();

@@ -2,9 +2,9 @@ package com.amay.tom.service.qrService2.impl;
 
 
 import com.amay.tom.config.SystemConfig;
-import com.amay.tom.exceptions.TicketNotGenerated;
 import com.amay.tom.grpc.scugrpc.ScuService;
 import com.amay.tom.model.GeneratedTicket;
+import com.amay.tom.model.payment.PaymentResponse;
 import com.amay.tom.model.session.Shift;
 import com.amay.tom.model.tickets.PostGeneratedTicket;
 import com.amay.tom.model.tickets.PreGeneratadTicket;
@@ -16,6 +16,7 @@ import com.amay.tom.service.qrService2.QRTicketGenerator;
 import com.amay.tom.service.qrService2.TicketInfo;
 import com.amay.tom.threadpool.ThreadPool;
 import com.amay.tom.utils.encription.Base64Encoding;
+import com.amay.tvm.backend.repository.TransactionRepository;
 import org.tinylog.Logger;
 
 import java.util.ArrayList;
@@ -38,8 +39,8 @@ public class PartialOnlineQRTicketGenerator extends QRTicketGenerator {
 
     private static final String delimiter = ":";
 
-    public PartialOnlineQRTicketGenerator(TicketsRepository ticketsRepository, ScuService scuService, Shift shift, ThreadPool threadPool, ScuService ccuService, TicketIdGeneratorService ticketIdGeneratorService, MasterConfigInfo masterConfigInfo) {
-        super(ticketsRepository, scuService, shift,threadPool, ccuService, masterConfigInfo);
+    public PartialOnlineQRTicketGenerator(TicketsRepository ticketsRepository, TransactionRepository transactionRepository, ScuService scuService, Shift shift, ThreadPool threadPool, ScuService ccuService, TicketIdGeneratorService ticketIdGeneratorService, MasterConfigInfo masterConfigInfo) {
+        super(ticketsRepository, transactionRepository, scuService, shift,threadPool, ccuService, masterConfigInfo);
         this.ticketsRepository = ticketsRepository;
         this.ticketIdGeneratorService = ticketIdGeneratorService;
     }
@@ -52,6 +53,7 @@ public class PartialOnlineQRTicketGenerator extends QRTicketGenerator {
         //TODO: remove this insertion
         transactionId=preGeneratadTicket.getPaymentResponse().getTransactionId();
         OrderId= preGeneratadTicket.getProperTicketOrder().getOrderId();
+        PaymentResponse paymentResponse=preGeneratadTicket.getPaymentResponse();
         //preGeneratadTicket.getPaymentResponse().getAmount() will have total amount
         super.verifyPayment(OrderId,transactionId,preGeneratadTicket.getPaymentResponse().getAmount());
 
@@ -59,7 +61,7 @@ public class PartialOnlineQRTicketGenerator extends QRTicketGenerator {
         ArrayList<PostGeneratedTicket> postGeneratedTickets=null;
         postGeneratedTickets= this.getTicketIds(properTicket,OrderId);
 
-        return pushTicket(OrderId,transactionId,postGeneratedTickets);
+        return pushTicket(OrderId,transactionId,postGeneratedTickets,paymentResponse);
 
 
     }

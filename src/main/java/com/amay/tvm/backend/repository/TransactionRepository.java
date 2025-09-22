@@ -33,10 +33,26 @@ public abstract class TransactionRepository {
     protected static final String UPDATE_SQL = "UPDATE " + TABLE_NAME + " SET status=?, subStatus=?, transactionId=?, orderId=?, paymentMode=?, transactionType=?,  updatedAt=?, transactionCompleteTime=?, amount=? WHERE transactionUniqueId=?";
     protected static final String DELETE_BY_ID_SQL = "DELETE FROM " + TABLE_NAME + " WHERE transactionUniqueId = ?";
     protected static final String SELECT_ALL_FROM_SQL = "SELECT * FROM " + TABLE_NAME + " WHERE createdAt >= ? ORDER BY createdAt DESC";
+    protected static final String VERIFY_PAYMENT_TRANSACTION =
+            "SELECT CASE " +
+                    "         WHEN TIMESTAMPDIFF(SECOND, createdAt, NOW()) <= 150 " +
+                    "         THEN TRUE " +
+                    "         ELSE FALSE " +
+                    "       END AS isValid " +
+                    "FROM " + TABLE_NAME + " " +
+                    "WHERE status = ? " +
+                    "  AND orderId = ? " +
+                    "  AND transactionUniqueId = ? " +
+                    "  AND amount = ? " +
+                    "ORDER BY createdAt DESC " +
+                    "LIMIT 1";
+
 
     protected abstract void createTableIfNotExists() throws SQLException;
     public abstract String save(TransactionEntity transaction);
     public abstract TransactionEntity findById(String transactionUniqueId);
     public abstract void update(TransactionEntity transaction);
     public abstract List<TransactionEntity> findAllFrom(Timestamp from);
+
+    public abstract boolean verify(String orderId, String transactionId, int amount);
 }

@@ -43,4 +43,9 @@ public class BNRListener implements IBNRListener {
     public void disableCancelButton() {
         controller.disableCancelButton();
     }
+
+    @Override
+    public void getAcceptedAmount() {
+
+    }
 }
