@@ -6,6 +6,7 @@ import com.amay.tom.model.GeneratedTicket;
 import com.amay.tom.model.payment.PaymentResponse;
 import com.amay.tom.service.ticketprint.PrintTicketService;
 import com.amay.tvm.backend.enums.LoggerTag;
+import javafx.animation.PauseTransition;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -42,6 +43,7 @@ public class SessionCompletion {
     @FXML
     void initialize(){
 
+        revert();
         gridPane= (GridPane) this.stackPane.getChildren().getFirst();
         if(image!=null){
             event.setImage(new Image(image));
@@ -73,15 +75,26 @@ public class SessionCompletion {
     }
 
 
+    PauseTransition pauseTransition;
 
-//    public void printReceipt(ActionEvent actionEvent) {
-//        actionEvent.consume();
-//    }
+    private void revert(){
+        pauseTransition= new PauseTransition(javafx.util.Duration.seconds(10));
+        pauseTransition.setOnFinished(event -> {
+            close();
+        });
+        pauseTransition.play();
 
-    public void skipPrintReceipt(ActionEvent actionEvent) {
+    }
+
+    private void close(){
         this.stackPane.getChildren().clear();
         this.stackPane.getChildren().add(gridPane);
-//        this.borderPane.setCenter(this.stackPane);
+    }
+
+
+
+    public void skipPrintReceipt(ActionEvent actionEvent) {
+        pauseTransition.jumpTo(pauseTransition.getTotalDuration());
         actionEvent.consume();
     }
 }
