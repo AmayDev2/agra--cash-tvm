@@ -344,6 +344,7 @@ public class PaymentController {
 
     @FXML
     private void confirmTicket(){
+        quantity=Math.max(quantity,minTicket);
         if (SystemConfig.getInstance().getCurrentStation() != null && selectedDestination != null) {
             this.requestedTicket = new RequestedTicket(
                     SystemConfig.getInstance().getCurrentStation(),
@@ -352,7 +353,7 @@ public class PaymentController {
                     quantity
             );
         }
-        labelCount.setText(display.getText());
+        labelCount.setText(String.valueOf(quantity));
         labelFare.setText("₹ " + (fare*quantity));
     }
 
