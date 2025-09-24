@@ -150,9 +150,12 @@ public class TicketSelectionController {
             int desId = Integer.parseInt(this.selectedDestination.getStationId());
             int multiplier = this.ticketType.equals(TicketType.RETURN) ? 2 : 1;
             int fare = FareLine3.distanceMatrix[srcId-1][desId-1]*multiplier;
+            fare*=multiplier;
+            fare=(int)(fare*agent.getBusinessRule().getFareMultiplayer());
+            int finalFare = fare;
             fxmlLoader.setControllerFactory(param -> new PaymentController(
                     this.pane, this.borderPane, this.agent, this.stationData,
-                    this.selectedDestination, this.ticketType ,fare
+                    this.selectedDestination, this.ticketType , finalFare
             ));
             this.pane.getChildren().add(fxmlLoader.load());
         }catch (Exception e) {

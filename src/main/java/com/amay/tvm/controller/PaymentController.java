@@ -4,6 +4,7 @@ import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.config.SystemConfig;
 import com.amay.tom.enums.PaymentMethod;
+import com.amay.tom.exceptions.NotValidTicketToCalculateFare;
 import com.amay.tom.exceptions.PaymentNotDoneException;
 import com.amay.tom.model.GeneratedTicket;
 import com.amay.tom.model.station.Station;
@@ -21,7 +22,10 @@ import com.amay.tom.service.qrService2.QRTicketFactory;
 import com.amay.tom.service.qrService2.QRTicketService;
 import com.amay.tom.service.qrService2.TicketInfo;
 
+import com.amay.tom.utils.env.EnvFile;
+import com.amay.tom.utils.env.EnvLoader;
 import com.amay.tvm.backend.enums.LoggerTag;
+import com.amay.tvm.util.Snackbar;
 import com.amay.utils.TicketUtils;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -145,6 +149,7 @@ public class PaymentController {
     void initialize() {
         try {
             setPaymentOptions();
+            onClickCash.setVisible(EnvFile.getCashButton());
             // Initialize UI labels
             if (SystemConfig.getInstance().getCurrentStation() != null && selectedDestination != null) {
 
@@ -180,7 +185,8 @@ public class PaymentController {
     }
 
     private void setPaymentOptions() {
-            onClickCash.setDisable(!agent.getPeripheralMonitor().isUps_connected());
+            onClickCash.setDisable(!agent.getPeripheralMonitor().isBnr_connected());
+
     }
 
     /**
@@ -363,11 +369,18 @@ public class PaymentController {
     @FXML
     private void confirmSelection(ActionEvent actionEvent) {
         try {
+            if(!agent.getPeripheralMonitor().isPrinter_connected()){
+//                throw new RuntimeException("Printer not connected");
+                Snackbar.INSTANCE.showSnackbar(this.stackPane,"Printer not connected",false,0);
+                return;
+            }
+
             // Get current selection from ToggleGroup
             PaymentMethod currentPaymentMethod =  getSelectedPaymentMethod();
 
             if (currentPaymentMethod == null) {
                 Logger.error("No payment method selected");
+                Snackbar.INSTANCE.showSnackbar(this.stackPane,"No payment method selected",true,0);
                 // TODO: Show user error message
                 return;
             }
@@ -395,7 +408,6 @@ public class PaymentController {
 
         } catch (Exception e) {
             Logger.error("Unexpected error during confirmation: {}", e.getMessage());
-            e.printStackTrace();
         } finally {
             actionEvent.consume();
         }
@@ -575,27 +587,21 @@ public class PaymentController {
      * Calculate fare with error handling
      */
     private int getFare(RequestedTicket requestedTicket) {
-        try {
-            if (requestedTicket == null || requestedTicket.source() == null || requestedTicket.destination() == null) {
-                throw new IllegalArgumentException("Invalid ticket request for fare calculation");
-            }
 
-            int sourceId = Integer.parseInt(requestedTicket.source().getStationId()) - 1;
-            int destId = Integer.parseInt(requestedTicket.destination().getStationId()) - 1;
-
-            int ticketPrice = FareLine3.distanceMatrix[sourceId][destId];
-
-            Logger.info("Ticket price for {} to {}: {}",
-                    requestedTicket.source().getStationName(),
-                    requestedTicket.destination().getStationName(),
-                    ticketPrice);
-
-            return ticketPrice;
-
-        } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
-            Logger.error("Error calculating fare: {}", e.getMessage());
-            throw new RuntimeException("Failed to calculate fare", e);
-        }
+        int FARE_MULTIPLAYER=requestedTicket.ticketType().getFareMultiplayer();
+        int source= Integer.parseInt(requestedTicket.destination().getStationId());
+        int destination=Integer.parseInt(requestedTicket.source().getStationId());
+        Logger.tag(LoggerTag.APP).info("Fare Multiplayer {} source {} destination {} {}",requestedTicket.ticketType().getFareMultiplayer(),source,destination,agent.getBusinessRule().getFareMultiplayer());
+        final int ticketPrice=  switch (requestedTicket.ticketType()) {
+            case SINGLE,RETURN,GROUP,FREE ->
+                    (int)(agent.getBusinessRule().getFareMultiplayer()
+                            *FareLine3.distanceMatrix[ source - 1] [destination - 1]);
+            case PAID ->FareLine3.distanceMatrix[0][FareLine3.distanceMatrix.length - 1]+(int)TicketType.PAID.getProduct().getTicketlessCharges(); // TODO: FATEMULTIPLAYER IS NOT appliwd
+            default -> throw new NotValidTicketToCalculateFare("Not a valid ticket type");
+        };
+        // Multiply by default fare multiplayer
+        Logger.info("Ticket price for {} {}: {}", requestedTicket.source().getStationName(), requestedTicket.destination().getStationName(), ticketPrice);
+        return ticketPrice * FARE_MULTIPLAYER;
     }
 
     private void showWaiting() {

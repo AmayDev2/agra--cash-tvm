@@ -142,9 +142,10 @@
 
         <!-- Payment buttons -->
         <HBox alignment="CENTER" spacing="28">
-            <ToggleButton fx:id="onClickCash" onAction="#handleCash" prefHeight="60.0" prefWidth="150" styleClass="pay-method" text="CASH" />
+
             <ToggleButton fx:id="onClickUPI" onAction="#handleUPI" prefHeight="60.0" prefWidth="150" styleClass="pay-method" text="UPI" />
-            <ToggleButton fx:id="onClickCard" onAction="#handleCard" prefHeight="60.0" prefWidth="150" styleClass="pay-method" text="CARD" />
+            <ToggleButton fx:id="onClickCash" onAction="#handleCash" prefHeight="60.0" prefWidth="150" styleClass="pay-method" text="CASH" />
+            <ToggleButton fx:id="onClickCard" disable="true" onAction="#handleCard" prefHeight="60.0" prefWidth="150" styleClass="pay-method" text="CARD" />
         </HBox>
 
         <!-- Spacer to push bottom buttons -->

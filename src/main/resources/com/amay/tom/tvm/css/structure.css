@@ -143,9 +143,9 @@
 .status-button {
     -fx-background-radius: 50%;     /* makes it circular */
     -fx-min-width: 5px;            /* small width */
-    -fx-min-height: 5px;           /* small height */
+    -fx-min-height: 20px;           /* small height */
     -fx-max-width: 5px;
-    -fx-max-height: 5px;
+    -fx-max-height: 20px;
 
     -fx-padding: 2px;               /* spacing for icon inside */
     -fx-background-color: #f0f0f0;  /* light background (change as needed) */

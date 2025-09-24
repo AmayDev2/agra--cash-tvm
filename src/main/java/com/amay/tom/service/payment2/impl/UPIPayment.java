@@ -24,6 +24,7 @@ public class UPIPayment implements PaymentMedia {
                 .setRemoteTransactionId(UUID.randomUUID().toString())
                 .setPaymentMode(PayMethod.UPI.name())
                 .setSuccess(true)
+//                .setDenomination(10)
                 .setStatus("SUCCESS");
         saveInDbPaymentInitialization(paymentResponse,transactionRepository);
         saveInDbPaymentCompletion(paymentResponse,transactionRepository);

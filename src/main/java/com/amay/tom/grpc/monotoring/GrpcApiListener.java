@@ -65,12 +65,24 @@ public class GrpcApiListener implements RemoteListener {
             Logger.warn("Sending peripheral status is NULL");
             return;
         }
+
+//        deviceStatus[0] = scanner_connected ? 1 : 0;
+//        deviceStatus[1] = printer_connected ? 1 : 0;
+//        deviceStatus[2] = scu_connected ? 1 : 0;
+//        deviceStatus[3] = ccu_connected ? 1 : 0;
+//        deviceStatus[4] = reader_connected ? 1 : 0;
+//        deviceStatus[5] = pdu_connected ? 1 : 0;
+//        deviceStatus[6] =  tvm_main_module_connected ? 1 : 0;
+//        deviceStatus[7] = bnr_connected ? 1 : 0;
         Logger.info("Sending peripheral status to server: "+ Arrays.toString(deviceStatus));
         TVMPeripheralStatus builder = TVMPeripheralStatus.newBuilder()
-                        .setPrinterConnected(deviceStatus[1] == 1)
-                                .setScannerConnected(deviceStatus[0] == 1)
-                                        .setCcuConnected(deviceStatus[2] == 1)
-                                                .build();
+                .setPrinterConnected(deviceStatus[1] == 1)
+                .setScannerConnected(deviceStatus[0] == 1) // MAIN MODULE
+//                .setCcuConnected(deviceStatus[2] == 1)
+                .setPduConnected(deviceStatus[2] == 1)
+                .setCashDrawerConnected(deviceStatus[6]==1)
+                .setUpsConnected(deviceStatus[7]==1)
+                .build();
         grpcControlMonitoringService.sendMessage(RequestHandler.setPeripheralStatus(builder));
 
     }

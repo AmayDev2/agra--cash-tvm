@@ -21,6 +21,8 @@ public class DeviceStatus implements DeviceStatusListener {
 
     private final List<DeviceStatusListener> listeners = new ArrayList<>();
 
+    int[] mDeviceStatus;
+
     public DeviceStatus(DeviceOperationMode currentStatus) {
         this.operationModeDeciderService=new OperationModeDeciderService();
         this.currentStatus = currentStatus;
@@ -28,13 +30,36 @@ public class DeviceStatus implements DeviceStatusListener {
 
     @Override
     public void onDeviceStatusChanged(int[] deviceStatus) {
+        int index ;
+        for(index=0; null!=this.mDeviceStatus && index < deviceStatus.length; index++){
+            if(this.mDeviceStatus[index] != deviceStatus[index])
+                break;
+        }
+
+        if(null==this.mDeviceStatus || index != deviceStatus.length) {
+            this.mDeviceStatus = deviceStatus;
+
         if (deviceStatus[0] == 1) {
             Logger.tag(LoggerTag.APP).debug("Trigger to maintenance");
             notifyListeners(this.operationModeDeciderService.requestAndGetAppliedOperationMode(
                     new OperationMode(OperationModeSource.TRIGGER,DeviceOperationMode.IN_SERVICE)));
-        } else {
+        }
+//        else if (deviceStatus[1] == 0) {
+//            Logger.tag(LoggerTag.APP).debug("Trigger to maintenance");
+//            notifyListeners(this.operationModeDeciderService.requestAndGetAppliedOperationMode(
+//                    new OperationMode(OperationModeSource.PERIPHERAL,DeviceOperationMode.OUT_OF_SERVICE)));
+//
+//        } else if (deviceStatus[1] == 1) {
+//            Logger.tag(LoggerTag.APP).debug("Trigger to maintenance");
+//            notifyListeners(this.operationModeDeciderService.requestAndGetAppliedOperationMode(
+//                    new OperationMode(OperationModeSource.PERIPHERAL,DeviceOperationMode.IN_SERVICE)));
+//
+//        }
+        else {
             notifyListeners(this.operationModeDeciderService.requestAndGetAppliedOperationMode(
                     new OperationMode(OperationModeSource.TRIGGER,DeviceOperationMode.MAINTENANCE)));
+        }
+
         }
     }
 

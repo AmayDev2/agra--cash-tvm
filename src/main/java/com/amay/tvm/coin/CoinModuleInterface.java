@@ -142,7 +142,6 @@ public enum CoinModuleInterface {
 
 	private PollingStatusResponse pollingStatusResponse;
 	public PollingStatusResponse pooling(){
-
 		if(!isPoolingAllowed)return pollingStatusResponse;
 		pollingStatusResponse=(PollingStatusResponse) service.pollStatus();
 		Logger.tag(LoggerTag.APP).info(pollingStatusResponse.toString());

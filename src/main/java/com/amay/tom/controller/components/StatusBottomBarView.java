@@ -55,7 +55,7 @@ public class StatusBottomBarView {
     private void initialize() {
         Logger.debug("StatusBottomBarView initialized");
 //        softwareVersion.setText(versions.getVersion());
-        softwareVersion.setText(masterConfigInfo.getTomSwVer());
+        softwareVersion.setText(masterConfigInfo.getTvmSwVer());
 //        fareTableVersion.setText(masterConfigInfo.getFareConfig());
 //        parameterVersion.setText(masterConfigInfo.getConfigVer());
     }

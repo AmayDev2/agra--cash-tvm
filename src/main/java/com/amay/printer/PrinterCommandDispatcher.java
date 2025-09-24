@@ -2,6 +2,9 @@ package com.amay.printer;
 
 import com.amay.printer.Response.BaseResponse;
 import com.amay.tom.model.QRTicket;
+import com.amay.tvm.backend.enums.LoggerTag;
+import com.custom.wndapijwrap.PrinterStatus;
+import org.tinylog.Logger;
 
 import java.awt.image.BufferedImage;
 import java.util.List;
@@ -34,4 +37,16 @@ public enum PrinterCommandDispatcher {
         return  printerInterface.printImageByText(shiftReportData);
     }
 
+    public PrinterStatus getStatus() {
+        return printerInterface.getStatus();
+    }
+
+    public boolean isConnected() {
+        try {
+            return printerInterface.isConnectedIfNotThenConnect();
+        } catch (Exception e) {
+            Logger.tag(LoggerTag.APP).error(e.getMessage());
+        }
+        return false;
+    }
 }

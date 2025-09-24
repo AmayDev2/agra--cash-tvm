@@ -9,7 +9,7 @@ import java.awt.image.BufferedImage;
 import java.util.List;
 
 public interface PrinterInterface {
-    void getStatus();
+    PrinterStatus getStatus();
     BaseResponse printImage(BufferedImage image);
 
     BaseResponse printImageByText(ShiftReportData shiftReportData);
@@ -27,4 +27,7 @@ public interface PrinterInterface {
 
 
     BaseResponse printTicketsWithPayReceipt(List<QRTicket> qrTickets, PayReceipt payReceipt);
+
+    boolean isConnected() ;
+    boolean isConnectedIfNotThenConnect();
 }

@@ -249,6 +249,11 @@ public class TVMController {
 
     public void onClickSjtButton(ActionEvent actionEvent) {
 //        borderPane.setBottom(null);
+        if(!agent.getPeripheralMonitor().isPrinter_connected()){
+//                throw new RuntimeException("Printer not connected");
+            Snackbar.INSTANCE.showSnackbar(this.stackPane,"Printer not connected",false,0);
+            return;
+        }
 
         FXMLLoader loader=  ViewFactory.getTicketSelectionView();
         loader.setControllerFactory(c -> new TicketSelectionController(borderPane, stackPane, agent, stationData, TicketType.SINGLE));
@@ -262,6 +267,11 @@ public class TVMController {
     }
 
     public void onClickRjtButton(ActionEvent actionEvent) {
+        if(!agent.getPeripheralMonitor().isPrinter_connected()){
+//                throw new RuntimeException("Printer not connected");
+            Snackbar.INSTANCE.showSnackbar(this.stackPane,"Printer not connected",false,0);
+            return;
+        }
 //        borderPane.setBottom(null);
         FXMLLoader loader=  ViewFactory.getTicketSelectionView();
         loader.setControllerFactory(c -> new TicketSelectionController(borderPane, stackPane, agent, stationData, TicketType.RETURN));
@@ -275,6 +285,11 @@ public class TVMController {
     }
 
     public void onClickGtButton(ActionEvent actionEvent) {
+        if(!agent.getPeripheralMonitor().isPrinter_connected()){
+//                throw new RuntimeException("Printer not connected");
+            Snackbar.INSTANCE.showSnackbar(this.stackPane,"Printer not connected",false,0);
+            return;
+        }
 //        borderPane.setBottom(null);
         FXMLLoader loader=  ViewFactory.getTicketSelectionView();
         loader.setControllerFactory(c -> new TicketSelectionController(borderPane, stackPane, agent, stationData, TicketType.GROUP));

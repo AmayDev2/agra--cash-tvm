@@ -514,9 +514,6 @@ public class TomInitialize implements ITomInitialize {
 
 
                 // 21. Peripheral Status
-                this.peripheralDeviceStatus();
-                progress += 0.03;
-                this.updateUI(progress, "Peripheral status pushed.");
 
                 if(envLoader.getEnvironment()) {
                     try {
@@ -529,6 +526,10 @@ public class TomInitialize implements ITomInitialize {
                 }
                 PrinterCommandDispatcher.INSTANCE.setupPrinter();
                 CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort(),agent.getCoinAmountRepository());
+
+                this.peripheralDeviceStatus();
+                progress += 0.03;
+                this.updateUI(progress, "Peripheral status pushed.");
 
                 // 22. Push Remaining Data & Finalize
                 this.pushRemainedDate();
@@ -700,7 +701,7 @@ public class TomInitialize implements ITomInitialize {
         String vendor   = pkg.getImplementationVendor();
         this.agent.setVersions(
                 new Versions(
-                        version==null ? "1.1.1" : version
+                        version==null ? "1.1.3" : version
                 )
         );
     }

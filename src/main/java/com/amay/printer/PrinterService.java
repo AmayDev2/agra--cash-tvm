@@ -15,6 +15,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class PrinterService implements PrinterInterface {
     private CuCustomWndAPIJWrap cucjwrap = null;
@@ -92,6 +93,16 @@ public class PrinterService implements PrinterInterface {
         }
     }
 
+    public boolean isConnectedIfNotThenConnect(){
+        boolean status=isConnected();
+        if(status){
+            var allStatus=getStatus();
+            return  !(allStatus.StsNOPAPER ||allStatus.StsPAPERJAM ||allStatus.StsPAPERROLLING ||allStatus.StsOVERTEMP) ;
+        }
+        openConnection();
+        return false;
+    }
+
     private void openConnection() {
         try
         {
@@ -107,22 +118,15 @@ public class PrinterService implements PrinterInterface {
             USBDevice[] udevArray = cucjwrap.EnumUSBDevices();
             if ((udevArray != null) && (udevArray.length > 0))
             {
-
-
-                //System.out.println("Try to connect USB device: "+udevArray[0]+" ...");
-                //Open the 1st Device found
                 cudev = cucjwrap.OpenPrinterUSB(udevArray[0]);
-                //System.out.println("OK!");
-                //System.out.println("Device Connected");
                 printDeviceInfo(cudev);
             }
             else
-                //System.out.println("No devices found");
                 Logger.tag(LoggerTag.APP).debug("No Printer devices found");
         }
         catch(Exception ctse)
         {
-            //System.out.println("*** EXCEPTION: " + ctse + " ("+ctse.getMessage()+")");
+            Logger.tag(LoggerTag.APP).error("*** EXCEPTION: " + ctse + " ("+ctse.getMessage()+")");
         }
     }
 
@@ -147,14 +151,25 @@ public class PrinterService implements PrinterInterface {
     }
 
     @Override
-    public void getStatus() {
+    public PrinterStatus getStatus() {
 
         try {
-            PrinterStatus ps = cudev.GetPrinterFullStatus();
+            Logger.tag(LoggerTag.APP).debug("Printer status : {}",cudev.GetPrinterFullStatus());
+            return cudev.GetPrinterFullStatus();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
+        return null;
+    }
+
+    public boolean isConnected()  {
+        try {
+            return cudev.PrinterIsReady();
+        }catch (Exception e){
+            Logger.tag(LoggerTag.APP).error("ERROR : ",e.getMessage());
+        }
+        return false;
     }
 
     @Override
@@ -179,8 +194,8 @@ public class PrinterService implements PrinterInterface {
 
 
     private void printImageByPath(){
-        String path= Images.PROJECT_LOGO_FOR_TICKET;
         try {
+            String path = Images.PROJECT_LOGO_FOR_TICKET;
             PrintImageSettings pis = new PrintImageSettings();
             pis.PrintScaleMode = PrintImageSettings.ImageScale.IMAGE_SCALE_NONE;
             pis.ImageAlignMode= PrintImageSettings.ImageAlign.IMAGE_ALIGN_TO_CENTER;
@@ -220,6 +235,7 @@ public class PrinterService implements PrinterInterface {
             });
             imagePrintResponse.setSuccess(true);
             printReceipt(payReceipt);
+            cudev.Eject(CuCustomWndDevice.EjectType.EJ_EJECT);
         }catch(Exception exception){
             Logger.tag(LoggerTag.APP).error("Printer error {}", exception.fillInStackTrace());
         }
@@ -228,6 +244,7 @@ public class PrinterService implements PrinterInterface {
     }
 
     private void printReceipt(PayReceipt payReceipt) throws Exception {
+        if(null==payReceipt)return; 
         this.printImageByPath();
         String formatted = payReceipt.formatedText();
             PrintFontSettings pfs=new PrintFontSettings();

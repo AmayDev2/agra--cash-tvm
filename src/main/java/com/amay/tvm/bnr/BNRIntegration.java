@@ -62,12 +62,12 @@ public class BNRIntegration {
 
     }
 
-//    private static boolean isAllowed;
+    private static boolean isAllowed;
 
     //TODO: FIX THIS METHOD
  public static void cancel(boolean empty) throws JxfsException {
-//     if(!isCancelAllowed)return;
-//     isAllowed=false;
+     if(!isCancelAllowed)return;
+     isAllowed=false;
      bnrListener.informationToShow(BNRMessage.CANCEL_TRYING);
 
         try {
@@ -150,10 +150,14 @@ public class BNRIntegration {
             if(control!=null && helper!=null && control.getStatus().isOpen()  ){
                 Logger.tag(LoggerTag.APP).debug(getDeviceStatus().isBusy()+" "+getDeviceStatus().isUserError()+" "+" "+getDeviceStatus().isNoDevice()+" "+getDeviceStatus().isOnLine()+" "+getDeviceStatus().isHardwareError());
 //                observeModules();
+//                boolean flag=true;
                 ArrayList<Integer> modules = getModules();
                 for (Integer module : modules) {
                     MEIModuleStatus meiModuleStatus=getStatus(module);
                     IModuleState.ModuleOperationalState moduleOperationalState=meiModuleStatus.getModuleOperationalState();
+                    if(!IModuleState.ModuleOperationalState.OS_OPERATIONAL.equals(moduleOperationalState)){
+                        return false;
+                    }
 //                    meiModuleStatus.getElements().getFirst().getElements().getFirst().getElementOperationalState();
                     Logger.tag(LoggerTag.APP).debug("Module " + IIdentification.ModuleIdentificationEnum.getById(module)+" "+moduleOperationalState+" "+meiModuleStatus.getErrorCodeDescription());
                 }
@@ -203,6 +207,7 @@ public class BNRIntegration {
     public static AcceptAmountResponse cashIn(CashPayment paymentInstance,int amount, IBNRListener listener) {
         BNRIntegration.bnrListener=listener;
         isCancelAllowed=true;
+        isAllowed=true;
         helper.resetDisconnected();
         try {
             endCashInTransaction();
@@ -825,7 +830,7 @@ public class BNRIntegration {
         startCashInTransaction();
 
         try {
-            for(int cashInCount=0; cashInCount<MAX_CASH_IN_ATTEMPT && insertedAmount<amount;cashInCount++) {
+            for(int cashInCount=0; isAllowed && cashInCount<MAX_CASH_IN_ATTEMPT && insertedAmount<amount;cashInCount++) {
                 queryDenomination(amount-insertedAmount);
                 data = cashInOneByOne(1, CASH_IN_CURRENCY);
                 insertedAmount+= data.getDenomination().getAmount(); //after cashIn function completion it gives total amount Accepted

@@ -78,20 +78,19 @@ public class PrintTicketService {
         ImagePrintResponse response=(ImagePrintResponse)PrinterCommandDispatcher.INSTANCE.printText(qrTickets,paymentResponse.getDenomination()>0?new PayReceipt() {
             @Override
             public String formatedText() {
-        String formated= """ 
-                                    
+            String formated= """            
                                     PAYMENT RECEIPT
                                  
-                        Denomination    : %s
+                        Denomination    : Rs. %s
                         Order Id        : %s
-                        Transaction Id  : %s
+                        Receipt Id      : %s
                         Payment Mode    : %s
-                        Amount          : %s
+                        Ticket Amount   : Rs. %s
                         Status          : %s
                         Date-Time       : %s
                         TVM             : %s  
                         """;
-        return String.format(formated,paymentResponse.getDenomination(),paymentResponse.getOrderId(),paymentResponse.getTransactionId().split("-")[1],paymentResponse.getPaymentMode(),paymentResponse.getAmount(),paymentResponse.isSuccess()?"SUCCESS":"FAILED",paymentResponse.getTransactionTime(), SystemConfig.getInstance().getCurrentEquipment().getEquipmentId());
+        return String.format(formated,paymentResponse.getDenomination(),paymentResponse.getOrderId(),paymentResponse.getTransactionId().split("-")[0],paymentResponse.getPaymentMode(),paymentResponse.getAmount(),paymentResponse.isSuccess()?"SUCCESS":"FAILED",paymentResponse.getTransactionTime(), SystemConfig.getInstance().getCurrentEquipment().getEquipmentId());
             }
         }:null);
 

@@ -35,7 +35,7 @@ public abstract class TransactionRepository {
     protected static final String SELECT_ALL_FROM_SQL = "SELECT * FROM " + TABLE_NAME + " WHERE createdAt >= ? ORDER BY createdAt DESC";
     protected static final String VERIFY_PAYMENT_TRANSACTION =
             "SELECT CASE " +
-                    "         WHEN TIMESTAMPDIFF(SECOND, createdAt, NOW()) <= 150 " +
+                    "          WHEN (EXTRACT(EPOCH FROM CURRENT_TIMESTAMP) * 1000 - transactionCompleteTime) <= 150000 " +
                     "         THEN TRUE " +
                     "         ELSE FALSE " +
                     "       END AS isValid " +

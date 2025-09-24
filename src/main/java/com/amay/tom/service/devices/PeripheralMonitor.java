@@ -1,5 +1,7 @@
 package com.amay.tom.service.devices;
 
+import com.amay.printer.PrinterCommandDispatcher;
+import com.amay.printer.PrinterService;
 import com.amay.tom.database.RedisConnectionPool;
 import com.amay.tom.enums.ConnectionStatus;
 import com.amay.tom.grpc.monotoring.GrpcApiListener;
@@ -38,9 +40,9 @@ public class PeripheralMonitor implements Runnable {
     @Getter
     private boolean pdu_connected;
     @Getter
-    private boolean cash_drawer_connected;
+    private boolean  tvm_main_module_connected;
     @Getter
-    private boolean ups_connected;
+    private boolean bnr_connected;
     @Getter
     private int[] deviceStatus,previousDeviceStatus;
     private final GrpcApiListener ccuGrpcApiListener;
@@ -71,8 +73,8 @@ public class PeripheralMonitor implements Runnable {
         boolean[] tvm=coinNoduleConnected();
         scanner_connected = tvm[1]; //door
         printer_connected = getPrinterStatus();
-        cash_drawer_connected=tvm[0];
-        ups_connected = bnrConnected();
+        tvm_main_module_connected=tvm[0];
+        bnr_connected = bnrConnected();
         scu_connected = ConnectionStatus.CONNECTED.equals(this.grpcApiListener.getConnectionStatus());
         ccu_connected = ConnectionStatus.CONNECTED.equals(this.ccuGrpcApiListener.getConnectionStatus());
         pdu_connected = poleDisplayConnected();
@@ -83,8 +85,10 @@ public class PeripheralMonitor implements Runnable {
         deviceStatus[3] = ccu_connected ? 1 : 0;
         deviceStatus[4] = reader_connected ? 1 : 0;
         deviceStatus[5] = pdu_connected ? 1 : 0;
-        deviceStatus[6] = cash_drawer_connected ? 1 : 0;
-        deviceStatus[7] = ups_connected ? 1 : 0;
+        deviceStatus[6] =  tvm_main_module_connected ? 1 : 0;
+        deviceStatus[7] = bnr_connected ? 1 : 0;
+//        deviceStatus[8] = overhead_display ? 1 : 0;
+//        deviceStatus[9] = ups_connected ? 1 : 0;
 
         Logger.tag(LoggerTag.APP).info("Peripherals status: {}", Helper.ObjectToJson(deviceStatus));
 
@@ -120,7 +124,8 @@ public class PeripheralMonitor implements Runnable {
         } catch (Exception e) {
             Logger.tag(LoggerTag.APP).error(e.getMessage());
         }
-        return new boolean[]{false,true};
+        return new boolean[]{false,EnvFile.
+                getMainModuleBit()};
     }
 
 
@@ -210,7 +215,7 @@ public class PeripheralMonitor implements Runnable {
     }
 
     public static boolean getPrinterStatus() {
-        return PrinterStatus.getPrinterStatus();
+       return PrinterCommandDispatcher.INSTANCE.isConnected();
     }
 
     public static boolean getInternetStatus() {

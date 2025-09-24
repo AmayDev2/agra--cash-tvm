@@ -2,6 +2,7 @@ package com.amay.tom.utils.env;
 
 import com.amay.tom.config.ENVURL;
 import com.amay.tom.config.Env;
+import com.amay.tvm.backend.enums.LoggerTag;
 import io.github.cdimascio.dotenv.Dotenv;
 import org.tinylog.Logger;
 
@@ -182,6 +183,18 @@ public class EnvFile {
             }
             return value;
         }
+
+    public static boolean getCashButton() {
+        boolean value = Boolean.parseBoolean(String.valueOf(dotenv.get("IS_CASH_SUPPORT") == null));
+        return value;
+
+    }
+
+    public static boolean getMainModuleBit() {
+        boolean value = Boolean.parseBoolean(String.valueOf(dotenv.get("MAIN_MODULE") != null));
+        Logger.tag(LoggerTag.APP).info("MAIN MODULE {}",value);
+        return value;
+    }
 
 //        public static String getMasterConfigFile() {
 //            String value = dotenv.get("MASTER_CONFIG_FILE");
