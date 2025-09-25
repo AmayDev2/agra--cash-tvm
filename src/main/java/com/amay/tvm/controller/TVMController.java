@@ -303,6 +303,7 @@ public class TVMController {
     }
 
     public void onClickNcmc(ActionEvent actionEvent) {
+        this.agent.getInternalListener().EOShift();
     }
 
     public void onClickBalanceUpdate(ActionEvent actionEvent) {

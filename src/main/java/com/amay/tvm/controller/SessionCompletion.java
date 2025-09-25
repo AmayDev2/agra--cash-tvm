@@ -16,9 +16,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
+import org.h2.util.Task;
 import org.tinylog.Logger;
 
 import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
 
 public class SessionCompletion {
     public Label totalAmount;
@@ -31,12 +33,13 @@ public class SessionCompletion {
 
     private  String eventTitleText;
     private  String image;
+    private final ExecutorService executorService;
 
 
 //    private BorderPane borderPane;
-    private StackPane stackPane;
+    private final StackPane stackPane;
     private GridPane gridPane;
-    private PrintTicketService printTicketService;
+    private final PrintTicketService printTicketService;
 
 
 
@@ -54,22 +57,25 @@ public class SessionCompletion {
     }
 
     public void printTicket(){
-        new Thread(()-> Platform.runLater(()->
-                this.printTicketService.printTicket((x,y)-> Logger.tag(LoggerTag.APP).debug("Please wait, printing..."+x+"/"+y)))).start();
+        executorService.submit(new Task() {
+            @Override
+            public void call() throws Exception {
+                printTicketService.printTicket((x,y)-> Logger.tag(LoggerTag.APP).debug("Please wait, printing..."+x+"/"+y));
+            }
+        });
     }
 
 
     public SessionCompletion(StackPane stackPane, BorderPane borderPane,ArrayList<GeneratedTicket> generatedTicket,
                              PaymentResponse paymentResponse, Agent agent){
         this.stackPane=stackPane;
-//        this.borderPane = borderPane;
+        this.executorService=agent.getThreadPool().getFixedThreadPool();
         printTicketService = new PrintTicketService(generatedTicket, paymentResponse, agent);
         if(paymentResponse.getDenomination()>0){
             messageToShow="Collect pay-receipt,for remaining change!!!";
         }
         if(!paymentResponse.isSuccess()){
             eventTitleText="Transaction Canceled";
-
             image="/images/tvm/failed.png";
         }
     }

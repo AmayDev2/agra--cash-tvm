@@ -27,18 +27,32 @@ import com.amay.tom.utils.env.EnvLoader;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.util.Snackbar;
 import com.amay.utils.TicketUtils;
+import javafx.animation.Animation;
+import javafx.animation.FadeTransition;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Platform;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.effect.GaussianBlur;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.util.Duration;
 import org.tinylog.Logger;
 
+import java.awt.*;
 import java.io.IOException;
 import java.time.Instant;
 import java.util.ArrayList;
@@ -401,7 +415,6 @@ public class PaymentController {
                 return;
             }
 //            buttonsDisability(true);
-//
             Logger.info("Confirming payment selection: {}", this.paymentMethod);
             this.createTicketRequest(requestedTicket);
 
@@ -605,28 +618,56 @@ public class PaymentController {
     }
 
     private void showWaiting() {
-
-//        // Create spinner
+        // === Spinner ===
         ProgressIndicator spinner = new ProgressIndicator();
-        spinner.setStyle(
-                "-fx-progress-color: cyan;" +  // updated color
-                        "-fx-scale-x: 8;" +
-                        "-fx-scale-y: 8;"
-        );
+        spinner.setPrefSize(120, 120);
+        spinner.setMinSize(120, 120);
+        spinner.setMaxSize(120, 120);
+        spinner.setStyle("-fx-progress-color: #ff9a00; -fx-scale-x: 4; -fx-scale-y: 4;");
+        spinner.setEffect(new DropShadow(30,  Color.web("#ff9a00")));
 
-        // Create text label
+        // === Loading Text ===
         Label loadingText = new Label("Generating Tickets...");
-        loadingText.setStyle("-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: gold;"); // complementary color
+        loadingText.setStyle("-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: gold;");
+//        loadingText.setEffect(new DropShadow(10, Color.BLACK));
 
-        // Put both inside a StackPane
-        StackPane spinnerWithText = new StackPane(spinner, loadingText);
-        StackPane.setAlignment(loadingText, Pos.CENTER);
+        // Animated dots
+        Timeline timeline = new Timeline(
+                new KeyFrame(Duration.seconds(0.5), e -> loadingText.setText("Generating Tickets.")),
+                new KeyFrame(Duration.seconds(1.0), e -> loadingText.setText("Generating Tickets..")),
+                new KeyFrame(Duration.seconds(1.5), e -> loadingText.setText("Generating Tickets..."))
+        );
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
 
-        // Optional: semi-transparent background
-        spinnerWithText.setStyle("-fx-background-color: rgba(0, 0, 0, 0.3);");
+        // === Layout (Spinner + Text) ===
+//        VBox content = new VBox(20, spinner, loadingText);
+//        content.setAlignment(Pos.CENTER);
 
-        // Add overlay
-        Platform.runLater(()->this.stackPane.getChildren().add(spinnerWithText));
+        // === Overlay ===
+        StackPane overlay = new StackPane();
+        overlay.getChildren().add(spinner);
+        overlay.getChildren().add(loadingText);
+        overlay.setStyle("-fx-background-color: rgba(0, 0, 0, 0.4);");
+        overlay.setOpacity(0); // start transparent
+
+        // === Fade In Animation ===
+        FadeTransition fadeIn = new FadeTransition(Duration.seconds(.6), overlay);
+        fadeIn.setFromValue(0);
+        fadeIn.setToValue(1);
+
+        // === Add first, then animate ===
+        Platform.runLater(() -> {
+            this.stackPane.getChildren().add(overlay);
+//            this.stackPane.setEffect(new GaussianBlur(15));
+            fadeIn.playFromStart();  // ensure it starts
+        });
+
+
+
+
+
+
 
 //        FXMLLoader fxmlLoader = ViewFactory.getTxnProcess();
 //
@@ -716,7 +757,13 @@ public class PaymentController {
             showWaiting();
             Logger.info("Payment response: {}", paymentResponse);
             // Generate and process tickets
-            this.processTicketsAndNavigate(properTicketOrder, paymentResponse);
+            agent.getThreadPool().getFixedThreadPool().submit(new Task<>(){
+                @Override
+                protected Void call() throws Exception {
+                    processTicketsAndNavigate(properTicketOrder, paymentResponse);
+                    return null;
+                }
+            });
         }
 
     }
@@ -726,6 +773,7 @@ public class PaymentController {
      */
     private void processTicketsAndNavigate(ProperTicketOrder properTicketOrder, PaymentResponse paymentResponse) {
         try {
+            Thread.sleep(15000);
             QRTicketService qrTicketService = QRTicketFactory.getQRService(new AbstractQRTicketGenerator(), agent);
 
             TicketInfo ticketInfo = new TicketInfo();
@@ -769,11 +817,11 @@ public class PaymentController {
             Logger.info("Successfully navigated to completion screen");
 
         }catch (PaymentNotDoneException paymentNotDoneException) {
-            Logger.error("Error processing tickets and navigation: {}", paymentNotDoneException.getMessage());
+            Logger.error("Payment Frode: {}", paymentNotDoneException.getMessage());
             // Generate Pay receipt
             this.paymentFailedAndNavigate(properTicketOrder, paymentResponse);
 
-        }catch (RuntimeException e) {
+        }catch (RuntimeException | InterruptedException e) {
             Logger.error("Error processing tickets and navigation: {}", e.getMessage());
             this.paymentFailedAndNavigate(properTicketOrder, paymentResponse);
         }

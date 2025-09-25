@@ -97,7 +97,7 @@ public class BNRIntegration {
      */
 
 
-    public  static boolean Main(String[] args) {
+    public  static void main(String[] args) {
 
         initializeBnrController();
 
@@ -127,6 +127,7 @@ public class BNRIntegration {
                             long amountToChange = acceptedAmount - CASH_IN_AMOUNT;
                             dispenseAndPresent(amountToChange);
                         }//if
+
                     }
                     case "QUERY"->{
                         observeCashUnit();
@@ -142,7 +143,7 @@ public class BNRIntegration {
         }//try
 
 //        System.exit(0);
-        return true;
+//        return true;
     }//main
 
     public static boolean isConnected(){
@@ -252,18 +253,13 @@ public class BNRIntegration {
             acceptedAmount.setActualCoinChangedAmount((coinModuleResponse.amountDispensed) * 100L);
         }
 
-
-
         return acceptedAmount;
     }//main
 
 
-    private static void eject() throws JxfsException {
-        var event=helper.run(new ISynchronousOperation() {
-            public int run(JxfsATM control) throws JxfsException {
-                return control.shutterMove(true,1);
-            }//run
-        });
+    private static void cancelWaiting()  {
+
+
     }
 
     private static void updateDenomination(Vector denominationInfo) throws JxfsException {

@@ -4,6 +4,7 @@ import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.coin.CoinModuleInterface;
 import com.amay.tvm.coin.service.HoppersRegistry;
+import com.amay.tvm.util.ThreadPool;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -89,7 +90,7 @@ public class CoinRagistoryPageController {
         spinner.setMaxSize(500, 500); // optional: size
         spinner.setStyle("-fx-progress-color: blue;"); // optional: color
         sceneManager.addWaiting(spinner);
-        com.amay.tvm.util.ThreadPool threadPool= com.amay.tvm.util.ThreadPool.getInstance();
+        ThreadPool threadPool= ThreadPool.getInstance();
 
         // Show spinner
         spinner.setVisible(true); // your ProgressIndicator in FXML

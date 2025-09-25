@@ -64,7 +64,7 @@
                     <Rectangle arcHeight="12" arcWidth="12" height="360" style="-fx-fill: rgba(120,120,120,0.72); -fx-stroke: transparent;" width="12" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.rowSpan="3" />
 
                     <!-- RIGHT column buttons -->
-                    <Button fx:id="ncmcButton" disable="true" onAction="#onClickNcmc" prefHeight="80.0" prefWidth="340.0" styleClass="main-button" text="NCMC Topup" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                    <Button fx:id="ncmcButton"  onAction="#onClickNcmc" prefHeight="80.0" prefWidth="340.0" styleClass="main-button" text="NCMC Topup" GridPane.columnIndex="2" GridPane.rowIndex="0" />
 
                     <Button fx:id="balanceUpdateButton" disable="true" onAction="#onClickBalanceUpdate" prefHeight="80.0" prefWidth="340.0" styleClass="main-button" text="Balance Update" GridPane.columnIndex="2" GridPane.rowIndex="1" />
 
