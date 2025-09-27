@@ -96,7 +96,7 @@ public class PeripheralMonitor implements Runnable {
 
         // notify the all subscribers/listeners
         for (DeviceStatusListener listener : listeners) {
-            Logger.tag(LoggerTag.APP).debug("Pushing stratus to: {} {}", listeners.size(),listener);
+            Logger.tag(LoggerTag.APP).debug("Pushing status to: {} {}", listeners.size(),listener);
             try {
                 listener.onDeviceStatusChanged(deviceStatus);
             }catch (Exception e){

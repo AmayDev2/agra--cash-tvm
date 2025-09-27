@@ -32,7 +32,7 @@ public enum CoinModuleInterface {
 		try{
 			service.connect(comPort);
 		} catch (Exception e) {
-			e.printStackTrace();
+			Logger.tag(LoggerTag.APP).error("{}",e.fillInStackTrace());
 		}
 	}
 

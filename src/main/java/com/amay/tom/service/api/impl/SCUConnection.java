@@ -7,6 +7,7 @@ import com.amay.tom.config.URLS;
 import com.amay.tom.model.PeripheralStatus;
 import com.amay.tom.service.api.IApi;
 import com.amay.tom.utils.helper.Helper;
+import com.amay.tvm.backend.enums.LoggerTag;
 import org.tinylog.Logger;
 
 import java.util.Objects;
@@ -92,7 +93,7 @@ public enum SCUConnection implements IApi {
             apiRequest.createGetRequest(URLS.GET_ALL_USER_WITH_PROFILE.replace("192.168.1.43:5000", IP + ":" + PORT));
             return apiClient.sendRequest(apiRequest.buildRequest());
         }catch (RuntimeException ex){
-            ex.printStackTrace();
+            Logger.tag(LoggerTag.APP).error("{}", (Object) ex.getStackTrace());
         }
         return null;
 

@@ -1,5 +1,8 @@
 package com.amay.tom.api;
 
+import com.amay.tvm.backend.enums.LoggerTag;
+import org.tinylog.Logger;
+
 import java.io.IOException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -83,7 +86,7 @@ public class ApiClient {
 
             return this.httpClient.send(request, HttpResponse.BodyHandlers.ofString()).body();
         } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
+            Logger.tag(LoggerTag.APP).error(e.getMessage());
         }
         return null;
     }

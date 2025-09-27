@@ -206,7 +206,7 @@ public class PrinterService implements PrinterInterface {
 
             cudev.PrintImageFromPath(path,pis);
         } catch (Exception e) {
-            e.printStackTrace();
+            Logger.tag(LoggerTag.APP).error(e.getMessage());
         }
     }
 
@@ -541,10 +541,8 @@ public class PrinterService implements PrinterInterface {
             pbs.HRIPosition= PrintBarcodeSettings.BarcodeHRIPosition.BARCODE_HRI_TOP;
             pbs.AlignMode= PrintBarcodeSettings.BarcodeAlign.BARCODE_ALIGN_TO_CENTER;
             cudev.PrintBarcode(qrString,pbs);
-        } catch (CuCustomWndAPIJWrapException e) {
-            e.printStackTrace();
         } catch (Exception e) {
-            e.printStackTrace();
+            Logger.tag(LoggerTag.APP).error(e.getMessage());
         }
     }
 

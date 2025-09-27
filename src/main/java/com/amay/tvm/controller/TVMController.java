@@ -94,10 +94,9 @@ public class TVMController {
         this.stackPane.getChildren().addListener((ListChangeListener<Node>) change -> {
             while (change.next()) {
                 if (this.stackPane.getChildren().size() == 1) {
-                    System.out.println("StackPane now has only 1 node: " + this.stackPane.getChildren().getFirst());
-                    this.addBottomBarView();
+                    this.showBottomBarView();
                 }else{
-                    this.borderPane.setBottom(null);
+                    this.hideBottomBarView();
                 }
             }
         });
@@ -106,6 +105,20 @@ public class TVMController {
         this.updatePeakHour(ZonedDateTime.now(ZoneId.systemDefault()));
         boolean isWeekDay=this.agent.getBusinessRule().getToday().getDayType().equals("WEEKDAYS");
         this.updateDateTime(isWeekDay);
+    }
+
+    private void showBottomBarView() {
+        if (borderPane.getBottom() != null) {
+            borderPane.getBottom().setVisible(true);
+            borderPane.getBottom().setManaged(true);
+        }
+    }
+
+    private void hideBottomBarView() {
+        if (borderPane.getBottom() != null) {
+            borderPane.getBottom().setVisible(false);
+            borderPane.getBottom().setManaged(false);
+        }
     }
 
     private static boolean timeout=false;
