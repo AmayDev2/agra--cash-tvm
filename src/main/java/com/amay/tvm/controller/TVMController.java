@@ -17,9 +17,11 @@ import com.amay.tvm.util.Snackbar;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
+import javafx.collections.ListChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
@@ -89,6 +91,17 @@ public class TVMController {
         labelStationName.setText(SystemConfig.getInstance().getCurrentStation().getStationName());
         this.startTime();
         this.addBottomBarView();
+        this.stackPane.getChildren().addListener((ListChangeListener<Node>) change -> {
+            while (change.next()) {
+                if (this.stackPane.getChildren().size() == 1) {
+                    System.out.println("StackPane now has only 1 node: " + this.stackPane.getChildren().getFirst());
+                    this.addBottomBarView();
+                }else{
+                    this.borderPane.setBottom(null);
+                }
+            }
+        });
+
 
         this.updatePeakHour(ZonedDateTime.now(ZoneId.systemDefault()));
         boolean isWeekDay=this.agent.getBusinessRule().getToday().getDayType().equals("WEEKDAYS");
