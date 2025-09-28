@@ -152,12 +152,14 @@ public class ShiftServiceImpl implements ShiftService {
         String ccuShiftId = "00";
         try {
             Logger.debug("Last Shift request sent to SCU");
+            if(agent.getPeripheralMonitor().isScu_connected())
             scuShiftId=agent.getScuService().getTodayLastShiftId();
         } catch (RuntimeException e) {
             Logger.debug(e.getMessage());
         }
         try {
             Logger.debug("Last Shift request sent to CCU");
+            if(agent.getPeripheralMonitor().isCcu_connected())
             ccuShiftId=agent.getCcuService().getTodayLastShiftId();
         } catch (RuntimeException e) {
             Logger.debug(e.getMessage());
@@ -243,6 +245,10 @@ public class ShiftServiceImpl implements ShiftService {
         List<AdjustedTicketDto> adjustedTicketList=agent.getAdjustedTicketRepository().findForEOS(shiftId);
 
 
+        int noOfUpiSJT = 0, qUpiSJT = 0, amountUpiSJT = 0;
+        int noOfUpiRJT = 0, qUpiRJT = 0, amountUpiRJT = 0;
+        int noOfUpiGroup = 0, qUpiGroup = 0, amountUpiGroup = 0;
+
         int noOfSJT = 0, qSJT = 0, amountSJT = 0;
         int noOfRJT = 0, qRJT = 0, amountRJT = 0;
         int noOfGroup = 0, qGroup = 0, amountGroup = 0;
@@ -297,19 +303,37 @@ public class ShiftServiceImpl implements ShiftService {
 
             switch (ticketType) {
                 case SINGLE:
-                    noOfSJT++;
-                    qSJT += ticketsDto.getQuantity();
-                    amountSJT += ticketsDto.getAmount();
+                    if(PayMethod.UPI.name().equals(ticketsDto.getPaymentMode())){
+                        noOfUpiSJT++;
+                        qUpiSJT += ticketsDto.getQuantity();
+                        amountUpiSJT += (int) ticketsDto.getAmount();
+                    }else {
+                        noOfSJT++;
+                        qSJT += ticketsDto.getQuantity();
+                        amountSJT += (int) ticketsDto.getAmount();
+                    }
                     break;
                 case RETURN:
-                    noOfRJT++;
-                    qRJT += ticketsDto.getQuantity();
-                    amountRJT += ticketsDto.getAmount();
+                    if(PayMethod.UPI.name().equals(ticketsDto.getPaymentMode())){
+                        noOfUpiRJT++;
+                        qUpiRJT += ticketsDto.getQuantity();
+                        amountUpiRJT += (int) ticketsDto.getAmount();
+                    }else {
+                        noOfRJT++;
+                        qRJT += ticketsDto.getQuantity();
+                        amountRJT += ticketsDto.getAmount();
+                    }
                     break;
                 case GROUP:
-                    noOfGroup++;
-                    qGroup += ticketsDto.getQuantity();
-                    amountGroup += ticketsDto.getAmount();
+                    if(PayMethod.UPI.name().equals(ticketsDto.getPaymentMode())){
+                        noOfUpiGroup++;
+                        qUpiGroup += ticketsDto.getQuantity();
+                        amountUpiGroup += (int) ticketsDto.getAmount();
+                    }else {
+                        noOfGroup++;
+                        qGroup += ticketsDto.getQuantity();
+                        amountGroup += ticketsDto.getAmount();
+                    }
                     break;
                 case FREE:
                     noOfFree++;
@@ -479,15 +503,29 @@ public class ShiftServiceImpl implements ShiftService {
                             .endTime(shiftEndTime)
                             .equipmentId(shift.getDeviceId())
                             .operatorId(operatorId)
-                            .impressMoney(String.valueOf(FareMedium.IMPREST_MONEY.getFareMediumTotal()))
-                            .sjtCashCount(String.valueOf(finalNoOfSJT))
-                            .sjtCashAmount(String.valueOf(finalAmountSJT))
-                            .rjtCashCount(String.valueOf(finalNoOfRJT))
-                            .rjtCashAmount(String.valueOf(finalAmountRJT))
-                            .gtCashAmount(String.valueOf(finalNoOfGroup))
-                            .gtCashAmount(String.valueOf(finalAmountGroup))
-                            .qrTotalCount(String.valueOf(finalAmountSJT+finalAmountRJT+finalAmountGroup))
-                            .qrTotalAmount(String.valueOf(finalNoOfSJT+finalNoOfRJT+finalNoOfGroup))
+                            .impressMoney(FareMedium.IMPREST_MONEY.getFareMediumTotal())
+                            .sjtCashCount(finalNoOfSJT)
+                            .sjtCashAmount(finalAmountSJT)
+                            .rjtCashCount(finalNoOfRJT)
+                            .rjtCashAmount(finalAmountRJT)
+                            .gtCashCount(finalNoOfGroup)
+                            .gtCashAmount(finalAmountGroup)
+
+                            .sjtUpiCount(noOfUpiSJT)
+                            .sjtUpiAmount(amountUpiSJT)
+                            .rjtUpiCount(noOfUpiRJT)
+                            .rjtUpiAmount(amountUpiRJT)
+                            .gtUpiCount(noOfUpiGroup)
+                            .gtUpiAmount(amountUpiGroup)
+
+                            .qrTotalAmount(finalAmountSJT+finalAmountRJT+finalAmountGroup+amountUpiGroup+amountUpiRJT+amountUpiSJT)
+                            .qrTotalCount(finalNoOfSJT+finalNoOfRJT+finalNoOfGroup+noOfUpiGroup+noOfUpiRJT+noOfUpiSJT)
+
+                            .totalCashSales(finalAmountSJT+finalAmountRJT+finalAmountGroup)
+                            .totalUpiSales(amountUpiGroup+amountUpiRJT+amountUpiSJT)
+
+                            .totalRevenue(finalAmountSJT+finalAmountRJT+finalAmountGroup+amountUpiGroup+amountUpiRJT+amountUpiSJT)
+                            .printTime(String.valueOf(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME)))
                             .build()
             );
 

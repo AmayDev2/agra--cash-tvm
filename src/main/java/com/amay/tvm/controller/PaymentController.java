@@ -773,7 +773,7 @@ public class PaymentController {
      */
     private void processTicketsAndNavigate(ProperTicketOrder properTicketOrder, PaymentResponse paymentResponse) {
         try {
-            Thread.sleep(15000);
+            Thread.sleep(1000);
             QRTicketService qrTicketService = QRTicketFactory.getQRService(new AbstractQRTicketGenerator(), agent);
 
             TicketInfo ticketInfo = new TicketInfo();
@@ -808,6 +808,7 @@ public class PaymentController {
                         sessionCompletion.printTicket();
                             try {
                                 this.stackPane.getChildren().add(fxmlLoader.load());
+
                             } catch (IOException e) {
                                 Logger.tag(LoggerTag.APP).error("Success Page Loading error : "+e.getMessage());
                                 throw new RuntimeException(e.getMessage());
@@ -821,7 +822,7 @@ public class PaymentController {
             // Generate Pay receipt
             this.paymentFailedAndNavigate(properTicketOrder, paymentResponse);
 
-        }catch (RuntimeException | InterruptedException e) {
+        }catch (RuntimeException |InterruptedException e) {
             Logger.error("Error processing tickets and navigation: {}", e.getMessage());
             this.paymentFailedAndNavigate(properTicketOrder, paymentResponse);
         }
@@ -853,6 +854,7 @@ public class PaymentController {
             Platform.runLater(()-> {
                 fxmlLoader.setControllerFactory(param -> sessionCompletion);
                 sessionCompletion.printTicket();
+
                 try {
                     this.stackPane.getChildren().add(fxmlLoader.load());
                 } catch (IOException e) {

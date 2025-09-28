@@ -16,6 +16,7 @@ import io.grpc.stub.StreamObserver;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import lombok.extern.slf4j.Slf4j;
+import org.h2.util.Task;
 import org.network.monitorandcontrol.MonitorAndControlGrpc;
 import org.network.monitorandcontrol.tvm.TVMProtocol;
 import org.tinylog.Logger;
@@ -219,7 +220,13 @@ public class GrpcControlMonitoringService {
                         setConnectionStatus(ConnectionStatus.CONNECTED);
                     }
 
-                    commandHandler.handleCommand(value.getCommandType(), value);
+                    threadPool.getFixedThreadPool().submit(new Task() {
+                        @Override
+                        public void call() throws Exception {
+                            commandHandler.handleCommand(value.getCommandType(), value);
+                        }
+                    });
+
                 } catch (Exception e) {
                     Logger.tag(LoggerTag.APP).error("Error handling received command: {}", e.getMessage());
                 }

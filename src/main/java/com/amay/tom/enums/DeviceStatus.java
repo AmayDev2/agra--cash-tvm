@@ -21,7 +21,8 @@ public class DeviceStatus implements DeviceStatusListener {
 
     private final List<DeviceStatusListener> listeners = new ArrayList<>();
 
-    int[] mDeviceStatus;
+    private int[] mDeviceStatus;
+    private int[] mDeviceStatus2;
 
     public DeviceStatus(DeviceOperationMode currentStatus) {
         this.operationModeDeciderService=new OperationModeDeciderService();
@@ -30,6 +31,7 @@ public class DeviceStatus implements DeviceStatusListener {
 
     @Override
     public void onDeviceStatusChanged(int[] deviceStatus) {
+        onDeviceStatusChanged2(deviceStatus);
         int index ;
         for(index=0; null!=this.mDeviceStatus && index < deviceStatus.length; index++){
             if(this.mDeviceStatus[index] != deviceStatus[index])
@@ -39,26 +41,59 @@ public class DeviceStatus implements DeviceStatusListener {
         if(null==this.mDeviceStatus || index != deviceStatus.length) {
             this.mDeviceStatus = deviceStatus;
 
-        if (deviceStatus[0] == 1) {
-            Logger.tag(LoggerTag.APP).debug("Trigger to maintenance");
-            notifyListeners(this.operationModeDeciderService.requestAndGetAppliedOperationMode(
-                    new OperationMode(OperationModeSource.TRIGGER,DeviceOperationMode.IN_SERVICE)));
-        }
-//        else if (deviceStatus[1] == 0) {
+//        if (deviceStatus[0] == 1) {
 //            Logger.tag(LoggerTag.APP).debug("Trigger to maintenance");
 //            notifyListeners(this.operationModeDeciderService.requestAndGetAppliedOperationMode(
-//                    new OperationMode(OperationModeSource.PERIPHERAL,DeviceOperationMode.OUT_OF_SERVICE)));
-//
-//        } else if (deviceStatus[1] == 1) {
-//            Logger.tag(LoggerTag.APP).debug("Trigger to maintenance");
+//                    new OperationMode(OperationModeSource.TRIGGER,DeviceOperationMode.IN_SERVICE)));
+//        }else if (deviceStatus[0] == 0){
 //            notifyListeners(this.operationModeDeciderService.requestAndGetAppliedOperationMode(
-//                    new OperationMode(OperationModeSource.PERIPHERAL,DeviceOperationMode.IN_SERVICE)));
-//
+//                    new OperationMode(OperationModeSource.TRIGGER,DeviceOperationMode.MAINTENANCE)));
 //        }
-        else {
+         if (deviceStatus[1] == 0) {
+            Logger.tag(LoggerTag.APP).debug("Peripheral to  out of service");
             notifyListeners(this.operationModeDeciderService.requestAndGetAppliedOperationMode(
-                    new OperationMode(OperationModeSource.TRIGGER,DeviceOperationMode.MAINTENANCE)));
+                    new OperationMode(OperationModeSource.PERIPHERAL,DeviceOperationMode.OUT_OF_SERVICE)));
+
+        } else if (deviceStatus[1] == 1) {
+            Logger.tag(LoggerTag.APP).debug("Peripheral to  in of service");
+            notifyListeners(this.operationModeDeciderService.requestAndGetAppliedOperationMode(
+                    new OperationMode(OperationModeSource.PERIPHERAL,DeviceOperationMode.IN_SERVICE)));
         }
+
+
+        }
+    }
+
+
+    public void onDeviceStatusChanged2(int[] deviceStatus) {
+        int index ;
+        for(index=0; null!=this.mDeviceStatus2 && index < deviceStatus.length; index++){
+            if(this.mDeviceStatus2[index] != deviceStatus[index])
+                break;
+        }
+
+        if(null==this.mDeviceStatus2 || index != deviceStatus.length) {
+            this.mDeviceStatus2 = deviceStatus;
+
+            if (deviceStatus[0] == 1) {
+                Logger.tag(LoggerTag.APP).debug("Trigger to maintenance");
+                notifyListeners(this.operationModeDeciderService.requestAndGetAppliedOperationMode(
+                        new OperationMode(OperationModeSource.TRIGGER,DeviceOperationMode.IN_SERVICE)));
+            }else if (deviceStatus[0] == 0){
+                notifyListeners(this.operationModeDeciderService.requestAndGetAppliedOperationMode(
+                        new OperationMode(OperationModeSource.TRIGGER,DeviceOperationMode.MAINTENANCE)));
+            }
+//            if (deviceStatus[1] == 0) {
+//                Logger.tag(LoggerTag.APP).debug("Peripheral to  out of service");
+//                notifyListeners(this.operationModeDeciderService.requestAndGetAppliedOperationMode(
+//                        new OperationMode(OperationModeSource.PERIPHERAL,DeviceOperationMode.OUT_OF_SERVICE)));
+//
+//            } else if (deviceStatus[1] == 1) {
+//                Logger.tag(LoggerTag.APP).debug("Peripheral to  in of service");
+//                notifyListeners(this.operationModeDeciderService.requestAndGetAppliedOperationMode(
+//                        new OperationMode(OperationModeSource.PERIPHERAL,DeviceOperationMode.IN_SERVICE)));
+//            }
+
 
         }
     }
@@ -80,6 +115,7 @@ public class DeviceStatus implements DeviceStatusListener {
 
     // Notify all listeners of a status change
     private void notifyListeners(DeviceOperationMode newStatus) {
+        currentStatus = newStatus;
         for (DeviceStatusListener listener : listeners) {
             listener.onDeviceStatusChanged(newStatus);
         }
@@ -87,7 +123,7 @@ public class DeviceStatus implements DeviceStatusListener {
 
     // Method to set the device status and notify listeners "FROM SERVER"
     public void setDeviceOperationMode(DeviceOperationMode newStatus) {
-        currentStatus = newStatus;
+//        currentStatus = newStatus;
         // NOW WE HAVE TO STORE THE "STATION MODE" IN A CONTAINER AND THAT WILL DECIDE FOR OPERATION MODE BASED ON SOURCE
 
         notifyListeners(this.operationModeDeciderService.requestAndGetAppliedOperationMode(new OperationMode(OperationModeSource.SERVER,newStatus)));
@@ -123,7 +159,7 @@ class OperationMode implements Comparable<OperationMode> {
 
 
 class OperationModeDeciderService{
-    private TreeSet<OperationMode> operationModes;
+    private final TreeSet<OperationMode> operationModes;
 
     public OperationModeDeciderService(){
         operationModes=new TreeSet<>();

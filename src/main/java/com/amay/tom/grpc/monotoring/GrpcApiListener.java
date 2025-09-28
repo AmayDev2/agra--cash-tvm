@@ -144,7 +144,7 @@ public class GrpcApiListener implements RemoteListener {
                 .setCardProcessMode(card)
                 .build();
         grpcControlMonitoringService.sendMessage(RequestHandler.setOperationMode(builder));
-        this.sendPeripheralStatus(agent.getDeviceStatusListener().getDeviceStatus());
+//        this.sendPeripheralStatus(agent.getDeviceStatusListener().getDeviceStatus());
     }
 
     public void sendVersionInfo(MasterConfigInfo masterConfigInfo){

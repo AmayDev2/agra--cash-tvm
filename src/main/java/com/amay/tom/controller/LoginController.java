@@ -3,6 +3,7 @@ package com.amay.tom.controller;
 
 import com.amay.tom.agent.Agent;
 import com.amay.tom.config.SystemConfig;
+import com.amay.tom.enums.DeviceOperationMode;
 import com.amay.tom.exceptions.EmptyUsernameOrPasswordException;
 import com.amay.tom.exceptions.UsernameNotFoundException;
 import com.amay.tom.pdu.controller.command.PDUCommandDispatcher;
@@ -37,6 +38,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
 public class LoginController {
+    @FXML private Label csn1;
     @FXML private VBox vbox;
     @FXML private Label equipmentId;
     @FXML private Label csn;
@@ -44,19 +46,8 @@ public class LoginController {
     @FXML private Label timeLabel;
     @FXML private Label dateLabel;
     @FXML private AnchorPane anchorPane;
-    //    @FXML
-//    private  Button loginButton;
     @FXML
     private ImageView logo;
-//
-//    @FXML
-//    private Text messageLabel;
-
-//    @FXML
-//    private PasswordField passwordField;
-//
-//    @FXML
-//    private TextField usernameField;
 
     private SiftService siftService;
     private int timePeriod;
@@ -77,8 +68,6 @@ public class LoginController {
         PDUCommandDispatcher.INSTANCE.dispatch(new PassAgentCommand(this.agent));
     }
 
-    private Stage mainStage;
-
     @FXML
     private void initialize() {
 
@@ -92,7 +81,7 @@ public class LoginController {
                                     // Trigger your event or logic here
                                     this.shiftService.markLastShiftAsCompleted(shift);
 
-//                                    this.shiftService.printEOSReport(shift);
+                                    this.shiftService.printEOSReport(shift);
 
                                 },
                                 () -> {
@@ -100,7 +89,6 @@ public class LoginController {
                                 }
                         );
 
-//                       checkForWorkingHours();
                         }
                 )
         );
@@ -135,11 +123,16 @@ public class LoginController {
 
                         if (now.getSecond() %5==0) {
                             // Update the clock icon or other features if needed
-                            if (agent.getBusinessRule().isActiveWorkingHour()) {
-                                loginButtonClicked();
-                                // Stop the timeline once condition is met
-                                timeline.stop();
-                                timeline=null;
+                            if (agent.getBusinessRule().isActiveWorkingHour() ) {
+                                if( DeviceOperationMode.IN_SERVICE.equals(agent.getDeviceStatus().getCurrentStatus())) {
+                                    loginButtonClicked();
+                                    // Stop the timeline once condition is met
+                                    timeline.stop();
+                                    timeline = null;
+                                }else {
+                                    Logger.info("Device not in IN_SERVICE mode");
+                                    csn1.setText("TVM is not under operational mode");
+                                }
                             }
                         }
                     });
@@ -156,7 +149,7 @@ public class LoginController {
 
     //    @FXML
     void loginButtonClicked() {
-        mainStage = (Stage) anchorPane.getScene().getWindow();
+        Stage mainStage = (Stage) anchorPane.getScene().getWindow();
 
         this.shiftService.setMainStage(mainStage);
         String userName= null;//usernameField.getText();

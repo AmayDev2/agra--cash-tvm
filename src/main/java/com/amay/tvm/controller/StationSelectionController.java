@@ -7,6 +7,7 @@ import com.amay.tom.model.station.Station;
 import com.amay.tom.model.TicketType;
 import com.amay.tom.repository.FareLine3;
 import com.amay.tom.repository.StationData;
+import com.amay.tvm.util.Snackbar;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -313,7 +314,6 @@ public class StationSelectionController {
 
         } catch (RuntimeException | IOException e) {
             Logger.error("Error confirming selection: {}", e.getMessage());
-            e.printStackTrace();
         } finally {
             actionEvent.consume();
         }

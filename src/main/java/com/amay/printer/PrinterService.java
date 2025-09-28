@@ -20,6 +20,7 @@ import java.util.Objects;
 public class PrinterService implements PrinterInterface {
     private CuCustomWndAPIJWrap cucjwrap = null;
     private CuCustomWndDevice cudev = null;
+    boolean isBusy=false;
 
     public PrinterService(){
         // setup printer
@@ -94,10 +95,10 @@ public class PrinterService implements PrinterInterface {
     }
 
     public boolean isConnectedIfNotThenConnect(){
-        boolean status=isConnected();
-        if(status){
-            var allStatus=getStatus();
-            return  !(allStatus.StsNOPAPER ||allStatus.StsPAPERJAM ||allStatus.StsPAPERROLLING ||allStatus.StsOVERTEMP) ;
+//        boolean status=isConnected();
+        var allStatus=getStatus();
+        if(null !=allStatus){
+            return  !(allStatus.StsNOPAPER ||allStatus.StsPAPERJAM || allStatus.StsOVERTEMP) ;
         }
         openConnection();
         return false;
@@ -150,9 +151,13 @@ public class PrinterService implements PrinterInterface {
 
     }
 
+//    private PrinterStatus printerStatus;
+
     @Override
     public PrinterStatus getStatus() {
-
+//        if(isBusy){
+//            return printerStatus;
+//        }
         try {
             Logger.tag(LoggerTag.APP).debug("Printer status : {}",cudev.GetPrinterFullStatus());
             return cudev.GetPrinterFullStatus();
@@ -165,7 +170,7 @@ public class PrinterService implements PrinterInterface {
 
     public boolean isConnected()  {
         try {
-            return cudev.PrinterIsReady();
+            return isBusy || cudev.PrinterIsReady();
         }catch (Exception e){
             Logger.tag(LoggerTag.APP).error("ERROR : ",e.getMessage());
         }
@@ -185,7 +190,6 @@ public class PrinterService implements PrinterInterface {
                 imagePrintResponse.setSuccess(true);
                 cudev.Cut(CuCustomWndDevice.CutType.CUT_TOTAL);
             } catch (Exception e) {
-                e.printStackTrace();
                 imagePrintResponse.setSuccess(false).setError(e.getMessage());
             }
         return imagePrintResponse;
@@ -225,6 +229,7 @@ public class PrinterService implements PrinterInterface {
 
     @Override
     public BaseResponse printTicketsWithPayReceipt(List<QRTicket> qrTickets, PayReceipt payReceipt) {
+        isBusy=true;
         ImagePrintResponse imagePrintResponse=new ImagePrintResponse();
         try {
             qrTickets.forEach(qrTicket -> {
@@ -235,9 +240,10 @@ public class PrinterService implements PrinterInterface {
             });
             imagePrintResponse.setSuccess(true);
             printReceipt(payReceipt);
-            cudev.Eject(CuCustomWndDevice.EjectType.EJ_EJECT);
         }catch(Exception exception){
             Logger.tag(LoggerTag.APP).error("Printer error {}", exception.fillInStackTrace());
+        }finally {
+            isBusy=false;
         }
         return imagePrintResponse;
 
@@ -575,95 +581,92 @@ public class PrinterService implements PrinterInterface {
 
     private static String getShiftReportTemplate() {
         String receiptTemplate = """
-            ================================
-                    INDORE METRO
-                 END OF SHIFT REPORT
-            ================================
-            
-            Station: %s
-            Shift ID: %s
-            Start: %s
-            End: %s
-            Equipment: %s
-            Operator: %s
-            
-            ================================
-            START BALANCE
-            ================================
-            Impress Money:        Rs. %s
-            
-            ================================
-            QR SALE TRANSACTIONS
-            ================================
-            Transaction    Cnt    Amount
-            --------------------------------
-            SJT Cash        %s     Rs.  %s
-            RJT Cash        %s     Rs.  %s
-            GT Cash         %s     Rs.  %s
-            SJT UPI         %s     Rs.  %s
-            RJT UPI         %s     Rs.  %s
-            GT UPI          %s     Rs.  %s
-            SJT POS         %s     Rs.  %s
-            RJT POS         %s     Rs.  %s
-            GT POS          %s     Rs.  %s
-            --------------------------------
-            Total           %s     Rs.  %s
-            
-            ================================
-            NCMC TRANSACTIONS
-            ================================
-            Transaction    Cnt    Amount
-            --------------------------------
-            NCMC Top Up Cash %s    Rs.  %s
-            NCMC Top Up UPI  %s    Rs.  %s
-            NCMC Top Up POS  %s    Rs.  %s
-            --------------------------------
-            Total           %s     Rs.  %s
-            
-            ================================
-            BANK NOTE DETAILS
-            ================================
-            Bill Type    Cnt    Amount
-            --------------------------------
-            Rs. 10        %s     Rs.  %s
-            Rs. 20        %s     Rs.  %s
-            Rs. 50        %s     Rs.  %s
-            Rs. 100       %s     Rs. %s
-            Rs. 200       %s     Rs. %s
-            Rs. 500       %s     Rs. %s
-            --------------------------------
-            Total         %s     Rs. %s
-            
-            ================================
-            COIN DETAILS
-            ================================
-            Coin Type    Cnt    Amount
-            --------------------------------
-            Rs. 1         %s     Rs.   %s
-            Rs. 5         %s     Rs.   %s
-            Rs. 10        %s     Rs.  %s
-            --------------------------------
-            Total         %s     Rs.  %s
-            
-            ================================
-            SHIFT SUMMARY
-            ================================
-            Total Sale by Cash:   Rs.  %s
-            Total Sale by UPI:    Rs.  %s
-            Total Sale by POS:    Rs.  %s
-            --------------------------------
-            Total Revenue:        Rs. %s
-            
-            Available Cash:       Rs.  %s
-            
-            ================================
-                 THANK YOU
-               INDORE METRO
-            ================================
-            
-            Print Time: %s
-            
-            """;
+   
+                INDORE METRO
+             END OF SHIFT REPORT
+             
+    
+    Station Name   : %s
+    Shift ID       : %s
+    Shift Start    : %s
+    Shift End      : %s
+    Equipment ID   : %s
+    Operator ID    : %s
+     
+   
+                START BALANCE
+   
+    Impress Money       :     Rs. %s
+    
+    
+                QR SALE TRANSACTIONS
+   
+    Transaction         Cnt    Amount
+    
+    SJT Cash            %s     Rs. %s
+    RJT Cash            %s     Rs. %s
+    GT Cash             %s     Rs. %s
+    SJT UPI             %s     Rs. %s
+    RJT UPI             %s     Rs. %s
+    GT UPI              %s     Rs. %s
+    SJT POS             %s     Rs. %s
+    RJT POS             %s     Rs. %s
+    GT POS              %s     Rs. %s
+    
+    Total               %s     Rs. %s
+    
+    
+                NCMC TRANSACTIONS
+   
+    Transaction         Cnt    Amount
+    
+    NCMC Top Up Cash    %s     Rs. %s
+    NCMC Top Up UPI     %s     Rs. %s
+    NCMC Top Up POS     %s     Rs. %s
+    
+    Total               %s     Rs. %s
+    
+    
+                BANK NOTE DETAILS
+                
+    Bill Type           Cnt     Amount
+    
+     10                 %s      Rs. %s
+     20                 %s      Rs. %s
+     50                 %s      Rs. %s
+     100                %s      Rs. %s
+     200                %s      Rs. %s
+     500                %s      Rs. %s
+    
+    Total               %s      Rs. %s
+    
+    
+                COIN DETAILS
+   
+    Coin Type           Cnt      Amount
+    
+     5                  %s       Rs. %s
+     10                 %s       Rs. %s
+     10                 %s       Rs. %s
+    
+    Total               %s       Rs. %s
+    
+    
+                SHIFT SUMMARY
+   
+    Total Sale by Cash  :        Rs. %s
+    Total Sale by UPI   :        Rs. %s
+    Total Sale by POS   :        Rs. %s
+    
+    Total Revenue       :        Rs. %s
+    
+    Available Cash      :        Rs. %s
+   
+    Print Time  : %s
+    
+    """;
+
+
 
         return receiptTemplate;
     }

@@ -17,72 +17,72 @@ public class ShiftReportData {
     private String operatorId;
 
     // Start Balance
-    private String impressMoney;
+    private int impressMoney;
 
     // QR Transaction counts and amounts
-    private String sjtCashCount;
-    private String sjtCashAmount;
-    private String rjtCashCount;
-    private String rjtCashAmount;
-    private String gtCashCount;
-    private String gtCashAmount;
-    private String sjtUpiCount;
-    private String sjtUpiAmount;
-    private String rjtUpiCount;
-    private String rjtUpiAmount;
-    private String gtUpiCount;
-    private String gtUpiAmount;
-    private String sjtPosCount;
-    private String sjtPosAmount;
-    private String rjtPosCount;
-    private String rjtPosAmount;
-    private String gtPosCount;
-    private String gtPosAmount;
-    private String qrTotalCount;
-    private String qrTotalAmount;
+    private int sjtCashCount;
+    private int sjtCashAmount;
+    private int rjtCashCount;
+    private int rjtCashAmount;
+    private int gtCashCount;
+    private int gtCashAmount;
+    private int sjtUpiCount;
+    private int sjtUpiAmount;
+    private int rjtUpiCount;
+    private int rjtUpiAmount;
+    private int gtUpiCount;
+    private int gtUpiAmount;
+    private int sjtPosCount;
+    private int sjtPosAmount;
+    private int rjtPosCount;
+    private int rjtPosAmount;
+    private int gtPosCount;
+    private int gtPosAmount;
+    private int qrTotalCount;
+    private int qrTotalAmount;
 
     // NCMC transaction counts and amounts
-    private String ncmcCashCount;
-    private String ncmcCashAmount;
-    private String ncmcUpiCount;
-    private String ncmcUpiAmount;
-    private String ncmcPosCount;
-    private String ncmcPosAmount;
-    private String ncmcTotalCount;
-    private String ncmcTotalAmount;
+    private int ncmcCashCount;
+    private int ncmcCashAmount;
+    private int ncmcUpiCount;
+    private int ncmcUpiAmount;
+    private int ncmcPosCount;
+    private int ncmcPosAmount;
+    private int ncmcTotalCount;
+    private int ncmcTotalAmount;
 
     // Bank note counts and amounts for each denomination
-    private String rs10Count;
-    private String rs10Amount;
-    private String rs20Count;
-    private String rs20Amount;
-    private String rs50Count;
-    private String rs50Amount;
-    private String rs100Count;
-    private String rs100Amount;
-    private String rs200Count;
-    private String rs200Amount;
-    private String rs500Count;
-    private String rs500Amount;
-    private String bankTotalCount;
-    private String bankTotalAmount;
+    private int rs10Count;
+    private int rs10Amount;
+    private int rs20Count;
+    private int rs20Amount;
+    private int rs50Count;
+    private int rs50Amount;
+    private int rs100Count;
+    private int rs100Amount;
+    private int rs200Count;
+    private int rs200Amount;
+    private int rs500Count;
+    private int rs500Amount;
+    private int bankTotalCount;
+    private int bankTotalAmount;
 
     // Coin counts and amounts
-    private String hopper1Count;
-    private String hopper1Amount;
-    private String hopper2Count;
-    private String hopper2Amount;
-    private String hopper3Count;
-    private String hopper3Amount;
-    private String coinTotalCount;
-    private String coinTotalAmount;
+    private int hopper1Count;
+    private int hopper1Amount;
+    private int hopper2Count;
+    private int hopper2Amount;
+    private int hopper3Count;
+    private int hopper3Amount;
+    private int coinTotalCount;
+    private int coinTotalAmount;
 
     // Shift summary
-    private String totalCashSales;
-    private String totalUpiSales;
-    private String totalPosSales;
-    private String totalRevenue;
-    private String availableCash;
+    private int totalCashSales;
+    private int totalUpiSales;
+    private int totalPosSales;
+    private int totalRevenue;
+    private int availableCash;
     private String printTime;
 
 

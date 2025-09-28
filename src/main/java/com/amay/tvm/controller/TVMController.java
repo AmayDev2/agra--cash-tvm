@@ -10,6 +10,7 @@ import com.amay.tom.model.TicketType;
 import com.amay.tom.pdu.controller.StationMode;
 import com.amay.tom.pdu.controller.command.PDUCommandDispatcher;
 import com.amay.tom.repository.StationData;
+import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.bnr.BNRIntegration;
 import com.amay.tvm.coin.CoinModuleInterface;
 import com.amay.tvm.util.Snackbar;
@@ -58,7 +59,7 @@ public class TVMController {
     DeviceOperationMode currentMode;
 
     private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("hh:mm:ss");
-    private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd MMMM, yyyy");
+    private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
 
     public TVMController(Agent agent) {
@@ -180,7 +181,7 @@ public class TVMController {
 
     //TODO: Implement the logic to update the service mode
     private void setOperationMode(DeviceOperationMode newStatus) {
-        //System.out.println("TVMController setOperationMode: " + newStatus);
+        Logger.tag(LoggerTag.APP).info("TVMController setOperationMode: " + newStatus);
         Platform.runLater(() -> {
             if (currentMode != newStatus && newStatus == DeviceOperationMode.IN_SERVICE) {
 //                stackPane.getChildren().clear();
@@ -191,8 +192,6 @@ public class TVMController {
                 agent.getGrpcApiListener().sendPeripheralStatus(agent.getPeripheralMonitor().getDeviceStatus());
             } else {
 
-
-                
                 if (currentMode != newStatus && newStatus == DeviceOperationMode.EMERGENCY) {
                     FXMLLoader loader = ViewFactory.getSpecialModeScreen();
                     loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData, StationMode.EMERGENCY));

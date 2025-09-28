@@ -8,6 +8,7 @@ import com.amay.tom.model.station.Station;
 import com.amay.tom.model.TicketType;
 import com.amay.tom.repository.FareLine3;
 import com.amay.tom.repository.StationData;
+import com.amay.tvm.util.Snackbar;
 import com.amay.utils.TicketUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -139,7 +140,7 @@ public class TicketSelectionController {
     @FXML
     private void  confirmSelection(ActionEvent actionEvent) {
         if (selectedDestination == null) {
-            //System.out.println("No station selected");
+            Snackbar.INSTANCE.showSnackbar(pane,"Please Select Destination Station",true,0);
             return;
         }
         try {

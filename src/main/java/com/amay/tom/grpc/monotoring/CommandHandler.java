@@ -42,6 +42,12 @@ public class CommandHandler {
                 remote=new Remote(new PheStatusCommand(applicationService));
                 //System.out.println("GET_PERIPHERAL_STATUS");
                 break;
+//            case NOTIFY_VERSION_SYNC:
+//                remote=new Remote(new VersionSyncCommand(applicationService));
+//                break;
+//            case GET_OPERATION_MODE:
+//                remote=new Remote(new OperationModeCommand(applicationService));
+//                break;
             default:
 
                 //System.out.println("UNKNOWN : "+commandType);

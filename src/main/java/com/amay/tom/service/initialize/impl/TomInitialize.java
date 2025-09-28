@@ -490,6 +490,23 @@ public class TomInitialize implements ITomInitialize {
                 progress += 0.03;
                 this.updateUI(progress, "Station mode checked.");
 
+
+
+
+                // 21. Peripheral Status
+
+                if(envLoader.getEnvironment()) {
+                    try {
+                        progress += 0.03;
+                        this.updateUI(progress, "Connecting BNR,COIN MODULE & PRINTER.");
+                        BNRIntegration.bnrOpen();
+                    } catch (RuntimeException e) {
+                        e.printStackTrace();
+                    }
+                }
+                PrinterCommandDispatcher.INSTANCE.setupPrinter();
+                CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort(),agent.getCoinAmountRepository());
+
                 // 16. CCU Transaction
                 this.setCCUTransactionConnection();
                 progress += 0.03;
@@ -512,20 +529,6 @@ public class TomInitialize implements ITomInitialize {
                 progress += 0.03;
                 this.updateUI(progress, "SCU monitoring service set.");
 
-
-                // 21. Peripheral Status
-
-                if(envLoader.getEnvironment()) {
-                    try {
-                        progress += 0.03;
-                        this.updateUI(progress, "Connecting BNR,COIN MODULE & PRINTER.");
-                        BNRIntegration.bnrOpen();
-                    } catch (RuntimeException e) {
-                        e.printStackTrace();
-                    }
-                }
-                PrinterCommandDispatcher.INSTANCE.setupPrinter();
-                CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort(),agent.getCoinAmountRepository());
 
                 this.peripheralDeviceStatus();
                 progress += 0.03;
@@ -701,7 +704,7 @@ public class TomInitialize implements ITomInitialize {
         String vendor   = pkg.getImplementationVendor();
         this.agent.setVersions(
                 new Versions(
-                        version==null ? "1.1.5" : version
+                        version==null ? "1.1.7" : version
                 )
         );
     }
@@ -892,7 +895,7 @@ public class TomInitialize implements ITomInitialize {
             this.updateUI(progress, "TicketConfigDTO is null");
             throw new RuntimeException("TicketConfigDTO is null");
         }
-//        JsonFileWriterUtil.writeToJsonFile(configData, EnvFile.getTicketConfigFile());
+
         TicketConfig.INSTANT.getTicketConfig();
     }
         } catch (RuntimeException e) {

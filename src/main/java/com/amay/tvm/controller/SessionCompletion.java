@@ -6,16 +6,18 @@ import com.amay.tom.model.GeneratedTicket;
 import com.amay.tom.model.payment.PaymentResponse;
 import com.amay.tom.service.ticketprint.PrintTicketService;
 import com.amay.tvm.backend.enums.LoggerTag;
-import javafx.animation.PauseTransition;
+import javafx.animation.*;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
+import javafx.util.Duration;
 import org.h2.util.Task;
 import org.tinylog.Logger;
 
@@ -25,6 +27,7 @@ import java.util.concurrent.ExecutorService;
 public class SessionCompletion {
     public Label totalAmount;
     public Label remainedAmount;
+    @FXML private Button skipPrintBtn;
     @FXML private Label msgDisp;
     private String messageToShow;
 
@@ -46,13 +49,25 @@ public class SessionCompletion {
     @FXML
     void initialize(){
 
-        revert();
+        skipPrintBtn.setDisable(true);
+        msgDisp.setText("Please wait, printing...");
         gridPane= (GridPane) this.stackPane.getChildren().getFirst();
         if(image!=null){
             event.setImage(new Image(image));
             eventTitle.setText(eventTitleText);
             msgDisp.setText(messageToShow);
         }
+
+        // Scale transition (pulse effect)
+        ScaleTransition scale = new ScaleTransition(Duration.seconds(1.2), event);
+        scale.setFromX(1.0);
+        scale.setFromY(1.0);
+        scale.setToX(1.3);
+        scale.setToY(1.3);
+        scale.setAutoReverse(true);
+        scale.setCycleCount(20);
+        scale.play();
+
 
     }
 
@@ -61,6 +76,27 @@ public class SessionCompletion {
             @Override
             public void call() throws Exception {
                 printTicketService.printTicket((x,y)-> Logger.tag(LoggerTag.APP).debug("Please wait, printing..."+x+"/"+y));
+                Platform.runLater(() -> {
+                    msgDisp.setText(""); // Clear text
+                    String msg = messageToShow;
+                    Timeline timeline = new Timeline();
+                    for (int i = 0; i < msg.length(); i++) {
+                        final int index = i;
+                        timeline.getKeyFrames().add(
+                                new KeyFrame(Duration.millis(40 * i),
+                                        e -> msgDisp.setText(msg.substring(0, index + 1))
+                                )
+                        );
+                    }
+                    timeline.setOnFinished(e -> {
+                        FadeTransition fade = new FadeTransition(Duration.seconds(1), msgDisp);
+                        fade.setFromValue(0.5);
+                        fade.setToValue(1.0);
+                        fade.play();
+                    });
+                    timeline.play();
+                });
+                revert();
             }
         });
     }
@@ -73,17 +109,24 @@ public class SessionCompletion {
         printTicketService = new PrintTicketService(generatedTicket, paymentResponse, agent);
         if(paymentResponse.getDenomination()>0){
             messageToShow="Collect pay-receipt,for remaining change!!!";
+        }else{
+            messageToShow= """
+                        Travel light, dream big, arrive safely!
+                                Collect your ticket(s)!!!
+                    """;
         }
         if(!paymentResponse.isSuccess()){
             eventTitleText="Transaction Canceled";
             image="/images/tvm/failed.png";
+            messageToShow="Ticket printing failed. Kindly retry your transaction.";
         }
     }
 
 
-    PauseTransition pauseTransition;
+    private PauseTransition pauseTransition;
 
     private void revert(){
+        skipPrintBtn.setDisable(false);
         pauseTransition= new PauseTransition(javafx.util.Duration.seconds(10));
         pauseTransition.setOnFinished(event -> {
             close();

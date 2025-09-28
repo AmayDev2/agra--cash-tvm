@@ -57,9 +57,19 @@ public class ModesListener implements RemoteListener {
     private void noStationMode() {
         agent.setEquipmentPrivilege(EquipmentMapper.mapToEquipmentPrivilege(agent.getEquipmentPrivilegeDto(),agent.getEquipmentPrivilege()));
         agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.IN_SERVICE);
+
+        if(agent.getDeviceStatus().getCurrentStatus()== DeviceOperationMode.IN_SERVICE) {
+            agent.getGrpcApiListener().sendOperationMode(OperationMode.IN_SERVICE);
+            agent.getGrpcApiListener().sendPeripheralStatus(agent.getDeviceStatusListener().getDeviceStatus());
+        }else{
+            agent.getGrpcApiListener().sendAlarm(Alarm.NO_STATION_MODE);
+            agent.getGrpcApiListener().sendOperationMode(OperationMode.OUT_OF_SERVICE);
+        }
         agent.getGrpcApiListener().sendAlarm(Alarm.NO_STATION_MODE);
-        agent.getGrpcApiListener().sendOperationMode(OperationMode.IN_SERVICE);
-        agent.getGrpcApiListener().sendPeripheralStatus(agent.getDeviceStatusListener().getDeviceStatus());
+
+
+//        agent.getGrpcApiListener().sendOperationMode(OperationMode.IN_SERVICE);
+//        agent.getGrpcApiListener().sendPeripheralStatus(agent.getDeviceStatusListener().getDeviceStatus());
 
     }
 
@@ -68,8 +78,8 @@ public class ModesListener implements RemoteListener {
         equipmentPrivilege.setQrTicketAnalysis(false);
 
         agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.IN_SERVICE);
-        agent.getGrpcApiListener().sendAlarm(Alarm.IN_SERVICE);
-        agent.getGrpcApiListener().sendInServiceOperationMode(OperationMode.IN_SERVICE,false,false);
+//        agent.getGrpcApiListener().sendAlarm(Alarm.IN_SERVICE);
+//        agent.getGrpcApiListener().sendInServiceOperationMode(OperationMode.IN_SERVICE,false,false);
     }
 
     private void setMaintenanceMode() {
@@ -99,18 +109,18 @@ public class ModesListener implements RemoteListener {
         equipmentPrivilege.setTvm(false);
 
         agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.OUT_OF_SERVICE);
-        agent.getGrpcApiListener().sendAlarm(Alarm.OUT_OF_SERVICE);
-        agent.getGrpcApiListener().sendOperationMode(OperationMode.OUT_OF_SERVICE);
+//        agent.getGrpcApiListener().sendAlarm(Alarm.OUT_OF_SERVICE);
+//        agent.getGrpcApiListener().sendOperationMode(OperationMode.OUT_OF_SERVICE);
     }
 
     //only card
     private void setInServiceCard() {
         equipmentPrivilege.setQrTicketIssue(false);
 
-
+//
         agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.IN_SERVICE);
-        agent.getGrpcApiListener().sendAlarm(Alarm.IN_SERVICE_CARD);
-        agent.getGrpcApiListener().sendInServiceOperationMode(OperationMode.IN_SERVICE,false,true);
+//        agent.getGrpcApiListener().sendAlarm(Alarm.IN_SERVICE_CARD);
+//        agent.getGrpcApiListener().sendInServiceOperationMode(OperationMode.IN_SERVICE,false,true);
     }
 
     //only qr
@@ -118,16 +128,18 @@ public class ModesListener implements RemoteListener {
         equipmentPrivilege.setQrTicketIssue(true);
 
         agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.IN_SERVICE);
-        agent.getGrpcApiListener().sendAlarm(Alarm.IN_SERVICE_QR);
-        agent.getGrpcApiListener().sendInServiceOperationMode(OperationMode.IN_SERVICE,true,false);
+//        agent.getGrpcApiListener().sendAlarm(Alarm.IN_SERVICE_QR);
+//        agent.getGrpcApiListener().sendInServiceOperationMode(OperationMode.IN_SERVICE,true,false);
     }
 
     //both qr and card
     private void setInServiceBoth() {
         noStationMode();
+        agent.getDeviceStatus().getCurrentStatus();
+//        agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.IN_SERVICE);
 
-        agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.IN_SERVICE);
-        agent.getGrpcApiListener().sendAlarm(Alarm.IN_SERVICE_QR_CARD);
+//        agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.IN_SERVICE);
+//        agent.getGrpcApiListener().sendAlarm(Alarm.IN_SERVICE_QR_CARD);
         agent.getGrpcApiListener().sendInServiceOperationMode(OperationMode.IN_SERVICE,true,true);
     }
 
@@ -145,8 +157,8 @@ public class ModesListener implements RemoteListener {
         equipmentPrivilege.setTvm(false);
 
         agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.STATION_CLOSE);
-        agent.getGrpcApiListener().sendAlarm(Alarm.STATION_CLOSE);
-        agent.getGrpcApiListener().sendSpecialMode(SpecialMode.STATION_CLOSED_MODE);
+//        agent.getGrpcApiListener().sendAlarm(Alarm.STATION_CLOSE);
+//        agent.getGrpcApiListener().sendSpecialMode(SpecialMode.STATION_CLOSED_MODE);
 
     }
 
@@ -163,7 +175,7 @@ public class ModesListener implements RemoteListener {
         equipmentPrivilege.setTvm(false);
 
         agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.EMERGENCY);
-        agent.getGrpcApiListener().sendAlarm(Alarm.EMERGENCY);
-        agent.getGrpcApiListener().sendSpecialMode(SpecialMode.EMERGENCY);
+//        agent.getGrpcApiListener().sendAlarm(Alarm.EMERGENCY);
+//        agent.getGrpcApiListener().sendSpecialMode(SpecialMode.EMERGENCY);
     }
 }
