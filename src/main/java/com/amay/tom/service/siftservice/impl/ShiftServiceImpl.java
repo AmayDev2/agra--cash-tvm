@@ -32,6 +32,7 @@ import com.amay.tom.utils.folder.NewFolder;
 import com.amay.tom.utils.helper.Helper;
 import com.amay.tom.utils.image.ImageUtils;
 import com.amay.tom.utils.time.TimeUtil;
+import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.controller.TVMController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.VBox;
@@ -98,17 +99,19 @@ public class ShiftServiceImpl implements ShiftService {
 
             //   notifying to scu
 
+            Logger.tag(LoggerTag.APP).debug("Login data pushed to CC {}",agent.getPeripheralMonitor().isCcu_connected());
             if(agent.getPeripheralMonitor().isCcu_connected()) {
-                Logger.debug("Login data pushed to CC");
+                Logger.tag(LoggerTag.APP).debug("Login data pushed to CC");
                 CompletableFuture.runAsync(() -> agent.getCcuService().pushShiftInfo(shift), agent.getThreadPool().getFixedThreadPool());
-                Logger.debug("CC responded to login data push");
+                Logger.tag(LoggerTag.APP).debug("CC responded to login data push");
             }
 
+            Logger.tag(LoggerTag.APP).debug("Login data pushed to SC {}",agent.getPeripheralMonitor().isScu_connected());
                 //scu push
             if(agent.getPeripheralMonitor().isScu_connected()) {
-                Logger.debug("Login data pushed to CC");
+                Logger.tag(LoggerTag.APP).debug("Login data pushed to SC");
                 CompletableFuture.runAsync(() -> agent.getScuService().pushShiftInfo(shift), agent.getThreadPool().getFixedThreadPool());
-                Logger.debug("CC responded to login data push");
+                Logger.tag(LoggerTag.APP).debug("SC responded to login data push");
             }
 
             agent.setShift(shift);

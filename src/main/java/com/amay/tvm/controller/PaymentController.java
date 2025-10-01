@@ -163,7 +163,7 @@ public class PaymentController {
     void initialize() {
         try {
             setPaymentOptions();
-            onClickCash.setVisible(EnvFile.getCashButton());
+            onClickCash.setVisible(EnvFile.isCashSupported());
             // Initialize UI labels
             if (SystemConfig.getInstance().getCurrentStation() != null && selectedDestination != null) {
 
@@ -805,10 +805,10 @@ public class PaymentController {
 
             Platform.runLater(()-> {
                         fxmlLoader.setControllerFactory(param -> sessionCompletion);
-                        sessionCompletion.printTicket();
+
                             try {
                                 this.stackPane.getChildren().add(fxmlLoader.load());
-
+                                sessionCompletion.printTicket();
                             } catch (IOException e) {
                                 Logger.tag(LoggerTag.APP).error("Success Page Loading error : "+e.getMessage());
                                 throw new RuntimeException(e.getMessage());
@@ -853,10 +853,11 @@ public class PaymentController {
 
             Platform.runLater(()-> {
                 fxmlLoader.setControllerFactory(param -> sessionCompletion);
-                sessionCompletion.printTicket();
+
 
                 try {
                     this.stackPane.getChildren().add(fxmlLoader.load());
+                    sessionCompletion.printTicket();
                 } catch (IOException e) {
                     Logger.tag(LoggerTag.APP).error(e.getMessage());
                 }

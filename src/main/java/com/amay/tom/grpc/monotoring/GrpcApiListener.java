@@ -151,7 +151,7 @@ public class GrpcApiListener implements RemoteListener {
         Logger.info("Sending version info to server: "+ masterConfigInfo);
         AVersionInfo aVersionInfo = AVersionInfo.newBuilder()
                 .setEquipVer(masterConfigInfo.getConfigVer())
-                .setSwVer(masterConfigInfo.getTomSwVer())
+                .setSwVer(masterConfigInfo.getTvmSwVer())
                 .setFareVer(masterConfigInfo.getFareConfig())
                 .setProductVer(masterConfigInfo.getProductConfig())
                 .setBusinessDayVer(masterConfigInfo.getBusinessDayVer())

@@ -88,6 +88,7 @@ import com.amay.tom.utils.StationData1;
 import com.amay.tom.utils.env.EnvFile;
 import com.amay.tom.utils.env.EnvLoader;
 import com.amay.tom.utils.helper.Helper;
+import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.backend.repository.CoinAmountRepository;
 import com.amay.tvm.backend.repository.CoinAmountRepositoryImpl;
 import com.amay.tvm.backend.repository.TransactionRepository;
@@ -494,18 +495,17 @@ public class TomInitialize implements ITomInitialize {
 
 
                 // 21. Peripheral Status
-
                 if(envLoader.getEnvironment()) {
                     try {
                         progress += 0.03;
                         this.updateUI(progress, "Connecting BNR,COIN MODULE & PRINTER.");
+                        CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort(),agent.getCoinAmountRepository());
                         BNRIntegration.bnrOpen();
                     } catch (RuntimeException e) {
                         e.printStackTrace();
                     }
                 }
                 PrinterCommandDispatcher.INSTANCE.setupPrinter();
-                CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort(),agent.getCoinAmountRepository());
 
                 // 16. CCU Transaction
                 this.setCCUTransactionConnection();
@@ -517,7 +517,6 @@ public class TomInitialize implements ITomInitialize {
                 progress += 0.03;
                 this.updateUI(progress, "CCU monitoring service set.");
 
-                Thread.sleep(2000);
 
                 // 18. SCU Transaction
                 this.setSCUTransactionConnection();
@@ -533,6 +532,8 @@ public class TomInitialize implements ITomInitialize {
                 this.peripheralDeviceStatus();
                 progress += 0.03;
                 this.updateUI(progress, "Peripheral status pushed.");
+
+                Thread.sleep(10000);
 
                 // 22. Push Remaining Data & Finalize
                 this.pushRemainedDate();
@@ -658,7 +659,7 @@ public class TomInitialize implements ITomInitialize {
         try {
             String masterVersion = this.apiConnection.getMasterVersion();
 //            //System.out.println("masterVersion : "+masterVersion);
-            if (masterVersion == null) {
+            if (masterVersion == null || masterVersion.isEmpty()) {
                 throw new RuntimeException("Master Config version not found.");
             }
 
@@ -951,8 +952,8 @@ public class TomInitialize implements ITomInitialize {
 
     @Override
     public void pushRemainedDate() {
-        Logger.debug("SCU CONNECTED: " + agent.getPeripheralMonitor().isScu_connected());
-        Logger.debug("CCU CONNECTED: " + agent.getPeripheralMonitor().isCcu_connected());
+        Logger.tag(LoggerTag.APP).debug("SCU CONNECTED: " + agent.getPeripheralMonitor().isScu_connected());
+        Logger.tag(LoggerTag.APP).debug("CCU CONNECTED: " + agent.getPeripheralMonitor().isCcu_connected());
         if(agent.getPeripheralMonitor().isScu_connected())
             new DataPushService(new SCUPushService(agent)).pushData();
         if(agent.getPeripheralMonitor().isCcu_connected())

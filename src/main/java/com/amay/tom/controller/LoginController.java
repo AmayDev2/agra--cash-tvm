@@ -16,6 +16,7 @@ import com.amay.tom.service.siftservice.SiftService;
 import com.amay.tom.service.siftservice.impl.ShiftServiceImpl;
 import com.amay.tom.service.userauth.UserAuth;
 import com.amay.tom.service.userauth.UserDetailsService;
+import com.amay.tvm.backend.enums.LoggerTag;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -130,7 +131,7 @@ public class LoginController {
                                     timeline.stop();
                                     timeline = null;
                                 }else {
-                                    Logger.info("Device not in IN_SERVICE mode");
+                                    Logger.tag(LoggerTag.APP).info("Device not in IN_SERVICE mode {}",agent.getDeviceStatus().getCurrentStatus());
                                     csn1.setText("TVM is not under operational mode");
                                 }
                             }

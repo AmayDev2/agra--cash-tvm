@@ -13,6 +13,7 @@ import com.amay.tom.service.tom.ApplicationService;
 import com.amay.tom.service.tom.IApplicationService;
 import com.amay.tom.systemcontrole.SystemControl;
 import com.amay.tom.utils.env.EnvFile;
+import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.bnr.BNRIntegration;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -38,9 +39,7 @@ public class Main extends Application {
 
     @Override
     public void init() throws Exception {
-        Logger.debug("Application init called");
-        Logger.tag("BUSINESS").info("Business event processed successfully");
-        Logger.tag("APPLICATION").info("Application started on port 8080");
+        Logger.tag(LoggerTag.APP).info("Application init called");
 
         super.init();
         EnvFile.loadEnv();
@@ -53,7 +52,7 @@ public class Main extends Application {
         RedisConnectionPool.getJedisPool().close();
         DatabaseConnector.closeConnection();
         QRDataArray.createQRTicketFile();
-        Logger.debug("Application stopped😒😒🙌");
+        Logger.tag(LoggerTag.APP).info("Application stopped😒😒🙌");
         super.stop();
     }
 

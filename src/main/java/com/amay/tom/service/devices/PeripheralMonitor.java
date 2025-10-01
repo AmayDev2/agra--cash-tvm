@@ -106,7 +106,7 @@ public class PeripheralMonitor implements Runnable {
     }
 
     private boolean bnrConnected() {
-        return BNRIntegration.isConnected();
+        return EnvFile.isCashSupported() && BNRIntegration.isConnected();
     }
 
     private static boolean PRINTER = false;
@@ -128,9 +128,10 @@ public class PeripheralMonitor implements Runnable {
         } catch (Exception e) {
             Logger.tag(LoggerTag.APP).error(e.getMessage());
         }
-        return new boolean[]{false,EnvFile.
-                getMainModuleBit()};
+        return new boolean[]{false,!EnvFile.isCashSupported()};
     }
+
+//    CASH_IS_NOT_SUPPORTED
 
 
     /**

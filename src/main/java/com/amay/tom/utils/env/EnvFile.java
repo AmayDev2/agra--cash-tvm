@@ -178,7 +178,7 @@ public class EnvFile {
         public static String getLastUpdatedFile() {
             String value = dotenv.get("LAST_UPDATED_FILE");
             if (value == null || value.isEmpty()) {
-                Logger.warn("LAST_UPDATED_FILE is not set in the environment file.");
+                Logger.tag(LoggerTag.APP).warn("LAST_UPDATED_FILE is not set in the environment file.");
                 return "";
             }
             return value;
@@ -186,6 +186,13 @@ public class EnvFile {
 
     public static boolean getCashButton() {
         boolean value = Boolean.parseBoolean(String.valueOf(dotenv.get("IS_CASH_SUPPORT") == null));
+        return value;
+
+    }
+
+    public static boolean isCashSupported() {
+        boolean value = Boolean.parseBoolean(String.valueOf(dotenv.get("CASH_IS_NOT_SUPPORTED") == null));
+        // TRUE - IF SUPPORTED
         return value;
 
     }

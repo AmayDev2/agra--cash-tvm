@@ -49,7 +49,7 @@ public class SessionCompletion {
     @FXML
     void initialize(){
 
-        skipPrintBtn.setDisable(true);
+
         msgDisp.setText("Please wait, printing...");
         gridPane= (GridPane) this.stackPane.getChildren().getFirst();
         if(image!=null){
@@ -72,10 +72,12 @@ public class SessionCompletion {
     }
 
     public void printTicket(){
+        skipPrintBtn.setDisable(true);
         executorService.submit(new Task() {
             @Override
             public void call() throws Exception {
                 printTicketService.printTicket((x,y)-> Logger.tag(LoggerTag.APP).debug("Please wait, printing..."+x+"/"+y));
+                revert();
                 Platform.runLater(() -> {
                     msgDisp.setText(""); // Clear text
                     String msg = messageToShow;
@@ -96,7 +98,7 @@ public class SessionCompletion {
                     });
                     timeline.play();
                 });
-                revert();
+
             }
         });
     }
