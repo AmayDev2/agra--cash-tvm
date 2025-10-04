@@ -12,7 +12,6 @@ import com.amay.tom.config.dto.*;
 import com.amay.tom.controller.LoginController;
 import com.amay.tom.controller.TomInitializeViewController;
 import com.amay.tom.database.SQLConnector;
-import com.amay.tom.database.SQLiteConnector;
 import com.amay.tom.enums.DeviceOperationMode;
 import com.amay.tom.enums.DeviceStatus;
 import com.amay.tom.enums.TomInitializerListener;
@@ -34,7 +33,6 @@ import com.amay.tom.model.product.ProductEntity;
 import com.amay.tom.model.product.ProductMapper;
 import com.amay.tom.model.station.Station;
 import com.amay.tom.model.station.StationEntity;
-import com.amay.tom.model.tomConfig.TomConfig;
 import com.amay.tom.model.tomConfig.TomConfigDto;
 import com.amay.tom.model.tomConfig.TomConfigMapper;
 import com.amay.tom.model.user.dto.UserDto;
@@ -59,7 +57,6 @@ import com.amay.tom.repository.session.ShiftRepository;
 import com.amay.tom.repository.session.ShiftRepositoryImpl;
 import com.amay.tom.repository.sql.SqlGlobalRepository;
 import com.amay.tom.repository.sql.SqlRepositoryImpl;
-import com.amay.tom.repository.sqlite.SqliteRepositoryImpl;
 import com.amay.tom.repository.station.StationRepository;
 import com.amay.tom.repository.station.StationRepositoryImpl;
 import com.amay.tom.repository.tickets.TicketsRepository;
@@ -98,7 +95,6 @@ import com.amay.tvm.coin.CoinModuleInterface;
 import com.google.protobuf.Any;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import org.amaytechnosystems.TomTransactionServiceGrpc;
 import org.amaytechnosystems.TomTransactionServiceGrpc.TomTransactionServiceBlockingStub;
 import org.json.JSONObject;
 import org.network.monitorandcontrol.MonitorAndControlGrpc.MonitorAndControlStub;
@@ -146,13 +142,8 @@ public class TomInitialize implements ITomInitialize {
         this.envLoader = new EnvLoader(ENVURL.CONFIG+".env");
         this.apiConnection.setIpPort(this.envLoader.getCcuIpAddress(),this.envLoader.getRestPort());
         this.agent = new Agent();
-        this.tomInitializerListener = new TomInitializerListener((val) -> {
-            try {
-                this.onSuccessfulInitialization(val);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        });
+        //                this.onSuccessfulInitialization(val);
+        this.tomInitializerListener = new TomInitializerListener(this::deviceInitialization);
         this.agent.setTomInitializerListener(this.tomInitializerListener);
 
     }
@@ -368,7 +359,7 @@ public class TomInitialize implements ITomInitialize {
     }
 
     @Override
-    public void deviceInitialization() {
+    public void deviceInitialization(Scene scene) {
         new Thread(() -> {
             try {
                 Thread.currentThread().setName("TomInitialize");
@@ -413,7 +404,7 @@ public class TomInitialize implements ITomInitialize {
                     versionService.getActual().setTvmSwVer(versionService.getExpected().getTvmSwVer());
                 }
                 progress += 0.05;
-                this.updateUI(progress, "Software update done.");
+                this.updateUI(progress, "Software updateToAdd done.");
 
                 // 8. Load Stations
                 if(this.loadStations((versionService.getExpected()!=null) && (!versionService.getMasterConfigInfoCheck().isTopologyConfig()))) {
@@ -537,7 +528,7 @@ public class TomInitialize implements ITomInitialize {
 
                 // 22. Push Remaining Data & Finalize
                 this.pushRemainedDate();
-                this.onSuccessfulInitialization(null);
+                this.onSuccessfulInitialization(scene);
                 progress = 1.0;
                 this.updateUI(progress, "Device initialization complete.");
 

@@ -16,7 +16,7 @@
 <!--            &lt;!&ndash; Hibernate properties &ndash;&gt;-->
 <!--            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>-->
 <!--            <property name="hibernate.show_sql" value="true"/>-->
-<!--            <property name="hibernate.hbm2ddl.auto" value="update"/>-->
+<!--            <property name="hibernate.hbm2ddl.auto" value="updateToAdd"/>-->
 <!--        </properties>-->
 <!--    </persistence-unit>-->
 <!--</persistence>-->

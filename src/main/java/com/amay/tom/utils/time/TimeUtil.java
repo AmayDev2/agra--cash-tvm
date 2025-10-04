@@ -59,6 +59,7 @@ public class TimeUtil {
         return now.format(formatter);
     }
 
+
     public static String getTime(String encodedDate, String encodedTime) {
         String date = decodeDate(encodedDate);
         String time = decodeTime(encodedTime);
@@ -332,5 +333,9 @@ public class TimeUtil {
         return formatter.format(new Date(transactionTimeEpoch));
 
 
+    }
+
+    public static LocalDateTime getCurrentTimeAsLocalDateTime() {
+        return LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
     }
 }

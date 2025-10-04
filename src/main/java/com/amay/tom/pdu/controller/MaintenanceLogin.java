@@ -7,6 +7,7 @@ import com.amay.tom.controller.components.StatusBottomBarView;
 import com.amay.tom.exceptions.EmptyUsernameOrPasswordException;
 import com.amay.tom.exceptions.UsernameNotFoundException;
 import com.amay.tom.model.station.Station;
+import com.amay.tom.pdu.MaintenanceController;
 import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tom.repository.session.ShiftRepositoryImpl;
 import com.amay.tom.repository.user.UserRepositoryImpl;
@@ -91,15 +92,13 @@ public class MaintenanceLogin {
 
 
 
-    private Stage mainStage;
-
     boolean fl;
 
     @FXML
     private void initialize() {
-        if(!fl)
+        if(!fl){
         this.agent.getPeripheralMonitor().addDeviceStatusListener(new ListenDoreEvent(this, this.buzzerTask));
-        fl=true;
+        fl=true;}
         updateDateTime();
 ////        setPeripheralStatus();
 //        // check for last shift completion in another thread so that UI is not blocked
@@ -139,12 +138,16 @@ public class MaintenanceLogin {
 
     @FXML
     void loginButtonClicked(ActionEvent event) {
+        try {
+            this.buzzerTask.cancelAndTurnOff();
+        }catch (Exception e){
+            Logger.error("Error stopping buzzer: {}", e.getMessage());
+        }
 
-        this.buzzerTask.cancelAndTurnOff();
         Logger.tag(LoggerTag.APP).debug("Loading Hoppers Screen");
-        FXMLLoader fxmlLoader=ViewFactory.getHopper();
-        CoinRagistoryPageController coinRagistoryPageController=new CoinRagistoryPageController(sceneManager);
-        fxmlLoader.setControllerFactory((x)->coinRagistoryPageController);
+        FXMLLoader fxmlLoader=ViewFactory.getMaintenanceHome();
+        MaintenanceController controller=new MaintenanceController(this.agent,this.sceneManager);
+        fxmlLoader.setControllerFactory((x)->controller);
         this.sceneManager.addToScene(fxmlLoader);
 
         Logger.tag(LoggerTag.APP).debug("Loaded Hoppers Screen !!!");
@@ -218,7 +221,7 @@ public class MaintenanceLogin {
         }
     }
 
- static class ListenDoreEvent implements DeviceStatusListener {
+  static class ListenDoreEvent implements DeviceStatusListener {
      private final BuzzerTask task;
      private int[] mDeviceStatus;
      MaintenanceLogin controller;

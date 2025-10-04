@@ -40,7 +40,7 @@ public class TomInitializeViewController {
         this.tomInitialize = new TomInitialize(this, SCUConnection.INSTANCE, applicationService);
         progressIndicator.setProgress(0.2);
         progressInfo.setText("Initializing...");
-        this.tomInitialize.deviceInitialization();
+        this.tomInitialize.deviceInitialization(progressIndicator.getScene());
     }
 
 

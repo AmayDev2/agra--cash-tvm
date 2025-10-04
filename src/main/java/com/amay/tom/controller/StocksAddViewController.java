@@ -58,7 +58,7 @@ public class StocksAddViewController {
     @FXML
     private VBox vbox2;
 
-    private final int MAX_STOCK = 1000;     //TODO:Configure the QR update and NCMC update to be less than 1000
+    private final int MAX_STOCK = 1000;     //TODO:Configure the QR updateToAdd and NCMC updateToAdd to be less than 1000
 
     private Agent agent;
     private boolean isInitialization;

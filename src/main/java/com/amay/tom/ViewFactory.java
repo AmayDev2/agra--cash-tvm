@@ -274,6 +274,28 @@ public class ViewFactory {
     public static FXMLLoader getMaintenanceLogin() {
         return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/pdu/login_screen.fxml"));
     }
+    public static FXMLLoader getMaintenanceHome() {
+        return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/pdu/maintenance_home.fxml"));
+    }
 
+    public static FXMLLoader getMoneyManagement() {
+        return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/pdu/money_manage.fxml"));
+    }
+
+    public static FXMLLoader getMoneyManagementBnr() {
+        return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/pdu/bnr.fxml"));
+    }
+
+    public static FXMLLoader getMoneyManagementCoin() {
+        return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/tvm/coin_ragistory_page.fxml"));
+    }
+
+    public static FXMLLoader getMoneyManagementBnrUnload() {
+        return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/pdu/bnr_unload.fxml"));
+    }
+
+    public static FXMLLoader getMoneyManagementBnrLoad() {
+        return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/pdu/bnr_load.fxml"));
+    }
 }
 

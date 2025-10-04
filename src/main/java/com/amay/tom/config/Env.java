@@ -15,7 +15,7 @@ public interface Env {
     String DATABASE_PASSWORD2 = "Admin@123";
 
     // SQLite
-    int SQLITE_DATABASE_CONNECTIONS = 0;
+    int SQLITE_DATABASE_CONNECTIONS = 1;
     String SQLITE_DATABASE_PATH = "";
     String SQLITE_DATABASE_NAME = "";
 

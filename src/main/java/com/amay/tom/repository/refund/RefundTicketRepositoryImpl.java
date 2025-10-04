@@ -145,7 +145,7 @@ public class RefundTicketRepositoryImpl extends RefundTicketRepository {
             Logger.info("Marked {} for {} refunds", column.toUpperCase(), updated.length);
         } catch (SQLException e) {
             Logger.error("Error marking {} refunds: {}", column.toUpperCase(), e.getMessage());
-            throw new RuntimeException("Failed to update " + column.toUpperCase() + " refunds", e);
+            throw new RuntimeException("Failed to updateToAdd " + column.toUpperCase() + " refunds", e);
         }
     }
 

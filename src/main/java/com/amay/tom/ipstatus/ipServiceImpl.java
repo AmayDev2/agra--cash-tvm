@@ -15,14 +15,14 @@ public class ipServiceImpl implements IpService {
 
     public void addIp(IpData ipData){
         ipList.add(ipData);
-        //TODO: update in sqlite
+        //TODO: updateToAdd in sqlite
     }
 
     public void removeIp(IpData ipData){
 //        ipList.stream().findAny().filter(ipData1 -> ipData1.getIpAddress().equals(ipData.getIpAddress()));
         //TODO: delete from list
 
-        //TODO: update the list
+        //TODO: updateToAdd the list
     }
 
 

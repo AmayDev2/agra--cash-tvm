@@ -585,7 +585,7 @@ public class Controller {
         agent.getDeviceStatus().addDeviceStatusListener(this::setOperationMode);
     }
 
-    //TODO: Implement the logic to update the service mode
+    //TODO: Implement the logic to updateToAdd the service mode
     private void setOperationMode(DeviceOperationMode newStatus){
 //        if(DeviceOperationMode.EMERGENCY.equals(newStatus)){
             PDUCommandDispatcher.INSTANCE.dispatch(new AbnormalStationModeCommand(newStatus));

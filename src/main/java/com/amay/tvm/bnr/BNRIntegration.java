@@ -3,6 +3,7 @@ package com.amay.tvm.bnr;
 
 import com.amay.tom.service.payment2.impl.CashPayment;
 import com.amay.tvm.backend.enums.LoggerTag;
+import com.amay.tvm.backend.service.BnrFinanceMaintenance;
 import com.amay.tvm.coin.CoinModuleInterface;
 import com.amay.tvm.coin.model.AmountDetail;
 import com.amay.tvm.coin.model.HaveAmountObject;
@@ -17,7 +18,9 @@ import com.jxfs.events.JxfsOperationCompleteEvent;
 import com.jxfs.general.IJxfsConst;
 import com.jxfs.general.JxfsDeviceManager;
 import com.jxfs.general.JxfsRemoteDeviceInformation;
+import com.mei.bnr.Bnr;
 import com.mei.bnr.consts.error.BnrXfsErrorCode;
+import com.mei.bnr.exception.BnrException;
 import com.mei.bnr.jxfs.device.*;
 import com.mei.bnr.jxfs.device.state.IModuleState;
 import com.mei.bnr.jxfs.device.state.MEIModuleStatus;
@@ -34,7 +37,9 @@ import com.mei.bnr.jxfs.util.MEIJxfsException;
 import com.mei.bnr.jxfs.util.SynchronousJxfsOperationHelper;
 import com.mei.bnr.jxfs.xmlrpc.parameters.DirectIOModuleIdParameter;
 import com.mei.bnr.jxfs.xmlrpc.parameters.DirectIOModuleSetIdentificationParameters;
-import javafx.concurrent.Task;
+import io.netty.handler.codec.spdy.SpdyHttpResponseStreamIdHandler;
+import javafx.animation.PauseTransition;
+import javafx.util.Duration;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -45,7 +50,7 @@ import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Slf4j
-public class BNRIntegration {
+public class BNRIntegration  {
 
     public static long CASH_IN_AMOUNT = 0;
     public final static String CASH_IN_CURRENCY = "INR";
@@ -61,6 +66,8 @@ public class BNRIntegration {
         Logger.tag(LoggerTag.APP).debug(control.getCapabilities().toString());
 
     }
+
+    static Bnr bnr= new Bnr();
 
     private static boolean isAllowed;
 
@@ -159,7 +166,6 @@ public class BNRIntegration {
                     if(!IModuleState.ModuleOperationalState.OS_OPERATIONAL.equals(moduleOperationalState)){
                         return false;
                     }
-//                    meiModuleStatus.getElements().getFirst().getElements().getFirst().getElementOperationalState();
                     Logger.tag(LoggerTag.APP).debug("Module " + IIdentification.ModuleIdentificationEnum.getById(module)+" "+moduleOperationalState+" "+meiModuleStatus.getErrorCodeDescription());
                 }
                 return true;
@@ -237,7 +243,7 @@ public class BNRIntegration {
                 try {
                  bnrListener.informationToShow(BNRMessage.COLLECT_NOTES+amountToChange/100);
                  dispenseAndPresent(amountToChange);
-                 // update denomination
+                 // updateToAdd denomination
                     acceptedAmount.dispensedAmount=amountToChange;
 
                  //TODO: IF NOT HAVE CHANGE THEN TVM SLIP
@@ -258,7 +264,11 @@ public class BNRIntegration {
 
 
     private static void cancelWaiting()  {
-
+        try {
+            bnr.cancelWaitingCashTaken();
+        } catch (BnrException e) {
+            Logger.tag(LoggerTag.APP).error("Cancel waiting cash taken error : {}",e.getMessage());
+        }
 
     }
 
@@ -564,7 +574,11 @@ public class BNRIntegration {
                 }else  if(MEIJxfsCode.XFS_I_CDR_INPUT_REFUSED.getCode()==IE.getReason() ) {
                     //
                     Logger.tag(LoggerTag.APP).debug("Refused to accept");
-                    bnrListener.informationToShow(BNRMessage.REFUSE_TO_ACCEPT);
+                    try {
+                        bnrListener.informationToShow(BNRMessage.REFUSE_TO_ACCEPT);
+                    }catch (Exception e){
+                        Logger.tag(LoggerTag.APP).error("Refuse to accept error : "+e.getMessage());
+                    }
                 }else {
                     Logger.tag(LoggerTag.APP).debug("Inter mediate event "+IE.getData()+" : "+IE.getReason());
                 }
@@ -703,11 +717,7 @@ public class BNRIntegration {
      ***************************************************************************/
     public static void resetBnr() throws JxfsException {
 
-        helper.run(new ISynchronousOperation() {
-            public int run(JxfsATM control) throws JxfsException {
-                return control.reset();
-            }//run
-        });
+        control.reset();
 
 
     }//resetBnr
@@ -722,7 +732,7 @@ public class BNRIntegration {
         countdownFuture = scheduledExecutorService.scheduleAtFixedRate(new Runnable() {
             int remaining = countdownSeconds;
 
-            @Override
+            //@Override
             public void run() {
                 if (remaining > 0) {
                     Logger.tag(LoggerTag.APP).debug("\r Time remaining: " + remaining + " seconds");
@@ -803,6 +813,173 @@ public class BNRIntegration {
         return insertedAmount;
     }//acceptAmount
 
+    public static void emptyRecycler() {
+        try {
+            control.empty(new Vector(){});
+        } catch (JxfsException e) {
+            Logger.tag(LoggerTag.APP).error(e.getMessage());
+        }
+    }
+
+    //@Override
+    public static void bnrLoad() {
+        try {
+            if(vector==null) {
+                var event = helper.run(new ISynchronousOperation() {
+                    public int run(JxfsATM control) throws JxfsException {
+                        return control.queryDenominations();
+                    }//run
+                });
+
+                vector= (Vector<MEIDenominationInfo>) event.getData();
+            }
+
+            for(MEIDenominationInfo x:vector){
+                x.setEnableDenomination(true);
+            }
+
+            helper.run(new ISynchronousOperation() {
+                public int run(JxfsATM control) throws JxfsException {
+                    return control.updateDenominations(vector);
+                }//run
+            });
+
+            startCashInTransaction();
+            cashIn(0,"INR");
+        } catch (JxfsException e) {
+            Logger.tag(LoggerTag.APP).error("Cash in start error {}", e.getMessage());
+            try {
+                var event= helper.run(new ISynchronousOperation() {
+                    public int run(JxfsATM control) throws JxfsException {
+                        return control.cashInRollback();
+                    }//run
+                });
+            } catch (JxfsException ex) {
+                Logger.tag(LoggerTag.APP).error("Cash in rollback error {}", ex.getMessage());
+            }
+
+            cancelWaitingCashTaken(5);
+        }
+
+    }
+
+    private static void cancel(){
+        try {
+            control.cancel(1);
+            Thread.sleep(100);
+        } catch (JxfsException | InterruptedException e) {
+            Logger.debug(e.getMessage());
+        }
+    }
+
+    //@Override
+    public static void bnrLoadRollback() {
+
+        cancel();
+
+
+    }
+
+    //@Override
+    public static void bnrLoadCommit() {
+        try {
+            cancel();
+            endCashInTransaction();
+        } catch (JxfsException e) {
+            Logger.tag(LoggerTag.APP).error("Cash in end error {}", e.getMessage());
+        }
+
+    }
+
+    //@Override
+    public static void bnrUnload() {
+
+    }
+
+    //
+    public static void bnrSetDepositZero() {
+        try {
+            bnr.resetCashboxCuContent(true);
+        } catch (BnrException e) {
+            Logger.tag(LoggerTag.APP).error("BNR Obj {}", e.getMessage());
+        }
+
+    }
+
+    //@Override
+    public static int bnrUnload(String rcyId) {
+        int result=0;
+        try {
+            result = bnr.empty(rcyId, false);
+        } catch (BnrException e) {
+            Logger.tag(LoggerTag.APP).error("BNR Obj {}", e.getMessage());
+        }
+        Logger.tag(LoggerTag.APP).debug("Unload Recycler "+rcyId+" Result : "+result);
+        return result;
+
+    }
+
+    //@Override
+    public static void cancelTimeout() {
+        try {
+            bnr.cancelWaitingCashTaken();
+        } catch (BnrException e) {
+            Logger.tag(LoggerTag.APP).error("Waiting Timeout Error {}",e.getMessage());
+        }
+    }
+
+    private static void instanceCancelTimeout(){
+
+        pauseTransition.jumpTo(pauseTransition.getTotalDuration());
+    }
+
+    private static PauseTransition pauseTransition=null;
+
+    private static void cancelWaitingCashTaken(int seconds){
+        if(pauseTransition!=null){
+            pauseTransition.stop();
+        }
+        pauseTransition= new PauseTransition(Duration.seconds(seconds));
+        pauseTransition.setOnFinished(event -> {
+            try {
+                bnr.cancelWaitingCashTaken();
+            } catch (BnrException e) {
+                Logger.tag(LoggerTag.APP).error("Waiting Timeout Error {}",e.getMessage());
+            }
+        });
+        pauseTransition.play();
+
+    }
+
+    //@Override
+    public static int bnrUnloadRecycler() {
+        int result=0;
+        Vector<String> rcyIds=new Vector<>();
+        rcyIds.add("RE3");
+        rcyIds.add("RE4");
+        rcyIds.add("RE5");
+        rcyIds.add("RE6");
+        try {
+            result = control.empty(rcyIds);
+        } catch (JxfsException e) {
+        for(String rcyId:rcyIds) {
+                Logger.tag(LoggerTag.APP).error(e.getMessage());
+                result=bnrUnload(rcyId);
+            }
+        }
+        return result;
+
+    }
+
+    public static void reBootBnr() {
+
+    }
+
+    //@Override
+    public Object bnrModuleStatus() {
+        return null;
+    }
+
     @Data
     @RequiredArgsConstructor
     public static class AcceptAmountResponse{
@@ -881,6 +1058,7 @@ public class BNRIntegration {
             try {
                 if(acceptAmountResponse.getActualCoinChangedAmount()<=0) {
                     cashInRollback();
+                    cancelWaitingCashTaken(1);
                     acceptAmountResponse.setAcceptedAmount(0);
                     acceptAmountResponse.setRollback(true);
                 }
@@ -956,7 +1134,6 @@ public class BNRIntegration {
         // If the result is not successful
         if (event.getResult() != IJxfsConst.JXFS_RC_SUCCESSFUL) {
             Logger.error("CashIn failed with error: {} ", event.getResult());
-            bnrListener.informationToShow(BNRMessage.REFUSE_TO_ACCEPT);
             throw new MEIJxfsException(event.getResult(), event.getData());
         } else {
             result = (MEICashInOrder) event.getData();
@@ -1266,8 +1443,9 @@ public class BNRIntegration {
      * @throws JxfsException
      *                  if an error occurred.
      ***************************************************************************/
-    private static MEICashUnit queryCashUnit() throws JxfsException {
+    public static MEICashUnit queryCashUnit() throws JxfsException {
         MEICashUnit resultedCashUnit = null;
+
 
         // Retrieve the operationCompleteEvent
         JxfsOperationCompleteEvent event = helper.run(new ISynchronousOperation() {

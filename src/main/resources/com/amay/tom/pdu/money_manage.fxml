@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="CENTER" style=" -fx-background-color: #CCE4FF;"  prefHeight="480.0" prefWidth="640.0"  xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.pdu.controller.MoneyManageController">
+   <columnConstraints>
+      <ColumnConstraints halignment="CENTER" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+      <ColumnConstraints halignment="CENTER" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" percentHeight="17.0" prefHeight="116.0" />
+      <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="116.0" />
+      <RowConstraints minHeight="10.0" percentHeight="35.0" prefHeight="116.0" />
+      <RowConstraints minHeight="139.0" percentHeight="35.0" prefHeight="141.0" />
+   </rowConstraints>
+   <children>
+      <Button mnemonicParsing="false" onAction="#onCoin" prefHeight="39.0" prefWidth="190.0" style="-fx-background-color: gold; -fx-text-fill: black;" text="Coin Load/Unload" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#onBnr" prefHeight="39.0" prefWidth="190.0" style="-fx-background-color: gold; -fx-text-fill: black;" text="BNR Load/Unload" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#onBack" prefHeight="39.0" prefWidth="150.0" style="-fx-background-color: gold; -fx-text-fill: black;" text="Back" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.rowSpan="2147483647">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label prefHeight="35.0" prefWidth="241.0" text="Money Management" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</GridPane>

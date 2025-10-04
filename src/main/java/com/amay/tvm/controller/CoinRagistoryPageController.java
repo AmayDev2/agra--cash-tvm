@@ -65,14 +65,18 @@ public class CoinRagistoryPageController {
     }
 
     private void refreshTotals() {
-        total1.setText(HoppersRegistry.INSTANCE.getHopperQuantity("1"));
-        total2.setText(HoppersRegistry.INSTANCE.getHopperQuantity("2"));
-        total3.setText(HoppersRegistry.INSTANCE.getHopperQuantity("3"));
+        try {
+            total1.setText(HoppersRegistry.INSTANCE.getHopperQuantity("1"));
+            total2.setText(HoppersRegistry.INSTANCE.getHopperQuantity("2"));
+            total3.setText(HoppersRegistry.INSTANCE.getHopperQuantity("3"));
 
-        // Optional: clear text fields
-        qty1.clear();
-        qty2.clear();
-        qty3.clear();
+            // Optional: clear text fields
+            qty1.clear();
+            qty2.clear();
+            qty3.clear();
+        } catch (Exception e) {
+            Logger.tag(LoggerTag.APP).error("Error refreshing hopper totals: {}", e.getMessage());
+        }
     }
 
     private void handleKeyPress(KeyEvent event) {
@@ -108,7 +112,7 @@ public class CoinRagistoryPageController {
             protected void succeeded() {
                 // Back on UI thread
                 spinner.setVisible(false);
-                refreshTotals(); // update UI after completion
+                refreshTotals(); // updateToAdd UI after completion
                 sceneManager.back();
             }
 

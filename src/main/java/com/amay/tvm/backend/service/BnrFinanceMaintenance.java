@@ -5,6 +5,8 @@ public interface BnrFinanceMaintenance {
     void bnrLoadRollback();
     void bnrLoadCommit();
     void bnrUnload();
-    void bnrUnloadRecycler(String rcyId);
+    int bnrUnload(String rcyId);
+    void cancelTimeout();
+    int bnrUnloadRecycler();
     Object bnrModuleStatus();
 }

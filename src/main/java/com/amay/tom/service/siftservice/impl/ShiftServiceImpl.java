@@ -155,15 +155,13 @@ public class ShiftServiceImpl implements ShiftService {
         String ccuShiftId = "00";
         try {
             Logger.debug("Last Shift request sent to SCU");
-            if(agent.getPeripheralMonitor().isScu_connected())
-            scuShiftId=agent.getScuService().getTodayLastShiftId();
+            if(agent.getPeripheralMonitor().isScu_connected())scuShiftId=agent.getScuService().getTodayLastShiftId();
         } catch (RuntimeException e) {
             Logger.debug(e.getMessage());
         }
         try {
             Logger.debug("Last Shift request sent to CCU");
-            if(agent.getPeripheralMonitor().isCcu_connected())
-            ccuShiftId=agent.getCcuService().getTodayLastShiftId();
+            if(agent.getPeripheralMonitor().isCcu_connected())ccuShiftId=agent.getCcuService().getTodayLastShiftId();
         } catch (RuntimeException e) {
             Logger.debug(e.getMessage());
         }
@@ -182,7 +180,7 @@ public class ShiftServiceImpl implements ShiftService {
     @Override
     public void endOfShift(EOSType eosType) {
         LocalDateTime currentTime = LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
-        // update 4 columns endTime,endReason,updatedAt,status
+        // updateToAdd 4 columns endTime,endReason,updatedAt,status
         shift.setEndTime(currentTime)
                 .setCurrentStatus(ShiftStatus.COMPLETED.name())
                 .setUpdatedAt(currentTime)
@@ -190,7 +188,6 @@ public class ShiftServiceImpl implements ShiftService {
 
         shift.setImprest_money(String.valueOf(FareMedium.IMPREST_MONEY.getFareMediumTotal()));
 
-        //System.out.println("FareMedium : "+FareMedium.IMPREST_MONEY.getFareMediumTotal());
 
         // remove user privilege and user auth
         this.agent.setUserPrivilege(null);
@@ -214,7 +211,6 @@ public class ShiftServiceImpl implements ShiftService {
         } catch (Exception e) {
             //TODO: log
             agent.getGrpcApiListener().sendAlarm(Alarm.SHIFT_END_FAILED);
-            e.printStackTrace();
         }finally {
             FareMedium.IMPREST_MONEY.setFareMediumTotal(0);
             FareMedium.NCMC.setFareMediumTotal(0);
@@ -544,7 +540,7 @@ public class ShiftServiceImpl implements ShiftService {
         //System.out.println("sunliyaa");
         agent.getGrpcApiListener().sendAlarm(Alarm.SHIFT_PAUSE);
         LocalDateTime currentTime = LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
-        // update 4 columns endTime,endReason,updatedAt,status
+        // updateToAdd 4 columns endTime,endReason,updatedAt,status
         shift.setCurrentStatus(ShiftStatus.PAUSED.name())
                 .setUpdatedAt(currentTime);
 
@@ -572,7 +568,7 @@ public class ShiftServiceImpl implements ShiftService {
         try(UserPrivilege userPrivilege=userAuth.login(userAuth.getCurrentUser().getUsername(),password)) {
 
             LocalDateTime currentTime = LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
-            // update 4 columns endTime,endReason,updatedAt,status
+            // updateToAdd 4 columns endTime,endReason,updatedAt,status
             shift.setCurrentStatus(ShiftStatus.ACTIVE.name()).setUpdatedAt(currentTime);
             shiftRepository.shiftPauseResume(ShiftMapper.toDto(shift));
             agent.getScuService().resumeShiftPause(shift);

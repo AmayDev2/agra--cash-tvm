@@ -50,11 +50,11 @@ public class ShiftRepositoryImpl extends ShiftRepository {
             pstmt.setString(14,shift.getImprest_money());
             pstmt.setString(15,shift.getConfig_version());
             //System.out.println(pstmt);
-            // Execute the update
+            // Execute the updateToAdd
             int affectedRows = pstmt.executeUpdate();
             //System.out.println(affectedRows);
 //
-//            // Check if the update was successful and if keys are generated
+//            // Check if the updateToAdd was successful and if keys are generated
 //            if (affectedRows > 0) {
 //                try (ResultSet generatedKeys = pstmt.getGeneratedKeys()) {
 //                    if (generatedKeys.next()) {

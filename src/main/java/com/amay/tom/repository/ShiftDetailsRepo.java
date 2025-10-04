@@ -87,7 +87,7 @@ public class ShiftDetailsRepo {
             statement.executeUpdate();
             //System.out.println("Shift details updated successfully.");
         }catch (Exception e){
-            Logger.error("Shift details update {}",e.getMessage());
+            Logger.error("Shift details updateToAdd {}",e.getMessage());
         }
     }
 
@@ -102,7 +102,7 @@ public class ShiftDetailsRepo {
             //System.out.println("Shift status updated successfully.");
             return readShiftDetails(connection, shiftId);
         }catch (Exception e){
-            Logger.error("Shift status update {}",e.getMessage());
+            Logger.error("Shift status updateToAdd {}",e.getMessage());
             return null;
         }
     }
@@ -121,7 +121,7 @@ public class ShiftDetailsRepo {
 //            statement.executeUpdate();
 //            //System.out.println("Shift details updated successfully.");
 //        }catch (Exception e){
-//            Logger.error("Shift details update {}",e.getMessage());
+//            Logger.error("Shift details updateToAdd {}",e.getMessage());
 //        }
 //    }
 

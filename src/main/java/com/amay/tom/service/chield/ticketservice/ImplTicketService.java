@@ -117,7 +117,7 @@ public class ImplTicketService implements TicketService, ReprintTicket {
 
                 File qrCodeFile = new File(filePath);
 
-                this.dbUpdate(metroTicket);  //TODO: update the ticket record in the database
+                this.dbUpdate(metroTicket);  //TODO: updateToAdd the ticket record in the database
 
                 BufferedImage bufferedImage = qrService.createQRCode(qrCodeFile, qrCodeData, size, fileType);
 
@@ -126,7 +126,7 @@ public class ImplTicketService implements TicketService, ReprintTicket {
                 qrt.setQrCodeData(qrCodeData);
                 qrt.setQty(metroTicket.getTicketQuantity());
                 QRDataArray.qrDataArray.add(qrt);
- //               ticketsRepository.insertTicket(SQLiteConnection.INSTANCE.getConnection(), qrt,orderId); //TODO: update the ticket record in the database
+ //               ticketsRepository.insertTicket(SQLiteConnection.INSTANCE.getConnection(), qrt,orderId); //TODO: updateToAdd the ticket record in the database
 //                ticketsRepository.testInsert(SQLiteConnection.INSTANCE.getConnection());
                 qrTickets.add(qrt);
             }
@@ -156,7 +156,7 @@ public class ImplTicketService implements TicketService, ReprintTicket {
 
                 File qrCodeFile = new File(filePath);
 
-                this.dbUpdate(metroTicket);  //TODO: update the ticket record in the database
+                this.dbUpdate(metroTicket);  //TODO: updateToAdd the ticket record in the database
 
                 BufferedImage bufferedImage = qrService.createQRCode(qrCodeFile, qrCodeData, size, fileType);
 
@@ -165,7 +165,7 @@ public class ImplTicketService implements TicketService, ReprintTicket {
                 qrt.setQrCodeData(qrCodeData);
                 qrt.setQty(metroTicket.getTicketQuantity());
                 QRDataArray.qrDataArray.add(qrt);
-                ticketsRepository.insertTicket(SQLiteConnection.INSTANCE.getConnection(), qrt,orderId); //TODO: update the ticket record in the database
+                ticketsRepository.insertTicket(SQLiteConnection.INSTANCE.getConnection(), qrt,orderId); //TODO: updateToAdd the ticket record in the database
 //                ticketsRepository.testInsert(SQLiteConnection.INSTANCE.getConnection());
                 qrTickets.add(qrt);
             }

@@ -40,7 +40,7 @@ public class RefundQRServiceImpl implements RefundQRService {
 //                TicketsDto ticketsDto = this.ticketsRepository.findById(refundDTO.getTicketNumber());
 //                ticketsDto.setActive(false);
 //                ticketsDto.setRefund(true);
-//                this.ticketsRepository.update(ticketsDto);
+//                this.ticketsRepository.updateToAdd(ticketsDto);
                 Logger.info("Refund processed successfully for ticket: {}", refundDTO.getTicketNumber());
         } catch (Exception e) {
             Logger.error("Error processing refund: {}", e.getMessage());

@@ -10,6 +10,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
+import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalTime;
 import java.time.ZoneId;
@@ -33,6 +34,13 @@ public class BusinessList {
     public boolean isActiveWorkingHour(){
         if(null==today)this.today=today();
         return null == today || isCurrentTimeBetween(this.today.getStartTime(), this.today.getEndTime());
+    }
+
+    @JsonIgnore
+    public long getRemainingSecondsOfWorkingHour(){
+        if(null==today)this.today=today();
+        if(null==today)return 0;
+        return getRemainingSecondsOfWorkingHour(this.today.getStartTime(),this.today.getEndTime());
     }
 
 
@@ -120,6 +128,27 @@ public class BusinessList {
         LocalTime startTime = LocalTime.parse(startTimeStr, formatter);
         LocalTime endTime = LocalTime.parse(endTimeStr, formatter);
         return !now.isBefore(startTime) && !now.isAfter(endTime);
+    }
+
+    @JsonIgnore
+    public static long getRemainingSecondsOfWorkingHour(String startTimeStr, String endTimeStr) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        LocalTime now = LocalTime.now();
+        LocalTime startTime = LocalTime.parse(startTimeStr, formatter);
+        LocalTime endTime = LocalTime.parse(endTimeStr, formatter);
+
+//        // If current time is before start, consider full working hour remaining
+        if (now.isBefore(startTime)) {
+            return Duration.between(startTime, endTime).getSeconds();
+        }
+
+        // If current time is after end, 0 seconds remain
+        if (now.isAfter(endTime)) {
+            return 0;
+        }
+
+        // Otherwise, return remaining seconds from now to end
+        return Duration.between(now, endTime).getSeconds();
     }
 
 

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="CENTER" prefWidth="640.0" style=" -fx-background-color: #CCE4FF;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.pdu.MaintenanceController">
+   <columnConstraints>
+      <ColumnConstraints halignment="CENTER" percentWidth="50.0" />
+      <ColumnConstraints halignment="CENTER" percentWidth="50.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints percentHeight="25.0" />
+      <RowConstraints minHeight="10.0" percentHeight="25.0" valignment="CENTER" />
+      <RowConstraints minHeight="100.0" percentHeight="25.0" valignment="CENTER" />
+      <RowConstraints minHeight="100.0" percentHeight="25.0" valignment="CENTER" />
+   </rowConstraints>
+   <Button maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#onSystemInfo" prefHeight="39.0" prefWidth="210.0" style="-fx-background-color: gold; -fx-text-fill: black;" text="System Info" GridPane.halignment="CENTER">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Button>
+   <Button mnemonicParsing="false" onAction="#onMoneyManage" prefHeight="35.0" prefWidth="210.0" style="-fx-background-color: gold; -fx-text-fill: black;" text="Money Management" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Button>
+   <!--             <BorderPane fx:id="moneyOptionsPane" GridPane.rowIndex="2" visible="false" prefHeight="100.0" prefWidth="400.0">-->
+   <!--                 <center>-->
+   <!--                     <HBox spacing="10" alignment="CENTER">-->
+   <!--                         <children>-->
+   <!--                             <Button text="Coin Load/Unload" onAction="#onCoinLoad"/>-->
+   <!--                             <Button text="BNR Load/Unload" onAction="#onBnrLoad"/>-->
+   <!--                             <Button text="Get Receipt" onAction="#onGetReceipt"/>-->
+   <!--                             <Button text="Back" onAction="#onBack"/>-->
+   <!--                             <Button text="Reset" onAction="#onReset"/>-->
+   <!--                         </children>-->
+   <!--                     </HBox>-->
+   <!--                 </center>-->
+   <!--             </BorderPane>-->
+
+   <Button mnemonicParsing="false" onAction="#onMain" prefHeight="35.0" prefWidth="210.0" style="-fx-background-color: gold; -fx-text-fill: black;" text="Maintenace" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Button>
+   <Button mnemonicParsing="false" onAction="#onImpExp" prefHeight="35.0" prefWidth="210.0" style="-fx-background-color: gold; -fx-text-fill: black;" text="Import/Export" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Button>
+   <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onReports" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: gold; -fx-text-fill: black;" text="Reports" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Button>
+   <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onReports" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: gold; -fx-text-fill: black;" text="Reports" GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Button>
+
+   <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onLogout" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: gold; -fx-text-fill: black;" text="Logout" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Button>
+
+
+</GridPane>

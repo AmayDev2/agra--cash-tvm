@@ -1,5 +1,7 @@
 package com.amay.tom.service.initialize;
 
+import javafx.scene.Scene;
+
 import java.io.IOException;
 
 public interface ITomInitialize {
@@ -44,7 +46,7 @@ public interface ITomInitialize {
     boolean getUserUpdatedTable(boolean isUpdate);
 
     boolean peripheralDeviceStatus();
-    void deviceInitialization();
+    void deviceInitialization(Scene scene);
     void checkStationMode();
     boolean loadStations(boolean isUpdate);
     void pushRemainedDate();

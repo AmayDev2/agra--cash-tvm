@@ -129,7 +129,7 @@ public class SessionCompletion {
 
     private void revert(){
         skipPrintBtn.setDisable(false);
-        pauseTransition= new PauseTransition(javafx.util.Duration.seconds(10));
+        pauseTransition= new PauseTransition(Duration.seconds(10));
         pauseTransition.setOnFinished(event -> {
             close();
         });

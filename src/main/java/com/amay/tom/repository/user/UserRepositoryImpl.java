@@ -150,7 +150,7 @@ public class UserRepositoryImpl extends UserRepository {
                 }
             }
         } catch (SQLException ex) {
-            //System.out.println("Error during find and update "+ex.getMessage());
+            //System.out.println("Error during find and updateToAdd "+ex.getMessage());
         }
     }
 
