@@ -1,11 +1,9 @@
 package com.amay.tom.pdu.controller.service;
 
-import com.amay.tom.ViewFactory;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.layout.StackPane;
-import org.tinylog.Logger;
 
 import java.io.IOException;
 
@@ -19,7 +17,7 @@ public class SceneManager {
     public void switchTo(FXMLLoader fxmlLoader) {
             Platform.runLater(() -> {
                 try {
-                    container.getChildren().set(container.getChildren().size()-1,(Node) fxmlLoader.load());
+                    container.getChildren().set(container.getChildren().size()-1, fxmlLoader.load());
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }

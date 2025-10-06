@@ -165777,3 +165777,1263 @@
 2025/10/03-15:21:39.117:[00006720#00000000#5] > [EnumUSBDevices] Begin
 2025/10/03-15:21:39.118:[00006720#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
 2025/10/03-15:21:39.119:[00006720#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/04-23:53:03.223:[00008B2C#00000000#5] > [InitLibrary] Begin
+2025/10/04-23:53:03.223:[00008B2C#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/04-23:53:03.224:[00008B2C#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/04-23:53:03.224:[00008B2C#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/10/04-23:53:03.225:[00008B2C#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/04-23:53:03.225:[00008B2C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/04-23:53:03.226:[00008B2C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/04-23:53:03.226:[00008B2C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/04-23:53:03.227:[00008B2C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/04-23:53:03.227:[00008B2C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/04-23:53:03.228:[00008B2C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/04-23:53:03.228:[00008B2C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/04-23:53:03.229:[00008B2C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/04-23:53:03.229:[00008B2C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/04-23:53:03.243:[00008B2C#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/04-23:53:03.243:[00008B2C#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/04-23:53:03.243:[00008B2C#00000000#5] > [GetVariable] Begin
+2025/10/04-23:53:03.244:[00008B2C#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/04-23:53:03.244:[00008B2C#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/04-23:53:03.247:[00008B2C#00000000#5] > [GetAPIVersion] Begin
+2025/10/04-23:53:03.248:[00008B2C#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/04-23:53:03.248:[00008B2C#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/04-23:53:03.250:[00008B2C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/04-23:53:03.251:[00008B2C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/04-23:53:03.251:[00008B2C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/04-23:53:03.251:[00008B2C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/04-23:53:03.251:[00008B2C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/04-23:53:03.253:[00008B2C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/05-00:11:34.370:[0000336C#00000000#5] > [InitLibrary] Begin
+2025/10/05-00:11:34.370:[0000336C#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/05-00:11:34.370:[0000336C#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/05-00:11:34.371:[0000336C#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/10/05-00:11:34.372:[0000336C#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/05-00:11:34.372:[0000336C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/05-00:11:34.374:[0000336C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/05-00:11:34.374:[0000336C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/05-00:11:34.376:[0000336C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/05-00:11:34.377:[0000336C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/05-00:11:34.377:[0000336C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/05-00:11:34.378:[0000336C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/05-00:11:34.379:[0000336C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/05-00:11:34.379:[0000336C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/05-00:11:34.390:[0000336C#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/05-00:11:34.391:[0000336C#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/05-00:11:34.391:[0000336C#00000000#5] > [GetVariable] Begin
+2025/10/05-00:11:34.391:[0000336C#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/05-00:11:34.393:[0000336C#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/05-00:11:34.395:[0000336C#00000000#5] > [GetAPIVersion] Begin
+2025/10/05-00:11:34.395:[0000336C#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/05-00:11:34.396:[0000336C#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/05-00:11:34.398:[0000336C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/05-00:11:34.398:[0000336C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/05-00:11:34.398:[0000336C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/05-00:11:34.398:[0000336C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/05-00:11:34.399:[0000336C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/05-00:11:34.399:[0000336C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/05-00:21:18.455:[00004DE8#00000000#5] > [InitLibrary] Begin
+2025/10/05-00:21:18.455:[00004DE8#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/05-00:21:18.456:[00004DE8#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/05-00:21:18.456:[00004DE8#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/10/05-00:21:18.457:[00004DE8#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/05-00:21:18.457:[00004DE8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/05-00:21:18.457:[00004DE8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/05-00:21:18.457:[00004DE8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/05-00:21:18.459:[00004DE8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/05-00:21:18.459:[00004DE8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/05-00:21:18.460:[00004DE8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/05-00:21:18.460:[00004DE8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/05-00:21:18.461:[00004DE8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/05-00:21:18.461:[00004DE8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/05-00:21:18.470:[00004DE8#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/05-00:21:18.471:[00004DE8#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/05-00:21:18.471:[00004DE8#00000000#5] > [GetVariable] Begin
+2025/10/05-00:21:18.472:[00004DE8#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/05-00:21:18.472:[00004DE8#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/05-00:21:18.475:[00004DE8#00000000#5] > [GetAPIVersion] Begin
+2025/10/05-00:21:18.476:[00004DE8#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/05-00:21:18.476:[00004DE8#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/05-00:21:18.477:[00004DE8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/05-00:21:18.478:[00004DE8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/05-00:21:18.478:[00004DE8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/05-00:21:18.478:[00004DE8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/05-00:21:18.480:[00004DE8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/05-00:21:18.480:[00004DE8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/05-00:26:15.712:[00000A78#00000000#5] > [InitLibrary] Begin
+2025/10/05-00:26:15.712:[00000A78#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/05-00:26:15.714:[00000A78#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/05-00:26:15.714:[00000A78#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/10/05-00:26:15.715:[00000A78#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/05-00:26:15.715:[00000A78#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/05-00:26:15.715:[00000A78#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/05-00:26:15.716:[00000A78#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/05-00:26:15.716:[00000A78#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/05-00:26:15.718:[00000A78#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/05-00:26:15.718:[00000A78#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/05-00:26:15.718:[00000A78#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/05-00:26:15.718:[00000A78#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/05-00:26:15.718:[00000A78#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/05-00:26:15.728:[00000A78#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/05-00:26:15.728:[00000A78#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/05-00:26:15.729:[00000A78#00000000#5] > [GetVariable] Begin
+2025/10/05-00:26:15.729:[00000A78#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/05-00:26:15.730:[00000A78#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/05-00:26:15.733:[00000A78#00000000#5] > [GetAPIVersion] Begin
+2025/10/05-00:26:15.734:[00000A78#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/05-00:26:15.734:[00000A78#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/05-00:26:15.737:[00000A78#00000000#5] > [EnumUSBDevices] Begin
+2025/10/05-00:26:15.737:[00000A78#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/05-00:26:15.737:[00000A78#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/05-00:26:15.738:[00000A78#00000000#5] > [EnumUSBDevices] Begin
+2025/10/05-00:26:15.738:[00000A78#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/05-00:26:15.739:[00000A78#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/05-01:13:29.196:[00003E20#00000000#5] > [InitLibrary] Begin
+2025/10/05-01:13:29.198:[00003E20#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/05-01:13:29.198:[00003E20#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/05-01:13:29.199:[00003E20#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/10/05-01:13:29.199:[00003E20#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/05-01:13:29.200:[00003E20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/05-01:13:29.200:[00003E20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/05-01:13:29.200:[00003E20#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/05-01:13:29.201:[00003E20#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/05-01:13:29.201:[00003E20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/05-01:13:29.201:[00003E20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/05-01:13:29.204:[00003E20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/05-01:13:29.204:[00003E20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/05-01:13:29.204:[00003E20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/05-01:13:29.222:[00003E20#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/05-01:13:29.222:[00003E20#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/05-01:13:29.223:[00003E20#00000000#5] > [GetVariable] Begin
+2025/10/05-01:13:29.223:[00003E20#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/05-01:13:29.223:[00003E20#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/05-01:13:29.228:[00003E20#00000000#5] > [GetAPIVersion] Begin
+2025/10/05-01:13:29.228:[00003E20#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/05-01:13:29.229:[00003E20#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/05-01:13:29.232:[00003E20#00000000#5] > [EnumUSBDevices] Begin
+2025/10/05-01:13:29.234:[00003E20#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/05-01:13:29.234:[00003E20#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/05-01:13:29.234:[00003E20#00000000#5] > [EnumUSBDevices] Begin
+2025/10/05-01:13:29.235:[00003E20#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/05-01:13:29.235:[00003E20#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/05-01:15:42.911:[00008F10#00000000#5] > [InitLibrary] Begin
+2025/10/05-01:15:42.911:[00008F10#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/05-01:15:42.911:[00008F10#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/05-01:15:42.913:[00008F10#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/10/05-01:15:42.913:[00008F10#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/05-01:15:42.913:[00008F10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/05-01:15:42.913:[00008F10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/05-01:15:42.914:[00008F10#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/05-01:15:42.914:[00008F10#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/05-01:15:42.915:[00008F10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/05-01:15:42.915:[00008F10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/05-01:15:42.915:[00008F10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/05-01:15:42.915:[00008F10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/05-01:15:42.917:[00008F10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/05-01:15:42.926:[00008F10#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/05-01:15:42.926:[00008F10#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/05-01:15:42.926:[00008F10#00000000#5] > [GetVariable] Begin
+2025/10/05-01:15:42.927:[00008F10#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/05-01:15:42.927:[00008F10#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/05-01:15:42.930:[00008F10#00000000#5] > [GetAPIVersion] Begin
+2025/10/05-01:15:42.931:[00008F10#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/05-01:15:42.931:[00008F10#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/05-01:15:42.933:[00008F10#00000000#5] > [EnumUSBDevices] Begin
+2025/10/05-01:15:42.933:[00008F10#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/05-01:15:42.933:[00008F10#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/05-01:15:42.934:[00008F10#00000000#5] > [EnumUSBDevices] Begin
+2025/10/05-01:15:42.934:[00008F10#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/05-01:15:42.935:[00008F10#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/05-01:20:02.912:[00006E80#00000000#5] > [InitLibrary] Begin
+2025/10/05-01:20:02.913:[00006E80#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/05-01:20:02.914:[00006E80#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/05-01:20:02.915:[00006E80#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/10/05-01:20:02.915:[00006E80#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/05-01:20:02.916:[00006E80#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/05-01:20:02.916:[00006E80#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/05-01:20:02.917:[00006E80#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/05-01:20:02.917:[00006E80#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/05-01:20:02.918:[00006E80#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/05-01:20:02.918:[00006E80#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/05-01:20:02.919:[00006E80#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/05-01:20:02.919:[00006E80#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/05-01:20:02.919:[00006E80#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/05-01:20:02.929:[00006E80#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/05-01:20:02.930:[00006E80#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/05-01:20:02.930:[00006E80#00000000#5] > [GetVariable] Begin
+2025/10/05-01:20:02.931:[00006E80#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/05-01:20:02.931:[00006E80#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/05-01:20:02.937:[00006E80#00000000#5] > [GetAPIVersion] Begin
+2025/10/05-01:20:02.938:[00006E80#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/05-01:20:02.938:[00006E80#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/05-01:20:02.942:[00006E80#00000000#5] > [EnumUSBDevices] Begin
+2025/10/05-01:20:02.942:[00006E80#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/05-01:20:02.943:[00006E80#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/05-01:20:02.943:[00006E80#00000000#5] > [EnumUSBDevices] Begin
+2025/10/05-01:20:02.944:[00006E80#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/05-01:20:02.944:[00006E80#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-11:58:39.742:[00008538#00000000#5] > [InitLibrary] Begin
+2025/10/06-11:58:39.743:[00008538#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/06-11:58:39.743:[00008538#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-11:58:39.743:[00008538#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/10/06-11:58:39.744:[00008538#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-11:58:39.744:[00008538#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-11:58:39.744:[00008538#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-11:58:39.745:[00008538#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-11:58:39.745:[00008538#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-11:58:39.745:[00008538#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-11:58:39.746:[00008538#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-11:58:39.746:[00008538#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-11:58:39.746:[00008538#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-11:58:39.747:[00008538#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-11:58:39.755:[00008538#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-11:58:39.755:[00008538#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-11:58:39.756:[00008538#00000000#5] > [GetVariable] Begin
+2025/10/06-11:58:39.756:[00008538#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-11:58:39.757:[00008538#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-11:58:39.759:[00008538#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-11:58:39.759:[00008538#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-11:58:39.759:[00008538#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-11:58:39.761:[00008538#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-11:58:39.761:[00008538#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-11:58:39.762:[00008538#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-11:58:39.762:[00008538#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-11:58:39.762:[00008538#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-11:58:39.762:[00008538#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:42:03.937:[00003A14#00000000#5] > [InitLibrary] Begin
+2025/10/06-14:42:03.937:[00003A14#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/06-14:42:03.938:[00003A14#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-14:42:03.938:[00003A14#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/10/06-14:42:03.938:[00003A14#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-14:42:03.939:[00003A14#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-14:42:03.939:[00003A14#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-14:42:03.939:[00003A14#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-14:42:03.939:[00003A14#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-14:42:03.940:[00003A14#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-14:42:03.940:[00003A14#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-14:42:03.940:[00003A14#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-14:42:03.941:[00003A14#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-14:42:03.941:[00003A14#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-14:42:03.949:[00003A14#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-14:42:03.949:[00003A14#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-14:42:03.950:[00003A14#00000000#5] > [GetVariable] Begin
+2025/10/06-14:42:03.950:[00003A14#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-14:42:03.950:[00003A14#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-14:42:03.952:[00003A14#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-14:42:03.952:[00003A14#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-14:42:03.953:[00003A14#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-14:42:03.954:[00003A14#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:42:03.955:[00003A14#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:42:03.955:[00003A14#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:42:03.955:[00003A14#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:42:03.955:[00003A14#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:42:03.955:[00003A14#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:43:16.684:[00007C94#00000000#5] > [InitLibrary] Begin
+2025/10/06-14:43:16.684:[00007C94#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/06-14:43:16.684:[00007C94#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-14:43:16.685:[00007C94#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/10/06-14:43:16.685:[00007C94#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-14:43:16.685:[00007C94#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-14:43:16.685:[00007C94#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-14:43:16.687:[00007C94#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-14:43:16.687:[00007C94#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-14:43:16.687:[00007C94#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-14:43:16.688:[00007C94#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-14:43:16.688:[00007C94#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-14:43:16.688:[00007C94#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-14:43:16.688:[00007C94#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-14:43:16.694:[00007C94#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-14:43:16.695:[00007C94#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-14:43:16.695:[00007C94#00000000#5] > [GetVariable] Begin
+2025/10/06-14:43:16.696:[00007C94#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-14:43:16.696:[00007C94#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-14:43:16.698:[00007C94#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-14:43:16.698:[00007C94#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-14:43:16.698:[00007C94#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-14:43:16.700:[00007C94#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:43:16.701:[00007C94#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:43:16.701:[00007C94#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:43:16.701:[00007C94#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:43:16.701:[00007C94#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:43:16.701:[00007C94#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:48:30.890:[0000753C#00000000#5] > [InitLibrary] Begin
+2025/10/06-14:48:30.890:[0000753C#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/06-14:48:30.890:[0000753C#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-14:48:30.890:[0000753C#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/10/06-14:48:30.892:[0000753C#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-14:48:30.892:[0000753C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-14:48:30.893:[0000753C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-14:48:30.893:[0000753C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-14:48:30.893:[0000753C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-14:48:30.894:[0000753C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-14:48:30.894:[0000753C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-14:48:30.894:[0000753C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-14:48:30.895:[0000753C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-14:48:30.895:[0000753C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-14:48:30.903:[0000753C#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-14:48:30.905:[0000753C#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-14:48:30.905:[0000753C#00000000#5] > [GetVariable] Begin
+2025/10/06-14:48:30.905:[0000753C#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-14:48:30.906:[0000753C#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-14:48:30.908:[0000753C#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-14:48:30.908:[0000753C#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-14:48:30.909:[0000753C#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-14:48:30.911:[0000753C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:48:30.911:[0000753C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:48:30.912:[0000753C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:48:30.912:[0000753C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:48:30.913:[0000753C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:48:30.913:[0000753C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:53:30.184:[000050B0#00000000#5] > [InitLibrary] Begin
+2025/10/06-14:53:30.184:[000050B0#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/06-14:53:30.184:[000050B0#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-14:53:30.185:[000050B0#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/10/06-14:53:30.185:[000050B0#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-14:53:30.185:[000050B0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-14:53:30.185:[000050B0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-14:53:30.186:[000050B0#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-14:53:30.186:[000050B0#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-14:53:30.186:[000050B0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-14:53:30.187:[000050B0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-14:53:30.187:[000050B0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-14:53:30.187:[000050B0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-14:53:30.188:[000050B0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-14:53:30.196:[000050B0#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-14:53:30.196:[000050B0#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-14:53:30.196:[000050B0#00000000#5] > [GetVariable] Begin
+2025/10/06-14:53:30.197:[000050B0#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-14:53:30.197:[000050B0#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-14:53:30.199:[000050B0#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-14:53:30.200:[000050B0#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-14:53:30.201:[000050B0#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-14:53:30.202:[000050B0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:53:30.203:[000050B0#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:53:30.203:[000050B0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:53:30.203:[000050B0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:53:30.203:[000050B0#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:53:30.204:[000050B0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:56:58.623:[000078B8#00000000#5] > [InitLibrary] Begin
+2025/10/06-14:56:58.624:[000078B8#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/06-14:56:58.624:[000078B8#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-14:56:58.624:[000078B8#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/10/06-14:56:58.625:[000078B8#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-14:56:58.625:[000078B8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-14:56:58.625:[000078B8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-14:56:58.626:[000078B8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-14:56:58.626:[000078B8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-14:56:58.626:[000078B8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-14:56:58.627:[000078B8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-14:56:58.627:[000078B8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-14:56:58.628:[000078B8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-14:56:58.628:[000078B8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-14:56:58.638:[000078B8#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-14:56:58.638:[000078B8#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-14:56:58.639:[000078B8#00000000#5] > [GetVariable] Begin
+2025/10/06-14:56:58.639:[000078B8#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-14:56:58.640:[000078B8#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-14:56:58.641:[000078B8#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-14:56:58.642:[000078B8#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-14:56:58.642:[000078B8#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-14:56:58.645:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:56:58.645:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:56:58.645:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:56:58.645:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:56:58.645:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:56:58.646:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:00.151:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:00.151:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:00.152:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:00.153:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:00.154:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:00.154:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:05.144:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:05.146:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:05.146:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:05.147:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:05.147:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:05.147:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:10.145:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:10.146:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:10.146:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:10.147:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:10.147:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:10.148:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:15.144:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:15.145:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:15.146:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:15.146:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:15.147:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:15.147:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:20.142:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:20.142:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:20.142:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:20.143:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:20.143:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:20.143:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:25.187:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:25.188:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:25.188:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:25.189:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:25.189:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:25.190:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:30.142:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:30.144:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:30.144:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:30.145:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:30.146:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:30.146:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:35.143:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:35.144:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:35.145:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:35.145:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:35.146:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:35.146:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:40.141:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:40.141:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:40.142:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:40.142:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:40.142:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:40.142:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:45.143:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:45.144:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:45.144:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:45.144:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:45.144:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:45.145:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:50.144:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:50.145:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:50.146:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:50.146:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:50.147:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:50.147:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:55.141:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:55.141:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:55.143:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:57:55.144:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:57:55.145:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:57:55.146:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:58:00.143:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:58:00.145:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:58:00.146:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:58:00.147:[000078B8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:58:00.148:[000078B8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:58:00.148:[000078B8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:58:42.163:[0000830C#00000000#5] > [InitLibrary] Begin
+2025/10/06-14:58:42.164:[0000830C#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/06-14:58:42.164:[0000830C#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-14:58:42.164:[0000830C#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/10/06-14:58:42.165:[0000830C#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-14:58:42.165:[0000830C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-14:58:42.165:[0000830C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-14:58:42.166:[0000830C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-14:58:42.166:[0000830C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-14:58:42.166:[0000830C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-14:58:42.167:[0000830C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-14:58:42.167:[0000830C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-14:58:42.167:[0000830C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-14:58:42.168:[0000830C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-14:58:42.175:[0000830C#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-14:58:42.175:[0000830C#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-14:58:42.176:[0000830C#00000000#5] > [GetVariable] Begin
+2025/10/06-14:58:42.176:[0000830C#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-14:58:42.176:[0000830C#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-14:58:42.178:[0000830C#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-14:58:42.178:[0000830C#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-14:58:42.178:[0000830C#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-14:58:42.181:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:58:42.181:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:58:42.182:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:58:42.182:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:58:42.182:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:58:42.182:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:58:43.565:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:58:43.565:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:58:43.566:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:58:43.566:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:58:43.567:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:58:43.567:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:58:48.562:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:58:48.563:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:58:48.564:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:58:48.565:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:58:48.566:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:58:48.566:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:58:53.564:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:58:53.565:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:58:53.565:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:58:53.566:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:58:53.567:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:58:53.567:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:58:58.561:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:58:58.562:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:58:58.563:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:58:58.563:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:58:58.564:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:58:58.565:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:03.557:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:03.558:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:03.558:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:03.559:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:03.559:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:03.560:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:08.560:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:08.561:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:08.562:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:08.563:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:08.564:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:08.564:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:13.561:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:13.562:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:13.564:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:13.564:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:13.565:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:13.565:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:18.558:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:18.560:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:18.561:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:18.562:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:18.564:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:18.564:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:23.559:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:23.560:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:23.560:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:23.560:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:23.560:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:23.562:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:28.558:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:28.559:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:28.559:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:28.559:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:28.560:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:28.561:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:33.560:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:33.561:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:33.562:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:33.563:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:33.564:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:33.564:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:43.416:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:43.416:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:43.417:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:43.418:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:43.418:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:43.418:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:45.600:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:45.600:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:45.600:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:45.600:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:45.600:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:45.600:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:49.578:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:49.579:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:49.579:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:49.580:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:49.580:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:49.581:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:53.556:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:53.557:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:53.557:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:53.558:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:53.558:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:53.558:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:58.557:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:58.557:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:58.558:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-14:59:58.558:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-14:59:58.558:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-14:59:58.559:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:03.558:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:03.559:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:03.559:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:03.560:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:03.560:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:03.560:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:09.845:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:09.846:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:09.847:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:09.847:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:09.848:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:09.848:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:22.968:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:22.969:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:22.969:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:22.969:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:22.970:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:22.970:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:27.008:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:27.008:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:27.009:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:27.011:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:27.012:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:27.012:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:28.018:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:28.019:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:28.020:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:28.021:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:28.022:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:28.022:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:29.030:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:29.031:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:29.031:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:29.032:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:29.033:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:29.033:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:33.558:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:33.560:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:33.561:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:33.561:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:33.562:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:33.563:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:38.561:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:38.561:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:38.561:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:38.562:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:38.563:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:38.563:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:43.561:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:43.561:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:43.563:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:43.563:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:43.565:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:43.565:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:48.560:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:48.561:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:48.562:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:48.562:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:48.564:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:48.564:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:53.561:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:53.563:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:53.564:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:53.564:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:53.565:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:53.566:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:58.559:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:58.559:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:58.560:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:00:58.560:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:00:58.562:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:00:58.563:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:01:03.558:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:01:03.558:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:01:03.558:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:01:03.559:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:01:03.559:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:01:03.559:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:01:08.558:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:01:08.559:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:01:08.559:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:01:08.560:[0000830C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:01:08.561:[0000830C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:01:08.561:[0000830C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:01:28.728:[00005FC8#00000000#5] > [InitLibrary] Begin
+2025/10/06-15:01:28.729:[00005FC8#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/06-15:01:28.729:[00005FC8#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-15:01:28.729:[00005FC8#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/10/06-15:01:28.730:[00005FC8#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-15:01:28.730:[00005FC8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-15:01:28.730:[00005FC8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-15:01:28.730:[00005FC8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-15:01:28.732:[00005FC8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-15:01:28.732:[00005FC8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-15:01:28.732:[00005FC8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-15:01:28.732:[00005FC8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-15:01:28.733:[00005FC8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-15:01:28.733:[00005FC8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-15:01:28.739:[00005FC8#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-15:01:28.739:[00005FC8#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-15:01:28.740:[00005FC8#00000000#5] > [GetVariable] Begin
+2025/10/06-15:01:28.740:[00005FC8#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-15:01:28.741:[00005FC8#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-15:01:28.743:[00005FC8#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-15:01:28.743:[00005FC8#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-15:01:28.743:[00005FC8#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-15:01:28.745:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:01:28.746:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:01:28.746:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:01:28.746:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:01:28.746:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:01:28.747:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:01:30.162:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:01:30.163:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:01:30.163:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:01:30.163:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:01:30.163:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:01:30.164:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:01:35.156:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:01:35.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:01:35.158:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:01:35.159:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:01:35.159:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:01:35.160:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:01:45.730:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:01:45.731:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:01:45.732:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:01:45.734:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:01:45.734:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:01:45.735:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:01:47.746:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:01:47.748:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:01:47.750:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:01:47.751:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:01:47.752:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:01:47.754:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:01:50.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:01:50.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:01:50.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:01:50.156:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:01:50.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:01:50.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:34.558:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:34.559:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:34.559:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:34.560:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:34.560:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:34.560:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:35.579:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:35.580:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:35.580:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:35.581:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:35.582:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:35.582:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:36.588:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:36.588:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:36.589:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:36.589:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:36.589:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:36.590:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:37.595:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:37.596:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:37.596:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:37.596:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:37.597:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:37.597:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:38.604:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:38.605:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:38.606:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:38.608:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:38.608:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:38.609:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:39.616:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:39.617:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:39.617:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:39.618:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:39.619:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:39.619:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:40.626:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:40.628:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:40.628:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:40.629:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:40.631:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:40.631:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:41.640:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:41.641:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:41.642:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:41.642:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:41.643:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:41.645:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:42.654:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:42.655:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:42.656:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:42.657:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:42.658:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:42.659:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:43.667:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:43.668:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:43.668:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:43.668:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:43.669:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:43.669:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:45.152:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:45.153:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:45.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:45.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:45.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:45.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:50.157:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:50.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:50.158:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:50.159:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:50.159:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:50.160:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:55.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:55.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:55.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:02:55.156:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:02:55.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:02:55.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:00.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:00.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:00.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:00.158:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:00.159:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:00.160:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:05.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:05.153:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:05.153:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:05.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:05.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:05.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:10.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:10.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:10.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:10.157:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:10.158:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:10.159:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:15.156:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:15.158:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:15.159:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:15.160:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:15.161:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:15.161:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:20.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:20.153:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:20.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:20.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:20.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:20.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:25.152:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:25.153:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:25.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:25.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:25.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:25.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:30.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:30.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:30.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:30.156:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:30.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:30.158:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:35.151:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:35.153:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:35.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:35.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:35.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:35.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:40.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:40.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:40.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:40.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:40.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:40.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:45.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:45.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:45.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:45.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:45.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:45.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:50.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:50.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:50.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:50.156:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:50.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:50.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:55.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:55.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:55.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:03:55.156:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:03:55.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:03:55.158:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:00.156:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:00.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:00.158:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:00.159:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:00.159:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:00.160:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:05.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:05.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:05.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:05.157:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:05.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:05.158:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:10.152:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:10.153:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:10.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:10.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:10.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:10.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:15.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:15.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:15.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:15.156:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:15.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:15.158:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:20.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:20.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:20.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:20.157:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:20.158:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:20.159:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:25.157:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:25.158:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:25.159:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:25.160:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:25.161:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:25.162:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:30.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:30.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:30.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:30.156:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:30.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:30.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:35.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:35.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:35.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:35.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:35.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:35.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:40.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:40.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:40.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:40.157:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:40.158:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:40.159:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:45.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:45.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:45.158:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:45.159:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:45.160:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:45.160:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:50.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:50.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:50.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:50.157:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:50.158:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:50.159:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:55.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:55.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:55.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:04:55.158:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:04:55.159:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:04:55.160:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:00.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:00.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:00.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:00.158:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:00.159:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:00.160:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:05.152:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:05.152:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:05.153:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:05.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:05.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:05.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:10.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:10.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:10.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:10.157:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:10.158:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:10.159:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:15.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:15.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:15.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:15.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:15.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:15.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:20.152:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:20.152:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:20.153:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:20.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:20.153:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:20.153:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:25.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:25.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:25.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:25.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:25.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:25.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:30.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:30.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:30.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:30.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:30.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:30.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:35.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:35.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:35.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:35.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:35.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:35.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:40.151:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:40.153:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:40.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:40.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:40.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:40.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:45.152:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:45.152:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:45.153:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:45.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:45.153:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:45.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:50.156:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:50.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:50.158:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:50.159:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:50.160:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:50.160:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:55.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:55.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:55.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:05:55.156:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:05:55.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:05:55.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:00.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:00.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:00.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:00.158:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:00.159:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:00.159:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:05.152:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:05.152:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:05.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:05.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:05.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:05.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:10.151:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:10.152:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:10.153:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:10.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:10.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:10.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:15.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:15.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:15.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:15.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:15.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:15.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:20.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:20.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:20.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:20.156:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:20.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:20.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:25.151:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:25.152:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:25.152:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:25.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:25.153:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:25.153:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:30.152:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:30.153:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:30.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:30.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:30.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:30.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:35.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:35.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:35.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:35.156:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:35.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:35.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:40.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:40.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:40.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:40.158:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:40.159:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:40.160:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:45.156:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:45.158:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:45.158:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:45.159:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:45.160:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:45.160:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:50.156:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:50.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:50.158:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:50.158:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:50.159:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:50.161:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:55.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:55.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:55.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:06:55.157:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:06:55.158:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:06:55.158:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:00.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:00.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:00.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:00.159:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:00.160:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:00.161:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:05.152:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:05.152:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:05.152:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:05.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:05.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:05.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:10.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:10.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:10.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:10.156:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:10.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:10.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:15.152:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:15.153:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:15.153:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:15.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:15.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:15.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:20.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:20.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:20.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:20.157:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:20.158:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:20.158:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:25.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:25.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:25.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:25.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:25.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:25.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:30.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:30.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:30.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:30.158:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:30.159:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:30.160:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:35.152:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:35.152:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:35.153:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:35.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:35.153:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:35.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:40.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:40.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:40.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:40.158:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:40.159:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:40.160:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:45.151:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:45.152:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:45.152:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:45.152:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:45.153:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:45.153:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:50.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:50.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:50.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:50.158:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:50.159:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:50.160:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:55.150:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:55.151:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:55.152:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:07:55.152:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:07:55.153:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:07:55.153:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:00.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:00.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:00.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:00.157:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:00.158:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:00.159:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:05.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:05.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:05.159:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:05.159:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:05.159:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:05.159:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:10.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:10.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:10.158:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:10.158:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:10.159:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:10.160:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:15.152:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:15.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:15.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:15.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:15.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:15.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:20.150:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:20.152:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:20.153:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:20.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:20.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:20.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:25.151:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:25.151:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:25.153:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:25.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:25.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:25.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:30.150:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:30.151:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:30.152:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:30.152:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:30.152:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:30.153:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:35.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:35.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:35.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:35.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:35.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:35.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:40.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:40.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:40.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:40.157:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:40.158:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:40.159:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:45.152:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:45.153:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:45.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:45.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:45.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:45.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:50.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:50.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:50.158:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:50.159:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:50.160:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:50.161:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:55.152:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:55.153:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:55.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:08:55.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:08:55.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:08:55.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:09:00.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:09:00.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:09:00.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:09:00.156:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:09:00.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:09:00.158:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:09:05.161:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:09:05.162:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:09:05.162:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:09:05.164:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:09:05.164:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:09:05.165:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:09:10.153:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:09:10.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:09:10.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:09:10.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:09:10.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:09:10.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:09:15.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:09:15.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:09:15.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:09:15.158:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:09:15.159:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:09:15.159:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:09:20.152:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:09:20.153:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:09:20.155:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:09:20.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:09:20.157:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:09:20.158:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:09:25.152:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:09:25.154:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:09:25.154:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:09:25.155:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:09:25.155:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:09:25.156:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:09:30.154:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:09:30.156:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:09:30.157:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-15:09:30.157:[00005FC8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-15:09:30.159:[00005FC8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-15:09:30.159:[00005FC8#00000000#5] > [EnumUSBDevices] End [0/Ok]

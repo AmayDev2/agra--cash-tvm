@@ -49,7 +49,7 @@ class FinanceOperationRepositoryImplTest {
             SQLConnector sqlConnector = new SQLConnector(dbUrl, dbUsername, dbPassword, noOfConnections);
             sqlConnector.setConnection();
 
-            financeOperationRepository = new FinanceOperationRepositoryImpl(sqlConnector.getConnection());
+            financeOperationRepository = new FinanceOperationRepositoryImpl(sqlConnector.getConnection(),new NoteAmountRepositoryImpl(sqlConnector.getConnection()));
 
             Logger.tag(LoggerTag.APP).info("FinanceOperationRepository initialized");
 
@@ -103,6 +103,60 @@ class FinanceOperationRepositoryImplTest {
         shiftId = financeOperationRepository.upsert(entity);
         assertNotNull(shiftId, "ShiftId should not be null after second upsert");
         assertEquals(shiftIdValue, shiftId, "Returned shiftId should match the entity's shiftId after second upsert");
+
+        int quantity=financeOperationRepository.markCommited();
+        assertEquals(3,quantity,"Total quantity should be 3");
+
+
+        //3rd entry with same unit amount and operation type as first entry
+        entity.setQuantity(4);
+        entity.setUnitAmount(20);
+        shiftId = financeOperationRepository.upsert(entity);
+        assertNotNull(shiftId, "ShiftId should not be null after second upsert");
+        assertEquals(shiftIdValue, shiftId, "Returned shiftId should match the entity's shiftId after second upsert");
+
+
+        quantity=financeOperationRepository.rollback();
+        assertEquals(1,quantity,"Total quantity should be 3");
+
+
+        List<FinanceOperationEntity> entities = financeOperationRepository.findByShiftId(shiftId);
+        assertFalse(entities.isEmpty(), "Should find entities for the given shiftId");
+        FinanceOperationEntity fetchedEntity = entities.stream()
+                .filter(e -> e.getOperationType().equals(FinanceOperation.BNR_DEPOSIT) && e.getUnitAmount() == 10)
+                .findFirst()
+                .orElse(null);
+
+        assertNotNull(fetchedEntity, "Fetched entity should not be null");
+        assertEquals(2, fetchedEntity.getQuantity(), "Quantity should be cumulative (1 + 2 = 3)");
+        financeOperationRepository.deleteByShiftId(shiftId);
+        List<FinanceOperationEntity> deletedEntities = financeOperationRepository.findByShiftId(shiftId);
+        assertTrue(deletedEntities.isEmpty(), "Entities should be deleted for the given shiftId");
+    }
+
+
+    @Test
+    void upsert_shouldUpsertDeleteMultiRecordForDiffShiftId() {
+        String shiftIdValue = UUID.randomUUID().toString();
+        FinanceOperationEntity entity = buildEntity(100, FinanceOperation.BNR_NOT_COMMITTED, 1,shiftIdValue);
+        String shiftId = financeOperationRepository.upsert(entity);
+        assertNotNull(shiftId, "ShiftId should not be null after upsert");
+        assertEquals(shiftIdValue, shiftId, "Returned shiftId should match the entity's shiftId");
+        entity.setQuantity(2);
+        entity.setUnitAmount(10);
+        shiftId = financeOperationRepository.upsert(entity);
+        assertNotNull(shiftId, "ShiftId should not be null after second upsert");
+        assertEquals(shiftIdValue, shiftId, "Returned shiftId should match the entity's shiftId after second upsert");
+
+
+        //3rd entry with same unit amount and operation type as first entry
+        entity.setQuantity(4);
+        entity.setUnitAmount(50);
+        shiftId = financeOperationRepository.upsert(entity);
+        assertNotNull(shiftId, "ShiftId should not be null after second upsert");
+        assertEquals(shiftIdValue, shiftId, "Returned shiftId should match the entity's shiftId after second upsert");
+
+
 
         int quantity=financeOperationRepository.markCommited();
         assertEquals(3,quantity,"Total quantity should be 3");

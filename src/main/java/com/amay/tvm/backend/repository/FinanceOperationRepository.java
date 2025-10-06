@@ -11,6 +11,7 @@ public abstract class FinanceOperationRepository {
 
     protected static final String TABLE_NAME = "finance_operation";
     public Connection connection = null;
+    protected NoteAmountRepository noteAmountRepository;
 
     // Composite unique constraint for upsert
     protected static final String CREATE_TABLE_SQL = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + " (" +
@@ -58,4 +59,5 @@ public abstract class FinanceOperationRepository {
 
     public abstract void deleteByShiftId(String shiftId);
     public abstract void deleteAll();
+    public abstract void markEmpty(String shiftId);
 }

@@ -1,8 +1,11 @@
 package com.amay.tvm.backend.repository;
 
+import com.amay.tvm.backend.dto.NoteAmountDTO;
 import com.amay.tvm.backend.entity.FinanceOperationEntity;
+import com.amay.tvm.backend.entity.NoteAmountEntity;
 import com.amay.tvm.backend.enums.FinanceOperation;
 import com.amay.tvm.backend.enums.LoggerTag;
+import com.amay.tvm.backend.mapper.NoteAmountMapper;
 import org.tinylog.Logger;
 
 import java.sql.*;
@@ -12,9 +15,6 @@ import java.util.List;
 
 public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
 
-
-
-
     public FinanceOperationRepositoryImpl(Connection connection) {
         try {
             this.connection = connection;
@@ -22,6 +22,12 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
         } catch (SQLException e) {
             Logger.error("Error initializing FinanceOperationRepositoryImpl: {}", e.getMessage());
         }
+    }
+
+
+    public FinanceOperationRepositoryImpl(Connection connection,NoteAmountRepository noteAmountRepository) {
+        this(connection);
+        this.noteAmountRepository=noteAmountRepository;
     }
 
 
@@ -40,8 +46,7 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
     public String upsert(FinanceOperationEntity entity) {
         try {
             // 1. Try to update existing record first
-            String updateSql = UPDATE_SQL;
-            try (PreparedStatement updateStmt = connection.prepareStatement(updateSql)) {
+            try (PreparedStatement updateStmt = connection.prepareStatement(UPDATE_SQL)) {
                 updateStmt.setInt(1, entity.getQuantity());
                 updateStmt.setTimestamp(2, Timestamp.valueOf(LocalDateTime.now()));
                 updateStmt.setString(3, entity.getShiftId());
@@ -51,6 +56,7 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
                 int affectedRows = updateStmt.executeUpdate();
                 if (affectedRows > 0) {
                     // Updated existing record successfully
+                    Logger.tag(LoggerTag.BUSS).info("Updated FinanceOperationEntity: {}", entity);
                     return entity.getShiftId();
                 }
             }
@@ -69,6 +75,7 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
                 insertStmt.setTimestamp(6, now);
 
                 insertStmt.executeUpdate();
+                Logger.tag(LoggerTag.BUSS).info("Inserted FinanceOperationEntity: {}", entity);
             }
 
             return entity.getShiftId();
@@ -121,14 +128,13 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
     @Override
     public int markCommited() {
         int processedCount = 0;
-
-
         try {
             connection.setAutoCommit(false);
 
             // 1. Select all rows with BNR_NOT_COMMITTED
             try (PreparedStatement selectStmt = connection.prepareStatement(SELECT_NOT_COMMITED)) {
                 selectStmt.setString(1, FinanceOperation.BNR_NOT_COMMITTED.name());
+                List<NoteAmountEntity> noteAmountList=new ArrayList<>();
 
                 try (ResultSet rs = selectStmt.executeQuery()) {
                     while (rs.next()) {
@@ -139,12 +145,14 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
                         entity.setUnitAmount(rs.getInt("unitAmount"));
                         entity.setQuantity(rs.getInt("quantity"));
                         entity.setUpdatedAt(rs.getTimestamp("updatedAt"));
+                        noteAmountList.add(new NoteAmountEntity().setUnitAmount(entity.getUnitAmount()).setCashInQuantity(entity.getQuantity()));
 
                         // 2. Upsert with quantity addition into BNR_DEPOSIT status
                         upsert(entity);
                         processedCount++;
                     }
                 }
+                this.noteAmountRepository.updateToAdd(noteAmountList);
             }
 
             // 3. Delete all BNR_NOT_COMMITTED records now that they are "rolled back"
@@ -213,6 +221,13 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
         } catch (SQLException e) {
             Logger.error("Error deleting all FinanceOperationEntity records: {}", e.getMessage());
         }
+    }
+
+    @Override
+    public void markEmpty(String shiftId) {
+//SUG: MAY BE REQUIRED MANUAL COMMIT
+            this.upsert(NoteAmountMapper.toFinanceOperationEntityList(NoteAmountMapper.toDtoList(this.noteAmountRepository.findAll()), shiftId));
+            this.noteAmountRepository.resetToZero();
     }
 
     private FinanceOperationEntity mapRow(ResultSet rs) throws SQLException {

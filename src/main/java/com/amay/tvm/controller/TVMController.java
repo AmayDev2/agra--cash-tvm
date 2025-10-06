@@ -60,6 +60,8 @@ public class TVMController {
     private final Agent agent;
     private StationData stationData;
     DeviceOperationMode currentMode;
+    private StatusBottomBarView statusBottomBarView;
+    private Timeline timeline;
 
     private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("hh:mm:ss");
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd-MM-yyyy");
@@ -69,8 +71,25 @@ public class TVMController {
         this.agent = agent;
     }
 
-    private void startTime(){
+    public void CleanUp(){
+        Logger.tag(LoggerTag.APP).info("TVMController CleanUp called");
+        this.agent.getDeviceStatus().removeDeviceStatusListener(this::setOperationMode);
+        if(this.statusBottomBarView!=null){
+            this.statusBottomBarView.CleanUp();
+        }
+        if(this.stackPane!=null){
+            this.stackPane.getChildren().clear();
+        }
+        if(this.borderPane!=null){
+            this.borderPane.setCenter(null);
+            this.borderPane.setBottom(null);
+        }
+        if(this.timeline!=null && this.timeline.getStatus()== Animation.Status.RUNNING){
+            this.timeline.stop();
+        }
+    }
 
+    private void startTime(){
             Platform.runLater(() -> {
                 Timeline clock = new Timeline(
                         new KeyFrame(Duration.ZERO, e -> {
@@ -125,7 +144,7 @@ public class TVMController {
     private static boolean timeout=false;
 
     private void updateDateTime(boolean isWeekDay) {
-        Timeline timeline = new Timeline(
+        timeline = new Timeline(
                 new KeyFrame(Duration.seconds(1), event -> {
                     // Use system default timezone
                     ZonedDateTime nowZoned = ZonedDateTime.now(ZoneId.systemDefault());
@@ -146,11 +165,9 @@ public class TVMController {
         );
         timeline.setCycleCount((int) agent.getBusinessRule().getRemainingSecondsOfWorkingHour());
         timeline.play();
-        timeline.setOnFinished(event -> {;
+        timeline.setOnFinished(event -> {
             if(!timeout){
                 timeout=true;
-                Logger.info("End of working hour reached, switching to out of working hour mode.");
-                agent.getDeviceStatus().removeDeviceStatusListener(this::setOperationMode);
                 this.agent.getInternalListener().EOShift();
             }
         });
@@ -173,7 +190,8 @@ public class TVMController {
     private void addBottomBarView() {
         try {
             FXMLLoader fxmlLoader = ViewFactory.getBottomNav();
-            fxmlLoader.setControllerFactory(x -> new StatusBottomBarView(agent.getPeripheralMonitor(), agent.getVersions(),agent.getMasterConfigInfo()));
+            statusBottomBarView=new StatusBottomBarView(agent.getPeripheralMonitor(), agent.getVersions(),agent.getMasterConfigInfo());
+            fxmlLoader.setControllerFactory(x -> statusBottomBarView);
             borderPane.setBottom(fxmlLoader.load());
         } catch (RuntimeException | IOException e) {
             System.err.println("Error loading bottom navigation view: " + e.getMessage());
@@ -202,14 +220,11 @@ public class TVMController {
         Logger.tag(LoggerTag.APP).info("TVMController setOperationMode: " + newStatus);
         Platform.runLater(() -> {
             if (currentMode != newStatus && newStatus == DeviceOperationMode.IN_SERVICE) {
-//                stackPane.getChildren().clear();
-//                stackPane.getChildren().add(home);
                 borderPane.setCenter(stackPane);
                 agent.getGrpcApiListener().sendAlarm(Alarm.IN_SERVICE);
                 agent.getGrpcApiListener().sendOperationMode(OperationMode.IN_SERVICE);
                 agent.getGrpcApiListener().sendPeripheralStatus(agent.getPeripheralMonitor().getDeviceStatus());
             } else {
-
                 if (currentMode != newStatus && newStatus == DeviceOperationMode.EMERGENCY) {
                     FXMLLoader loader = ViewFactory.getSpecialModeScreen();
                     loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData, StationMode.EMERGENCY));
@@ -303,11 +318,9 @@ public class TVMController {
 
     public void onClickGtButton(ActionEvent actionEvent) {
         if(!agent.getPeripheralMonitor().isPrinter_connected()){
-//                throw new RuntimeException("Printer not connected");
             Snackbar.INSTANCE.showSnackbar(this.stackPane,"Printer not connected",false,0);
             return;
         }
-//        borderPane.setBottom(null);
         FXMLLoader loader=  ViewFactory.getTicketSelectionView();
         loader.setControllerFactory(c -> new TicketSelectionController(borderPane, stackPane, agent, stationData, TicketType.GROUP));
         try {
@@ -321,6 +334,7 @@ public class TVMController {
 
     public void onClickNcmc(ActionEvent actionEvent) {
         this.agent.getInternalListener().EOShift();
+
     }
 
     public void onClickBalanceUpdate(ActionEvent actionEvent) {

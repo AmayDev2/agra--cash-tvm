@@ -17,7 +17,7 @@ public class DeviceStatus implements DeviceStatusListener {
     @Getter
     private DeviceOperationMode currentStatus;
 
-    private OperationModeDeciderService operationModeDeciderService;
+    private final OperationModeDeciderService operationModeDeciderService;
 
     private final List<DeviceStatusListener> listeners = new ArrayList<>();
 

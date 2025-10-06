@@ -40,8 +40,7 @@ import com.amay.tom.service.siftservice.ShiftService;
 import com.amay.tom.service.tom.IApplicationService;
 import com.amay.tom.service.userauth.UserAuth;
 import com.amay.tom.threadpool.ThreadPool;
-import com.amay.tvm.backend.repository.CoinAmountRepository;
-import com.amay.tvm.backend.repository.TransactionRepository;
+import com.amay.tvm.backend.repository.*;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import lombok.Data;
@@ -94,6 +93,9 @@ public class Agent {
     private CoinAmountRepository coinAmountRepository;
     private FareTableRepository fareTableRepository;
     private TomConfigRepository tomConfigRepository;
+
+    private NoteAmountRepository noteAmountRepository;
+    private FinanceOperationRepository financeOperationRepository;
     private ShiftRepository shiftRepository;
     private MasterConfigInfo masterConfigInfo;
     private TomConfig tomConfig;

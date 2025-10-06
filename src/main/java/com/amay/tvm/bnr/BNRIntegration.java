@@ -3,7 +3,6 @@ package com.amay.tvm.bnr;
 
 import com.amay.tom.service.payment2.impl.CashPayment;
 import com.amay.tvm.backend.enums.LoggerTag;
-import com.amay.tvm.backend.service.BnrFinanceMaintenance;
 import com.amay.tvm.coin.CoinModuleInterface;
 import com.amay.tvm.coin.model.AmountDetail;
 import com.amay.tvm.coin.model.HaveAmountObject;
@@ -37,7 +36,6 @@ import com.mei.bnr.jxfs.util.MEIJxfsException;
 import com.mei.bnr.jxfs.util.SynchronousJxfsOperationHelper;
 import com.mei.bnr.jxfs.xmlrpc.parameters.DirectIOModuleIdParameter;
 import com.mei.bnr.jxfs.xmlrpc.parameters.DirectIOModuleSetIdentificationParameters;
-import io.netty.handler.codec.spdy.SpdyHttpResponseStreamIdHandler;
 import javafx.animation.PauseTransition;
 import javafx.util.Duration;
 import lombok.Data;
@@ -821,9 +819,11 @@ public class BNRIntegration  {
         }
     }
 
+    private static final int MAX_CASH_IN_ATTEMPT_M=15;
     //@Override
-    public static void bnrLoad() {
+    public static void bnrLoad(BNRListenerLoad bnrListenerLoad) {
         try {
+            bnrListener=bnrListenerLoad;
             if(vector==null) {
                 var event = helper.run(new ISynchronousOperation() {
                     public int run(JxfsATM control) throws JxfsException {
@@ -845,25 +845,25 @@ public class BNRIntegration  {
             });
 
             startCashInTransaction();
-            cashIn(0,"INR");
+//            cashIn(0,"INR");
+            for(int cashInCount=0;cashInCount<MAX_CASH_IN_ATTEMPT_M;cashInCount++) {
+                queryDenomination(10000);
+                MEICashInOrder data = cashInOneByOne(1, CASH_IN_CURRENCY);
+                Logger.tag(LoggerTag.APP).debug("You`ve inserted(partial) : " + data.getDenomination().getAmount() + " " + CASH_IN_CURRENCY);
+                bnrListener.acceptedAmount((int) data.getDenomination().getAmount());   //PAISA-> RUPEE : Last inserted amount of note
+                bnrListener.informationToShow("Inserted Note is of : ₹ " + data.getDenomination().getAmount() / 100 + "/-");
+            }
         } catch (JxfsException e) {
             Logger.tag(LoggerTag.APP).error("Cash in start error {}", e.getMessage());
-            try {
-                var event= helper.run(new ISynchronousOperation() {
-                    public int run(JxfsATM control) throws JxfsException {
-                        return control.cashInRollback();
-                    }//run
-                });
-            } catch (JxfsException ex) {
-                Logger.tag(LoggerTag.APP).error("Cash in rollback error {}", ex.getMessage());
-            }
 
-            cancelWaitingCashTaken(5);
         }
+        disableCancel();
+
+
 
     }
 
-    private static void cancel(){
+    public static void cancel(){
         try {
             control.cancel(1);
             Thread.sleep(100);
@@ -875,34 +875,39 @@ public class BNRIntegration  {
     //@Override
     public static void bnrLoadRollback() {
 
-        cancel();
-
-
+        try {
+            var event= helper.run(new ISynchronousOperation() {
+                public int run(JxfsATM control) throws JxfsException {
+                    return control.cashInRollback();
+                }//run
+            });
+            if(event.getResult()== IJxfsConst.JXFS_RC_SUCCESSFUL){
+                bnrListener.setStatus(BNRStatus.FAILED);
+                cancelWaitingCashTaken(5);
+            }
+        } catch (JxfsException ex) {
+            Logger.tag(LoggerTag.APP).error("Cash in rollback error {}", ex.getMessage());
+        }
     }
 
-    //@Override
+
     public static void bnrLoadCommit() {
         try {
-            cancel();
             endCashInTransaction();
+            bnrListener.setStatus(BNRStatus.SUCCESS);
         } catch (JxfsException e) {
             Logger.tag(LoggerTag.APP).error("Cash in end error {}", e.getMessage());
         }
 
     }
 
-    //@Override
     public static void bnrUnload() {
 
     }
 
     //
-    public static void bnrSetDepositZero() {
-        try {
+    public static void bnrSetDepositZero() throws BnrException {
             bnr.resetCashboxCuContent(true);
-        } catch (BnrException e) {
-            Logger.tag(LoggerTag.APP).error("BNR Obj {}", e.getMessage());
-        }
 
     }
 
