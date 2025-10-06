@@ -343,6 +343,22 @@ public class ShiftRepositoryImpl extends ShiftRepository {
         return shifts;
     }
 
+    public List<ShiftDto> findLastNShifts(int n){
+        List<ShiftDto> shifts = new ArrayList<>();
+        if(n<1) throw new IllegalArgumentException("invalid no. of rows");
+        try(PreparedStatement psmt = connection.prepareStatement(FIND_LAST_N_SHIFT)){
+            psmt.setInt(1,n);
+            ResultSet rs = psmt.executeQuery();
+            while (rs.next()){
+                ShiftDto shift = mapResultSetToShiftDto(rs);
+                shifts.add(shift);
+            }
+        }catch (SQLException e){
+            Logger.error("Error finding last {} shifts {}",n, e.getMessage());
+        }
+        return shifts;
+    }
+
 
     private ShiftDto mapResultSetToShiftDto(ResultSet rs) throws SQLException {
         return new ShiftDto(

@@ -55,6 +55,7 @@ public abstract class ShiftRepository {
     protected static final String FIND_SHIFT_FROM_SQL = "SELECT * FROM " + TABLE_NAME + " WHERE created_at >= ? ORDER BY created_at DESC";
     protected static final String FIND_NOT_PUSHED_SHIFT = "SELECT * FROM " + TABLE_NAME + " WHERE ? ORDER BY created_at DESC";
     protected static final String FIND_LAST_SHIFT = "SELECT shift_id FROM " + TABLE_NAME + " WHERE CAST(created_at AS DATE) = CURRENT_DATE ORDER BY created_at DESC LIMIT 1";
+    protected static final String FIND_LAST_N_SHIFT = "SELECT * FROM " + TABLE_NAME + " WHERE current_status = 'COMPLETED' ORDER BY created_at DESC LIMIT ?";
 
 
     abstract void createTableIfNotExists() throws SQLException;
@@ -94,4 +95,6 @@ public abstract class ShiftRepository {
     public abstract void pushShifts(List<String> shiftIds, String column);
 
     public abstract List<ShiftDto> findNotPushedShifts(String column);
+
+    public abstract List<ShiftDto> findLastNShifts(int n);
 }

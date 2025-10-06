@@ -23,7 +23,6 @@ import org.tinylog.Logger;
 
 import javax.management.ServiceNotFoundException;
 import java.util.Arrays;
-import java.util.List;
 
 
 // CCU Monitoring Listener for GRPC, the class is responsible to listen to the commands and alarms and send it to server using GRPC,

@@ -225,7 +225,7 @@ public class ShiftServiceImpl implements ShiftService {
         }
     }
 
-    private void printEOShift(String shiftId) {
+    public void printEOShift(String shiftId) {
         AtomicReference<String> startTime = new AtomicReference<>();
         AtomicReference<String> endTime = new AtomicReference<>();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
