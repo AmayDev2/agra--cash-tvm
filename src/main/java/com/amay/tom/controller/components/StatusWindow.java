@@ -1,5 +1,6 @@
 package com.amay.tom.controller.components;
 
+import com.amay.printer.PrinterCommandDispatcher;
 import com.amay.tom.config.ENVURL;
 import com.amay.tom.controller.MaintenanceModuleTest;
 import com.amay.tom.maintenance.service.component.StatusWindowPopupListener;
@@ -10,8 +11,10 @@ import com.amay.tom.utils.env.EnvFile;
 import com.fazecast.jSerialComm.SerialPort;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import org.tinylog.Logger;
 
@@ -39,6 +42,9 @@ public class StatusWindow {
     @FXML
     private Button cancelButton;
 
+    @FXML
+    private FlowPane statusFlowPane;
+
     private final StatusWindowModel statusWindowModel;
     private final StatusWindowPopupListener statusWindowPopupListener;
     private final MaintenanceModuleTest maintenanceModuleTest;
@@ -59,7 +65,11 @@ public class StatusWindow {
         titleLabel.setText(statusWindowModel.getTitle());
         cancelButton.setOnAction(event -> {
             statusWindowPopupListener.Close();});
-        if(statusWindowModel.isConnected())testButton.setOnAction(event -> this.performOperation());
+        statusFlowPane.getChildren().clear();
+        statusWindowModel.getList().forEach(item->statusFlowPane.getChildren().add(new Label(item)));
+        if(statusWindowModel.isConnected())testButton.setOnAction(
+                event -> this.performOperation()
+        );
         else testButton.setDisable(true);
     }
 
@@ -69,9 +79,10 @@ public class StatusWindow {
             case "EFT":
                 //System.out.println("EFT operation performed");
                 break;
-            case "QR Printer":
+            case "Printer":
                 //System.out.println("QR Printer operation performed");
                 BufferedImage bufferedImage= this.findTicket("test");
+                PrinterCommandDispatcher.INSTANCE.testPrint();
 //                ImplPrintTicket.printImageMaintenance(bufferedImage,
 //                        EnvFile.getThermalPrinterModel(),   // printer name (or null for default)
 //                        "png",             // image format

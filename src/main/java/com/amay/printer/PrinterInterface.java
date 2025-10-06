@@ -30,4 +30,6 @@ public interface PrinterInterface {
 
     boolean isConnected() ;
     boolean isConnectedIfNotThenConnect();
+
+    BaseResponse testPrint();
 }

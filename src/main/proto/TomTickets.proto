@@ -1,0 +1,42 @@
+syntax ="proto3";
+
+option java_multiple_files = true;
+option java_package = "org.amaytechnosystems";
+option java_outer_classname = "TomTickets";
+
+import "meta/RequestMetaData.proto";
+import "meta/ResponseMetaData.proto";
+
+package com.proto.tom;
+
+message TicketInfoRequest {
+  string ticket_id=1;
+  string ticket_qr=2;
+}
+
+message TicketInfoReply {
+  string message = 1;
+  string status=2;
+}
+
+message TicketData {
+  int64 id = 1;
+  string ticket_number = 4;
+  string issued_at = 5;
+  string expiry_at = 6;
+  bool is_active = 7;
+  string current_status = 8;
+  string ticket_type = 9;
+}
+
+message TicketRequest {
+  TicketData ticketData = 1;
+  meta.reqmetadata.RequestMetaData requestMetaData = 2;
+}
+
+message TicketResponse {
+//  TicketData ticket = 1;
+  meta.respmetadata.ResponseMetaData responseMetaData = 2;
+}
+
+

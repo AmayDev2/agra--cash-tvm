@@ -104,6 +104,37 @@ public class PrinterService implements PrinterInterface {
         return false;
     }
 
+    @Override
+    public BaseResponse testPrint() {
+        String formatted = """
+                This is test print
+                
+                
+                
+                
+                
+                
+                
+                
+                """;
+        try {
+            PrintFontSettings pfs=new PrintFontSettings();
+            pfs.Emphasized=true;
+            pfs.LeftMarginValue=10*10;
+            pfs.LineSpacing=30;
+            pfs.CharWidth= PrintFontSettings.FontSize.FONT_SIZE_X1;
+            pfs.CharHeight=PrintFontSettings.FontSize.FONT_SIZE_X1;
+            pfs.Justification= PrintFontSettings.FontJustification.FONT_JUSTIFICATION_LEFT;
+            pfs.CharFontType=PrintFontSettings.FontType.FONT_TYPE_2;
+
+            cudev.PrintText(formatted,pfs);
+            cudev.Cut(CuCustomWndDevice.CutType.CUT_TOTAL);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new BaseResponse().setSuccess(true).setError("Successfully Complete CUT");
+    }
+
     private void openConnection() {
         try
         {

@@ -1,0 +1,60 @@
+syntax = "proto3";
+package org.monitoring.proto;
+
+option java_package = "org.network.monitorandcontrol";
+option java_multiple_files = true;
+
+enum RequestType {
+    NOTIFY_DEVICE_DISCONNECT = 0;
+    DEVICE_INFO = 1;
+    PERIPHERAL_STATUS = 2;
+    PARAMETER_VERSION = 3;
+    ALARMS = 4;
+    RESPONSE = 5;       // SLE CONNECTION RESPONSE
+    OPERATION_MODE=6; // SLE WILL NOTIFY THE CURRENT OPERATION MODE  OF ITSELF.
+    NOTIFY_NEW_CONNECTION = 7;
+}
+
+enum CommandType {
+    UNKNOWN_COMMAND = 0;
+    MODE_CONTROL = 1;
+    GET_DEVICE_INFO = 2;
+    GET_PERIPHERAL_STATUS = 3;
+    GET_DEVICE_VERSIONS = 4;
+    HANDSHAKE = 5;
+    GET_ALL_CONNECTIONS = 6;
+    NOTIFY_VERSION_SYNC = 7;
+    GET_OPERATION_MODE=8;
+}
+
+enum OperationMode {
+    IN_SERVICE = 0;
+    OUT_OF_SERVICE = 1;
+    MAINTENANCE = 2;
+    TEST = 3;
+}
+
+enum SpecialMode {
+    TIME_OVERRIDE = 0;
+    ENTRY_EXIT_OVERRIDE = 1;
+    EXCESS_FARE_OVERRIDE = 2;
+    EMERGENCY = 3; //TOM and AG
+    FARE_BYPASS_MODE_1 = 4;
+    INCIDENT_MODE = 5;
+    STATION_CLOSED_MODE = 6; //TOM and AG
+    SHIFT_END = 7; //TOM
+    SHUT_DOWN = 8; //TOM
+    RESTART = 9; //TOM
+    STATION_NORMAL=10;
+}
+
+enum EquipmentType{
+    TOM = 0;
+    AG = 1;
+    EFO = 4;
+    TVM = 5;
+    TR = 6;
+    CCU = 7;
+    SCU = 2;
+    ALL = 3;
+}

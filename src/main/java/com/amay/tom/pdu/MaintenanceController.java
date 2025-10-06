@@ -4,12 +4,14 @@ import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.pdu.controller.MoneyManageController;
 import com.amay.tom.pdu.controller.service.SceneManager;
+import com.amay.tvm.backend.enums.LoggerTag;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.tinylog.Logger;
 
 import java.io.IOException;
 
@@ -27,6 +29,7 @@ public class MaintenanceController {
 
     @FXML
     private void onSystemInfo(ActionEvent actionEvent) {
+//        Logger.tag(LoggerTag.MAINTENANCE).info("System info par click hua h");
     }
 
     @FXML
@@ -40,6 +43,11 @@ public class MaintenanceController {
 
     @FXML
     private void onMain(ActionEvent actionEvent) {
+        FXMLLoader fxmlLoader= ViewFactory.getMaintenanceLoad();
+        MaintenanceTestController controller=new MaintenanceTestController(this.agent,this.sceneManager);
+        fxmlLoader.setControllerFactory((x)->controller);
+        this.sceneManager.addToScene(fxmlLoader);
+        actionEvent.consume();
     }
 
     @FXML

@@ -165777,3 +165777,955 @@
 2025/10/03-15:21:39.117:[00006720#00000000#5] > [EnumUSBDevices] Begin
 2025/10/03-15:21:39.118:[00006720#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
 2025/10/03-15:21:39.119:[00006720#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-16:03:53.481:[00001B5C#00000000#5] > [InitLibrary] Begin
+2025/10/06-16:03:53.481:[00001B5C#00000000#4] > [InitLibrary] DLL Path: C:\TVM\TVM2\agra--cash-tvm\CuCustomWndAPI.dll
+2025/10/06-16:03:53.483:[00001B5C#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-16:03:53.484:[00001B5C#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/06-16:03:53.486:[00001B5C#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-16:03:53.487:[00001B5C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-16:03:53.489:[00001B5C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-16:03:53.490:[00001B5C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-16:03:53.492:[00001B5C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-16:03:53.493:[00001B5C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-16:03:53.495:[00001B5C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-16:03:53.497:[00001B5C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-16:03:53.498:[00001B5C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-16:03:53.500:[00001B5C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-16:03:53.530:[00001B5C#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-16:03:53.532:[00001B5C#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-16:03:53.533:[00001B5C#00000000#5] > [GetVariable] Begin
+2025/10/06-16:03:53.534:[00001B5C#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-16:03:53.536:[00001B5C#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-16:03:53.548:[00001B5C#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-16:03:53.550:[00001B5C#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-16:03:53.551:[00001B5C#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-16:03:53.561:[00001B5C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-16:03:53.565:[00001B5C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-16:03:53.566:[00001B5C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-16:03:53.567:[00001B5C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-16:03:53.569:[00001B5C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-16:03:53.570:[00001B5C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-16:06:00.566:[00000AB8#00000000#5] > [InitLibrary] Begin
+2025/10/06-16:06:00.568:[00000AB8#00000000#4] > [InitLibrary] DLL Path: C:\TVM\TVM2\agra--cash-tvm\CuCustomWndAPI.dll
+2025/10/06-16:06:00.571:[00000AB8#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-16:06:00.574:[00000AB8#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/06-16:06:00.575:[00000AB8#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-16:06:00.578:[00000AB8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-16:06:00.580:[00000AB8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-16:06:00.583:[00000AB8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-16:06:00.587:[00000AB8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-16:06:00.590:[00000AB8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-16:06:00.593:[00000AB8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-16:06:00.596:[00000AB8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-16:06:00.599:[00000AB8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-16:06:00.602:[00000AB8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-16:06:00.632:[00000AB8#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-16:06:00.634:[00000AB8#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-16:06:00.639:[00000AB8#00000000#5] > [GetVariable] Begin
+2025/10/06-16:06:00.641:[00000AB8#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-16:06:00.644:[00000AB8#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-16:06:00.655:[00000AB8#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-16:06:00.656:[00000AB8#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-16:06:00.658:[00000AB8#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-16:06:00.665:[00000AB8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-16:06:00.670:[00000AB8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-16:06:00.672:[00000AB8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-16:06:00.673:[00000AB8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-16:06:00.674:[00000AB8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-16:06:00.676:[00000AB8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-16:11:40.581:[00002F20#00000000#5] > [InitLibrary] Begin
+2025/10/06-16:11:40.581:[00002F20#00000000#4] > [InitLibrary] DLL Path: C:\TVM\TVM2\agra--cash-tvm\CuCustomWndAPI.dll
+2025/10/06-16:11:40.583:[00002F20#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-16:11:40.585:[00002F20#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/06-16:11:40.587:[00002F20#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-16:11:40.589:[00002F20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-16:11:40.591:[00002F20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-16:11:40.593:[00002F20#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-16:11:40.596:[00002F20#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-16:11:40.600:[00002F20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-16:11:40.603:[00002F20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-16:11:40.605:[00002F20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-16:11:40.609:[00002F20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-16:11:40.612:[00002F20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-16:11:40.642:[00002F20#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-16:11:40.643:[00002F20#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-16:11:40.645:[00002F20#00000000#5] > [GetVariable] Begin
+2025/10/06-16:11:40.645:[00002F20#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-16:11:40.646:[00002F20#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-16:11:40.654:[00002F20#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-16:11:40.655:[00002F20#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-16:11:40.656:[00002F20#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-16:11:40.664:[00002F20#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-16:11:40.668:[00002F20#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-16:11:40.669:[00002F20#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-16:11:40.671:[00002F20#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-16:11:40.673:[00002F20#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-16:11:40.675:[00002F20#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-16:14:18.057:[00003C9C#00000000#5] > [InitLibrary] Begin
+2025/10/06-16:14:18.060:[00003C9C#00000000#4] > [InitLibrary] DLL Path: C:\TVM\TVM2\agra--cash-tvm\CuCustomWndAPI.dll
+2025/10/06-16:14:18.064:[00003C9C#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-16:14:18.066:[00003C9C#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/06-16:14:18.068:[00003C9C#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-16:14:18.071:[00003C9C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-16:14:18.072:[00003C9C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-16:14:18.072:[00003C9C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-16:14:18.074:[00003C9C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-16:14:18.077:[00003C9C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-16:14:18.080:[00003C9C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-16:14:18.081:[00003C9C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-16:14:18.085:[00003C9C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-16:14:18.087:[00003C9C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-16:14:18.100:[00003C9C#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-16:14:18.100:[00003C9C#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-16:14:18.102:[00003C9C#00000000#5] > [GetVariable] Begin
+2025/10/06-16:14:18.103:[00003C9C#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-16:14:18.105:[00003C9C#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-16:14:18.111:[00003C9C#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-16:14:18.111:[00003C9C#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-16:14:18.113:[00003C9C#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-16:14:18.118:[00003C9C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-16:14:18.121:[00003C9C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-16:14:18.122:[00003C9C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-16:14:18.124:[00003C9C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-16:14:18.125:[00003C9C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-16:14:18.126:[00003C9C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-16:15:17.162:[00003D54#00000000#5] > [InitLibrary] Begin
+2025/10/06-16:15:17.163:[00003D54#00000000#4] > [InitLibrary] DLL Path: C:\TVM\TVM2\agra--cash-tvm\CuCustomWndAPI.dll
+2025/10/06-16:15:17.164:[00003D54#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-16:15:17.166:[00003D54#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/06-16:15:17.167:[00003D54#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-16:15:17.169:[00003D54#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-16:15:17.171:[00003D54#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-16:15:17.173:[00003D54#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-16:15:17.174:[00003D54#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-16:15:17.177:[00003D54#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-16:15:17.179:[00003D54#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-16:15:17.180:[00003D54#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-16:15:17.181:[00003D54#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-16:15:17.183:[00003D54#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-16:15:17.200:[00003D54#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-16:15:17.201:[00003D54#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-16:15:17.203:[00003D54#00000000#5] > [GetVariable] Begin
+2025/10/06-16:15:17.204:[00003D54#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-16:15:17.206:[00003D54#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-16:15:17.212:[00003D54#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-16:15:17.213:[00003D54#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-16:15:17.215:[00003D54#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-16:15:17.222:[00003D54#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-16:15:17.225:[00003D54#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-16:15:17.225:[00003D54#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-16:15:17.226:[00003D54#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-16:15:17.227:[00003D54#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-16:15:17.229:[00003D54#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-16:17:09.717:[00004368#00000000#5] > [InitLibrary] Begin
+2025/10/06-16:17:09.719:[00004368#00000000#4] > [InitLibrary] DLL Path: C:\TVM\TVM2\agra--cash-tvm\CuCustomWndAPI.dll
+2025/10/06-16:17:09.720:[00004368#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-16:17:09.724:[00004368#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/06-16:17:09.726:[00004368#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-16:17:09.728:[00004368#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-16:17:09.729:[00004368#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-16:17:09.731:[00004368#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-16:17:09.732:[00004368#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-16:17:09.734:[00004368#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-16:17:09.736:[00004368#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-16:17:09.739:[00004368#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-16:17:09.742:[00004368#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-16:17:09.745:[00004368#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-16:17:09.759:[00004368#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-16:17:09.760:[00004368#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-16:17:09.763:[00004368#00000000#5] > [GetVariable] Begin
+2025/10/06-16:17:09.764:[00004368#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-16:17:09.766:[00004368#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-16:17:09.774:[00004368#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-16:17:09.776:[00004368#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-16:17:09.777:[00004368#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-16:17:09.789:[00004368#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-16:17:09.791:[00004368#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-16:17:09.792:[00004368#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-16:17:09.792:[00004368#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-16:17:09.793:[00004368#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-16:17:09.794:[00004368#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-16:33:03.682:[000038A0#00000000#5] > [InitLibrary] Begin
+2025/10/06-16:33:03.682:[000038A0#00000000#4] > [InitLibrary] DLL Path: C:\TVM\TVM2\agra--cash-tvm\CuCustomWndAPI.dll
+2025/10/06-16:33:03.684:[000038A0#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-16:33:03.685:[000038A0#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/06-16:33:03.685:[000038A0#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-16:33:03.686:[000038A0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-16:33:03.687:[000038A0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-16:33:03.688:[000038A0#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-16:33:03.689:[000038A0#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-16:33:03.690:[000038A0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-16:33:03.690:[000038A0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-16:33:03.691:[000038A0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-16:33:03.692:[000038A0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-16:33:03.693:[000038A0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-16:33:03.704:[000038A0#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-16:33:03.704:[000038A0#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-16:33:03.706:[000038A0#00000000#5] > [GetVariable] Begin
+2025/10/06-16:33:03.706:[000038A0#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-16:33:03.707:[000038A0#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-16:33:03.711:[000038A0#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-16:33:03.712:[000038A0#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-16:33:03.713:[000038A0#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-16:33:03.717:[000038A0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-16:33:03.719:[000038A0#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-16:33:03.719:[000038A0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-16:33:03.720:[000038A0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-16:33:03.720:[000038A0#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-16:33:03.721:[000038A0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-16:59:53.535:[000008D4#00000000#5] > [InitLibrary] Begin
+2025/10/06-16:59:53.537:[000008D4#00000000#4] > [InitLibrary] DLL Path: C:\TVM\TVM2\agra--cash-tvm\CuCustomWndAPI.dll
+2025/10/06-16:59:53.538:[000008D4#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-16:59:53.539:[000008D4#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/06-16:59:53.541:[000008D4#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-16:59:53.543:[000008D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-16:59:53.544:[000008D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-16:59:53.546:[000008D4#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-16:59:53.547:[000008D4#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-16:59:53.549:[000008D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-16:59:53.551:[000008D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-16:59:53.553:[000008D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-16:59:53.555:[000008D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-16:59:53.556:[000008D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-16:59:53.584:[000008D4#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-16:59:53.585:[000008D4#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-16:59:53.588:[000008D4#00000000#5] > [GetVariable] Begin
+2025/10/06-16:59:53.589:[000008D4#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-16:59:53.592:[000008D4#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-16:59:53.599:[000008D4#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-16:59:53.600:[000008D4#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-16:59:53.601:[000008D4#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-16:59:53.608:[000008D4#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-16:59:53.612:[000008D4#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-16:59:53.612:[000008D4#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-16:59:53.613:[000008D4#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-16:59:53.615:[000008D4#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-16:59:53.616:[000008D4#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:00:15.092:[000008D4#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:00:15.093:[000008D4#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-17:00:15.096:[000008D4#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:00:15.098:[000008D4#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:00:15.099:[000008D4#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-17:00:15.100:[000008D4#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:00:25.821:[000008D4#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:00:25.823:[000008D4#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-17:00:25.825:[000008D4#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:00:25.826:[000008D4#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:00:25.828:[000008D4#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-17:00:25.830:[000008D4#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:08:00.137:[00000D5C#00000000#5] > [InitLibrary] Begin
+2025/10/06-17:08:00.139:[00000D5C#00000000#4] > [InitLibrary] DLL Path: C:\TVM\TVM2\agra--cash-tvm\CuCustomWndAPI.dll
+2025/10/06-17:08:00.140:[00000D5C#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-17:08:00.142:[00000D5C#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/06-17:08:00.143:[00000D5C#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-17:08:00.144:[00000D5C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-17:08:00.146:[00000D5C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-17:08:00.147:[00000D5C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-17:08:00.149:[00000D5C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-17:08:00.150:[00000D5C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-17:08:00.151:[00000D5C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-17:08:00.153:[00000D5C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-17:08:00.155:[00000D5C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-17:08:00.158:[00000D5C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-17:08:00.181:[00000D5C#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-17:08:00.183:[00000D5C#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-17:08:00.186:[00000D5C#00000000#5] > [GetVariable] Begin
+2025/10/06-17:08:00.187:[00000D5C#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-17:08:00.188:[00000D5C#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-17:08:00.200:[00000D5C#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-17:08:00.201:[00000D5C#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-17:08:00.202:[00000D5C#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-17:08:00.212:[00000D5C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:08:00.217:[00000D5C#00000000#4] > [EnumUSBDevices] Found 1 USB Devices:
+2025/10/06-17:08:00.219:[00000D5C#00000000#4] > [EnumUSBDevices] 01 - 0237:K80_USB_NUM.:_0 [CUSTOM K80]
+2025/10/06-17:08:00.220:[00000D5C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:08:00.221:[00000D5C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:08:00.223:[00000D5C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:08:00.233:[00000D5C#00000000#5] > [OpenPrinterUSB] Begin
+2025/10/06-17:08:00.236:[00000D5C#00000000#4] > [DevOnlyOpenPrinterUSB] Opening Port mode TXRX_STS
+2025/10/06-17:08:00.239:[00000D5C#00000000#4] > [CComPort::FixAvailableInterfaces] Printer ID/GSI from I0: 0x0237
+2025/10/06-17:08:00.241:[00000D5C#00000000#5] > [OpenPrinterUSB] End [0/Ok]
+2025/10/06-17:08:16.815:[00000D5C#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:08:16.817:[00000D5C#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:08:16.819:[00000D5C#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:08:16.821:[00000D5C#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:08:16.823:[00000D5C#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:08:16.835:[00000D5C#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:08:16.836:[00000D5C#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:08:16.837:[00000D5C#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:08:16.840:[00000D5C#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:08:16.842:[00000D5C#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:08:25.940:[00000D5C#00000000#5] > [PrintTextEx] Begin
+2025/10/06-17:08:25.943:[00000D5C#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/06-17:08:25.945:[00000D5C#00000000#5] > [PrintTextEx] End [0/Ok]
+2025/10/06-17:08:25.958:[00000D5C#00000000#5] > [Cut] Begin
+2025/10/06-17:08:25.959:[00000D5C#00000000#4] > [Cut] DeviceID:00000101
+2025/10/06-17:08:25.961:[00000D5C#00000000#5] > [Cut] End [0/Ok]
+2025/10/06-17:08:41.264:[00000D5C#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:08:41.265:[00000D5C#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:08:41.268:[00000D5C#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:08:41.271:[00000D5C#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:08:41.272:[00000D5C#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:08:41.281:[00000D5C#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:08:41.282:[00000D5C#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:08:41.284:[00000D5C#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:08:41.286:[00000D5C#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:08:41.287:[00000D5C#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:08:48.708:[00000D5C#00000000#5] > [PrintTextEx] Begin
+2025/10/06-17:08:48.710:[00000D5C#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/06-17:08:49.711:[00000D5C#00000000#2] > [PrintTextEx] Send Text error
+2025/10/06-17:08:49.731:[00000D5C#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:08:49.732:[00000D5C#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:08:49.734:[00000D5C#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:08:50.338:[00000D5C#00000000#2] > [CCommonCommands::GetFullStatus] Get status Error (CcwResult_WriteError)
+2025/10/06-17:08:50.340:[00000D5C#00000000#2] > [GetPrinterFullStatus] Get Status error
+2025/10/06-17:08:50.346:[00000D5C#00000000#5] > [CloseDevice] Begin
+2025/10/06-17:08:50.347:[00000D5C#00000000#4] > [CloseDevice] DeviceID:00000101
+2025/10/06-17:08:50.350:[00000D5C#00000000#5] > [CloseDevice] End [0/Ok]
+2025/10/06-17:08:50.355:[00000D5C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:08:50.357:[00000D5C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-17:08:50.358:[00000D5C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:08:50.359:[00000D5C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:08:50.361:[00000D5C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-17:08:50.361:[00000D5C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:08:55.863:[00000D5C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:08:55.864:[00000D5C#00000000#4] > [EnumUSBDevices] Found 1 USB Devices:
+2025/10/06-17:08:55.866:[00000D5C#00000000#4] > [EnumUSBDevices] 01 - 0237:K80_USB_NUM.:_0 [CUSTOM K80]
+2025/10/06-17:08:55.867:[00000D5C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:08:55.869:[00000D5C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:08:55.870:[00000D5C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:08:55.881:[00000D5C#00000000#5] > [OpenPrinterUSB] Begin
+2025/10/06-17:08:55.885:[00000D5C#00000000#4] > [DevOnlyOpenPrinterUSB] Opening Port mode TXRX_STS
+2025/10/06-17:08:55.888:[00000D5C#00000000#4] > [CComPort::FixAvailableInterfaces] Printer ID/GSI from I0: 0x0237
+2025/10/06-17:08:55.890:[00000D5C#00000000#5] > [OpenPrinterUSB] End [0/Ok]
+2025/10/06-17:09:00.166:[00000D5C#00000000#5] > [PrintTextEx] Begin
+2025/10/06-17:09:00.168:[00000D5C#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/06-17:09:00.170:[00000D5C#00000000#5] > [PrintTextEx] End [0/Ok]
+2025/10/06-17:09:00.178:[00000D5C#00000000#5] > [Cut] Begin
+2025/10/06-17:09:00.179:[00000D5C#00000000#4] > [Cut] DeviceID:00000101
+2025/10/06-17:09:00.180:[00000D5C#00000000#5] > [Cut] End [0/Ok]
+2025/10/06-17:09:01.684:[00000D5C#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:09:01.685:[00000D5C#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:09:01.687:[00000D5C#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:09:01.688:[00000D5C#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000820
+2025/10/06-17:09:01.690:[00000D5C#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:09:01.698:[00000D5C#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:09:01.699:[00000D5C#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:09:01.700:[00000D5C#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:09:01.702:[00000D5C#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000820
+2025/10/06-17:09:01.703:[00000D5C#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:09:27.920:[00000D5C#00000000#5] > [PrintTextEx] Begin
+2025/10/06-17:09:27.922:[00000D5C#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/06-17:09:27.925:[00000D5C#00000000#5] > [PrintTextEx] End [0/Ok]
+2025/10/06-17:09:27.933:[00000D5C#00000000#5] > [Cut] Begin
+2025/10/06-17:09:27.934:[00000D5C#00000000#4] > [Cut] DeviceID:00000101
+2025/10/06-17:09:27.935:[00000D5C#00000000#5] > [Cut] End [0/Ok]
+2025/10/06-17:09:33.201:[00000D5C#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:09:33.202:[00000D5C#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:09:33.203:[00000D5C#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:09:33.205:[00000D5C#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:09:33.207:[00000D5C#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:09:33.213:[00000D5C#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:09:33.214:[00000D5C#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:09:33.215:[00000D5C#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:09:33.216:[00000D5C#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:09:33.218:[00000D5C#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:26:06.461:[00004380#00000000#5] > [InitLibrary] Begin
+2025/10/06-17:26:06.461:[00004380#00000000#4] > [InitLibrary] DLL Path: C:\TVM\TVM2\agra--cash-tvm\CuCustomWndAPI.dll
+2025/10/06-17:26:06.462:[00004380#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-17:26:06.464:[00004380#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/06-17:26:06.466:[00004380#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-17:26:06.468:[00004380#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-17:26:06.470:[00004380#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-17:26:06.471:[00004380#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-17:26:06.472:[00004380#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-17:26:06.473:[00004380#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-17:26:06.475:[00004380#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-17:26:06.477:[00004380#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-17:26:06.478:[00004380#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-17:26:06.480:[00004380#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-17:26:06.495:[00004380#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-17:26:06.496:[00004380#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-17:26:06.498:[00004380#00000000#5] > [GetVariable] Begin
+2025/10/06-17:26:06.499:[00004380#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-17:26:06.500:[00004380#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-17:26:06.508:[00004380#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-17:26:06.509:[00004380#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-17:26:06.511:[00004380#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-17:26:06.519:[00004380#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:26:06.523:[00004380#00000000#4] > [EnumUSBDevices] Found 1 USB Devices:
+2025/10/06-17:26:06.524:[00004380#00000000#4] > [EnumUSBDevices] 01 - 0237:K80_USB_NUM.:_0 [CUSTOM K80]
+2025/10/06-17:26:06.526:[00004380#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:26:06.527:[00004380#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:26:06.528:[00004380#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:26:06.538:[00004380#00000000#5] > [OpenPrinterUSB] Begin
+2025/10/06-17:26:06.540:[00004380#00000000#4] > [DevOnlyOpenPrinterUSB] Opening Port mode TXRX_STS
+2025/10/06-17:26:06.542:[00004380#00000000#4] > [CComPort::FixAvailableInterfaces] Printer ID/GSI from I0: 0x0237
+2025/10/06-17:26:06.545:[00004380#00000000#5] > [OpenPrinterUSB] End [0/Ok]
+2025/10/06-17:26:26.402:[00004380#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:26:26.403:[00004380#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:26:26.404:[00004380#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:26:26.406:[00004380#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:26:26.408:[00004380#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:26:26.421:[00004380#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:26:26.422:[00004380#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:26:26.423:[00004380#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:26:26.425:[00004380#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:26:26.426:[00004380#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:26:26.431:[00004380#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:26:26.431:[00004380#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:26:26.433:[00004380#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:26:26.435:[00004380#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:26:26.436:[00004380#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:26:26.444:[00004380#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:26:26.444:[00004380#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:26:26.445:[00004380#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:26:26.447:[00004380#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:26:26.448:[00004380#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:39:31.405:[000030A0#00000000#5] > [InitLibrary] Begin
+2025/10/06-17:39:31.406:[000030A0#00000000#4] > [InitLibrary] DLL Path: C:\TVM\TVM2\agra--cash-tvm\CuCustomWndAPI.dll
+2025/10/06-17:39:31.407:[000030A0#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-17:39:31.410:[000030A0#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/06-17:39:31.412:[000030A0#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-17:39:31.412:[000030A0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-17:39:31.415:[000030A0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-17:39:31.416:[000030A0#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-17:39:31.418:[000030A0#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-17:39:31.419:[000030A0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-17:39:31.421:[000030A0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-17:39:31.422:[000030A0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-17:39:31.423:[000030A0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-17:39:31.424:[000030A0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-17:39:31.449:[000030A0#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-17:39:31.449:[000030A0#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-17:39:31.451:[000030A0#00000000#5] > [GetVariable] Begin
+2025/10/06-17:39:31.452:[000030A0#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-17:39:31.453:[000030A0#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-17:39:31.460:[000030A0#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-17:39:31.461:[000030A0#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-17:39:31.462:[000030A0#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-17:39:31.470:[000030A0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:39:31.474:[000030A0#00000000#4] > [EnumUSBDevices] Found 1 USB Devices:
+2025/10/06-17:39:31.478:[000030A0#00000000#4] > [EnumUSBDevices] 01 - 0237:K80_USB_NUM.:_0 [CUSTOM K80]
+2025/10/06-17:39:31.479:[000030A0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:39:31.480:[000030A0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:39:31.480:[000030A0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:39:31.488:[000030A0#00000000#5] > [OpenPrinterUSB] Begin
+2025/10/06-17:39:31.490:[000030A0#00000000#4] > [DevOnlyOpenPrinterUSB] Opening Port mode TXRX_STS
+2025/10/06-17:39:31.492:[000030A0#00000000#4] > [CComPort::FixAvailableInterfaces] Printer ID/GSI from I0: 0x0237
+2025/10/06-17:39:31.493:[000030A0#00000000#5] > [OpenPrinterUSB] End [0/Ok]
+2025/10/06-17:39:52.054:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:39:52.056:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:39:52.059:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:39:52.063:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:39:52.065:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:39:52.078:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:39:52.080:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:39:52.081:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:39:52.084:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:39:52.086:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:39:52.094:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:39:52.095:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:39:52.098:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:39:52.101:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:39:52.103:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:39:52.114:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:39:52.114:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:39:52.115:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:39:52.117:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:39:52.119:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:40:57.528:[000030A0#00000000#5] > [PrintTextEx] Begin
+2025/10/06-17:40:57.528:[000030A0#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/06-17:40:58.530:[000030A0#00000000#2] > [PrintTextEx] Send Text error
+2025/10/06-17:40:59.844:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:40:59.845:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:40:59.847:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:41:00.451:[000030A0#00000000#2] > [CCommonCommands::GetFullStatus] Get status Error (CcwResult_WriteError)
+2025/10/06-17:41:00.452:[000030A0#00000000#2] > [GetPrinterFullStatus] Get Status error
+2025/10/06-17:41:00.457:[000030A0#00000000#5] > [CloseDevice] Begin
+2025/10/06-17:41:00.458:[000030A0#00000000#4] > [CloseDevice] DeviceID:00000101
+2025/10/06-17:41:00.460:[000030A0#00000000#5] > [CloseDevice] End [0/Ok]
+2025/10/06-17:41:00.466:[000030A0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:41:00.467:[000030A0#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-17:41:00.468:[000030A0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:41:00.468:[000030A0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:41:00.470:[000030A0#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-17:41:00.470:[000030A0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:41:11.849:[000030A0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:41:11.849:[000030A0#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-17:41:11.850:[000030A0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:41:11.851:[000030A0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:41:11.852:[000030A0#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/06-17:41:11.854:[000030A0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:41:23.955:[000030A0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:41:23.958:[000030A0#00000000#4] > [EnumUSBDevices] Found 1 USB Devices:
+2025/10/06-17:41:23.960:[000030A0#00000000#4] > [EnumUSBDevices] 01 - 0237:K80_USB_NUM.:_0 [CUSTOM K80]
+2025/10/06-17:41:23.962:[000030A0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:41:23.965:[000030A0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:41:23.967:[000030A0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:41:23.976:[000030A0#00000000#5] > [OpenPrinterUSB] Begin
+2025/10/06-17:41:23.978:[000030A0#00000000#4] > [DevOnlyOpenPrinterUSB] Opening Port mode TXRX_STS
+2025/10/06-17:41:23.981:[000030A0#00000000#4] > [CComPort::FixAvailableInterfaces] Printer ID/GSI from I0: 0x0237
+2025/10/06-17:41:23.982:[000030A0#00000000#5] > [OpenPrinterUSB] End [0/Ok]
+2025/10/06-17:41:23.989:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:41:23.989:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:41:23.991:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:41:23.991:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:41:23.993:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:41:23.999:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:41:24.001:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:41:24.002:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:41:24.003:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:41:24.004:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:41:25.995:[000030A0#00000000#5] > [PrintTextEx] Begin
+2025/10/06-17:41:25.995:[000030A0#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/06-17:41:25.997:[000030A0#00000000#5] > [PrintTextEx] End [0/Ok]
+2025/10/06-17:41:26.002:[000030A0#00000000#5] > [Cut] Begin
+2025/10/06-17:41:26.004:[000030A0#00000000#4] > [Cut] DeviceID:00000101
+2025/10/06-17:41:26.005:[000030A0#00000000#5] > [Cut] End [0/Ok]
+2025/10/06-17:41:36.412:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:41:36.413:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:41:36.414:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:41:36.415:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000025
+2025/10/06-17:41:36.417:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:41:36.422:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:41:36.423:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:41:36.424:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:41:36.426:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000025
+2025/10/06-17:41:36.427:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:41:36.433:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:41:36.434:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:41:36.435:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:41:36.438:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000025
+2025/10/06-17:41:36.439:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:41:36.445:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:41:36.446:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:41:36.447:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:41:36.449:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000025
+2025/10/06-17:41:36.450:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:41:58.873:[000030A0#00000000#5] > [PrintTextEx] Begin
+2025/10/06-17:41:58.874:[000030A0#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/06-17:41:58.876:[000030A0#00000000#5] > [PrintTextEx] End [0/Ok]
+2025/10/06-17:41:58.880:[000030A0#00000000#5] > [Cut] Begin
+2025/10/06-17:41:58.881:[000030A0#00000000#4] > [Cut] DeviceID:00000101
+2025/10/06-17:41:58.883:[000030A0#00000000#5] > [Cut] End [0/Ok]
+2025/10/06-17:43:11.552:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:43:11.554:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:43:11.555:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:43:11.558:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000421
+2025/10/06-17:43:11.559:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:43:11.567:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:43:11.567:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:43:11.568:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:43:11.570:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000421
+2025/10/06-17:43:11.572:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:43:11.577:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:43:11.578:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:43:11.580:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:43:11.581:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000421
+2025/10/06-17:43:11.581:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:43:11.587:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:43:11.588:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:43:11.588:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:43:11.590:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000421
+2025/10/06-17:43:11.591:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:43:18.667:[000030A0#00000000#5] > [PrintTextEx] Begin
+2025/10/06-17:43:18.668:[000030A0#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/06-17:43:18.671:[000030A0#00000000#5] > [PrintTextEx] End [0/Ok]
+2025/10/06-17:43:18.678:[000030A0#00000000#5] > [Cut] Begin
+2025/10/06-17:43:18.680:[000030A0#00000000#4] > [Cut] DeviceID:00000101
+2025/10/06-17:43:18.681:[000030A0#00000000#5] > [Cut] End [0/Ok]
+2025/10/06-17:43:19.676:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:43:19.678:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:43:19.680:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:43:19.683:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000421
+2025/10/06-17:43:19.685:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:43:19.692:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:43:19.693:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:43:19.694:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:43:19.695:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000421
+2025/10/06-17:43:19.696:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:43:19.702:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:43:19.703:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:43:19.704:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:43:19.705:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000421
+2025/10/06-17:43:19.706:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:43:19.715:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:43:19.717:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:43:19.719:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:43:19.720:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000421
+2025/10/06-17:43:19.721:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:43:27.403:[000030A0#00000000#5] > [PrintTextEx] Begin
+2025/10/06-17:43:27.404:[000030A0#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/06-17:43:27.407:[000030A0#00000000#5] > [PrintTextEx] End [0/Ok]
+2025/10/06-17:43:27.411:[000030A0#00000000#5] > [Cut] Begin
+2025/10/06-17:43:27.412:[000030A0#00000000#4] > [Cut] DeviceID:00000101
+2025/10/06-17:43:27.414:[000030A0#00000000#5] > [Cut] End [0/Ok]
+2025/10/06-17:43:29.157:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:43:29.159:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:43:29.162:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:43:29.163:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000421
+2025/10/06-17:43:29.166:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:43:29.175:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:43:29.175:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:43:29.177:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:43:29.179:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000421
+2025/10/06-17:43:29.182:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:43:29.187:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:43:29.188:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:43:29.190:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:43:29.192:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000421
+2025/10/06-17:43:29.193:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:43:29.200:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:43:29.202:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:43:29.203:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:43:29.207:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000421
+2025/10/06-17:43:29.208:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:43:50.333:[000030A0#00000000#5] > [PrintTextEx] Begin
+2025/10/06-17:43:50.334:[000030A0#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/06-17:43:51.335:[000030A0#00000000#2] > [PrintTextEx] Send Text error
+2025/10/06-17:43:52.796:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:43:52.797:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:43:52.798:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:43:53.402:[000030A0#00000000#2] > [CCommonCommands::GetFullStatus] Get status Error (CcwResult_WriteError)
+2025/10/06-17:43:53.404:[000030A0#00000000#2] > [GetPrinterFullStatus] Get Status error
+2025/10/06-17:43:53.408:[000030A0#00000000#5] > [CloseDevice] Begin
+2025/10/06-17:43:53.409:[000030A0#00000000#4] > [CloseDevice] DeviceID:00000101
+2025/10/06-17:43:53.410:[000030A0#00000000#5] > [CloseDevice] End [0/Ok]
+2025/10/06-17:43:53.414:[000030A0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:43:53.416:[000030A0#00000000#4] > [EnumUSBDevices] Found 1 USB Devices:
+2025/10/06-17:43:53.418:[000030A0#00000000#4] > [EnumUSBDevices] 01 - 0237:K80_USB_NUM.:_0 [CUSTOM K80]
+2025/10/06-17:43:53.418:[000030A0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:43:53.420:[000030A0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:43:53.420:[000030A0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:43:53.426:[000030A0#00000000#5] > [OpenPrinterUSB] Begin
+2025/10/06-17:43:53.428:[000030A0#00000000#4] > [DevOnlyOpenPrinterUSB] Opening Port mode TXRX_STS
+2025/10/06-17:43:53.432:[000030A0#00000000#4] > [CComPort::FixAvailableInterfaces] Printer ID/GSI from I0: 0x0237
+2025/10/06-17:43:53.433:[000030A0#00000000#5] > [OpenPrinterUSB] End [0/Ok]
+2025/10/06-17:43:53.437:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:43:53.438:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:43:53.439:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:43:53.440:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:43:53.441:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:43:53.448:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:43:53.449:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:43:53.450:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:43:53.451:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:43:53.453:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:44:01.885:[000030A0#00000000#5] > [PrintTextEx] Begin
+2025/10/06-17:44:01.885:[000030A0#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/06-17:44:02.887:[000030A0#00000000#2] > [PrintTextEx] Send Text error
+2025/10/06-17:44:05.120:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:44:05.121:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:44:05.122:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:44:05.725:[000030A0#00000000#2] > [CCommonCommands::GetFullStatus] Get status Error (CcwResult_WriteError)
+2025/10/06-17:44:05.726:[000030A0#00000000#2] > [GetPrinterFullStatus] Get Status error
+2025/10/06-17:44:05.730:[000030A0#00000000#5] > [CloseDevice] Begin
+2025/10/06-17:44:05.731:[000030A0#00000000#4] > [CloseDevice] DeviceID:00000101
+2025/10/06-17:44:05.732:[000030A0#00000000#5] > [CloseDevice] End [0/Ok]
+2025/10/06-17:44:05.735:[000030A0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:44:05.736:[000030A0#00000000#4] > [EnumUSBDevices] Found 1 USB Devices:
+2025/10/06-17:44:05.738:[000030A0#00000000#4] > [EnumUSBDevices] 01 - 0237:K80_USB_NUM.:_0 [CUSTOM K80]
+2025/10/06-17:44:05.739:[000030A0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:44:05.740:[000030A0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:44:05.740:[000030A0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:44:05.746:[000030A0#00000000#5] > [OpenPrinterUSB] Begin
+2025/10/06-17:44:05.748:[000030A0#00000000#4] > [DevOnlyOpenPrinterUSB] Opening Port mode TXRX_STS
+2025/10/06-17:44:05.751:[000030A0#00000000#4] > [CComPort::FixAvailableInterfaces] Printer ID/GSI from I0: 0x0237
+2025/10/06-17:44:05.753:[000030A0#00000000#5] > [OpenPrinterUSB] End [0/Ok]
+2025/10/06-17:44:05.757:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:44:05.757:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:44:05.759:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:44:05.761:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:44:05.762:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:44:05.769:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:44:05.770:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:44:05.772:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:44:05.773:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:44:05.774:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:44:35.159:[000030A0#00000000#5] > [PrintTextEx] Begin
+2025/10/06-17:44:35.161:[000030A0#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/06-17:44:35.164:[000030A0#00000000#5] > [PrintTextEx] End [0/Ok]
+2025/10/06-17:44:35.172:[000030A0#00000000#5] > [Cut] Begin
+2025/10/06-17:44:35.173:[000030A0#00000000#4] > [Cut] DeviceID:00000101
+2025/10/06-17:44:35.179:[000030A0#00000000#5] > [Cut] End [0/Ok]
+2025/10/06-17:44:39.942:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:44:39.943:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:44:39.944:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:44:39.946:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:44:39.948:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:44:39.954:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:44:39.955:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:44:39.956:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:44:39.958:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:44:39.959:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:44:39.965:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:44:39.966:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:44:39.967:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:44:39.970:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:44:39.971:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:44:39.978:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:44:39.979:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:44:39.980:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:44:39.981:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:44:39.983:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:44:48.062:[000030A0#00000000#5] > [PrintTextEx] Begin
+2025/10/06-17:44:48.062:[000030A0#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/06-17:44:48.066:[000030A0#00000000#5] > [PrintTextEx] End [0/Ok]
+2025/10/06-17:44:48.071:[000030A0#00000000#5] > [Cut] Begin
+2025/10/06-17:44:48.071:[000030A0#00000000#4] > [Cut] DeviceID:00000101
+2025/10/06-17:44:48.073:[000030A0#00000000#5] > [Cut] End [0/Ok]
+2025/10/06-17:48:23.573:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:48:23.574:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:48:23.577:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:48:23.580:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:48:23.583:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:48:23.593:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:48:23.595:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:48:23.597:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:48:23.600:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:48:23.602:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:48:23.612:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:48:23.613:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:48:23.614:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:48:23.616:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:48:23.618:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:48:23.624:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:48:23.624:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:48:23.626:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:48:23.629:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:48:23.631:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:48:34.420:[000030A0#00000000#5] > [PrintTextEx] Begin
+2025/10/06-17:48:34.421:[000030A0#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/06-17:48:34.422:[000030A0#00000000#5] > [PrintTextEx] End [0/Ok]
+2025/10/06-17:48:34.426:[000030A0#00000000#5] > [Cut] Begin
+2025/10/06-17:48:34.427:[000030A0#00000000#4] > [Cut] DeviceID:00000101
+2025/10/06-17:48:34.429:[000030A0#00000000#5] > [Cut] End [0/Ok]
+2025/10/06-17:48:39.969:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:48:39.971:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:48:39.974:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:48:39.977:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:48:39.980:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:48:39.990:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:48:39.992:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:48:39.994:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:48:39.997:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:48:39.999:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:48:40.011:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:48:40.013:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:48:40.015:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:48:40.018:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:48:40.021:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:48:40.032:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:48:40.034:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:48:40.036:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:48:40.039:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:48:40.042:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:48:42.682:[000030A0#00000000#5] > [PrintTextEx] Begin
+2025/10/06-17:48:42.683:[000030A0#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/06-17:48:42.685:[000030A0#00000000#5] > [PrintTextEx] End [0/Ok]
+2025/10/06-17:48:42.690:[000030A0#00000000#5] > [Cut] Begin
+2025/10/06-17:48:42.692:[000030A0#00000000#4] > [Cut] DeviceID:00000101
+2025/10/06-17:48:42.693:[000030A0#00000000#5] > [Cut] End [0/Ok]
+2025/10/06-17:50:08.396:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:50:08.398:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:50:08.399:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:50:08.401:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:50:08.403:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:50:08.413:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:50:08.414:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:50:08.416:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:50:08.418:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:50:08.419:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:50:08.432:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:50:08.434:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:50:08.435:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:50:08.438:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:50:08.440:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:50:08.451:[000030A0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:50:08.452:[000030A0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:50:08.453:[000030A0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:50:08.455:[000030A0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:50:08.457:[000030A0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:54:56.044:[00002F04#00000000#5] > [InitLibrary] Begin
+2025/10/06-17:54:56.046:[00002F04#00000000#4] > [InitLibrary] DLL Path: C:\TVM\TVM2\agra--cash-tvm\CuCustomWndAPI.dll
+2025/10/06-17:54:56.047:[00002F04#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-17:54:56.047:[00002F04#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/06-17:54:56.048:[00002F04#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-17:54:56.049:[00002F04#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-17:54:56.051:[00002F04#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-17:54:56.052:[00002F04#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-17:54:56.053:[00002F04#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-17:54:56.054:[00002F04#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-17:54:56.055:[00002F04#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-17:54:56.056:[00002F04#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-17:54:56.058:[00002F04#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-17:54:56.059:[00002F04#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-17:54:56.081:[00002F04#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-17:54:56.081:[00002F04#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-17:54:56.083:[00002F04#00000000#5] > [GetVariable] Begin
+2025/10/06-17:54:56.083:[00002F04#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-17:54:56.085:[00002F04#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-17:54:56.090:[00002F04#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-17:54:56.091:[00002F04#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-17:54:56.092:[00002F04#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-17:54:56.098:[00002F04#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:54:56.102:[00002F04#00000000#4] > [EnumUSBDevices] Found 1 USB Devices:
+2025/10/06-17:54:56.103:[00002F04#00000000#4] > [EnumUSBDevices] 01 - 0237:K80_USB_NUM.:_0 [CUSTOM K80]
+2025/10/06-17:54:56.104:[00002F04#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:54:56.105:[00002F04#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:54:56.106:[00002F04#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:54:56.113:[00002F04#00000000#5] > [OpenPrinterUSB] Begin
+2025/10/06-17:54:56.115:[00002F04#00000000#4] > [DevOnlyOpenPrinterUSB] Opening Port mode TXRX_STS
+2025/10/06-17:54:56.117:[00002F04#00000000#4] > [CComPort::FixAvailableInterfaces] Printer ID/GSI from I0: 0x0237
+2025/10/06-17:54:56.118:[00002F04#00000000#5] > [OpenPrinterUSB] End [0/Ok]
+2025/10/06-17:55:12.565:[00002F04#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:55:12.566:[00002F04#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:55:12.568:[00002F04#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:55:12.569:[00002F04#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:55:12.570:[00002F04#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:55:12.582:[00002F04#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:55:12.582:[00002F04#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:55:12.585:[00002F04#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:55:12.586:[00002F04#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:55:12.587:[00002F04#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:55:12.598:[00002F04#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:55:12.599:[00002F04#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:55:12.602:[00002F04#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:55:12.604:[00002F04#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:55:12.605:[00002F04#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:55:12.617:[00002F04#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:55:12.619:[00002F04#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:55:12.621:[00002F04#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:55:12.622:[00002F04#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:55:12.625:[00002F04#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:55:18.411:[00002F04#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:55:18.412:[00002F04#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:55:18.413:[00002F04#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:55:18.416:[00002F04#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:55:18.418:[00002F04#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:55:18.426:[00002F04#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:55:18.427:[00002F04#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:55:18.428:[00002F04#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:55:18.430:[00002F04#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:55:18.432:[00002F04#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:55:18.440:[00002F04#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:55:18.442:[00002F04#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:55:18.443:[00002F04#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:55:18.444:[00002F04#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:55:18.445:[00002F04#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:55:18.449:[00002F04#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:55:18.450:[00002F04#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:55:18.452:[00002F04#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:55:18.453:[00002F04#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:55:18.454:[00002F04#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:57:46.896:[000016D0#00000000#5] > [InitLibrary] Begin
+2025/10/06-17:57:46.898:[000016D0#00000000#4] > [InitLibrary] DLL Path: C:\TVM\TVM2\agra--cash-tvm\CuCustomWndAPI.dll
+2025/10/06-17:57:46.900:[000016D0#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-17:57:46.902:[000016D0#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/06-17:57:46.903:[000016D0#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-17:57:46.905:[000016D0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-17:57:46.907:[000016D0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-17:57:46.908:[000016D0#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-17:57:46.911:[000016D0#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-17:57:46.913:[000016D0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-17:57:46.915:[000016D0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-17:57:46.917:[000016D0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-17:57:46.919:[000016D0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-17:57:46.921:[000016D0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-17:57:46.952:[000016D0#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-17:57:46.953:[000016D0#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-17:57:46.956:[000016D0#00000000#5] > [GetVariable] Begin
+2025/10/06-17:57:46.957:[000016D0#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-17:57:46.959:[000016D0#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-17:57:46.968:[000016D0#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-17:57:46.969:[000016D0#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-17:57:46.971:[000016D0#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-17:57:46.980:[000016D0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:57:46.986:[000016D0#00000000#4] > [EnumUSBDevices] Found 1 USB Devices:
+2025/10/06-17:57:46.987:[000016D0#00000000#4] > [EnumUSBDevices] 01 - 0237:K80_USB_NUM.:_0 [CUSTOM K80]
+2025/10/06-17:57:46.989:[000016D0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:57:46.991:[000016D0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:57:46.992:[000016D0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:57:47.003:[000016D0#00000000#5] > [OpenPrinterUSB] Begin
+2025/10/06-17:57:47.006:[000016D0#00000000#4] > [DevOnlyOpenPrinterUSB] Opening Port mode TXRX_STS
+2025/10/06-17:57:47.009:[000016D0#00000000#4] > [CComPort::FixAvailableInterfaces] Printer ID/GSI from I0: 0x0237
+2025/10/06-17:57:47.012:[000016D0#00000000#5] > [OpenPrinterUSB] End [0/Ok]
+2025/10/06-17:58:10.301:[000016D0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:58:10.302:[000016D0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:58:10.303:[000016D0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:58:10.305:[000016D0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:58:10.306:[000016D0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:58:10.316:[000016D0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:58:10.316:[000016D0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:58:10.317:[000016D0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:58:10.320:[000016D0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:58:10.321:[000016D0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:58:10.329:[000016D0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:58:10.330:[000016D0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:58:10.332:[000016D0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:58:10.333:[000016D0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:58:10.336:[000016D0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:58:10.347:[000016D0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:58:10.348:[000016D0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:58:10.350:[000016D0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:58:10.351:[000016D0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:58:10.354:[000016D0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:59:08.215:[00003CC0#00000000#5] > [InitLibrary] Begin
+2025/10/06-17:59:08.215:[00003CC0#00000000#4] > [InitLibrary] DLL Path: C:\TVM\TVM2\agra--cash-tvm\CuCustomWndAPI.dll
+2025/10/06-17:59:08.217:[00003CC0#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/06-17:59:08.218:[00003CC0#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/06-17:59:08.219:[00003CC0#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/06-17:59:08.221:[00003CC0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/06-17:59:08.222:[00003CC0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/06-17:59:08.224:[00003CC0#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/06-17:59:08.225:[00003CC0#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/06-17:59:08.226:[00003CC0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/06-17:59:08.227:[00003CC0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/06-17:59:08.228:[00003CC0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/06-17:59:08.229:[00003CC0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/06-17:59:08.230:[00003CC0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/06-17:59:08.245:[00003CC0#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/06-17:59:08.247:[00003CC0#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/06-17:59:08.249:[00003CC0#00000000#5] > [GetVariable] Begin
+2025/10/06-17:59:08.249:[00003CC0#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/06-17:59:08.251:[00003CC0#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/06-17:59:08.257:[00003CC0#00000000#5] > [GetAPIVersion] Begin
+2025/10/06-17:59:08.258:[00003CC0#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/06-17:59:08.259:[00003CC0#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/06-17:59:08.264:[00003CC0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:59:08.267:[00003CC0#00000000#4] > [EnumUSBDevices] Found 1 USB Devices:
+2025/10/06-17:59:08.268:[00003CC0#00000000#4] > [EnumUSBDevices] 01 - 0237:K80_USB_NUM.:_0 [CUSTOM K80]
+2025/10/06-17:59:08.269:[00003CC0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:59:08.270:[00003CC0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/06-17:59:08.271:[00003CC0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/06-17:59:08.278:[00003CC0#00000000#5] > [OpenPrinterUSB] Begin
+2025/10/06-17:59:08.280:[00003CC0#00000000#4] > [DevOnlyOpenPrinterUSB] Opening Port mode TXRX_STS
+2025/10/06-17:59:08.282:[00003CC0#00000000#4] > [CComPort::FixAvailableInterfaces] Printer ID/GSI from I0: 0x0237
+2025/10/06-17:59:08.283:[00003CC0#00000000#5] > [OpenPrinterUSB] End [0/Ok]
+2025/10/06-17:59:26.137:[00003CC0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:59:26.139:[00003CC0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:59:26.140:[00003CC0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:59:26.142:[00003CC0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:59:26.143:[00003CC0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:59:26.154:[00003CC0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:59:26.155:[00003CC0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:59:26.156:[00003CC0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:59:26.159:[00003CC0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:59:26.160:[00003CC0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:59:26.166:[00003CC0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:59:26.167:[00003CC0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:59:26.168:[00003CC0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:59:26.170:[00003CC0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:59:26.171:[00003CC0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:59:26.177:[00003CC0#00000000#5] > [GetPrinterFullStatus] Begin
+2025/10/06-17:59:26.178:[00003CC0#00000000#4] > [GetPrinterFullStatus] DeviceID:00000101
+2025/10/06-17:59:26.179:[00003CC0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/06-17:59:26.180:[00003CC0#00000000#4] > [GetPrinterFullStatus] Printer Full Status: 0x00000000
+2025/10/06-17:59:26.181:[00003CC0#00000000#5] > [GetPrinterFullStatus] End [0/Ok]
+2025/10/06-17:59:27.638:[00003CC0#00000000#5] > [PrintTextEx] Begin
+2025/10/06-17:59:27.640:[00003CC0#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/06-17:59:27.641:[00003CC0#00000000#5] > [PrintTextEx] End [0/Ok]
+2025/10/06-17:59:27.647:[00003CC0#00000000#5] > [Cut] Begin
+2025/10/06-17:59:27.647:[00003CC0#00000000#4] > [Cut] DeviceID:00000101
+2025/10/06-17:59:27.649:[00003CC0#00000000#5] > [Cut] End [0/Ok]

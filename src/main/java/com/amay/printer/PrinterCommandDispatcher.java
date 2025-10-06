@@ -33,6 +33,10 @@ public enum PrinterCommandDispatcher {
     public BaseResponse printText(List<QRTicket> qrTickets,PayReceipt payReceipt){
         return  printerInterface.printTicketsWithPayReceipt(qrTickets,payReceipt);
     }
+
+    public BaseResponse testPrint(){
+        return printerInterface.testPrint();
+    }
     public BaseResponse printText(ShiftReportData shiftReportData){
         return  printerInterface.printImageByText(shiftReportData);
     }
