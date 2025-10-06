@@ -297,5 +297,13 @@ public class ViewFactory {
     public static FXMLLoader getMoneyManagementBnrLoad() {
         return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/pdu/bnr_load.fxml"));
     }
+
+
+    public static FXMLLoader getSystemInfo() {
+        return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/pdu/system_info.fxml"));
+    }
+
+
+
 }
 

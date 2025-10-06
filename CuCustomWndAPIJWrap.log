@@ -110818,3 +110818,195 @@ Valid Upto       : 120 minutes after entry
 2025-10-03 15-21-39.0114[EnumUSBDevices]Begin
 2025-10-03 15-21-39.0121[EnumUSBDevices]Found 0 USB Devices
 2025-10-03 15-21-39.0122[EnumUSBDevices]End
+2025-10-06 15-49-26.0601[]*****************************************
+2025-10-06 15-49-26.0603[]DLL Log Initialize. Verbosity: 6
+2025-10-06 15-49-26.0603[]*****************************************
+2025-10-06 15-49-26.0604[]DLL Path: C:\Users\Shubham Boral\agra-cash-tvm
+2025-10-06 15-49-26.0605[]DLL Version: 1.07
+2025-10-06 15-49-26.0607[InitLibrary]Begin
+2025-10-06 15-49-26.0646[InitLibrary]Library SignID:00000101
+2025-10-06 15-49-26.0648[InitLibrary]Current SignID:00000101
+2025-10-06 15-49-26.0649[InitLibrary]End
+2025-10-06 15-49-26.0650[GetAPIVersionHwLibrary]Begin
+2025-10-06 15-49-26.0655[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-06 15-49-26.0656[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-06 15-49-26.0657[GetAPIVersionHwLibrary]End
+2025-10-06 15-49-26.0658[EnumUSBDevices]Begin
+2025-10-06 15-49-26.0666[EnumUSBDevices]Found 0 USB Devices
+2025-10-06 15-49-26.0667[EnumUSBDevices]End
+2025-10-06 16-01-20.0743[]*****************************************
+2025-10-06 16-01-20.0744[]DLL Log Initialize. Verbosity: 6
+2025-10-06 16-01-20.0745[]*****************************************
+2025-10-06 16-01-20.0745[]DLL Path: C:\Users\Shubham Boral\agra-cash-tvm
+2025-10-06 16-01-20.0746[]DLL Version: 1.07
+2025-10-06 16-01-20.0746[InitLibrary]Begin
+2025-10-06 16-01-20.0762[InitLibrary]Library SignID:00000101
+2025-10-06 16-01-20.0764[InitLibrary]Current SignID:00000101
+2025-10-06 16-01-20.0764[InitLibrary]End
+2025-10-06 16-01-20.0765[GetAPIVersionHwLibrary]Begin
+2025-10-06 16-01-20.0767[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-06 16-01-20.0767[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-06 16-01-20.0768[GetAPIVersionHwLibrary]End
+2025-10-06 16-01-20.0768[EnumUSBDevices]Begin
+2025-10-06 16-01-20.0772[EnumUSBDevices]Found 0 USB Devices
+2025-10-06 16-01-20.0772[EnumUSBDevices]End
+2025-10-06 16-04-36.0672[]*****************************************
+2025-10-06 16-04-36.0672[]DLL Log Initialize. Verbosity: 6
+2025-10-06 16-04-36.0673[]*****************************************
+2025-10-06 16-04-36.0673[]DLL Path: C:\Users\Shubham Boral\agra-cash-tvm
+2025-10-06 16-04-36.0674[]DLL Version: 1.07
+2025-10-06 16-04-36.0674[InitLibrary]Begin
+2025-10-06 16-04-36.0690[InitLibrary]Library SignID:00000101
+2025-10-06 16-04-36.0691[InitLibrary]Current SignID:00000101
+2025-10-06 16-04-36.0691[InitLibrary]End
+2025-10-06 16-04-36.0691[GetAPIVersionHwLibrary]Begin
+2025-10-06 16-04-36.0694[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-06 16-04-36.0695[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-06 16-04-36.0695[GetAPIVersionHwLibrary]End
+2025-10-06 16-04-36.0695[EnumUSBDevices]Begin
+2025-10-06 16-04-36.0700[EnumUSBDevices]Found 0 USB Devices
+2025-10-06 16-04-36.0700[EnumUSBDevices]End
+2025-10-06 16-06-13.0276[]*****************************************
+2025-10-06 16-06-13.0277[]DLL Log Initialize. Verbosity: 6
+2025-10-06 16-06-13.0278[]*****************************************
+2025-10-06 16-06-13.0278[]DLL Path: C:\Users\Shubham Boral\agra-cash-tvm
+2025-10-06 16-06-13.0278[]DLL Version: 1.07
+2025-10-06 16-06-13.0279[InitLibrary]Begin
+2025-10-06 16-06-13.0297[InitLibrary]Library SignID:00000101
+2025-10-06 16-06-13.0298[InitLibrary]Current SignID:00000101
+2025-10-06 16-06-13.0298[InitLibrary]End
+2025-10-06 16-06-13.0298[GetAPIVersionHwLibrary]Begin
+2025-10-06 16-06-13.0300[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-06 16-06-13.0301[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-06 16-06-13.0301[GetAPIVersionHwLibrary]End
+2025-10-06 16-06-13.0302[EnumUSBDevices]Begin
+2025-10-06 16-06-13.0305[EnumUSBDevices]Found 0 USB Devices
+2025-10-06 16-06-13.0306[EnumUSBDevices]End
+2025-10-06 16-09-48.0176[]*****************************************
+2025-10-06 16-09-48.0177[]DLL Log Initialize. Verbosity: 6
+2025-10-06 16-09-48.0178[]*****************************************
+2025-10-06 16-09-48.0178[]DLL Path: C:\Users\Shubham Boral\agra-cash-tvm
+2025-10-06 16-09-48.0179[]DLL Version: 1.07
+2025-10-06 16-09-48.0179[InitLibrary]Begin
+2025-10-06 16-09-48.0196[InitLibrary]Library SignID:00000101
+2025-10-06 16-09-48.0196[InitLibrary]Current SignID:00000101
+2025-10-06 16-09-48.0197[InitLibrary]End
+2025-10-06 16-09-48.0197[GetAPIVersionHwLibrary]Begin
+2025-10-06 16-09-48.0199[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-06 16-09-48.0200[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-06 16-09-48.0200[GetAPIVersionHwLibrary]End
+2025-10-06 16-09-48.0200[EnumUSBDevices]Begin
+2025-10-06 16-09-48.0204[EnumUSBDevices]Found 0 USB Devices
+2025-10-06 16-09-48.0205[EnumUSBDevices]End
+2025-10-06 16-11-16.0246[]*****************************************
+2025-10-06 16-11-16.0247[]DLL Log Initialize. Verbosity: 6
+2025-10-06 16-11-16.0247[]*****************************************
+2025-10-06 16-11-16.0248[]DLL Path: C:\Users\Shubham Boral\agra-cash-tvm
+2025-10-06 16-11-16.0248[]DLL Version: 1.07
+2025-10-06 16-11-16.0248[InitLibrary]Begin
+2025-10-06 16-11-16.0266[InitLibrary]Library SignID:00000101
+2025-10-06 16-11-16.0266[InitLibrary]Current SignID:00000101
+2025-10-06 16-11-16.0267[InitLibrary]End
+2025-10-06 16-11-16.0267[GetAPIVersionHwLibrary]Begin
+2025-10-06 16-11-16.0268[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-06 16-11-16.0269[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-06 16-11-16.0269[GetAPIVersionHwLibrary]End
+2025-10-06 16-11-16.0270[EnumUSBDevices]Begin
+2025-10-06 16-11-16.0273[EnumUSBDevices]Found 0 USB Devices
+2025-10-06 16-11-16.0274[EnumUSBDevices]End
+2025-10-06 16-19-44.0606[]*****************************************
+2025-10-06 16-19-44.0607[]DLL Log Initialize. Verbosity: 6
+2025-10-06 16-19-44.0608[]*****************************************
+2025-10-06 16-19-44.0609[]DLL Path: C:\Users\Shubham Boral\agra-cash-tvm
+2025-10-06 16-19-44.0609[]DLL Version: 1.07
+2025-10-06 16-19-44.0610[InitLibrary]Begin
+2025-10-06 16-19-44.0627[InitLibrary]Library SignID:00000101
+2025-10-06 16-19-44.0628[InitLibrary]Current SignID:00000101
+2025-10-06 16-19-44.0628[InitLibrary]End
+2025-10-06 16-19-44.0629[GetAPIVersionHwLibrary]Begin
+2025-10-06 16-19-44.0630[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-06 16-19-44.0631[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-06 16-19-44.0631[GetAPIVersionHwLibrary]End
+2025-10-06 16-19-44.0632[EnumUSBDevices]Begin
+2025-10-06 16-19-44.0636[EnumUSBDevices]Found 0 USB Devices
+2025-10-06 16-19-44.0637[EnumUSBDevices]End
+2025-10-06 16-37-07.0310[]*****************************************
+2025-10-06 16-37-07.0311[]DLL Log Initialize. Verbosity: 6
+2025-10-06 16-37-07.0311[]*****************************************
+2025-10-06 16-37-07.0312[]DLL Path: C:\Users\Shubham Boral\agra-cash-tvm
+2025-10-06 16-37-07.0312[]DLL Version: 1.07
+2025-10-06 16-37-07.0312[InitLibrary]Begin
+2025-10-06 16-37-07.0331[InitLibrary]Library SignID:00000101
+2025-10-06 16-37-07.0332[InitLibrary]Current SignID:00000101
+2025-10-06 16-37-07.0332[InitLibrary]End
+2025-10-06 16-37-07.0332[GetAPIVersionHwLibrary]Begin
+2025-10-06 16-37-07.0335[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-06 16-37-07.0335[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-06 16-37-07.0336[GetAPIVersionHwLibrary]End
+2025-10-06 16-37-07.0336[EnumUSBDevices]Begin
+2025-10-06 16-37-07.0342[EnumUSBDevices]Found 0 USB Devices
+2025-10-06 16-37-07.0343[EnumUSBDevices]End
+2025-10-06 16-43-20.0348[]*****************************************
+2025-10-06 16-43-20.0350[]DLL Log Initialize. Verbosity: 6
+2025-10-06 16-43-20.0350[]*****************************************
+2025-10-06 16-43-20.0351[]DLL Path: C:\Users\Shubham Boral\agra-cash-tvm
+2025-10-06 16-43-20.0351[]DLL Version: 1.07
+2025-10-06 16-43-20.0351[InitLibrary]Begin
+2025-10-06 16-43-20.0368[InitLibrary]Library SignID:00000101
+2025-10-06 16-43-20.0369[InitLibrary]Current SignID:00000101
+2025-10-06 16-43-20.0369[InitLibrary]End
+2025-10-06 16-43-20.0370[GetAPIVersionHwLibrary]Begin
+2025-10-06 16-43-20.0372[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-06 16-43-20.0372[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-06 16-43-20.0372[GetAPIVersionHwLibrary]End
+2025-10-06 16-43-20.0373[EnumUSBDevices]Begin
+2025-10-06 16-43-20.0377[EnumUSBDevices]Found 0 USB Devices
+2025-10-06 16-43-20.0378[EnumUSBDevices]End
+2025-10-06 16-53-09.0884[]*****************************************
+2025-10-06 16-53-09.0885[]DLL Log Initialize. Verbosity: 6
+2025-10-06 16-53-09.0886[]*****************************************
+2025-10-06 16-53-09.0886[]DLL Path: C:\Users\Shubham Boral\agra-cash-tvm
+2025-10-06 16-53-09.0887[]DLL Version: 1.07
+2025-10-06 16-53-09.0887[InitLibrary]Begin
+2025-10-06 16-53-09.0905[InitLibrary]Library SignID:00000101
+2025-10-06 16-53-09.0907[InitLibrary]Current SignID:00000101
+2025-10-06 16-53-09.0907[InitLibrary]End
+2025-10-06 16-53-09.0908[GetAPIVersionHwLibrary]Begin
+2025-10-06 16-53-09.0909[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-06 16-53-09.0910[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-06 16-53-09.0910[GetAPIVersionHwLibrary]End
+2025-10-06 16-53-09.0910[EnumUSBDevices]Begin
+2025-10-06 16-53-09.0914[EnumUSBDevices]Found 0 USB Devices
+2025-10-06 16-53-09.0915[EnumUSBDevices]End
+2025-10-06 16-56-05.0445[]*****************************************
+2025-10-06 16-56-05.0446[]DLL Log Initialize. Verbosity: 6
+2025-10-06 16-56-05.0446[]*****************************************
+2025-10-06 16-56-05.0447[]DLL Path: C:\Users\Shubham Boral\agra-cash-tvm
+2025-10-06 16-56-05.0447[]DLL Version: 1.07
+2025-10-06 16-56-05.0448[InitLibrary]Begin
+2025-10-06 16-56-05.0470[InitLibrary]Library SignID:00000101
+2025-10-06 16-56-05.0470[InitLibrary]Current SignID:00000101
+2025-10-06 16-56-05.0471[InitLibrary]End
+2025-10-06 16-56-05.0471[GetAPIVersionHwLibrary]Begin
+2025-10-06 16-56-05.0473[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-06 16-56-05.0473[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-06 16-56-05.0473[GetAPIVersionHwLibrary]End
+2025-10-06 16-56-05.0474[EnumUSBDevices]Begin
+2025-10-06 16-56-05.0477[EnumUSBDevices]Found 0 USB Devices
+2025-10-06 16-56-05.0478[EnumUSBDevices]End
+2025-10-06 16-57-16.0132[]*****************************************
+2025-10-06 16-57-16.0133[]DLL Log Initialize. Verbosity: 6
+2025-10-06 16-57-16.0133[]*****************************************
+2025-10-06 16-57-16.0134[]DLL Path: C:\Users\Shubham Boral\agra-cash-tvm
+2025-10-06 16-57-16.0134[]DLL Version: 1.07
+2025-10-06 16-57-16.0135[InitLibrary]Begin
+2025-10-06 16-57-16.0155[InitLibrary]Library SignID:00000101
+2025-10-06 16-57-16.0155[InitLibrary]Current SignID:00000101
+2025-10-06 16-57-16.0156[InitLibrary]End
+2025-10-06 16-57-16.0156[GetAPIVersionHwLibrary]Begin
+2025-10-06 16-57-16.0158[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-06 16-57-16.0158[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-06 16-57-16.0159[GetAPIVersionHwLibrary]End
+2025-10-06 16-57-16.0159[EnumUSBDevices]Begin
+2025-10-06 16-57-16.0163[EnumUSBDevices]Found 0 USB Devices
+2025-10-06 16-57-16.0163[EnumUSBDevices]End

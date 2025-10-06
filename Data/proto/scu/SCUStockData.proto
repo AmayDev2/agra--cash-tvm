@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.amaytechnosystems";
+option java_outer_classname = "SCUStockData";
+
+
+import "meta/RequestMetaData.proto";
+import "meta/ResponseMetaData.proto";
+import "object/BaseObject.proto";
+//import "enum/Enums.proto";
+
+
+package com.proto.scu.object;
+
+
+message SCUStockDataV1 {
+  baseobject.AEquipment equipment=1;
+  baseobject.AOperator operator =2;
+  baseobject.AStation station =3;
+}
+
+message SCUStockRequestV1 {
+  SCUStockDataV1 stockData = 1;
+  meta.reqmetadata.RequestMetaData requestMetaData = 2;
+
+}
+
+message SCUStockResponseV1 {
+  baseobject.AStock stockData = 1;
+  meta.respmetadata.ResponseMetaData responseMetaData = 2;
+}

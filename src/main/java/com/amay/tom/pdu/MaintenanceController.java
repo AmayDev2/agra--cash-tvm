@@ -3,6 +3,7 @@ package com.amay.tom.pdu;
 import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.pdu.controller.MoneyManageController;
+import com.amay.tom.pdu.controller.SystemInfoController;
 import com.amay.tom.pdu.controller.service.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -27,6 +28,12 @@ public class MaintenanceController {
 
     @FXML
     private void onSystemInfo(ActionEvent actionEvent) {
+        FXMLLoader fxmlLoader= ViewFactory.getSystemInfo();
+        SystemInfoController controller=new SystemInfoController(this.agent,this.sceneManager);
+        fxmlLoader.setControllerFactory((x)->controller);
+        this.sceneManager.addToScene(fxmlLoader);
+        actionEvent.consume();
+
     }
 
     @FXML

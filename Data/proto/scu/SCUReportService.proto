@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.amaytechnosystems";
+option java_outer_classname = "SCUReportService";
+
+package com.proto.scu.service;
+
+import "scu/SCUFareMedia.proto";
+import "scu/SCUStockData.proto";
+import "scu/Revenue.proto";
+import "scu/Authentication.proto";
+
+
+service SCUService {
+  // Unary RPC method
+  rpc GetFareMedia(scu.object.SCUFareMediaRequestV1) returns (scu.object.SCUFareMediaResponseV1);
+  rpc GetRevenue(scu.object.SCURevenueReportRequestV1) returns (scu.object.SCURevenueReportResponseV1);
+  rpc GetStocks(scu.object.SCUStockRequestV1) returns (scu.object.SCUStockResponseV1);
+  rpc GetAuthentication(scu.object.SCUAuthenticationRequest) returns (scu.object.SCUAuthenticationResponse);
+  rpc GetRevenueReports (scu.object.RevenueReportListRequest) returns (scu.object.RevenueReportListResponse);
+}

@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.amaytechnosystems";
+option java_outer_classname = "TomTicketAdjustData";
+
+
+import "meta/RequestMetaData.proto";
+import "meta/ResponseMetaData.proto";
+import "object/BaseObject.proto";
+
+
+
+package com.proto.tom.object;
+
+
+message TicketAdjustedDataV1 {
+  baseobject.AEquipment equipment=1;
+  baseobject.AOperator operator =2;
+  baseobject.AStation station =3;
+  baseobject.AdjustmentDetail details = 4;
+  baseobject.AdjustedTicket adjustedTicket=5 [deprecated = true];
+  baseobject.ATransaction transaction=6;
+}
+
+message TicketAdjustedRequestV1 {
+  TicketAdjustedDataV1 ticketData = 1;
+  meta.reqmetadata.RequestMetaData requestMetaData = 2;
+}
+
+message TicketAdjustedResponseV1 {
+  meta.respmetadata.ResponseMetaData responseMetaData = 1;
+}
+
+message TicketAdjustedResponseV2 {
+  TicketAdjustedDataV1 ticketData = 1;
+  meta.respmetadata.ResponseMetaData responseMetaData = 2;
+  repeated baseobject.AdjustmentDetail details = 3;
+}

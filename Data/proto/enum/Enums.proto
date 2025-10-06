@@ -1,0 +1,42 @@
+syntax ="proto3";
+
+option java_multiple_files = true;
+option java_package = "org.amaytechnosystems";
+option java_outer_classname = "Enums";
+
+
+package com.proto.enum;
+
+enum TicketOperation {
+  UNKNOWN = 0;
+  ENTRY = 1;
+  EXIT = 2;
+  ADJUSTED_ENTRY = 3;
+  ADJUSTED_EXIT = 4;
+  FREE_EXIT = 5;
+  OFFLINE_ENTRY = 6;
+  OFFLINE_EXIT = 7;
+}
+
+enum ShiftStatus {
+  ACTIVE = 0;
+  PAUSED = 1;
+  COMPLETED=3;
+}
+
+enum AdjustmentType {
+  ADJUST_ENTRY = 0;
+  ADJUST_EXIT = 1;
+  OVERTIME_OVERRIDE = 2;
+  OVERTRAVEL_OVERRIDE = 3;
+}
+
+enum AdjustmentArea {
+  PAID=0;
+  UNPAID=1;
+}
+
+enum TicketGenerationType{
+  ONLINE = 0;
+  OFFLINE = 1;
+}
