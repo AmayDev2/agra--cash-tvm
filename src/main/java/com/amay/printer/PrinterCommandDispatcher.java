@@ -24,7 +24,7 @@ public enum PrinterCommandDispatcher {
     }
 
     public BaseResponse printText(List<Object> list){
-        return  printerInterface.printImagesbyText(list);
+        return  printerInterface. printImagesbyText(list);
     }
 
     public BaseResponse printText(QRTicket qrTicket){
@@ -39,6 +39,9 @@ public enum PrinterCommandDispatcher {
     }
     public BaseResponse printText(ShiftReportData shiftReportData){
         return  printerInterface.printImageByText(shiftReportData);
+    }
+    public BaseResponse printBNRLoadUnload(BNRLoadUnload bnRLoadUnload){
+        return  printerInterface.printBNRText(bnRLoadUnload);
     }
 
     public PrinterStatus getStatus() {

@@ -111677,3 +111677,274 @@ Valid Upto       : 120 minutes after entry
 2025-10-06 17-59-27.0644[Cut]Begin
 2025-10-06 17-59-27.0646[Cut]CutType:CUT_TOTAL
 2025-10-06 17-59-27.0650[Cut]End
+2025-10-07 10-05-10.0341[]*****************************************
+2025-10-07 10-05-10.0344[]DLL Log Initialize. Verbosity: 6
+2025-10-07 10-05-10.0346[]*****************************************
+2025-10-07 10-05-10.0348[]DLL Path: C:\TVM\TVM2\agra--cash-tvm
+2025-10-07 10-05-10.0350[]DLL Version: 1.07
+2025-10-07 10-05-10.0352[InitLibrary]Begin
+2025-10-07 10-05-10.0411[InitLibrary]Library SignID:00000101
+2025-10-07 10-05-10.0413[InitLibrary]Current SignID:00000101
+2025-10-07 10-05-10.0415[InitLibrary]End
+2025-10-07 10-05-10.0416[GetAPIVersionHwLibrary]Begin
+2025-10-07 10-05-10.0422[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-07 10-05-10.0425[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-07 10-05-10.0427[GetAPIVersionHwLibrary]End
+2025-10-07 10-05-10.0428[EnumUSBDevices]Begin
+2025-10-07 10-05-10.0439[EnumUSBDevices]Found 0 USB Devices
+2025-10-07 10-05-10.0440[EnumUSBDevices]End
+2025-10-07 10-06-12.0501[]*****************************************
+2025-10-07 10-06-12.0503[]DLL Log Initialize. Verbosity: 6
+2025-10-07 10-06-12.0504[]*****************************************
+2025-10-07 10-06-12.0507[]DLL Path: C:\TVM\TVM2\agra--cash-tvm
+2025-10-07 10-06-12.0509[]DLL Version: 1.07
+2025-10-07 10-06-12.0512[InitLibrary]Begin
+2025-10-07 10-06-12.0575[InitLibrary]Library SignID:00000101
+2025-10-07 10-06-12.0575[InitLibrary]Current SignID:00000101
+2025-10-07 10-06-12.0579[InitLibrary]End
+2025-10-07 10-06-12.0580[GetAPIVersionHwLibrary]Begin
+2025-10-07 10-06-12.0586[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-07 10-06-12.0588[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-07 10-06-12.0589[GetAPIVersionHwLibrary]End
+2025-10-07 10-06-12.0591[EnumUSBDevices]Begin
+2025-10-07 10-06-12.0607[EnumUSBDevices]Found 0 USB Devices
+2025-10-07 10-06-12.0609[EnumUSBDevices]End
+2025-10-07 10-06-34.0046[EnumUSBDevices]Begin
+2025-10-07 10-06-34.0058[EnumUSBDevices]Found 0 USB Devices
+2025-10-07 10-06-34.0059[EnumUSBDevices]End
+2025-10-07 10-06-36.0611[EnumUSBDevices]Begin
+2025-10-07 10-06-36.0624[EnumUSBDevices]Found 0 USB Devices
+2025-10-07 10-06-36.0626[EnumUSBDevices]End
+2025-10-07 10-08-31.0860[EnumUSBDevices]Begin
+2025-10-07 10-08-31.0875[EnumUSBDevices]Found 0 USB Devices
+2025-10-07 10-08-31.0877[EnumUSBDevices]End
+2025-10-07 11-29-19.0357[]*****************************************
+2025-10-07 11-29-19.0358[]DLL Log Initialize. Verbosity: 6
+2025-10-07 11-29-19.0359[]*****************************************
+2025-10-07 11-29-19.0359[]DLL Path: C:\TVM\TVM2\agra--cash-tvm
+2025-10-07 11-29-19.0360[]DLL Version: 1.07
+2025-10-07 11-29-19.0360[InitLibrary]Begin
+2025-10-07 11-29-19.0393[InitLibrary]Library SignID:00000101
+2025-10-07 11-29-19.0395[InitLibrary]Current SignID:00000101
+2025-10-07 11-29-19.0397[InitLibrary]End
+2025-10-07 11-29-19.0398[GetAPIVersionHwLibrary]Begin
+2025-10-07 11-29-19.0401[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-07 11-29-19.0402[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-07 11-29-19.0402[GetAPIVersionHwLibrary]End
+2025-10-07 11-29-19.0403[EnumUSBDevices]Begin
+2025-10-07 11-29-19.0413[EnumUSBDevices]Found 1 USB Devices
+2025-10-07 11-29-19.0413[EnumUSBDevices]End
+2025-10-07 11-29-19.0414[OpenPrinterUSB]Begin
+2025-10-07 11-29-19.0415[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-10-07 11-29-19.0422[OpenPrinterUSB]New device ID:00000101
+2025-10-07 11-29-19.0423[OpenPrinterUSB]End
+2025-10-07 11-29-36.0435[PrintImageFromPath]Begin
+2025-10-07 11-29-36.0439[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-29-36.0441[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-29-36.0491[PrintImageFromPath]End
+2025-10-07 11-29-36.0494[PrintText]Begin
+2025-10-07 11-29-36.0494[PrintText]<Text to Print>:
+            INDORE METRO
+         END OF SHIFT REPORT
+
+
+Station Name   : MayankSharma
+Shift ID       : HHJ657HVHXXX
+Shift Start    : 2025-10-07 11:25:49
+Shift End      : 2025-10-07 11:25:49
+Equipment ID   : HHJ657HVHXXX
+Operator ID    : HHJ657HVHXXX
+
+            BANK NOTE DETAILS
+
+Bill Type           Cnt     Amount
+
+ 10                 10      Rs. 10
+ 20                 10      Rs. 10
+ 50                 10      Rs. 10
+ 100                10      Rs. 10
+ 200                10      Rs. 10
+ 500                10      Rs. 10
+
+Total               10      Rs. 10
+
+
+
+2025-10-07 11-29-36.0495[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-10-07 11-29-36.0497[PrintText]<Add LF>:false
+2025-10-07 11-29-36.0503[PrintText]End
+2025-10-07 11-29-36.0505[Cut]Begin
+2025-10-07 11-29-36.0506[Cut]CutType:CUT_TOTAL
+2025-10-07 11-29-36.0517[Cut]End
+2025-10-07 11-29-46.0732[PrintImageFromPath]Begin
+2025-10-07 11-29-46.0733[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-29-46.0734[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-29-46.0763[PrintImageFromPath]End
+2025-10-07 11-29-46.0763[PrintText]Begin
+2025-10-07 11-29-46.0764[PrintText]<Text to Print>:
+            INDORE METRO
+         END OF SHIFT REPORT
+
+
+Station Name   : MayankSharma
+Shift ID       : HHJ657HVHXXX
+Shift Start    : 2025-10-07 11:25:49
+Shift End      : 2025-10-07 11:25:49
+Equipment ID   : HHJ657HVHXXX
+Operator ID    : HHJ657HVHXXX
+
+            BANK NOTE DETAILS
+
+Bill Type           Cnt     Amount
+
+ 10                 10      Rs. 10
+ 20                 10      Rs. 10
+ 50                 10      Rs. 10
+ 100                10      Rs. 10
+ 200                10      Rs. 10
+ 500                10      Rs. 10
+
+Total               10      Rs. 10
+
+
+
+2025-10-07 11-29-46.0764[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-10-07 11-29-46.0765[PrintText]<Add LF>:false
+2025-10-07 11-29-46.0772[PrintText]End
+2025-10-07 11-29-46.0773[Cut]Begin
+2025-10-07 11-29-46.0773[Cut]CutType:CUT_TOTAL
+2025-10-07 11-29-46.0776[Cut]End
+2025-10-07 11-29-49.0584[PrintImageFromPath]Begin
+2025-10-07 11-29-49.0585[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-29-49.0587[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-29-49.0619[PrintImageFromPath]End
+2025-10-07 11-29-49.0620[PrintText]Begin
+2025-10-07 11-29-49.0620[PrintText]<Text to Print>:
+            INDORE METRO
+         END OF SHIFT REPORT
+
+
+Station Name   : MayankSharma
+Shift ID       : HHJ657HVHXXX
+Shift Start    : 2025-10-07 11:25:49
+Shift End      : 2025-10-07 11:25:49
+Equipment ID   : HHJ657HVHXXX
+Operator ID    : HHJ657HVHXXX
+
+            BANK NOTE DETAILS
+
+Bill Type           Cnt     Amount
+
+ 10                 10      Rs. 10
+ 20                 10      Rs. 10
+ 50                 10      Rs. 10
+ 100                10      Rs. 10
+ 200                10      Rs. 10
+ 500                10      Rs. 10
+
+Total               10      Rs. 10
+
+
+
+2025-10-07 11-29-49.0622[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-10-07 11-29-49.0622[PrintText]<Add LF>:false
+2025-10-07 11-29-49.0628[PrintText]End
+2025-10-07 11-29-49.0629[Cut]Begin
+2025-10-07 11-29-49.0629[Cut]CutType:CUT_TOTAL
+2025-10-07 11-29-49.0632[Cut]End
+2025-10-07 11-30-32.0720[PrintImageFromPath]Begin
+2025-10-07 11-30-32.0721[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-30-32.0723[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-30-32.0762[PrintImageFromPath]End
+2025-10-07 11-30-32.0764[PrintText]Begin
+2025-10-07 11-30-32.0764[PrintText]<Text to Print>:
+            INDORE METRO
+         END OF SHIFT REPORT
+
+
+Station Name   : MayankSharma
+Shift ID       : HHJ657HVHXXX
+Shift Start    : 2025-10-07 11:25:49
+Shift End      : 2025-10-07 11:25:49
+Equipment ID   : HHJ657HVHXXX
+Operator ID    : HHJ657HVHXXX
+
+            BANK NOTE DETAILS
+
+Bill Type           Cnt     Amount
+
+ 10                 10      Rs. 10
+ 20                 10      Rs. 10
+ 50                 10      Rs. 10
+ 100                10      Rs. 10
+ 200                10      Rs. 10
+ 500                10      Rs. 10
+
+Total               10      Rs. 10
+
+
+
+2025-10-07 11-30-32.0765[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-10-07 11-30-32.0766[PrintText]<Add LF>:false
+2025-10-07 11-30-32.0773[PrintText]End
+2025-10-07 11-30-32.0775[Cut]Begin
+2025-10-07 11-30-32.0776[Cut]CutType:CUT_TOTAL
+2025-10-07 11-30-32.0782[Cut]End
+2025-10-07 11-36-18.0150[]*****************************************
+2025-10-07 11-36-18.0151[]DLL Log Initialize. Verbosity: 6
+2025-10-07 11-36-18.0151[]*****************************************
+2025-10-07 11-36-18.0152[]DLL Path: C:\TVM\TVM2\agra--cash-tvm
+2025-10-07 11-36-18.0153[]DLL Version: 1.07
+2025-10-07 11-36-18.0155[InitLibrary]Begin
+2025-10-07 11-36-18.0187[InitLibrary]Library SignID:00000101
+2025-10-07 11-36-18.0187[InitLibrary]Current SignID:00000101
+2025-10-07 11-36-18.0188[InitLibrary]End
+2025-10-07 11-36-18.0188[GetAPIVersionHwLibrary]Begin
+2025-10-07 11-36-18.0192[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-07 11-36-18.0193[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-07 11-36-18.0194[GetAPIVersionHwLibrary]End
+2025-10-07 11-36-18.0196[EnumUSBDevices]Begin
+2025-10-07 11-36-18.0203[EnumUSBDevices]Found 1 USB Devices
+2025-10-07 11-36-18.0204[EnumUSBDevices]End
+2025-10-07 11-36-18.0204[OpenPrinterUSB]Begin
+2025-10-07 11-36-18.0205[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-10-07 11-36-18.0213[OpenPrinterUSB]New device ID:00000101
+2025-10-07 11-36-18.0214[OpenPrinterUSB]End
+2025-10-07 11-36-37.0397[PrintImageFromPath]Begin
+2025-10-07 11-36-37.0399[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-36-37.0399[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-36-37.0423[PrintImageFromPath]End
+2025-10-07 11-36-37.0426[PrintText]Begin
+2025-10-07 11-36-37.0427[PrintText]<Text to Print>:
+            INDORE METRO
+         BNR Loaded Report
+
+
+Station Name   : MayankSharma
+Shift ID       : HHJ657HVHXXX
+Shift Start    : 2025-10-07 11:25:49
+Shift End      : 2025-10-07 11:25:49
+Equipment ID   : HHJ657HVHXXX
+Operator ID    : HHJ657HVHXXX
+
+            BANK NOTE DETAILS
+
+Bill Type           Cnt     Amount
+
+ 10                 10      Rs. 10
+ 20                 10      Rs. 10
+ 50                 10      Rs. 10
+ 100                10      Rs. 10
+ 200                10      Rs. 10
+ 500                10      Rs. 10
+
+Total               10      Rs. 10
+
+
+
+2025-10-07 11-36-37.0429[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-10-07 11-36-37.0431[PrintText]<Add LF>:false
+2025-10-07 11-36-37.0437[PrintText]End
+2025-10-07 11-36-37.0438[Cut]Begin
+2025-10-07 11-36-37.0439[Cut]CutType:CUT_TOTAL
+2025-10-07 11-36-37.0443[Cut]End

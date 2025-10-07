@@ -13,6 +13,8 @@ public interface PrinterInterface {
     BaseResponse printImage(BufferedImage image);
 
     BaseResponse printImageByText(ShiftReportData shiftReportData);
+    BaseResponse printBNRText(BNRLoadUnload bnRLoadUnload);
+
 
     PrinterStatus printerStatus();
 

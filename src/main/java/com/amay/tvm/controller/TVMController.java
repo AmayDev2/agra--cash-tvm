@@ -1,5 +1,7 @@
 package com.amay.tvm.controller;
 
+import com.amay.printer.BNRLoadUnload;
+import com.amay.printer.PrinterCommandDispatcher;
 import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.config.SystemConfig;
@@ -10,6 +12,7 @@ import com.amay.tom.model.TicketType;
 import com.amay.tom.pdu.controller.StationMode;
 import com.amay.tom.pdu.controller.command.PDUCommandDispatcher;
 import com.amay.tom.repository.StationData;
+import com.amay.tom.service.siftservice.ShiftService;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.bnr.BNRIntegration;
 import com.amay.tvm.coin.CoinModuleInterface;
@@ -324,6 +327,32 @@ public class TVMController {
     }
 
     public void onClickBalanceUpdate(ActionEvent actionEvent) {
+        PrinterCommandDispatcher.INSTANCE.printBNRLoadUnload(
+                BNRLoadUnload.builder()
+                        .reportType("BNR Loaded Report")
+                        .stationName("MayankSharma")
+                        .shiftId("HHJ657HVHXXX")
+                        .startTime("2025-10-07 11:25:49")
+                        .endTime("2025-10-07 11:25:49")
+                        .equipmentId("HHJ657HVHXXX")
+                        .operatorId("HHJ657HVHXXX")
+                        .rs10Count(10)
+                        .rs10Amount(10)
+                        .rs20Count(10)
+                        .rs20Amount(10)
+                        .rs50Count(10)
+                        .rs50Amount(10)
+                        .rs100Count(10)
+                        .rs100Amount(10)
+                        .rs200Count(10)
+                        .rs200Amount(10)
+                        .rs500Count(10)
+                        .rs500Amount(10)
+                        .bankTotalCount(10)
+                        .bankTotalAmount(10)
+                        .build()
+        );
+        actionEvent.consume();
     }
 
     public void onClickCardInquiry(ActionEvent actionEvent) {

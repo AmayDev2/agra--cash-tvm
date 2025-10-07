@@ -15,7 +15,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 public class PrinterService implements PrinterInterface {
     private CuCustomWndAPIJWrap cucjwrap = null;
@@ -311,6 +310,17 @@ public class PrinterService implements PrinterInterface {
 
         return imagePrintResponse;
     }
+    @Override
+    public BaseResponse printBNRText(BNRLoadUnload bnRLoadUnload){
+        ImagePrintResponse imagePrintResponse=new ImagePrintResponse();
+        // print logo
+        this.printImageByPath();
+        // print bottom message
+        this.printBNRLoadUnload(bnRLoadUnload);
+        imagePrintResponse.setSuccess(true);
+
+        return imagePrintResponse;
+    }
 
     @Override
     public PrinterStatus printerStatus() {
@@ -453,6 +463,27 @@ public class PrinterService implements PrinterInterface {
 
     }
 
+    private void printBNRLoadUnload(BNRLoadUnload bnRLoadUnload){
+        String formated=getBNRLoadUnloadTemplate();
+        formated=fillTheData(formated,bnRLoadUnload);
+
+        try {
+            PrintFontSettings pfs=new PrintFontSettings();
+            pfs.Emphasized=true;
+            pfs.LeftMarginValue=10*10;
+            pfs.LineSpacing=30;
+            pfs.CharWidth= PrintFontSettings.FontSize.FONT_SIZE_X1;
+            pfs.CharHeight=PrintFontSettings.FontSize.FONT_SIZE_X1;
+            pfs.Justification= PrintFontSettings.FontJustification.FONT_JUSTIFICATION_LEFT;
+            pfs.CharFontType=PrintFontSettings.FontType.FONT_TYPE_2;
+
+            cudev.PrintText(formated,pfs);
+            cudev.Cut(CuCustomWndDevice.CutType.CUT_TOTAL);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     private String fillTheData(String receiptTemplate, ShiftReportData shiftReportData) {
           return String.format(receiptTemplate,
                 shiftReportData.getStationName(),
@@ -525,6 +556,34 @@ public class PrinterService implements PrinterInterface {
                 shiftReportData.getPrintTime()
         );
 
+    }
+    private String fillTheData(String bnrReportTemplate, BNRLoadUnload bnRLoadUnload) {
+          return String.format(bnrReportTemplate,
+                bnRLoadUnload.getReportType(),
+                bnRLoadUnload.getStationName(),
+                  bnRLoadUnload.getShiftId(),
+                  bnRLoadUnload.getStartTime(),
+                  bnRLoadUnload.getEndTime(),
+                  bnRLoadUnload.getEquipmentId(),
+                  bnRLoadUnload.getOperatorId(),
+
+
+
+                  bnRLoadUnload.getRs10Count(),
+                  bnRLoadUnload.getRs10Amount(),
+                  bnRLoadUnload.getRs20Count(),
+                  bnRLoadUnload.getRs20Amount(),
+                  bnRLoadUnload.getRs50Count(),
+                  bnRLoadUnload.getRs50Amount(),
+                  bnRLoadUnload.getRs100Count(),
+                  bnRLoadUnload.getRs100Amount(),
+                  bnRLoadUnload.getRs200Count(),
+                  bnRLoadUnload.getRs200Amount(),
+                  bnRLoadUnload.getRs500Count(),
+                  bnRLoadUnload.getRs500Amount(),
+                  bnRLoadUnload.getBankTotalCount(),
+                  bnRLoadUnload.getBankTotalAmount()
+        );
     }
 
     private static String getFormatted(QRTicket qrTicket) {
@@ -699,7 +758,36 @@ public class PrinterService implements PrinterInterface {
 
         return receiptTemplate;
     }
-
-
+    private static String getBNRLoadUnloadTemplate() {
+        String bnrReportTemplate = """   
+   
+                INDORE METRO
+             %s
+              
+    
+    Station Name   : %s
+    Shift ID       : %s
+    Shift Start    : %s
+    Shift End      : %s
+    Equipment ID   : %s
+    Operator ID    : %s
+    
+                BANK NOTE DETAILS
+                
+    Bill Type           Cnt     Amount
+    
+     10                 %s      Rs. %s
+     20                 %s      Rs. %s
+     50                 %s      Rs. %s
+     100                %s      Rs. %s
+     200                %s      Rs. %s
+     500                %s      Rs. %s
+    
+    Total               %s      Rs. %s
+    
+    
+    """;
+        return bnrReportTemplate;
+    }
 
 }

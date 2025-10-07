@@ -166729,3 +166729,191 @@
 2025/10/06-17:59:27.647:[00003CC0#00000000#5] > [Cut] Begin
 2025/10/06-17:59:27.647:[00003CC0#00000000#4] > [Cut] DeviceID:00000101
 2025/10/06-17:59:27.649:[00003CC0#00000000#5] > [Cut] End [0/Ok]
+2025/10/07-10:05:10.358:[00005158#00000000#5] > [InitLibrary] Begin
+2025/10/07-10:05:10.359:[00005158#00000000#4] > [InitLibrary] DLL Path: C:\TVM\TVM2\agra--cash-tvm\CuCustomWndAPI.dll
+2025/10/07-10:05:10.361:[00005158#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/07-10:05:10.362:[00005158#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/07-10:05:10.364:[00005158#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/07-10:05:10.364:[00005158#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/07-10:05:10.366:[00005158#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/07-10:05:10.367:[00005158#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/07-10:05:10.369:[00005158#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/07-10:05:10.370:[00005158#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/07-10:05:10.372:[00005158#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/07-10:05:10.374:[00005158#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/07-10:05:10.376:[00005158#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/07-10:05:10.379:[00005158#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/07-10:05:10.400:[00005158#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/07-10:05:10.404:[00005158#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/07-10:05:10.408:[00005158#00000000#5] > [GetVariable] Begin
+2025/10/07-10:05:10.409:[00005158#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/07-10:05:10.410:[00005158#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/07-10:05:10.418:[00005158#00000000#5] > [GetAPIVersion] Begin
+2025/10/07-10:05:10.419:[00005158#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/07-10:05:10.421:[00005158#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/07-10:05:10.429:[00005158#00000000#5] > [EnumUSBDevices] Begin
+2025/10/07-10:05:10.432:[00005158#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/07-10:05:10.433:[00005158#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/07-10:05:10.434:[00005158#00000000#5] > [EnumUSBDevices] Begin
+2025/10/07-10:05:10.435:[00005158#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/07-10:05:10.437:[00005158#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/07-10:06:12.517:[00004A84#00000000#5] > [InitLibrary] Begin
+2025/10/07-10:06:12.518:[00004A84#00000000#4] > [InitLibrary] DLL Path: C:\TVM\TVM2\agra--cash-tvm\CuCustomWndAPI.dll
+2025/10/07-10:06:12.520:[00004A84#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/07-10:06:12.523:[00004A84#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/07-10:06:12.525:[00004A84#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/07-10:06:12.526:[00004A84#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/07-10:06:12.529:[00004A84#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/07-10:06:12.531:[00004A84#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/07-10:06:12.533:[00004A84#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/07-10:06:12.534:[00004A84#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/07-10:06:12.538:[00004A84#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/07-10:06:12.540:[00004A84#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/07-10:06:12.541:[00004A84#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/07-10:06:12.545:[00004A84#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/07-10:06:12.567:[00004A84#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/07-10:06:12.568:[00004A84#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/07-10:06:12.571:[00004A84#00000000#5] > [GetVariable] Begin
+2025/10/07-10:06:12.571:[00004A84#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/07-10:06:12.573:[00004A84#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/07-10:06:12.583:[00004A84#00000000#5] > [GetAPIVersion] Begin
+2025/10/07-10:06:12.584:[00004A84#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/07-10:06:12.585:[00004A84#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/07-10:06:12.594:[00004A84#00000000#5] > [EnumUSBDevices] Begin
+2025/10/07-10:06:12.599:[00004A84#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/07-10:06:12.600:[00004A84#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/07-10:06:12.601:[00004A84#00000000#5] > [EnumUSBDevices] Begin
+2025/10/07-10:06:12.603:[00004A84#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/07-10:06:12.604:[00004A84#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/07-10:06:34.047:[00004A84#00000000#5] > [EnumUSBDevices] Begin
+2025/10/07-10:06:34.049:[00004A84#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/07-10:06:34.050:[00004A84#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/07-10:06:34.052:[00004A84#00000000#5] > [EnumUSBDevices] Begin
+2025/10/07-10:06:34.054:[00004A84#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/07-10:06:34.056:[00004A84#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/07-10:06:36.614:[00004A84#00000000#5] > [EnumUSBDevices] Begin
+2025/10/07-10:06:36.616:[00004A84#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/07-10:06:36.617:[00004A84#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/07-10:06:36.619:[00004A84#00000000#5] > [EnumUSBDevices] Begin
+2025/10/07-10:06:36.620:[00004A84#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/07-10:06:36.621:[00004A84#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/07-10:08:31.863:[00004A84#00000000#5] > [EnumUSBDevices] Begin
+2025/10/07-10:08:31.864:[00004A84#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/07-10:08:31.866:[00004A84#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/07-10:08:31.867:[00004A84#00000000#5] > [EnumUSBDevices] Begin
+2025/10/07-10:08:31.869:[00004A84#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/07-10:08:31.872:[00004A84#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/07-11:29:19.362:[0000354C#00000000#5] > [InitLibrary] Begin
+2025/10/07-11:29:19.363:[0000354C#00000000#4] > [InitLibrary] DLL Path: C:\TVM\TVM2\agra--cash-tvm\CuCustomWndAPI.dll
+2025/10/07-11:29:19.364:[0000354C#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/07-11:29:19.365:[0000354C#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/07-11:29:19.366:[0000354C#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/07-11:29:19.367:[0000354C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/07-11:29:19.368:[0000354C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/07-11:29:19.369:[0000354C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/07-11:29:19.370:[0000354C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/07-11:29:19.370:[0000354C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/07-11:29:19.371:[0000354C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/07-11:29:19.372:[0000354C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/07-11:29:19.374:[0000354C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/07-11:29:19.374:[0000354C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/07-11:29:19.388:[0000354C#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/07-11:29:19.389:[0000354C#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/07-11:29:19.391:[0000354C#00000000#5] > [GetVariable] Begin
+2025/10/07-11:29:19.391:[0000354C#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/07-11:29:19.392:[0000354C#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/07-11:29:19.399:[0000354C#00000000#5] > [GetAPIVersion] Begin
+2025/10/07-11:29:19.399:[0000354C#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/07-11:29:19.400:[0000354C#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/07-11:29:19.403:[0000354C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/07-11:29:19.407:[0000354C#00000000#4] > [EnumUSBDevices] Found 1 USB Devices:
+2025/10/07-11:29:19.408:[0000354C#00000000#4] > [EnumUSBDevices] 01 - 0237:K80_USB_NUM.:_0 [CUSTOM K80]
+2025/10/07-11:29:19.409:[0000354C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/07-11:29:19.409:[0000354C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/07-11:29:19.411:[0000354C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/07-11:29:19.415:[0000354C#00000000#5] > [OpenPrinterUSB] Begin
+2025/10/07-11:29:19.417:[0000354C#00000000#4] > [DevOnlyOpenPrinterUSB] Opening Port mode TXRX_STS
+2025/10/07-11:29:19.419:[0000354C#00000000#4] > [CComPort::FixAvailableInterfaces] Printer ID/GSI from I0: 0x0237
+2025/10/07-11:29:19.421:[0000354C#00000000#5] > [OpenPrinterUSB] End [0/Ok]
+2025/10/07-11:29:36.443:[0000354C#00000000#5] > [PrintImageFromPath] Begin
+2025/10/07-11:29:36.445:[0000354C#00000000#4] > [PrintImageFromPath] DeviceID:00000101
+2025/10/07-11:29:36.479:[0000354C#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/07-11:29:36.490:[0000354C#00000000#5] > [PrintImageFromPath] End [0/Ok]
+2025/10/07-11:29:36.498:[0000354C#00000000#5] > [PrintTextEx] Begin
+2025/10/07-11:29:36.499:[0000354C#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/07-11:29:36.502:[0000354C#00000000#5] > [PrintTextEx] End [0/Ok]
+2025/10/07-11:29:36.510:[0000354C#00000000#5] > [Cut] Begin
+2025/10/07-11:29:36.512:[0000354C#00000000#4] > [Cut] DeviceID:00000101
+2025/10/07-11:29:36.515:[0000354C#00000000#5] > [Cut] End [0/Ok]
+2025/10/07-11:29:46.735:[0000354C#00000000#5] > [PrintImageFromPath] Begin
+2025/10/07-11:29:46.735:[0000354C#00000000#4] > [PrintImageFromPath] DeviceID:00000101
+2025/10/07-11:29:46.751:[0000354C#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/07-11:29:46.762:[0000354C#00000000#5] > [PrintImageFromPath] End [0/Ok]
+2025/10/07-11:29:46.766:[0000354C#00000000#5] > [PrintTextEx] Begin
+2025/10/07-11:29:46.766:[0000354C#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/07-11:29:46.771:[0000354C#00000000#5] > [PrintTextEx] End [0/Ok]
+2025/10/07-11:29:46.774:[0000354C#00000000#5] > [Cut] Begin
+2025/10/07-11:29:46.774:[0000354C#00000000#4] > [Cut] DeviceID:00000101
+2025/10/07-11:29:46.775:[0000354C#00000000#5] > [Cut] End [0/Ok]
+2025/10/07-11:29:49.590:[0000354C#00000000#5] > [PrintImageFromPath] Begin
+2025/10/07-11:29:49.591:[0000354C#00000000#4] > [PrintImageFromPath] DeviceID:00000101
+2025/10/07-11:29:49.608:[0000354C#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/07-11:29:49.619:[0000354C#00000000#5] > [PrintImageFromPath] End [0/Ok]
+2025/10/07-11:29:49.623:[0000354C#00000000#5] > [PrintTextEx] Begin
+2025/10/07-11:29:49.624:[0000354C#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/07-11:29:49.628:[0000354C#00000000#5] > [PrintTextEx] End [0/Ok]
+2025/10/07-11:29:49.630:[0000354C#00000000#5] > [Cut] Begin
+2025/10/07-11:29:49.631:[0000354C#00000000#4] > [Cut] DeviceID:00000101
+2025/10/07-11:29:49.631:[0000354C#00000000#5] > [Cut] End [0/Ok]
+2025/10/07-11:30:32.725:[0000354C#00000000#5] > [PrintImageFromPath] Begin
+2025/10/07-11:30:32.726:[0000354C#00000000#4] > [PrintImageFromPath] DeviceID:00000101
+2025/10/07-11:30:32.750:[0000354C#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/07-11:30:32.761:[0000354C#00000000#5] > [PrintImageFromPath] End [0/Ok]
+2025/10/07-11:30:32.766:[0000354C#00000000#5] > [PrintTextEx] Begin
+2025/10/07-11:30:32.767:[0000354C#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/07-11:30:32.771:[0000354C#00000000#5] > [PrintTextEx] End [0/Ok]
+2025/10/07-11:30:32.777:[0000354C#00000000#5] > [Cut] Begin
+2025/10/07-11:30:32.779:[0000354C#00000000#4] > [Cut] DeviceID:00000101
+2025/10/07-11:30:32.780:[0000354C#00000000#5] > [Cut] End [0/Ok]
+2025/10/07-11:36:18.157:[00000BB0#00000000#5] > [InitLibrary] Begin
+2025/10/07-11:36:18.157:[00000BB0#00000000#4] > [InitLibrary] DLL Path: C:\TVM\TVM2\agra--cash-tvm\CuCustomWndAPI.dll
+2025/10/07-11:36:18.159:[00000BB0#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/07-11:36:18.159:[00000BB0#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/07-11:36:18.160:[00000BB0#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/07-11:36:18.161:[00000BB0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/07-11:36:18.162:[00000BB0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/07-11:36:18.163:[00000BB0#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/07-11:36:18.164:[00000BB0#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/07-11:36:18.165:[00000BB0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/07-11:36:18.166:[00000BB0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/07-11:36:18.166:[00000BB0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/07-11:36:18.169:[00000BB0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/07-11:36:18.170:[00000BB0#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/07-11:36:18.182:[00000BB0#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/07-11:36:18.182:[00000BB0#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/07-11:36:18.184:[00000BB0#00000000#5] > [GetVariable] Begin
+2025/10/07-11:36:18.185:[00000BB0#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/07-11:36:18.185:[00000BB0#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/07-11:36:18.189:[00000BB0#00000000#5] > [GetAPIVersion] Begin
+2025/10/07-11:36:18.190:[00000BB0#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/07-11:36:18.191:[00000BB0#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/07-11:36:18.196:[00000BB0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/07-11:36:18.199:[00000BB0#00000000#4] > [EnumUSBDevices] Found 1 USB Devices:
+2025/10/07-11:36:18.200:[00000BB0#00000000#4] > [EnumUSBDevices] 01 - 0237:K80_USB_NUM.:_0 [CUSTOM K80]
+2025/10/07-11:36:18.200:[00000BB0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/07-11:36:18.201:[00000BB0#00000000#5] > [EnumUSBDevices] Begin
+2025/10/07-11:36:18.202:[00000BB0#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/07-11:36:18.206:[00000BB0#00000000#5] > [OpenPrinterUSB] Begin
+2025/10/07-11:36:18.208:[00000BB0#00000000#4] > [DevOnlyOpenPrinterUSB] Opening Port mode TXRX_STS
+2025/10/07-11:36:18.211:[00000BB0#00000000#4] > [CComPort::FixAvailableInterfaces] Printer ID/GSI from I0: 0x0237
+2025/10/07-11:36:18.213:[00000BB0#00000000#5] > [OpenPrinterUSB] End [0/Ok]
+2025/10/07-11:36:37.400:[00000BB0#00000000#5] > [PrintImageFromPath] Begin
+2025/10/07-11:36:37.400:[00000BB0#00000000#4] > [PrintImageFromPath] DeviceID:00000101
+2025/10/07-11:36:37.412:[00000BB0#00000000#6] >      [CCommonCommands::GetFullStatus] Getting status using STS Interface...
+2025/10/07-11:36:37.422:[00000BB0#00000000#5] > [PrintImageFromPath] End [0/Ok]
+2025/10/07-11:36:37.432:[00000BB0#00000000#5] > [PrintTextEx] Begin
+2025/10/07-11:36:37.433:[00000BB0#00000000#4] > [PrintTextEx] DeviceID:00000101
+2025/10/07-11:36:37.436:[00000BB0#00000000#5] > [PrintTextEx] End [0/Ok]
+2025/10/07-11:36:37.440:[00000BB0#00000000#5] > [Cut] Begin
+2025/10/07-11:36:37.441:[00000BB0#00000000#4] > [Cut] DeviceID:00000101
+2025/10/07-11:36:37.442:[00000BB0#00000000#5] > [Cut] End [0/Ok]
