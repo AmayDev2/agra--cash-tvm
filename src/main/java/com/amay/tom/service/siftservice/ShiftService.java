@@ -14,5 +14,6 @@ public void resumeShift(String password);
 void setMainStage(Stage mainStage);
 Optional<String> checkLastShiftCompletion();
 void markLastShiftAsCompleted(String shift);
+public void printEOShift(String shiftId);
 void printEOSReport(String shiftId);
 }

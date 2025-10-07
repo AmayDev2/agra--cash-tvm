@@ -86,15 +86,13 @@ import com.amay.tom.utils.env.EnvFile;
 import com.amay.tom.utils.env.EnvLoader;
 import com.amay.tom.utils.helper.Helper;
 import com.amay.tvm.backend.enums.LoggerTag;
-import com.amay.tvm.backend.repository.CoinAmountRepository;
-import com.amay.tvm.backend.repository.CoinAmountRepositoryImpl;
-import com.amay.tvm.backend.repository.TransactionRepository;
-import com.amay.tvm.backend.repository.TransactionRepositoryImpl;
+import com.amay.tvm.backend.repository.*;
 import com.amay.tvm.bnr.BNRIntegration;
 import com.amay.tvm.coin.CoinModuleInterface;
 import com.google.protobuf.Any;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import lombok.val;
 import org.amaytechnosystems.TomTransactionServiceGrpc.TomTransactionServiceBlockingStub;
 import org.json.JSONObject;
 import org.network.monitorandcontrol.MonitorAndControlGrpc.MonitorAndControlStub;
@@ -121,16 +119,13 @@ public class TomInitialize implements ITomInitialize {
     private final Agent agent;
     private final IApplicationService applicationService;
     private final int steps = 20;
-    private final TomInitializerListener tomInitializerListener;
     private IApi apiConnection = null;
     private ScuService scuService;
-    private ScuService ccuService;
     private EquipmentPrivilegeDto equipmentPrivilegeDto;
     private GrpcApiListener grpcApiListener,ccuGrpcApiListener;
     private EnvLoader envLoader = null;
     private int progress = 0;
     private boolean isVersionCompatible;
-    private ImpDeviceStatusListener deviceStatusListener;
 
 
     public TomInitialize(TomInitializeViewController tomInitializeViewController, IApi apiConnection, IApplicationService applicationService) {
@@ -142,9 +137,14 @@ public class TomInitialize implements ITomInitialize {
         this.envLoader = new EnvLoader(ENVURL.CONFIG+".env");
         this.apiConnection.setIpPort(this.envLoader.getCcuIpAddress(),this.envLoader.getRestPort());
         this.agent = new Agent();
-        //                this.onSuccessfulInitialization(val);
-        this.tomInitializerListener = new TomInitializerListener(this::deviceInitialization);
-        this.agent.setTomInitializerListener(this.tomInitializerListener);
+        TomInitializerListener tomInitializerListener = new TomInitializerListener((val) -> {
+            try {
+                this.onSuccessfulInitialization(val);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        this.agent.setTomInitializerListener(tomInitializerListener);
 
     }
 
@@ -259,7 +259,6 @@ public class TomInitialize implements ITomInitialize {
         ScuService ccuService = new ScuService(ccuGrpcConnector, ccuStub,"CCU");
         this.updateUI(progress, "sep 2 done...");
         this.agent.setCcuService(ccuService);
-        this.ccuService = ccuService;
         this.updateUI(++progress, "CCU connection set up...");
 
     }
@@ -524,7 +523,7 @@ public class TomInitialize implements ITomInitialize {
                 progress += 0.03;
                 this.updateUI(progress, "Peripheral status pushed.");
 
-                Thread.sleep(10000);
+                Thread.sleep(6000);
 
                 // 22. Push Remaining Data & Finalize
                 this.pushRemainedDate();
@@ -982,13 +981,15 @@ public class TomInitialize implements ITomInitialize {
         agent.setTransactionRepository(transactionRepository);
         CoinAmountRepository coinAmountRepository= new CoinAmountRepositoryImpl(agent.getConnection());
         agent.setCoinAmountRepository(coinAmountRepository);
+        agent.setNoteAmountRepository(new NoteAmountRepositoryImpl(agent.getConnection()));
+        agent.setFinanceOperationRepository(new FinanceOperationRepositoryImpl(agent.getConnection(), agent.getNoteAmountRepository()));
         return true;
     }
 
     @Override
     public boolean getFareTable(boolean isUpdate) {
         try {
-            this.updateUI(progress, "Loading Faretable...");
+            this.updateUI(progress, "Loading Fare table...");
             FareLine3.retrieveData(agent);
             if (isUpdate) {
                 String faretable = this.apiConnection.getFareTable();
@@ -1152,7 +1153,7 @@ public class TomInitialize implements ITomInitialize {
     public boolean peripheralDeviceStatus() {
         PeripheralMonitor peripheralMonitor = new PeripheralMonitor(this.ccuGrpcApiListener, this.grpcApiListener);
         agent.setPeripheralMonitor(peripheralMonitor);
-        deviceStatusListener = new ImpDeviceStatusListener(ccuGrpcApiListener);
+        ImpDeviceStatusListener deviceStatusListener = new ImpDeviceStatusListener(ccuGrpcApiListener);
         peripheralMonitor.addDeviceStatusListener(deviceStatusListener);
         deviceStatusListener = new ImpDeviceStatusListener(grpcApiListener);
         peripheralMonitor.addDeviceStatusListener(deviceStatusListener);

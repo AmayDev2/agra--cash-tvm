@@ -48,7 +48,6 @@ public class ModesListener implements RemoteListener {
             noStationMode();
         } else if (commandClass.equals(InServiceNoSaleCommand.class)) {
             setInServiceNoSale();
-
         } else{
             throw new ServiceNotFoundException("Service not found");
         }

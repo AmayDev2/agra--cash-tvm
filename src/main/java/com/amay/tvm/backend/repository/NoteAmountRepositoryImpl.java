@@ -1,6 +1,7 @@
 package com.amay.tvm.backend.repository;
 
 import com.amay.tvm.backend.entity.NoteAmountEntity;
+import com.amay.tvm.backend.enums.LoggerTag;
 import org.tinylog.Logger;
 
 import java.sql.*;
@@ -15,7 +16,7 @@ public class NoteAmountRepositoryImpl extends NoteAmountRepository {
             this.connection = connection;
             this.createTableIfNotExists();
         } catch (SQLException e) {
-            e.printStackTrace();
+            Logger.tag(LoggerTag.APP).error("Error initializing NoteAmountRepository: {}", e.getMessage());
         }
     }
 
@@ -24,12 +25,12 @@ public class NoteAmountRepositoryImpl extends NoteAmountRepository {
         try (Statement stmt = connection.createStatement()) {
             stmt.execute(CREATE_TABLE_SQL); // Create table if it does not exist
         } catch (SQLException e) {
-            Logger.error("Error creating table for NoteAmountEntity: {}", e.getMessage());
+            Logger.tag(LoggerTag.APP).error("Error creating table for NoteAmountEntity: {}", e.getMessage());
             throw new SQLException("Error creating table for NoteAmountEntity", e);
         }
     }
 
-    @Override
+
     public String save(NoteAmountEntity noteAmount) {
         try (PreparedStatement pstmt = connection.prepareStatement(INSERT_SQL)) {
             pstmt.setString(1, noteAmount.getContainerId());
@@ -41,12 +42,12 @@ public class NoteAmountRepositoryImpl extends NoteAmountRepository {
             pstmt.executeUpdate();
             return noteAmount.getContainerId();
         } catch (SQLException e) {
-            Logger.error("Error inserting NoteAmountEntity: {}", e.getMessage());
+            Logger.tag(LoggerTag.APP).error("Error inserting NoteAmountEntity: {}", e.getMessage());
             return null;
         }
     }
 
-    @Override
+
     public String save(List<NoteAmountEntity> noteAmount) {
         for (NoteAmountEntity entity : noteAmount) {
             this.save(entity);
@@ -55,15 +56,15 @@ public class NoteAmountRepositoryImpl extends NoteAmountRepository {
     }
 
     @Override
-    public NoteAmountEntity findById(String containerId) {
+    public NoteAmountEntity findById(int unitAmount) {
         try (PreparedStatement pstmt = connection.prepareStatement(SELECT_BY_ID_SQL)) {
-            pstmt.setString(1, containerId);
+            pstmt.setInt(1, unitAmount);
             ResultSet rs = pstmt.executeQuery();
             if (rs.next()) {
                 return mapRow(rs);
             }
         } catch (SQLException e) {
-            Logger.error("Error finding NoteAmountEntity by containerId: {}", e.getMessage());
+            Logger.tag(LoggerTag.APP).error("Error finding NoteAmountEntity by unitAmount: {}", e.getMessage());
         }
         return null;
     }
@@ -89,9 +90,12 @@ public class NoteAmountRepositoryImpl extends NoteAmountRepository {
 
                 // Prepare updateToAdd query to set the new values
                 this.update(noteAmount);
+            }else{
+                // If no existing record, simply insert the new one
+                this.save(noteAmount);
             }
         } catch (SQLException e) {
-            Logger.error("Error updating NoteAmountEntity: {}", e.getMessage());
+            Logger.tag(LoggerTag.APP).error("Error updating NoteAmountEntity: {}", e.getMessage());
         }
     }
 
@@ -111,7 +115,7 @@ public class NoteAmountRepositoryImpl extends NoteAmountRepository {
             pstmt.setInt(4, noteAmount.getUnitAmount());
             pstmt.executeUpdate();
         } catch (SQLException e) {
-            Logger.error("Error updating NoteAmountEntity: {}", e.getMessage());
+            Logger.tag(LoggerTag.APP).error("Error updating NoteAmountEntity: {}", e.getMessage());
         }
     }
 
@@ -120,8 +124,9 @@ public class NoteAmountRepositoryImpl extends NoteAmountRepository {
         try (PreparedStatement pstmt = connection.prepareStatement(RESET_TO_ZERO_SQL)) {
             pstmt.setTimestamp(1, Timestamp.valueOf(LocalDateTime.now()));
             pstmt.executeUpdate();
+            Logger.tag(LoggerTag.BUSS).info("All NoteAmountEntity quantities reset to zero.");
         } catch (SQLException e) {
-            Logger.error("Error resetting NoteAmountEntity quantities to zero: {}", e.getMessage());
+            Logger.tag(LoggerTag.APP).error("Error resetting NoteAmountEntity quantities to zero: {}", e.getMessage());
         }
 
     }
@@ -132,7 +137,7 @@ public class NoteAmountRepositoryImpl extends NoteAmountRepository {
             pstmt.setString(1, unitAmount);
             pstmt.executeUpdate();
         } catch (SQLException e) {
-            Logger.error("Error deleting NoteAmountEntity by unitAmount: {}", e.getMessage());
+            Logger.tag(LoggerTag.APP).error("Error deleting NoteAmountEntity by unitAmount: {}", e.getMessage());
         }
     }
 
@@ -146,9 +151,33 @@ public class NoteAmountRepositoryImpl extends NoteAmountRepository {
                 noteAmounts.add(mapRow(rs));
             }
         } catch (SQLException e) {
-            Logger.error("Error fetching NoteAmountEntity list: {}", e.getMessage());
+            Logger.tag(LoggerTag.APP).error("Error fetching NoteAmountEntity list: {}", e.getMessage());
         }
         return noteAmounts;
+    }
+
+    @Override
+    public List<NoteAmountEntity> findAll() {
+        List<NoteAmountEntity> noteAmounts = new ArrayList<>();
+        try (PreparedStatement pstmt = connection.prepareStatement(SELECT_ALL)) {
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                noteAmounts.add(mapRow(rs));
+            }
+        } catch (SQLException e) {
+            Logger.tag(LoggerTag.APP).error("Error fetching NoteAmountEntity list: {}", e.getMessage());
+        }
+        return noteAmounts;
+    }
+
+    @Override
+    public void deleteAll() {
+        try (Statement stmt = connection.createStatement()) {
+            stmt.execute(DELETE_ALL_SQL);
+        } catch (SQLException e) {
+            Logger.tag(LoggerTag.APP).error("Error deleting all NoteAmountEntity records: {}", e.getMessage());
+        }
+
     }
 
     // Map ResultSet to NoteAmountEntity

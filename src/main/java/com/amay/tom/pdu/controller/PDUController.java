@@ -72,8 +72,9 @@ public class PDUController {
 
     public void setAgent(Agent agent) {
         this.agent=agent;
-
-
+        if(stackPane.getChildren().size()>1){
+            return;
+        }
 
         try{
             Logger.tag(LoggerTag.APP).debug("Loading Maintenance Screen");

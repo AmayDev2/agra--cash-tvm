@@ -300,5 +300,9 @@ public class ViewFactory {
     public static FXMLLoader getMaintenanceLoad() {
         return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/pdu/maintenance.fxml"));
     }
+
+    public static FXMLLoader getReportsView() {
+        return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/pdu/report.fxml"));
+    }
 }
 

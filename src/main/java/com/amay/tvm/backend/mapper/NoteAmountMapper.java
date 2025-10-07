@@ -1,8 +1,15 @@
 package com.amay.tvm.backend.mapper;
 
 import com.amay.tvm.backend.dto.NoteAmountDTO;
+import com.amay.tvm.backend.entity.FinanceOperationEntity;
 import com.amay.tvm.backend.entity.NoteAmountEntity;
+import com.amay.tvm.backend.enums.FinanceOperation;
+import com.amay.tvm.backend.enums.LoggerTag;
+import org.tinylog.Logger;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -49,5 +56,21 @@ public class NoteAmountMapper {
         return dtos.stream()
                 .map(NoteAmountMapper::toEntity)
                 .collect(Collectors.toList());
+    }
+
+    public static List<FinanceOperationEntity> toFinanceOperationEntityList(List<NoteAmountDTO> noteAmountDTOList, String shiftId) {
+        List<FinanceOperationEntity> financeOperationEntities = new ArrayList<>();
+        for (NoteAmountDTO noteAmountDTO : noteAmountDTOList) {
+            FinanceOperationEntity financeOperationEntity=new FinanceOperationEntity()
+                    .setShiftId(shiftId)
+                    .setOperationType(FinanceOperation.BNR_UNLOAD)
+                    .setUnitAmount(noteAmountDTO.getUnitAmount())
+                    .setQuantity(noteAmountDTO.getCurrentQuantity())
+                    .setCreatedAt(Timestamp.valueOf(LocalDateTime.now()))
+                    .setUpdatedAt(Timestamp.valueOf(LocalDateTime.now()));
+            Logger.tag(LoggerTag.BUSS).info("Marking empty: {}", financeOperationEntity);
+            financeOperationEntities.add(financeOperationEntity);
+        }
+        return financeOperationEntities;
     }
 }

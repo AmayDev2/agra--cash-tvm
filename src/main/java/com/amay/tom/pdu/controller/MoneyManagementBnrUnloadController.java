@@ -3,21 +3,22 @@ package com.amay.tom.pdu.controller;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tom.service.devices.DeviceStatusListener;
-import com.amay.tom.utils.tasks.BuzzerTask;
-import com.amay.tvm.backend.service.BnrFinanceMaintenance;
+import com.amay.tvm.backend.enums.LoggerTag;
+import com.amay.tvm.backend.repository.FinanceOperationRepository;
 import com.amay.tvm.bnr.BNRIntegration;
 import com.jxfs.events.JxfsException;
-import javafx.application.Platform;
+import com.mei.bnr.exception.BnrException;
 import javafx.event.ActionEvent;
+import org.tinylog.Logger;
 
 public class MoneyManagementBnrUnloadController  {
     private final Agent agent;
     private final SceneManager sceneManager;
-    private ListenBnrEvent listenBnrEvent;
+    private final ListenBnrEvent listenBnrEvent;
     public MoneyManagementBnrUnloadController(Agent agent, SceneManager sceneManager) {
         this.sceneManager=sceneManager;
         this.agent=agent;
-        listenBnrEvent=new ListenBnrEvent(this);
+        listenBnrEvent=new ListenBnrEvent(this,agent.getFinanceOperationRepository(),agent.getShift().getShiftId());
         agent.getPeripheralMonitor().addDeviceStatusListener(listenBnrEvent);
 
     }
@@ -58,8 +59,12 @@ public class MoneyManagementBnrUnloadController  {
     static class ListenBnrEvent implements DeviceStatusListener {
         private int[] mDeviceStatus;
         MoneyManagementBnrUnloadController controller;
-        public ListenBnrEvent(MoneyManagementBnrUnloadController pduController){
+        FinanceOperationRepository financeOperationRepository;
+        String shiftId;
+        public ListenBnrEvent(MoneyManagementBnrUnloadController pduController, FinanceOperationRepository financeOperationRepository, String shiftId){
             this.controller=pduController;
+            this.financeOperationRepository=financeOperationRepository;
+            this.shiftId=shiftId;
         }
 
 
@@ -75,7 +80,14 @@ public class MoneyManagementBnrUnloadController  {
                 this.mDeviceStatus= deviceStatus;
                 if(deviceStatus[7]==0) {
                     // save in DB
-                    BNRIntegration.bnrSetDepositZero();
+                    try {
+                        financeOperationRepository.markEmpty(shiftId);
+                        BNRIntegration.bnrSetDepositZero();
+                        Logger.tag(LoggerTag.BUSS).info("BNR Cashbox content set to zero for shift: {}", shiftId);
+                        //TODO: Generate EOD report
+                    } catch (BnrException e) {
+                        Logger.tag(LoggerTag.APP).error("Error in set deposit to zero: {}", e.getMessage());
+                    }
                     // remove from DB
                 }
 

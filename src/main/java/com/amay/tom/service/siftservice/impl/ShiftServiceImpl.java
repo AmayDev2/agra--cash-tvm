@@ -32,9 +32,13 @@ import com.amay.tom.utils.folder.NewFolder;
 import com.amay.tom.utils.helper.Helper;
 import com.amay.tom.utils.image.ImageUtils;
 import com.amay.tom.utils.time.TimeUtil;
+import com.amay.tvm.backend.entity.FinanceOperationEntity;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.controller.TVMController;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.ProgressIndicator;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
@@ -61,6 +65,7 @@ public class ShiftServiceImpl implements ShiftService {
     private Shift shift;
     private PopupContent popupContent;
     private Stage mainStage;
+    private  TVMController tvmController;
 
     public ShiftServiceImpl(Agent agent, UserAuth userAuth, ShiftRepository shiftRepository) {
         this.userAuth = userAuth;
@@ -132,7 +137,8 @@ public class ShiftServiceImpl implements ShiftService {
 //                agent.getGrpcApiListener().sendAlarm(Alarm.MAINTENANCE_LOGIN);
 //            }else {
                 fxmlLoader = ViewFactory.getTVMHomeScreen();
-                fxmlLoader.setControllerFactory(controller -> new TVMController(agent));
+                tvmController= new TVMController(agent);
+                fxmlLoader.setControllerFactory(controller -> tvmController);
                 agent.getGrpcApiListener().sendAlarm(Alarm.OPERATION_LOGIN);
 //            }
             // load main screen
@@ -195,13 +201,13 @@ public class ShiftServiceImpl implements ShiftService {
         this.agent.setShiftIdGeneratorService(null);
 
         try {
+            if(tvmController!=null)tvmController.CleanUp();
             shiftRepository.endShift(ShiftMapper.toDto(shift)); //TODO: get complete shift
-            Logger.debug("EOS : " + shift.toString());
+            Logger.tag(LoggerTag.APP).debug("EOS : " + shift.toString());
             //notify to scu
 
             agent.getScuService().pushShiftEndAsync(shift,shiftRepository);
             agent.getCcuService().pushShiftEndAsync(shift,shiftRepository);
-            new Thread(()-> PDUCommandDispatcher.INSTANCE.dispatch(new AbnormalStationModeCommand(DeviceOperationMode.SHIFT_NOT_ACTIVE))).start();
 
             this.printEOShift(this.shift.getShiftId());
             agent.getGrpcApiListener().sendAlarm(Alarm.SHIFT_END);
@@ -219,16 +225,14 @@ public class ShiftServiceImpl implements ShiftService {
         }
     }
 
-    private void printEOShift(String shiftId) {
+    public void printEOShift(String shiftId) {
         AtomicReference<String> startTime = new AtomicReference<>();
         AtomicReference<String> endTime = new AtomicReference<>();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         shiftRepository.findById(shiftId).ifPresentOrElse(
                 shift -> {
-                    if(!String.valueOf(shift.getStartTime()).isBlank())
-                    startTime.set(String.valueOf(shift.getStartTime().toLocalDateTime().format(formatter)).substring(0,16));
-                    if(!String.valueOf(shift.getEndTime()).isBlank())
-                    endTime.set(String.valueOf(shift.getEndTime().toLocalDateTime().format(formatter)).substring(0,16)) ;
+                    if(!String.valueOf(shift.getStartTime()).isBlank())startTime.set(shift.getStartTime().toLocalDateTime().format(formatter).substring(0,16));
+                    if(!String.valueOf(shift.getEndTime()).isBlank())endTime.set(shift.getEndTime().toLocalDateTime().format(formatter).substring(0,16)) ;
                 },
                 () -> {
                     Logger.error("Shift not found for ID: " + shiftId);

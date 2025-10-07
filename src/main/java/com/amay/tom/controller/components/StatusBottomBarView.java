@@ -46,23 +46,26 @@ public class StatusBottomBarView {
     @FXML
     private Button upsConnectedImage;
 
-    private Versions versions;
-
     private final MasterConfigInfo masterConfigInfo;
+    private final UIDeviceListener uiDeviceListener;
+    private final PeripheralMonitor peripheralMonitor;
 
 
     @FXML
     private void initialize() {
         Logger.debug("StatusBottomBarView initialized");
-//        softwareVersion.setText(versions.getVersion());
         softwareVersion.setText(masterConfigInfo.getTvmSwVer());
-//        fareTableVersion.setText(masterConfigInfo.getFareConfig());
-//        parameterVersion.setText(masterConfigInfo.getConfigVer());
+    }
+
+    public void CleanUp() {
+        peripheralMonitor.removeDeviceStatusListener(uiDeviceListener);
+        Logger.debug("StatusBottomBarView cleaned up");
     }
 
     public StatusBottomBarView(PeripheralMonitor peripheralMonitor, Versions versions, MasterConfigInfo masterConfigInfo) {
-        peripheralMonitor.addDeviceStatusListener(new UIDeviceListener(this));
-        this.versions = versions;
+        this.peripheralMonitor=peripheralMonitor;
+        uiDeviceListener= new UIDeviceListener(this);
+        peripheralMonitor.addDeviceStatusListener(uiDeviceListener);
         this.masterConfigInfo=masterConfigInfo;
     }
 

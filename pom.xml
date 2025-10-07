@@ -60,7 +60,18 @@
             <version>1.62.2</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>1.5.5.Final</version>
+        </dependency>
 
+        <dependency>
+        <groupId>org.mapstruct</groupId>
+        <artifactId>mapstruct-processor</artifactId>
+        <version>1.5.5.Final</version>
+        <scope>provided</scope>
+    </dependency>
 
         <dependency>
             <groupId>io.grpc</groupId>
@@ -345,17 +356,6 @@
             <version>0.10.2</version>
         </dependency>
 
-
-
-
-
-
-
-
-
-
-
-
         <!--    &lt;!&ndash; https://mvnrepository.com/artifact/org.slf4j/slf4j-simple &ndash;&gt;-->
         <!--    <dependency>-->
         <!--      <groupId>org.slf4j</groupId>-->
@@ -505,31 +505,63 @@
                 </configuration>
             </plugin>
 
-
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+
+                    <!-- Keep any JVM/compilation args you need (merge them here) -->
+                    <compilerArgs>
+                        <arg>--add-opens</arg>
+                        <arg>java.base/javax.annotation=ALL-UNNAMED</arg>
+                    </compilerArgs>
+
+                    <!-- Annotation processors used at compile-time -->
                     <annotationProcessorPaths>
+                        <!-- Lombok -->
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
                             <version>1.18.32</version>
                         </path>
+
+                        <!-- MapStruct processor -->
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>1.5.5.Final</version>
+                        </path>
                     </annotationProcessorPaths>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                    <compilerArgs>
-<!--                        <arg>&#45;&#45;add-modules</arg>-->
-<!--                        <arg>jakarta.annotation</arg>-->
-<!--                        <arg>&#45;&#45;enable-preview</arg>-->
-                        <arg>--add-opens</arg>
-                        <arg>java.base/javax.annotation=ALL-UNNAMED</arg>
-                    </compilerArgs>
                 </configuration>
             </plugin>
+
+
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                <version>3.11.0</version>-->
+<!--                <configuration>-->
+<!--                    <annotationProcessorPaths>-->
+<!--                        <path>-->
+<!--                            <groupId>org.projectlombok</groupId>-->
+<!--                            <artifactId>lombok</artifactId>-->
+<!--                            <version>1.18.32</version>-->
+<!--                        </path>-->
+<!--                    </annotationProcessorPaths>-->
+<!--                    <source>${java.version}</source>-->
+<!--                    <target>${java.version}</target>-->
+<!--                    <compilerArgs>-->
+<!--&lt;!&ndash;                        <arg>&#45;&#45;add-modules</arg>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <arg>jakarta.annotation</arg>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <arg>&#45;&#45;enable-preview</arg>&ndash;&gt;-->
+<!--                        <arg>&#45;&#45;add-opens</arg>-->
+<!--                        <arg>java.base/javax.annotation=ALL-UNNAMED</arg>-->
+<!--                    </compilerArgs>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
 
             <plugin>
                 <groupId>org.openjfx</groupId>

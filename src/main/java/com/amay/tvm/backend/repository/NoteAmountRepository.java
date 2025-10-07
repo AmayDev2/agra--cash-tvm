@@ -28,16 +28,22 @@ public abstract class NoteAmountRepository {
     protected static final String SELECT_BY_ID_SQL = "SELECT * FROM " + TABLE_NAME + " WHERE unitAmount = ?";
     protected static final String UPDATE_SQL = "UPDATE " + TABLE_NAME + " SET cashInQuantity=?, cashOutQuantity=?, updatedAt=? WHERE unitAmount=?";
     protected static final String DELETE_BY_ID_SQL = "DELETE FROM " + TABLE_NAME + " WHERE unitAmount = ?";
+    protected static  final String DELETE_ALL_SQL= "DELETE FROM " + TABLE_NAME;
     protected static final String SELECT_ALL_FROM_SQL = "SELECT * FROM " + TABLE_NAME + " WHERE createdAt >= ? ORDER BY createdAt DESC";
+    protected static final String SELECT_ALL = "SELECT * FROM " + TABLE_NAME;
     protected static final String RESET_TO_ZERO_SQL = "UPDATE " + TABLE_NAME + " SET cashInQuantity=0, cashOutQuantity=0, updatedAt=?";
 
     protected abstract void createTableIfNotExists() throws SQLException;
-    public abstract String save(NoteAmountEntity noteAmount);
-    public abstract String save(List<NoteAmountEntity> noteAmount);
-    public abstract NoteAmountEntity findById(String containerId);
+//    public abstract String save(NoteAmountEntity noteAmount);
+//    public abstract String save(List<NoteAmountEntity> noteAmount);
+    public abstract NoteAmountEntity findById(int unitAmount);
     public abstract void updateToAdd(NoteAmountEntity noteAmount);
     public abstract void updateToAdd(List<NoteAmountEntity> noteAmount);
     public abstract void resetToZero();
     public abstract void deleteById(String unitAmount);
     public abstract List<NoteAmountEntity> findAllFrom(Timestamp from);
+
+    public abstract List<NoteAmountEntity> findAll();
+
+    public abstract void deleteAll();
 }
