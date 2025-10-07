@@ -321,6 +321,30 @@ public class PrinterService implements PrinterInterface {
 
         return imagePrintResponse;
     }
+    @Override
+    public BaseResponse printCoinLoadedReport(CoinLoadedReport coinLoadedReport){
+        ImagePrintResponse imagePrintResponse=new ImagePrintResponse();
+        // print logo
+        this.printImageByPath();
+        // print bottom message
+        this.coinLoadedReport(coinLoadedReport);
+        imagePrintResponse.setSuccess(true);
+
+        return imagePrintResponse;
+    }
+
+
+    @Override
+    public BaseResponse printBalanceReport(BalanceReport balanceReport){
+        ImagePrintResponse imagePrintResponse=new ImagePrintResponse();
+        // print logo
+        this.printImageByPath();
+        // print bottom message
+        this.balanceReport(balanceReport);
+        imagePrintResponse.setSuccess(true);
+
+        return imagePrintResponse;
+    }
 
     @Override
     public PrinterStatus printerStatus() {
@@ -483,6 +507,46 @@ public class PrinterService implements PrinterInterface {
             e.printStackTrace();
         }
     }
+    private void coinLoadedReport(CoinLoadedReport coinLoadedReport){
+        String formated=getCoinLoadedReportTemplate();
+        formated=fillTheData(formated,coinLoadedReport);
+
+        try {
+            PrintFontSettings pfs=new PrintFontSettings();
+            pfs.Emphasized=true;
+            pfs.LeftMarginValue=10*10;
+            pfs.LineSpacing=30;
+            pfs.CharWidth= PrintFontSettings.FontSize.FONT_SIZE_X1;
+            pfs.CharHeight=PrintFontSettings.FontSize.FONT_SIZE_X1;
+            pfs.Justification= PrintFontSettings.FontJustification.FONT_JUSTIFICATION_LEFT;
+            pfs.CharFontType=PrintFontSettings.FontType.FONT_TYPE_2;
+
+            cudev.PrintText(formated,pfs);
+            cudev.Cut(CuCustomWndDevice.CutType.CUT_TOTAL);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    private void balanceReport(BalanceReport balanceReport){
+        String formated=getBalanceReportTemplate();
+        formated=fillTheData(formated,balanceReport);
+
+        try {
+            PrintFontSettings pfs=new PrintFontSettings();
+            pfs.Emphasized=true;
+            pfs.LeftMarginValue=10*10;
+            pfs.LineSpacing=30;
+            pfs.CharWidth= PrintFontSettings.FontSize.FONT_SIZE_X1;
+            pfs.CharHeight=PrintFontSettings.FontSize.FONT_SIZE_X1;
+            pfs.Justification= PrintFontSettings.FontJustification.FONT_JUSTIFICATION_LEFT;
+            pfs.CharFontType=PrintFontSettings.FontType.FONT_TYPE_2;
+
+            cudev.PrintText(formated,pfs);
+            cudev.Cut(CuCustomWndDevice.CutType.CUT_TOTAL);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     private String fillTheData(String receiptTemplate, ShiftReportData shiftReportData) {
           return String.format(receiptTemplate,
@@ -583,6 +647,67 @@ public class PrinterService implements PrinterInterface {
                   bnRLoadUnload.getRs500Amount(),
                   bnRLoadUnload.getBankTotalCount(),
                   bnRLoadUnload.getBankTotalAmount()
+        );
+    }
+    private String fillTheData(String coinLoadedReportTemplate, CoinLoadedReport coinLoadedReport) {
+          return String.format(coinLoadedReportTemplate,
+                coinLoadedReport.getReportType(),
+                coinLoadedReport.getStationName(),
+                  coinLoadedReport.getShiftId(),
+                  coinLoadedReport.getStartTime(),
+                  coinLoadedReport.getEndTime(),
+                  coinLoadedReport.getEquipmentId(),
+                  coinLoadedReport.getOperatorId(),
+
+
+
+                  coinLoadedReport.getHopper1Count(),
+                  coinLoadedReport.getHopper1Amount(),
+                  coinLoadedReport.getHopper2Count(),
+                  coinLoadedReport.getHopper2Amount(),
+                  coinLoadedReport.getHopper3Count(),
+                  coinLoadedReport.getHopper3Amount(),
+
+                  coinLoadedReport.getCoinTotalCount(),
+                  coinLoadedReport.getCoinTotalAmount()
+
+        );
+    }
+    private String fillTheData(String balanceReportTemplate, BalanceReport balanceReport) {
+          return String.format(balanceReportTemplate,
+                balanceReport.getReportType(),
+                balanceReport.getStationName(),
+                  balanceReport.getShiftId(),
+                  balanceReport.getStartTime(),
+                  balanceReport.getEndTime(),
+                  balanceReport.getEquipmentId(),
+                  balanceReport.getOperatorId(),
+
+                  balanceReport.getRs10Count(),
+                  balanceReport.getRs10Amount(),
+                  balanceReport.getRs20Count(),
+                  balanceReport.getRs20Amount(),
+                  balanceReport.getRs50Count(),
+                  balanceReport.getRs50Amount(),
+                  balanceReport.getRs100Count(),
+                  balanceReport.getRs100Amount(),
+                  balanceReport.getRs200Count(),
+                  balanceReport.getRs200Amount(),
+                  balanceReport.getRs500Count(),
+                  balanceReport.getRs500Amount(),
+                  balanceReport.getBankTotalCount(),
+                  balanceReport.getBankTotalAmount(),
+
+                  balanceReport.getHopper1Count(),
+                  balanceReport.getHopper1Amount(),
+                  balanceReport.getHopper2Count(),
+                  balanceReport.getHopper2Amount(),
+                  balanceReport.getHopper3Count(),
+                  balanceReport.getHopper3Amount(),
+
+                  balanceReport.getCoinTotalCount(),
+                  balanceReport.getCoinTotalAmount()
+
         );
     }
 
@@ -788,6 +913,75 @@ public class PrinterService implements PrinterInterface {
     
     """;
         return bnrReportTemplate;
+    }
+    private static String getCoinLoadedReportTemplate() {
+        String coinLoadedReportTemplate = """   
+   
+                INDORE METRO
+             %s
+              
+    Station Name   : %s
+    Shift ID       : %s
+    Shift Start    : %s
+    Shift End      : %s
+    Equipment ID   : %s
+    Operator ID    : %s
+    
+                 COIN DETAILS
+   
+    Coin Type           Cnt      Amount
+    
+     5                  %s       Rs. %s
+     10                 %s       Rs. %s
+     10                 %s       Rs. %s
+    
+    Total               %s      Rs. %s
+    
+    """;
+        return coinLoadedReportTemplate;
+    }
+    private static String getBalanceReportTemplate(){
+        String balanceLoadedReportTemplate = """   
+   
+                INDORE METRO
+             %s
+              
+    Station Name   : %s
+    Shift ID       : %s
+    Shift Start    : %s
+    Shift End      : %s
+    Equipment ID   : %s
+    Operator ID    : %s
+    
+    
+    
+               BANK NOTE DETAILS
+                
+    Bill Type           Cnt     Amount
+    
+     10                 %s      Rs. %s
+     20                 %s      Rs. %s
+     50                 %s      Rs. %s
+     100                %s      Rs. %s
+     200                %s      Rs. %s
+     500                %s      Rs. %s
+    
+    Total               %s      Rs. %s
+    
+    
+    
+                 COIN DETAILS
+   
+    Coin Type           Cnt      Amount
+    
+     5                  %s       Rs. %s
+     10                 %s       Rs. %s
+     10                 %s       Rs. %s
+    
+    Total               %s      Rs. %s
+    
+    """;
+        return balanceLoadedReportTemplate;
     }
 
 }

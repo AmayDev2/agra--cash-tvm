@@ -1,6 +1,8 @@
 package com.amay.tvm.controller;
 
 import com.amay.printer.BNRLoadUnload;
+import com.amay.printer.BalanceReport;
+import com.amay.printer.CoinLoadedReport;
 import com.amay.printer.PrinterCommandDispatcher;
 import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
@@ -327,15 +329,41 @@ public class TVMController {
     }
 
     public void onClickBalanceUpdate(ActionEvent actionEvent) {
-        PrinterCommandDispatcher.INSTANCE.printBNRLoadUnload(
-                BNRLoadUnload.builder()
-                        .reportType("BNR Loaded Report")
-                        .stationName("MayankSharma")
+//        PrinterCommandDispatcher.INSTANCE.printBNRLoadUnload(
+//                BNRLoadUnload.builder()
+//                        .reportType("BNR Loaded Report")
+//                        .stationName("MayankSharma")
+//                        .shiftId("HHJ657HVHXXX")
+//                        .startTime("2025-10-07 11:25:49")
+//                        .endTime("2025-10-07 11:25:49")
+//                        .equipmentId("HHJ657HVHXXX")
+//                        .operatorId("HHJ657HVHXXX")
+//                        .rs10Count(10)
+//                        .rs10Amount(10)
+//                        .rs20Count(10)
+//                        .rs20Amount(10)
+//                        .rs50Count(10)
+//                        .rs50Amount(10)
+//                        .rs100Count(10)
+//                        .rs100Amount(10)
+//                        .rs200Count(10)
+//                        .rs200Amount(10)
+//                        .rs500Count(10)
+//                        .rs500Amount(10)
+//                        .bankTotalCount(10)
+//                        .bankTotalAmount(10)
+//                        .build()
+//        );
+        PrinterCommandDispatcher.INSTANCE.printBalanceReport(
+                BalanceReport.builder()
+                        .reportType("Balance Report")
+                        .stationName("Gandhi Nagar")
                         .shiftId("HHJ657HVHXXX")
                         .startTime("2025-10-07 11:25:49")
                         .endTime("2025-10-07 11:25:49")
                         .equipmentId("HHJ657HVHXXX")
                         .operatorId("HHJ657HVHXXX")
+
                         .rs10Count(10)
                         .rs10Amount(10)
                         .rs20Count(10)
@@ -350,6 +378,12 @@ public class TVMController {
                         .rs500Amount(10)
                         .bankTotalCount(10)
                         .bankTotalAmount(10)
+                        .hopper1Amount(10)
+                        .hopper2Amount(10)
+                        .hopper3Amount(10)
+                        .coinTotalAmount(10)
+                        .coinTotalCount(10)
+
                         .build()
         );
         actionEvent.consume();

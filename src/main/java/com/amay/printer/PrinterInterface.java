@@ -14,6 +14,8 @@ public interface PrinterInterface {
 
     BaseResponse printImageByText(ShiftReportData shiftReportData);
     BaseResponse printBNRText(BNRLoadUnload bnRLoadUnload);
+    BaseResponse printCoinLoadedReport(CoinLoadedReport coinLoadedReport);
+    BaseResponse printBalanceReport(BalanceReport balanceReport);
 
 
     PrinterStatus printerStatus();

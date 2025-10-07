@@ -43,6 +43,12 @@ public enum PrinterCommandDispatcher {
     public BaseResponse printBNRLoadUnload(BNRLoadUnload bnRLoadUnload){
         return  printerInterface.printBNRText(bnRLoadUnload);
     }
+    public BaseResponse printCoinLoadedReport(CoinLoadedReport coinLoadedReport){
+        return  printerInterface.printCoinLoadedReport(coinLoadedReport);
+    }
+    public BaseResponse printBalanceReport(BalanceReport balanceReport){
+        return  printerInterface.printBalanceReport(balanceReport);
+    }
 
     public PrinterStatus getStatus() {
         return printerInterface.getStatus();

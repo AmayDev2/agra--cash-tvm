@@ -111948,3 +111948,385 @@ Total               10      Rs. 10
 2025-10-07 11-36-37.0438[Cut]Begin
 2025-10-07 11-36-37.0439[Cut]CutType:CUT_TOTAL
 2025-10-07 11-36-37.0443[Cut]End
+2025-10-07 11-47-43.0034[]*****************************************
+2025-10-07 11-47-43.0035[]DLL Log Initialize. Verbosity: 6
+2025-10-07 11-47-43.0036[]*****************************************
+2025-10-07 11-47-43.0037[]DLL Path: C:\TVM\TVM2\agra--cash-tvm
+2025-10-07 11-47-43.0037[]DLL Version: 1.07
+2025-10-07 11-47-43.0038[InitLibrary]Begin
+2025-10-07 11-47-43.0074[InitLibrary]Library SignID:00000101
+2025-10-07 11-47-43.0075[InitLibrary]Current SignID:00000101
+2025-10-07 11-47-43.0075[InitLibrary]End
+2025-10-07 11-47-43.0076[GetAPIVersionHwLibrary]Begin
+2025-10-07 11-47-43.0081[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-07 11-47-43.0081[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-07 11-47-43.0082[GetAPIVersionHwLibrary]End
+2025-10-07 11-47-43.0082[EnumUSBDevices]Begin
+2025-10-07 11-47-43.0090[EnumUSBDevices]Found 1 USB Devices
+2025-10-07 11-47-43.0091[EnumUSBDevices]End
+2025-10-07 11-47-43.0092[OpenPrinterUSB]Begin
+2025-10-07 11-47-43.0093[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-10-07 11-47-43.0098[OpenPrinterUSB]New device ID:00000101
+2025-10-07 11-47-43.0099[OpenPrinterUSB]End
+2025-10-07 11-47-57.0651[PrintImageFromPath]Begin
+2025-10-07 11-47-57.0654[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-47-57.0655[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-47-57.0691[PrintImageFromPath]End
+2025-10-07 11-47-59.0956[PrintImageFromPath]Begin
+2025-10-07 11-47-59.0956[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-47-59.0958[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-47-59.0978[PrintImageFromPath]End
+2025-10-07 11-48-00.0696[PrintImageFromPath]Begin
+2025-10-07 11-48-00.0696[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-48-00.0697[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-48-00.0720[PrintImageFromPath]End
+2025-10-07 11-48-01.0393[PrintImageFromPath]Begin
+2025-10-07 11-48-01.0395[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-48-01.0396[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-48-01.0439[PrintImageFromPath]End
+2025-10-07 11-48-02.0083[PrintImageFromPath]Begin
+2025-10-07 11-48-02.0085[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-48-02.0085[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-48-02.0112[PrintImageFromPath]End
+2025-10-07 11-48-02.0675[PrintImageFromPath]Begin
+2025-10-07 11-48-02.0677[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-48-02.0678[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-48-02.0705[PrintImageFromPath]End
+2025-10-07 11-48-03.0321[PrintImageFromPath]Begin
+2025-10-07 11-48-03.0323[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-48-03.0324[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-48-03.0362[PrintImageFromPath]End
+2025-10-07 11-48-04.0877[PrintImageFromPath]Begin
+2025-10-07 11-48-04.0879[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-48-04.0880[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-48-04.0921[PrintImageFromPath]End
+2025-10-07 11-48-05.0057[PrintImageFromPath]Begin
+2025-10-07 11-48-05.0059[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-48-05.0060[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-48-05.0099[PrintImageFromPath]End
+2025-10-07 11-48-05.0833[PrintImageFromPath]Begin
+2025-10-07 11-48-05.0835[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-48-05.0836[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-48-05.0874[PrintImageFromPath]End
+2025-10-07 11-48-08.0040[PrintImageFromPath]Begin
+2025-10-07 11-48-08.0043[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-48-08.0044[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-48-08.0084[PrintImageFromPath]End
+2025-10-07 11-51-22.0750[]*****************************************
+2025-10-07 11-51-22.0751[]DLL Log Initialize. Verbosity: 6
+2025-10-07 11-51-22.0753[]*****************************************
+2025-10-07 11-51-22.0754[]DLL Path: C:\TVM\TVM2\agra--cash-tvm
+2025-10-07 11-51-22.0755[]DLL Version: 1.07
+2025-10-07 11-51-22.0755[InitLibrary]Begin
+2025-10-07 11-51-22.0791[InitLibrary]Library SignID:00000101
+2025-10-07 11-51-22.0791[InitLibrary]Current SignID:00000101
+2025-10-07 11-51-22.0792[InitLibrary]End
+2025-10-07 11-51-22.0793[GetAPIVersionHwLibrary]Begin
+2025-10-07 11-51-22.0796[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-07 11-51-22.0797[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-07 11-51-22.0798[GetAPIVersionHwLibrary]End
+2025-10-07 11-51-22.0798[EnumUSBDevices]Begin
+2025-10-07 11-51-22.0809[EnumUSBDevices]Found 1 USB Devices
+2025-10-07 11-51-22.0811[EnumUSBDevices]End
+2025-10-07 11-51-22.0814[OpenPrinterUSB]Begin
+2025-10-07 11-51-22.0816[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-10-07 11-51-22.0824[OpenPrinterUSB]New device ID:00000101
+2025-10-07 11-51-22.0826[OpenPrinterUSB]End
+2025-10-07 11-51-44.0166[PrintImageFromPath]Begin
+2025-10-07 11-51-44.0167[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-51-44.0169[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-51-44.0211[PrintImageFromPath]End
+2025-10-07 11-52-25.0312[PrintImageFromPath]Begin
+2025-10-07 11-52-25.0315[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-52-25.0316[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-52-25.0355[PrintImageFromPath]End
+2025-10-07 11-54-30.0890[]*****************************************
+2025-10-07 11-54-30.0892[]DLL Log Initialize. Verbosity: 6
+2025-10-07 11-54-30.0893[]*****************************************
+2025-10-07 11-54-30.0894[]DLL Path: C:\TVM\TVM2\agra--cash-tvm
+2025-10-07 11-54-30.0895[]DLL Version: 1.07
+2025-10-07 11-54-30.0897[InitLibrary]Begin
+2025-10-07 11-54-30.0932[InitLibrary]Library SignID:00000101
+2025-10-07 11-54-30.0932[InitLibrary]Current SignID:00000101
+2025-10-07 11-54-30.0933[InitLibrary]End
+2025-10-07 11-54-30.0933[GetAPIVersionHwLibrary]Begin
+2025-10-07 11-54-30.0936[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-07 11-54-30.0937[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-07 11-54-30.0937[GetAPIVersionHwLibrary]End
+2025-10-07 11-54-30.0938[EnumUSBDevices]Begin
+2025-10-07 11-54-30.0945[EnumUSBDevices]Found 1 USB Devices
+2025-10-07 11-54-30.0946[EnumUSBDevices]End
+2025-10-07 11-54-30.0946[OpenPrinterUSB]Begin
+2025-10-07 11-54-30.0946[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-10-07 11-54-30.0952[OpenPrinterUSB]New device ID:00000101
+2025-10-07 11-54-30.0953[OpenPrinterUSB]End
+2025-10-07 11-54-46.0918[PrintImageFromPath]Begin
+2025-10-07 11-54-46.0920[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-54-46.0921[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-54-46.0960[PrintImageFromPath]End
+2025-10-07 11-54-48.0400[PrintImageFromPath]Begin
+2025-10-07 11-54-48.0401[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-54-48.0401[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-54-48.0425[PrintImageFromPath]End
+2025-10-07 11-54-50.0098[PrintImageFromPath]Begin
+2025-10-07 11-54-50.0100[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-54-50.0101[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-54-50.0141[PrintImageFromPath]End
+2025-10-07 11-57-05.0259[]*****************************************
+2025-10-07 11-57-05.0260[]DLL Log Initialize. Verbosity: 6
+2025-10-07 11-57-05.0261[]*****************************************
+2025-10-07 11-57-05.0261[]DLL Path: C:\TVM\TVM2\agra--cash-tvm
+2025-10-07 11-57-05.0261[]DLL Version: 1.07
+2025-10-07 11-57-05.0263[InitLibrary]Begin
+2025-10-07 11-57-05.0288[InitLibrary]Library SignID:00000101
+2025-10-07 11-57-05.0289[InitLibrary]Current SignID:00000101
+2025-10-07 11-57-05.0289[InitLibrary]End
+2025-10-07 11-57-05.0290[GetAPIVersionHwLibrary]Begin
+2025-10-07 11-57-05.0293[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-07 11-57-05.0293[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-07 11-57-05.0293[GetAPIVersionHwLibrary]End
+2025-10-07 11-57-05.0294[EnumUSBDevices]Begin
+2025-10-07 11-57-05.0300[EnumUSBDevices]Found 1 USB Devices
+2025-10-07 11-57-05.0301[EnumUSBDevices]End
+2025-10-07 11-57-05.0301[OpenPrinterUSB]Begin
+2025-10-07 11-57-05.0302[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-10-07 11-57-05.0307[OpenPrinterUSB]New device ID:00000101
+2025-10-07 11-57-05.0307[OpenPrinterUSB]End
+2025-10-07 11-57-21.0753[PrintImageFromPath]Begin
+2025-10-07 11-57-21.0755[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-57-21.0757[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-57-21.0790[PrintImageFromPath]End
+2025-10-07 11-57-22.0756[PrintImageFromPath]Begin
+2025-10-07 11-57-22.0758[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-57-22.0758[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-57-22.0780[PrintImageFromPath]End
+2025-10-07 11-57-29.0371[PrintImageFromPath]Begin
+2025-10-07 11-57-29.0373[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-57-29.0373[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-57-29.0396[PrintImageFromPath]End
+2025-10-07 11-58-12.0497[]*****************************************
+2025-10-07 11-58-12.0501[]DLL Log Initialize. Verbosity: 6
+2025-10-07 11-58-12.0502[]*****************************************
+2025-10-07 11-58-12.0503[]DLL Path: C:\TVM\TVM2\agra--cash-tvm
+2025-10-07 11-58-12.0505[]DLL Version: 1.07
+2025-10-07 11-58-12.0506[InitLibrary]Begin
+2025-10-07 11-58-12.0532[InitLibrary]Library SignID:00000101
+2025-10-07 11-58-12.0532[InitLibrary]Current SignID:00000101
+2025-10-07 11-58-12.0533[InitLibrary]End
+2025-10-07 11-58-12.0533[GetAPIVersionHwLibrary]Begin
+2025-10-07 11-58-12.0536[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-07 11-58-12.0537[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-07 11-58-12.0537[GetAPIVersionHwLibrary]End
+2025-10-07 11-58-12.0538[EnumUSBDevices]Begin
+2025-10-07 11-58-12.0544[EnumUSBDevices]Found 1 USB Devices
+2025-10-07 11-58-12.0545[EnumUSBDevices]End
+2025-10-07 11-58-12.0546[OpenPrinterUSB]Begin
+2025-10-07 11-58-12.0546[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-10-07 11-58-12.0551[OpenPrinterUSB]New device ID:00000101
+2025-10-07 11-58-12.0552[OpenPrinterUSB]End
+2025-10-07 11-58-26.0028[PrintImageFromPath]Begin
+2025-10-07 11-58-26.0031[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-58-26.0032[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-58-26.0076[PrintImageFromPath]End
+2025-10-07 11-58-26.0080[PrintText]Begin
+2025-10-07 11-58-26.0082[PrintText]<Text to Print>:
+            INDORE METRO
+         Coin Loaded Report
+
+Station Name   : Gandhi Nagar
+Shift ID       : HHJ657HVHXXX
+Shift Start    : 2025-10-07 11:25:49
+Shift End      : 2025-10-07 11:25:49
+Equipment ID   : HHJ657HVHXXX
+Operator ID    : HHJ657HVHXXX
+
+             COIN DETAILS
+
+Coin Type           Cnt      Amount
+
+ 5                  0       Rs. 10
+ 10                 0       Rs. 10
+ 10                 0       Rs. 10
+
+Total               10      Rs. 10
+
+
+2025-10-07 11-58-26.0084[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-10-07 11-58-26.0084[PrintText]<Add LF>:false
+2025-10-07 11-58-26.0091[PrintText]End
+2025-10-07 11-58-26.0092[Cut]Begin
+2025-10-07 11-58-26.0093[Cut]CutType:CUT_TOTAL
+2025-10-07 11-58-26.0096[Cut]End
+2025-10-07 11-58-34.0468[PrintImageFromPath]Begin
+2025-10-07 11-58-34.0471[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 11-58-34.0472[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 11-58-34.0512[PrintImageFromPath]End
+2025-10-07 11-58-34.0513[PrintText]Begin
+2025-10-07 11-58-34.0515[PrintText]<Text to Print>:
+            INDORE METRO
+         Coin Loaded Report
+
+Station Name   : Gandhi Nagar
+Shift ID       : HHJ657HVHXXX
+Shift Start    : 2025-10-07 11:25:49
+Shift End      : 2025-10-07 11:25:49
+Equipment ID   : HHJ657HVHXXX
+Operator ID    : HHJ657HVHXXX
+
+             COIN DETAILS
+
+Coin Type           Cnt      Amount
+
+ 5                  0       Rs. 10
+ 10                 0       Rs. 10
+ 10                 0       Rs. 10
+
+Total               10      Rs. 10
+
+
+2025-10-07 11-58-34.0516[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-10-07 11-58-34.0519[PrintText]<Add LF>:false
+2025-10-07 11-58-34.0527[PrintText]End
+2025-10-07 11-58-34.0528[Cut]Begin
+2025-10-07 11-58-34.0531[Cut]CutType:CUT_TOTAL
+2025-10-07 11-58-34.0537[Cut]End
+2025-10-07 12-21-31.0669[]*****************************************
+2025-10-07 12-21-31.0671[]DLL Log Initialize. Verbosity: 6
+2025-10-07 12-21-31.0671[]*****************************************
+2025-10-07 12-21-31.0671[]DLL Path: C:\TVM\TVM2\agra--cash-tvm
+2025-10-07 12-21-31.0672[]DLL Version: 1.07
+2025-10-07 12-21-31.0673[InitLibrary]Begin
+2025-10-07 12-21-31.0699[InitLibrary]Library SignID:00000101
+2025-10-07 12-21-31.0700[InitLibrary]Current SignID:00000101
+2025-10-07 12-21-31.0700[InitLibrary]End
+2025-10-07 12-21-31.0701[GetAPIVersionHwLibrary]Begin
+2025-10-07 12-21-31.0704[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-07 12-21-31.0704[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-07 12-21-31.0705[GetAPIVersionHwLibrary]End
+2025-10-07 12-21-31.0706[EnumUSBDevices]Begin
+2025-10-07 12-21-31.0712[EnumUSBDevices]Found 1 USB Devices
+2025-10-07 12-21-31.0713[EnumUSBDevices]End
+2025-10-07 12-21-31.0714[OpenPrinterUSB]Begin
+2025-10-07 12-21-31.0714[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-10-07 12-21-31.0719[OpenPrinterUSB]New device ID:00000101
+2025-10-07 12-21-31.0720[OpenPrinterUSB]End
+2025-10-07 12-21-46.0685[PrintImageFromPath]Begin
+2025-10-07 12-21-46.0687[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 12-21-46.0688[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 12-21-46.0725[PrintImageFromPath]End
+2025-10-07 12-21-46.0729[PrintText]Begin
+2025-10-07 12-21-46.0730[PrintText]<Text to Print>:
+            INDORE METRO
+         Coin Loaded Report
+
+Station Name   : Gandhi Nagar
+Shift ID       : HHJ657HVHXXX
+Shift Start    : 2025-10-07 11:25:49
+Shift End      : 2025-10-07 11:25:49
+Equipment ID   : HHJ657HVHXXX
+Operator ID    : HHJ657HVHXXX
+
+
+
+           BANK NOTE DETAILS
+
+Bill Type           Cnt     Amount
+
+ 10                 10      Rs. 10
+ 20                 10      Rs. 10
+ 50                 10      Rs. 10
+ 100                10      Rs. 10
+ 200                10      Rs. 10
+ 500                10      Rs. 10
+
+Total               10      Rs. 10
+
+
+
+             COIN DETAILS
+
+Coin Type           Cnt      Amount
+
+ 5                  0       Rs. 10
+ 10                 0       Rs. 10
+ 10                 0       Rs. 10
+
+Total               10      Rs. 10
+
+
+2025-10-07 12-21-46.0731[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-10-07 12-21-46.0733[PrintText]<Add LF>:false
+2025-10-07 12-21-46.0741[PrintText]End
+2025-10-07 12-21-46.0742[Cut]Begin
+2025-10-07 12-21-46.0743[Cut]CutType:CUT_TOTAL
+2025-10-07 12-21-46.0748[Cut]End
+2025-10-07 12-22-44.0502[]*****************************************
+2025-10-07 12-22-44.0505[]DLL Log Initialize. Verbosity: 6
+2025-10-07 12-22-44.0506[]*****************************************
+2025-10-07 12-22-44.0507[]DLL Path: C:\TVM\TVM2\agra--cash-tvm
+2025-10-07 12-22-44.0508[]DLL Version: 1.07
+2025-10-07 12-22-44.0509[InitLibrary]Begin
+2025-10-07 12-22-44.0537[InitLibrary]Library SignID:00000101
+2025-10-07 12-22-44.0538[InitLibrary]Current SignID:00000101
+2025-10-07 12-22-44.0538[InitLibrary]End
+2025-10-07 12-22-44.0539[GetAPIVersionHwLibrary]Begin
+2025-10-07 12-22-44.0543[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-07 12-22-44.0543[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-07 12-22-44.0544[GetAPIVersionHwLibrary]End
+2025-10-07 12-22-44.0544[EnumUSBDevices]Begin
+2025-10-07 12-22-44.0552[EnumUSBDevices]Found 1 USB Devices
+2025-10-07 12-22-44.0553[EnumUSBDevices]End
+2025-10-07 12-22-44.0553[OpenPrinterUSB]Begin
+2025-10-07 12-22-44.0553[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-10-07 12-22-44.0559[OpenPrinterUSB]New device ID:00000101
+2025-10-07 12-22-44.0560[OpenPrinterUSB]End
+2025-10-07 12-23-01.0204[PrintImageFromPath]Begin
+2025-10-07 12-23-01.0208[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-07 12-23-01.0210[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-07 12-23-01.0251[PrintImageFromPath]End
+2025-10-07 12-23-01.0255[PrintText]Begin
+2025-10-07 12-23-01.0256[PrintText]<Text to Print>:
+            INDORE METRO
+         Balance Report
+
+Station Name   : Gandhi Nagar
+Shift ID       : HHJ657HVHXXX
+Shift Start    : 2025-10-07 11:25:49
+Shift End      : 2025-10-07 11:25:49
+Equipment ID   : HHJ657HVHXXX
+Operator ID    : HHJ657HVHXXX
+
+
+
+           BANK NOTE DETAILS
+
+Bill Type           Cnt     Amount
+
+ 10                 10      Rs. 10
+ 20                 10      Rs. 10
+ 50                 10      Rs. 10
+ 100                10      Rs. 10
+ 200                10      Rs. 10
+ 500                10      Rs. 10
+
+Total               10      Rs. 10
+
+
+
+             COIN DETAILS
+
+Coin Type           Cnt      Amount
+
+ 5                  0       Rs. 10
+ 10                 0       Rs. 10
+ 10                 0       Rs. 10
+
+Total               10      Rs. 10
+
+
+2025-10-07 12-23-01.0256[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-10-07 12-23-01.0258[PrintText]<Add LF>:false
+2025-10-07 12-23-01.0264[PrintText]End
+2025-10-07 12-23-01.0266[Cut]Begin
+2025-10-07 12-23-01.0267[Cut]CutType:CUT_TOTAL
+2025-10-07 12-23-01.0269[Cut]End
