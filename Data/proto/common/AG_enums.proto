@@ -1,0 +1,18 @@
+syntax = "proto3";
+package org.monitoring.proto;
+
+
+option java_package = "org.network.monitorandcontrol.ag";
+option java_multiple_files = true;
+
+
+enum AisleMode {
+    ENTRY = 0;
+    EXIT = 1;
+    BI_DIRECTIONAL = 2;
+}
+
+enum FlapMode {
+    NORMALLY_OPEN = 0;
+    NORMALLY_CLOSED = 1;
+}

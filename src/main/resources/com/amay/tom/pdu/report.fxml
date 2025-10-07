@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="CENTER" prefHeight="480.0" prefWidth="640.0" style=" -fx-background-color: #CCE4FF;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.pdu.controller.ReportController">
+<GridPane alignment="CENTER" prefHeight="480.0" prefWidth="640.0" stylesheets="/style.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.maintenance.ReportController">
 
     <columnConstraints>
         <ColumnConstraints halignment="CENTER" percentWidth="100.0" />
@@ -20,11 +20,7 @@
 
     <children>
         <!-- Title -->
-        <Label text="Report" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0">
-            <font>
-                <Font name="System Bold" size="24.0" />
-            </font>
-        </Label>
+        <Label text="Report" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0"/>
 
         <!-- Table -->
         <TableView fx:id="reportTable" prefHeight="292.0" prefWidth="600.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
@@ -39,22 +35,14 @@
                 <Insets left="10.0" right="10.0" />
             </GridPane.margin>
         </TableView>
+
         <!-- Back Button -->
-        <Button onAction="#onBack" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: gold; -fx-text-fill: black;" text="Back" GridPane.halignment="CENTER" GridPane.rowIndex="3">
-            <font>
-                <Font name="System Bold" size="18.0" />
-            </font>
-        </Button>
-        <Button fx:id="printButton" onAction="#onClickPrint" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: gold; -fx-text-fill: black;" text="Print" GridPane.halignment="LEFT" GridPane.rowIndex="2">
-            <font>
-                <Font name="System Bold" size="18.0" />
-            </font>
+        <Button onAction="#onBack" prefHeight="39.0" prefWidth="140.0" text="Back" GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
+        <Button fx:id="printButton" onAction="#onClickPrint" prefHeight="39.0" prefWidth="140.0"  text="Print" GridPane.halignment="LEFT" GridPane.rowIndex="2">
         </Button>
 
-        <Button fx:id="eos" onAction="#onEOS" prefHeight="39.0" prefWidth="285.0" style="-fx-background-color: gold; -fx-text-fill: black;" text="End Current Operational Shift" GridPane.rowIndex="2">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Button>
+        <Button fx:id="eos" onAction="#onEOS" prefHeight="39.0" prefWidth="285.0" text="End Current Operational Shift" GridPane.rowIndex="2">
+
+        </Button>
     </children>
 </GridPane>

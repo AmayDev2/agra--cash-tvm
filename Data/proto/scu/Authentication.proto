@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package com.proto.scu.object;
+
+option java_multiple_files = true;
+option java_package = "org.amaytechnosystems";
+option java_outer_classname = "SCUAuthenticationProto";
+
+
+import "meta/RequestMetaData.proto";
+import "meta/ResponseMetaData.proto";
+
+
+message SCUAuthenticationRequest {
+  string username = 1;
+  string password = 2;
+  meta.reqmetadata.RequestMetaData requestMetaData = 3;
+}
+
+message SCUAuthenticationResponse {
+  string token = 1;
+  meta.respmetadata.ResponseMetaData responseMetaData = 2;
+}

@@ -1,3 +1,10 @@
+.button:focused {
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-border-radius: 5px;
+    -fx-background-color: lightyellow; /* optional highlight */
+}
+
 .tab-pane {
     -fx-tab-min-width: 200px;
     -fx-tab-max-width: 200px;

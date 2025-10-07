@@ -304,5 +304,13 @@ public class ViewFactory {
     public static FXMLLoader getReportsView() {
         return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/pdu/report.fxml"));
     }
+
+
+    public static FXMLLoader getSystemInfo() {
+        return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/pdu/system_info.fxml"));
+    }
+
+
+
 }
 

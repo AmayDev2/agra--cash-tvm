@@ -5,6 +5,7 @@
 <AnchorPane fx:id="mainRootPane" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #fff;"
             xmlns="http://javafx.com/javafx/17.0.12"
             xmlns:fx="http://javafx.com/fxml/1"
+            styleClass="background"
             fx:controller="com.amay.tom.pdu.controller.PDUController">
    <children>
        <GridPane prefHeight="480.0" prefWidth="640.0">
