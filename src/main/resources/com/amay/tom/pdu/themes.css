@@ -7,6 +7,10 @@
     -fx-background-color: #ffffff;
 }
 
+.background{
+-fx-background-color: #E6F2FF;}
+
+
 .bg-accent-blue {
     -fx-background-color: #E6F2FF;
 }

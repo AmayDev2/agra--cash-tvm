@@ -201,6 +201,9 @@ public class Main extends Application {
 
                 // Add global key filter
                 new KeypadHandler().attach(pduScene);
+                pduScene.getStylesheets().add(getClass().getResource("/com/amay/tom/pdu/styles.css").toExternalForm());
+                pduScene.getStylesheets().add(getClass().getResource("/com/amay/tom/pdu/themes.css").toExternalForm());
+
 
                 PDUCommandDispatcher.INSTANCE.setController(controller);
 
