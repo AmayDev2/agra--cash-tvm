@@ -1332,6 +1332,8 @@ public class BNRIntegration  {
                         IJxfsCDRConst.JXFS_C_CDR_POS_DEFAULT));
             }//run
         });
+
+        //TODO: Send dispanced  notes
         //
     }//dispense
 

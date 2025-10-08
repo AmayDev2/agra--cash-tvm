@@ -6,9 +6,12 @@ import com.amay.tom.config.SystemConfig;
 import com.amay.tom.controller.components.StatusBottomBarView;
 import com.amay.tom.exceptions.EmptyUsernameOrPasswordException;
 import com.amay.tom.exceptions.UsernameNotFoundException;
+import com.amay.tom.model.session.Shift;
+import com.amay.tom.model.session.ShiftMapper;
 import com.amay.tom.model.station.Station;
 import com.amay.tom.pdu.MaintenanceController;
 import com.amay.tom.pdu.controller.service.SceneManager;
+import com.amay.tom.repository.session.ShiftRepository;
 import com.amay.tom.repository.session.ShiftRepositoryImpl;
 import com.amay.tom.repository.user.UserRepositoryImpl;
 import com.amay.tom.service.devices.DeviceStatusListener;
@@ -34,9 +37,13 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.amaytechnosystems.ShiftStatus;
 import org.tinylog.Logger;
 
+import java.sql.SQLException;
+import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
@@ -149,8 +156,17 @@ public class MaintenanceLogin {
         MaintenanceController controller=new MaintenanceController(this.agent,this.sceneManager);
         fxmlLoader.setControllerFactory((x)->controller);
         this.sceneManager.addToScene(fxmlLoader);
+        Shift shift = agent.getShift();
+        LocalDateTime currentTime = LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
+        shift.setCurrentStatus(ShiftStatus.PAUSED.name())
+                .setUpdatedAt(currentTime);
 
         Logger.tag(LoggerTag.APP).debug("Loaded Hoppers Screen !!!");
+        try {
+            agent.getShiftRepository().shiftPauseResume(ShiftMapper.toDto(shift));
+        } catch (SQLException e) {
+            Logger.error("Error marking Shift status to Pause while maintenance login : "+e.getMessage());
+        }
         event.consume();
 
 //        mainStage = (Stage) messageLabel.getScene().getWindow();

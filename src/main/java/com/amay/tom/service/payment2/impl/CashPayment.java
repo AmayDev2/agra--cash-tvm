@@ -1,6 +1,7 @@
 package com.amay.tom.service.payment2.impl;
 
 import com.amay.tom.ViewFactory;
+import com.amay.tom.agent.Agent;
 import com.amay.tom.enums.PayMethod;
 import com.amay.tom.model.payment.PaymentResponse;
 import com.amay.tom.service.payment2.PaymentMedia;
@@ -31,7 +32,11 @@ public class CashPayment implements PaymentMedia {
         StackPane stackPane = (StackPane) args[0] ; // ✅ if first element is a StackPane
         TransactionRepository transactionRepository=(TransactionRepository) args[1];
         PaymentController paymentController=(PaymentController) args[2];
-        ThreadPool threadPool=(ThreadPool) args[3];
+//        ThreadPool threadPool=(ThreadPool) args[3];
+        Agent agent = (Agent) args[3];
+
+
+
         paymentResponse=new PaymentResponse();
         try {
             //System.out.println("Cash Payment: " + amount + " OrderId: " + orderId);
@@ -57,7 +62,7 @@ public class CashPayment implements PaymentMedia {
             }});
             CompletableFuture.runAsync(()->
              {
-                BNRIntegration.AcceptAmountResponse response = BNRIntegration.cashIn(this, (int) amount, new BNRListener(cashInsertProcessingController));
+                BNRIntegration.AcceptAmountResponse response = BNRIntegration.cashIn(this, (int) amount, new BNRListener(cashInsertProcessingController, agent.getFinanceOperationRepository(), agent.getShift().getShiftId(), agent.getNoteAmountRepository()));
                 if(response.isStatus()){
                     paymentResponse.setStatus(TransactionStatus.SUCCESS.name()).setSuccess(true);
                     paymentResponse.setDenomination((int) (response.getAcceptedAmount()-(
@@ -76,7 +81,7 @@ public class CashPayment implements PaymentMedia {
                 saveInDbPaymentCompletion(paymentResponse,transactionRepository);
                 Platform.runLater(()->{stackPane.getChildren().removeLast();});
                 paymentController.eventListener(paymentResponse);
-            },threadPool.getFixedThreadPool());
+            },agent.getThreadPool().getFixedThreadPool());
 
         }catch (Exception e){
             saveInDbPaymentCompletion(paymentResponse,transactionRepository);

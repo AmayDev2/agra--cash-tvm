@@ -60,11 +60,16 @@ public class ModesListener implements RemoteListener {
         if(agent.getDeviceStatus().getCurrentStatus()== DeviceOperationMode.IN_SERVICE) {
             agent.getGrpcApiListener().sendOperationMode(OperationMode.IN_SERVICE);
             agent.getGrpcApiListener().sendPeripheralStatus(agent.getDeviceStatusListener().getDeviceStatus());
+            agent.getCcuGrpcApiListener().sendOperationMode(OperationMode.IN_SERVICE);
+            agent.getCcuGrpcApiListener().sendPeripheralStatus(agent.getDeviceStatusListener().getDeviceStatus());
         }else{
             agent.getGrpcApiListener().sendAlarm(Alarm.NO_STATION_MODE);
             agent.getGrpcApiListener().sendOperationMode(OperationMode.OUT_OF_SERVICE);
+            agent.getCcuGrpcApiListener().sendAlarm(Alarm.NO_STATION_MODE);
+            agent.getCcuGrpcApiListener().sendOperationMode(OperationMode.OUT_OF_SERVICE);
         }
         agent.getGrpcApiListener().sendAlarm(Alarm.NO_STATION_MODE);
+        agent.getCcuGrpcApiListener().sendAlarm(Alarm.NO_STATION_MODE);
 
 
 //        agent.getGrpcApiListener().sendOperationMode(OperationMode.IN_SERVICE);
@@ -85,6 +90,8 @@ public class ModesListener implements RemoteListener {
         agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.MAINTENANCE);
         agent.getGrpcApiListener().sendAlarm(Alarm.MAINTENANCE_MODE);
         agent.getGrpcApiListener().sendOperationMode(OperationMode.MAINTENANCE);
+        agent.getCcuGrpcApiListener().sendAlarm(Alarm.MAINTENANCE_MODE);
+        agent.getCcuGrpcApiListener().sendOperationMode(OperationMode.MAINTENANCE);
 
     }
 
@@ -92,6 +99,8 @@ public class ModesListener implements RemoteListener {
         agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.TEST);
         agent.getGrpcApiListener().sendAlarm(Alarm.TEST_MODE);
         agent.getGrpcApiListener().sendOperationMode(OperationMode.TEST);
+        agent.getCcuGrpcApiListener().sendAlarm(Alarm.TEST_MODE);
+        agent.getCcuGrpcApiListener().sendOperationMode(OperationMode.TEST);
 
     }
 
@@ -140,6 +149,7 @@ public class ModesListener implements RemoteListener {
 //        agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.IN_SERVICE);
 //        agent.getGrpcApiListener().sendAlarm(Alarm.IN_SERVICE_QR_CARD);
         agent.getGrpcApiListener().sendInServiceOperationMode(OperationMode.IN_SERVICE,true,true);
+        agent.getCcuGrpcApiListener().sendInServiceOperationMode(OperationMode.IN_SERVICE,true,true);
     }
 
     private void setStationClosedMode() {
