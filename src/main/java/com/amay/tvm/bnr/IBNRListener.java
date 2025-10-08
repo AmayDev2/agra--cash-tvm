@@ -1,5 +1,7 @@
 package com.amay.tvm.bnr;
 
+import com.amay.tvm.backend.entity.FinanceOperationEntity;
+
 import java.util.List;
 
 public interface IBNRListener {
@@ -12,4 +14,6 @@ public interface IBNRListener {
     void disableCancelButton();
 
     void getAcceptedAmount();
+
+    void dispensedAmount(List<FinanceOperationEntity> amountAndQuantity);
 }

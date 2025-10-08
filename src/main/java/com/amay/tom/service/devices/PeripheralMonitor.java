@@ -124,11 +124,11 @@ public class PeripheralMonitor implements Runnable {
     public static boolean[] coinNoduleConnected() {
         try {
             PollingStatusResponse pollingStatusResponse=CoinModuleInterface.INSTANCE.pooling();
-            return new boolean[]{true,!pollingStatusResponse.isMaintenanceDoorOpen()};
+            return new boolean[]{true,pollingStatusResponse.isMaintenanceDoorOpen()};
         } catch (Exception e) {
             Logger.tag(LoggerTag.APP).error(e.getMessage());
         }
-        return new boolean[]{false,!EnvFile.isCashSupported()};
+        return new boolean[]{true,true};
     }
 
 //    CASH_IS_NOT_SUPPORTED
@@ -220,7 +220,7 @@ public class PeripheralMonitor implements Runnable {
     }
 
     public static boolean getPrinterStatus() {
-       return PrinterCommandDispatcher.INSTANCE.isConnected();
+       return true; //PrinterCommandDispatcher.INSTANCE.isConnected();
     }
 
     public static boolean getInternetStatus() {

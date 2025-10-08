@@ -2,6 +2,8 @@ package com.amay.tom.pdu;
 
 import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
+import com.amay.tom.model.session.Shift;
+import com.amay.tom.model.session.ShiftMapper;
 import com.amay.tom.pdu.controller.MoneyManageController;
 import com.amay.tom.pdu.controller.ReportController;
 import com.amay.tom.pdu.controller.SystemInfoController;
@@ -13,9 +15,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.amaytechnosystems.ShiftStatus;
 import org.tinylog.Logger;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 
 public class MaintenanceController {
     private final Agent agent;
@@ -74,6 +81,12 @@ public class MaintenanceController {
 
     @FXML
     private void onLogout(ActionEvent actionEvent) {
+        Logger.tag(LoggerTag.APP).info("Logout pressed in maintenance");
+        agent.getShiftService().resumeShift("admin");
+
+        Shift shiftM = agent.getShiftMaintenance();
+        agent.getShiftService().markLastShiftAsCompleted(shiftM.getShiftId());
+
         this.sceneManager.back();
         actionEvent.consume();
     }

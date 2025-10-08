@@ -6,6 +6,8 @@ import com.amay.tom.config.SystemConfig;
 import com.amay.tom.controller.components.StatusBottomBarView;
 import com.amay.tom.exceptions.EmptyUsernameOrPasswordException;
 import com.amay.tom.exceptions.UsernameNotFoundException;
+import com.amay.tom.model.session.Shift;
+import com.amay.tom.model.session.ShiftMapper;
 import com.amay.tom.model.station.Station;
 import com.amay.tom.pdu.MaintenanceController;
 import com.amay.tom.pdu.controller.service.SceneManager;
@@ -34,9 +36,13 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.amaytechnosystems.ShiftStatus;
 import org.tinylog.Logger;
 
+import java.sql.SQLException;
+import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
@@ -144,13 +150,35 @@ public class MaintenanceLogin {
             Logger.error("Error stopping buzzer: {}", e.getMessage());
         }
 
-        Logger.tag(LoggerTag.APP).debug("Loading Hoppers Screen");
-        FXMLLoader fxmlLoader=ViewFactory.getMaintenanceHome();
-        MaintenanceController controller=new MaintenanceController(this.agent,this.sceneManager);
-        fxmlLoader.setControllerFactory((x)->controller);
-        this.sceneManager.addToScene(fxmlLoader);
+        try {
+            Shift shidt=agent.getShiftService().startMaintenanceShift(usernameField.getText(), passwordField.getText());
+            if(null!=shidt) {
+                this.agent.setShiftMaintenance(shidt);
+            }
 
-        Logger.tag(LoggerTag.APP).debug("Loaded Hoppers Screen !!!");
+
+
+            Shift shift = agent.getShift();
+            LocalDateTime currentTime = LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
+            shift.setCurrentStatus(ShiftStatus.PAUSED.name())
+                    .setUpdatedAt(currentTime);
+            Logger.tag(LoggerTag.APP).debug("Loaded Hoppers Screen !!!");
+            try {
+                agent.getShiftRepository().shiftPauseResume(ShiftMapper.toDto(shift));
+            } catch (SQLException e) {
+                Logger.error("Error marking Shift status to Pause while maintenance login : "+e.getMessage());}
+
+
+                Logger.tag(LoggerTag.APP).debug("Loading Hoppers Screen");
+                FXMLLoader fxmlLoader = ViewFactory.getMaintenanceHome();
+                MaintenanceController controller = new MaintenanceController(this.agent, this.sceneManager);
+                fxmlLoader.setControllerFactory((x) -> controller);
+                this.sceneManager.addToScene(fxmlLoader);
+
+                Logger.tag(LoggerTag.APP).debug("Loaded Hoppers Screen !!!");
+            } catch (Exception ex) {
+            Logger.tag(LoggerTag.APP).error("Error during maintenance login: {}", ex.getMessage());
+        }
         event.consume();
 
 //        mainStage = (Stage) messageLabel.getScene().getWindow();

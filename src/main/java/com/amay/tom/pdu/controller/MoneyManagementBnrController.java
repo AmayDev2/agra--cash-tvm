@@ -37,6 +37,7 @@ public class MoneyManagementBnrController {
 
     public void onReceipt(ActionEvent actionEvent) {
         BNRIntegration.reBootBnr();
+        actionEvent.consume();
     }
 
     public void onReset(ActionEvent actionEvent) {
@@ -45,6 +46,7 @@ public class MoneyManagementBnrController {
         } catch (JxfsException e) {
             Logger.tag(LoggerTag.APP).error("Error resetting BNR: {}", e.getMessage());
         }
+        actionEvent.consume();
     }
 
     public void onBack(ActionEvent actionEvent) {

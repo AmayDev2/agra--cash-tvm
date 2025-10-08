@@ -338,4 +338,9 @@ public class TimeUtil {
     public static LocalDateTime getCurrentTimeAsLocalDateTime() {
         return LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
     }
+
+    public static String formated(LocalDateTime localDateTime){
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATE_FORMAT);
+        return localDateTime.format(formatter);
+    }
 }

@@ -73,6 +73,7 @@ public class Agent {
     private TomInitialize tomInitialize;
     private AdjustedTicketRepository adjustedTicketRepository;
     private Shift shift;
+    private Shift shiftMaintenance;
     private CCUTGService ccutgService;
     private ImpDeviceStatusListener deviceStatusListener;
     private DeviceStatus deviceStatus;

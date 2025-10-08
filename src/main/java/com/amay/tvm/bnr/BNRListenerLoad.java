@@ -64,11 +64,16 @@ public class BNRListenerLoad implements IBNRListener {
 
     @Override
     public void disableCancelButton() {
-        Platform.runLater(()-> controller.disableCancelButton());
+        Platform.runLater(controller::disableCancelButton);
     }
 
     @Override
     public void getAcceptedAmount() {
+
+    }
+
+    @Override
+    public void dispensedAmount(List<FinanceOperationEntity> amountAndQuantity) {
 
     }
 }

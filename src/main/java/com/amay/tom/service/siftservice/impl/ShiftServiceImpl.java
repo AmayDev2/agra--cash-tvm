@@ -5,13 +5,9 @@ import com.amay.printer.ShiftReportData;
 import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.config.SystemConfig;
-import com.amay.tom.controller.Controller;
-import com.amay.tom.controller.EOSReport;
-import com.amay.tom.controller.Maintenance;
 import com.amay.tom.enums.*;
 import com.amay.tom.model.TicketType;
 import com.amay.tom.model.adjust.AdjustedTicketDto;
-import com.amay.tom.model.ccuRest.Role;
 import com.amay.tom.model.refund.Refund;
 import com.amay.tom.model.replacement.Replacement;
 import com.amay.tom.model.session.Shift;
@@ -19,35 +15,22 @@ import com.amay.tom.model.session.ShiftDto;
 import com.amay.tom.model.session.ShiftMapper;
 import com.amay.tom.model.tickets.TicketsDto;
 import com.amay.tom.model.user.entity.UserPrivilege;
-import com.amay.tom.pdu.controller.command.AbnormalStationModeCommand;
-import com.amay.tom.pdu.controller.command.PDUCommandDispatcher;
 import com.amay.tom.repository.session.ShiftRepository;
 import com.amay.tom.service.base36.Base36Encoder;
 import com.amay.tom.service.base36.ShiftIdGeneratorService;
-import com.amay.tom.service.print.impl.ImplPrintTicket;
 import com.amay.tom.service.siftservice.PopupContent;
 import com.amay.tom.service.siftservice.ShiftService;
 import com.amay.tom.service.userauth.UserAuth;
-import com.amay.tom.utils.folder.NewFolder;
 import com.amay.tom.utils.helper.Helper;
-import com.amay.tom.utils.image.ImageUtils;
 import com.amay.tom.utils.time.TimeUtil;
-import com.amay.tvm.backend.entity.FinanceOperationEntity;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.controller.TVMController;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.ProgressIndicator;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
 import org.amaytechnosystems.ShiftStatus;
-import org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException;
 import org.tinylog.Logger;
 
-import java.awt.image.BufferedImage;
-import java.io.IOException;
 import java.sql.Timestamp;
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -66,6 +49,7 @@ public class ShiftServiceImpl implements ShiftService {
     private PopupContent popupContent;
     private Stage mainStage;
     private  TVMController tvmController;
+    private String password;
 
     public ShiftServiceImpl(Agent agent, UserAuth userAuth, ShiftRepository shiftRepository) {
         this.userAuth = userAuth;
@@ -77,6 +61,7 @@ public class ShiftServiceImpl implements ShiftService {
     @Override
     public FXMLLoader startShift(String username, String password) throws Exception {
         try (UserPrivilege userPrivilege = userAuth.login(username, password)) {
+            this.password=password;
 
             this.agent.setUserPrivilege(userPrivilege);
             this.agent.setUserAuth(userAuth);
@@ -149,6 +134,61 @@ public class ShiftServiceImpl implements ShiftService {
 //        catch (JdbcSQLIntegrityConstraintViolationException e){
 //
 //        }
+        catch (Exception usernameNotFoundException) {
+            agent.getGrpcApiListener().sendAlarm(Alarm.LOGIN_FAILED);
+            agent.getCcuGrpcApiListener().sendAlarm(Alarm.LOGIN_FAILED);
+            throw  usernameNotFoundException;
+        }
+    }
+
+    @Override
+    public Shift startMaintenanceShift(String username, String password) throws Exception {
+        try (UserPrivilege userPrivilege = userAuth.login(username, password)) {
+
+            this.agent.setUserPrivilege(userPrivilege);
+            this.agent.setUserAuth(userAuth);
+            int lastShiftSeq=getLastShiftIdFromServer();
+            LocalDateTime currentTime = LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
+
+            ShiftIdGeneratorService shiftIdGeneratorService= new ShiftIdGeneratorService(lastShiftSeq,shiftRepository, Base36Encoder.encode(Long.parseLong( TimeUtil.getCurrentDayPrefix()+SystemConfig.getInstance().getCurrentEquipment().getEquipmentId())));
+
+            String shiftId=shiftIdGeneratorService.getShiftId();
+
+
+            Shift shift = new Shift()
+                    .setOperatorId(username)
+                    .setShiftId(shiftId)
+                    .setDeviceId(agent.getSystemConfig().getCurrentEquipment().getEquipmentId())
+                    .setDeviceSerial(agent.getSystemConfig().getCurrentEquipment().getEquipmentSerial())
+                    .setCreatedAt(currentTime)
+                    .setStartTime(currentTime)
+                    .setUpdatedAt(currentTime)
+                    .setStationId(agent.getSystemConfig().getCurrentStation().getStationId())
+                    .setLineNo(agent.getSystemConfig().getLineNumber())
+                    .setCurrentStatus(ShiftStatus.ACTIVE.name())
+                    .setConfig_version(agent.getMasterConfigInfo().getConfigVer());
+            shiftRepository.startShift(ShiftMapper.toDto(shift));
+
+            //   notifying to scu
+
+            Logger.tag(LoggerTag.APP).debug("Login data pushed to CC {}",agent.getPeripheralMonitor().isCcu_connected());
+            if(agent.getPeripheralMonitor().isCcu_connected()) {
+                Logger.tag(LoggerTag.APP).debug("Login data pushed to CC");
+                CompletableFuture.runAsync(() -> agent.getCcuService().pushShiftInfo(shift), agent.getThreadPool().getFixedThreadPool());
+                Logger.tag(LoggerTag.APP).debug("CC responded to login data push");
+            }
+
+            Logger.tag(LoggerTag.APP).debug("Login data pushed to SC {}",agent.getPeripheralMonitor().isScu_connected());
+            //scu push
+            if(agent.getPeripheralMonitor().isScu_connected()) {
+                Logger.tag(LoggerTag.APP).debug("Login data pushed to SC");
+                CompletableFuture.runAsync(() -> agent.getScuService().pushShiftInfo(shift), agent.getThreadPool().getFixedThreadPool());
+                Logger.tag(LoggerTag.APP).debug("SC responded to login data push");
+            }
+            return shift;
+
+
+        }
         catch (Exception usernameNotFoundException) {
             agent.getGrpcApiListener().sendAlarm(Alarm.LOGIN_FAILED);
             agent.getCcuGrpcApiListener().sendAlarm(Alarm.LOGIN_FAILED);
@@ -549,17 +589,17 @@ public class ShiftServiceImpl implements ShiftService {
         shift.setCurrentStatus(ShiftStatus.PAUSED.name())
                 .setUpdatedAt(currentTime);
 
-        // remove user privilege and user auth
-        this.agent.setUserPrivilege(null);
-        this.agent.setUserAuth(null);
+//        // remove user privilege and user auth
+//        this.agent.setUserPrivilege(null);
+//        this.agent.setUserAuth(null);
 
         try{shiftRepository.shiftPauseResume(ShiftMapper.toDto(shift));
             //notify to scu
             agent.getScuService().pushShiftPause(shift);
 
-            //popup
-            popupContent = new PopupContent(this);
-            popupContent.show();
+//            //popup
+//            popupContent = new PopupContent(this);
+//            popupContent.show();
         }catch (Exception e){
             //TODO: log
             e.printStackTrace();
@@ -570,34 +610,25 @@ public class ShiftServiceImpl implements ShiftService {
     @Override
     public void resumeShift(String password) {
         agent.getGrpcApiListener().sendAlarm(Alarm.ATTEMPT_SHIFT_RESUME);
-        try(UserPrivilege userPrivilege=userAuth.login(userAuth.getCurrentUser().getUsername(),password)) {
+//        try(UserPrivilege userPrivilege=userAuth.login(userAuth.getCurrentUser().getUsername(),password)) {
 
+        try{
             LocalDateTime currentTime = LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
             // updateToAdd 4 columns endTime,endReason,updatedAt,status
             shift.setCurrentStatus(ShiftStatus.ACTIVE.name()).setUpdatedAt(currentTime);
             shiftRepository.shiftPauseResume(ShiftMapper.toDto(shift));
             agent.getScuService().resumeShiftPause(shift);
 
-            this.agent.setUserPrivilege(userPrivilege);
-            this.agent.setUserAuth(userAuth);
-
+//            this.agent.setUserPrivilege(userPrivilege);
+//            this.agent.setUserAuth(userAuth);
 //
-//            agent.getThreadPool().getScheduler().schedule(() -> {
-//                try {
-//                    this.endOfShift(EOSType.OPERATOR);
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//            }, 5, TimeUnit.SECONDS);
-
-            //TODO: UPDATE UI
-            popupContent.Close();
-            agent.getGrpcApiListener().sendAlarm(Alarm.SHIFT_RESUME);
+//            //TODO: UPDATE UI
+//            popupContent.Close();
+//            agent.getGrpcApiListener().sendAlarm(Alarm.SHIFT_RESUME);
 
 
         }catch (Exception e){
             agent.getGrpcApiListener().sendAlarm(Alarm.SHIFT_RESUME_FAILED);
-            popupContent.setError("wrong credential");
         }
     }
 

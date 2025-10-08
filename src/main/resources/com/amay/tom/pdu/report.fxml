@@ -35,9 +35,8 @@
     <Button fx:id="printButton" onAction="#onClickPrint" prefHeight="39.0" prefWidth="140.0" text="Print" GridPane.halignment="LEFT" >
     </Button>
 
-    <Button fx:id="eos" onAction="#onEOS" prefHeight="39.0" prefWidth="285.0" text="End Current Operational Shift" >
-
-    </Button>
+    <Button fx:id="eos" onAction="#onEOS" prefHeight="39.0" prefWidth="285.0" text="End Current Operational Shift" />
+        <Button fx:id="balanceQuery" onAction="#onBalance" prefHeight="39.0" prefWidth="285.0" text="Balance Report" />
     </HBox>
    <columnConstraints>
       <ColumnConstraints />

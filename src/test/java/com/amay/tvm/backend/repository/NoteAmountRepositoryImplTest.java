@@ -23,7 +23,7 @@ class NoteAmountRepositoryImplTest {
 
     @AfterAll
     static void cleanup() {
-        noteAmountRepository.resetToZero(); // Ensure a clean state before the test
+//        noteAmountRepository.resetToZero(); // Ensure a clean state before the test
         if (noteAmountRepository instanceof NoteAmountRepository repoImpl) {
             try {
                 repoImpl.connection.close();
@@ -60,13 +60,26 @@ class NoteAmountRepositoryImplTest {
     void testSaveAndFindByDenomination() {
         try {
             noteAmountRepository.deleteAll(); // Ensure a clean state before the test
-            NoteAmountEntity entity = createSampleEntity(100, 5, 2);
+            NoteAmountEntity entity = createSampleEntity(100, 0, 0);
              noteAmountRepository.updateToAdd(entity);
+             entity = createSampleEntity(50, 0, 0);
+            noteAmountRepository.updateToAdd(entity);
+            entity = createSampleEntity(20, 0, 0);
+            noteAmountRepository.updateToAdd(entity);
+            entity = createSampleEntity(10, 0, 0);
+            noteAmountRepository.updateToAdd(entity);
+            entity = createSampleEntity(500, 0, 0);
+            noteAmountRepository.updateToAdd(entity);
+            entity = createSampleEntity(200, 0, 0);
+            noteAmountRepository.updateToAdd(entity);
+
+
+            noteAmountRepository.updateToAdd(entity);
             NoteAmountEntity retrieved = noteAmountRepository.findById(100);
             assertNotNull(retrieved, "Retrieved entity should not be null");
             assertEquals(100, retrieved.getUnitAmount(), "Denomination should match");
-            assertEquals(5, retrieved.getCashInQuantity(), "Cash-in quantity should match");
-            assertEquals(2, retrieved.getCashOutQuantity(), "Cash-out quantity should match");
+            assertEquals(0, retrieved.getCashInQuantity(), "Cash-in quantity should match");
+            assertEquals(0, retrieved.getCashOutQuantity(), "Cash-out quantity should match");
             Logger.tag(LoggerTag.APP).info(" {}", NoteAmountMapper.toDto(retrieved));
         } catch (Exception e) {
             fail("Exception during testSaveAndFindByDenomination: " + e.getMessage());

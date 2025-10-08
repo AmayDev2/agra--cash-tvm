@@ -2,6 +2,8 @@ package com.amay.tvm.bnr;
 
 
 import com.amay.tom.service.payment2.impl.CashPayment;
+import com.amay.tvm.backend.entity.FinanceOperationEntity;
+import com.amay.tvm.backend.enums.FinanceOperation;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.coin.CoinModuleInterface;
 import com.amay.tvm.coin.model.AmountDetail;
@@ -18,6 +20,7 @@ import com.jxfs.general.IJxfsConst;
 import com.jxfs.general.JxfsDeviceManager;
 import com.jxfs.general.JxfsRemoteDeviceInformation;
 import com.mei.bnr.Bnr;
+import com.mei.bnr.cashunit.DenominationItem;
 import com.mei.bnr.consts.error.BnrXfsErrorCode;
 import com.mei.bnr.exception.BnrException;
 import com.mei.bnr.jxfs.device.*;
@@ -27,10 +30,7 @@ import com.mei.bnr.jxfs.drivers.BnrUsbDriver;
 import com.mei.bnr.jxfs.service.IDirectIOConsts;
 import com.mei.bnr.jxfs.service.MEIJxfsCode;
 import com.mei.bnr.jxfs.service.SpecificDeviceManager;
-import com.mei.bnr.jxfs.service.data.MEIBnrStatus;
-import com.mei.bnr.jxfs.service.data.MEICashInOrder;
-import com.mei.bnr.jxfs.service.data.MEICashUnit;
-import com.mei.bnr.jxfs.service.data.MEIDenominationInfo;
+import com.mei.bnr.jxfs.service.data.*;
 import com.mei.bnr.jxfs.util.ISynchronousOperation;
 import com.mei.bnr.jxfs.util.MEIJxfsException;
 import com.mei.bnr.jxfs.util.SynchronousJxfsOperationHelper;
@@ -46,6 +46,7 @@ import org.tinylog.Logger;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 @Slf4j
 public class BNRIntegration  {
@@ -1303,6 +1304,7 @@ public class BNRIntegration  {
         bnrListener.informationToShow(BNRMessage.CHANGE_COLLECT);
         dispense(amountToChange);
         present();
+
     }//dispenseAndPresent
 
     /****************************************************************************
@@ -1317,14 +1319,9 @@ public class BNRIntegration  {
      ***************************************************************************/
     private static void dispense(final long amountToChange) throws JxfsException {
         final int mixNumber = IJxfsCDRConst.JXFS_C_CDR_MIX_ALGORITHM;
-//        Vector v=new Vector();
-//        if(vector!=null) {
-//            v.add(vector.get(6));
-//            v.add(vector.get(6));
-//        }
 
         // Run dispense operation
-        var event=helper.run(new ISynchronousOperation() {
+        JxfsOperationCompleteEvent event=helper.run(new ISynchronousOperation() {
             public int run(JxfsATM control) throws JxfsException {
                 return control.dispense(new JxfsDispenseRequest(mixNumber,
                         new JxfsDenomination(null, amountToChange, 0),
@@ -1332,6 +1329,14 @@ public class BNRIntegration  {
                         IJxfsCDRConst.JXFS_C_CDR_POS_DEFAULT));
             }//run
         });
+
+        if(event.getResult() != IJxfsConst.JXFS_RC_SUCCESSFUL) {
+            throw new JxfsException(event.getResult());
+        }else{
+            MEIDispenseOrder meiDispenseOrder= (MEIDispenseOrder) event.getData();
+            bnrListener.dispensedAmount(getAmountAndQuantity(meiDispenseOrder.getMEIDenomination().getItems()));
+            Logger.tag(LoggerTag.APP).debug("Dispense operation successful");
+        }
         //
     }//dispense
 
@@ -1437,6 +1442,26 @@ public class BNRIntegration  {
         return bnrHaveAmount;
 
     }//observeCashUnit
+
+    public static List<FinanceOperationEntity> getAmountAndQuantity(Vector<JxfsDenominationItem> list) throws JxfsException {
+
+
+        List<FinanceOperationEntity> list2=new ArrayList<>();
+        Logger.tag(LoggerTag.APP).debug("\n******************* Cash Units *******************");
+        MEICashUnit cashUnit=queryCashUnit();
+
+        cashUnit.getLogicalCashUnits()     // full list
+                .subList(5, 9)               // indices 5 (inclusive) … 9 (exclusive) ⇒ elements 5-8
+                .forEach(x -> {
+                    list.stream().filter(p->x.getNumber()==p.getUnit()).forEach(xd->{
+                        int amount=Integer.parseInt(x.getCashTypeDescription().split(" ")[1])/100;
+                       list2.add(new FinanceOperationEntity().setQuantity(xd.getCount()).setUnitAmount(amount).setOperationType(FinanceOperation.BNR_DISPENSE));
+                    });
+                });
+
+        return list2;
+
+    }
 
     /****************************************************************************
      * queryCashUnit

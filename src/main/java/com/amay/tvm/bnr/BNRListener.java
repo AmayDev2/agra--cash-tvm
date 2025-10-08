@@ -1,5 +1,6 @@
 package com.amay.tvm.bnr;
 
+import com.amay.tvm.backend.entity.FinanceOperationEntity;
 import com.amay.tvm.controller.CashInsertProcessingController;
 import javafx.application.Platform;
 
@@ -46,6 +47,11 @@ public class BNRListener implements IBNRListener {
 
     @Override
     public void getAcceptedAmount() {
+
+    }
+
+    @Override
+    public void dispensedAmount(List<FinanceOperationEntity> amountAndQuantity) {
 
     }
 }
