@@ -229,6 +229,9 @@ public class TVMController {
                 agent.getGrpcApiListener().sendAlarm(Alarm.IN_SERVICE);
                 agent.getGrpcApiListener().sendOperationMode(OperationMode.IN_SERVICE);
                 agent.getGrpcApiListener().sendPeripheralStatus(agent.getPeripheralMonitor().getDeviceStatus());
+                agent.getCcuGrpcApiListener().sendAlarm(Alarm.IN_SERVICE);
+                agent.getCcuGrpcApiListener().sendOperationMode(OperationMode.IN_SERVICE);
+                agent.getCcuGrpcApiListener().sendPeripheralStatus(agent.getPeripheralMonitor().getDeviceStatus());
             } else {
                 if (currentMode != newStatus && newStatus == DeviceOperationMode.EMERGENCY) {
                     FXMLLoader loader = ViewFactory.getSpecialModeScreen();
@@ -238,6 +241,8 @@ public class TVMController {
                         borderPane.setCenter(loader.load());
                         agent.getGrpcApiListener().sendAlarm(Alarm.EMERGENCY);
                         agent.getGrpcApiListener().sendSpecialMode(SpecialMode.EMERGENCY);
+                        agent.getCcuGrpcApiListener().sendAlarm(Alarm.EMERGENCY);
+                        agent.getCcuGrpcApiListener().sendSpecialMode(SpecialMode.EMERGENCY);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -249,6 +254,8 @@ public class TVMController {
                         borderPane.setCenter(loader.load());
                         agent.getGrpcApiListener().sendAlarm(Alarm.STATION_CLOSE);
                         agent.getGrpcApiListener().sendSpecialMode(SpecialMode.STATION_CLOSED_MODE);
+                        agent.getCcuGrpcApiListener().sendAlarm(Alarm.STATION_CLOSE);
+                        agent.getCcuGrpcApiListener().sendSpecialMode(SpecialMode.STATION_CLOSED_MODE);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -260,6 +267,8 @@ public class TVMController {
                         borderPane.setCenter(loader.load());
                         agent.getGrpcApiListener().sendAlarm(Alarm.OUT_OF_SERVICE);
                         agent.getGrpcApiListener().sendOperationMode(OperationMode.OUT_OF_SERVICE);
+                        agent.getCcuGrpcApiListener().sendAlarm(Alarm.OUT_OF_SERVICE);
+                        agent.getCcuGrpcApiListener().sendOperationMode(OperationMode.OUT_OF_SERVICE);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -271,6 +280,8 @@ public class TVMController {
                         newStatus.performAction();
                         agent.getGrpcApiListener().sendAlarm(Alarm.MAINTENANCE_MODE);
                         agent.getGrpcApiListener().sendOperationMode(OperationMode.MAINTENANCE);
+                        agent.getCcuGrpcApiListener().sendAlarm(Alarm.MAINTENANCE_MODE);
+                        agent.getCcuGrpcApiListener().sendOperationMode(OperationMode.MAINTENANCE);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }

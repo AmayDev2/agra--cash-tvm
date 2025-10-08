@@ -1304,7 +1304,6 @@ public class BNRIntegration  {
         bnrListener.informationToShow(BNRMessage.CHANGE_COLLECT);
         dispense(amountToChange);
         present();
-
     }//dispenseAndPresent
 
     /****************************************************************************

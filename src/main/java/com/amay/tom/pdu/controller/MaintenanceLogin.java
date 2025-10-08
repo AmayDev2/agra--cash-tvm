@@ -11,6 +11,7 @@ import com.amay.tom.model.session.ShiftMapper;
 import com.amay.tom.model.station.Station;
 import com.amay.tom.pdu.MaintenanceController;
 import com.amay.tom.pdu.controller.service.SceneManager;
+import com.amay.tom.repository.session.ShiftRepository;
 import com.amay.tom.repository.session.ShiftRepositoryImpl;
 import com.amay.tom.repository.user.UserRepositoryImpl;
 import com.amay.tom.service.devices.DeviceStatusListener;

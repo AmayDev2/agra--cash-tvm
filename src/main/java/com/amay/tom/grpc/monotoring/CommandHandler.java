@@ -45,9 +45,9 @@ public class CommandHandler {
 //            case NOTIFY_VERSION_SYNC:
 //                remote=new Remote(new VersionSyncCommand(applicationService));
 //                break;
-//            case GET_OPERATION_MODE:
-//                remote=new Remote(new OperationModeCommand(applicationService));
-//                break;
+            case GET_OPERATION_MODE:
+                remote=new Remote(new OperationalModeCommand(applicationService));
+                break;
             default:
 
                 //System.out.println("UNKNOWN : "+commandType);

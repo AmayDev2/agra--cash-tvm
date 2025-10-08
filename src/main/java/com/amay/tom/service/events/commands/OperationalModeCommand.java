@@ -1,7 +1,9 @@
 package com.amay.tom.service.events.commands;
 
+import com.amay.tom.grpc.monotoring.GrpcApiListener;
 import com.amay.tom.service.events.TOMCommand;
 import com.amay.tom.service.tom.IApplicationService;
+import org.tinylog.Logger;
 
 public class OperationalModeCommand implements TOMCommand {
 
@@ -12,7 +14,9 @@ public class OperationalModeCommand implements TOMCommand {
     }
     @Override
     public boolean executeCommand() {
-         return applicationService.sendCurrentMode();
+        Logger.debug("DeviceInfoCommand executeCommand {}", applicationService);
+        applicationService.notifyListener(GrpcApiListener.class, OperationalModeCommand.class);
+        return true;
 
     }
 }

@@ -6,9 +6,11 @@ import com.amay.tom.enums.Alarm;
 import com.amay.tom.enums.ConnectionStatus;
 import com.amay.tom.model.version.MasterConfigInfo;
 import com.amay.tom.service.events.commands.DeviceInfoCommand;
+import com.amay.tom.service.events.commands.OperationalModeCommand;
 import com.amay.tom.service.events.commands.PheStatusCommand;
 import com.amay.tom.service.events.commands.VersionCommand;
 import com.amay.tom.service.tom.RemoteListener;
+import com.mysql.cj.conf.StringProperty;
 import lombok.extern.slf4j.Slf4j;
 import org.amaytechnosystems.AVersionInfo;
 import org.network.monitorandcontrol.Alarms;
@@ -129,6 +131,8 @@ public class GrpcApiListener implements RemoteListener {
             this.sendPeripheralStatus(agent.getDeviceStatusListener().getDeviceStatus());
         } else if (commandClass.equals(VersionCommand.class)) {
             this.sendVersionInfo(agent.getMasterConfigInfo());
+        } else if (commandClass.equals(OperationalModeCommand.class)) {
+            this.sendOperationMode(OperationMode.valueOf(agent.getDeviceStatus().getCurrentStatus().getDeviceStatusName()));
         } else {
             Logger.error("Command not found in GrpcApiListener");
         }
