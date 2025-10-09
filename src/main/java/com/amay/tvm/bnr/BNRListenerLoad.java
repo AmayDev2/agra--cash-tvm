@@ -74,6 +74,7 @@ public class BNRListenerLoad implements IBNRListener {
 
     @Override
     public void dispensedAmount(List<FinanceOperationEntity> amountAndQuantity) {
-
+        amountAndQuantity.forEach(x->x.setShiftId(shiftId));
+        financeOperationRepository.upsert(amountAndQuantity);
     }
 }
