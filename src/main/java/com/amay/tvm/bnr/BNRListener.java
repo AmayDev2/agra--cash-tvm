@@ -42,14 +42,15 @@ public class BNRListener implements IBNRListener {
 
     @Override
     public void compareTotalAmountAndChange(int totalAcceptedAmount, int change) {
-        financeOperationRepository.markCommited();
         Platform.runLater(()-> {controller.compareAndSet((int)(totalAcceptedAmount*RUPEYA_MULTIPLAYER),(int)(change*RUPEYA_MULTIPLAYER));});
     }
 
     @Override
     public void setStatus(BNRStatus status) {
-
-
+        switch (status){
+            case FAILED ->   financeOperationRepository.rollback();
+            case SUCCESS -> financeOperationRepository.markCommited();
+        }
     }
 
     @Override
@@ -59,7 +60,6 @@ public class BNRListener implements IBNRListener {
 
     @Override
     public void disableCancelButton() {
-        financeOperationRepository.rollback();
         controller.disableCancelButton();
     }
 
@@ -70,6 +70,8 @@ public class BNRListener implements IBNRListener {
 
     @Override
     public void dispensedAmount(List<FinanceOperationEntity> amountAndQuantity) {
+        amountAndQuantity.forEach(x->x.setShiftId(shiftId));
+        financeOperationRepository.upsert(amountAndQuantity);
 
     }
 }

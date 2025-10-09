@@ -1,6 +1,5 @@
 package com.amay.tvm.backend.repository;
 
-import com.amay.tvm.backend.dto.NoteAmountDTO;
 import com.amay.tvm.backend.entity.FinanceOperationEntity;
 import com.amay.tvm.backend.entity.NoteAmountEntity;
 import com.amay.tvm.backend.enums.FinanceOperation;
@@ -78,11 +77,23 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
                 Logger.tag(LoggerTag.BUSS).info("Inserted FinanceOperationEntity: {}", entity);
             }
 
+            updateNoteAmountData(entity);
+
             return entity.getShiftId();
 
         } catch (SQLException e) {
             Logger.tag(LoggerTag.APP).error("Error performing upsert for FinanceOperationEntity: {}", e.getMessage());
             return null;
+        }
+    }
+
+    private void updateNoteAmountData(FinanceOperationEntity entity) {
+        if (entity.getOperationType() == FinanceOperation.BNR_DEPOSIT || entity.getOperationType() == FinanceOperation.BNR_LOAD || entity.getOperationType() == FinanceOperation.BNR_NOT_COMMITTED) {
+            // For deposits, increase cashInQuantity
+            this.noteAmountRepository.updateToAdd(new NoteAmountEntity().setUnitAmount(entity.getUnitAmount()).setCashInQuantity(entity.getQuantity()));
+        } else if (entity.getOperationType() == FinanceOperation.BNR_UNLOAD || entity.getOperationType() == FinanceOperation.BNR_DISPENSE) {
+            // For withdrawals, increase cashOutQuantity
+            this.noteAmountRepository.updateToAdd(new NoteAmountEntity().setUnitAmount(entity.getUnitAmount()).setCashOutQuantity(entity.getQuantity()));
         }
     }
 
@@ -134,7 +145,7 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
             // 1. Select all rows with BNR_NOT_COMMITTED
             try (PreparedStatement selectStmt = connection.prepareStatement(SELECT_NOT_COMMITED)) {
                 selectStmt.setString(1, FinanceOperation.BNR_NOT_COMMITTED.name());
-                List<NoteAmountEntity> noteAmountList=new ArrayList<>();
+//                List<NoteAmountEntity> noteAmountList=new ArrayList<>();
 
                 try (ResultSet rs = selectStmt.executeQuery()) {
                     while (rs.next()) {
@@ -145,14 +156,14 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
                         entity.setUnitAmount(rs.getInt("unitAmount"));
                         entity.setQuantity(rs.getInt("quantity"));
                         entity.setUpdatedAt(rs.getTimestamp("updatedAt"));
-                        noteAmountList.add(new NoteAmountEntity().setUnitAmount(entity.getUnitAmount()).setCashInQuantity(entity.getQuantity()));
+//                        noteAmountList.add(new NoteAmountEntity().setUnitAmount(entity.getUnitAmount()).setCashInQuantity(entity.getQuantity()));
 
                         // 2. Upsert with quantity addition into BNR_DEPOSIT status
                         upsert(entity);
                         processedCount++;
                     }
                 }
-                this.noteAmountRepository.updateToAdd(noteAmountList);
+//                this.noteAmountRepository.updateToAdd(noteAmountList);
             }
 
             // 3. Delete all BNR_NOT_COMMITTED records now that they are "rolled back"
