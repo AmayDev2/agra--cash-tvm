@@ -34,5 +34,6 @@ public class ShiftDto {
     private String config_version;
     private boolean ccu=false;
     private boolean scu=false;
+    private String role;
 
 }

@@ -489,7 +489,7 @@ public class TomInitialize implements ITomInitialize {
                     try {
                         progress += 0.03;
                         this.updateUI(progress, "Connecting BNR,COIN MODULE & PRINTER.");
-                        CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort(),agent.getCoinAmountRepository());
+                        CoinModuleInterface.INSTANCE.setupCoinModule(envLoader.getComPort(),agent);
                         BNRIntegration.bnrOpen();
                     } catch (RuntimeException e) {
                         e.printStackTrace();

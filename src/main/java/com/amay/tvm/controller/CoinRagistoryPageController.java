@@ -1,5 +1,6 @@
 package com.amay.tvm.controller;
 
+import com.amay.tom.agent.Agent;
 import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.coin.CoinModuleInterface;
@@ -28,10 +29,12 @@ public class CoinRagistoryPageController {
     @FXML private Label total3;
 
     private final SceneManager sceneManager;
+    private final Agent agent;
 
 
-    public CoinRagistoryPageController(SceneManager sceneManager){
+    public CoinRagistoryPageController(SceneManager sceneManager, Agent agent){
         this.sceneManager=sceneManager;
+        this.agent=agent;
     }
 
     @FXML
@@ -49,9 +52,9 @@ public class CoinRagistoryPageController {
      void updateHopperInfo() {
         try {
             //TODO:UPDATE IN DB
-            int hop1 = Integer.parseInt(qty1.getText());
-            int hop2 = Integer.parseInt(qty2.getText());
-            int hop3 = Integer.parseInt(qty3.getText());
+            int hop1 = Integer.parseInt("0"+qty1.getText());
+            int hop2 = Integer.parseInt("0"+qty2.getText());
+            int hop3 = Integer.parseInt("0"+qty3.getText());
 
 
             if(!qty1.getText().isBlank())HoppersRegistry.INSTANCE.updateHopperAdd(1, hop1);

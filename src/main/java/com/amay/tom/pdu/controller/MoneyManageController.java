@@ -21,7 +21,7 @@ public class MoneyManageController {
     private void onCoin(ActionEvent actionEvent) {
 
         FXMLLoader fxmlLoader= ViewFactory.getMoneyManagementCoin();
-        CoinRagistoryPageController controller=new CoinRagistoryPageController(this.sceneManager);
+        CoinRagistoryPageController controller=new CoinRagistoryPageController(this.sceneManager,this.agent);
         fxmlLoader.setControllerFactory((x)->controller);
         this.sceneManager.addToScene(fxmlLoader);
         actionEvent.consume();

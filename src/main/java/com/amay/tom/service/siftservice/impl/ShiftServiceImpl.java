@@ -8,6 +8,7 @@ import com.amay.tom.config.SystemConfig;
 import com.amay.tom.enums.*;
 import com.amay.tom.model.TicketType;
 import com.amay.tom.model.adjust.AdjustedTicketDto;
+import com.amay.tom.model.ccuRest.Role;
 import com.amay.tom.model.refund.Refund;
 import com.amay.tom.model.replacement.Replacement;
 import com.amay.tom.model.session.Shift;
@@ -15,6 +16,8 @@ import com.amay.tom.model.session.ShiftDto;
 import com.amay.tom.model.session.ShiftMapper;
 import com.amay.tom.model.tickets.TicketsDto;
 import com.amay.tom.model.user.entity.UserPrivilege;
+import com.amay.tom.pdu.MaintenanceController;
+import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tom.repository.session.ShiftRepository;
 import com.amay.tom.service.base36.Base36Encoder;
 import com.amay.tom.service.base36.ShiftIdGeneratorService;
@@ -84,6 +87,7 @@ public class ShiftServiceImpl implements ShiftService {
                     .setStationId(agent.getSystemConfig().getCurrentStation().getStationId())
                     .setLineNo(agent.getSystemConfig().getLineNumber())
                     .setCurrentStatus(ShiftStatus.ACTIVE.name())
+                    .setRole(Role.OPERATOR.name())
                     .setConfig_version(agent.getMasterConfigInfo().getConfigVer());
              shiftRepository.startShift(ShiftMapper.toDto(shift));
 
@@ -142,7 +146,7 @@ public class ShiftServiceImpl implements ShiftService {
     }
 
     @Override
-    public Shift startMaintenanceShift(String username, String password) throws Exception {
+    public FXMLLoader startMaintenanceShift(String username, String password, SceneManager sceneManager) throws Exception {
         try (UserPrivilege userPrivilege = userAuth.login(username, password)) {
 
             this.agent.setUserPrivilege(userPrivilege);
@@ -153,7 +157,6 @@ public class ShiftServiceImpl implements ShiftService {
             ShiftIdGeneratorService shiftIdGeneratorService= new ShiftIdGeneratorService(lastShiftSeq,shiftRepository, Base36Encoder.encode(Long.parseLong( TimeUtil.getCurrentDayPrefix()+SystemConfig.getInstance().getCurrentEquipment().getEquipmentId())));
 
             String shiftId=shiftIdGeneratorService.getShiftId();
-
 
             Shift shift = new Shift()
                     .setOperatorId(username)
@@ -167,6 +170,9 @@ public class ShiftServiceImpl implements ShiftService {
                     .setLineNo(agent.getSystemConfig().getLineNumber())
                     .setCurrentStatus(ShiftStatus.ACTIVE.name())
                     .setConfig_version(agent.getMasterConfigInfo().getConfigVer());
+
+            FXMLLoader fxmlLoader=  performOperation(sceneManager,shift);
+
             shiftRepository.startShift(ShiftMapper.toDto(shift));
 
             //   notifying to scu
@@ -185,15 +191,33 @@ public class ShiftServiceImpl implements ShiftService {
                 CompletableFuture.runAsync(() -> agent.getScuService().pushShiftInfo(shift), agent.getThreadPool().getFixedThreadPool());
                 Logger.tag(LoggerTag.APP).debug("SC responded to login data push");
             }
-            return shift;
 
-
+            return fxmlLoader;
         }
         catch (Exception usernameNotFoundException) {
             agent.getGrpcApiListener().sendAlarm(Alarm.LOGIN_FAILED);
             agent.getCcuGrpcApiListener().sendAlarm(Alarm.LOGIN_FAILED);
             throw  usernameNotFoundException;
         }
+    }
+
+    private FXMLLoader performOperation(SceneManager sceneManager,Shift shiftMaintenance) {
+        if(null==shiftMaintenance) {
+           throw new RuntimeException("Can't Login");
+        }
+        this.agent.setShiftMaintenance(shiftMaintenance);
+        agent.getInternalListener().PauseShift();
+        Logger.tag(LoggerTag.APP).debug("Loading Hoppers Screen");
+//        if(userAuth.hasRole(Role.MAINTENANCE.name())) {
+            shiftMaintenance.setRole(Role.MAINTENANCE.name());
+            FXMLLoader fxmlLoader = ViewFactory.getMaintenanceHome();
+            MaintenanceController controller = new MaintenanceController(this.agent, sceneManager);
+            fxmlLoader.setControllerFactory((x) -> controller);
+            return fxmlLoader;
+//        }
+//        else {
+//            throw new RuntimeException("User don't have maintenance role");
+//        }
     }
 
     private int getLastShiftIdFromServer() {

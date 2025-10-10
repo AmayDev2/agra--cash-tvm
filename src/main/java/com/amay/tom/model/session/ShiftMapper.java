@@ -28,7 +28,8 @@ public class ShiftMapper {
                 dto.getImprest_money(),
                 dto.getConfig_version(),
                 dto.isCcu(),
-                dto.isScu()
+                dto.isScu(),
+                dto.getRole()
         );
     }
 
@@ -50,6 +51,7 @@ public class ShiftMapper {
                 .setImprest_money(shift.getImprest_money())
                 .setConfig_version(shift.getConfig_version())
                 .setCcu(shift.isCcu())
+                .setRole(shift.getRole())
                 .setScu(shift.isScu());
         return dto;
     }

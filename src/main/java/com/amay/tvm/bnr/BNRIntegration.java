@@ -66,7 +66,7 @@ public class BNRIntegration  {
 
     }
 
-    static Bnr bnr= new Bnr();
+    public  static Bnr bnr= new Bnr();
 
     private static boolean isAllowed;
 
@@ -1023,7 +1023,7 @@ public class BNRIntegration  {
             if(insertedAmount<amount){
                 throw new RuntimeException("Cant process input amount is less than required");
             }
-
+            bnrListener.setStatus(BNRStatus.SUCCESS);
 
             // Check if change needed
             if (insertedAmount > amount) {
@@ -1048,7 +1048,6 @@ public class BNRIntegration  {
                                         CoinResponseDecoder.CoinModuleDispenseResponse dispenseResponse =
                                                 CoinModuleInterface.INSTANCE.dispense(changeNeeded / 100);
                                         Logger.tag(LoggerTag.APP).info(dispenseResponse.toString());
-//                    acceptAmountResponse.setActualCoinChangedAmount((dispenseResponse.amountDispensed) * 100L);
 
                                         return dispenseResponse;
                                     }));
@@ -1064,7 +1063,6 @@ public class BNRIntegration  {
             try {
                 if(acceptAmountResponse.getActualCoinChangedAmount()<=0) {
                     cashInRollback();
-                    cancelWaitingCashTaken(1);
                     acceptAmountResponse.setAcceptedAmount(0);
                     acceptAmountResponse.setRollback(true);
                 }
@@ -1076,6 +1074,7 @@ public class BNRIntegration  {
 
         try {
             endCashInTransaction(); // try to put this in finally
+            bnrListener.setStatus(BNRStatus.SUCCESS);
         }catch (Exception e){
             Logger.tag(LoggerTag.APP).error("Cash In End Exception {}",e.getMessage());
         }
@@ -1241,7 +1240,9 @@ public class BNRIntegration  {
 
         if (event.getResult() != BnrXfsErrorCode.XFS_SUCCESSFULL) {
             throw new JxfsException(event.getResult());
-        }//if
+        }else {
+            bnrListener.setStatus(BNRStatus.FAILED);
+        }
     }//cashInRollback
 
     private static JxfsOperationCompleteEvent reject() throws JxfsException {

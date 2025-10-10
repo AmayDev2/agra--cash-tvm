@@ -61,9 +61,8 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
             }
 
             // 2. If update affected 0 rows, insert new record
-            String insertSql = INSERTED_SQL;
 
-            try (PreparedStatement insertStmt = connection.prepareStatement(insertSql)) {
+            try (PreparedStatement insertStmt = connection.prepareStatement(INSERTED_SQL)) {
                 Timestamp now = Timestamp.valueOf(LocalDateTime.now());
 
                 insertStmt.setString(1, entity.getShiftId());
@@ -88,10 +87,13 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
     }
 
     private void updateNoteAmountData(FinanceOperationEntity entity) {
-        if (entity.getOperationType() == FinanceOperation.BNR_DEPOSIT || entity.getOperationType() == FinanceOperation.BNR_LOAD || entity.getOperationType() == FinanceOperation.BNR_NOT_COMMITTED) {
+        if (entity.getOperationType() == FinanceOperation.BNR_DEPOSIT
+                || entity.getOperationType() == FinanceOperation.BNR_LOAD
+                || entity.getOperationType() == FinanceOperation.BNR_NOT_COMMITTED) {
             // For deposits, increase cashInQuantity
             this.noteAmountRepository.updateToAdd(new NoteAmountEntity().setUnitAmount(entity.getUnitAmount()).setCashInQuantity(entity.getQuantity()));
-        } else if (entity.getOperationType() == FinanceOperation.BNR_UNLOAD || entity.getOperationType() == FinanceOperation.BNR_DISPENSE) {
+        } else if (entity.getOperationType() == FinanceOperation.BNR_UNLOAD
+                || entity.getOperationType() == FinanceOperation.BNR_DISPENSE) {
             // For withdrawals, increase cashOutQuantity
             this.noteAmountRepository.updateToAdd(new NoteAmountEntity().setUnitAmount(entity.getUnitAmount()).setCashOutQuantity(entity.getQuantity()));
         }

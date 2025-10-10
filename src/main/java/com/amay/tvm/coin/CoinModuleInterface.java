@@ -1,8 +1,10 @@
 package com.amay.tvm.coin;
 
 
+import com.amay.tom.agent.Agent;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.backend.repository.CoinAmountRepository;
+import com.amay.tvm.backend.repository.FinanceOperationRepository;
 import com.amay.tvm.coin.model.*;
 import com.amay.tvm.coin.service.CoinModuleService;
 import com.amay.tvm.coin.service.CoinResponseDecoder;
@@ -18,9 +20,9 @@ public enum CoinModuleInterface {
 	CoinModuleService service;
 	private boolean isPoolingAllowed=true;
 	private String comPort;
-	public CoinModuleService setupCoinModule(String comPort, CoinAmountRepository coinAmountRepository){
+	public CoinModuleService setupCoinModule(String comPort, Agent agent){
 		service = new CoinModuleService();
-		HoppersRegistry.INSTANCE.setHoppers(5,10,10,     0,0,0,coinAmountRepository);
+		HoppersRegistry.INSTANCE.setHoppers(5,10,10,     0,0,0,agent);
 		this.comPort=comPort;
 		connect(comPort);
 		return service;
@@ -93,7 +95,7 @@ public enum CoinModuleInterface {
 			ModuleResponse response= service.dispenseCoin((byte) hopper, (byte) amountDetail.getQuantity());
 			Logger.tag(LoggerTag.BUSS).info("Dispense done, DATA=" + response.getData().length + " bytes");
 			CoinResponseDecoder.DispenseResult dispenseResult=CoinResponseDecoder.decodeDispenseResponse(response.getData());
-			HoppersRegistry.INSTANCE.updateHopper(hopper,dispenseResult.quantityDispensed);
+			HoppersRegistry.INSTANCE.updateHopperDeduct(hopper,dispenseResult.quantityDispensed);
 			list.add(dispenseResult);
 		}
 

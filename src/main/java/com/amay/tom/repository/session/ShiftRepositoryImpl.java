@@ -49,6 +49,7 @@ public class ShiftRepositoryImpl extends ShiftRepository {
             pstmt.setTimestamp(13, shift.getUpdatedAt() != null ? shift.getUpdatedAt() : null); // maps to update_at
             pstmt.setString(14,shift.getImprest_money());
             pstmt.setString(15,shift.getConfig_version());
+            pstmt.setString(16,shift.getRole());
             //System.out.println(pstmt);
             // Execute the updateToAdd
             int affectedRows = pstmt.executeUpdate();
@@ -378,7 +379,8 @@ public class ShiftRepositoryImpl extends ShiftRepository {
                 rs.getString("config_version"),
                 rs.getString("config_version"),
                 rs.getBoolean("ccu"),
-                rs.getBoolean("scu")
+                rs.getBoolean("scu"),
+                rs.getString("role")
         );
     }
 }

@@ -31,7 +31,8 @@ public abstract class ShiftRepository {
             "imprest_money VARCHAR(255), "+
             "config_version VARCHAR(255), "+
             "ccu BOOLEAN DEFAULT FALSE, "+
-            "scu BOOLEAN DEFAULT FALSE"+// Fixed column name
+            "scu BOOLEAN DEFAULT FALSE, "+// Fixed column name
+            "role VARCHAR(255) "+
             ");";
 
 
@@ -39,8 +40,10 @@ public abstract class ShiftRepository {
             "INSERT INTO " + TABLE_NAME + " (" +
                     "shift_id, operator_id, device_id, device_serial, created_at, start_time, end_time, " +
                     "serial_no, station_id, line_no, reason, current_status, update_at, imprest_money, " +
-                    "config_version) " +
-                    "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                    "config_version, " +
+                    "role " +
+                    ") " +
+                    "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
 
 
     protected static final String SELECT_BY_ID_SQL = "SELECT * FROM " + TABLE_NAME + " WHERE shift_id = ?";

@@ -147,76 +147,23 @@ public class MaintenanceLogin {
     void loginButtonClicked(ActionEvent event) {
         try {
             this.buzzerTask.cancelAndTurnOff();
-        }catch (Exception e){
+        } catch (Exception e) {
             Logger.error("Error stopping buzzer: {}", e.getMessage());
         }
 
         try {
-            Shift shidt=agent.getShiftService().startMaintenanceShift(usernameField.getText(), passwordField.getText());
-            if(null!=shidt) {
-                this.agent.setShiftMaintenance(shidt);
+            FXMLLoader fxmlLoader = agent.getShiftService().startMaintenanceShift(usernameField.getText(), passwordField.getText(), sceneManager);
+            if (fxmlLoader != null) {
+                sceneManager.addToRoot(fxmlLoader);
             }
+            event.consume();
 
-
-
-            Shift shift = agent.getShift();
-            LocalDateTime currentTime = LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
-            shift.setCurrentStatus(ShiftStatus.PAUSED.name())
-                    .setUpdatedAt(currentTime);
-            Logger.tag(LoggerTag.APP).debug("Loaded Hoppers Screen !!!");
-            try {
-                agent.getShiftRepository().shiftPauseResume(ShiftMapper.toDto(shift));
-            } catch (SQLException e) {
-                Logger.error("Error marking Shift status to Pause while maintenance login : "+e.getMessage());}
-
-
-                Logger.tag(LoggerTag.APP).debug("Loading Hoppers Screen");
-                FXMLLoader fxmlLoader = ViewFactory.getMaintenanceHome();
-                MaintenanceController controller = new MaintenanceController(this.agent, this.sceneManager);
-                fxmlLoader.setControllerFactory((x) -> controller);
-                this.sceneManager.addToScene(fxmlLoader);
-
-                Logger.tag(LoggerTag.APP).debug("Loaded Hoppers Screen !!!");
-            } catch (Exception ex) {
-            Logger.tag(LoggerTag.APP).error("Error during maintenance login: {}", ex.getMessage());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
-        event.consume();
-
-//        mainStage = (Stage) messageLabel.getScene().getWindow();
-//        this.shiftService.setMainStage(mainStage);
-//        String userName= usernameField.getText().toUpperCase();
-//        String userPass=passwordField.getText();
-//        userName=userName.trim();
-//        userPass=userPass.trim();
-//
-//        try {
-////            if(!agent.getBusinessRule().isActiveWorkingHour())throw new RuntimeException("Login allowed during Business Hours only");
-//
-//            if(userName.isEmpty() || userPass.isEmpty()){
-//                Platform.runLater(()->messageLabel.setText("Provide User ID or Password"));
-//                throw new EmptyUsernameOrPasswordException("Missing User ID or Password");
-//            }
-//
-//            FXMLLoader fxmlLoader = this.shiftService.startShift(userName, userPass);
-//            this.agent.setShiftService(this.shiftService);
-////        this.agent.getApplicationService().setShiftService(this.shiftService);
-//            ShiftServiceListener shiftServiceListener = new ShiftServiceListener(this.shiftService);
-//            this.agent.setInternalListener(shiftServiceListener);
-//            this.agent.getApplicationService().addListener(shiftServiceListener);
-//            mainStage.getScene().setRoot(fxmlLoader.load());
-//        } catch (Exception e) {
-//            // Optional: Check if it's a wrapped UsernameNotFoundException
-//            if (e.getCause() instanceof UsernameNotFoundException cause) {
-//                Platform.runLater(() -> messageLabel.setText(cause.getMessage()));
-//            } else {
-//                Platform.runLater(() -> messageLabel.setText(e.getMessage()));
-//            }
-//        }finally {
-//            event.consume();
-//        }
     }
 
-    void updateDateTime() {
+        void updateDateTime() {
 //        javafx.animation.Timeline timeline = new javafx.animation.Timeline(new javafx.animation.KeyFrame(javafx.util.Duration.seconds(1), event -> {
 //            LocalDateTime now = LocalDateTime.now();
 //            Platform.runLater(() -> {
