@@ -195,12 +195,12 @@ public class Controller {
         Platform.runLater(()->
                 {
                     this.timeLabel.setStyle("-fx-text-fill: red;");
-                    equipmentPrivilege.setQrPaidTicket(false);
-                    equipmentPrivilege.setQrFreeTicket(false);
-                    equipmentPrivilege.setQrTicketAdjustment(false);
-                    equipmentPrivilege.setQrTicketIssue(false);
-                    equipmentPrivilege.setQrTicketRefund(false);
-                    equipmentPrivilege.setQrTicketReplacement(false);
+//                    equipmentPrivilege.setQrPaidTicket(false);
+//                    equipmentPrivilege.setQrFreeTicket(false);
+//                    equipmentPrivilege.setQrTicketAdjustment(false);
+//                    equipmentPrivilege.setQrTicketIssue(false);
+//                    equipmentPrivilege.setQrTicketRefund(false);
+//                    equipmentPrivilege.setQrTicketReplacement(false);
                 }
         );
     }
@@ -563,17 +563,17 @@ public class Controller {
 
 
     private void userPrivilege(UserPrivilege userPrivilege, EquipmentPrivilege equipmentPrivilege) {
-        qrticket.setDisable(!(userPrivilege.isQrTicketIssue() && equipmentPrivilege.isQrTicketIssue().get()));
-        analysisButton.setVisible(userPrivilege.isQrTicketAnalysis() && equipmentPrivilege.isQrTicketAnalysis().get());
+//        qrticket.setDisable(!(userPrivilege.isQrTicketIssue() && equipmentPrivilege.isQrTicketIssue().get()));
+//        analysisButton.setVisible(userPrivilege.isQrTicketAnalysis() && equipmentPrivilege.isQrTicketAnalysis().get());
 
 
-            equipmentPrivilege.isQrTicketIssue().addListener((observable, oldValue, newValue) -> {
-                qrticket.setDisable(!(userPrivilege.isQrTicketIssue() && equipmentPrivilege.isQrTicketIssue().get() && newValue));
-            });
+//            equipmentPrivilege.isQrTicketIssue().addListener((observable, oldValue, newValue) -> {
+//                qrticket.setDisable(!(userPrivilege.isQrTicketIssue() && equipmentPrivilege.isQrTicketIssue().get() && newValue));
+//            });
 
-            equipmentPrivilege.isQrTicketAnalysis().addListener((observable, oldValue, newValue) -> {
-                analysisButton.setVisible(userPrivilege.isQrTicketAnalysis() && equipmentPrivilege.isQrTicketAnalysis().get() && newValue);
-            });
+//            equipmentPrivilege.isQrTicketAnalysis().addListener((observable, oldValue, newValue) -> {
+//                analysisButton.setVisible(userPrivilege.isQrTicketAnalysis() && equipmentPrivilege.isQrTicketAnalysis().get() && newValue);
+//            });
 
 
     }

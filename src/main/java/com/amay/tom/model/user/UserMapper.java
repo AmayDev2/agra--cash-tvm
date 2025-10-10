@@ -8,14 +8,24 @@ import com.amay.tom.model.user.entity.UserPrivilege;
 public class UserMapper {
 
     public static UserPrivilege mapToUserPrivilege(UserPrivilegeDto userPrivilegeDto) {
-        return new UserPrivilege(userPrivilegeDto.isQrTicketIssue(), userPrivilegeDto.isQrTicketAnalysis(),
-                userPrivilegeDto.isQrTicketAdjustment(), userPrivilegeDto.isQrTicketCancellation(),
-                userPrivilegeDto.isQrTicketRefund(), userPrivilegeDto.isQrTicketReprint(),
-                userPrivilegeDto.isQrTicketReplacement(), userPrivilegeDto.isQrFreeTicket(),
-                userPrivilegeDto.isQrPaidTicket(), userPrivilegeDto.isTvm(),userPrivilegeDto.isImportAndExport(),userPrivilegeDto.isShutdownAndRestart());
+        return new UserPrivilege(
+                userPrivilegeDto.isBnrCashAdd(),
+                userPrivilegeDto.isBnrTesting(),
+                userPrivilegeDto.isBnrMoveCash(),
+                userPrivilegeDto.isCheckAvailableCash(),
+                userPrivilegeDto.isCoinRefill(),
+                userPrivilegeDto.isCoinModuleTesting(),
+                userPrivilegeDto.isCoinDumping(),
+                userPrivilegeDto.isPeripheralTest(),
+                userPrivilegeDto.isConfiguration(),
+                userPrivilegeDto.isModeSettings(),
+                userPrivilegeDto.isVersionCheck(),
+                userPrivilegeDto.isImportAndExport(),
+                userPrivilegeDto.isShutdownAndRestart()
+        );
     }
     public static UserPrivilege testMapToUserPrivilege() {
-        return new UserPrivilege(true, true, true, true, true, true, true, true, true, true,true,true);
+        return new UserPrivilege(true, true, true, true, true, true, true, true, true, true,true,true,true);
     }
 
     public static User mapToUser(UserDto userDto) {

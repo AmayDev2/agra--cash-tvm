@@ -1,12 +1,21 @@
-package com.amay.tom.model.user.dto;
+package com.amay.tom.model.ccuRest;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.experimental.Accessors;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+import java.io.Serializable;
+
 
 @Data
-@Accessors(chain = true)
-public class UserPrivilegeDto {
-    private String username;
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+public class TVMPermission implements Serializable {
+
+    private long id;
+
     private boolean bnrCashAdd;
     private boolean bnrTesting;
     private boolean bnrMoveCash;
@@ -20,4 +29,9 @@ public class UserPrivilegeDto {
     private boolean versionCheck;
     private boolean importAndExport;
     private boolean shutdownAndRestart;
+
+    
+    // Getters and setters...
+    
+    
 }

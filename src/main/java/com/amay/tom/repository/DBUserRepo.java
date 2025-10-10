@@ -121,16 +121,20 @@ public class DBUserRepo {
             statement.setString(1, userId);
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
-                    userPrivilegeDto.setQrTicketIssue(resultSet.getBoolean("qr_ticket_issue"));
-                    userPrivilegeDto.setQrTicketAnalysis(resultSet.getBoolean("qr_ticket_analysis"));
-                    userPrivilegeDto.setQrTicketAdjustment(resultSet.getBoolean("qr_ticket_adjustment"));
-                    userPrivilegeDto.setQrTicketCancellation(resultSet.getBoolean("qr_ticket_cancellation"));
-                    userPrivilegeDto.setQrTicketRefund(resultSet.getBoolean("qr_ticket_refund"));
-                    userPrivilegeDto.setQrTicketReprint(resultSet.getBoolean("qr_ticket_reprint"));
-                    userPrivilegeDto.setQrTicketReplacement(resultSet.getBoolean("qr_ticket_replacement"));
-                    userPrivilegeDto.setQrFreeTicket(resultSet.getBoolean("qr_free_ticket"));
-                    userPrivilegeDto.setQrPaidTicket(resultSet.getBoolean("qr_paid_ticket"));
-                    userPrivilegeDto.setTvm(resultSet.getBoolean("tvm"));
+                    userPrivilegeDto.setBnrCashAdd(resultSet.getBoolean("bnr_cash_add"));
+                    userPrivilegeDto.setBnrTesting(resultSet.getBoolean("bnr_testing"));
+                    userPrivilegeDto.setBnrMoveCash(resultSet.getBoolean("bnr_move_cash"));
+                    userPrivilegeDto.setCheckAvailableCash(resultSet.getBoolean("check_available_cash"));
+                    userPrivilegeDto.setCoinRefill(resultSet.getBoolean("coin_refill"));
+                    userPrivilegeDto.setCoinModuleTesting(resultSet.getBoolean("coin_module_testing"));
+                    userPrivilegeDto.setCoinDumping(resultSet.getBoolean("coin_dumping"));
+                    userPrivilegeDto.setPeripheralTest(resultSet.getBoolean("peripheral_test"));
+                    userPrivilegeDto.setConfiguration(resultSet.getBoolean("configuration"));
+                    userPrivilegeDto.setModeSettings(resultSet.getBoolean("mode_settings"));
+                    userPrivilegeDto.setVersionCheck(resultSet.getBoolean("version_check"));
+                    userPrivilegeDto.setImportAndExport(resultSet.getBoolean("import_and_export"));
+                    userPrivilegeDto.setShutdownAndRestart(resultSet.getBoolean("shutdown_and_restart"));
+
 
                     //System.out.println("User privileges retrieved successfully." + userPrivilegeDto.toString());
                 } else {
