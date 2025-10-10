@@ -132,18 +132,20 @@ public class UserRepositoryImpl extends UserRepository {
             } else {
                 try (PreparedStatement pstmt = connection.prepareStatement(INSERT_USER_PRIVILEGE_SQL)) {
                     pstmt.setString(1, userPrivilege.getUsername());
-                    pstmt.setBoolean(2, userPrivilege.isQrTicketIssue());
-                    pstmt.setBoolean(3, userPrivilege.isQrTicketAnalysis());
-                    pstmt.setBoolean(4, userPrivilege.isQrTicketAdjustment());
-                    pstmt.setBoolean(5, userPrivilege.isQrTicketCancellation());
-                    pstmt.setBoolean(6, userPrivilege.isQrTicketRefund());
-                    pstmt.setBoolean(7, userPrivilege.isQrTicketReprint());
-                    pstmt.setBoolean(8, userPrivilege.isQrTicketReplacement());
-                    pstmt.setBoolean(9, userPrivilege.isQrFreeTicket());
-                    pstmt.setBoolean(10, userPrivilege.isQrPaidTicket());
-                    pstmt.setBoolean(11, userPrivilege.isTvm());
-                    pstmt.setBoolean(12, userPrivilege.isImportAndExport());
-                    pstmt.setBoolean(13, userPrivilege.isShutdownAndRestart());
+                    pstmt.setBoolean(2, userPrivilege.isBnrCashAdd());
+                    pstmt.setBoolean(3, userPrivilege.isBnrTesting());
+                    pstmt.setBoolean(4, userPrivilege.isBnrMoveCash());
+                    pstmt.setBoolean(5, userPrivilege.isCheckAvailableCash());
+                    pstmt.setBoolean(6, userPrivilege.isCoinRefill());
+                    pstmt.setBoolean(7, userPrivilege.isCoinModuleTesting());
+                    pstmt.setBoolean(8, userPrivilege.isCoinDumping());
+                    pstmt.setBoolean(9, userPrivilege.isPeripheralTest());
+                    pstmt.setBoolean(10, userPrivilege.isConfiguration());
+                    pstmt.setBoolean(11, userPrivilege.isModeSettings());
+                    pstmt.setBoolean(12, userPrivilege.isVersionCheck());
+                    pstmt.setBoolean(13, userPrivilege.isImportAndExport());
+                    pstmt.setBoolean(14, userPrivilege.isShutdownAndRestart());
+
                     pstmt.executeUpdate();
                 } catch (RuntimeException e) {
                     e.printStackTrace();
@@ -162,18 +164,20 @@ public class UserRepositoryImpl extends UserRepository {
                 if (rs.next()) {
                     return new UserPrivilegeDto()
                             .setUsername(rs.getString("username"))
-                            .setQrTicketIssue(rs.getBoolean("qrTicketIssue"))
-                            .setQrTicketAnalysis(rs.getBoolean("qrTicketAnalysis"))
-                            .setQrTicketAdjustment(rs.getBoolean("qrTicketAdjustment"))
-                            .setQrTicketCancellation(rs.getBoolean("qrTicketCancellation"))
-                            .setQrTicketRefund(rs.getBoolean("qrTicketRefund"))
-                            .setQrTicketReprint(rs.getBoolean("qrTicketReprint"))
-                            .setQrTicketReplacement(rs.getBoolean("qrTicketReplacement"))
-                            .setQrFreeTicket(rs.getBoolean("qrFreeTicket"))
-                            .setQrPaidTicket(rs.getBoolean("qrPaidTicket"))
-                            .setTvm(rs.getBoolean("tvm"))
+                            .setBnrCashAdd(rs.getBoolean("bnrCashAdd"))
+                            .setBnrTesting(rs.getBoolean("bnrTesting"))
+                            .setBnrMoveCash(rs.getBoolean("bnrMoveCash"))
+                            .setCheckAvailableCash(rs.getBoolean("checkAvailableCash"))
+                            .setCoinRefill(rs.getBoolean("coinRefill"))
+                            .setCoinModuleTesting(rs.getBoolean("coinModuleTesting"))
+                            .setCoinDumping(rs.getBoolean("coinDumping"))
+                            .setPeripheralTest(rs.getBoolean("peripheralTest"))
+                            .setConfiguration(rs.getBoolean("configuration"))
+                            .setModeSettings(rs.getBoolean("modeSettings"))
+                            .setVersionCheck(rs.getBoolean("versionCheck"))
                             .setImportAndExport(rs.getBoolean("importAndExport"))
                             .setShutdownAndRestart(rs.getBoolean("shutdownAndRestart"));
+
                 }
             }
         } catch (RuntimeException e) {
@@ -187,18 +191,19 @@ public class UserRepositoryImpl extends UserRepository {
     void updateUserPrivilege(UserPrivilegeDto userPrivilege) throws SQLException,SQLIntegrityConstraintViolationException {
 
         try (PreparedStatement pstmt = connection.prepareStatement(UPDATE_USER_PRIVILEGE_SQL)) {
-            pstmt.setBoolean(1, userPrivilege.isQrTicketIssue());
-            pstmt.setBoolean(2, userPrivilege.isQrTicketAnalysis());
-            pstmt.setBoolean(3, userPrivilege.isQrTicketAdjustment());
-            pstmt.setBoolean(4, userPrivilege.isQrTicketCancellation());
-            pstmt.setBoolean(5, userPrivilege.isQrTicketRefund());
-            pstmt.setBoolean(6, userPrivilege.isQrTicketReprint());
-            pstmt.setBoolean(7, userPrivilege.isQrTicketReplacement());
-            pstmt.setBoolean(8, userPrivilege.isQrFreeTicket());
-            pstmt.setBoolean(9, userPrivilege.isQrPaidTicket());
-            pstmt.setBoolean(10, userPrivilege.isTvm());
-            pstmt.setBoolean(11,userPrivilege.isImportAndExport());
-            pstmt.setBoolean(12,userPrivilege.isShutdownAndRestart());
+            pstmt.setBoolean(2, userPrivilege.isBnrCashAdd());
+            pstmt.setBoolean(3, userPrivilege.isBnrTesting());
+            pstmt.setBoolean(4, userPrivilege.isBnrMoveCash());
+            pstmt.setBoolean(5, userPrivilege.isCheckAvailableCash());
+            pstmt.setBoolean(6, userPrivilege.isCoinRefill());
+            pstmt.setBoolean(7, userPrivilege.isCoinModuleTesting());
+            pstmt.setBoolean(8, userPrivilege.isCoinDumping());
+            pstmt.setBoolean(9, userPrivilege.isPeripheralTest());
+            pstmt.setBoolean(10, userPrivilege.isConfiguration());
+            pstmt.setBoolean(11, userPrivilege.isModeSettings());
+            pstmt.setBoolean(12, userPrivilege.isVersionCheck());
+            pstmt.setBoolean(13, userPrivilege.isImportAndExport());
+            pstmt.setBoolean(14, userPrivilege.isShutdownAndRestart());
             pstmt.setString(13,userPrivilege.getUsername());
             pstmt.executeUpdate();
         } catch (RuntimeException e) {

@@ -8,14 +8,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class EquipmentPrivilegeDto {
-    private boolean qrTicketIssue=true;
-    private boolean qrTicketAnalysis=true;
-    private boolean qrTicketAdjustment=true;
-    private boolean qrTicketCancellation=true;
-    private boolean qrTicketRefund=true;
-    private boolean qrTicketReprint=true;
-    private boolean qrTicketReplacement=true;
-    private boolean qrFreeTicket=true;
-    private boolean qrPaidTicket=true;
-    private boolean tvm=true;
+    private boolean bnrCashAdd = true;
+    private boolean bnrTesting = true;
+    private boolean bnrMoveCash = true;
+    private boolean checkAvailableCash = true;
+    private boolean coinRefill = true;
+    private boolean coinModuleTesting = true;
+    private boolean coinDumping = true;
+    private boolean peripheralTest = true;
+    private boolean configuration = true;
+    private boolean modeSettings = true;
+    private boolean versionCheck = true;
+    private boolean importAndExport = true;
+    private boolean shutdownAndRestart = true;
+
 }

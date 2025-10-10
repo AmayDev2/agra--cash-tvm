@@ -134,20 +134,20 @@ public class PaidFreeTicket {
 //        ticketService = new ImplTicketService();
 
 //        tailgating.setDisable(!userPrivilege.isQrPaidTicket() || !equipmentPrivilege.isQrPaidTicket().get());
-        paidExit.setDisable(!userPrivilege.isQrPaidTicket() || !equipmentPrivilege.isQrPaidTicket().get());
-        freeExit.setDisable(!userPrivilege.isQrFreeTicket() || !equipmentPrivilege.isQrFreeTicket().get());
+//        paidExit.setDisable(!userPrivilege.isQrPaidTicket() || !equipmentPrivilege.isQrPaidTicket().get());
+//        freeExit.setDisable(!userPrivilege.isQrFreeTicket() || !equipmentPrivilege.isQrFreeTicket().get());
 
-        equipmentPrivilege.isQrPaidTicket().addListener((observable, oldValue, newValue) -> {
+//        equipmentPrivilege.isQrPaidTicket().addListener((observable, oldValue, newValue) -> {
 //            tailgating.setSelected(!userPrivilege.isQrPaidTicket() &&  !newValue);
-            paidExit.setSelected(!userPrivilege.isQrPaidTicket() &&  !newValue);
+//            paidExit.setSelected(!userPrivilege.isQrPaidTicket() &&  !newValue);
 //            tailgating.setDisable(!userPrivilege.isQrPaidTicket() ||  !equipmentPrivilege.isQrPaidTicket().get() || !newValue);
-            paidExit.setDisable(!userPrivilege.isQrPaidTicket() ||  !equipmentPrivilege.isQrPaidTicket().get() || !newValue);
-        });
+//            paidExit.setDisable(!userPrivilege.isQrPaidTicket() ||  !equipmentPrivilege.isQrPaidTicket().get() || !newValue);
+//        });
 
-        equipmentPrivilege.isQrFreeTicket().addListener((observable, oldValue, newValue) -> {
-            freeExit.setSelected(!userPrivilege.isQrFreeTicket() && !newValue);
-            freeExit.setDisable(!userPrivilege.isQrFreeTicket() ||  !equipmentPrivilege.isQrFreeTicket().get() || !newValue);
-        });
+//        equipmentPrivilege.isQrFreeTicket().addListener((observable, oldValue, newValue) -> {
+//            freeExit.setSelected(!userPrivilege.isQrFreeTicket() && !newValue);
+//            freeExit.setDisable(!userPrivilege.isQrFreeTicket() ||  !equipmentPrivilege.isQrFreeTicket().get() || !newValue);
+//        });
         
         this.activateTickets();
     }

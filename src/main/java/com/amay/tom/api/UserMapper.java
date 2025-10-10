@@ -1,13 +1,12 @@
 package com.amay.tom.api;
 
-import com.amay.tom.model.ccuRest.TOMPermission;
+import com.amay.tom.model.ccuRest.TVMPermission;
 import com.amay.tom.model.ccuRest.UserProfile;
 import com.amay.tom.model.ccuRest.UserStatus;
 import com.amay.tom.model.ccuRest.Users;
 import com.amay.tom.model.user.dto.UserDto;
 import com.amay.tom.model.user.dto.UserPrivilegeDto;
 
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -39,23 +38,24 @@ public class UserMapper {
     }
 
     public static UserPrivilegeDto toUserPrivilegeDto(UserProfile profile) {
-        if (profile == null || profile.getTomPermission() == null) {
+        if (profile == null || profile.getTvmPermission() == null) {
             return new UserPrivilegeDto(); // return default privileges
         }
 
-        TOMPermission perm = profile.getTomPermission();
+        TVMPermission perm = profile.getTvmPermission();
 
         return new UserPrivilegeDto()
-                .setQrTicketIssue(perm.isQrTicketSale())
-                .setQrTicketAnalysis(perm.isQrTicketAnalysis())
-                .setQrTicketAdjustment(perm.isQrTicketAdjustment())
-                .setQrTicketCancellation(perm.isQrTicketCancellation())
-                .setQrTicketRefund(perm.isQrTicketRefund())
-                .setQrTicketReprint(perm.isQrTicketReprint())
-                .setQrTicketReplacement(perm.isQrTicketReplacement())
-                .setQrFreeTicket(perm.isQrFreeTicket())
-                .setQrPaidTicket(perm.isQrPaidTicket())
-                .setTvm(perm.isTvm())
+                .setBnrCashAdd(perm.isBnrCashAdd())
+                .setBnrTesting(perm.isBnrTesting())
+                .setBnrMoveCash(perm.isBnrMoveCash())
+                .setCheckAvailableCash(perm.isCheckAvailableCash())
+                .setCoinRefill(perm.isCoinRefill())
+                .setCoinModuleTesting(perm.isCoinModuleTesting())
+                .setCoinDumping(perm.isCoinDumping())
+                .setPeripheralTest(perm.isPeripheralTest())
+                .setConfiguration(perm.isConfiguration())
+                .setModeSettings(perm.isModeSettings())
+                .setVersionCheck(perm.isVersionCheck())
                 .setImportAndExport(perm.isImportAndExport())
                 .setShutdownAndRestart(perm.isShutdownAndRestart());
     }

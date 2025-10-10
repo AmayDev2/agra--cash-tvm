@@ -30,10 +30,10 @@
 
         <!-- Coin Load/Unload Button -->
         <Button mnemonicParsing="false" onAction="#onCoin" prefHeight="39.0" prefWidth="190.0" text="Coin Load/Unload" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
-
         <!-- BNR Load/Unload Button -->
         <Button mnemonicParsing="false" onAction="#onBnr" prefHeight="39.0" prefWidth="190.0" text="BNR Load/Unload" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
-
+        <!-- Reports Button -->
+        <Button mnemonicParsing="false" onAction="#onReports" prefHeight="39.0" prefWidth="190.0" text="Reports" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
         <!-- Back Button -->
         <Button mnemonicParsing="false" onAction="#onBack" prefHeight="39.0" prefWidth="150.0" text="Back" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3"/>
     </children>

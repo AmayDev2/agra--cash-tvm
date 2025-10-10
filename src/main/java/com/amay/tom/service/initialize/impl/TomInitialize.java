@@ -465,8 +465,8 @@ public class TomInitialize implements ITomInitialize {
                     agent.getVersionRepository().insert(MasterConfigInfoMapper.dtoToEntity(versionService.getActual()));
                 }
                 agent.setMasterConfigInfo(MasterConfigInfoMapper.entityToMasterConfigInfo(agent.getVersionRepository().findAll().getFirst()));
-//                if(agent.getTomConfigRepository().findAll().size()>0)
-                agent.setTomConfig(TomConfigMapper.entityToModel(agent.getTomConfigRepository().findAll().getFirst()));
+                if(agent.getTomConfigRepository().findAll().size()>0)
+                    agent.setTomConfig(TomConfigMapper.entityToModel(agent.getTomConfigRepository().findAll().getFirst()));
                 ScuDataMapper.setVersion(agent.getMasterConfigInfo());
                 progress += 0.04;
                 this.updateUI(progress, "Version info saved.");

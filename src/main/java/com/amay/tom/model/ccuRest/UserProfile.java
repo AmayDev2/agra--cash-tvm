@@ -1,6 +1,5 @@
 package com.amay.tom.model.ccuRest;
 
-import com.amay.tom.model.ccuRest.TOMPermission;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,7 +19,7 @@ public class UserProfile implements Serializable {
 	private String profileId;
 	private String profileName;
 	private String description;
-	private TOMPermission tomPermission;
+	private TVMPermission tvmPermission;
 //	private AGPermission agPermission;
 //	private TVMPermission tvmPermission;
 //	private TRPermission trPermission;

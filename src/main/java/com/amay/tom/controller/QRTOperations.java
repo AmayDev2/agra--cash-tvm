@@ -78,8 +78,8 @@ public class QRTOperations {
         Logger.info("QRT Operations scene loaded");
         this.activeCaptureQR();
 //        cancelButton.setDisable(!agent.getUserPrivilege().isQrTicketCancellation() || !agent.getEquipmentPrivilege().isQrTicketCancellation().get());
-        replacementButton.setDisable(!agent.getUserPrivilege().isQrTicketReplacement() || !agent.getEquipmentPrivilege().isQrTicketReplacement().get());
-        refundButton.setDisable(!agent.getUserPrivilege().isQrTicketRefund() || !agent.getEquipmentPrivilege().isQrTicketRefund().get());
+//        replacementButton.setDisable(!agent.getUserPrivilege().isQrTicketReplacement() || !agent.getEquipmentPrivilege().isQrTicketReplacement().get());
+//        refundButton.setDisable(!agent.getUserPrivilege().isQrTicketRefund() || !agent.getEquipmentPrivilege().isQrTicketRefund().get());
 
         // Limit input to 20 characters
         inputTextField.textProperty().addListener((observable, oldValue, newValue) -> {
@@ -89,17 +89,17 @@ public class QRTOperations {
         });
         alert = new Alert(Alert.AlertType.INFORMATION);
 
-        agent.getEquipmentPrivilege().isQrTicketCancellation().addListener((observable, oldValue, newValue) -> {
+//        agent.getEquipmentPrivilege().isQrTicketCancellation().addListener((observable, oldValue, newValue) -> {
 //            cancelButton.setDisable(!agent.getUserPrivilege().isQrTicketCancellation() || !newValue);
-        });
+//        });
 
-        agent.getEquipmentPrivilege().isQrTicketReplacement().addListener((observable, oldValue, newValue) -> {
-            replacementButton.setDisable(!agent.getUserPrivilege().isQrTicketReplacement() || !newValue);
-        });
+//        agent.getEquipmentPrivilege().isQrTicketReplacement().addListener((observable, oldValue, newValue) -> {
+//            replacementButton.setDisable(!agent.getUserPrivilege().isQrTicketReplacement() || !newValue);
+//        });
 
-        agent.getEquipmentPrivilege().isQrTicketRefund().addListener((observable, oldValue, newValue) -> {
-            refundButton.setDisable(!agent.getUserPrivilege().isQrTicketRefund() || !newValue);
-        });
+//        agent.getEquipmentPrivilege().isQrTicketRefund().addListener((observable, oldValue, newValue) -> {
+//            refundButton.setDisable(!agent.getUserPrivilege().isQrTicketRefund() || !newValue);
+//        });
 
 
     }

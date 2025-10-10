@@ -78,8 +78,8 @@ public class ModesListener implements RemoteListener {
     }
 
     private void setInServiceNoSale() {
-        equipmentPrivilege.setQrTicketIssue(false);
-        equipmentPrivilege.setQrTicketAnalysis(false);
+//        equipmentPrivilege.setQrTicketIssue(false);
+//        equipmentPrivilege.setQrTicketAnalysis(false);
 
         agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.IN_SERVICE);
 //        agent.getGrpcApiListener().sendAlarm(Alarm.IN_SERVICE);
@@ -105,16 +105,16 @@ public class ModesListener implements RemoteListener {
     }
 
     private void setOutOfService() {
-        equipmentPrivilege.setQrTicketIssue(false);
-        equipmentPrivilege.setQrTicketAnalysis(false);
-        equipmentPrivilege.setQrTicketAdjustment(false);
-        equipmentPrivilege.setQrTicketCancellation(false);
-        equipmentPrivilege.setQrTicketRefund(false);
-        equipmentPrivilege.setQrTicketReprint(false);
-        equipmentPrivilege.setQrTicketReplacement(false);
-        equipmentPrivilege.setQrFreeTicket(false);
-        equipmentPrivilege.setQrPaidTicket(false);
-        equipmentPrivilege.setTvm(false);
+//        equipmentPrivilege.setQrTicketIssue(false);
+//        equipmentPrivilege.setQrTicketAnalysis(false);
+//        equipmentPrivilege.setQrTicketAdjustment(false);
+//        equipmentPrivilege.setQrTicketCancellation(false);
+//        equipmentPrivilege.setQrTicketRefund(false);
+//        equipmentPrivilege.setQrTicketReprint(false);
+//        equipmentPrivilege.setQrTicketReplacement(false);
+//        equipmentPrivilege.setQrFreeTicket(false);
+//        equipmentPrivilege.setQrPaidTicket(false);
+//        equipmentPrivilege.setTvm(false);
 
         agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.OUT_OF_SERVICE);
 //        agent.getGrpcApiListener().sendAlarm(Alarm.OUT_OF_SERVICE);
@@ -123,7 +123,7 @@ public class ModesListener implements RemoteListener {
 
     //only card
     private void setInServiceCard() {
-        equipmentPrivilege.setQrTicketIssue(false);
+//        equipmentPrivilege.setQrTicketIssue(false);
 
 //
         agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.IN_SERVICE);
@@ -133,7 +133,7 @@ public class ModesListener implements RemoteListener {
 
     //only qr
     private void setInServiceQR() {
-        equipmentPrivilege.setQrTicketIssue(true);
+//        equipmentPrivilege.setQrTicketIssue(true);
 
         agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.IN_SERVICE);
 //        agent.getGrpcApiListener().sendAlarm(Alarm.IN_SERVICE_QR);
@@ -154,16 +154,16 @@ public class ModesListener implements RemoteListener {
 
     private void setStationClosedMode() {
         Logger.info("Station Closed Mode in function");
-        equipmentPrivilege.setQrTicketIssue(false);
-        equipmentPrivilege.setQrTicketAnalysis(false);
-        equipmentPrivilege.setQrTicketAdjustment(false);
-        equipmentPrivilege.setQrTicketCancellation(false);
-        equipmentPrivilege.setQrTicketRefund(false);
-        equipmentPrivilege.setQrTicketReprint(false);
-        equipmentPrivilege.setQrTicketReplacement(false);
-        equipmentPrivilege.setQrFreeTicket(false);
-        equipmentPrivilege.setQrPaidTicket(false);
-        equipmentPrivilege.setTvm(false);
+//        equipmentPrivilege.setQrTicketIssue(false);
+//        equipmentPrivilege.setQrTicketAnalysis(false);
+//        equipmentPrivilege.setQrTicketAdjustment(false);
+//        equipmentPrivilege.setQrTicketCancellation(false);
+//        equipmentPrivilege.setQrTicketRefund(false);
+//        equipmentPrivilege.setQrTicketReprint(false);
+//        equipmentPrivilege.setQrTicketReplacement(false);
+//        equipmentPrivilege.setQrFreeTicket(false);
+//        equipmentPrivilege.setQrPaidTicket(false);
+//        equipmentPrivilege.setTvm(false);
 
         agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.STATION_CLOSE);
 //        agent.getGrpcApiListener().sendAlarm(Alarm.STATION_CLOSE);
@@ -172,16 +172,16 @@ public class ModesListener implements RemoteListener {
     }
 
     private void setEmergencyMode() {
-        equipmentPrivilege.setQrTicketIssue(false);
-        equipmentPrivilege.setQrTicketAnalysis(false);
-        equipmentPrivilege.setQrTicketAdjustment(false);
-        equipmentPrivilege.setQrTicketCancellation(false);
-        equipmentPrivilege.setQrTicketRefund(false);
-        equipmentPrivilege.setQrTicketReprint(false);
-        equipmentPrivilege.setQrTicketReplacement(false);
-        equipmentPrivilege.setQrFreeTicket(false);
-        equipmentPrivilege.setQrPaidTicket(false);
-        equipmentPrivilege.setTvm(false);
+//        equipmentPrivilege.setQrTicketIssue(false);
+//        equipmentPrivilege.setQrTicketAnalysis(false);
+//        equipmentPrivilege.setQrTicketAdjustment(false);
+//        equipmentPrivilege.setQrTicketCancellation(false);
+//        equipmentPrivilege.setQrTicketRefund(false);
+//        equipmentPrivilege.setQrTicketReprint(false);
+//        equipmentPrivilege.setQrTicketReplacement(false);
+//        equipmentPrivilege.setQrFreeTicket(false);
+//        equipmentPrivilege.setQrPaidTicket(false);
+//        equipmentPrivilege.setTvm(false);
 
         agent.getDeviceStatus().setDeviceOperationMode(DeviceOperationMode.EMERGENCY);
 //        agent.getGrpcApiListener().sendAlarm(Alarm.EMERGENCY);
