@@ -35,6 +35,7 @@ import com.amay.tom.model.station.Station;
 import com.amay.tom.model.station.StationEntity;
 import com.amay.tom.model.tomConfig.TomConfigDto;
 import com.amay.tom.model.tomConfig.TomConfigMapper;
+import com.amay.tom.model.tvmConfig.TvmConfigMapper;
 import com.amay.tom.model.user.dto.UserDto;
 import com.amay.tom.model.user.dto.UserPrivilegeDto;
 import com.amay.tom.model.version.MasterConfigInfoMapper;
@@ -63,6 +64,8 @@ import com.amay.tom.repository.tickets.TicketsRepository;
 import com.amay.tom.repository.tickets.TicketsRepositoryImpl;
 import com.amay.tom.repository.tomConfig.TomConfigRepository;
 import com.amay.tom.repository.tomConfig.TomConfigRepositoryImpl;
+import com.amay.tom.repository.tvmConfig.TvmConfigRepository;
+import com.amay.tom.repository.tvmConfig.TvmConfigRepositoryImpl;
 import com.amay.tom.repository.user.UserRepository;
 import com.amay.tom.repository.user.UserRepositoryImpl;
 import com.amay.tom.repository.version.VersionRepository;
@@ -89,6 +92,7 @@ import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.backend.repository.*;
 import com.amay.tvm.bnr.BNRIntegration;
 import com.amay.tvm.coin.CoinModuleInterface;
+import com.amay.tom.model.tvmConfig.TvmConfigDto;
 import com.google.protobuf.Any;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -445,6 +449,9 @@ public class TomInitialize implements ITomInitialize {
                 if(this.loadTomConfig((versionService.getExpected()!=null) && (!versionService.getMasterConfigInfoCheck().isTomConfig()))) {
                     versionService.getActual().setTomConfig(versionService.getExpected().getTomConfig());
                 }
+                if(this.loadTvmConfig((versionService.getExpected()!=null) && (!versionService.getMasterConfigInfoCheck().isTvmConfig()))) {
+                    versionService.getActual().setTvmConfig(versionService.getExpected().getTvmConfig());
+                }
 
                 // 13. Update Business Time
                 if(this.updateBusinessTime((versionService.getExpected()!=null)
@@ -465,7 +472,7 @@ public class TomInitialize implements ITomInitialize {
                     agent.getVersionRepository().insert(MasterConfigInfoMapper.dtoToEntity(versionService.getActual()));
                 }
                 agent.setMasterConfigInfo(MasterConfigInfoMapper.entityToMasterConfigInfo(agent.getVersionRepository().findAll().getFirst()));
-//                if(agent.getTomConfigRepository().findAll().size()>0)
+               if(agent.getTomConfigRepository().findAll().size()>0)
                 agent.setTomConfig(TomConfigMapper.entityToModel(agent.getTomConfigRepository().findAll().getFirst()));
                 ScuDataMapper.setVersion(agent.getMasterConfigInfo());
                 progress += 0.04;
@@ -526,7 +533,7 @@ public class TomInitialize implements ITomInitialize {
                 Thread.sleep(6000);
 
                 // 22. Push Remaining Data & Finalize
-                this.pushRemainedDate();
+//                this.pushRemainedDate();
                 this.onSuccessfulInitialization(scene);
                 progress = 1.0;
                 this.updateUI(progress, "Device initialization complete.");
@@ -555,6 +562,36 @@ public class TomInitialize implements ITomInitialize {
                     agent.getTomConfigRepository().deleteAll();
                     agent.getTomConfigRepository().insert(TomConfigMapper.dtoToEntity(tomConfigDto));
                     Logger.debug("TomConfig loaded: " + tomConfigDto.toString());
+                }
+            }
+        } catch (Exception e) {
+            Logger.debug("Error in loading TomConfig: " + e.getMessage());
+            this.updateUI(progress, "Error in loading TomConfig: " + e.getMessage());
+            isUpdate = false;
+        }
+        this.updateUI(++progress, "TomConfig loaded successfully.");
+        return isUpdate;
+    }
+
+    private boolean loadTvmConfig(boolean isUpdate) {
+        this.updateUI(progress, "Loading tvmConfig...");
+        try {
+            this.updateUI(progress, "Loading tvmConfig...");
+            isUpdate=true;
+
+            if (isUpdate) {
+                String productResponse = this.apiConnection.getTvmConfig();
+                if (productResponse == null) {
+                    this.updateUI(progress, "Product data not found.");
+                    Logger.debug("Product data not found.");
+                    throw new RuntimeException("Product data not found.");
+                }
+//                TomConfigDto tomConfigDto = Helper.JSONtoObjectAR(productResponse, TomConfigDto.class);
+                TvmConfigDto tvmConfigDto = Helper.JSONtoObjectAR(productResponse, TvmConfigDto.class);
+                if(tvmConfigDto!=null) {
+                    agent.getTvmConfigRepository().deleteAll();
+                    agent.getTvmConfigRepository().insert(TvmConfigMapper.dtoToEntity(tvmConfigDto));
+                    Logger.debug("TomConfig loaded: " + tvmConfigDto.toString());
                 }
             }
         } catch (Exception e) {
@@ -975,7 +1012,10 @@ public class TomInitialize implements ITomInitialize {
         agent.setFareTableRepository(fareTableRepository);
         TomConfigRepository tomConfigRepository = new TomConfigRepositoryImpl(agent.getConnection());
         agent.setTomConfigRepository(tomConfigRepository);
+        TvmConfigRepository tvmConfigRepository = new TvmConfigRepositoryImpl(agent.getConnection());
+        agent.setTvmConfigRepository(tvmConfigRepository);
         ShiftRepository shiftRepository = new ShiftRepositoryImpl(agent.getConnection());
+
         agent.setShiftRepository(shiftRepository);
         TransactionRepository transactionRepository = new TransactionRepositoryImpl(agent.getConnection());
         agent.setTransactionRepository(transactionRepository);

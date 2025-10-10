@@ -30,6 +30,7 @@ import com.amay.tom.repository.station.StationRepository;
 import com.amay.tom.repository.tickets.TicketsRepository;
 import com.amay.tom.grpc.scugrpc.ScuService;
 import com.amay.tom.repository.tomConfig.TomConfigRepository;
+import com.amay.tom.repository.tvmConfig.TvmConfigRepository;
 import com.amay.tom.repository.version.VersionRepository;
 import com.amay.tom.service.base36.ShiftIdGeneratorService;
 import com.amay.tom.service.devices.ImpDeviceStatusListener;
@@ -94,6 +95,7 @@ public class Agent {
     private CoinAmountRepository coinAmountRepository;
     private FareTableRepository fareTableRepository;
     private TomConfigRepository tomConfigRepository;
+    private TvmConfigRepository tvmConfigRepository;
 
     private NoteAmountRepository noteAmountRepository;
     private FinanceOperationRepository financeOperationRepository;

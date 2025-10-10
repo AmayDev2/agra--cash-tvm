@@ -13,4 +13,5 @@ public interface URLS {
     String CALENDER = "http://192.168.1.43:5000/api/v1/ops/calendar";
     String PRODUCT_DEFINITION = "http://192.168.1.43:5000/api/v1/ops/product-definition";
     String TOM_CONFIG = "http://192.168.1.43:5000/api/v1/topology/tom-config";
+    String TVM_CONFIG = "http://192.168.1.43:5000/api/v1/topology/tvm-config";
 }
