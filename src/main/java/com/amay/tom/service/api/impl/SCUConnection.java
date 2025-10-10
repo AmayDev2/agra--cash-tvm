@@ -212,13 +212,24 @@ public enum SCUConnection implements IApi {
 
     }
 
-    public String getTomConfig() {
+
+
+        public String getTomConfig() {
         ApiClient apiClient = new ApiClient();
         apiClient.setConnectionTimeout(2);
         apiClient.setReadTimeout(2);
         IApiRequest apiRequest = new ApiRequest();
         apiRequest.setHeader("Content-Type", "application/json");
         apiRequest.createGetRequest(URLS.TOM_CONFIG.replace("192.168.1.43:5000", IP + ":" + PORT));
+        return apiClient.sendRequest(apiRequest.buildRequest());
+    }
+    public String getTvmConfig() {
+        ApiClient apiClient = new ApiClient();
+        apiClient.setConnectionTimeout(2);
+        apiClient.setReadTimeout(2);
+        IApiRequest apiRequest = new ApiRequest();
+        apiRequest.setHeader("Content-Type", "application/json");
+        apiRequest.createGetRequest(URLS.TVM_CONFIG.replace("192.168.1.43:5000", IP + ":" + PORT));
         return apiClient.sendRequest(apiRequest.buildRequest());
     }
 }

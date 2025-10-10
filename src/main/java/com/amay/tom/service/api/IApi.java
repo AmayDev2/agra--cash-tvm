@@ -31,4 +31,5 @@ public interface IApi {
     String getProduct();
 
     String getTomConfig();
+    String getTvmConfig();
 }

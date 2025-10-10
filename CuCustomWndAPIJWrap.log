@@ -119728,6 +119728,224 @@ Print Time  : 2025-10-08T15:30:34.3562153
 2025-10-08 17-33-37.0071[EnumUSBDevices]Begin
 2025-10-08 17-33-37.0076[EnumUSBDevices]Found 0 USB Devices
 2025-10-08 17-33-37.0077[EnumUSBDevices]End
+2025-10-09 16-29-04.0348[]*****************************************
+2025-10-09 16-29-04.0349[]DLL Log Initialize. Verbosity: 6
+2025-10-09 16-29-04.0349[]*****************************************
+2025-10-09 16-29-04.0349[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-09 16-29-04.0349[]DLL Version: 1.07
+2025-10-09 16-29-04.0350[InitLibrary]Begin
+2025-10-09 16-29-04.0365[InitLibrary]Library SignID:00000101
+2025-10-09 16-29-04.0365[InitLibrary]Current SignID:00000101
+2025-10-09 16-29-04.0366[InitLibrary]End
+2025-10-09 16-29-04.0366[GetAPIVersionHwLibrary]Begin
+2025-10-09 16-29-04.0367[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-09 16-29-04.0368[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-09 16-29-04.0368[GetAPIVersionHwLibrary]End
+2025-10-09 16-29-04.0368[EnumUSBDevices]Begin
+2025-10-09 16-29-04.0371[EnumUSBDevices]Found 0 USB Devices
+2025-10-09 16-29-04.0372[EnumUSBDevices]End
+2025-10-09 16-47-33.0966[]*****************************************
+2025-10-09 16-47-33.0967[]DLL Log Initialize. Verbosity: 6
+2025-10-09 16-47-33.0967[]*****************************************
+2025-10-09 16-47-33.0967[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-09 16-47-33.0967[]DLL Version: 1.07
+2025-10-09 16-47-33.0967[InitLibrary]Begin
+2025-10-09 16-47-33.0985[InitLibrary]Library SignID:00000101
+2025-10-09 16-47-33.0985[InitLibrary]Current SignID:00000101
+2025-10-09 16-47-33.0986[InitLibrary]End
+2025-10-09 16-47-33.0986[GetAPIVersionHwLibrary]Begin
+2025-10-09 16-47-33.0987[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-09 16-47-33.0987[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-09 16-47-33.0988[GetAPIVersionHwLibrary]End
+2025-10-09 16-47-33.0988[EnumUSBDevices]Begin
+2025-10-09 16-47-33.0991[EnumUSBDevices]Found 0 USB Devices
+2025-10-09 16-47-33.0991[EnumUSBDevices]End
+2025-10-09 16-49-35.0168[]*****************************************
+2025-10-09 16-49-35.0169[]DLL Log Initialize. Verbosity: 6
+2025-10-09 16-49-35.0170[]*****************************************
+2025-10-09 16-49-35.0170[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-09 16-49-35.0170[]DLL Version: 1.07
+2025-10-09 16-49-35.0171[InitLibrary]Begin
+2025-10-09 16-49-35.0190[InitLibrary]Library SignID:00000101
+2025-10-09 16-49-35.0191[InitLibrary]Current SignID:00000101
+2025-10-09 16-49-35.0191[InitLibrary]End
+2025-10-09 16-49-35.0192[GetAPIVersionHwLibrary]Begin
+2025-10-09 16-49-35.0194[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-09 16-49-35.0195[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-09 16-49-35.0195[GetAPIVersionHwLibrary]End
+2025-10-09 16-49-35.0196[EnumUSBDevices]Begin
+2025-10-09 16-49-35.0199[EnumUSBDevices]Found 1 USB Devices
+2025-10-09 16-49-35.0200[EnumUSBDevices]End
+2025-10-09 16-49-35.0200[OpenPrinterUSB]Begin
+2025-10-09 16-49-35.0201[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-10-09 16-49-35.0204[OpenPrinterUSB]New device ID:00000101
+2025-10-09 16-49-35.0205[OpenPrinterUSB]End
+2025-10-09 16-51-40.0849[]*****************************************
+2025-10-09 16-51-40.0850[]DLL Log Initialize. Verbosity: 6
+2025-10-09 16-51-40.0850[]*****************************************
+2025-10-09 16-51-40.0850[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-09 16-51-40.0850[]DLL Version: 1.07
+2025-10-09 16-51-40.0851[InitLibrary]Begin
+2025-10-09 16-51-40.0866[InitLibrary]Library SignID:00000101
+2025-10-09 16-51-40.0866[InitLibrary]Current SignID:00000101
+2025-10-09 16-51-40.0866[InitLibrary]End
+2025-10-09 16-51-40.0867[GetAPIVersionHwLibrary]Begin
+2025-10-09 16-51-40.0869[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-09 16-51-40.0869[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-09 16-51-40.0870[GetAPIVersionHwLibrary]End
+2025-10-09 16-51-40.0870[EnumUSBDevices]Begin
+2025-10-09 16-51-40.0872[EnumUSBDevices]Found 1 USB Devices
+2025-10-09 16-51-40.0873[EnumUSBDevices]End
+2025-10-09 16-51-40.0873[OpenPrinterUSB]Begin
+2025-10-09 16-51-40.0873[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-10-09 16-51-40.0877[OpenPrinterUSB]New device ID:00000101
+2025-10-09 16-51-40.0877[OpenPrinterUSB]End
+2025-10-09 16-55-12.0844[]*****************************************
+2025-10-09 16-55-12.0844[]DLL Log Initialize. Verbosity: 6
+2025-10-09 16-55-12.0845[]*****************************************
+2025-10-09 16-55-12.0846[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-09 16-55-12.0846[]DLL Version: 1.07
+2025-10-09 16-55-12.0847[InitLibrary]Begin
+2025-10-09 16-55-12.0867[InitLibrary]Library SignID:00000101
+2025-10-09 16-55-12.0867[InitLibrary]Current SignID:00000101
+2025-10-09 16-55-12.0867[InitLibrary]End
+2025-10-09 16-55-12.0868[GetAPIVersionHwLibrary]Begin
+2025-10-09 16-55-12.0869[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-09 16-55-12.0871[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-09 16-55-12.0871[GetAPIVersionHwLibrary]End
+2025-10-09 16-55-12.0871[EnumUSBDevices]Begin
+2025-10-09 16-55-12.0874[EnumUSBDevices]Found 1 USB Devices
+2025-10-09 16-55-12.0875[EnumUSBDevices]End
+2025-10-09 16-55-12.0875[OpenPrinterUSB]Begin
+2025-10-09 16-55-12.0875[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-10-09 16-55-12.0880[OpenPrinterUSB]New device ID:00000101
+2025-10-09 16-55-12.0880[OpenPrinterUSB]End
+2025-10-09 16-56-22.0545[]*****************************************
+2025-10-09 16-56-22.0548[]DLL Log Initialize. Verbosity: 6
+2025-10-09 16-56-22.0548[]*****************************************
+2025-10-09 16-56-22.0549[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-09 16-56-22.0549[]DLL Version: 1.07
+2025-10-09 16-56-22.0549[InitLibrary]Begin
+2025-10-09 16-56-22.0571[InitLibrary]Library SignID:00000101
+2025-10-09 16-56-22.0572[InitLibrary]Current SignID:00000101
+2025-10-09 16-56-22.0572[InitLibrary]End
+2025-10-09 16-56-22.0572[GetAPIVersionHwLibrary]Begin
+2025-10-09 16-56-22.0573[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-09 16-56-22.0574[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-09 16-56-22.0574[GetAPIVersionHwLibrary]End
+2025-10-09 16-56-22.0574[EnumUSBDevices]Begin
+2025-10-09 16-56-22.0579[EnumUSBDevices]Found 1 USB Devices
+2025-10-09 16-56-22.0579[EnumUSBDevices]End
+2025-10-09 16-56-22.0579[OpenPrinterUSB]Begin
+2025-10-09 16-56-22.0581[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-10-09 16-56-22.0586[OpenPrinterUSB]New device ID:00000101
+2025-10-09 16-56-22.0587[OpenPrinterUSB]End
+2025-10-09 17-14-52.0524[]*****************************************
+2025-10-09 17-14-52.0524[]DLL Log Initialize. Verbosity: 6
+2025-10-09 17-14-52.0524[]*****************************************
+2025-10-09 17-14-52.0524[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-09 17-14-52.0526[]DLL Version: 1.07
+2025-10-09 17-14-52.0526[InitLibrary]Begin
+2025-10-09 17-14-52.0541[InitLibrary]Library SignID:00000101
+2025-10-09 17-14-52.0541[InitLibrary]Current SignID:00000101
+2025-10-09 17-14-52.0542[InitLibrary]End
+2025-10-09 17-14-52.0542[GetAPIVersionHwLibrary]Begin
+2025-10-09 17-14-52.0543[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-09 17-14-52.0543[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-09 17-14-52.0544[GetAPIVersionHwLibrary]End
+2025-10-09 17-14-52.0544[EnumUSBDevices]Begin
+2025-10-09 17-14-52.0546[EnumUSBDevices]Found 1 USB Devices
+2025-10-09 17-14-52.0547[EnumUSBDevices]End
+2025-10-09 17-14-52.0547[OpenPrinterUSB]Begin
+2025-10-09 17-14-52.0547[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-10-09 17-14-52.0551[OpenPrinterUSB]New device ID:00000101
+2025-10-09 17-14-52.0551[OpenPrinterUSB]End
+2025-10-09 17-20-30.0761[]*****************************************
+2025-10-09 17-20-30.0762[]DLL Log Initialize. Verbosity: 6
+2025-10-09 17-20-30.0762[]*****************************************
+2025-10-09 17-20-30.0762[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-09 17-20-30.0762[]DLL Version: 1.07
+2025-10-09 17-20-30.0764[InitLibrary]Begin
+2025-10-09 17-20-30.0778[InitLibrary]Library SignID:00000101
+2025-10-09 17-20-30.0778[InitLibrary]Current SignID:00000101
+2025-10-09 17-20-30.0779[InitLibrary]End
+2025-10-09 17-20-30.0779[GetAPIVersionHwLibrary]Begin
+2025-10-09 17-20-30.0780[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-09 17-20-30.0781[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-09 17-20-30.0781[GetAPIVersionHwLibrary]End
+2025-10-09 17-20-30.0781[EnumUSBDevices]Begin
+2025-10-09 17-20-30.0784[EnumUSBDevices]Found 1 USB Devices
+2025-10-09 17-20-30.0784[EnumUSBDevices]End
+2025-10-09 17-20-30.0785[OpenPrinterUSB]Begin
+2025-10-09 17-20-30.0785[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-10-09 17-20-30.0788[OpenPrinterUSB]New device ID:00000101
+2025-10-09 17-20-30.0789[OpenPrinterUSB]End
+2025-10-09 17-23-17.0827[PrintImageFromPath]Begin
+2025-10-09 17-23-17.0828[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-10-09 17-23-17.0828[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-10-09 17-23-17.0848[PrintImageFromPath]End
+2025-10-09 17-23-17.0850[PrintText]Begin
+2025-10-09 17-23-17.0850[PrintText]<Text to Print>:
+            INDORE METRO
+         Balance Report
+
+Station Name   : Super Corridor 4
+Shift ID       : 8WB70E5RH06
+Shift Start    : 09-10-2025 17:21:46
+Shift End      : -
+Equipment ID   : 01040301
+Operator ID    : MPMRC000001
+
+
+
+           BANK NOTE DETAILS
+
+Bill Type           Cnt     Amount
+
+ 10                 0      Rs. 0
+ 20                 0      Rs. 0
+ 50                 0      Rs. 0
+ 100                0      Rs. 0
+ 200                0      Rs. 0
+ 500                0      Rs. 0
+
+Total               0      Rs. 0
+
+
+
+             COIN DETAILS
+
+Coin Type           Cnt      Amount
+
+ 5                  10       Rs. 50
+ 10                 3       Rs. 30
+ 10                 10       Rs. 100
+
+Total               23      Rs. 180
+
+
+2025-10-09 17-23-17.0851[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-10-09 17-23-17.0851[PrintText]<Add LF>:false
+2025-10-09 17-23-17.0855[PrintText]End
+2025-10-09 17-23-17.0856[Cut]Begin
+2025-10-09 17-23-17.0856[Cut]CutType:CUT_TOTAL
+2025-10-09 17-23-17.0858[Cut]End
+2025-10-09 21-38-57.0709[]*****************************************
+2025-10-09 21-38-57.0709[]DLL Log Initialize. Verbosity: 6
+2025-10-09 21-38-57.0710[]*****************************************
+2025-10-09 21-38-57.0710[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-09 21-38-57.0710[]DLL Version: 1.07
+2025-10-09 21-38-57.0712[InitLibrary]Begin
+2025-10-09 21-38-57.0735[InitLibrary]Library SignID:00000101
+2025-10-09 21-38-57.0736[InitLibrary]Current SignID:00000101
+2025-10-09 21-38-57.0737[InitLibrary]End
+2025-10-09 21-38-57.0737[GetAPIVersionHwLibrary]Begin
+2025-10-09 21-38-57.0740[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-09 21-38-57.0740[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-09 21-38-57.0741[GetAPIVersionHwLibrary]End
+2025-10-09 21-38-57.0741[EnumUSBDevices]Begin
+2025-10-09 21-38-57.0745[EnumUSBDevices]Found 0 USB Devices
+2025-10-09 21-38-57.0745[EnumUSBDevices]End
 2025-10-09 15-23-40.0789[]*****************************************
 2025-10-09 15-23-40.0790[]DLL Log Initialize. Verbosity: 6
 2025-10-09 15-23-40.0791[]*****************************************
