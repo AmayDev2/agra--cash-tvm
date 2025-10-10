@@ -241,6 +241,30 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
             this.noteAmountRepository.resetToZero();
     }
 
+    @Override
+    public List<FinanceOperationEntity> getByShiftIdAndOperationType(String shiftId, String operationType) {
+        List<FinanceOperationEntity> financeOperationEntityList = new ArrayList<>();
+        try(PreparedStatement psmt = connection.prepareStatement(SELECT_ALL_BY_OPERATION_TYPE_AND_SHIFT_ID)) {
+            psmt.setString(1,operationType);
+            psmt.setString(2,shiftId);
+            ResultSet resultSet = psmt.executeQuery();
+
+            while(resultSet.next()) {
+                FinanceOperationEntity financeOperationEntity = new FinanceOperationEntity();
+                financeOperationEntity.setShiftId(resultSet.getString(1));
+                financeOperationEntity.setOperationType(FinanceOperation.valueOf(resultSet.getString(2)));
+                financeOperationEntity.setUnitAmount(resultSet.getInt(3));
+                financeOperationEntity.setQuantity(resultSet.getInt(4));
+                financeOperationEntity.setCreatedAt(resultSet.getTimestamp(5));
+                financeOperationEntity.setUpdatedAt(resultSet.getTimestamp(6));
+                financeOperationEntityList.add(financeOperationEntity);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return null;
+    }
+
     private FinanceOperationEntity mapRow(ResultSet rs) throws SQLException {
         return new FinanceOperationEntity()
                 .setShiftId(rs.getString("shiftId"))
