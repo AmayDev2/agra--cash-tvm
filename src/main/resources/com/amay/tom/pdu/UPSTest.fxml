@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.pdu.controller.UPSTestController">
+
+    <!-- Top Buttons -->
+    <top>
+        <VBox spacing="6" style="-fx-padding: 10;">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Button fx:id="btnBack" onAction="#onBack" text="← Back" />
+                <Button fx:id="btnOpenPort" onAction="#onOpenPort" text="Open Port" />
+                <Button fx:id="btnClosePort" onAction="#onClosePort" text="Close Port" />
+                <Button fx:id="btnClearDisplay" onAction="#onClearDisplay" text="Clear Display Info" HBox.hgrow="SOMETIMES" />
+                <Button fx:id="btnStatusInquiry" onAction="#onGetStatus" text="Status Inquiry" />
+                <Button fx:id="btnCancelShutdown" onAction="#onCancelShutdown" text="Cancel Shutdown" />
+            </HBox>
+
+            <HBox alignment="CENTER_LEFT" spacing="10" />
+
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label text="Retry Num:" />
+                <TextField fx:id="txtRetryNum" prefWidth="50" />
+                <Button fx:id="btnShutdown" onAction="#onShutdown" text=" Shutdown UPS" />
+
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+            </HBox>
+            <BorderPane.margin>
+                <Insets top="100.0" />
+            </BorderPane.margin>
+        </VBox>
+    </top>
+
+    <!-- Center: UPS Info Fields -->
+    <center>
+        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 10;">
+            <GridPane hgap="10" vgap="2.0">
+                <columnConstraints>
+                    <ColumnConstraints halignment="CENTER" percentWidth="14.0" />
+               <ColumnConstraints halignment="CENTER" minWidth="10.0" percentWidth="14.0" prefWidth="100.0" />
+               <ColumnConstraints halignment="CENTER" minWidth="10.0" percentWidth="14.0" prefWidth="100.0" />
+               <ColumnConstraints halignment="CENTER" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                    <ColumnConstraints halignment="CENTER" percentWidth="14.0" />
+                    <ColumnConstraints halignment="CENTER" percentWidth="14.0" />
+                    <ColumnConstraints halignment="CENTER" percentWidth="14.0" />
+                </columnConstraints>
+
+                <Label text="I/P volt" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label fx:id="txtInputVoltage" alignment="CENTER" GridPane.rowIndex="2" />
+
+                <Label text="I/P fault volt" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+                <Label fx:id="txtInputFaultVoltage" alignment="CENTER" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+
+                <Label text="O/P volt" GridPane.columnIndex="1" />
+                <Label fx:id="txtOutputVoltage" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="O/P current:" GridPane.columnIndex="4" />
+                <Label fx:id="txtOutputCurrent" alignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+
+                <Label text="I/P freq" GridPane.columnIndex="3" />
+                <Label fx:id="txtInputFrequency" alignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+                <Label text="Battery volt" GridPane.columnIndex="6" />
+                <Label fx:id="txtBatteryVoltage" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+
+                <Label text="Temp" GridPane.columnIndex="2" />
+                <Label fx:id="txtTemperature" alignment="CENTER" text="11" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <rowConstraints>
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+               <RowConstraints />
+                </rowConstraints>
+            </GridPane>
+        </VBox>
+    </center>
+
+    <!-- Bottom Status Flags + Log -->
+    <bottom>
+        <VBox spacing="8" style="-fx-padding: 10;">
+            <GridPane hgap="10.0">
+                <columnConstraints>
+                    <ColumnConstraints halignment="CENTER" percentWidth="50" />
+                    <ColumnConstraints halignment="CENTER" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+                    <ColumnConstraints halignment="CENTER" percentWidth="50" />
+                    <ColumnConstraints halignment="CENTER" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+                </columnConstraints>
+
+                <Label fx:id="lblUtilityNormal" text="Utility Normal" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label fx:id="lblStandbyUPS" text="Standby UPS" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+
+                <Label fx:id="lblBatteryNormal" text="Battery Normal" GridPane.columnIndex="1" />
+                <Label fx:id="lblTestProgress" text="Test not in Progress" GridPane.columnIndex="3" />
+
+                <Label fx:id="lblBypass" text="Bypass not Active" GridPane.rowIndex="3" />
+                <Label fx:id="lblShutdown" text="Shutdown not Active" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+                <Label fx:id="lblUPSNormal" text="UPS Normal" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label fx:id="lblBeeper" text="UPS Beeper Off" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+
+                <rowConstraints>
+                    <RowConstraints percentHeight="50.0" />
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints percentHeight="50.0" />
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                </rowConstraints>
+            </GridPane>
+
+            <TextArea fx:id="txtLog" prefHeight="214.0" prefWidth="620.0" wrapText="true" />
+
+        </VBox>
+    </bottom>
+
+</BorderPane>

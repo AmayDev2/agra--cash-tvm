@@ -154,7 +154,7 @@ public class MaintenanceLogin {
         try {
             FXMLLoader fxmlLoader = agent.getShiftService().startMaintenanceShift(usernameField.getText(), passwordField.getText(), sceneManager);
             if (fxmlLoader != null) {
-                sceneManager.addToRoot(fxmlLoader);
+                sceneManager.addToScene(fxmlLoader);
             }
             event.consume();
 

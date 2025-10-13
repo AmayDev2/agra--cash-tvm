@@ -13,6 +13,10 @@ import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.bnr.BNRIntegration;
 import com.amay.tvm.coin.CoinModuleInterface;
 import com.amay.tvm.coin.model.PollingStatusResponse;
+import com.amay.tvm.ups.UPS;
+import com.amay.tvm.ups.command.UPSCommand;
+import com.amay.tvm.ups.exception.UPSCommunicationException;
+import com.amay.tvm.ups.model.UPSResponse;
 import com.fazecast.jSerialComm.SerialPort;
 import lombok.Getter;
 import org.tinylog.Logger;
@@ -72,7 +76,7 @@ public class PeripheralMonitor implements Runnable {
         deviceStatus = new int[8];
         boolean[] tvm=coinNoduleConnected();
         scanner_connected = tvm[1]; //door
-        printer_connected = getPrinterStatus();
+        printer_connected =  isUPSUP();//getPrinterStatus();
         tvm_main_module_connected=tvm[0];
         bnr_connected = bnrConnected();
         scu_connected = ConnectionStatus.CONNECTED.equals(this.grpcApiListener.getConnectionStatus());
@@ -105,6 +109,16 @@ public class PeripheralMonitor implements Runnable {
         }
     }
 
+    private boolean getUps() {
+        try {
+            UPSResponse response=UPS.INTERFACE.getUPSResponseObject();
+            return response.getInputVoltage()>0;
+        } catch (UPSCommunicationException e) {
+                UPS.INTERFACE.reconnect();
+                return true;
+        }
+    }
+
     private boolean bnrConnected() {
         return EnvFile.isCashSupported() && BNRIntegration.isConnected();
     }
@@ -118,7 +132,6 @@ public class PeripheralMonitor implements Runnable {
             }
         }
         return false;
-//        return isUsbDeviceConnected("1EAB", "0003");
     }
 
     public static boolean[] coinNoduleConnected() {
@@ -220,7 +233,7 @@ public class PeripheralMonitor implements Runnable {
     }
 
     public static boolean getPrinterStatus() {
-       return true; //PrinterCommandDispatcher.INSTANCE.isConnected();
+       return PrinterCommandDispatcher.INSTANCE.isConnected();
     }
 
     public static boolean getInternetStatus() {
@@ -239,4 +252,13 @@ public class PeripheralMonitor implements Runnable {
         return redisStatus;
     }
 
+    public boolean isUPSUP() {
+        try {
+            UPSResponse response=UPS.INTERFACE.getUPSResponseObject();
+            return response.getInputVoltage()>0;
+        } catch (UPSCommunicationException e) {
+            UPS.INTERFACE.reconnect();
+            return true;
+        }
+    }
 }

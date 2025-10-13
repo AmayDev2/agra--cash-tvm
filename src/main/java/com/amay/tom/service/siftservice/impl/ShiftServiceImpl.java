@@ -206,7 +206,11 @@ public class ShiftServiceImpl implements ShiftService {
            throw new RuntimeException("Can't Login");
         }
         this.agent.setShiftMaintenance(shiftMaintenance);
-        agent.getInternalListener().PauseShift();
+        try {
+            agent.getInternalListener().PauseShift();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         Logger.tag(LoggerTag.APP).debug("Loading Hoppers Screen");
 //        if(userAuth.hasRole(Role.MAINTENANCE.name())) {
             shiftMaintenance.setRole(Role.MAINTENANCE.name());

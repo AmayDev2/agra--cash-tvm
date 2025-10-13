@@ -93,6 +93,9 @@ import com.amay.tvm.backend.repository.*;
 import com.amay.tvm.bnr.BNRIntegration;
 import com.amay.tvm.coin.CoinModuleInterface;
 import com.amay.tom.model.tvmConfig.TvmConfigDto;
+import com.amay.tvm.ups.UPS;
+import com.amay.tvm.ups.exception.UPSCommunicationException;
+import com.amay.tvm.ups.model.UPSResponse;
 import com.google.protobuf.Any;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -492,6 +495,8 @@ public class TomInitialize implements ITomInitialize {
 
 
 
+                PrinterCommandDispatcher.INSTANCE.setupPrinter();
+                UPS.INTERFACE.setupUPS(envLoader.getUPS_COM_PORT());
                 // 21. Peripheral Status
                 if(envLoader.getEnvironment()) {
                     try {
@@ -503,7 +508,6 @@ public class TomInitialize implements ITomInitialize {
                         e.printStackTrace();
                     }
                 }
-                PrinterCommandDispatcher.INSTANCE.setupPrinter();
 
                 // 16. CCU Transaction
                 this.setCCUTransactionConnection();
@@ -534,7 +538,7 @@ public class TomInitialize implements ITomInitialize {
                 Thread.sleep(6000);
 
                 // 22. Push Remaining Data & Finalize
-                this.pushRemainedDate();
+//                this.pushRemainedDate();
                 this.onSuccessfulInitialization(scene);
                 progress = 1.0;
                 this.updateUI(progress, "Device initialization complete.");

@@ -17,6 +17,9 @@ import com.amay.tom.service.siftservice.impl.ShiftServiceImpl;
 import com.amay.tom.service.userauth.UserAuth;
 import com.amay.tom.service.userauth.UserDetailsService;
 import com.amay.tvm.backend.enums.LoggerTag;
+import com.amay.tvm.ups.UPS;
+import com.amay.tvm.ups.exception.UPSCommunicationException;
+import com.amay.tvm.ups.model.UPSResponse;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -62,7 +65,6 @@ public class LoginController {
                         new UserDetailsService(
                                 new UserRepositoryImpl(
                                         agent.getConnection()))),new ShiftRepositoryImpl(agent.getConnection()));
-
         this.agent.setShiftService(this.shiftService);
 
         //TODO> Pass shiftService to maintenance
@@ -125,7 +127,9 @@ public class LoginController {
                         if (now.getSecond() %5==0) {
                             // Update the clock icon or other features if needed
                             if (agent.getBusinessRule().isActiveWorkingHour() ) {
-                                if( DeviceOperationMode.IN_SERVICE.equals(agent.getDeviceStatus().getCurrentStatus())) {
+                                if( DeviceOperationMode.IN_SERVICE.equals(agent.getDeviceStatus().getCurrentStatus())
+                                        && isUPSUP()
+                                ) {
                                     loginButtonClicked();
                                     // Stop the timeline once condition is met
                                     timeline.stop();
@@ -141,6 +145,10 @@ public class LoginController {
         );
         timeline.setCycleCount(javafx.animation.Animation.INDEFINITE);
         timeline.play();
+    }
+
+    private boolean isUPSUP() {
+        return agent.getPeripheralMonitor().isUPSUP();
     }
 
 

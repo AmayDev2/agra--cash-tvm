@@ -45,7 +45,7 @@ public abstract class FinanceOperationRepository {
             "VALUES (?, ?, ?, ?, ?, ?)";
     protected static final String ROLLBACK_SQL = "DELETE FROM " + TABLE_NAME + " WHERE operationType = ?";
     protected static final String SELECT_NOT_COMMITED= "SELECT shiftId, unitAmount, quantity,  updatedAt FROM " + TABLE_NAME + " WHERE operationType = ?";
-    protected static final String SELECT_ALL_BY_OPERATION_TYPE_AND_SHIFT_ID = "SELECT * FROM "+TABLE_NAME+" WHERE operationType = ?, AND shiftId = ?";
+    protected static final String SELECT_ALL_BY_OPERATION_TYPE_AND_SHIFT_ID = "SELECT * FROM "+TABLE_NAME+" WHERE operationType = ? AND shiftId = ?";
 
 
     protected abstract void createTableIfNotExists() throws SQLException;

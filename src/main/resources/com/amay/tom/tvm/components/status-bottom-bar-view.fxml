@@ -8,7 +8,7 @@
 <HBox fx:id="hbox" alignment="BASELINE_RIGHT" spacing="10" style="-fx-background-color: #ffffff;" stylesheets="@../css/structure.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.controller.components.StatusBottomBarView">
 
 
-            <Button fx:id="upsConnectedImage" styleClass="status-button" visible="false">
+            <Button fx:id="upsConnectedImage" styleClass="status-button" >
 <!--                    <graphic>-->
 <!--                            <ImageView fitHeight="30" fitWidth="30">-->
 <!--                                    <Image url="@../../../../../images/printer.png" />-->
@@ -16,7 +16,7 @@
 <!--                    </graphic>-->
             </Button>
 
-            <Button fx:id="scannerConnectedImage" styleClass="status-button" visible="false">
+            <Button fx:id="scannerConnectedImage" styleClass="status-button" >
 <!--                    <graphic>-->
 <!--                            <ImageView fitHeight="30" fitWidth="30">-->
 <!--                                    <Image url="@../../../../../images/ncmc_reader.png" />-->
@@ -24,7 +24,7 @@
 <!--                    </graphic>-->
             </Button>
 
-            <Button fx:id="printerConnectedImage" styleClass="status-button" visible="false">
+            <Button fx:id="printerConnectedImage" styleClass="status-button" >
 <!--                    <graphic>-->
 <!--                            <ImageView fitHeight="30" fitWidth="30">-->
 <!--                                    <Image url="@../../../../../images/printer.png" />-->
@@ -32,7 +32,7 @@
 <!--                    </graphic>-->
             </Button>
 
-            <Button fx:id="scuConnectedImage" styleClass="status-button" visible="false">
+            <Button fx:id="scuConnectedImage" styleClass="status-button" >
 <!--                    <graphic>-->
 <!--                            <ImageView fitHeight="30" fitWidth="30">-->
 <!--                                    <Image url="@../../../../../images/icon_scu.png" />-->
@@ -40,7 +40,7 @@
 <!--                    </graphic>-->
             </Button>
 
-            <Button fx:id="ccuConnectedImage" styleClass="status-button" visible="false">
+            <Button fx:id="ccuConnectedImage" styleClass="status-button" >
 <!--                    <graphic>-->
 <!--                            <ImageView fitHeight="30" fitWidth="30">-->
 <!--                                    <Image url="@../../../../../images/ccu.png" />-->
@@ -48,7 +48,7 @@
 <!--                    </graphic>-->
             </Button>
 
-            <Button fx:id="readerConnectedImage" styleClass="status-button" visible="false">
+            <Button fx:id="readerConnectedImage" styleClass="status-button" >
 <!--                    <graphic>-->
 <!--                            <ImageView fitHeight="30" fitWidth="30">-->
 <!--                                    <Image url="@../../../../../images/card_Reader.png" />-->
@@ -56,21 +56,21 @@
 <!--                    </graphic>-->
             </Button>
 
-            <Button fx:id="pduConnectedImage" styleClass="status-button" visible="false">
+            <Button fx:id="pduConnectedImage" styleClass="status-button" >
 <!--                    <graphic>-->
 <!--                            <ImageView fitHeight="30" fitWidth="30">-->
 <!--                                    <Image url="@../../../../../images/icon_pdu.png" />-->
 <!--                            </ImageView>-->
 <!--                    </graphic>-->
             </Button>
-    <Button fx:id="coinModule" styleClass="status-button" visible="false">
+    <Button fx:id="coinModule" styleClass="status-button" >
         <!--                    <graphic>-->
         <!--                            <ImageView fitHeight="30" fitWidth="30">-->
         <!--                                    <Image url="@../../../../../images/icon_pdu.png" />-->
         <!--                            </ImageView>-->
         <!--                    </graphic>-->
     </Button>
-    <Button fx:id="bnr" styleClass="status-button" visible="false">
+    <Button fx:id="bnr" styleClass="status-button" >
         <!--                    <graphic>-->
         <!--                            <ImageView fitHeight="30" fitWidth="30">-->
         <!--                                    <Image url="@../../../../../images/icon_pdu.png" />-->

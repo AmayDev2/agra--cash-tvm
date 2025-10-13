@@ -1021,9 +1021,8 @@ public class BNRIntegration  {
             disableCancel();
 
             if(insertedAmount<amount){
-                throw new RuntimeException("Cant process input amount is less than required");
+                throw new RuntimeException("Can't process input amount is less than required");
             }
-            bnrListener.setStatus(BNRStatus.SUCCESS);
 
             // Check if change needed
             if (insertedAmount > amount) {
@@ -1241,6 +1240,7 @@ public class BNRIntegration  {
         if (event.getResult() != BnrXfsErrorCode.XFS_SUCCESSFULL) {
             throw new JxfsException(event.getResult());
         }else {
+            // ROLL BACK SUCCESS
             bnrListener.setStatus(BNRStatus.FAILED);
         }
     }//cashInRollback

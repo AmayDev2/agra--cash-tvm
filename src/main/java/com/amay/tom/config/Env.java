@@ -83,6 +83,7 @@ public interface Env {
     String FXML_LIB = "";
     String COIN_MODULE = "";
     String COM_PORT = "COM2";
+    String UPS_COM_PORT = "COM6";
 
     // Methods to return objects for config or privileges
     TicketConfigDTO getTicketConfig();

@@ -23,7 +23,7 @@ class NoteAmountRepositoryImplTest {
 
     @AfterAll
     static void cleanup() {
-//        noteAmountRepository.resetToZero(); // Ensure a clean state before the test
+        noteAmountRepository.resetToZero(); // Ensure a clean state before the test
         if (noteAmountRepository instanceof NoteAmountRepository repoImpl) {
             try {
                 repoImpl.connection.close();
@@ -61,8 +61,8 @@ class NoteAmountRepositoryImplTest {
         try {
             noteAmountRepository.deleteAll(); // Ensure a clean state before the test
             NoteAmountEntity entity = createSampleEntity(100, 0, 0);
-             noteAmountRepository.updateToAdd(entity);
-             entity = createSampleEntity(50, 0, 0);
+            noteAmountRepository.updateToAdd(entity);
+            entity = createSampleEntity(50, 0, 0);
             noteAmountRepository.updateToAdd(entity);
             entity = createSampleEntity(20, 0, 0);
             noteAmountRepository.updateToAdd(entity);

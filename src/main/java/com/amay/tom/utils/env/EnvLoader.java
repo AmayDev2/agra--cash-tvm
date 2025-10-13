@@ -199,4 +199,8 @@ public class EnvLoader {
     public boolean getEnvironment() {
         return Boolean.parseBoolean(getOrDefault("ENVIRONMENT", String.valueOf(false)));
     }
+
+    public String getUPS_COM_PORT() {
+        return getOrDefault("UPS_COM_PORT", UPS_COM_PORT);
+    }
 }

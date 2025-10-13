@@ -28,7 +28,7 @@ public class UserAuth {
         String userPass="tvm_user";
         if(username.equals(userName) && password.equals(userPass)){
             UserPrivilege userPrivilege= new UserPrivilege();
-            userPrivilege.setTvm(true);
+//            userPrivilege.setTvm(true);
 //            Set<String> roles= new HashSet<>();
 //            roles.add(Role.OPERATOR.name());
 //            currentUser= new User().setRoles(roles);
@@ -47,12 +47,12 @@ public class UserAuth {
 
            //System.out.println("User Privilege: "+user.toString());
             UserPrivilege userPrivilege= userDetailsService.loadUserPrivilege(username);
-            if(userPrivilege.isQrFreeTicket()  || userPrivilege.isQrPaidTicket() || userPrivilege.isQrTicketAdjustment()
-            || userPrivilege.isQrTicketAnalysis() || userPrivilege.isQrTicketIssue() || userPrivilege.isQrTicketCancellation()
-            || userPrivilege.isQrTicketRefund() || userPrivilege.isQrTicketReplacement()
-            || userPrivilege.isQrTicketReprint() || userPrivilege.isTvm()){
+//            if(userPrivilege.isQrFreeTicket()  || userPrivilege.isQrPaidTicket() || userPrivilege.isQrTicketAdjustment()
+//            || userPrivilege.isQrTicketAnalysis() || userPrivilege.isQrTicketIssue() || userPrivilege.isQrTicketCancellation()
+//            || userPrivilege.isQrTicketRefund() || userPrivilege.isQrTicketReplacement()
+//            || userPrivilege.isQrTicketReprint() || userPrivilege.isTvm()){
                 return  userPrivilege;
-            }
+//            }
 
         }
         throw new UsernameNotFoundException("Incorrect User ID or Password");

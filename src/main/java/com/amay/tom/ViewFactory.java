@@ -311,6 +311,8 @@ public class ViewFactory {
     }
 
 
-
+    public static FXMLLoader getUPSTestLoad() {
+        return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/pdu/UPSTest.fxml"));
+    }
 }
 

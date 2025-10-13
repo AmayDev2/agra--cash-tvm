@@ -87,16 +87,39 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
     }
 
     private void updateNoteAmountData(FinanceOperationEntity entity) {
-        if (entity.getOperationType() == FinanceOperation.BNR_DEPOSIT
-                || entity.getOperationType() == FinanceOperation.BNR_LOAD
-                || entity.getOperationType() == FinanceOperation.BNR_NOT_COMMITTED) {
-            // For deposits, increase cashInQuantity
-            this.noteAmountRepository.updateToAdd(new NoteAmountEntity().setUnitAmount(entity.getUnitAmount()).setCashInQuantity(entity.getQuantity()));
-        } else if (entity.getOperationType() == FinanceOperation.BNR_UNLOAD
-                || entity.getOperationType() == FinanceOperation.BNR_DISPENSE) {
-            // For withdrawals, increase cashOutQuantity
-            this.noteAmountRepository.updateToAdd(new NoteAmountEntity().setUnitAmount(entity.getUnitAmount()).setCashOutQuantity(entity.getQuantity()));
-        }
+        NoteAmountEntity noteAmountEntity=switch (entity.getOperationType()) {
+            case BNR_DEPOSIT, BNR_LOAD, BNR_NOT_COMMITTED ->
+                        new NoteAmountEntity()
+                                .setContainerId("CB")
+                                .setUnitAmount(entity.getUnitAmount())
+                                .setCashInQuantity(entity.getQuantity()
+                );
+
+            case BNR_UNLOAD, BNR_DISPENSE ->
+                        new NoteAmountEntity()
+                                .setContainerId("CB")
+                                .setUnitAmount(entity.getUnitAmount())
+                                .setCashOutQuantity(entity.getQuantity()
+                );
+
+            case COIN_LOAD ->
+                        new NoteAmountEntity()
+                                .setContainerId("COIN")
+                                .setUnitAmount(entity.getUnitAmount())
+                                .setCashInQuantity(entity.getQuantity()
+                );
+
+            case COIN_UNLOAD,COIN_DISPENSE ->
+                            new NoteAmountEntity()
+                                    .setContainerId("COIN")
+                                    .setUnitAmount(entity.getUnitAmount())
+                                    .setCashOutQuantity(entity.getQuantity()
+                    );
+        };
+
+        Logger.tag(LoggerTag.BUSS).info(noteAmountEntity);
+        noteAmountRepository.updateToAdd(noteAmountEntity);
+
     }
 
 
@@ -251,7 +274,7 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
             psmt.setString(2,shiftId);
             ResultSet resultSet = psmt.executeQuery();
 
-            while(resultSet.next()) {
+            while(resultSet!=null && resultSet.next()) {
                 FinanceOperationEntity financeOperationEntity = new FinanceOperationEntity();
                 financeOperationEntity.setShiftId(resultSet.getString(1));
                 financeOperationEntity.setOperationType(FinanceOperation.valueOf(resultSet.getString(2)));
@@ -264,7 +287,7 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return null;
+        return financeOperationEntityList;
     }
 
     private FinanceOperationEntity mapRow(ResultSet rs) throws SQLException {

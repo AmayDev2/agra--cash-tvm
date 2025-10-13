@@ -1,9 +1,11 @@
 package com.amay.tom.pdu;
 
 import com.amay.printer.PrinterCommandDispatcher;
+import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.maintenance.service.component.StatusWindowPopup;
 import com.amay.tom.maintenance.service.component.model.StatusWindowModel;
+import com.amay.tom.pdu.controller.UPSTestController;
 import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tom.service.chield.ticketservice.ImplTicketService;
 import com.amay.tom.service.devices.PeripheralMonitor;
@@ -11,6 +13,7 @@ import com.amay.tom.service.devices.device.PrinterStatus;
 import com.amay.tom.service.print.impl.PrinterService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -127,6 +130,11 @@ public class MaintenanceTestController {
 
     @FXML
     private void onUPSTest(ActionEvent event) {
+        FXMLLoader fxmlLoader= ViewFactory.getUPSTestLoad();
+        UPSTestController controller=new UPSTestController(this.agent,this.sceneManager);
+        fxmlLoader.setControllerFactory((x)->controller);
+        this.sceneManager.addToScene(fxmlLoader);
+        event.consume();
     }
 
     @FXML

@@ -203,6 +203,12 @@ public class EnvFile {
         return value;
     }
 
+    public static String getUPSComPort() {
+        String value = getValueOrDefault("UPS_COM_PORT", Env.UPS_COM_PORT);
+        Logger.tag(LoggerTag.APP).info("UPS COM {}",value);
+        return value;
+    }
+
 //        public static String getMasterConfigFile() {
 //            String value = dotenv.get("MASTER_CONFIG_FILE");
 //            if (value == null || value.isEmpty()) {

@@ -11,6 +11,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.tinylog.Logger;
 
+import java.sql.Connection;
 import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.List;
@@ -24,7 +25,7 @@ class FinanceOperationRepositoryImplTest {
 
     @AfterAll
     static void cleanup() {
-        financeOperationRepository.deleteAll();
+//        financeOperationRepository.deleteAll();
         if (financeOperationRepository instanceof FinanceOperationRepositoryImpl repoImpl) {
             try {
                 repoImpl.connection.close();
@@ -40,22 +41,27 @@ class FinanceOperationRepositoryImplTest {
     @BeforeAll
     static void init() {
         try {
-            EnvLoader envLoader = new EnvLoader(ENVURL.CONFIG + ".env");
-            String dbUrl = envLoader.getDatabaseUrl();
-            String dbUsername = envLoader.getDatabaseUsername();
-            String dbPassword = envLoader.getDatabasePassword2();
-            int noOfConnections = envLoader.getSQLiteDatabaseConnections();
+            Connection connection = getConnection();
 
-            SQLConnector sqlConnector = new SQLConnector(dbUrl, dbUsername, dbPassword, noOfConnections);
-            sqlConnector.setConnection();
-
-            financeOperationRepository = new FinanceOperationRepositoryImpl(sqlConnector.getConnection(),new NoteAmountRepositoryImpl(sqlConnector.getConnection()));
+            financeOperationRepository = new FinanceOperationRepositoryImpl(connection,new NoteAmountRepositoryImpl(connection));
 
             Logger.tag(LoggerTag.APP).info("FinanceOperationRepository initialized");
 
         } catch (Exception e) {
             fail("Initialization failed: " + e.getMessage());
         }
+    }
+
+    private static Connection getConnection() throws InterruptedException {
+        EnvLoader envLoader = new EnvLoader(ENVURL.CONFIG + ".env");
+        String dbUrl = envLoader.getDatabaseUrl();
+        String dbUsername = envLoader.getDatabaseUsername();
+        String dbPassword = envLoader.getDatabasePassword2();
+        int noOfConnections = envLoader.getSQLiteDatabaseConnections();
+
+        SQLConnector sqlConnector = new SQLConnector(dbUrl, dbUsername, dbPassword, noOfConnections);
+        sqlConnector.setConnection();
+        return sqlConnector.getConnection();
     }
 
     @Test
@@ -134,6 +140,87 @@ class FinanceOperationRepositoryImplTest {
         assertTrue(deletedEntities.isEmpty(), "Entities should be deleted for the given shiftId");
     }
 
+    @Test
+    void upsert_shouldUpsertRecordForSameShiftId() {
+        String shiftIdValue = UUID.randomUUID().toString();
+        FinanceOperationEntity entity = buildEntity(100, FinanceOperation.BNR_LOAD, 1,shiftIdValue);
+        String shiftId = financeOperationRepository.upsert(entity);
+        assertNotNull(shiftId, "ShiftId should not be null after upsert");
+        assertEquals(shiftIdValue, shiftId, "Returned shiftId should match the entity's shiftId");
+        entity.setQuantity(2);
+        entity.setUnitAmount(10);
+        shiftId = financeOperationRepository.upsert(entity);
+        assertNotNull(shiftId, "ShiftId should not be null after second upsert");
+        assertEquals(shiftIdValue, shiftId, "Returned shiftId should match the entity's shiftId after second upsert");
+
+        entity.setQuantity(2);
+        entity.setUnitAmount(20);
+       financeOperationRepository.upsert(entity);
+
+        entity.setQuantity(2);
+        entity.setUnitAmount(200);
+        financeOperationRepository.upsert(entity);
+
+
+        entity.setQuantity(2);
+        entity.setUnitAmount(500);
+        financeOperationRepository.upsert(entity);
+
+        entity.setQuantity(2);
+        entity.setUnitAmount(500);
+        financeOperationRepository.upsert(entity);
+
+
+        entity.setQuantity(2);
+        entity.setUnitAmount(1);
+        entity.setOperationType(FinanceOperation.COIN_LOAD);
+        financeOperationRepository.upsert(entity);
+
+        entity.setQuantity(2);
+        entity.setUnitAmount(2);
+        financeOperationRepository.upsert(entity);
+
+        entity.setQuantity(2);
+        entity.setUnitAmount(3);
+        financeOperationRepository.upsert(entity);
+
+        //3rd entry with same unit amount and operation type as first entry
+        entity.setQuantity(4);
+        entity.setUnitAmount(50);
+        shiftId = financeOperationRepository.upsert(entity);
+        assertNotNull(shiftId, "ShiftId should not be null after second upsert");
+        assertEquals(shiftIdValue, shiftId, "Returned shiftId should match the entity's shiftId after second upsert");
+//
+//        int quantity=financeOperationRepository.markCommited();
+//        assertEquals(3,quantity,"Total quantity should be 3");
+
+
+        //3rd entry with same unit amount and operation type as first entry
+        entity.setQuantity(4);
+        entity.setUnitAmount(20);
+        shiftId = financeOperationRepository.upsert(entity);
+        assertNotNull(shiftId, "ShiftId should not be null after second upsert");
+        assertEquals(shiftIdValue, shiftId, "Returned shiftId should match the entity's shiftId after second upsert");
+
+//
+//        quantity=financeOperationRepository.rollback();
+//        assertEquals(1,quantity,"Total quantity should be 3");
+
+
+        List<FinanceOperationEntity> entities = financeOperationRepository.findByShiftId(shiftId);
+        assertFalse(entities.isEmpty(), "Should find entities for the given shiftId");
+        FinanceOperationEntity fetchedEntity = entities.stream()
+                .filter(e -> e.getOperationType().equals(FinanceOperation.BNR_LOAD) && e.getUnitAmount() == 10)
+                .findFirst()
+                .orElse(null);
+
+//        assertNotNull(fetchedEntity, "Fetched entity should not be null");
+//        assertEquals(2, fetchedEntity.getQuantity(), "Quantity should be cumulative (1 + 2 = 3)");
+//        financeOperationRepository.deleteByShiftId(shiftId);
+
+//        List<FinanceOperationEntity> deletedEntities = financeOperationRepository.findByShiftId(shiftId);
+//        assertTrue(deletedEntities.isEmpty(), "Entities should be deleted for the given shiftId");
+    }
 
     @Test
     void upsert_shouldUpsertDeleteMultiRecordForDiffShiftId() {
@@ -188,62 +275,6 @@ class FinanceOperationRepositoryImplTest {
         assertTrue(deletedEntities.isEmpty(), "Entities should be deleted for the given shiftId");
     }
 
-/*    @Test
-    void upsert_shouldUpdateRecord() {
-        FinanceOperationEntity entity = buildEntity();
-        String shiftId = financeOperationRepository.upsert(entity);
-        assertNotNull(shiftId);
-
-        // Increase quantity for update test
-        entity.setQuantity(5);
-        String updatedId = financeOperationRepository.upsert(entity);
-        assertEquals(shiftId, updatedId);
-
-        // Fetch all entries for this shiftId and find matching record to check quantity
-        List<FinanceOperationEntity> updatedEntities = financeOperationRepository.findByShiftId(shiftId);
-
-        // Find the entity with the matching operationType and unitAmount
-        FinanceOperationEntity updatedEntity = updatedEntities.stream()
-                .filter(e -> e.getOperationType() == entity.getOperationType() && e.getUnitAmount() == entity.getUnitAmount())
-                .findFirst()
-                .orElse(null);
-
-        assertNotNull(updatedEntity, "Updated entity should be found");
-        assertEquals(6, updatedEntity.getQuantity(), "Quantity should be cumulative (1 + 5 = 6)");
-    }
-
-    @Test
-    void findByShiftId_shouldReturnEntity() {
-        FinanceOperationEntity entity = buildEntity();
-        String shiftId = financeOperationRepository.upsert(entity);
-
-        List<FinanceOperationEntity> found = financeOperationRepository.findByShiftId(shiftId);
-        assertFalse(found.isEmpty(), "Should find at least one entity");
-        found.forEach(System.out::println);
-    }
-
-    @Test
-    void findAll_shouldReturnList() {
-        FinanceOperationEntity entity1 = buildEntity();
-        FinanceOperationEntity entity2 = buildEntity();
-        financeOperationRepository.upsert(entity1);
-        financeOperationRepository.upsert(entity2);
-
-        List<FinanceOperationEntity> all = financeOperationRepository.findAll();
-        assertFalse(all.isEmpty());
-        all.forEach(System.out::println);
-    }
-//
-    @Test
-    void deleteByShiftId_shouldRemoveRecord() {
-        FinanceOperationEntity entity = buildEntity();
-        String shiftId = financeOperationRepository.upsert(entity);
-
-        financeOperationRepository.deleteByShiftId(shiftId);
-        List<FinanceOperationEntity> deleted = financeOperationRepository.findByShiftId(shiftId);
-        assertEquals(0, deleted.size());
-    }*/
-//
     // Helper to build a test entity
     private FinanceOperationEntity buildEntity(int unitAmount, FinanceOperation operationType, int quantity, String shiftId) {
         Timestamp now = Timestamp.from(Instant.now());
