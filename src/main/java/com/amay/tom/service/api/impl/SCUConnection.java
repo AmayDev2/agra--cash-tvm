@@ -232,4 +232,9 @@ public enum SCUConnection implements IApi {
         apiRequest.createGetRequest(URLS.TVM_CONFIG.replace("192.168.1.43:5000", IP + ":" + PORT));
         return apiClient.sendRequest(apiRequest.buildRequest());
     }
+
+    @Override
+    public String getEquipmentDetails() {
+        return "";
+    }
 }

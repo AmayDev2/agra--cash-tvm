@@ -20,10 +20,12 @@ import com.amay.tom.grpc.scugrpc.SCUGrpcConnector;
 import com.amay.tom.grpc.scugrpc.ScuDataMapper;
 import com.amay.tom.grpc.scugrpc.ScuService;
 import com.amay.tom.listener.ModesListener;
+import com.amay.tom.model.Equipment;
 import com.amay.tom.model.TicketType;
 import com.amay.tom.model.business.*;
 import com.amay.tom.model.ccuRest.Users;
 import com.amay.tom.model.equipment.EquipmentMapper;
+import com.amay.tom.model.equipment.dto.EquipmentDto;
 import com.amay.tom.model.equipment.dto.EquipmentPrivilegeDto;
 import com.amay.tom.model.faretable.FareMatrixDTO;
 import com.amay.tom.model.faretable.FareRowEntity;
@@ -48,6 +50,8 @@ import com.amay.tom.repository.StationData;
 import com.amay.tom.repository.adjustment.AdjustedTicketRepository;
 import com.amay.tom.repository.adjustment.AdjustedTicketRepositoryImpl;
 import com.amay.tom.repository.business.*;
+import com.amay.tom.repository.equipment.EquipmentRepository;
+import com.amay.tom.repository.equipment.EquipmentRepositoryImpl;
 import com.amay.tom.repository.fareTable.FareTableRepository;
 import com.amay.tom.repository.fareTable.FareTableRepositoryImpl;
 import com.amay.tom.repository.product.ProductRepository;
@@ -87,6 +91,7 @@ import com.amay.tom.threadpool.ThreadPool;
 import com.amay.tom.utils.StationData1;
 import com.amay.tom.utils.env.EnvFile;
 import com.amay.tom.utils.env.EnvLoader;
+import com.amay.tom.utils.equipments.EquipmentUtil;
 import com.amay.tom.utils.helper.Helper;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.backend.repository.*;
@@ -96,6 +101,8 @@ import com.amay.tom.model.tvmConfig.TvmConfigDto;
 import com.amay.tvm.ups.UPS;
 import com.amay.tvm.ups.exception.UPSCommunicationException;
 import com.amay.tvm.ups.model.UPSResponse;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.protobuf.Any;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -377,6 +384,8 @@ public class TomInitialize implements ITomInitialize {
                 progress += 0.04;
                 this.updateUI(progress, "Thread pool initialized.");
 
+                getEquipment();
+
                 // 2. Get Version
                 this.getVersion();
                 progress += 0.04;
@@ -606,6 +615,47 @@ public class TomInitialize implements ITomInitialize {
         }
         this.updateUI(++progress, "TomConfig loaded successfully.");
         return isUpdate;
+    }
+
+    private void getEquipment() {
+        String response = this.apiConnection.getEquipmentDetails();
+        if (response == null)
+            return;
+        try {
+            EquipmentDto equipmentDto = new ObjectMapper().readValue(response, EquipmentDto.class);
+            com.amay.tom.model.equipment.entity.Equipment equipment = EquipmentMapper.convertEquipmentDtoToEntity(equipmentDto);
+            EquipmentUtil.setEquipment(equipment);
+        } catch (JsonProcessingException e) {
+            Logger.error("Error parsing JSON response from CCU for Equipment details", e);
+        } catch (RuntimeException e) {
+            Logger.error("Error while getting Equipment data: " + e.getMessage(), e);
+        }
+    }
+
+
+    public void loadEquipmentDetailsFromDb() {
+        EquipmentRepository equipmentRepository = agent.getEquipmentRepository();
+        com.amay.tom.model.equipment.entity.Equipment equipmentDetails = equipmentRepository.get();
+        if (equipmentDetails != null) {
+            String currentStationId = equipmentDetails.getStationId();
+            StationData.getInstance();
+            String currentStationName = StationData.getInstance().getStation(currentStationId).getStationName();
+            String currentEquipmentId = equipmentDetails.getEquipmentId();
+            String currentEquipmentSerial = equipmentDetails.getEquipmentSerial();
+            String lineNumber = equipmentDetails.getLineId();
+            SystemConfig.getInstance(currentStationId, currentStationName, currentEquipmentId, currentEquipmentSerial, lineNumber);
+            PDUCommandDispatcher.INSTANCE.dispatch(new HeaderCommand(SystemConfig.getInstance().getCurrentStation()));
+        }
+    }
+
+
+    private void initializeEquipmentDetails(){
+        EquipmentRepository equipmentRepository = agent.getEquipmentRepository();
+        com.amay.tom.model.equipment.entity.Equipment equipmentFromDb = equipmentRepository.get();
+        com.amay.tom.model.equipment.entity.Equipment equipmentFromCCU = EquipmentUtil.getEquipment();
+        if(equipmentFromDb==null && equipmentFromCCU!=null){
+            equipmentRepository.insertIfEmpty(equipmentFromCCU);
+        }
     }
 
 
@@ -1028,6 +1078,7 @@ public class TomInitialize implements ITomInitialize {
         agent.setCoinAmountRepository(coinAmountRepository);
         agent.setNoteAmountRepository(new NoteAmountRepositoryImpl(agent.getConnection()));
         agent.setFinanceOperationRepository(new FinanceOperationRepositoryImpl(agent.getConnection(), agent.getNoteAmountRepository()));
+        agent.setEquipmentRepository(new EquipmentRepositoryImpl(agent.getConnection()));
         return true;
     }
 

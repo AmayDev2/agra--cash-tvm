@@ -183933,3 +183933,31 @@
 2025/10/13-17:31:14.459:[00005A60#00000000#5] > [EnumUSBDevices] Begin
 2025/10/13-17:31:14.459:[00005A60#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
 2025/10/13-17:31:14.460:[00005A60#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/13-18:10:31.812:[000039C8#00000000#5] > [InitLibrary] Begin
+2025/10/13-18:10:31.813:[000039C8#00000000#4] > [InitLibrary] DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/13-18:10:31.814:[000039C8#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/13-18:10:31.814:[000039C8#00000000#4] > [InitLibrary] Application Path: C:\Users\DEV2\.jdks\corretto-23.0.2\bin\java.exe
+2025/10/13-18:10:31.815:[000039C8#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/13-18:10:31.816:[000039C8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/13-18:10:31.817:[000039C8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/13-18:10:31.818:[000039C8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 24H2
+2025/10/13-18:10:31.819:[000039C8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/13-18:10:31.820:[000039C8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/13-18:10:31.820:[000039C8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/13-18:10:31.821:[000039C8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/13-18:10:31.822:[000039C8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/13-18:10:31.823:[000039C8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26100
+2025/10/13-18:10:31.841:[000039C8#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/13-18:10:31.841:[000039C8#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/13-18:10:31.842:[000039C8#00000000#5] > [GetVariable] Begin
+2025/10/13-18:10:31.842:[000039C8#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/13-18:10:31.843:[000039C8#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/13-18:10:31.846:[000039C8#00000000#5] > [GetAPIVersion] Begin
+2025/10/13-18:10:31.847:[000039C8#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/13-18:10:31.847:[000039C8#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/13-18:10:31.850:[000039C8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/13-18:10:31.852:[000039C8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/13-18:10:31.852:[000039C8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/13-18:10:31.853:[000039C8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/13-18:10:31.853:[000039C8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/13-18:10:31.853:[000039C8#00000000#5] > [EnumUSBDevices] End [0/Ok]

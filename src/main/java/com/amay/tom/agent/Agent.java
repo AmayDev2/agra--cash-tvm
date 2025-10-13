@@ -20,6 +20,7 @@ import com.amay.tom.repository.adjustment.AdjustedTicketRepository;
 import com.amay.tom.repository.business.BusinessDayConfigRepository;
 import com.amay.tom.repository.business.CalendarConfigRepository;
 import com.amay.tom.repository.business.PeakTimeConfigRepository;
+import com.amay.tom.repository.equipment.EquipmentRepository;
 import com.amay.tom.repository.fareTable.FareTableRepository;
 import com.amay.tom.repository.product.ProductRepository;
 import com.amay.tom.repository.refund.RefundTicketRepository;
@@ -96,12 +97,12 @@ public class Agent {
     private FareTableRepository fareTableRepository;
     private TomConfigRepository tomConfigRepository;
     private TvmConfigRepository tvmConfigRepository;
-
     private NoteAmountRepository noteAmountRepository;
     private FinanceOperationRepository financeOperationRepository;
     private ShiftRepository shiftRepository;
     private MasterConfigInfo masterConfigInfo;
     private TomConfig tomConfig;
+    private EquipmentRepository equipmentRepository;
 
 //    private Products products;
     private List<Product> products;

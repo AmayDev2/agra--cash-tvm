@@ -1,6 +1,8 @@
 package com.amay.tom.model.equipment;
 
+import com.amay.tom.model.equipment.dto.EquipmentDto;
 import com.amay.tom.model.equipment.dto.EquipmentPrivilegeDto;
+import com.amay.tom.model.equipment.entity.Equipment;
 import com.amay.tom.model.equipment.entity.EquipmentPrivilege;
 import javafx.beans.property.SimpleBooleanProperty;
 
@@ -59,6 +61,38 @@ public class EquipmentMapper {
         );
     }
 
+    public static Equipment convertEquipmentDtoToEntity(EquipmentDto dto) {
+        if (dto == null) return null;
+
+        Equipment equipment = new Equipment();
+        equipment.setLineId(dto.getLineId());
+        equipment.setStationId(dto.getStationId());
+        equipment.setEquipmentTypeId(dto.getEquipmentTypeId());
+        equipment.setEquipmentSerial(dto.getEquipmentSerial());
+        equipment.setEquipmentId(dto.getEquipmentId());
+        equipment.setEquipmentName(dto.getEquipmentName());
+        equipment.setEquipmentIp(dto.getEquipmentIp());
+        equipment.setStatus(dto.getStatus());
+        equipment.setBeta(dto.isBeta());
+        return equipment;
+    }
+
+    /** Convert Equipment entity to EquipmentDto */
+    public static EquipmentDto convertEquipmentEntityToDto(Equipment entity) {
+        if (entity == null) return null;
+
+        EquipmentDto dto = new EquipmentDto();
+        dto.setLineId(entity.getLineId());
+        dto.setStationId(entity.getStationId());
+        dto.setEquipmentTypeId(entity.getEquipmentTypeId());
+        dto.setEquipmentSerial(entity.getEquipmentSerial());
+        dto.setEquipmentId(entity.getEquipmentId());
+        dto.setEquipmentName(entity.getEquipmentName());
+        dto.setEquipmentIp(entity.getEquipmentIp());
+        dto.setStatus(entity.getStatus());
+        dto.setBeta(entity.isBeta());
+        return dto;
+    }
 
 
 }
