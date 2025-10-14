@@ -128,7 +128,7 @@ public class LoginController {
                             // Update the clock icon or other features if needed
                             if (agent.getBusinessRule().isActiveWorkingHour() ) {
                                 if( DeviceOperationMode.IN_SERVICE.equals(agent.getDeviceStatus().getCurrentStatus())
-                                        && isUPSUP()
+                                        && agent.getPeripheralMonitor().isUPSUP()
                                 ) {
                                     loginButtonClicked();
                                     // Stop the timeline once condition is met
@@ -145,10 +145,6 @@ public class LoginController {
         );
         timeline.setCycleCount(javafx.animation.Animation.INDEFINITE);
         timeline.play();
-    }
-
-    private boolean isUPSUP() {
-        return agent.getPeripheralMonitor().isUPSUP();
     }
 
 

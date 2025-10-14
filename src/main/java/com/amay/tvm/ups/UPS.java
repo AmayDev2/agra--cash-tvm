@@ -41,26 +41,40 @@ public enum UPS implements UPSInterface {
 
     @Override
     public void disconnect() {
+
+
         upsCommunicationInterface.disconnect();
     }
 
     @Override
     public double getIPVoltage() throws UPSCommunicationException {
+        if (upsCommunicationInterface == null) {
+            throw new UPSCommunicationException("UPS communication interface is null.");
+        }
         return upsCommunicationInterface.getIPVoltage();
     }
 
     @Override
     public UPSResponse getUPSResponseObject() throws UPSCommunicationException {
+        if (upsCommunicationInterface == null) {
+            throw new UPSCommunicationException("UPS communication interface is null.");
+        }
         return upsCommunicationInterface.getUPSResponseObject();
     }
 
     @Override
     public String fireCommand(UPSCommand command) throws UPSCommunicationException {
+        if (upsCommunicationInterface == null) {
+            throw new UPSCommunicationException("UPS communication interface is null.");
+        }
         return upsCommunicationInterface.fireCommand(command);
     }
 
     @Override
     public String fireCommand(String commandString) throws UPSCommunicationException {
+        if (upsCommunicationInterface == null) {
+            throw new UPSCommunicationException("UPS communication interface is null.");
+        }
         return upsCommunicationInterface.fireCommand(commandString);
     }
 }

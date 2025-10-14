@@ -13,6 +13,16 @@ import org.tinylog.Logger;
 
 public class StatusBottomBarView {
     @FXML
+    private  Button ohd;
+    @FXML
+    private  Button uPOS;
+    @FXML
+    private  Button upsUP;
+    @FXML
+    private  Button upsCon;
+
+
+    @FXML
     private  Button coinModule;
     @FXML
     private  Button bnr;
@@ -89,6 +99,18 @@ public class StatusBottomBarView {
         setPeripheralStatus(pduConnectedImage, deviceStatus[5] == 1);
         setPeripheralStatus(coinModule, deviceStatus[6] == 1);
         setPeripheralStatus(bnr, deviceStatus[7] == 1);
+        setPeripheralStatus(ohd, deviceStatus[8] == 1);
+        setPeripheralStatus(uPOS, deviceStatus[9] == 1);
+        setPeripheralStatus(upsUP, deviceStatus[10] == 1);
+        setPeripheralStatus(upsCon, deviceStatus[11] == 1);
+
+
+//        deviceStatus[8] = ohd_connected ? 1 : 0;
+//        deviceStatus[9] = ups_connected ? 1 : 0;
+//        deviceStatus[10] = ups_on ? 1 : 0;
+//        deviceStatus[11] = upos_connected ? 1 : 0;
+
+
     }
 }
 

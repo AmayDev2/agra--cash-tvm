@@ -1,12 +1,9 @@
 package com.amay.tom.service.devices;
 
 import com.amay.printer.PrinterCommandDispatcher;
-import com.amay.printer.PrinterService;
 import com.amay.tom.database.RedisConnectionPool;
 import com.amay.tom.enums.ConnectionStatus;
 import com.amay.tom.grpc.monotoring.GrpcApiListener;
-import com.amay.tom.service.devices.DeviceStatusListener;
-import com.amay.tom.service.devices.device.PrinterStatus;
 import com.amay.tom.utils.env.EnvFile;
 import com.amay.tom.utils.helper.Helper;
 import com.amay.tvm.backend.enums.LoggerTag;
@@ -14,7 +11,6 @@ import com.amay.tvm.bnr.BNRIntegration;
 import com.amay.tvm.coin.CoinModuleInterface;
 import com.amay.tvm.coin.model.PollingStatusResponse;
 import com.amay.tvm.ups.UPS;
-import com.amay.tvm.ups.command.UPSCommand;
 import com.amay.tvm.ups.exception.UPSCommunicationException;
 import com.amay.tvm.ups.model.UPSResponse;
 import com.fazecast.jSerialComm.SerialPort;
@@ -27,6 +23,7 @@ import java.awt.*;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class PeripheralMonitor implements Runnable {
@@ -38,7 +35,7 @@ public class PeripheralMonitor implements Runnable {
     @Getter
     private boolean reader_connected;
     @Getter
-    private boolean scanner_connected;
+    private boolean door_closed;
     @Getter
     private boolean printer_connected;
     @Getter
@@ -47,6 +44,14 @@ public class PeripheralMonitor implements Runnable {
     private boolean  tvm_main_module_connected;
     @Getter
     private boolean bnr_connected;
+    @Getter
+    private boolean ups_connected;
+    @Getter
+    private boolean ups_on;
+    @Getter
+    private boolean ohd_connected;
+    @Getter
+    private boolean upos_connected;
     @Getter
     private int[] deviceStatus,previousDeviceStatus;
     private final GrpcApiListener ccuGrpcApiListener;
@@ -73,17 +78,23 @@ public class PeripheralMonitor implements Runnable {
 
     @Override
     public void run() {
-        deviceStatus = new int[8];
+        deviceStatus = new int[12];
         boolean[] tvm=coinNoduleConnected();
-        scanner_connected = tvm[1]; //door
-        printer_connected =  isUPSUP();//getPrinterStatus();
+        door_closed = tvm[1]; //door
+        printer_connected = getPrinterStatus();
         tvm_main_module_connected=tvm[0];
         bnr_connected = bnrConnected();
         scu_connected = ConnectionStatus.CONNECTED.equals(this.grpcApiListener.getConnectionStatus());
         ccu_connected = ConnectionStatus.CONNECTED.equals(this.ccuGrpcApiListener.getConnectionStatus());
         pdu_connected = poleDisplayConnected();
+        boolean[] upsStatus=getUps();
+        ups_connected=upsStatus[0];
+        ups_on=upsStatus[1]; //if IP<=0 return true UPS Providing IP
+        ohd_connected=isOverHeadDisplay();
+        upos_connected=isUposConnected();
+        reader_connected=isReaderConnected();
 
-        deviceStatus[0] = scanner_connected ? 1 : 0;
+        deviceStatus[0] = door_closed ? 1 : 0;
         deviceStatus[1] = printer_connected ? 1 : 0;
         deviceStatus[2] = scu_connected ? 1 : 0;
         deviceStatus[3] = ccu_connected ? 1 : 0;
@@ -91,12 +102,12 @@ public class PeripheralMonitor implements Runnable {
         deviceStatus[5] = pdu_connected ? 1 : 0;
         deviceStatus[6] =  tvm_main_module_connected ? 1 : 0;
         deviceStatus[7] = bnr_connected ? 1 : 0;
-//        deviceStatus[8] = overhead_display ? 1 : 0;
-//        deviceStatus[9] = ups_connected ? 1 : 0;
+        deviceStatus[8] = ohd_connected ? 1 : 0;
+        deviceStatus[9] = ups_connected ? 1 : 0;
+        deviceStatus[10] = ups_on ? 1 : 0;
+        deviceStatus[11] = upos_connected ? 1 : 0;
 
         Logger.tag(LoggerTag.APP).info("Peripherals status: {}", Helper.ObjectToJson(deviceStatus));
-
-
 
         // notify the all subscribers/listeners
         for (DeviceStatusListener listener : listeners) {
@@ -109,14 +120,30 @@ public class PeripheralMonitor implements Runnable {
         }
     }
 
-    private boolean getUps() {
+    private boolean isReaderConnected() {
+        return false;
+    }
+
+    private boolean isUposConnected() {
+        return false;
+
+    }
+
+    private boolean isOverHeadDisplay() {
+        return false;
+    }
+
+    private boolean[] getUps() {
+        boolean[] upsStatus=new boolean[2];
         try {
             UPSResponse response=UPS.INTERFACE.getUPSResponseObject();
-            return response.getInputVoltage()>0;
+            upsStatus[0]=true;
+            upsStatus[1]=response.getInputVoltage()<=0;
         } catch (UPSCommunicationException e) {
                 UPS.INTERFACE.reconnect();
-                return true;
+                return upsStatus;
         }
+        return upsStatus;
     }
 
     private boolean bnrConnected() {
@@ -233,7 +260,7 @@ public class PeripheralMonitor implements Runnable {
     }
 
     public static boolean getPrinterStatus() {
-       return PrinterCommandDispatcher.INSTANCE.isConnected();
+       return true;//PrinterCommandDispatcher.INSTANCE.isConnected();
     }
 
     public static boolean getInternetStatus() {
@@ -253,12 +280,8 @@ public class PeripheralMonitor implements Runnable {
     }
 
     public boolean isUPSUP() {
-        try {
-            UPSResponse response=UPS.INTERFACE.getUPSResponseObject();
-            return response.getInputVoltage()>0;
-        } catch (UPSCommunicationException e) {
-            UPS.INTERFACE.reconnect();
-            return true;
-        }
+        boolean[] upsStatus=getUps();
+        Logger.tag(LoggerTag.APP).debug("UPS STATUS {}", Arrays.toString(upsStatus));
+        return !(upsStatus[0] || upsStatus[1]);
     }
 }
