@@ -314,5 +314,9 @@ public class ViewFactory {
     public static FXMLLoader getUPSTestLoad() {
         return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/pdu/UPSTest.fxml"));
     }
+
+    public static FXMLLoader getBNRTestView() {
+        return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/pdu/bnr_test.fxml"));
+    }
 }
 

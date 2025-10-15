@@ -5,6 +5,7 @@ import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.maintenance.service.component.StatusWindowPopup;
 import com.amay.tom.maintenance.service.component.model.StatusWindowModel;
+import com.amay.tom.pdu.controller.BNRTestController;
 import com.amay.tom.pdu.controller.UPSTestController;
 import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tom.service.chield.ticketservice.ImplTicketService;
@@ -33,6 +34,13 @@ public class MaintenanceTestController {
     @FXML
     private
     void onBNRTest(ActionEvent event) {
+
+        FXMLLoader fxmlLoader= ViewFactory.getBNRTestView();
+        BNRTestController controller=new BNRTestController(this.agent,this.sceneManager);
+        fxmlLoader.setControllerFactory((x)->controller);
+        this.sceneManager.addToScene(fxmlLoader);
+
+        event.consume();
 
     }
 

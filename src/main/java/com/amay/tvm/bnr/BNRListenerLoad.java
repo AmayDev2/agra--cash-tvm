@@ -34,6 +34,7 @@ public class BNRListenerLoad implements IBNRListener {
         financeOperationRepository.upsert(new FinanceOperationEntity()
                 .setUnitAmount((int) (RUPERTA_MULTIPLAYER * acceptedAmount))
                 .setOperationType(FinanceOperation.BNR_NOT_COMMITTED)
+                .setQuantity(1)
                 .setShiftId(shiftId));
     }
 

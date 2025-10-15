@@ -13,7 +13,7 @@ public class BNRTestController {
     private final Agent agent;
 
 
-    public  BNRTestController(SceneManager sceneManager, Agent agent){
+    public BNRTestController( Agent agent,SceneManager sceneManager){
         this.agent=agent;
         this.sceneManager=sceneManager;
     }
@@ -27,6 +27,7 @@ public class BNRTestController {
     public void onCashInStart(ActionEvent actionEvent) throws BnrException {
 
         BNRIntegration.bnr.cashInStart();
+        BNRIntegration.bnr.cashIn(0);
         actionEvent.consume();
     }
 

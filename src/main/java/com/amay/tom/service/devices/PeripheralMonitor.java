@@ -260,7 +260,7 @@ public class PeripheralMonitor implements Runnable {
     }
 
     public static boolean getPrinterStatus() {
-       return true;//PrinterCommandDispatcher.INSTANCE.isConnected();
+       return PrinterCommandDispatcher.INSTANCE.isConnected();
     }
 
     public static boolean getInternetStatus() {

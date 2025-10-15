@@ -31,6 +31,7 @@ public class BNRListener implements IBNRListener {
         financeOperationRepository.upsert(new FinanceOperationEntity()
                 .setUnitAmount((int) (RUPEYA_MULTIPLAYER* acceptedAmount))
                 .setOperationType(FinanceOperation.BNR_NOT_COMMITTED)
+                .setQuantity(1)
                 .setShiftId(shiftId));
         Platform.runLater(()-> {controller.setInsertedAmount((int) (acceptedAmount*RUPEYA_MULTIPLAYER));});
     }

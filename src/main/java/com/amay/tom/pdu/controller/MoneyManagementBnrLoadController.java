@@ -24,7 +24,7 @@ public class MoneyManagementBnrLoadController{
     }
 
 
-    public void onBnrLoad(ActionEvent actionEvent) {
+    @FXML private void onBnrLoad(ActionEvent actionEvent) {
         agent.getThreadPool().getFixedThreadPool().submit(new Task() {
             @Override
             public void call() throws Exception {BNRIntegration.bnrLoad(new BNRListenerLoad(MoneyManagementBnrLoadController.this,agent.getFinanceOperationRepository(),agent.getShiftMaintenance().getShiftId(),agent.getNoteAmountRepository()));}});
@@ -32,34 +32,36 @@ public class MoneyManagementBnrLoadController{
         actionEvent.consume();
     }
 
-    public void onCommit(ActionEvent actionEvent) {
+    @FXML private void onCommit(ActionEvent actionEvent) {
         BNRIntegration.bnrLoadCommit();
         actionEvent.consume();
     }
 
-    public void onBackBnr(ActionEvent actionEvent) {
+    @FXML private void onBackBnr(ActionEvent actionEvent) {
+        onCancel(actionEvent);
         sceneManager.back();
         actionEvent.consume();
     }
 
-    public void onRollback(ActionEvent actionEvent) {
+    @FXML private void onRollback(ActionEvent actionEvent) {
         BNRIntegration.bnrLoadRollback();
         actionEvent.consume();
     }
 
-    public void onStop(ActionEvent actionEvent) {
-        BNRIntegration.cancel();
-        actionEvent.consume();
 
-    }
 
     public void disableCancelButton() {
         resetButtons(false);
     }
 
-    private void resetButtons(boolean stopAllowed){
+    @FXML private void resetButtons(boolean stopAllowed){
         commit.setVisible(!stopAllowed);
         rollback.setVisible(!stopAllowed);
         cancel.setVisible(stopAllowed);
+    }
+
+    @FXML private void onCancel(ActionEvent actionEvent) {
+        BNRIntegration.cancel();
+        actionEvent.consume();
     }
 }
