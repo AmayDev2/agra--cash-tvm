@@ -26,7 +26,7 @@ public class MoneyManagementBnrUnloadController  {
     public MoneyManagementBnrUnloadController(Agent agent, SceneManager sceneManager) {
         this.sceneManager=sceneManager;
         this.agent=agent;
-        listenBnrEvent=new ListenBnrEvent(this,agent.getFinanceOperationRepository(),agent.getShift().getShiftId());
+        listenBnrEvent=new ListenBnrEvent(this,agent.getFinanceOperationRepository(),agent.getShiftMaintenance().getShiftId());
         agent.getPeripheralMonitor().addDeviceStatusListener(listenBnrEvent);
 
     }
@@ -72,11 +72,21 @@ public class MoneyManagementBnrUnloadController  {
         NoteAmountDTO rs200=NoteAmountMapper.toDto(agent.getNoteAmountRepository().findById(200));
         NoteAmountDTO rs500=NoteAmountMapper.toDto(agent.getNoteAmountRepository().findById(500));
 
-        int totalQuantity= rs10.getCashInQuantity()+rs20.getCashInQuantity()+rs50.getCashInQuantity()
-                +rs100.getCashInQuantity()+rs200.getCashInQuantity()+rs500.getCashInQuantity();
+        int totalQuantity=
+                 rs10.getCurrentQuantity()
+                +rs20.getCurrentQuantity()
+                +rs50.getCurrentQuantity()
+                +rs100.getCurrentQuantity()
+                +rs200.getCurrentQuantity()
+                +rs500.getCurrentQuantity();
 
-        int totalAmount= rs10.getCashInQuantity()*10+rs20.getCashInQuantity()*20+rs50.getCashInQuantity()*50
-                +rs100.getCashInQuantity()*100+rs200.getCashInQuantity()*200+rs500.getCashInQuantity()*500;
+        int totalAmount=
+                         rs10.getCurrentQuantity()*rs10.getUnitAmount()
+                        +rs20.getCurrentQuantity()*rs20.getUnitAmount()
+                        +rs50.getCurrentQuantity()*rs50.getUnitAmount()
+                        +rs100.getCurrentQuantity()*rs100.getUnitAmount()
+                        +rs200.getCurrentQuantity()*rs200.getUnitAmount()
+                        +rs500.getCurrentQuantity()*rs500.getUnitAmount();
 
         PrinterCommandDispatcher.INSTANCE.printBNRLoadUnload(
                 BNRLoadUnload.builder()
@@ -87,32 +97,20 @@ public class MoneyManagementBnrUnloadController  {
                         .endTime("-")
                         .equipmentId(SystemConfig.getInstance().getCurrentEquipment().getEquipmentId())
                         .operatorId(agent.getShiftMaintenance().getOperatorId())
-                        .rs10Count(rs10.getCashInQuantity())
-                        .rs10Amount(rs10.getCashInQuantity()*10)
-                        .rs20Count(rs20.getCashInQuantity())
-                        .rs20Amount(rs20.getCashInQuantity()*20)
-                        .rs50Count(rs50.getCashInQuantity())
-                        .rs50Amount(rs50.getCashInQuantity()*50)
-                        .rs100Count(rs100.getCashInQuantity())
-                        .rs100Amount(rs100.getCashInQuantity()*100)
-                        .rs200Count(rs200.getCashInQuantity())
-                        .rs200Amount(rs200.getCashInQuantity()*200)
-                        .rs500Count(rs500.getCashInQuantity())
-                        .rs500Amount(rs500.getCashInQuantity()*500)
+                        .rs10Count(rs10.getCurrentQuantity())
+                        .rs10Amount(rs10.getCurrentQuantity()*rs10.getUnitAmount())
+                        .rs20Count(rs20.getCurrentQuantity())
+                        .rs20Amount(rs20.getCurrentQuantity()*rs20.getUnitAmount())
+                        .rs50Count(rs50.getCurrentQuantity())
+                        .rs50Amount(rs50.getCurrentQuantity()*rs50.getUnitAmount())
+                        .rs100Count(rs100.getCurrentQuantity())
+                        .rs100Amount(rs100.getCurrentQuantity()*rs100.getUnitAmount())
+                        .rs200Count(rs200.getCurrentQuantity())
+                        .rs200Amount(rs200.getCurrentQuantity()*rs200.getUnitAmount())
+                        .rs500Count(rs500.getCurrentQuantity())
+                        .rs500Amount(rs500.getCurrentQuantity()*rs500.getUnitAmount())
                         .bankTotalCount(totalQuantity)
                         .bankTotalAmount(totalAmount)
-//                        .hopper1Count(Integer.parseInt(HoppersRegistry.INSTANCE.getHopperQuantity("1")))
-//                        .hopper2Count(Integer.parseInt(HoppersRegistry.INSTANCE.getHopperQuantity("2")))
-//                        .hopper3Count(Integer.parseInt(HoppersRegistry.INSTANCE.getHopperQuantity("3")))
-//                        .hopper1Amount(Integer.parseInt(HoppersRegistry.INSTANCE.getHopperQuantity("1"))*5)
-//                        .hopper2Amount(Integer.parseInt(HoppersRegistry.INSTANCE.getHopperQuantity("2"))*10)
-//                        .hopper3Amount(Integer.parseInt(HoppersRegistry.INSTANCE.getHopperQuantity("3"))*10)
-//                        .coinTotalCount(Integer.parseInt(HoppersRegistry.INSTANCE.getHopperQuantity("1"))+
-//                                Integer.parseInt(HoppersRegistry.INSTANCE.getHopperQuantity("2"))+
-//                                Integer.parseInt(HoppersRegistry.INSTANCE.getHopperQuantity("3")))
-//                        .coinTotalAmount(Integer.parseInt(HoppersRegistry.INSTANCE.getHopperQuantity("1"))*5+
-//                                Integer.parseInt(HoppersRegistry.INSTANCE.getHopperQuantity("2"))*10+
-//                                Integer.parseInt(HoppersRegistry.INSTANCE.getHopperQuantity("3"))*10)
                         .build()
         );
 
@@ -146,7 +144,6 @@ public class MoneyManagementBnrUnloadController  {
                     try {
                         //TODO: Generate EOD report
                         this.controller.printUnloadReport();
-
                         financeOperationRepository.markEmpty(shiftId);
                         BNRIntegration.bnrSetDepositZero();
                         Logger.tag(LoggerTag.BUSS).info("BNR Cashbox content set to zero for shift: {}", shiftId);

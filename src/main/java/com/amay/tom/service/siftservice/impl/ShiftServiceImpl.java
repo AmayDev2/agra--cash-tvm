@@ -1,5 +1,7 @@
 package com.amay.tom.service.siftservice.impl;
 
+import com.amay.printer.BNRLoadUnload;
+import com.amay.printer.CoinLoadedReport;
 import com.amay.printer.PrinterCommandDispatcher;
 import com.amay.printer.ShiftReportData;
 import com.amay.tom.ViewFactory;
@@ -26,7 +28,10 @@ import com.amay.tom.service.siftservice.ShiftService;
 import com.amay.tom.service.userauth.UserAuth;
 import com.amay.tom.utils.helper.Helper;
 import com.amay.tom.utils.time.TimeUtil;
+import com.amay.tvm.backend.entity.FinanceOperationEntity;
+import com.amay.tvm.backend.enums.FinanceOperation;
 import com.amay.tvm.backend.enums.LoggerTag;
+import com.amay.tvm.backend.mapper.FinanceOperationMapper;
 import com.amay.tvm.controller.TVMController;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -293,7 +298,45 @@ public class ShiftServiceImpl implements ShiftService {
         }
     }
 
-    public void printEOShift(String shiftId) {
+    @Override
+    public void printShiftReport(String shiftId){
+        ShiftDto shiftDto = shiftRepository
+                .findById(shiftId)
+                .orElseThrow(() -> new RuntimeException("Shift not found"));
+        if(Role.OPERATOR.name().equals(shiftDto.getRole())){
+            printEOShift(shiftId);
+        }else if(Role.MAINTENANCE.name().equals(shiftDto.getRole())){
+            printFinanceReports(shiftId);
+        }else{
+            throw new RuntimeException("Shift not to Print");
+        }
+
+    }
+
+    @Override
+    public void printFinanceReports(String shiftId) {
+        ShiftDto shiftDto = shiftRepository
+                .findById(shiftId)
+                .orElseThrow(() -> new RuntimeException("Shift not found"));
+        Shift shift=ShiftMapper.toModel(shiftDto);
+        List<FinanceOperationEntity> financeOperationEntityCoinLoad = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(shiftId, FinanceOperation.COIN_LOAD.name());
+        List<FinanceOperationEntity> financeOperationEntityCoinUnload = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(shiftId, FinanceOperation.COIN_UNLOAD.name());
+        List<FinanceOperationEntity> financeOperationEntityBnrLoad = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(shiftId, FinanceOperation.BNR_LOAD.name());
+        List<FinanceOperationEntity> financeOperationEntityBnrUnload = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(shiftId, FinanceOperation.BNR_UNLOAD.name());
+
+        BNRLoadUnload bnrLoadReport = FinanceOperationMapper.toBNRLoadUnload(shift, FinanceOperation.BNR_LOAD, financeOperationEntityBnrLoad);
+        BNRLoadUnload bnrUnloadReport = FinanceOperationMapper.toBNRLoadUnload(shift, FinanceOperation.BNR_UNLOAD, financeOperationEntityBnrUnload);
+        CoinLoadedReport coinLoadReport = FinanceOperationMapper.toCoinLoadedReport(shift, FinanceOperation.COIN_LOAD, financeOperationEntityCoinLoad);
+        CoinLoadedReport coinUnloadReport = FinanceOperationMapper.toCoinLoadedReport(shift, FinanceOperation.COIN_UNLOAD, financeOperationEntityCoinUnload);
+
+        if(bnrLoadReport!=null)PrinterCommandDispatcher.INSTANCE.printBNRLoadUnload(bnrLoadReport);
+        if(bnrUnloadReport!=null)PrinterCommandDispatcher.INSTANCE.printBNRLoadUnload(bnrUnloadReport);
+        if(coinLoadReport!=null)PrinterCommandDispatcher.INSTANCE.printCoinLoadedReport(coinLoadReport);
+        if(coinUnloadReport!=null)PrinterCommandDispatcher.INSTANCE.printCoinLoadedReport(coinUnloadReport);
+    }
+
+
+   private void printEOShift(String shiftId) {
         AtomicReference<String> startTime = new AtomicReference<>();
         AtomicReference<String> endTime = new AtomicReference<>();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
@@ -566,6 +609,15 @@ public class ShiftServiceImpl implements ShiftService {
         String shiftEndTime= endTime.get();
         try {
 
+            List<FinanceOperationEntity> financeOperationEntityBnrDeposit = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.BNR_DEPOSIT.name());
+            List<FinanceOperationEntity> financeOperationEntityBnrDispense = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.BNR_DISPENSE.name());
+            List<FinanceOperationEntity> financeOperationEntityCoinDispense = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.COIN_DISPENSE.name());
+
+            CoinLoadedReport coinDispenseReport = FinanceOperationMapper.toCoinLoadedReport(shift, FinanceOperation.COIN_DISPENSE, financeOperationEntityCoinDispense);
+
+            //ensure both are from same shift
+            BNRLoadUnload bnrDepositReport =FinanceOperationMapper.toBNRDepositDispense( financeOperationEntityBnrDeposit,financeOperationEntityBnrDispense);
+
             PrinterCommandDispatcher.INSTANCE.printText(
                     ShiftReportData.builder()
                             .stationName(SystemConfig.getInstance().getCurrentStation().getStationName())
@@ -589,6 +641,30 @@ public class ShiftServiceImpl implements ShiftService {
                             .gtUpiCount(noOfUpiGroup)
                             .gtUpiAmount(amountUpiGroup)
 
+                            .rs10Count(bnrDepositReport.getRs10Count())
+                            .rs10Amount(bnrDepositReport.getRs10Amount())
+                            .rs20Count(bnrDepositReport.getRs20Count())
+                            .rs20Amount(bnrDepositReport.getRs20Amount())
+                            .rs50Count(bnrDepositReport.getRs50Count())
+                            .rs50Amount(bnrDepositReport.getRs50Amount())
+                            .rs100Count(bnrDepositReport.getRs100Count())
+                            .rs100Amount(bnrDepositReport.getRs100Amount())
+                            .rs200Count(bnrDepositReport.getRs200Count())
+                            .rs200Amount(bnrDepositReport.getRs200Amount())
+                            .rs500Amount(bnrDepositReport.getRs500Amount())
+                            .rs500Count(bnrDepositReport.getRs500Count())
+                            .bankTotalAmount(bnrDepositReport.getBankTotalAmount())
+                            .bankTotalCount(bnrDepositReport.getBankTotalCount())
+
+                            .hopper1Amount(null != coinDispenseReport?coinDispenseReport.getHopper1Amount():0)
+                            .hopper1Count(null != coinDispenseReport?coinDispenseReport.getHopper1Count():0)
+                            .hopper2Amount(null != coinDispenseReport?coinDispenseReport.getHopper2Amount():0)
+                            .hopper2Count(null != coinDispenseReport?coinDispenseReport.getHopper2Count():0)
+                            .hopper3Amount(null != coinDispenseReport?coinDispenseReport.getHopper3Amount():0)
+                            .hopper3Count(null != coinDispenseReport?coinDispenseReport.getHopper3Count():0)
+                            .coinTotalAmount(null != coinDispenseReport?coinDispenseReport.getCoinTotalAmount():0)
+                            .coinTotalAmount(null != coinDispenseReport?coinDispenseReport.getCoinTotalCount():0)
+
                             .qrTotalAmount(finalAmountSJT+finalAmountRJT+finalAmountGroup+amountUpiGroup+amountUpiRJT+amountUpiSJT)
                             .qrTotalCount(finalNoOfSJT+finalNoOfRJT+finalNoOfGroup+noOfUpiGroup+noOfUpiRJT+noOfUpiSJT)
 
@@ -596,7 +672,7 @@ public class ShiftServiceImpl implements ShiftService {
                             .totalUpiSales(amountUpiGroup+amountUpiRJT+amountUpiSJT)
 
                             .totalRevenue(finalAmountSJT+finalAmountRJT+finalAmountGroup+amountUpiGroup+amountUpiRJT+amountUpiSJT)
-                            .printTime(String.valueOf(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME)))
+                            .printTime(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME))
                             .build()
             );
 

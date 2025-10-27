@@ -1,6 +1,7 @@
 package com.amay.tvm.backend.repository;
 
 import com.amay.tvm.backend.entity.FinanceOperationEntity;
+import com.amay.tvm.backend.enums.FinanceOperation;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -53,7 +54,8 @@ public abstract class FinanceOperationRepository {
     public abstract String upsert(List<FinanceOperationEntity> entities);
     public abstract List<FinanceOperationEntity> findByShiftId(String shiftId);
     public abstract List<FinanceOperationEntity> findAllFrom(Timestamp from);
-    public abstract int markCommited();
+    public abstract int markCommited(FinanceOperation financeOperation);
+
     public abstract int rollback();
 
     public abstract List<FinanceOperationEntity> findAll();

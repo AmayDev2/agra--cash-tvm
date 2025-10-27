@@ -591,7 +591,7 @@ public class TomInitialize implements ITomInitialize {
         this.updateUI(progress, "Loading tvmConfig...");
         try {
             this.updateUI(progress, "Loading tvmConfig...");
-            isUpdate=true;
+//            isUpdate=true;
 
             if (isUpdate) {
                 String productResponse = this.apiConnection.getTvmConfig();

@@ -32,6 +32,7 @@ public class NoteAmountRepositoryImpl extends NoteAmountRepository {
 
 
     public String save(NoteAmountEntity noteAmount) {
+        Logger.tag(LoggerTag.APP).debug("Saving Note Amount with {}",noteAmount.toString());
         try (PreparedStatement pstmt = connection.prepareStatement(INSERT_SQL)) {
             pstmt.setString(1, noteAmount.getContainerId());
             pstmt.setInt(2, noteAmount.getUnitAmount());
@@ -57,6 +58,7 @@ public class NoteAmountRepositoryImpl extends NoteAmountRepository {
 
     @Override
     public NoteAmountEntity findById(int unitAmount) {
+
         try (PreparedStatement pstmt = connection.prepareStatement(SELECT_BY_ID_SQL)) {
             pstmt.setInt(1, unitAmount);
             ResultSet rs = pstmt.executeQuery();
@@ -79,12 +81,13 @@ public class NoteAmountRepositoryImpl extends NoteAmountRepository {
             ResultSet rs = selectStmt.executeQuery();
 
             if (rs.next()) {
+                Logger.tag(LoggerTag.APP).debug("Stored NoteAmountEntity: {} ", rs.getInt("cashInQuantity"));
                 int currentCashIn = rs.getInt("cashInQuantity");
                 int currentCashOut = rs.getInt("cashOutQuantity");
-
                 // Add the passed quantities to the current values
                 int newCashIn = currentCashIn + noteAmount.getCashInQuantity();
                 int newCashOut = currentCashOut + noteAmount.getCashOutQuantity();
+
                 noteAmount.setCashInQuantity(newCashIn);
                 noteAmount.setCashOutQuantity(newCashOut);
 
@@ -96,6 +99,7 @@ public class NoteAmountRepositoryImpl extends NoteAmountRepository {
             }
         } catch (SQLException e) {
             Logger.tag(LoggerTag.APP).error("Error updating NoteAmountEntity: {}", e.getMessage());
+            throw new RuntimeException("Error updating NoteAmountEntity");
         }
     }
 
@@ -108,6 +112,7 @@ public class NoteAmountRepositoryImpl extends NoteAmountRepository {
 
 
     private void update(NoteAmountEntity noteAmount) {
+        Logger.tag(LoggerTag.APP).debug("Updating Note Amount with {}",noteAmount.toString());
         try (PreparedStatement pstmt = connection.prepareStatement(UPDATE_SQL)) {
             pstmt.setInt(1, noteAmount.getCashInQuantity());
             pstmt.setInt(2, noteAmount.getCashOutQuantity());

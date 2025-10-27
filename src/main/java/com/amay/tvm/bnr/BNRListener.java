@@ -50,7 +50,7 @@ public class BNRListener implements IBNRListener {
     public void setStatus(BNRStatus status) {
         switch (status){
             case FAILED ->   financeOperationRepository.rollback();
-            case SUCCESS -> financeOperationRepository.markCommited();
+            case SUCCESS -> financeOperationRepository.markCommited(FinanceOperation.BNR_DEPOSIT);
         }
     }
 

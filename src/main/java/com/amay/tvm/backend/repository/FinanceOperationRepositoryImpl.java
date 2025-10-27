@@ -44,6 +44,7 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
     @Override
     public String upsert(FinanceOperationEntity entity) {
         try {
+            connection.setAutoCommit(false);
             // 1. Try to update existing record first
             try (PreparedStatement updateStmt = connection.prepareStatement(UPDATE_SQL)) {
                 updateStmt.setInt(1, entity.getQuantity());
@@ -77,18 +78,24 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
             }
 
             updateNoteAmountData(entity);
+            connection.commit();
 
             return entity.getShiftId();
-
         } catch (SQLException e) {
+
             Logger.tag(LoggerTag.APP).error("Error performing upsert for FinanceOperationEntity: {}", e.getMessage());
+            try {
+                connection.rollback();
+            } catch (SQLException ignored) {
+
+            }
             return null;
         }
     }
 
     private void updateNoteAmountData(FinanceOperationEntity entity) {
         NoteAmountEntity noteAmountEntity=switch (entity.getOperationType()) {
-            case BNR_DEPOSIT, BNR_LOAD, BNR_NOT_COMMITTED ->
+            case BNR_DEPOSIT, BNR_LOAD ->
                         new NoteAmountEntity()
                                 .setContainerId("CB")
                                 .setUnitAmount(entity.getUnitAmount())
@@ -109,16 +116,18 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
                                 .setCashInQuantity(entity.getQuantity()
                 );
 
-            case COIN_UNLOAD,COIN_DISPENSE ->
+            case COIN_UNLOAD, COIN_DISPENSE ->
                             new NoteAmountEntity()
                                     .setContainerId("COIN")
                                     .setUnitAmount(entity.getUnitAmount())
                                     .setCashOutQuantity(entity.getQuantity()
                     );
+            default -> null;
         };
 
-        Logger.tag(LoggerTag.BUSS).info(noteAmountEntity);
-        noteAmountRepository.updateToAdd(noteAmountEntity);
+        Logger.tag(LoggerTag.BUSS).info("Note Amount Data To Update {}",noteAmountEntity);
+        if(null==noteAmountEntity)return;
+        noteAmountRepository.updateToAdd(List.of(noteAmountEntity));
 
     }
 
@@ -162,7 +171,7 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
     }
 
     @Override
-    public int markCommited() {
+    public int markCommited(FinanceOperation financeOperation) {
         int processedCount = 0;
         try {
             connection.setAutoCommit(false);
@@ -177,7 +186,7 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
                         FinanceOperationEntity entity = new FinanceOperationEntity();
 
                         entity.setShiftId(rs.getString("shiftId"));
-                        entity.setOperationType(FinanceOperation.BNR_DEPOSIT); // Change to deposit status
+                        entity.setOperationType(financeOperation); // Change to deposit status
                         entity.setUnitAmount(rs.getInt("unitAmount"));
                         entity.setQuantity(rs.getInt("quantity"));
                         entity.setUpdatedAt(rs.getTimestamp("updatedAt"));

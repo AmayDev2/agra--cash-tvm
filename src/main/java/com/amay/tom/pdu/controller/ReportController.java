@@ -112,7 +112,7 @@ public class ReportController {
     public void onClickPrint(ActionEvent actionEvent) {
         if(selectedItem!=null){
             String shiftId = selectedItem.getShiftId();
-            shiftService.printEOShift(shiftId);
+            shiftService.printShiftReport(shiftId);
         }
         actionEvent.consume();
     }

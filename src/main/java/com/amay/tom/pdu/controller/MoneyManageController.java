@@ -64,10 +64,10 @@ public class MoneyManageController {
                 .orElseThrow(() -> new RuntimeException("Shift not found"));
         Shift shift=ShiftMapper.toModel(shiftDto);
 
-        List<FinanceOperationEntity> financeOperationEntityCoinLoad = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.COIN_LOAD.name());
-        List<FinanceOperationEntity> financeOperationEntityCoinUnload = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.COIN_UNLOAD.name());
-        List<FinanceOperationEntity> financeOperationEntityBnrLoad = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.BNR_LOAD.name());
-        List<FinanceOperationEntity> financeOperationEntityBnrUnload = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.BNR_UNLOAD.name());
+        List<FinanceOperationEntity> financeOperationEntityCoinLoad = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(shift.getShiftId(), FinanceOperation.COIN_LOAD.name());
+        List<FinanceOperationEntity> financeOperationEntityCoinUnload = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(shift.getShiftId(), FinanceOperation.COIN_UNLOAD.name());
+        List<FinanceOperationEntity> financeOperationEntityBnrLoad = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(shift.getShiftId(), FinanceOperation.BNR_LOAD.name());
+        List<FinanceOperationEntity> financeOperationEntityBnrUnload = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(shift.getShiftId(), FinanceOperation.BNR_UNLOAD.name());
 
         BNRLoadUnload bnrLoadReport = FinanceOperationMapper.toBNRLoadUnload(shift, FinanceOperation.BNR_LOAD, financeOperationEntityBnrLoad);
         BNRLoadUnload bnrUnloadReport = FinanceOperationMapper.toBNRLoadUnload(shift, FinanceOperation.BNR_UNLOAD, financeOperationEntityBnrUnload);

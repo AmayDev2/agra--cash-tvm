@@ -52,7 +52,7 @@ public class BNRListenerLoad implements IBNRListener {
     @Override
     public void setStatus(BNRStatus status) {
         switch (status){
-            case SUCCESS -> financeOperationRepository.markCommited();
+            case SUCCESS -> financeOperationRepository.markCommited(FinanceOperation.BNR_LOAD);
             case FAILED -> financeOperationRepository.rollback();
         }
 

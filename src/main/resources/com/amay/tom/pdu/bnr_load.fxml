@@ -28,11 +28,12 @@
             <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
             </rowConstraints>
-            <children>
-                <Button fx:id="rollback" mnemonicParsing="false" onAction="#onRollback" prefHeight="35.0" prefWidth="150.0" text="Rollback" GridPane.halignment="CENTER"/>
-                <Button fx:id="cancel" mnemonicParsing="false" onAction="#onCancel" prefHeight="39.0" prefWidth="150.0" text="Stop" GridPane.columnIndex="1" GridPane.halignment="CENTER"/>
-                <Button fx:id="commit" mnemonicParsing="false" onAction="#onCommit" prefHeight="39.0" prefWidth="150.0" text="Commit" GridPane.columnIndex="2" GridPane.halignment="CENTER"/>
-            </children>
+            <Button fx:id="rollback" mnemonicParsing="false" onAction="#onRollback" prefHeight="35.0" prefWidth="150.0"
+                    text="Rollback" GridPane.halignment="CENTER"/>
+            <Button fx:id="cancel" mnemonicParsing="false" onAction="#onCancel" prefHeight="39.0" prefWidth="150.0"
+                    text="Stop" GridPane.columnIndex="1" GridPane.halignment="CENTER"/>
+            <Button fx:id="commit" mnemonicParsing="false" onAction="#onCommit" prefHeight="39.0" prefWidth="150.0"
+                    text="Commit" GridPane.columnIndex="2" GridPane.halignment="CENTER"/>
         </GridPane>
 
         <FlowPane prefHeight="262.0" prefWidth="640.0" GridPane.rowIndex="1"/>

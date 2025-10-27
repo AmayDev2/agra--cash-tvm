@@ -27,7 +27,7 @@ public class MoneyManagementBnrLoadController{
     @FXML private void onBnrLoad(ActionEvent actionEvent) {
         agent.getThreadPool().getFixedThreadPool().submit(new Task() {
             @Override
-            public void call() throws Exception {BNRIntegration.bnrLoad(new BNRListenerLoad(MoneyManagementBnrLoadController.this,agent.getFinanceOperationRepository(),agent.getShiftMaintenance().getShiftId(),agent.getNoteAmountRepository()));}});
+            public void call() {BNRIntegration.bnrLoad(new BNRListenerLoad(MoneyManagementBnrLoadController.this,agent.getFinanceOperationRepository(),agent.getShiftMaintenance().getShiftId(),agent.getNoteAmountRepository()));}});
         resetButtons(true);
         actionEvent.consume();
     }
@@ -54,7 +54,7 @@ public class MoneyManagementBnrLoadController{
         resetButtons(false);
     }
 
-    @FXML private void resetButtons(boolean stopAllowed){
+    private void resetButtons(boolean stopAllowed){
         commit.setVisible(!stopAllowed);
         rollback.setVisible(!stopAllowed);
         cancel.setVisible(stopAllowed);
