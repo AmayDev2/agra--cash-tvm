@@ -1,0 +1,62 @@
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.control.Button?>
+<VBox alignment="TOP_CENTER" spacing="20" style="-fx-background-color: linear-gradient(to bottom, #f4f6f8, #e8eaec);" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="com.amay.tom.pdu.controller.PollingStatusController">
+
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #1f2937; -fx-padding: 12;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" text="Coin Hopper  Module Status" />
+        </HBox>
+
+    <!-- Hoppers Card -->
+            <VBox spacing="10" style="-fx-background-color: white; -fx-padding: 15; -fx-border-radius: 10; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 8,0,0,2);">
+                <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #111827;" text="🪙 Hopper Status" />
+
+                <GridPane hgap="30" vgap="10">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="LEFT" prefWidth="150" />
+                        <ColumnConstraints halignment="LEFT" prefWidth="150" />
+                        <ColumnConstraints halignment="LEFT" prefWidth="150" />
+                    </columnConstraints>
+
+                    <Label style="-fx-font-weight: bold;" text="Hopper 1:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <Label fx:id="hopper1Pos" text="Position: -" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                    <Label fx:id="hopper1Empty" text="Empty: -" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+
+                    <Label style="-fx-font-weight: bold;" text="Hopper 2:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <Label fx:id="hopper2Pos" text="Position: -" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <Label fx:id="hopper2Empty" text="Empty: -" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+                    <Label style="-fx-font-weight: bold;" text="Hopper 3:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <Label fx:id="hopper3Pos" text="Position: -" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    <Label fx:id="hopper3Empty" text="Empty: -" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                    </rowConstraints>
+                </GridPane>
+            </VBox>
+
+            <!-- Doors Card -->
+            <VBox spacing="10" style="-fx-background-color: white; -fx-padding: 15; -fx-border-radius: 10; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 8,0,0,2);">
+                <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #111827;" text="🚪 Door  Module Status" />
+                <VBox spacing="8">
+                    <Label fx:id="maintenanceDoor" text="Maintenance Door: -" />
+                    <Label fx:id="coinRefillDoor" text="Coin Refill Door: -" />
+                    <Label fx:id="hopperDoor" text="Hopper Maintenance Door: -" />
+                    <Label fx:id="banknoteModule" text="Banknote Module: -" />
+                </VBox>
+            </VBox>
+
+            <HBox alignment="CENTER" spacing="15">
+                <Button fx:id="backButton" onAction="#onClickBack" text="Back"  />
+                <Button fx:id="refreshButton" style="-fx-background-color: #2563eb; -fx-text-fill: white; -fx-font-size: 15px; -fx-padding: 6 18; -fx-background-radius: 8;" text="↻ Refresh" />
+            </HBox>
+
+        </VBox>
+
+

@@ -4,6 +4,7 @@ import com.amay.tom.config.SystemConfig;
 import com.amay.tom.database.RedisConnectionPool;
 import com.amay.tom.service.base36.Base36Encoder;
 import com.amay.tom.utils.time.TimeUtil;
+import com.amay.tvm.backend.enums.LoggerTag;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.tinylog.Logger;
@@ -59,7 +60,7 @@ public class Helper {
         try {
             return objectMapper.readValue(json, clazz);
         } catch (JsonProcessingException e) {
-            e.printStackTrace();
+            Logger.tag(LoggerTag.APP).error(e.getMessage());
         }
         return null;
     }

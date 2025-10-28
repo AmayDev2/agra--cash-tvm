@@ -6,6 +6,7 @@ import com.amay.tom.agent.Agent;
 import com.amay.tom.maintenance.service.component.StatusWindowPopup;
 import com.amay.tom.maintenance.service.component.model.StatusWindowModel;
 import com.amay.tom.pdu.controller.BNRTestController;
+import com.amay.tom.pdu.controller.PollingStatusController;
 import com.amay.tom.pdu.controller.UPSTestController;
 import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tom.service.chield.ticketservice.ImplTicketService;
@@ -46,6 +47,12 @@ public class MaintenanceTestController {
 
     @FXML
     private void onCoinHopper(ActionEvent event) {
+
+        FXMLLoader fxmlLoader= ViewFactory.getCoinHopperModuleManitenance();
+        PollingStatusController controller=new PollingStatusController(this.agent,this.sceneManager);
+        fxmlLoader.setControllerFactory((x)->controller);
+        this.sceneManager.addToScene(fxmlLoader);
+        event.consume();
     }
 
     @FXML

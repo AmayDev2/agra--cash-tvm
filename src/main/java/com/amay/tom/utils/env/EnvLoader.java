@@ -193,7 +193,7 @@ public class EnvLoader {
     }
 
     public String getComPort() {
-        return getOrDefault("COM_PORT", "COM2");
+        return getOrDefault("COM_PORT", "COM6");
     }
 
     public boolean getEnvironment() {

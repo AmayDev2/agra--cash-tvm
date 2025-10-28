@@ -82,8 +82,8 @@ public interface Env {
     int LAUNCH_DELAY = 0;
     String FXML_LIB = "";
     String COIN_MODULE = "";
-    String COM_PORT = "COM2";
-    String UPS_COM_PORT = "COM6";
+    String COM_PORT = "COM6";
+    String UPS_COM_PORT = "COM2";
 
     // Methods to return objects for config or privileges
     TicketConfigDTO getTicketConfig();

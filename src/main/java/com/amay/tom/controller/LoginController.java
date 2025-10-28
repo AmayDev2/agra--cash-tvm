@@ -135,8 +135,10 @@ public class LoginController {
                                     timeline.stop();
                                     timeline = null;
                                 }else {
+
                                     Logger.tag(LoggerTag.APP).info("Device not in IN_SERVICE mode {}",agent.getDeviceStatus().getCurrentStatus());
                                     csn1.setText("TVM is not under operational mode");
+                                    //TODO: ON UPS ACTIVE-> SHUTDOWN TVM FOR SAFE HAND
                                 }
                             }
                         }

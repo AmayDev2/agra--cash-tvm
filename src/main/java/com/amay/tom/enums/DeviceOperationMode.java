@@ -110,6 +110,16 @@ public enum DeviceOperationMode {
         public void performAction() {
 
         }
+    },
+    POWER_CUT(10, "On Inverter", "yellow") {
+        @Override
+        public void performAction(EquipmentPrivilege equipmentPrivilege) {
+
+        }
+        @Override
+        public void performAction() {
+
+        }
     };
 
     private final int deviceStatusId;

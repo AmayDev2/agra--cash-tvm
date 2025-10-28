@@ -56,6 +56,8 @@ public abstract class TvmConfigRepository {
 
     public abstract TvmConfigEntity findById(int id);
 
+    public abstract TvmConfigEntity findTVMConfig();
+
     public abstract List<TvmConfigEntity > findAll();
 
     public abstract void deleteById(int id);

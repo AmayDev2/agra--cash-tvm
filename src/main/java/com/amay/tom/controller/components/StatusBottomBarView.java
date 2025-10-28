@@ -5,6 +5,7 @@ import com.amay.tom.model.version.MasterConfigInfo;
 import com.amay.tom.service.devices.DeviceStatusListener;
 import com.amay.tom.service.devices.PeripheralMonitor;
 import com.amay.tom.utils.helper.Helper;
+import com.amay.tvm.controller.TVMController;
 import javafx.fxml.FXML;
 
 import javafx.scene.control.Button;
@@ -103,6 +104,8 @@ public class StatusBottomBarView {
         setPeripheralStatus(uPOS, deviceStatus[9] == 1);
         setPeripheralStatus(upsUP, deviceStatus[10] == 1);
         setPeripheralStatus(upsCon, deviceStatus[11] == 1);
+
+        tvmController.checkUPSStatus(deviceStatus[11]==1 && deviceStatus[10]==1);
 
 
 //        deviceStatus[8] = ohd_connected ? 1 : 0;

@@ -5,6 +5,7 @@ import com.amay.tom.model.tvmConfig.TvmConfigMapper;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class TvmConfigRepositoryImpl extends TvmConfigRepository {
@@ -65,6 +66,11 @@ public class TvmConfigRepositoryImpl extends TvmConfigRepository {
             throw new RuntimeException("Error finding TvmConfig by id", e);
         }
         return null;
+    }
+
+    @Override
+    public TvmConfigEntity findTVMConfig() {
+        return findAll().stream().findFirst().orElseThrow();
     }
 
     @Override

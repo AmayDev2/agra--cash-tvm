@@ -318,5 +318,9 @@ public class ViewFactory {
     public static FXMLLoader getBNRTestView() {
         return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/pdu/bnr_test.fxml"));
     }
+
+    public static FXMLLoader getCoinHopperModuleManitenance() {
+        return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/maintenance/coinHopperModuleMaintenance.fxml"));
+}
 }
 

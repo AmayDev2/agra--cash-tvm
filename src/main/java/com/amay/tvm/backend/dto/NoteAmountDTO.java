@@ -20,3 +20,4 @@ public class NoteAmountDTO {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }
+

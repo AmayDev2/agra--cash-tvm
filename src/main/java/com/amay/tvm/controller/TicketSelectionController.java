@@ -9,7 +9,6 @@ import com.amay.tom.model.TicketType;
 import com.amay.tom.repository.FareLine3;
 import com.amay.tom.repository.StationData;
 import com.amay.tvm.util.Snackbar;
-import com.amay.utils.TicketUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,10 +17,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
-import org.bouncycastle.pqc.math.linearalgebra.IntegerFunctions;
 
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

@@ -32,9 +32,9 @@ public enum Alarm {
     NO_STATION_MODE(321,"No Station Mode" ),
     IN_SERVICE_QR(320, "In Service mode set QR"),
     IN_SERVICE_CARD(321, "In Service mode set QR"),
-    IN_SERVICE_QR_CARD(322, "In Service mode set QR & CARD")
-
-
+    IN_SERVICE_QR_CARD(322, "In Service mode set QR & CARD"),
+    POWER_CUT(601, "ON UPS"),
+    POWER_CUT_FIXED(601, "ON POWER")
     ;
 
     private int code;

@@ -21,6 +21,7 @@ import com.amay.tvm.coin.CoinModuleInterface;
 import com.amay.tvm.util.Snackbar;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
+import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.collections.ListChangeListener;
@@ -70,10 +71,14 @@ public class TVMController {
 
     private static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("hh:mm:ss");
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+    private final PauseTransition inactivityTimer;
 
 
     public TVMController(Agent agent) {
         this.agent = agent;
+        int idealTimeOut=agent.getTvmConfigRepository().findTVMConfig().getIdleScreenTimeout();
+        Logger.tag(LoggerTag.APP).debug("Ideal Timeout {}",idealTimeOut);
+        inactivityTimer= new PauseTransition(Duration.seconds(idealTimeOut));
     }
 
     public void CleanUp(){
@@ -94,33 +99,25 @@ public class TVMController {
         }
     }
 
-    private void startTime(){
-            Platform.runLater(() -> {
-                Timeline clock = new Timeline(
-                        new KeyFrame(Duration.ZERO, e -> {
-                            LocalDateTime now = LocalDateTime.now();
-                            lableTime.setText(now.format(TIME_FORMATTER).toUpperCase(Locale.ROOT));
-                            labelDate.setText(now.format(DATE_FORMATTER));
-                        }),
-                        new KeyFrame(Duration.seconds(1))
-                );
-                clock.setCycleCount(Timeline.INDEFINITE);
-                clock.play();
-            });
-    }
-
     @FXML
     void initialize() {
         this.setOperationModeListener();
         stationData = StationData.getInstance();
         labelStationName.setText(SystemConfig.getInstance().getCurrentStation().getStationName());
-//        this.startTime();
         this.addBottomBarView();
         this.stackPane.getChildren().addListener((ListChangeListener<Node>) change -> {
             while (change.next()) {
-                if (this.stackPane.getChildren().size() == 1) {
+                int count=this.stackPane.getChildren().size();
+                if ( count== 1) {
                     this.showBottomBarView();
+                    // apply current mode
+                    setOperationMode(this.agent.getDeviceStatus().getCurrentStatus());
+                    //UPS check
+                    this.checkUPSStatus(this.agent.getPeripheralMonitor().isUps_connected()
+                            && this.agent.getPeripheralMonitor().isUps_on());
+
                 }else{
+                    if(count<4)setTimeout();
                     this.hideBottomBarView();
                 }
             }
@@ -130,6 +127,36 @@ public class TVMController {
         this.updatePeakHour(ZonedDateTime.now(ZoneId.systemDefault()));
         boolean isWeekDay=this.agent.getBusinessRule().getToday().getDayType().equals("WEEKDAYS");
         this.updateDateTime(isWeekDay);
+    }
+    private PauseTransition pauseTransition;
+
+    public void checkUPSStatus(boolean isPowerCut) {
+        if(1!=stackPane.getChildren().size())return;
+
+        if(isPowerCut){
+            if(null==pauseTransition)pauseTransition=new PauseTransition(Duration.seconds(50));
+            pauseTransition.setOnFinished(event ->  this.agent.getInternalListener().EOShift());
+            pauseTransition.playFromStart();
+            setOperationMode(DeviceOperationMode.POWER_CUT);
+        }else{
+            if(null!=pauseTransition){
+                pauseTransition.stop();
+                pauseTransition=null;
+            }
+
+        }
+    }
+
+    private void setTimeout() {
+        inactivityTimer.playFromStart();
+        inactivityTimer.setOnFinished(e -> navigateToHomeScreen());
+        inactivityTimer.play();
+    }
+
+    private void navigateToHomeScreen() {
+        GridPane gridPane=(GridPane) this.stackPane.getChildren().getFirst();
+        this.stackPane.getChildren().clear();
+        this.stackPane.getChildren().add(gridPane);
     }
 
     private void showBottomBarView() {
@@ -222,6 +249,7 @@ public class TVMController {
 
     //TODO: Implement the logic to updateToAdd the service mode
     private void setOperationMode(DeviceOperationMode newStatus) {
+        if(this.stackPane.getChildren().size()!=1)return;   // to prevent operation mode when not a  home screen; other option is  to remove listener but there every time you have to remove and add listener[NOT IMPLEMENTING]
         Logger.tag(LoggerTag.APP).info("TVMController setOperationMode: " + newStatus);
         Platform.runLater(() -> {
             if (currentMode != newStatus && newStatus == DeviceOperationMode.IN_SERVICE) {
@@ -229,9 +257,6 @@ public class TVMController {
                 agent.getGrpcApiListener().sendAlarm(Alarm.IN_SERVICE);
                 agent.getGrpcApiListener().sendOperationMode(OperationMode.IN_SERVICE);
                 agent.getGrpcApiListener().sendPeripheralStatus(agent.getPeripheralMonitor().getDeviceStatus());
-                agent.getCcuGrpcApiListener().sendAlarm(Alarm.IN_SERVICE);
-                agent.getCcuGrpcApiListener().sendOperationMode(OperationMode.IN_SERVICE);
-                agent.getCcuGrpcApiListener().sendPeripheralStatus(agent.getPeripheralMonitor().getDeviceStatus());
             } else {
                 if (currentMode != newStatus && newStatus == DeviceOperationMode.EMERGENCY) {
                     FXMLLoader loader = ViewFactory.getSpecialModeScreen();
@@ -241,8 +266,6 @@ public class TVMController {
                         borderPane.setCenter(loader.load());
                         agent.getGrpcApiListener().sendAlarm(Alarm.EMERGENCY);
                         agent.getGrpcApiListener().sendSpecialMode(SpecialMode.EMERGENCY);
-                        agent.getCcuGrpcApiListener().sendAlarm(Alarm.EMERGENCY);
-                        agent.getCcuGrpcApiListener().sendSpecialMode(SpecialMode.EMERGENCY);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -254,8 +277,6 @@ public class TVMController {
                         borderPane.setCenter(loader.load());
                         agent.getGrpcApiListener().sendAlarm(Alarm.STATION_CLOSE);
                         agent.getGrpcApiListener().sendSpecialMode(SpecialMode.STATION_CLOSED_MODE);
-                        agent.getCcuGrpcApiListener().sendAlarm(Alarm.STATION_CLOSE);
-                        agent.getCcuGrpcApiListener().sendSpecialMode(SpecialMode.STATION_CLOSED_MODE);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -267,8 +288,6 @@ public class TVMController {
                         borderPane.setCenter(loader.load());
                         agent.getGrpcApiListener().sendAlarm(Alarm.OUT_OF_SERVICE);
                         agent.getGrpcApiListener().sendOperationMode(OperationMode.OUT_OF_SERVICE);
-                        agent.getCcuGrpcApiListener().sendAlarm(Alarm.OUT_OF_SERVICE);
-                        agent.getCcuGrpcApiListener().sendOperationMode(OperationMode.OUT_OF_SERVICE);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -280,8 +299,17 @@ public class TVMController {
                         newStatus.performAction();
                         agent.getGrpcApiListener().sendAlarm(Alarm.MAINTENANCE_MODE);
                         agent.getGrpcApiListener().sendOperationMode(OperationMode.MAINTENANCE);
-                        agent.getCcuGrpcApiListener().sendAlarm(Alarm.MAINTENANCE_MODE);
-                        agent.getCcuGrpcApiListener().sendOperationMode(OperationMode.MAINTENANCE);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }else if (currentMode != newStatus && newStatus == DeviceOperationMode.POWER_CUT) {
+                    FXMLLoader loader = ViewFactory.getSpecialModeScreen();
+                    loader.setControllerFactory(c -> new SpecialModeController(borderPane, stackPane, agent, stationData, StationMode.OUT_OF_SERVICE));
+                    try {
+                        borderPane.setCenter(loader.load());
+                        newStatus.performAction();
+                        agent.getGrpcApiListener().sendAlarm(Alarm.POWER_CUT);
+                        agent.getGrpcApiListener().sendOperationMode(OperationMode.OUT_OF_SERVICE);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -350,67 +378,10 @@ public class TVMController {
 
     public void onClickNcmc(ActionEvent actionEvent) {
         this.agent.getInternalListener().EOShift();
-
+        actionEvent.consume();
     }
 
     public void onClickBalanceUpdate(ActionEvent actionEvent) {
-//        PrinterCommandDispatcher.INSTANCE.printBNRLoadUnload(
-//                BNRLoadUnload.builder()
-//                        .reportType("BNR Loaded Report")
-//                        .stationName("MayankSharma")
-//                        .shiftId("HHJ657HVHXXX")
-//                        .startTime("2025-10-07 11:25:49")
-//                        .endTime("2025-10-07 11:25:49")
-//                        .equipmentId("HHJ657HVHXXX")
-//                        .operatorId("HHJ657HVHXXX")
-//                        .rs10Count(10)
-//                        .rs10Amount(10)
-//                        .rs20Count(10)
-//                        .rs20Amount(10)
-//                        .rs50Count(10)
-//                        .rs50Amount(10)
-//                        .rs100Count(10)
-//                        .rs100Amount(10)
-//                        .rs200Count(10)
-//                        .rs200Amount(10)
-//                        .rs500Count(10)
-//                        .rs500Amount(10)
-//                        .bankTotalCount(10)
-//                        .bankTotalAmount(10)
-//                        .build()
-//        );
-        PrinterCommandDispatcher.INSTANCE.printBalanceReport(
-                BalanceReport.builder()
-                        .reportType("Balance Report")
-                        .stationName("Gandhi Nagar")
-                        .shiftId("HHJ657HVHXXX")
-                        .startTime("2025-10-07 11:25:49")
-                        .endTime("2025-10-07 11:25:49")
-                        .equipmentId("HHJ657HVHXXX")
-                        .operatorId("HHJ657HVHXXX")
-
-                        .rs10Count(10)
-                        .rs10Amount(10)
-                        .rs20Count(10)
-                        .rs20Amount(10)
-                        .rs50Count(10)
-                        .rs50Amount(10)
-                        .rs100Count(10)
-                        .rs100Amount(10)
-                        .rs200Count(10)
-                        .rs200Amount(10)
-                        .rs500Count(10)
-                        .rs500Amount(10)
-                        .bankTotalCount(10)
-                        .bankTotalAmount(10)
-                        .hopper1Amount(10)
-                        .hopper2Amount(10)
-                        .hopper3Amount(10)
-                        .coinTotalAmount(10)
-                        .coinTotalCount(10)
-
-                        .build()
-        );
         actionEvent.consume();
     }
 
