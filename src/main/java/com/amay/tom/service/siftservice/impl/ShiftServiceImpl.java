@@ -28,10 +28,13 @@ import com.amay.tom.service.siftservice.ShiftService;
 import com.amay.tom.service.userauth.UserAuth;
 import com.amay.tom.utils.helper.Helper;
 import com.amay.tom.utils.time.TimeUtil;
+import com.amay.tvm.backend.entity.AmountSnapShotEntity;
 import com.amay.tvm.backend.entity.CoinAmountEntity;
 import com.amay.tvm.backend.entity.FinanceOperationEntity;
+import com.amay.tvm.backend.enums.ContainerId;
 import com.amay.tvm.backend.enums.FinanceOperation;
 import com.amay.tvm.backend.enums.LoggerTag;
+import com.amay.tvm.backend.mapper.AmountSnapshotMapper;
 import com.amay.tvm.backend.mapper.CoinAmountMapper;
 import com.amay.tvm.backend.mapper.FinanceOperationMapper;
 import com.amay.tvm.backend.mapper.NoteAmountMapper;
@@ -200,6 +203,8 @@ public class ShiftServiceImpl implements ShiftService {
                 Logger.tag(LoggerTag.APP).debug("SC responded to login data push");
             }
 
+
+
             return fxmlLoader;
         }
         catch (Exception usernameNotFoundException) {
@@ -279,12 +284,12 @@ public class ShiftServiceImpl implements ShiftService {
         try {
             if(tvmController!=null)tvmController.CleanUp();
             agent.getNoteAmountRepository().findAll().stream().filter(noteAmountEntity
-                    -> noteAmountEntity.getContainerId().equals("CB")).forEach(noteAmount -> {
+                    -> noteAmountEntity.getContainerId().equals(ContainerId.CB)).forEach(noteAmount -> {
                 agent.getAmountSnapShotRepository().save(NoteAmountMapper.toSnapshot(noteAmount,shift.getShiftId()));
 
             });
             agent.getCoinAmountRepository().findAll().stream().filter(coinAmountEntity
-                    ->coinAmountEntity.getContainerId().equals("CASH")).forEach(coinAmount -> {
+                    ->coinAmountEntity.getContainerId().equals(ContainerId.CM)).forEach(coinAmount -> {
                 agent.getAmountSnapShotRepository().save(CoinAmountMapper.toSnapshot(coinAmount,shift.getShiftId()));
             });
             shiftRepository.endShift(ShiftMapper.toDto(shift)); //TODO: get complete shift
@@ -331,6 +336,8 @@ public class ShiftServiceImpl implements ShiftService {
                 .findById(shiftId)
                 .orElseThrow(() -> new RuntimeException("Shift not found"));
         Shift shift=ShiftMapper.toModel(shiftDto);
+
+
         List<FinanceOperationEntity> financeOperationEntityCoinLoad = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(shiftId, FinanceOperation.COIN_LOAD.name());
         List<FinanceOperationEntity> financeOperationEntityCoinUnload = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(shiftId, FinanceOperation.COIN_UNLOAD.name());
         List<FinanceOperationEntity> financeOperationEntityBnrLoad = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(shiftId, FinanceOperation.BNR_LOAD.name());
@@ -621,6 +628,8 @@ public class ShiftServiceImpl implements ShiftService {
         String shiftEndTime= endTime.get();
         try {
 
+            List<AmountSnapShotEntity> amountSnapShotEntityList=agent.getAmountSnapShotRepository().findAll().stream().filter(x->x.getShiftId().equals(shiftId)).toList();
+
             List<FinanceOperationEntity> financeOperationEntityBnrDeposit = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.BNR_DEPOSIT.name());
             List<FinanceOperationEntity> financeOperationEntityBnrDispense = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.BNR_DISPENSE.name());
             List<FinanceOperationEntity> financeOperationEntityCoinDispense = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.COIN_DISPENSE.name());
@@ -628,6 +637,8 @@ public class ShiftServiceImpl implements ShiftService {
             CoinLoadedReport coinDispenseReport = FinanceOperationMapper.toCoinLoadedReport(shift, FinanceOperation.COIN_DISPENSE, financeOperationEntityCoinDispense);
 
             //ensure both are from same shift
+            BNRLoadUnload bnrLoadUnloadReport= AmountSnapshotMapper.toBNRLoadUnload(amountSnapShotEntityList);
+            CoinLoadedReport bnrLoadUnloadCoinReport=AmountSnapshotMapper.toCoinLoadUnload(amountSnapShotEntityList);
             BNRLoadUnload bnrDepositReport =FinanceOperationMapper.toBNRDepositDispense( financeOperationEntityBnrDeposit,financeOperationEntityBnrDispense);
 
             PrinterCommandDispatcher.INSTANCE.printText(
@@ -653,20 +664,38 @@ public class ShiftServiceImpl implements ShiftService {
                             .gtUpiCount(noOfUpiGroup)
                             .gtUpiAmount(amountUpiGroup)
 
-                            .rs10Count(bnrDepositReport.getRs10Count())
-                            .rs10Amount(bnrDepositReport.getRs10Amount())
-                            .rs20Count(bnrDepositReport.getRs20Count())
-                            .rs20Amount(bnrDepositReport.getRs20Amount())
-                            .rs50Count(bnrDepositReport.getRs50Count())
-                            .rs50Amount(bnrDepositReport.getRs50Amount())
-                            .rs100Count(bnrDepositReport.getRs100Count())
-                            .rs100Amount(bnrDepositReport.getRs100Amount())
-                            .rs200Count(bnrDepositReport.getRs200Count())
-                            .rs200Amount(bnrDepositReport.getRs200Amount())
-                            .rs500Amount(bnrDepositReport.getRs500Amount())
-                            .rs500Count(bnrDepositReport.getRs500Count())
-                            .bankTotalAmount(bnrDepositReport.getBankTotalAmount())
-                            .bankTotalCount(bnrDepositReport.getBankTotalCount())
+
+//
+//                            .rs10Count(bnrDepositReport.getRs10Count())
+//                            .rs10Amount(bnrDepositReport.getRs10Amount())
+//                            .rs20Count(bnrDepositReport.getRs20Count())
+//                            .rs20Amount(bnrDepositReport.getRs20Amount())
+//                            .rs50Count(bnrDepositReport.getRs50Count())
+//                            .rs50Amount(bnrDepositReport.getRs50Amount())
+//                            .rs100Count(bnrDepositReport.getRs100Count())
+//                            .rs100Amount(bnrDepositReport.getRs100Amount())
+//                            .rs200Count(bnrDepositReport.getRs200Count())
+//                            .rs200Amount(bnrDepositReport.getRs200Amount())
+//                            .rs500Amount(bnrDepositReport.getRs500Amount())
+//                            .rs500Count(bnrDepositReport.getRs500Count())
+//                            .bankTotalAmount(bnrDepositReport.getBankTotalAmount())
+//                            .bankTotalCount(bnrDepositReport.getBankTotalCount())
+
+
+                            .rs10Count(bnrLoadUnloadReport.getRs10Count())
+                            .rs10Amount(bnrLoadUnloadReport.getRs10Amount())
+                            .rs20Count(bnrLoadUnloadReport.getRs20Count())
+                            .rs20Amount(bnrLoadUnloadReport.getRs20Amount())
+                            .rs50Count(bnrLoadUnloadReport.getRs50Count())
+                            .rs50Amount(bnrLoadUnloadReport.getRs50Amount())
+                            .rs100Count(bnrLoadUnloadReport.getRs100Count())
+                            .rs100Amount(bnrLoadUnloadReport.getRs100Amount())
+                            .rs200Count(bnrLoadUnloadReport.getRs200Count())
+                            .rs200Amount(bnrLoadUnloadReport.getRs200Amount())
+                            .rs500Amount(bnrLoadUnloadReport.getRs500Amount())
+                            .rs500Count(bnrLoadUnloadReport.getRs500Count())
+                            .bankTotalAmount(bnrLoadUnloadReport.getBankTotalAmount())
+                            .bankTotalCount(bnrLoadUnloadReport.getBankTotalCount())
 
                             .hopper1Amount(null != coinDispenseReport?coinDispenseReport.getHopper1Amount():0)
                             .hopper1Count(null != coinDispenseReport?coinDispenseReport.getHopper1Count():0)

@@ -77,7 +77,6 @@ public class NoteAmountMapper {
 
     public static AmountSnapShotEntity toSnapshot(NoteAmountEntity noteAmount, String shiftId) {
         AmountSnapShotEntity amountSnapShotEntity = new AmountSnapShotEntity();
-        amountSnapShotEntity.setContainerId("CASH");
         amountSnapShotEntity.setShiftId(shiftId);
         amountSnapShotEntity.setContainerId(noteAmount.getContainerId());
         amountSnapShotEntity.setUnitAmount(noteAmount.getUnitAmount());

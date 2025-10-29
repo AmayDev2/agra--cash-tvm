@@ -9,6 +9,8 @@ import com.amay.tom.agent.Agent;
 import com.amay.tom.model.session.Shift;
 import com.amay.tom.model.session.ShiftDto;
 import com.amay.tom.model.session.ShiftMapper;
+import com.amay.tom.model.user.entity.User;
+import com.amay.tom.model.user.entity.UserPrivilege;
 import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tvm.backend.entity.FinanceOperationEntity;
 import com.amay.tvm.backend.enums.FinanceOperation;
@@ -17,19 +19,39 @@ import com.amay.tvm.controller.CoinRagistoryPageController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import org.network.monitorandcontrol.OperationMode;
-
 import java.util.List;
 import java.util.Optional;
 
 public class MoneyManageController {
     private final Agent agent;
     private final SceneManager sceneManager;
+
+    @FXML
+    private Button coinButton;
+    @FXML
+    private Button bnrButton;
+
+    @FXML
+    private Button reportsButton;
+
+    @FXML
+    private Button backButton;
+
     public MoneyManageController(Agent agent, SceneManager sceneManager) {
         this.agent = agent;
         this.sceneManager = sceneManager;
 
     }
+    @FXML
+    private void initialize(){
+        UserPrivilege privilege=agent.getUserPrivilege();
+        coinButton.setDisable(!(privilege.isCoinRefill() || privilege.isCoinDumping()));
+        bnrButton.setDisable(!privilege.isBnrCashAdd());           // If no BNR access → disable
+        reportsButton.setDisable(!privilege.isImportAndExport());
+    }
+
 
     @FXML
     private void onCoin(ActionEvent actionEvent) {

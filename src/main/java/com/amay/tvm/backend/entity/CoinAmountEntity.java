@@ -1,6 +1,7 @@
 package com.amay.tvm.backend.entity;
 
 
+import com.amay.tvm.backend.enums.ContainerId;
 import com.google.protobuf.Timestamp;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -12,7 +13,7 @@ import java.time.LocalDateTime;
 @RequiredArgsConstructor
 @Accessors(chain = true)
 public class CoinAmountEntity {
-    private String containerId;
+    private ContainerId containerId;
     private int unitAmount;
     private int quantity;
     private LocalDateTime createdAt;

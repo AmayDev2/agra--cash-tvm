@@ -1,6 +1,7 @@
 package com.amay.tvm.backend.entity;
 
 
+import com.amay.tvm.backend.enums.ContainerId;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.Accessors;
@@ -11,7 +12,7 @@ import java.time.LocalDateTime;
 @RequiredArgsConstructor
 @Accessors(chain = true)
 public class NoteAmountEntity {
-    private String containerId;
+    private ContainerId containerId;
     private int unitAmount;
     private int cashInQuantity;
     private int cashOutQuantity;

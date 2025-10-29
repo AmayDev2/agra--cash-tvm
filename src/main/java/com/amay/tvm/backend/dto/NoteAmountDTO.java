@@ -1,5 +1,6 @@
 package com.amay.tvm.backend.dto;
 
+import com.amay.tvm.backend.enums.ContainerId;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
@@ -12,7 +13,7 @@ import java.time.LocalDateTime;
 @Accessors(chain = true)
 @ToString
 public class NoteAmountDTO {
-    private String containerId;
+    private ContainerId containerId;
     private int unitAmount;
     private int cashInQuantity;
     private int cashOutQuantity;

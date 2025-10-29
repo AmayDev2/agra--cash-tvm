@@ -14,9 +14,9 @@
         <RowConstraints percentHeight="35.0" />
     </rowConstraints>
     <children>
-        <Button maxHeight="39.0" minHeight="39.0" mnemonicParsing="false" onAction="#onBnrLoad" prefHeight="39.0" prefWidth="150.0" text="BNR Load" GridPane.halignment="CENTER"/>
-        <Button mnemonicParsing="false" onAction="#onBnrUnload" prefHeight="39.0" prefWidth="150.0" text="BNR Unload" GridPane.columnIndex="1" GridPane.halignment="CENTER"/>
-        <Button mnemonicParsing="false" onAction="#onReceipt" prefHeight="39.0" prefWidth="150.0" text="BNR Reboot" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+        <Button fx:id="bnrLoadButton" maxHeight="39.0" minHeight="39.0" mnemonicParsing="false" onAction="#onBnrLoad" prefHeight="39.0" prefWidth="150.0" text="BNR Load" GridPane.halignment="CENTER"/>
+        <Button fx:id="bnrUnloadButton" mnemonicParsing="false" onAction="#onBnrUnload" prefHeight="39.0" prefWidth="150.0" text="BNR Unload" GridPane.columnIndex="1" GridPane.halignment="CENTER"/>
+        <Button fx:id="bnrRebbot" mnemonicParsing="false" onAction="#onReceipt" prefHeight="39.0" prefWidth="150.0" text="BNR Reboot" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
         <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onReset" prefHeight="39.0" prefWidth="150.0" text="Reset" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
         <Button mnemonicParsing="false" onAction="#onBack" prefHeight="39.0" prefWidth="150.0" text="Back" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.rowSpan="2147483647"/>
     </children>

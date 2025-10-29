@@ -2,6 +2,7 @@ package com.amay.tvm.backend.repository;
 
 import com.amay.tvm.backend.entity.FinanceOperationEntity;
 import com.amay.tvm.backend.entity.NoteAmountEntity;
+import com.amay.tvm.backend.enums.ContainerId;
 import com.amay.tvm.backend.enums.FinanceOperation;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.backend.mapper.NoteAmountMapper;
@@ -97,28 +98,28 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
         NoteAmountEntity noteAmountEntity=switch (entity.getOperationType()) {
             case BNR_DEPOSIT, BNR_LOAD ->
                         new NoteAmountEntity()
-                                .setContainerId("CB")
+                                .setContainerId(ContainerId.CB)
                                 .setUnitAmount(entity.getUnitAmount())
                                 .setCashInQuantity(entity.getQuantity()
                 );
 
             case BNR_UNLOAD, BNR_DISPENSE ->
                         new NoteAmountEntity()
-                                .setContainerId("CB")
+                                .setContainerId(ContainerId.CB)
                                 .setUnitAmount(entity.getUnitAmount())
                                 .setCashOutQuantity(entity.getQuantity()
                 );
 
             case COIN_LOAD ->
                         new NoteAmountEntity()
-                                .setContainerId("COIN")
+                                .setContainerId(ContainerId.CM)
                                 .setUnitAmount(entity.getUnitAmount())
                                 .setCashInQuantity(entity.getQuantity()
                 );
 
             case COIN_UNLOAD, COIN_DISPENSE ->
                             new NoteAmountEntity()
-                                    .setContainerId("COIN")
+                                    .setContainerId(ContainerId.CM)
                                     .setUnitAmount(entity.getUnitAmount())
                                     .setCashOutQuantity(entity.getQuantity()
                     );
