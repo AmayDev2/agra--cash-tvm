@@ -105,7 +105,7 @@ public class StatusBottomBarView {
         setPeripheralStatus(upsUP, deviceStatus[10] == 1);
         setPeripheralStatus(upsCon, deviceStatus[11] == 1);
 
-        tvmController.checkUPSStatus(deviceStatus[11]==1 && deviceStatus[10]==1);
+//        tvmController.checkUPSStatus(deviceStatus[11]==1 && deviceStatus[10]==1);
 
 
 //        deviceStatus[8] = ohd_connected ? 1 : 0;

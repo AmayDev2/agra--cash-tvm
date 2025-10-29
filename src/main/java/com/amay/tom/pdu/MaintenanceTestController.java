@@ -166,6 +166,7 @@ public class MaintenanceTestController {
 
     @FXML
     private void onRestart(ActionEvent event) {
+
     }
 
     @FXML

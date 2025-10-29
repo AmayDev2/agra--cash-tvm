@@ -41,7 +41,7 @@ public abstract class ShiftRepository {
                     "shift_id, operator_id, device_id, device_serial, created_at, start_time, end_time, " +
                     "serial_no, station_id, line_no, reason, current_status, update_at, imprest_money, " +
                     "config_version, " +
-                    "role " +
+                    "role" +
                     ") " +
                     "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
 

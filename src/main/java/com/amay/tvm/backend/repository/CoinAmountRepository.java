@@ -28,6 +28,7 @@ public abstract class CoinAmountRepository {
     protected static final String UPDATE_SQL = "UPDATE " + TABLE_NAME + " SET  quantity=?, updatedAt=? WHERE containerId=?";
     protected static final String DELETE_BY_ID_SQL = "DELETE FROM " + TABLE_NAME + " WHERE containerId = ?";
     protected static final String SELECT_ALL_FROM_SQL = "SELECT * FROM " + TABLE_NAME + " WHERE createdAt >= ? ORDER BY createdAt DESC";
+    protected static final String SELECT_ALL = "SELECT * FROM "+TABLE_NAME;
 
     protected abstract void createTableIfNotExists() throws SQLException;
     public abstract String save(CoinAmountEntity coinAmount);
@@ -35,4 +36,5 @@ public abstract class CoinAmountRepository {
     public abstract void update(CoinAmountEntity coinAmount);
     public abstract void deleteById(String containerId);
     public abstract List<CoinAmountEntity> findAllFrom(Timestamp from);
+    public abstract List<CoinAmountEntity> findAll();
 }

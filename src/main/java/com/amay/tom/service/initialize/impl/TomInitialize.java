@@ -1079,6 +1079,7 @@ public class TomInitialize implements ITomInitialize {
         agent.setNoteAmountRepository(new NoteAmountRepositoryImpl(agent.getConnection()));
         agent.setFinanceOperationRepository(new FinanceOperationRepositoryImpl(agent.getConnection(), agent.getNoteAmountRepository()));
         agent.setEquipmentRepository(new EquipmentRepositoryImpl(agent.getConnection()));
+        agent.setAmountSnapShotRepository(new AmountSnapShotRepositoryImpl(agent.getConnection()));
         return true;
     }
 

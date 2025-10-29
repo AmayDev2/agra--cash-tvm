@@ -1,6 +1,7 @@
 package com.amay.tvm.backend.mapper;
 
 import com.amay.tvm.backend.dto.NoteAmountDTO;
+import com.amay.tvm.backend.entity.AmountSnapShotEntity;
 import com.amay.tvm.backend.entity.FinanceOperationEntity;
 import com.amay.tvm.backend.entity.NoteAmountEntity;
 import com.amay.tvm.backend.enums.FinanceOperation;
@@ -72,5 +73,17 @@ public class NoteAmountMapper {
             financeOperationEntities.add(financeOperationEntity);
         }
         return financeOperationEntities;
+    }
+
+    public static AmountSnapShotEntity toSnapshot(NoteAmountEntity noteAmount, String shiftId) {
+        AmountSnapShotEntity amountSnapShotEntity = new AmountSnapShotEntity();
+        amountSnapShotEntity.setContainerId("CASH");
+        amountSnapShotEntity.setShiftId(shiftId);
+        amountSnapShotEntity.setContainerId(noteAmount.getContainerId());
+        amountSnapShotEntity.setUnitAmount(noteAmount.getUnitAmount());
+        amountSnapShotEntity.setCurrentQuantity(noteAmount.getCashInQuantity()-noteAmount.getCashOutQuantity());
+
+        return amountSnapShotEntity;
+
     }
 }

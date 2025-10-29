@@ -103,6 +103,7 @@ public class Agent {
     private MasterConfigInfo masterConfigInfo;
     private TomConfig tomConfig;
     private EquipmentRepository equipmentRepository;
+    private AmountSnapShotRepository amountSnapShotRepository;
 
 //    private Products products;
     private List<Product> products;
