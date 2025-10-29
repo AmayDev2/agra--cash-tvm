@@ -322,5 +322,9 @@ public class ViewFactory {
     public static FXMLLoader getCoinHopperModuleManitenance() {
         return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/maintenance/coinHopperModuleMaintenance.fxml"));
 }
+
+    public static FXMLLoader getRestartScreen() {
+        return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/maintenance/RestartScreen.fxml"));
+    }
 }
 
