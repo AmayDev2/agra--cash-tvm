@@ -289,7 +289,7 @@ public class ShiftServiceImpl implements ShiftService {
 
             });
             agent.getCoinAmountRepository().findAll().stream().filter(coinAmountEntity
-                    ->coinAmountEntity.getContainerId().equals(ContainerId.CM)).forEach(coinAmount -> {
+                    ->coinAmountEntity.getContainerId().equals(ContainerId.CM.name())).forEach(coinAmount -> {
                 agent.getAmountSnapShotRepository().save(CoinAmountMapper.toSnapshot(coinAmount,shift.getShiftId()));
             });
             shiftRepository.endShift(ShiftMapper.toDto(shift)); //TODO: get complete shift

@@ -2,6 +2,7 @@ package com.amay.tvm.backend.mapper;
 
 import com.amay.tvm.backend.entity.AmountSnapShotEntity;
 import com.amay.tvm.backend.entity.CoinAmountEntity;
+import com.amay.tvm.backend.enums.ContainerId;
 import org.checkerframework.checker.units.qual.A;
 
 public class CoinAmountMapper {
@@ -11,7 +12,7 @@ public class CoinAmountMapper {
         amountSnapShotEntity.setUnitAmount(Integer.parseInt(coinAmountEntity.getContainerId()));
         amountSnapShotEntity.setCurrentQuantity(coinAmountEntity.getQuantity());
         amountSnapShotEntity.setShiftId(shiftId);
-        amountSnapShotEntity.setContainerId(coinAmountEntity.getContainerId());
+        amountSnapShotEntity.setContainerId(ContainerId.CM.name());
 
         return amountSnapShotEntity;
     }
