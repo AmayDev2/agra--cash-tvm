@@ -173,7 +173,7 @@ public class ViewFactory {
 
     public static FXMLLoader getMaintenanceImportExport() {
         FXMLLoader fxmlLoader = new FXMLLoader(ViewFactory.class.getResource
-                ("maintenance/ImportExport.fxml"));
+                ("maintenance/DataSync.fxml"));
         return fxmlLoader;
     }
 

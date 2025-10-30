@@ -13,7 +13,7 @@ import java.util.List;
 @Accessors(chain = true)
 public class AmountSnapShotEntity {
     private String shiftId;
-    private ContainerId containerId;
+    private String containerId;
     private int unitAmount;
     private int currentQuantity;
     private LocalDateTime createdAt;

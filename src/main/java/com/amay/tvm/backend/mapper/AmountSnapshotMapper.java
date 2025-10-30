@@ -3,20 +3,21 @@ package com.amay.tvm.backend.mapper;
 import com.amay.printer.BNRLoadUnload;
 import com.amay.printer.CoinLoadedReport;
 import com.amay.tvm.backend.entity.AmountSnapShotEntity;
-import com.amay.tvm.backend.enums.CoinDenomination;
 import com.amay.tvm.backend.enums.ContainerId;
+import com.amay.tvm.backend.enums.Hopper;
 import com.amay.tvm.backend.enums.NoteDenomination;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class AmountSnapshotMapper {
     public static BNRLoadUnload toBNRLoadUnload(List<AmountSnapShotEntity> amountSnapShotEntityList){
 
         Map<NoteDenomination,Integer> noteCountMap=new HashMap<>();
         for(AmountSnapShotEntity amountSnapShotEntity : amountSnapShotEntityList){
-            if(amountSnapShotEntity.getContainerId().equals(ContainerId.CB)){
+            if(amountSnapShotEntity.getContainerId().equals(ContainerId.CB.name())){
                 noteCountMap.put(NoteDenomination.fromValue(amountSnapShotEntity.getUnitAmount()),
                         noteCountMap.getOrDefault(amountSnapShotEntity.getCurrentQuantity(),0)
                                 +amountSnapShotEntity.getCurrentQuantity());
@@ -60,22 +61,24 @@ public class AmountSnapshotMapper {
 
     }
     public static CoinLoadedReport toCoinLoadUnload(List<AmountSnapShotEntity> amountSnapShotEntityList){
-        Map<CoinDenomination,Integer> coinMount=new HashMap<>();
-        for(AmountSnapShotEntity amountSnapShotEntity : amountSnapShotEntityList){
-            if(amountSnapShotEntity.getContainerId().equals(ContainerId.CM)){
-                coinMount.put(CoinDenomination.fromValue(amountSnapShotEntity.getUnitAmount()),
-                        coinMount.getOrDefault(amountSnapShotEntity.getCurrentQuantity(),0)
-                                +amountSnapShotEntity.getCurrentQuantity());
-            }
-        }
-        int hopper1Count=coinMount.getOrDefault(CoinDenomination.COIN_5, 0);
-        int hopper2Count=coinMount.getOrDefault(CoinDenomination.COIN_10, 0);
-       int hopper3Count=coinMount.getOrDefault(CoinDenomination.COIN_10, 0);
+        Map<Hopper,Integer> coinAmount= new HashMap<>();
+        amountSnapShotEntityList.stream()
+                .filter(x -> x.getContainerId().equals(ContainerId.CM.name()))
+                .peek(x -> x.setContainerId(String.valueOf(x.getUnitAmount()))) // update one property
+                .peek(x -> x.setUnitAmount(Hopper.HOPPER1.getHopperByHopperId(x.getUnitAmount()).getUnitAmount())) // update one property
+                .forEach(x -> coinAmount.put(
+                        Hopper.HOPPER1.getHopperByHopperId(Integer.parseInt(x.getContainerId())),
+                        x.getCurrentQuantity()
+                ));
+
+        int hopper1Count=coinAmount.getOrDefault(Hopper.HOPPER1, 0);
+        int hopper2Count=coinAmount.getOrDefault(Hopper.HOPPER2, 0);
+        int hopper3Count=coinAmount.getOrDefault(Hopper.HOPPER3, 0);
 
 
-       int hopper1Amount=hopper1Count*5;
-       int hopper2Amount=hopper2Count*10;
-       int hopper3Amount=hopper3Count*10;
+       int hopper1Amount=hopper1Count*Hopper.HOPPER1.getUnitAmount();
+       int hopper2Amount=hopper2Count*Hopper.HOPPER2.getUnitAmount();
+       int hopper3Amount=hopper3Count*Hopper.HOPPER3.getUnitAmount();
 
        return CoinLoadedReport.builder()
                 .hopper1Count(hopper1Count)

@@ -1,6 +1,7 @@
 package com.amay.tvm.backend.repository;
 
 import com.amay.tvm.backend.entity.NoteAmountEntity;
+import com.amay.tvm.backend.enums.ContainerId;
 import com.amay.tvm.backend.enums.LoggerTag;
 import org.tinylog.Logger;
 
@@ -34,14 +35,14 @@ public class NoteAmountRepositoryImpl extends NoteAmountRepository {
     public String save(NoteAmountEntity noteAmount) {
         Logger.tag(LoggerTag.APP).debug("Saving Note Amount with {}",noteAmount.toString());
         try (PreparedStatement pstmt = connection.prepareStatement(INSERT_SQL)) {
-            pstmt.setString(1, noteAmount.getContainerId());
+            pstmt.setString(1, noteAmount.getContainerId().name());
             pstmt.setInt(2, noteAmount.getUnitAmount());
             pstmt.setInt(3, noteAmount.getCashInQuantity());
             pstmt.setInt(4, noteAmount.getCashOutQuantity());
             pstmt.setTimestamp(5, Timestamp.valueOf(LocalDateTime.now()));
             pstmt.setTimestamp(6, Timestamp.valueOf(LocalDateTime.now()));
             pstmt.executeUpdate();
-            return noteAmount.getContainerId();
+            return noteAmount.getContainerId().name();
         } catch (SQLException e) {
             Logger.tag(LoggerTag.APP).error("Error inserting NoteAmountEntity: {}", e.getMessage());
             return null;
@@ -188,7 +189,7 @@ public class NoteAmountRepositoryImpl extends NoteAmountRepository {
     // Map ResultSet to NoteAmountEntity
     private NoteAmountEntity mapRow(ResultSet rs) throws SQLException {
         return new NoteAmountEntity()
-                .setContainerId(rs.getString("containerId"))
+                .setContainerId(ContainerId.valueOf(rs.getString("containerId")))
                 .setUnitAmount(rs.getInt("unitAmount"))
                 .setCashInQuantity(rs.getInt("cashInQuantity"))
                 .setCashOutQuantity(rs.getInt("cashOutQuantity"))

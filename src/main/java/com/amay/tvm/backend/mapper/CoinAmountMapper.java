@@ -8,7 +8,7 @@ public class CoinAmountMapper {
     public static AmountSnapShotEntity toSnapshot(CoinAmountEntity coinAmountEntity, String shiftId) {
         AmountSnapShotEntity amountSnapShotEntity = new AmountSnapShotEntity();
 
-        amountSnapShotEntity.setUnitAmount(coinAmountEntity.getUnitAmount());
+        amountSnapShotEntity.setUnitAmount(Integer.parseInt(coinAmountEntity.getContainerId()));
         amountSnapShotEntity.setCurrentQuantity(coinAmountEntity.getQuantity());
         amountSnapShotEntity.setShiftId(shiftId);
         amountSnapShotEntity.setContainerId(coinAmountEntity.getContainerId());

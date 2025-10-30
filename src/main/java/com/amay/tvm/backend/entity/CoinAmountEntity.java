@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @RequiredArgsConstructor
 @Accessors(chain = true)
 public class CoinAmountEntity {
-    private ContainerId containerId;
+    private String containerId;
     private int unitAmount;
     private int quantity;
     private LocalDateTime createdAt;
