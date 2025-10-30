@@ -2,6 +2,8 @@ package com.amay.tom.pdu;
 
 import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
+import com.amay.tom.controller.DataSync;
+import com.amay.tom.controller.MaintenanceImportExport;
 import com.amay.tom.model.session.Shift;
 import com.amay.tom.model.session.ShiftMapper;
 import com.amay.tom.pdu.controller.MoneyManageController;
@@ -66,6 +68,12 @@ public class MaintenanceController {
 
     @FXML
     private void onImpExp(ActionEvent actionEvent) {
+
+        FXMLLoader fxmlLoader= ViewFactory.getMaintenanceImportExport();
+        DataSync controller=new DataSync(this.agent,this.sceneManager);
+        fxmlLoader.setControllerFactory((x)->controller);
+        this.sceneManager.addToScene(fxmlLoader);
+        actionEvent.consume();
 
 
     }
