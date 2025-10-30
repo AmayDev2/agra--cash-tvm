@@ -36,7 +36,7 @@
                     text="Commit" GridPane.columnIndex="2" GridPane.halignment="CENTER"/>
         </GridPane>
 
-        <FlowPane prefHeight="262.0" prefWidth="640.0" GridPane.rowIndex="1"/>
+        <FlowPane fx:id="flowPaneInsertedNotes" hgap="10"  prefHeight="262.0" prefWidth="640.0" GridPane.rowIndex="1"/>
 
         <Button mnemonicParsing="false" onAction="#onBackBnr" prefHeight="39.0" prefWidth="150.0" text="Back" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.rowSpan="2147483647">
             <GridPane.margin>

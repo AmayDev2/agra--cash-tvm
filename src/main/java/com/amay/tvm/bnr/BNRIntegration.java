@@ -1412,7 +1412,7 @@ public class BNRIntegration  {
     static HaveAmountObject haveAmountObject;
 
 
-    private static HaveAmountObject getBnrHaveAmountObject() throws JxfsException {
+    public static HaveAmountObject getBnrHaveAmountObject() throws JxfsException {
 
         Logger.tag(LoggerTag.APP).debug("\n******************* Cash Units *******************");
 //        Logger.tag(LoggerTag.APP).debug(queryCashUnit());

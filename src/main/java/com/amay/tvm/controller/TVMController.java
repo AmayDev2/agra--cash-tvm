@@ -46,6 +46,7 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
+import java.util.function.Consumer;
 
 public class TVMController {
     @FXML private Button sjtButton;
@@ -94,7 +95,7 @@ public class TVMController {
             this.borderPane.setCenter(null);
             this.borderPane.setBottom(null);
         }
-        if(this.timeline!=null && this.timeline.getStatus()== Animation.Status.RUNNING){
+        if(this.timeline!=null && this.timeline.getStatus()==Animation.Status.RUNNING){
             this.timeline.stop();
         }
     }
@@ -130,7 +131,7 @@ public class TVMController {
     }
     private PauseTransition pauseTransition;
 
-    public void checkUPSStatus(boolean isPowerCut) {
+    private void checkUPSStatus(boolean isPowerCut) {
         if(1!=stackPane.getChildren().size())return;
 
         if(isPowerCut){
@@ -221,8 +222,9 @@ public class TVMController {
 
     private void addBottomBarView() {
         try {
+            Consumer<Boolean> handler = this::checkUPSStatus;
             FXMLLoader fxmlLoader = ViewFactory.getBottomNav();
-            statusBottomBarView=new StatusBottomBarView(agent.getPeripheralMonitor(), agent.getVersions(),agent.getMasterConfigInfo());
+            statusBottomBarView=new StatusBottomBarView(agent.getPeripheralMonitor(), agent.getVersions(),agent.getMasterConfigInfo(),handler);
             fxmlLoader.setControllerFactory(x -> statusBottomBarView);
             borderPane.setBottom(fxmlLoader.load());
         } catch (RuntimeException | IOException e) {

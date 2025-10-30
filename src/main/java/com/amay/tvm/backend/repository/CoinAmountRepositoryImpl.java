@@ -108,6 +108,20 @@ public class CoinAmountRepositoryImpl extends CoinAmountRepository {
         return coins;
     }
 
+    @Override
+    public List<CoinAmountEntity> findAll() {
+        List<CoinAmountEntity> coins = new ArrayList<>();
+        try (PreparedStatement pstmt = connection.prepareStatement(SELECT_ALL)) {
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                coins.add(mapRow(rs));
+            }
+        } catch (SQLException e) {
+            Logger.error("Error fetching CoinAmountEntity list: {}", e.getMessage());
+        }
+        return coins;
+    }
+
     private CoinAmountEntity mapRow(ResultSet rs) throws SQLException {
         return new CoinAmountEntity()
                 .setContainerId(rs.getString("containerId"))

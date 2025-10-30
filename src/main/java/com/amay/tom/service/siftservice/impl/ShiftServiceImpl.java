@@ -28,10 +28,13 @@ import com.amay.tom.service.siftservice.ShiftService;
 import com.amay.tom.service.userauth.UserAuth;
 import com.amay.tom.utils.helper.Helper;
 import com.amay.tom.utils.time.TimeUtil;
+import com.amay.tvm.backend.entity.AmountSnapShotEntity;
 import com.amay.tvm.backend.entity.FinanceOperationEntity;
 import com.amay.tvm.backend.enums.FinanceOperation;
 import com.amay.tvm.backend.enums.LoggerTag;
+import com.amay.tvm.backend.mapper.CoinAmountMapper;
 import com.amay.tvm.backend.mapper.FinanceOperationMapper;
+import com.amay.tvm.backend.mapper.NoteAmountMapper;
 import com.amay.tvm.controller.TVMController;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -275,6 +278,14 @@ public class ShiftServiceImpl implements ShiftService {
 
         try {
             if(tvmController!=null)tvmController.CleanUp();
+            agent.getNoteAmountRepository().findAll().stream().filter(noteAmountEntity
+                    -> noteAmountEntity.getContainerId().equals("CB")).forEach(noteAmount -> {
+                agent.getAmountSnapShotRepository().save(NoteAmountMapper.toSnapshot(noteAmount,shift.getShiftId()));
+            });
+            agent.getCoinAmountRepository().findAll().stream().filter(coinAmountEntity
+                    ->coinAmountEntity.getContainerId().equals("CASH")).forEach(coinAmount -> {
+                agent.getAmountSnapShotRepository().save(CoinAmountMapper.toSnapshot(coinAmount,shift.getShiftId()));
+            });
             shiftRepository.endShift(ShiftMapper.toDto(shift)); //TODO: get complete shift
             Logger.tag(LoggerTag.APP).debug("EOS : " + shift.toString());
             //notify to scu
@@ -349,6 +360,10 @@ public class ShiftServiceImpl implements ShiftService {
                     Logger.error("Shift not found for ID: " + shiftId);
                 }
         );
+
+        List<AmountSnapShotEntity> amountSnapShotEntityList=agent.getAmountSnapShotRepository().findAll().stream()
+                .filter(x->x.getShiftId().equals(shiftId))
+                .toList();
 
         List<TicketsDto> list = agent.getTicketsRepository().getTicketByShiftId(shiftId);
         List<Refund> refundList = agent.getRefundTicketRepository().findByShiftId(shiftId);

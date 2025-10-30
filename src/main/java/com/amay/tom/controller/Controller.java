@@ -42,6 +42,7 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class Controller {
 
@@ -459,8 +460,9 @@ public class Controller {
         });
 
         try {
+            Consumer<Boolean> handler = null;
             FXMLLoader fxmlLoader = ViewFactory.getBottomNav();
-            fxmlLoader.setControllerFactory(x->new StatusBottomBarView(agent.getPeripheralMonitor(),agent.getVersions(),agent.getMasterConfigInfo()));
+            fxmlLoader.setControllerFactory(x->new StatusBottomBarView(agent.getPeripheralMonitor(),agent.getVersions(),agent.getMasterConfigInfo(), handler));
             borderPane.setBottom(fxmlLoader.load());
         } catch (IOException e) {
             throw new RuntimeException(e);

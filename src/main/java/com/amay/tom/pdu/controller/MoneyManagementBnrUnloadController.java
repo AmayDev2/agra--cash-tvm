@@ -1,7 +1,6 @@
 package com.amay.tom.pdu.controller;
 
 import com.amay.printer.BNRLoadUnload;
-import com.amay.printer.BalanceReport;
 import com.amay.printer.PrinterCommandDispatcher;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.config.SystemConfig;
@@ -13,22 +12,40 @@ import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.backend.mapper.NoteAmountMapper;
 import com.amay.tvm.backend.repository.FinanceOperationRepository;
 import com.amay.tvm.bnr.BNRIntegration;
-import com.amay.tvm.coin.service.HoppersRegistry;
+import com.amay.tvm.coin.model.HaveAmountObject;
 import com.jxfs.events.JxfsException;
 import com.mei.bnr.exception.BnrException;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import org.tinylog.Logger;
 
 public class MoneyManagementBnrUnloadController  {
     private final Agent agent;
     private final SceneManager sceneManager;
     private final ListenBnrEvent listenBnrEvent;
+    @FXML private Label totalAmount;
+    private HaveAmountObject haveAmountObject=null;
     public MoneyManagementBnrUnloadController(Agent agent, SceneManager sceneManager) {
         this.sceneManager=sceneManager;
         this.agent=agent;
         listenBnrEvent=new ListenBnrEvent(this,agent.getFinanceOperationRepository(),agent.getShiftMaintenance().getShiftId());
         agent.getPeripheralMonitor().addDeviceStatusListener(listenBnrEvent);
+        haveAmountObject=getAmount();
+    }
 
+    private HaveAmountObject getAmount() {
+        HaveAmountObject haveAmountObject;
+        try {
+            haveAmountObject=BNRIntegration.getBnrHaveAmountObject();
+        } catch (JxfsException e) {
+            throw new RuntimeException(e);
+        }
+        return haveAmountObject;
+    }
+
+    @FXML void initialize() {
+        totalAmount.setText(String.valueOf(haveAmountObject.getTotalAmount()));
     }
 
     public void onBnrUnLoad(ActionEvent actionEvent) throws JxfsException {

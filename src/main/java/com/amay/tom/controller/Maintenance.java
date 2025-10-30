@@ -21,6 +21,7 @@ import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
+import java.util.function.Consumer;
 
 public class Maintenance implements Initializable{
 
@@ -140,8 +141,9 @@ public class Maintenance implements Initializable{
 
     private void setFooter() {
         try {
+            Consumer<Boolean> handler = null;
             FXMLLoader fxmlLoader = ViewFactory.getBottomNav();
-            fxmlLoader.setControllerFactory(c -> new StatusBottomBarView(this.agent.getPeripheralMonitor(), agent.getVersions(),agent.getMasterConfigInfo()));
+            fxmlLoader.setControllerFactory(c -> new StatusBottomBarView(this.agent.getPeripheralMonitor(), agent.getVersions(),agent.getMasterConfigInfo(), handler));
             HBox bottomNav = fxmlLoader.load();
             borderPane.setBottom(bottomNav);
         } catch (IOException e) {

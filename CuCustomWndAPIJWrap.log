@@ -175380,3 +175380,211 @@ Total               1      Rs. 100
 2025-10-28 11-18-41.0368[EnumUSBDevices]Begin
 2025-10-28 11-18-41.0373[EnumUSBDevices]Found 0 USB Devices
 2025-10-28 11-18-41.0373[EnumUSBDevices]End
+2025-10-28 17-13-11.0681[]*****************************************
+2025-10-28 17-13-11.0682[]DLL Log Initialize. Verbosity: 6
+2025-10-28 17-13-11.0683[]*****************************************
+2025-10-28 17-13-11.0683[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-28 17-13-11.0683[]DLL Version: 1.07
+2025-10-28 17-13-11.0683[InitLibrary]Begin
+2025-10-28 17-13-11.0700[InitLibrary]Library SignID:00000101
+2025-10-28 17-13-11.0701[InitLibrary]Current SignID:00000101
+2025-10-28 17-13-11.0701[InitLibrary]End
+2025-10-28 17-13-11.0701[GetAPIVersionHwLibrary]Begin
+2025-10-28 17-13-11.0703[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-28 17-13-11.0703[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-28 17-13-11.0704[GetAPIVersionHwLibrary]End
+2025-10-28 17-13-11.0704[EnumUSBDevices]Begin
+2025-10-28 17-13-11.0707[EnumUSBDevices]Found 0 USB Devices
+2025-10-28 17-13-11.0708[EnumUSBDevices]End
+2025-10-28 17-14-00.0780[]*****************************************
+2025-10-28 17-14-00.0781[]DLL Log Initialize. Verbosity: 6
+2025-10-28 17-14-00.0782[]*****************************************
+2025-10-28 17-14-00.0782[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-28 17-14-00.0782[]DLL Version: 1.07
+2025-10-28 17-14-00.0782[InitLibrary]Begin
+2025-10-28 17-14-00.0801[InitLibrary]Library SignID:00000101
+2025-10-28 17-14-00.0801[InitLibrary]Current SignID:00000101
+2025-10-28 17-14-00.0802[InitLibrary]End
+2025-10-28 17-14-00.0802[GetAPIVersionHwLibrary]Begin
+2025-10-28 17-14-00.0805[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-28 17-14-00.0806[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-28 17-14-00.0806[GetAPIVersionHwLibrary]End
+2025-10-28 17-14-00.0807[EnumUSBDevices]Begin
+2025-10-28 17-14-00.0811[EnumUSBDevices]Found 0 USB Devices
+2025-10-28 17-14-00.0812[EnumUSBDevices]End
+2025-10-29 11-40-55.0316[]*****************************************
+2025-10-29 11-40-55.0318[]DLL Log Initialize. Verbosity: 6
+2025-10-29 11-40-55.0318[]*****************************************
+2025-10-29 11-40-55.0318[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-29 11-40-55.0319[]DLL Version: 1.07
+2025-10-29 11-40-55.0319[InitLibrary]Begin
+2025-10-29 11-40-55.0336[InitLibrary]Library SignID:00000101
+2025-10-29 11-40-55.0336[InitLibrary]Current SignID:00000101
+2025-10-29 11-40-55.0337[InitLibrary]End
+2025-10-29 11-40-55.0337[GetAPIVersionHwLibrary]Begin
+2025-10-29 11-40-55.0338[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-29 11-40-55.0339[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-29 11-40-55.0339[GetAPIVersionHwLibrary]End
+2025-10-29 11-40-55.0340[EnumUSBDevices]Begin
+2025-10-29 11-40-55.0343[EnumUSBDevices]Found 0 USB Devices
+2025-10-29 11-40-55.0344[EnumUSBDevices]End
+2025-10-29 12-13-57.0919[]*****************************************
+2025-10-29 12-13-57.0920[]DLL Log Initialize. Verbosity: 6
+2025-10-29 12-13-57.0920[]*****************************************
+2025-10-29 12-13-57.0921[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-29 12-13-57.0921[]DLL Version: 1.07
+2025-10-29 12-13-57.0921[InitLibrary]Begin
+2025-10-29 12-13-57.0938[InitLibrary]Library SignID:00000101
+2025-10-29 12-13-57.0939[InitLibrary]Current SignID:00000101
+2025-10-29 12-13-57.0939[InitLibrary]End
+2025-10-29 12-13-57.0940[GetAPIVersionHwLibrary]Begin
+2025-10-29 12-13-57.0941[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-29 12-13-57.0942[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-29 12-13-57.0942[GetAPIVersionHwLibrary]End
+2025-10-29 12-13-57.0942[EnumUSBDevices]Begin
+2025-10-29 12-13-57.0946[EnumUSBDevices]Found 0 USB Devices
+2025-10-29 12-13-57.0947[EnumUSBDevices]End
+2025-10-29 14-22-02.0191[]*****************************************
+2025-10-29 14-22-02.0193[]DLL Log Initialize. Verbosity: 6
+2025-10-29 14-22-02.0193[]*****************************************
+2025-10-29 14-22-02.0194[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-29 14-22-02.0194[]DLL Version: 1.07
+2025-10-29 14-22-02.0194[InitLibrary]Begin
+2025-10-29 14-22-02.0211[InitLibrary]Library SignID:00000101
+2025-10-29 14-22-02.0212[InitLibrary]Current SignID:00000101
+2025-10-29 14-22-02.0212[InitLibrary]End
+2025-10-29 14-22-02.0212[GetAPIVersionHwLibrary]Begin
+2025-10-29 14-22-02.0214[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-29 14-22-02.0214[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-29 14-22-02.0215[GetAPIVersionHwLibrary]End
+2025-10-29 14-22-02.0215[EnumUSBDevices]Begin
+2025-10-29 14-22-02.0219[EnumUSBDevices]Found 0 USB Devices
+2025-10-29 14-22-02.0220[EnumUSBDevices]End
+2025-10-29 16-10-13.0786[]*****************************************
+2025-10-29 16-10-13.0787[]DLL Log Initialize. Verbosity: 6
+2025-10-29 16-10-13.0788[]*****************************************
+2025-10-29 16-10-13.0788[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-29 16-10-13.0789[]DLL Version: 1.07
+2025-10-29 16-10-13.0789[InitLibrary]Begin
+2025-10-29 16-10-13.0810[InitLibrary]Library SignID:00000101
+2025-10-29 16-10-13.0811[InitLibrary]Current SignID:00000101
+2025-10-29 16-10-13.0812[InitLibrary]End
+2025-10-29 16-10-13.0813[GetAPIVersionHwLibrary]Begin
+2025-10-29 16-10-13.0815[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-29 16-10-13.0815[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-29 16-10-13.0815[GetAPIVersionHwLibrary]End
+2025-10-29 16-10-13.0816[EnumUSBDevices]Begin
+2025-10-29 16-10-13.0820[EnumUSBDevices]Found 0 USB Devices
+2025-10-29 16-10-13.0822[EnumUSBDevices]End
+2025-10-29 16-12-49.0793[]*****************************************
+2025-10-29 16-12-49.0794[]DLL Log Initialize. Verbosity: 6
+2025-10-29 16-12-49.0794[]*****************************************
+2025-10-29 16-12-49.0795[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-29 16-12-49.0795[]DLL Version: 1.07
+2025-10-29 16-12-49.0795[InitLibrary]Begin
+2025-10-29 16-12-49.0814[InitLibrary]Library SignID:00000101
+2025-10-29 16-12-49.0814[InitLibrary]Current SignID:00000101
+2025-10-29 16-12-49.0815[InitLibrary]End
+2025-10-29 16-12-49.0815[GetAPIVersionHwLibrary]Begin
+2025-10-29 16-12-49.0817[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-29 16-12-49.0817[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-29 16-12-49.0818[GetAPIVersionHwLibrary]End
+2025-10-29 16-12-49.0818[EnumUSBDevices]Begin
+2025-10-29 16-12-49.0823[EnumUSBDevices]Found 0 USB Devices
+2025-10-29 16-12-49.0823[EnumUSBDevices]End
+2025-10-29 16-14-53.0380[]*****************************************
+2025-10-29 16-14-53.0381[]DLL Log Initialize. Verbosity: 6
+2025-10-29 16-14-53.0382[]*****************************************
+2025-10-29 16-14-53.0383[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-29 16-14-53.0383[]DLL Version: 1.07
+2025-10-29 16-14-53.0383[InitLibrary]Begin
+2025-10-29 16-14-53.0400[InitLibrary]Library SignID:00000101
+2025-10-29 16-14-53.0400[InitLibrary]Current SignID:00000101
+2025-10-29 16-14-53.0401[InitLibrary]End
+2025-10-29 16-14-53.0401[GetAPIVersionHwLibrary]Begin
+2025-10-29 16-14-53.0404[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-29 16-14-53.0404[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-29 16-14-53.0404[GetAPIVersionHwLibrary]End
+2025-10-29 16-14-53.0405[EnumUSBDevices]Begin
+2025-10-29 16-14-53.0409[EnumUSBDevices]Found 0 USB Devices
+2025-10-29 16-14-53.0409[EnumUSBDevices]End
+2025-10-29 16-17-16.0647[]*****************************************
+2025-10-29 16-17-16.0648[]DLL Log Initialize. Verbosity: 6
+2025-10-29 16-17-16.0649[]*****************************************
+2025-10-29 16-17-16.0649[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-29 16-17-16.0649[]DLL Version: 1.07
+2025-10-29 16-17-16.0650[InitLibrary]Begin
+2025-10-29 16-17-16.0669[InitLibrary]Library SignID:00000101
+2025-10-29 16-17-16.0670[InitLibrary]Current SignID:00000101
+2025-10-29 16-17-16.0670[InitLibrary]End
+2025-10-29 16-17-16.0670[GetAPIVersionHwLibrary]Begin
+2025-10-29 16-17-16.0672[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-29 16-17-16.0673[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-29 16-17-16.0673[GetAPIVersionHwLibrary]End
+2025-10-29 16-17-16.0673[EnumUSBDevices]Begin
+2025-10-29 16-17-16.0681[EnumUSBDevices]Found 0 USB Devices
+2025-10-29 16-17-16.0682[EnumUSBDevices]End
+2025-10-29 17-20-23.0673[]*****************************************
+2025-10-29 17-20-23.0674[]DLL Log Initialize. Verbosity: 6
+2025-10-29 17-20-23.0675[]*****************************************
+2025-10-29 17-20-23.0675[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-29 17-20-23.0676[]DLL Version: 1.07
+2025-10-29 17-20-23.0676[InitLibrary]Begin
+2025-10-29 17-20-23.0697[InitLibrary]Library SignID:00000101
+2025-10-29 17-20-23.0697[InitLibrary]Current SignID:00000101
+2025-10-29 17-20-23.0698[InitLibrary]End
+2025-10-29 17-20-23.0698[GetAPIVersionHwLibrary]Begin
+2025-10-29 17-20-23.0700[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-29 17-20-23.0700[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-29 17-20-23.0700[GetAPIVersionHwLibrary]End
+2025-10-29 17-20-23.0701[EnumUSBDevices]Begin
+2025-10-29 17-20-23.0705[EnumUSBDevices]Found 0 USB Devices
+2025-10-29 17-20-23.0705[EnumUSBDevices]End
+2025-10-29 17-23-39.0653[]*****************************************
+2025-10-29 17-23-39.0654[]DLL Log Initialize. Verbosity: 6
+2025-10-29 17-23-39.0654[]*****************************************
+2025-10-29 17-23-39.0656[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-29 17-23-39.0656[]DLL Version: 1.07
+2025-10-29 17-23-39.0656[InitLibrary]Begin
+2025-10-29 17-23-39.0674[InitLibrary]Library SignID:00000101
+2025-10-29 17-23-39.0675[InitLibrary]Current SignID:00000101
+2025-10-29 17-23-39.0675[InitLibrary]End
+2025-10-29 17-23-39.0676[GetAPIVersionHwLibrary]Begin
+2025-10-29 17-23-39.0677[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-29 17-23-39.0678[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-29 17-23-39.0678[GetAPIVersionHwLibrary]End
+2025-10-29 17-23-39.0679[EnumUSBDevices]Begin
+2025-10-29 17-23-39.0683[EnumUSBDevices]Found 0 USB Devices
+2025-10-29 17-23-39.0684[EnumUSBDevices]End
+2025-10-29 17-25-20.0823[]*****************************************
+2025-10-29 17-25-20.0825[]DLL Log Initialize. Verbosity: 6
+2025-10-29 17-25-20.0827[]*****************************************
+2025-10-29 17-25-20.0827[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-29 17-25-20.0827[]DLL Version: 1.07
+2025-10-29 17-25-20.0828[InitLibrary]Begin
+2025-10-29 17-25-20.0857[InitLibrary]Library SignID:00000101
+2025-10-29 17-25-20.0858[InitLibrary]Current SignID:00000101
+2025-10-29 17-25-20.0858[InitLibrary]End
+2025-10-29 17-25-20.0859[GetAPIVersionHwLibrary]Begin
+2025-10-29 17-25-20.0861[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-29 17-25-20.0862[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-29 17-25-20.0863[GetAPIVersionHwLibrary]End
+2025-10-29 17-25-20.0863[EnumUSBDevices]Begin
+2025-10-29 17-25-20.0871[EnumUSBDevices]Found 0 USB Devices
+2025-10-29 17-25-20.0871[EnumUSBDevices]End
+2025-10-29 17-27-59.0292[]*****************************************
+2025-10-29 17-27-59.0294[]DLL Log Initialize. Verbosity: 6
+2025-10-29 17-27-59.0294[]*****************************************
+2025-10-29 17-27-59.0294[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-10-29 17-27-59.0295[]DLL Version: 1.07
+2025-10-29 17-27-59.0295[InitLibrary]Begin
+2025-10-29 17-27-59.0310[InitLibrary]Library SignID:00000101
+2025-10-29 17-27-59.0310[InitLibrary]Current SignID:00000101
+2025-10-29 17-27-59.0311[InitLibrary]End
+2025-10-29 17-27-59.0311[GetAPIVersionHwLibrary]Begin
+2025-10-29 17-27-59.0313[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-10-29 17-27-59.0313[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-10-29 17-27-59.0313[GetAPIVersionHwLibrary]End
+2025-10-29 17-27-59.0314[EnumUSBDevices]Begin
+2025-10-29 17-27-59.0317[EnumUSBDevices]Found 0 USB Devices
+2025-10-29 17-27-59.0317[EnumUSBDevices]End

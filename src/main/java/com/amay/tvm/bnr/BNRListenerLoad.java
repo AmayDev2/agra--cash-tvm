@@ -30,17 +30,19 @@ public class BNRListenerLoad implements IBNRListener {
 
     @Override
     public void acceptedAmount(int acceptedAmount) {
-        double RUPERTA_MULTIPLAYER = 0.01;
+        double RUPEYA_MULTIPLAYER = 0.01;
         financeOperationRepository.upsert(new FinanceOperationEntity()
-                .setUnitAmount((int) (RUPERTA_MULTIPLAYER * acceptedAmount))
+                .setUnitAmount((int) (RUPEYA_MULTIPLAYER * acceptedAmount))
                 .setOperationType(FinanceOperation.BNR_NOT_COMMITTED)
                 .setQuantity(1)
                 .setShiftId(shiftId));
+
+        Platform.runLater(()-> {controller.setInsertedAmount((int) (acceptedAmount*RUPEYA_MULTIPLAYER));});
     }
 
     @Override
-    public void informationToShow(String message)
-    {
+    public void informationToShow(String message){
+
 
     }
 
@@ -53,7 +55,10 @@ public class BNRListenerLoad implements IBNRListener {
     public void setStatus(BNRStatus status) {
         switch (status){
             case SUCCESS -> financeOperationRepository.markCommited(FinanceOperation.BNR_LOAD);
-            case FAILED -> financeOperationRepository.rollback();
+            case FAILED -> {
+                financeOperationRepository.rollback();
+                controller.setZero();
+            }
         }
 
     }

@@ -5,12 +5,13 @@ import com.amay.tom.model.version.MasterConfigInfo;
 import com.amay.tom.service.devices.DeviceStatusListener;
 import com.amay.tom.service.devices.PeripheralMonitor;
 import com.amay.tom.utils.helper.Helper;
-import com.amay.tvm.controller.TVMController;
 import javafx.fxml.FXML;
 
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 import org.tinylog.Logger;
+
+import java.util.function.Consumer;
 
 public class StatusBottomBarView {
     @FXML
@@ -60,6 +61,7 @@ public class StatusBottomBarView {
     private final MasterConfigInfo masterConfigInfo;
     private final UIDeviceListener uiDeviceListener;
     private final PeripheralMonitor peripheralMonitor;
+    private final  Consumer<Boolean> handler;
 
 
     @FXML
@@ -73,11 +75,12 @@ public class StatusBottomBarView {
         Logger.debug("StatusBottomBarView cleaned up");
     }
 
-    public StatusBottomBarView(PeripheralMonitor peripheralMonitor, Versions versions, MasterConfigInfo masterConfigInfo) {
+    public StatusBottomBarView(PeripheralMonitor peripheralMonitor, Versions versions, MasterConfigInfo masterConfigInfo, Consumer<Boolean> handler) {
         this.peripheralMonitor=peripheralMonitor;
         uiDeviceListener= new UIDeviceListener(this);
         peripheralMonitor.addDeviceStatusListener(uiDeviceListener);
         this.masterConfigInfo=masterConfigInfo;
+        this.handler=handler;
     }
 
     private void setPeripheralStatus(Button button, boolean isActive) {
@@ -105,7 +108,7 @@ public class StatusBottomBarView {
         setPeripheralStatus(upsUP, deviceStatus[10] == 1);
         setPeripheralStatus(upsCon, deviceStatus[11] == 1);
 
-        tvmController.checkUPSStatus(deviceStatus[11]==1 && deviceStatus[10]==1);
+        handler.accept(deviceStatus[11]==1 && deviceStatus[10]==1);
 
 
 //        deviceStatus[8] = ohd_connected ? 1 : 0;

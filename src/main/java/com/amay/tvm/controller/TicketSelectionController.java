@@ -20,6 +20,7 @@ import javafx.scene.layout.StackPane;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
 
 //NEW STATION SELECTION
 public class TicketSelectionController {
@@ -125,8 +126,9 @@ public class TicketSelectionController {
 
     private void addBottomBarView() {
         try {
+            Consumer<Boolean> handler = null;
             FXMLLoader fxmlLoader = ViewFactory.getBottomNav();
-            fxmlLoader.setControllerFactory(x -> new StatusBottomBarView(agent.getPeripheralMonitor(), agent.getVersions(),agent.getMasterConfigInfo()));
+            fxmlLoader.setControllerFactory(x -> new StatusBottomBarView(agent.getPeripheralMonitor(), agent.getVersions(),agent.getMasterConfigInfo(), handler));
 //            borderPane.setBottom(fxmlLoader.load());
         } catch (RuntimeException e) {
             System.err.println("Error loading bottom navigation view: " + e.getMessage());
