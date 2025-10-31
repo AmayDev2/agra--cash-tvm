@@ -4,6 +4,7 @@ package com.amay.tom.model.session;
 import lombok.*;
 import lombok.experimental.Accessors;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 @Data
@@ -28,8 +29,8 @@ public class Shift {
     private LocalDateTime updatedAt;
     private String imprest_money;
     private String config_version;
-    private boolean ccu=false;
-    private boolean scu=false;
+    private Timestamp ccu;
+    private Timestamp scu;
     private String role;
 
 }

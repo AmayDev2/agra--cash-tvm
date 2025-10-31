@@ -6,8 +6,8 @@ import com.amay.tom.repository.adjustment.AdjustedTicketRepository;
 import com.amay.tom.repository.refund.RefundTicketRepository;
 import com.amay.tom.repository.session.ShiftRepository;
 import com.amay.tom.repository.tickets.TicketsRepository;
-//import com.amay.tom.service.dataSync.DataSyncCountService;
-//import com.amay.tom.utils.dataSync.DataSyncInfo;
+import com.amay.tvm.backend.service.DataSync.DataSyncCountService;
+import com.amay.tvm.util.DataSync.DataSyncInfo;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -18,6 +18,8 @@ import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
 public class DataSync {
+    @FXML
+    private Label syncStatusLabel;
     @FXML
     private VBox root;
     @FXML
@@ -37,15 +39,12 @@ public class DataSync {
     @FXML
     private Label offlineDataCountSCU;
     private Agent agent;
-    private AdjustedTicketRepository adjustedTicketRepository;
-    private RefundTicketRepository refundTicketRepository;
+
     private TicketsRepository ticketsRepository;
     private ShiftRepository shiftRepository;
-//    private DataSyncCountService dataSyncCountService;
+    private DataSyncCountService dataSyncCountService;
     private Timeline refreshTimeline;
-    private final SceneManager sceneManager;
-
-
+    private SceneManager sceneManager;
 
     @FXML
     public void initialize() {
@@ -71,12 +70,13 @@ public class DataSync {
     public DataSync(Agent agent, SceneManager sceneManager){
         this.agent = agent;
         this.sceneManager = sceneManager;
-        this.adjustedTicketRepository = agent.getAdjustedTicketRepository();
-        this.ticketsRepository = agent.getTicketsRepository();
-        this.shiftRepository = agent.getShiftRepository();
-        this.refundTicketRepository = agent.getRefundTicketRepository();
-    }
+        this.ticketsRepository= agent.getTicketsRepository();
+        this.shiftRepository=agent.getShiftRepository();
 
+        this.dataSyncCountService = new DataSyncCountService(
+                ticketsRepository,shiftRepository
+        );
+    }
 
     private void stopAutoRefresh() {
         if(refreshTimeline!=null){
@@ -98,21 +98,28 @@ public class DataSync {
         refreshTimeline.play();
     }
 
+    private void handleSyncDataWarningVisibility(){
+        if(DataSyncInfo.offlineDataCountCCU==0 && DataSyncInfo.offlineDataCountSCU==0)
+            syncStatusLabel.setVisible(false);
+        else syncStatusLabel.setVisible(true);
+    }
+
 
     private void refreshData(){
-//        dataSyncCountService.updateSyncCount();
-//        totalDataCount1.setText(String.valueOf(DataSyncInfo.totalDataCount));
-//        totalDataCount2.setText(String.valueOf(DataSyncInfo.totalDataCount));
-//        onlineDataCountCCU.setText(String.valueOf(DataSyncInfo.onlineDataCountCCU));
-//        offlineDataCountCCU.setText(String.valueOf(DataSyncInfo.offlineDataCountCCU));
-//        onlineDataCountSCU.setText(String.valueOf(DataSyncInfo.onlineDataCountSCU));
-//        offlineDataCountSCU.setText(String.valueOf(DataSyncInfo.offlineDataCountSCU));
-//        lastSyncTimestampCCU.setText(String.valueOf(DataSyncInfo.lastSyncCCU));
-//        lastSyncTimestampSCU.setText(String.valueOf(DataSyncInfo.lastSyncSCU));
-    }
-    public void onBack(ActionEvent actionEvent) {
-        sceneManager.back();
-        actionEvent.consume();
+        dataSyncCountService.updateSyncCount();
+        totalDataCount1.setText(String.valueOf(DataSyncInfo.totalDataCount));
+        totalDataCount2.setText(String.valueOf(DataSyncInfo.totalDataCount));
+        onlineDataCountCCU.setText(String.valueOf(DataSyncInfo.onlineDataCountCCU));
+        offlineDataCountCCU.setText(String.valueOf(DataSyncInfo.offlineDataCountCCU));
+        onlineDataCountSCU.setText(String.valueOf(DataSyncInfo.onlineDataCountSCU));
+        offlineDataCountSCU.setText(String.valueOf(DataSyncInfo.offlineDataCountSCU));
+        lastSyncTimestampCCU.setText(String.valueOf(DataSyncInfo.lastSyncCCU));
+        lastSyncTimestampSCU.setText(String.valueOf(DataSyncInfo.lastSyncSCU));
+        this.handleSyncDataWarningVisibility();
     }
 
+    public void onBack(ActionEvent event) {
+        sceneManager.back();
+                event.consume();
+    }
 }

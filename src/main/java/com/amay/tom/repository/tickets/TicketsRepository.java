@@ -2,6 +2,7 @@ package com.amay.tom.repository.tickets;
 
 
 import com.amay.tom.model.tickets.TicketsDto;
+import com.amay.tvm.backend.enums.DataSyncDestination;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -12,6 +13,7 @@ public abstract class TicketsRepository {
 
     protected static final String TABLE_NAME = "tickets";
     protected Connection connection = null;
+    protected static final String COUNT = "SELECT COUNT(*) FROM ";
 
     protected static final String CREATE_TABLE_SQL = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + " (" +
             "orderId VARCHAR(255)," +
@@ -66,6 +68,12 @@ public abstract class TicketsRepository {
     protected static final String SELECT_QR_TICKETS_FROM_SQL = "SELECT * FROM "+ TABLE_NAME +" WHERE createdAt >= ? ORDER BY createdAt DESC";
     protected static final String SELECT_QR_TICKETS_NOT_PUSHED = "SELECT * FROM "+ TABLE_NAME +" WHERE ? ORDER BY createdAt DESC";
 
+    protected static final String TOTAL_ROWS_COUNT =  COUNT + TABLE_NAME;
+    protected static final String ROWS_CCU_PUSHED_COUNT = COUNT + TABLE_NAME+" WHERE CCU IS NOT NULL";
+    protected static final String ROWS_SCU_PUSHED_COUNT = COUNT + TABLE_NAME+" WHERE SCU IS NOT NULL";
+    protected static final String LAST_CCU_PUSHED_ROW = "SELECT * FROM "+ TABLE_NAME +" WHERE CCU IS NOT NULL ORDER BY createdAt DESC";
+    protected static final String LAST_SCU_PUSHED_ROW = "SELECT * FROM "+ TABLE_NAME +" WHERE SCU IS NOT NULL ORDER BY createdAt DESC";
+
     abstract void createTableIfNotExists() throws SQLException;
     public abstract String save(TicketsDto tickets);
     abstract public TicketsDto findById(String ticketId);
@@ -84,5 +92,9 @@ public abstract class TicketsRepository {
     public abstract void pushTickets(List<String> ticketIds, String column);
 
     public abstract List<TicketsDto> findNotPushedTicket(String chanal);
+    public abstract long findTotalRowsCount();
+
+    public abstract long findPushedRowsCount(DataSyncDestination dataSyncDestination);
+    public abstract Timestamp findLastPushedTimeStamp(DataSyncDestination destination);
 }
 

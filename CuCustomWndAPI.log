@@ -17104,3 +17104,793 @@
 2025/10/30-11:07:35.010:[000011E8#00000000#5] > [EnumUSBDevices] Begin
 2025/10/30-11:07:35.011:[000011E8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
 2025/10/30-11:07:35.012:[000011E8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-11:36:51.789:[00001D20#00000000#5] > [InitLibrary] Begin
+2025/10/30-11:36:51.790:[00001D20#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-11:36:51.791:[00001D20#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-11:36:51.792:[00001D20#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-11:36:51.793:[00001D20#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-11:36:51.793:[00001D20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-11:36:51.794:[00001D20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-11:36:51.795:[00001D20#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-11:36:51.796:[00001D20#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-11:36:51.797:[00001D20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-11:36:51.798:[00001D20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-11:36:51.799:[00001D20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-11:36:51.800:[00001D20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-11:36:51.801:[00001D20#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-11:36:51.816:[00001D20#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-11:36:51.817:[00001D20#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-11:36:51.818:[00001D20#00000000#5] > [GetVariable] Begin
+2025/10/30-11:36:51.818:[00001D20#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-11:36:51.819:[00001D20#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-11:36:51.824:[00001D20#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-11:36:51.824:[00001D20#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-11:36:51.825:[00001D20#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-11:36:51.830:[00001D20#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-11:36:51.832:[00001D20#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-11:36:51.833:[00001D20#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-11:36:51.834:[00001D20#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-11:36:51.834:[00001D20#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-11:36:51.835:[00001D20#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-12:44:46.632:[00001B10#00000000#5] > [InitLibrary] Begin
+2025/10/30-12:44:46.633:[00001B10#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-12:44:46.635:[00001B10#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-12:44:46.635:[00001B10#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-12:44:46.636:[00001B10#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-12:44:46.638:[00001B10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-12:44:46.639:[00001B10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-12:44:46.639:[00001B10#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-12:44:46.640:[00001B10#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-12:44:46.641:[00001B10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-12:44:46.642:[00001B10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-12:44:46.643:[00001B10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-12:44:46.644:[00001B10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-12:44:46.645:[00001B10#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-12:44:46.659:[00001B10#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-12:44:46.661:[00001B10#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-12:44:46.662:[00001B10#00000000#5] > [GetVariable] Begin
+2025/10/30-12:44:46.663:[00001B10#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-12:44:46.664:[00001B10#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-12:44:46.667:[00001B10#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-12:44:46.668:[00001B10#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-12:44:46.668:[00001B10#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-12:44:46.673:[00001B10#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-12:44:46.674:[00001B10#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-12:44:46.675:[00001B10#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-12:44:46.675:[00001B10#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-12:44:46.676:[00001B10#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-12:44:46.677:[00001B10#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-12:49:30.273:[00004598#00000000#5] > [InitLibrary] Begin
+2025/10/30-12:49:30.274:[00004598#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-12:49:30.275:[00004598#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-12:49:30.276:[00004598#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-12:49:30.282:[00004598#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-12:49:30.283:[00004598#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-12:49:30.285:[00004598#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-12:49:30.286:[00004598#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-12:49:30.287:[00004598#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-12:49:30.288:[00004598#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-12:49:30.290:[00004598#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-12:49:30.292:[00004598#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-12:49:30.293:[00004598#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-12:49:30.293:[00004598#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-12:49:30.310:[00004598#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-12:49:30.310:[00004598#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-12:49:30.312:[00004598#00000000#5] > [GetVariable] Begin
+2025/10/30-12:49:30.313:[00004598#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-12:49:30.314:[00004598#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-12:49:30.318:[00004598#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-12:49:30.318:[00004598#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-12:49:30.320:[00004598#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-12:49:30.324:[00004598#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-12:49:30.326:[00004598#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-12:49:30.327:[00004598#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-12:49:30.328:[00004598#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-12:49:30.329:[00004598#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-12:49:30.330:[00004598#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-12:53:38.182:[00004EB8#00000000#5] > [InitLibrary] Begin
+2025/10/30-12:53:38.182:[00004EB8#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-12:53:38.183:[00004EB8#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-12:53:38.184:[00004EB8#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-12:53:38.185:[00004EB8#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-12:53:38.186:[00004EB8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-12:53:38.186:[00004EB8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-12:53:38.187:[00004EB8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-12:53:38.188:[00004EB8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-12:53:38.189:[00004EB8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-12:53:38.190:[00004EB8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-12:53:38.191:[00004EB8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-12:53:38.192:[00004EB8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-12:53:38.192:[00004EB8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-12:53:38.205:[00004EB8#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-12:53:38.205:[00004EB8#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-12:53:38.206:[00004EB8#00000000#5] > [GetVariable] Begin
+2025/10/30-12:53:38.206:[00004EB8#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-12:53:38.207:[00004EB8#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-12:53:38.211:[00004EB8#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-12:53:38.212:[00004EB8#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-12:53:38.212:[00004EB8#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-12:53:38.217:[00004EB8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-12:53:38.219:[00004EB8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-12:53:38.220:[00004EB8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-12:53:38.220:[00004EB8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-12:53:38.221:[00004EB8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-12:53:38.222:[00004EB8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-12:59:45.770:[00002B40#00000000#5] > [InitLibrary] Begin
+2025/10/30-12:59:45.771:[00002B40#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-12:59:45.772:[00002B40#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-12:59:45.774:[00002B40#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-12:59:45.775:[00002B40#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-12:59:45.776:[00002B40#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-12:59:45.778:[00002B40#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-12:59:45.779:[00002B40#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-12:59:45.782:[00002B40#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-12:59:45.784:[00002B40#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-12:59:45.786:[00002B40#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-12:59:45.786:[00002B40#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-12:59:45.787:[00002B40#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-12:59:45.788:[00002B40#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-12:59:45.807:[00002B40#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-12:59:45.808:[00002B40#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-12:59:45.809:[00002B40#00000000#5] > [GetVariable] Begin
+2025/10/30-12:59:45.810:[00002B40#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-12:59:45.811:[00002B40#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-12:59:45.815:[00002B40#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-12:59:45.815:[00002B40#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-12:59:45.816:[00002B40#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-12:59:45.819:[00002B40#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-12:59:45.821:[00002B40#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-12:59:45.821:[00002B40#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-12:59:45.822:[00002B40#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-12:59:45.823:[00002B40#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-12:59:45.823:[00002B40#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-13:02:22.082:[00004D78#00000000#5] > [InitLibrary] Begin
+2025/10/30-13:02:22.083:[00004D78#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-13:02:22.085:[00004D78#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-13:02:22.086:[00004D78#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-13:02:22.088:[00004D78#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-13:02:22.089:[00004D78#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-13:02:22.091:[00004D78#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-13:02:22.092:[00004D78#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-13:02:22.093:[00004D78#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-13:02:22.095:[00004D78#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-13:02:22.096:[00004D78#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-13:02:22.098:[00004D78#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-13:02:22.098:[00004D78#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-13:02:22.099:[00004D78#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-13:02:22.111:[00004D78#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-13:02:22.112:[00004D78#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-13:02:22.113:[00004D78#00000000#5] > [GetVariable] Begin
+2025/10/30-13:02:22.114:[00004D78#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-13:02:22.114:[00004D78#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-13:02:22.120:[00004D78#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-13:02:22.120:[00004D78#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-13:02:22.121:[00004D78#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-13:02:22.125:[00004D78#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-13:02:22.127:[00004D78#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-13:02:22.129:[00004D78#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-13:02:22.130:[00004D78#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-13:02:22.130:[00004D78#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-13:02:22.131:[00004D78#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-13:38:37.458:[00004D78#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-13:38:37.459:[00004D78#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-13:38:37.461:[00004D78#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-13:38:37.463:[00004D78#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-13:38:37.464:[00004D78#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-13:38:37.466:[00004D78#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-14:13:12.162:[00004EEC#00000000#5] > [InitLibrary] Begin
+2025/10/30-14:13:12.163:[00004EEC#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-14:13:12.163:[00004EEC#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-14:13:12.164:[00004EEC#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-14:13:12.165:[00004EEC#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-14:13:12.166:[00004EEC#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-14:13:12.168:[00004EEC#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-14:13:12.169:[00004EEC#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-14:13:12.171:[00004EEC#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-14:13:12.172:[00004EEC#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-14:13:12.173:[00004EEC#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-14:13:12.174:[00004EEC#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-14:13:12.176:[00004EEC#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-14:13:12.177:[00004EEC#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-14:13:12.198:[00004EEC#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-14:13:12.199:[00004EEC#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-14:13:12.200:[00004EEC#00000000#5] > [GetVariable] Begin
+2025/10/30-14:13:12.201:[00004EEC#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-14:13:12.202:[00004EEC#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-14:13:12.207:[00004EEC#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-14:13:12.208:[00004EEC#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-14:13:12.208:[00004EEC#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-14:13:12.213:[00004EEC#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-14:13:12.215:[00004EEC#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-14:13:12.216:[00004EEC#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-14:13:12.217:[00004EEC#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-14:13:12.218:[00004EEC#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-14:13:12.220:[00004EEC#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-14:17:38.139:[00002AE8#00000000#5] > [InitLibrary] Begin
+2025/10/30-14:17:38.139:[00002AE8#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-14:17:38.140:[00002AE8#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-14:17:38.142:[00002AE8#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-14:17:38.142:[00002AE8#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-14:17:38.143:[00002AE8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-14:17:38.144:[00002AE8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-14:17:38.145:[00002AE8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-14:17:38.146:[00002AE8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-14:17:38.147:[00002AE8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-14:17:38.148:[00002AE8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-14:17:38.149:[00002AE8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-14:17:38.150:[00002AE8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-14:17:38.150:[00002AE8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-14:17:38.161:[00002AE8#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-14:17:38.161:[00002AE8#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-14:17:38.163:[00002AE8#00000000#5] > [GetVariable] Begin
+2025/10/30-14:17:38.163:[00002AE8#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-14:17:38.164:[00002AE8#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-14:17:38.167:[00002AE8#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-14:17:38.169:[00002AE8#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-14:17:38.169:[00002AE8#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-14:17:38.172:[00002AE8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-14:17:38.174:[00002AE8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-14:17:38.175:[00002AE8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-14:17:38.175:[00002AE8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-14:17:38.176:[00002AE8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-14:17:38.176:[00002AE8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-14:24:24.359:[00000DA8#00000000#5] > [InitLibrary] Begin
+2025/10/30-14:24:24.360:[00000DA8#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-14:24:24.360:[00000DA8#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-14:24:24.362:[00000DA8#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-14:24:24.363:[00000DA8#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-14:24:24.364:[00000DA8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-14:24:24.365:[00000DA8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-14:24:24.366:[00000DA8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-14:24:24.366:[00000DA8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-14:24:24.368:[00000DA8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-14:24:24.369:[00000DA8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-14:24:24.369:[00000DA8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-14:24:24.370:[00000DA8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-14:24:24.371:[00000DA8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-14:24:24.383:[00000DA8#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-14:24:24.384:[00000DA8#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-14:24:24.384:[00000DA8#00000000#5] > [GetVariable] Begin
+2025/10/30-14:24:24.385:[00000DA8#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-14:24:24.386:[00000DA8#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-14:24:24.389:[00000DA8#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-14:24:24.389:[00000DA8#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-14:24:24.391:[00000DA8#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-14:24:24.394:[00000DA8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-14:24:24.396:[00000DA8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-14:24:24.396:[00000DA8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-14:24:24.397:[00000DA8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-14:24:24.398:[00000DA8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-14:24:24.398:[00000DA8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-14:36:43.489:[00003468#00000000#5] > [InitLibrary] Begin
+2025/10/30-14:36:43.489:[00003468#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-14:36:43.491:[00003468#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-14:36:43.491:[00003468#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-14:36:43.493:[00003468#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-14:36:43.494:[00003468#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-14:36:43.495:[00003468#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-14:36:43.496:[00003468#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-14:36:43.497:[00003468#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-14:36:43.498:[00003468#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-14:36:43.499:[00003468#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-14:36:43.500:[00003468#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-14:36:43.501:[00003468#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-14:36:43.501:[00003468#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-14:36:43.511:[00003468#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-14:36:43.512:[00003468#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-14:36:43.513:[00003468#00000000#5] > [GetVariable] Begin
+2025/10/30-14:36:43.514:[00003468#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-14:36:43.515:[00003468#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-14:36:43.518:[00003468#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-14:36:43.519:[00003468#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-14:36:43.519:[00003468#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-14:36:43.523:[00003468#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-14:36:43.524:[00003468#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-14:36:43.525:[00003468#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-14:36:43.525:[00003468#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-14:36:43.526:[00003468#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-14:36:43.527:[00003468#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-14:39:00.065:[00004444#00000000#5] > [InitLibrary] Begin
+2025/10/30-14:39:00.066:[00004444#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-14:39:00.066:[00004444#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-14:39:00.067:[00004444#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-14:39:00.068:[00004444#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-14:39:00.068:[00004444#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-14:39:00.069:[00004444#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-14:39:00.070:[00004444#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-14:39:00.070:[00004444#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-14:39:00.071:[00004444#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-14:39:00.072:[00004444#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-14:39:00.073:[00004444#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-14:39:00.074:[00004444#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-14:39:00.075:[00004444#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-14:39:00.088:[00004444#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-14:39:00.089:[00004444#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-14:39:00.090:[00004444#00000000#5] > [GetVariable] Begin
+2025/10/30-14:39:00.091:[00004444#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-14:39:00.092:[00004444#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-14:39:00.096:[00004444#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-14:39:00.097:[00004444#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-14:39:00.097:[00004444#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-14:39:00.102:[00004444#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-14:39:00.104:[00004444#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-14:39:00.105:[00004444#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-14:39:00.106:[00004444#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-14:39:00.106:[00004444#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-14:39:00.107:[00004444#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:05:20.814:[00005250#00000000#5] > [InitLibrary] Begin
+2025/10/30-15:05:20.816:[00005250#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-15:05:20.817:[00005250#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-15:05:20.818:[00005250#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-15:05:20.819:[00005250#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-15:05:20.820:[00005250#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-15:05:20.821:[00005250#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-15:05:20.822:[00005250#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-15:05:20.823:[00005250#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-15:05:20.825:[00005250#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-15:05:20.826:[00005250#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-15:05:20.827:[00005250#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-15:05:20.828:[00005250#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-15:05:20.829:[00005250#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-15:05:20.842:[00005250#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-15:05:20.843:[00005250#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-15:05:20.844:[00005250#00000000#5] > [GetVariable] Begin
+2025/10/30-15:05:20.845:[00005250#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-15:05:20.846:[00005250#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-15:05:20.850:[00005250#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-15:05:20.851:[00005250#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-15:05:20.852:[00005250#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-15:05:20.857:[00005250#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:05:20.859:[00005250#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:05:20.860:[00005250#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:05:20.861:[00005250#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:05:20.862:[00005250#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:05:20.863:[00005250#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:07:08.316:[0000262C#00000000#5] > [InitLibrary] Begin
+2025/10/30-15:07:08.316:[0000262C#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-15:07:08.317:[0000262C#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-15:07:08.317:[0000262C#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-15:07:08.318:[0000262C#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-15:07:08.319:[0000262C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-15:07:08.320:[0000262C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-15:07:08.320:[0000262C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-15:07:08.321:[0000262C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-15:07:08.322:[0000262C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-15:07:08.322:[0000262C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-15:07:08.323:[0000262C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-15:07:08.324:[0000262C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-15:07:08.325:[0000262C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-15:07:08.336:[0000262C#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-15:07:08.337:[0000262C#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-15:07:08.337:[0000262C#00000000#5] > [GetVariable] Begin
+2025/10/30-15:07:08.338:[0000262C#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-15:07:08.339:[0000262C#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-15:07:08.342:[0000262C#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-15:07:08.343:[0000262C#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-15:07:08.343:[0000262C#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-15:07:08.346:[0000262C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:07:08.349:[0000262C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:07:08.349:[0000262C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:07:08.350:[0000262C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:07:08.350:[0000262C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:07:08.351:[0000262C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:10:21.964:[000019D4#00000000#5] > [InitLibrary] Begin
+2025/10/30-15:10:21.965:[000019D4#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-15:10:21.965:[000019D4#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-15:10:21.966:[000019D4#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-15:10:21.968:[000019D4#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-15:10:21.969:[000019D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-15:10:21.970:[000019D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-15:10:21.971:[000019D4#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-15:10:21.972:[000019D4#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-15:10:21.973:[000019D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-15:10:21.973:[000019D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-15:10:21.974:[000019D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-15:10:21.975:[000019D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-15:10:21.975:[000019D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-15:10:21.988:[000019D4#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-15:10:21.988:[000019D4#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-15:10:21.989:[000019D4#00000000#5] > [GetVariable] Begin
+2025/10/30-15:10:21.990:[000019D4#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-15:10:21.990:[000019D4#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-15:10:21.995:[000019D4#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-15:10:21.996:[000019D4#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-15:10:21.996:[000019D4#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-15:10:21.999:[000019D4#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:10:22.001:[000019D4#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:10:22.002:[000019D4#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:10:22.002:[000019D4#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:10:22.003:[000019D4#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:10:22.003:[000019D4#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:12:54.510:[00004454#00000000#5] > [InitLibrary] Begin
+2025/10/30-15:12:54.510:[00004454#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-15:12:54.511:[00004454#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-15:12:54.512:[00004454#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-15:12:54.513:[00004454#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-15:12:54.514:[00004454#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-15:12:54.514:[00004454#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-15:12:54.515:[00004454#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-15:12:54.516:[00004454#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-15:12:54.517:[00004454#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-15:12:54.517:[00004454#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-15:12:54.518:[00004454#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-15:12:54.519:[00004454#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-15:12:54.519:[00004454#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-15:12:54.530:[00004454#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-15:12:54.531:[00004454#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-15:12:54.532:[00004454#00000000#5] > [GetVariable] Begin
+2025/10/30-15:12:54.533:[00004454#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-15:12:54.534:[00004454#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-15:12:54.537:[00004454#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-15:12:54.538:[00004454#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-15:12:54.538:[00004454#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-15:12:54.541:[00004454#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:12:54.543:[00004454#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:12:54.544:[00004454#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:12:54.544:[00004454#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:12:54.545:[00004454#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:12:54.546:[00004454#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:21:42.713:[00005160#00000000#5] > [InitLibrary] Begin
+2025/10/30-15:21:42.714:[00005160#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-15:21:42.715:[00005160#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-15:21:42.715:[00005160#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-15:21:42.716:[00005160#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-15:21:42.717:[00005160#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-15:21:42.718:[00005160#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-15:21:42.719:[00005160#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-15:21:42.721:[00005160#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-15:21:42.722:[00005160#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-15:21:42.723:[00005160#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-15:21:42.724:[00005160#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-15:21:42.726:[00005160#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-15:21:42.728:[00005160#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-15:21:42.744:[00005160#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-15:21:42.745:[00005160#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-15:21:42.746:[00005160#00000000#5] > [GetVariable] Begin
+2025/10/30-15:21:42.747:[00005160#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-15:21:42.747:[00005160#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-15:21:42.752:[00005160#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-15:21:42.752:[00005160#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-15:21:42.753:[00005160#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-15:21:42.756:[00005160#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:21:42.759:[00005160#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:21:42.760:[00005160#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:21:42.760:[00005160#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:21:42.761:[00005160#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:21:42.761:[00005160#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:23:25.819:[000054A8#00000000#5] > [InitLibrary] Begin
+2025/10/30-15:23:25.820:[000054A8#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-15:23:25.822:[000054A8#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-15:23:25.823:[000054A8#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-15:23:25.824:[000054A8#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-15:23:25.825:[000054A8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-15:23:25.826:[000054A8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-15:23:25.828:[000054A8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-15:23:25.829:[000054A8#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-15:23:25.829:[000054A8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-15:23:25.830:[000054A8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-15:23:25.832:[000054A8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-15:23:25.832:[000054A8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-15:23:25.833:[000054A8#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-15:23:25.846:[000054A8#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-15:23:25.846:[000054A8#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-15:23:25.848:[000054A8#00000000#5] > [GetVariable] Begin
+2025/10/30-15:23:25.848:[000054A8#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-15:23:25.849:[000054A8#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-15:23:25.855:[000054A8#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-15:23:25.856:[000054A8#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-15:23:25.857:[000054A8#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-15:23:25.863:[000054A8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:23:25.865:[000054A8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:23:25.866:[000054A8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:23:25.866:[000054A8#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:23:25.867:[000054A8#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:23:25.867:[000054A8#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:25:53.361:[0000509C#00000000#5] > [InitLibrary] Begin
+2025/10/30-15:25:53.363:[0000509C#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-15:25:53.364:[0000509C#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-15:25:53.364:[0000509C#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-15:25:53.366:[0000509C#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-15:25:53.366:[0000509C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-15:25:53.366:[0000509C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-15:25:53.368:[0000509C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-15:25:53.369:[0000509C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-15:25:53.370:[0000509C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-15:25:53.371:[0000509C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-15:25:53.372:[0000509C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-15:25:53.374:[0000509C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-15:25:53.376:[0000509C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-15:25:53.388:[0000509C#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-15:25:53.388:[0000509C#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-15:25:53.390:[0000509C#00000000#5] > [GetVariable] Begin
+2025/10/30-15:25:53.391:[0000509C#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-15:25:53.392:[0000509C#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-15:25:53.396:[0000509C#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-15:25:53.396:[0000509C#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-15:25:53.397:[0000509C#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-15:25:53.401:[0000509C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:25:53.403:[0000509C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:25:53.405:[0000509C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:25:53.406:[0000509C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:25:53.407:[0000509C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:25:53.408:[0000509C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:28:46.113:[00001518#00000000#5] > [InitLibrary] Begin
+2025/10/30-15:28:46.113:[00001518#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-15:28:46.114:[00001518#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-15:28:46.116:[00001518#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-15:28:46.117:[00001518#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-15:28:46.118:[00001518#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-15:28:46.119:[00001518#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-15:28:46.121:[00001518#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-15:28:46.122:[00001518#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-15:28:46.124:[00001518#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-15:28:46.125:[00001518#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-15:28:46.126:[00001518#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-15:28:46.127:[00001518#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-15:28:46.129:[00001518#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-15:28:46.141:[00001518#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-15:28:46.143:[00001518#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-15:28:46.143:[00001518#00000000#5] > [GetVariable] Begin
+2025/10/30-15:28:46.144:[00001518#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-15:28:46.145:[00001518#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-15:28:46.151:[00001518#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-15:28:46.152:[00001518#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-15:28:46.153:[00001518#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-15:28:46.156:[00001518#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:28:46.159:[00001518#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:28:46.159:[00001518#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:28:46.160:[00001518#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:28:46.160:[00001518#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:28:46.161:[00001518#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:44:34.317:[00002398#00000000#5] > [InitLibrary] Begin
+2025/10/30-15:44:34.318:[00002398#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-15:44:34.319:[00002398#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-15:44:34.319:[00002398#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-15:44:34.320:[00002398#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-15:44:34.321:[00002398#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-15:44:34.322:[00002398#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-15:44:34.323:[00002398#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-15:44:34.324:[00002398#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-15:44:34.325:[00002398#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-15:44:34.326:[00002398#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-15:44:34.327:[00002398#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-15:44:34.328:[00002398#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-15:44:34.329:[00002398#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-15:44:34.348:[00002398#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-15:44:34.349:[00002398#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-15:44:34.351:[00002398#00000000#5] > [GetVariable] Begin
+2025/10/30-15:44:34.352:[00002398#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-15:44:34.353:[00002398#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-15:44:34.358:[00002398#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-15:44:34.359:[00002398#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-15:44:34.360:[00002398#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-15:44:34.368:[00002398#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:44:34.371:[00002398#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:44:34.371:[00002398#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:44:34.373:[00002398#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:44:34.374:[00002398#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:44:34.375:[00002398#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:47:22.072:[00005458#00000000#5] > [InitLibrary] Begin
+2025/10/30-15:47:22.072:[00005458#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-15:47:22.073:[00005458#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-15:47:22.074:[00005458#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-15:47:22.074:[00005458#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-15:47:22.076:[00005458#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-15:47:22.077:[00005458#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-15:47:22.077:[00005458#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-15:47:22.079:[00005458#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-15:47:22.080:[00005458#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-15:47:22.081:[00005458#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-15:47:22.082:[00005458#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-15:47:22.083:[00005458#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-15:47:22.084:[00005458#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-15:47:22.095:[00005458#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-15:47:22.096:[00005458#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-15:47:22.098:[00005458#00000000#5] > [GetVariable] Begin
+2025/10/30-15:47:22.099:[00005458#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-15:47:22.099:[00005458#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-15:47:22.104:[00005458#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-15:47:22.104:[00005458#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-15:47:22.105:[00005458#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-15:47:22.111:[00005458#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:47:22.113:[00005458#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:47:22.115:[00005458#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-15:47:22.116:[00005458#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-15:47:22.116:[00005458#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-15:47:22.117:[00005458#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-18:16:33.113:[00004DA4#00000000#5] > [InitLibrary] Begin
+2025/10/30-18:16:33.113:[00004DA4#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-18:16:33.114:[00004DA4#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-18:16:33.114:[00004DA4#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-18:16:33.115:[00004DA4#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-18:16:33.116:[00004DA4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-18:16:33.117:[00004DA4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-18:16:33.117:[00004DA4#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-18:16:33.118:[00004DA4#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-18:16:33.119:[00004DA4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-18:16:33.120:[00004DA4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-18:16:33.121:[00004DA4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-18:16:33.122:[00004DA4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-18:16:33.123:[00004DA4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-18:16:33.133:[00004DA4#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-18:16:33.134:[00004DA4#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-18:16:33.135:[00004DA4#00000000#5] > [GetVariable] Begin
+2025/10/30-18:16:33.135:[00004DA4#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-18:16:33.137:[00004DA4#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-18:16:33.143:[00004DA4#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-18:16:33.144:[00004DA4#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-18:16:33.145:[00004DA4#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-18:16:33.150:[00004DA4#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-18:16:33.152:[00004DA4#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-18:16:33.153:[00004DA4#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-18:16:33.154:[00004DA4#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-18:16:33.155:[00004DA4#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-18:16:33.156:[00004DA4#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-18:23:26.894:[00005A68#00000000#5] > [InitLibrary] Begin
+2025/10/30-18:23:26.895:[00005A68#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/30-18:23:26.896:[00005A68#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/30-18:23:26.898:[00005A68#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/30-18:23:26.900:[00005A68#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/30-18:23:26.901:[00005A68#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/30-18:23:26.902:[00005A68#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/30-18:23:26.904:[00005A68#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/30-18:23:26.905:[00005A68#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/30-18:23:26.906:[00005A68#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/30-18:23:26.909:[00005A68#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/30-18:23:26.910:[00005A68#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/30-18:23:26.911:[00005A68#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/30-18:23:26.913:[00005A68#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/30-18:23:26.934:[00005A68#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/30-18:23:26.936:[00005A68#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/30-18:23:26.937:[00005A68#00000000#5] > [GetVariable] Begin
+2025/10/30-18:23:26.937:[00005A68#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/30-18:23:26.939:[00005A68#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/30-18:23:26.945:[00005A68#00000000#5] > [GetAPIVersion] Begin
+2025/10/30-18:23:26.946:[00005A68#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/30-18:23:26.947:[00005A68#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/30-18:23:26.953:[00005A68#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-18:23:26.955:[00005A68#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-18:23:26.956:[00005A68#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/30-18:23:26.956:[00005A68#00000000#5] > [EnumUSBDevices] Begin
+2025/10/30-18:23:26.958:[00005A68#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/30-18:23:26.958:[00005A68#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/31-09:56:12.859:[000058DC#00000000#5] > [InitLibrary] Begin
+2025/10/31-09:56:12.860:[000058DC#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/31-09:56:12.861:[000058DC#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/31-09:56:12.862:[000058DC#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/31-09:56:12.864:[000058DC#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/31-09:56:12.865:[000058DC#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/31-09:56:12.866:[000058DC#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/31-09:56:12.867:[000058DC#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/31-09:56:12.869:[000058DC#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/31-09:56:12.870:[000058DC#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/31-09:56:12.871:[000058DC#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/31-09:56:12.872:[000058DC#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/31-09:56:12.873:[000058DC#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/31-09:56:12.874:[000058DC#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/31-09:56:12.889:[000058DC#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/31-09:56:12.890:[000058DC#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/31-09:56:12.892:[000058DC#00000000#5] > [GetVariable] Begin
+2025/10/31-09:56:12.893:[000058DC#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/31-09:56:12.894:[000058DC#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/31-09:56:12.898:[000058DC#00000000#5] > [GetAPIVersion] Begin
+2025/10/31-09:56:12.899:[000058DC#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/31-09:56:12.900:[000058DC#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/31-09:56:12.903:[000058DC#00000000#5] > [EnumUSBDevices] Begin
+2025/10/31-09:56:12.906:[000058DC#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/31-09:56:12.907:[000058DC#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/31-09:56:12.908:[000058DC#00000000#5] > [EnumUSBDevices] Begin
+2025/10/31-09:56:12.910:[000058DC#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/31-09:56:12.910:[000058DC#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/31-10:01:58.903:[00000D2C#00000000#5] > [InitLibrary] Begin
+2025/10/31-10:01:58.903:[00000D2C#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/31-10:01:58.904:[00000D2C#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/31-10:01:58.905:[00000D2C#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/31-10:01:58.906:[00000D2C#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/31-10:01:58.907:[00000D2C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/31-10:01:58.909:[00000D2C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/31-10:01:58.909:[00000D2C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/31-10:01:58.911:[00000D2C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/31-10:01:58.912:[00000D2C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/31-10:01:58.912:[00000D2C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/31-10:01:58.913:[00000D2C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/31-10:01:58.914:[00000D2C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/31-10:01:58.915:[00000D2C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/31-10:01:58.929:[00000D2C#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/31-10:01:58.930:[00000D2C#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/31-10:01:58.931:[00000D2C#00000000#5] > [GetVariable] Begin
+2025/10/31-10:01:58.932:[00000D2C#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/31-10:01:58.932:[00000D2C#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/31-10:01:58.939:[00000D2C#00000000#5] > [GetAPIVersion] Begin
+2025/10/31-10:01:58.940:[00000D2C#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/31-10:01:58.941:[00000D2C#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/31-10:01:58.946:[00000D2C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/31-10:01:58.948:[00000D2C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/31-10:01:58.950:[00000D2C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/31-10:01:58.952:[00000D2C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/31-10:01:58.954:[00000D2C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/31-10:01:58.955:[00000D2C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/31-10:04:14.881:[00005B8C#00000000#5] > [InitLibrary] Begin
+2025/10/31-10:04:14.881:[00005B8C#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/31-10:04:14.882:[00005B8C#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/31-10:04:14.883:[00005B8C#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/31-10:04:14.883:[00005B8C#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/31-10:04:14.884:[00005B8C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/31-10:04:14.885:[00005B8C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/31-10:04:14.886:[00005B8C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/31-10:04:14.887:[00005B8C#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/31-10:04:14.888:[00005B8C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/31-10:04:14.889:[00005B8C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/31-10:04:14.890:[00005B8C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/31-10:04:14.891:[00005B8C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/31-10:04:14.891:[00005B8C#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/31-10:04:14.900:[00005B8C#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/31-10:04:14.901:[00005B8C#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/31-10:04:14.902:[00005B8C#00000000#5] > [GetVariable] Begin
+2025/10/31-10:04:14.902:[00005B8C#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/31-10:04:14.903:[00005B8C#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/31-10:04:14.907:[00005B8C#00000000#5] > [GetAPIVersion] Begin
+2025/10/31-10:04:14.907:[00005B8C#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/31-10:04:14.908:[00005B8C#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/31-10:04:14.910:[00005B8C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/31-10:04:14.912:[00005B8C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/31-10:04:14.913:[00005B8C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/31-10:04:14.914:[00005B8C#00000000#5] > [EnumUSBDevices] Begin
+2025/10/31-10:04:14.914:[00005B8C#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/31-10:04:14.915:[00005B8C#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/31-10:10:18.433:[000045D4#00000000#5] > [InitLibrary] Begin
+2025/10/31-10:10:18.434:[000045D4#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/31-10:10:18.435:[000045D4#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/31-10:10:18.435:[000045D4#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/31-10:10:18.436:[000045D4#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/31-10:10:18.437:[000045D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/31-10:10:18.438:[000045D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/31-10:10:18.439:[000045D4#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/31-10:10:18.439:[000045D4#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/31-10:10:18.440:[000045D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/31-10:10:18.441:[000045D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/31-10:10:18.442:[000045D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/31-10:10:18.442:[000045D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/31-10:10:18.443:[000045D4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/31-10:10:18.455:[000045D4#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/31-10:10:18.456:[000045D4#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/31-10:10:18.457:[000045D4#00000000#5] > [GetVariable] Begin
+2025/10/31-10:10:18.457:[000045D4#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/31-10:10:18.458:[000045D4#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/31-10:10:18.462:[000045D4#00000000#5] > [GetAPIVersion] Begin
+2025/10/31-10:10:18.462:[000045D4#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/31-10:10:18.463:[000045D4#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/31-10:10:18.467:[000045D4#00000000#5] > [EnumUSBDevices] Begin
+2025/10/31-10:10:18.469:[000045D4#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/31-10:10:18.469:[000045D4#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/31-10:10:18.470:[000045D4#00000000#5] > [EnumUSBDevices] Begin
+2025/10/31-10:10:18.470:[000045D4#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/31-10:10:18.471:[000045D4#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/31-10:13:58.780:[000048F4#00000000#5] > [InitLibrary] Begin
+2025/10/31-10:13:58.781:[000048F4#00000000#4] > [InitLibrary] DLL Path: C:\AgraCashTVM2\CuCustomWndAPI.dll
+2025/10/31-10:13:58.783:[000048F4#00000000#4] > [InitLibrary] DLL Version: 1.36
+2025/10/31-10:13:58.784:[000048F4#00000000#4] > [InitLibrary] Application Path: C:\Program Files\Java\jdk-23\bin\java.exe
+2025/10/31-10:13:58.785:[000048F4#00000000#4] > [InitLibrary] Log verbosity: 6
+2025/10/31-10:13:58.786:[000048F4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Windows 10
+2025/10/31-10:13:58.788:[000048F4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> 64bit
+2025/10/31-10:13:58.791:[000048F4#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> DisplayVersion: 25H2
+2025/10/31-10:13:58.794:[000048F4#00000000#4] > [COSManager::LogDisplayVersion] LogSystemVersion: OS-> ProductName: Windows 10 Pro
+2025/10/31-10:13:58.796:[000048F4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MajorVersion: 10
+2025/10/31-10:13:58.797:[000048F4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> MinorVersion: 0
+2025/10/31-10:13:58.798:[000048F4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMajorVersion: 0
+2025/10/31-10:13:58.799:[000048F4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> CMinorVersion: 0
+2025/10/31-10:13:58.800:[000048F4#00000000#4] > [COSManager::LogSystemVersion] LogSystemVersion: OS-> Build: 26200
+2025/10/31-10:13:58.818:[000048F4#00000000#4] > [InitLibrary] Current library signature ID: 0x00000101
+2025/10/31-10:13:58.819:[000048F4#00000000#5] > [InitLibrary] End [0/Ok]
+2025/10/31-10:13:58.821:[000048F4#00000000#5] > [GetVariable] Begin
+2025/10/31-10:13:58.822:[000048F4#00000000#4] > [GetVariable] library_signature_id Get OK : 
+2025/10/31-10:13:58.822:[000048F4#00000000#5] > [GetVariable] End [0/Ok]
+2025/10/31-10:13:58.828:[000048F4#00000000#5] > [GetAPIVersion] Begin
+2025/10/31-10:13:58.830:[000048F4#00000000#4] > [GetAPIVersion] Api Version:1.36
+2025/10/31-10:13:58.831:[000048F4#00000000#5] > [GetAPIVersion] End [0/Ok]
+2025/10/31-10:13:58.837:[000048F4#00000000#5] > [EnumUSBDevices] Begin
+2025/10/31-10:13:58.841:[000048F4#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/31-10:13:58.842:[000048F4#00000000#5] > [EnumUSBDevices] End [0/Ok]
+2025/10/31-10:13:58.842:[000048F4#00000000#5] > [EnumUSBDevices] Begin
+2025/10/31-10:13:58.844:[000048F4#00000000#4] > [EnumUSBDevices] Found 0 USB Devices:
+2025/10/31-10:13:58.845:[000048F4#00000000#5] > [EnumUSBDevices] End [0/Ok]

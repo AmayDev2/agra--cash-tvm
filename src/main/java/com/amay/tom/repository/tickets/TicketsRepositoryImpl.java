@@ -3,10 +3,12 @@ package com.amay.tom.repository.tickets;
 
 import com.amay.tom.model.tickets.TicketsDto;
 import com.amay.tom.repository.tickets.TicketsRepository;
+import com.amay.tvm.backend.enums.DataSyncDestination;
 import jakarta.transaction.Transactional;
 import org.tinylog.Logger;
 
 import java.sql.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -250,7 +252,7 @@ public class TicketsRepositoryImpl extends TicketsRepository {
         if (!"scu".equalsIgnoreCase(column) && !"ccu".equalsIgnoreCase(column)) {
             throw new IllegalArgumentException("Invalid column name: " + column);
         }
-        column+=" = false";
+        column+=" IS NULL";
 
         String query="SELECT * FROM "+ TABLE_NAME +" WHERE "+ column+" ORDER BY createdAt DESC";
 
@@ -277,12 +279,12 @@ public class TicketsRepositoryImpl extends TicketsRepository {
         if (!"scu".equalsIgnoreCase(column) && !"ccu".equalsIgnoreCase(column)) {
             throw new IllegalArgumentException("Invalid column name: " + column);
         }
-
-        String sql = "UPDATE " + TABLE_NAME + " SET " + column + " = true WHERE ticketId = ?";
+        String sql = "UPDATE " + TABLE_NAME + " SET " + column + " = ?"+" WHERE ticketId = ?";
 
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
             for (String id : ticketIds) {
-                pstmt.setString(1, id);
+                pstmt.setTimestamp(1,Timestamp.valueOf(LocalDateTime.now()));
+                pstmt.setString(2, id);
                 pstmt.addBatch();
             }
             int[] updated = pstmt.executeBatch();
@@ -291,6 +293,69 @@ public class TicketsRepositoryImpl extends TicketsRepository {
             Logger.error("Error marking {} for tickets: {}", column.toUpperCase(), e.getMessage());
             throw new RuntimeException("Failed to mark " + column.toUpperCase() + " for tickets", e);
         }
+    }
+    @Override
+    public long findTotalRowsCount(){
+        try(PreparedStatement psmt = connection.prepareStatement(TOTAL_ROWS_COUNT);
+            ResultSet rs = psmt.executeQuery()) {
+            if(rs.next()){
+                return rs.getLong(1);
+            }
+        } catch (SQLException e) {
+            Logger.debug("Error fetching QR tickets count: {}", e.getMessage());
+        }
+        return 0L;
+    }
+
+    @Override
+    public long findPushedRowsCount(DataSyncDestination dataSyncDestination){
+        String query = switch (dataSyncDestination) {
+            case CCU -> ROWS_CCU_PUSHED_COUNT;
+            case SCU -> ROWS_SCU_PUSHED_COUNT;
+            default -> throw new IllegalArgumentException(
+                    "Unknown data sync destination while finding pushed rows: " + dataSyncDestination);
+        };
+
+        try (PreparedStatement ps = connection.prepareStatement(query);
+             ResultSet rs = ps.executeQuery()) {
+
+            if (rs.next()) {
+                return rs.getLong(1);
+            }
+
+        } catch (SQLException e) {
+            Logger.debug("Error fetching pushed QR tickets count: {}", e.getMessage());
+        }
+
+        return 0L;
+    }
+
+    @Override
+    public Timestamp findLastPushedTimeStamp(DataSyncDestination destination) {
+        String query = switch (destination) {
+            case CCU -> LAST_CCU_PUSHED_ROW;
+            case SCU -> LAST_SCU_PUSHED_ROW;
+            default -> throw new IllegalArgumentException(
+                    "Unknown data sync destination while finding last pushed Time: " + destination);
+        };
+
+        try (PreparedStatement ps = connection.prepareStatement(query);
+             ResultSet rs = ps.executeQuery()) {
+            if (rs.next()) {
+                switch (destination) {
+                    case CCU -> {
+                        return rs.getTimestamp(34);
+                    }
+                    case SCU -> {
+                        return rs.getTimestamp(35);
+                    }
+                }
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return null;
     }
 
 

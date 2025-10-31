@@ -32,6 +32,7 @@ import com.amay.tvm.backend.entity.AmountSnapShotEntity;
 import com.amay.tvm.backend.entity.CoinAmountEntity;
 import com.amay.tvm.backend.entity.FinanceOperationEntity;
 import com.amay.tvm.backend.enums.ContainerId;
+import com.amay.tvm.backend.enums.DataSyncDestination;
 import com.amay.tvm.backend.enums.FinanceOperation;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.backend.mapper.AmountSnapshotMapper;
@@ -42,6 +43,7 @@ import com.amay.tvm.controller.TVMController;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
+import org.amaytechnosystems.ShiftResponseV1;
 import org.amaytechnosystems.ShiftStatus;
 import org.tinylog.Logger;
 
@@ -107,7 +109,8 @@ public class ShiftServiceImpl implements ShiftService {
             Logger.tag(LoggerTag.APP).debug("Login data pushed to CC {}",agent.getPeripheralMonitor().isCcu_connected());
             if(agent.getPeripheralMonitor().isCcu_connected()) {
                 Logger.tag(LoggerTag.APP).debug("Login data pushed to CC");
-                CompletableFuture.runAsync(() -> agent.getCcuService().pushShiftInfo(shift), agent.getThreadPool().getFixedThreadPool());
+                CompletableFuture.runAsync(() -> pushShift(shift,DataSyncDestination.CCU),agent.getThreadPool().getFixedThreadPool());
+//                CompletableFuture.runAsync(() -> agent.getCcuService().pushShiftInfo(shift), agent.getThreadPool().getFixedThreadPool());
                 Logger.tag(LoggerTag.APP).debug("CC responded to login data push");
             }
 
@@ -115,7 +118,8 @@ public class ShiftServiceImpl implements ShiftService {
                 //scu push
             if(agent.getPeripheralMonitor().isScu_connected()) {
                 Logger.tag(LoggerTag.APP).debug("Login data pushed to SC");
-                CompletableFuture.runAsync(() -> agent.getScuService().pushShiftInfo(shift), agent.getThreadPool().getFixedThreadPool());
+                CompletableFuture.runAsync(() -> pushShift(shift,DataSyncDestination.CCU),agent.getThreadPool().getFixedThreadPool());
+//                CompletableFuture.runAsync(() -> agent.getScuService().pushShiftInfo(shift), agent.getThreadPool().getFixedThreadPool());
                 Logger.tag(LoggerTag.APP).debug("SC responded to login data push");
             }
 
@@ -781,6 +785,35 @@ public class ShiftServiceImpl implements ShiftService {
     public void setMainStage(Stage mainStage) {
         this.mainStage=mainStage;
 
+    }
+    private void pushShift(Shift shift, DataSyncDestination destination){
+        ShiftResponseV1 shiftResponseV1=null;
+        boolean success=false;
+        try {
+            switch (destination) {
+                case CCU:
+                    shiftResponseV1 = agent.getCcuService().pushShiftInfoBulk(shift);
+                    if (shiftResponseV1 != null) {
+                        success = "200".equals(shiftResponseV1.getResponseMetaData().getErrorCode());
+                        shift.setCcu(success ? Timestamp.valueOf(LocalDateTime.now()) : null);
+                    }
+                    break;
+
+                case SCU:
+                    shiftResponseV1 = agent.getScuService().pushShiftInfoBulk(shift);
+                    if (shiftResponseV1 != null) {
+                        success = "200".equals(shiftResponseV1.getResponseMetaData().getErrorCode());
+                        shift.setScu(success ? Timestamp.valueOf(LocalDateTime.now()) : null);
+                    }
+                    break;
+
+                default:
+                    Logger.warn("Unknown destination: " + destination);
+                    break;
+            }
+        } catch (Exception e) {
+            Logger.error("Error while pushing shift to " + destination + " : " + e.getMessage());
+        }
     }
 
     @Override

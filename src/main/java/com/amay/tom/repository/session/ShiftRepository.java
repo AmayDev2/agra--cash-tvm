@@ -1,6 +1,7 @@
 package com.amay.tom.repository.session;
 
 import com.amay.tom.model.session.ShiftDto;
+import com.amay.tvm.backend.enums.DataSyncDestination;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -12,6 +13,7 @@ public abstract class ShiftRepository {
 
     protected static final String TABLE_NAME = "shift_session";
     protected Connection connection = null;
+    protected static final String COUNT = "SELECT COUNT(*) FROM ";
 
     protected static final String CREATE_TABLE_SQL = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + " (" +
             "id INT AUTO_INCREMENT PRIMARY KEY, " + // Auto-increment column as the primary key
@@ -30,8 +32,8 @@ public abstract class ShiftRepository {
             "update_at TIMESTAMP, " +
             "imprest_money VARCHAR(255), "+
             "config_version VARCHAR(255), "+
-            "ccu BOOLEAN DEFAULT FALSE, "+
-            "scu BOOLEAN DEFAULT FALSE, "+// Fixed column name
+            "ccu TIMESTAMP, "+
+            "scu TIMESTAMP, "+
             "role VARCHAR(255) "+
             ");";
 
@@ -59,7 +61,11 @@ public abstract class ShiftRepository {
     protected static final String FIND_NOT_PUSHED_SHIFT = "SELECT * FROM " + TABLE_NAME + " WHERE ? ORDER BY created_at DESC";
     protected static final String FIND_LAST_SHIFT = "SELECT shift_id FROM " + TABLE_NAME + " WHERE CAST(created_at AS DATE) = CURRENT_DATE ORDER BY created_at DESC LIMIT 1";
     protected static final String FIND_LAST_N_SHIFT = "SELECT * FROM " + TABLE_NAME + " WHERE current_status = 'COMPLETED' ORDER BY created_at DESC LIMIT ?";
-
+    protected static final String TOTAL_ROWS_COUNT =  COUNT + TABLE_NAME;
+    protected static final String ROWS_CCU_PUSHED_COUNT = COUNT + TABLE_NAME+" WHERE CCU IS NOT NULL";
+    protected static final String ROWS_SCU_PUSHED_COUNT = COUNT + TABLE_NAME+" WHERE SCU IS NOT NULL";
+    protected static final String LAST_CCU_PUSHED_ROW = "SELECT * FROM "+ TABLE_NAME +" WHERE CCU IS NOT NULL ORDER BY created_at DESC";
+    protected static final String LAST_SCU_PUSHED_ROW = "SELECT * FROM "+ TABLE_NAME +" WHERE SCU IS NOT NULL ORDER BY created_at DESC";
 
     abstract void createTableIfNotExists() throws SQLException;
 
@@ -100,4 +106,9 @@ public abstract class ShiftRepository {
     public abstract List<ShiftDto> findNotPushedShifts(String column);
 
     public abstract List<ShiftDto> findLastNShifts(int n);
+    public abstract long findTotalRowsCount();
+
+    public abstract long findPushedRowsCount(DataSyncDestination dataSyncDestination);
+
+    public abstract Timestamp findLastPushedTimeStamp(DataSyncDestination destination);
 }
