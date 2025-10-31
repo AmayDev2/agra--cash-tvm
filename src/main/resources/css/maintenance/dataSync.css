@@ -1,0 +1,98 @@
+/* General styling for the root container */
+.root {
+    -fx-background-color: #ecf0f1; /* Very light gray/off-white background for the overall scene */
+}
+
+/* Styles for the main data container (GridPane or VBox) */
+.vbox {
+    /* Optional: To make the VBox stand out on the root background */
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5); /* Soft shadow for the container */
+}
+
+/* -------------------- Header Row Styling -------------------- */
+/* Styles for the Header Labels (Row 0: Metric, CCU, SCU) */
+.label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e; /* Dark slate color for headers */
+}
+
+/* -------------------- Data Card Styling -------------------- */
+
+/* Container styles for the Data Cards (Rows 1, 2, 3) */
+.totalData {
+    -fx-background-color: #3498db; /* Blue */
+    -fx-background-radius: 12;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 3); /* Add shadow to the card */
+}
+
+.onlineData {
+    -fx-background-color: #2ecc71; /* Green */
+    -fx-background-radius: 12;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 3); /* Add shadow to the card */
+}
+
+.offlineData {
+    -fx-background-color: #e67e22; /* Orange */
+    -fx-background-radius: 12;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 3); /* Add shadow to the card */
+}
+
+/* -------------------- Text Styling Inside Cards -------------------- */
+
+/* Large number/file count (h1) */
+.h1 {
+    -fx-font-size: 24px; /* Slightly larger for emphasis */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Smaller descriptor text inside the cards (h3) */
+.h3 {
+    -fx-font-size: 14px; /* Slightly larger for readability */
+    -fx-text-fill: #ecf0f1; /* Off-white for better contrast */
+}
+
+/* -------------------- Metric Name / Timestamp Styling -------------------- */
+
+/* Metric/Description label in Column 1 (h2) and Last Sync data */
+.h2 {
+    -fx-font-size: 16px; /* Increased size */
+    -fx-text-fill: #555555; /* Dark gray for metric names */
+    -fx-font-weight: bold;
+}
+
+/* Styling for the Last Sync Time in Columns 2 & 3 */
+.grid-pane .label:nth-child(n+10):nth-child(-n+11) { /* Targeting the last row labels */
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+    -fx-text-fill: #7f8c8d; /* Gray color for timestamp */
+}
+
+/* Ensure the VBoxes that hold the cards fill the space nicely */
+.totalData, .onlineData, .offlineData {
+    -fx-max-width: infinity; /* Allows VBox to expand */
+}
+
+/* Additional style for the GridPane to separate it from the VBox root padding */
+.grid-pane {
+    -fx-background-color: white; /* White background for the grid area itself */
+}
+.sync-label {
+    -fx-background-color: linear-gradient(to right, #ffecd2, #fcb69f);
+    -fx-text-fill: #333333;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 20 12 20;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: rgba(0,0,0,0.1);
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 6, 0, 0, 2);
+    -fx-alignment: center;
+}

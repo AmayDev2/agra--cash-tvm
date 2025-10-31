@@ -29,9 +29,15 @@ import com.amay.tom.service.userauth.UserAuth;
 import com.amay.tom.utils.helper.Helper;
 import com.amay.tom.utils.time.TimeUtil;
 import com.amay.tvm.backend.entity.AmountSnapShotEntity;
+import com.amay.tvm.backend.entity.CoinAmountEntity;
+import com.amay.tvm.backend.entity.AmountSnapShotEntity;
 import com.amay.tvm.backend.entity.FinanceOperationEntity;
+import com.amay.tvm.backend.enums.ContainerId;
+import com.amay.tvm.backend.enums.DataSyncDestination;
 import com.amay.tvm.backend.enums.FinanceOperation;
 import com.amay.tvm.backend.enums.LoggerTag;
+import com.amay.tvm.backend.mapper.AmountSnapshotMapper;
+import com.amay.tvm.backend.mapper.CoinAmountMapper;
 import com.amay.tvm.backend.mapper.CoinAmountMapper;
 import com.amay.tvm.backend.mapper.FinanceOperationMapper;
 import com.amay.tvm.backend.mapper.NoteAmountMapper;
@@ -104,7 +110,8 @@ public class ShiftServiceImpl implements ShiftService {
             Logger.tag(LoggerTag.APP).debug("Login data pushed to CC {}",agent.getPeripheralMonitor().isCcu_connected());
             if(agent.getPeripheralMonitor().isCcu_connected()) {
                 Logger.tag(LoggerTag.APP).debug("Login data pushed to CC");
-                CompletableFuture.runAsync(() -> agent.getCcuService().pushShiftInfo(shift), agent.getThreadPool().getFixedThreadPool());
+                CompletableFuture.runAsync(() -> pushShift(shift,DataSyncDestination.CCU),agent.getThreadPool().getFixedThreadPool());
+//                CompletableFuture.runAsync(() -> agent.getCcuService().pushShiftInfo(shift), agent.getThreadPool().getFixedThreadPool());
                 Logger.tag(LoggerTag.APP).debug("CC responded to login data push");
             }
 
@@ -112,7 +119,8 @@ public class ShiftServiceImpl implements ShiftService {
                 //scu push
             if(agent.getPeripheralMonitor().isScu_connected()) {
                 Logger.tag(LoggerTag.APP).debug("Login data pushed to SC");
-                CompletableFuture.runAsync(() -> agent.getScuService().pushShiftInfo(shift), agent.getThreadPool().getFixedThreadPool());
+                CompletableFuture.runAsync(() -> pushShift(shift,DataSyncDestination.CCU),agent.getThreadPool().getFixedThreadPool());
+//                CompletableFuture.runAsync(() -> agent.getScuService().pushShiftInfo(shift), agent.getThreadPool().getFixedThreadPool());
                 Logger.tag(LoggerTag.APP).debug("SC responded to login data push");
             }
 
@@ -279,11 +287,12 @@ public class ShiftServiceImpl implements ShiftService {
         try {
             if(tvmController!=null)tvmController.CleanUp();
             agent.getNoteAmountRepository().findAll().stream().filter(noteAmountEntity
-                    -> noteAmountEntity.getContainerId().equals("CB")).forEach(noteAmount -> {
+                    -> noteAmountEntity.getContainerId().equals(ContainerId.CB)).forEach(noteAmount -> {
                 agent.getAmountSnapShotRepository().save(NoteAmountMapper.toSnapshot(noteAmount,shift.getShiftId()));
+
             });
             agent.getCoinAmountRepository().findAll().stream().filter(coinAmountEntity
-                    ->coinAmountEntity.getContainerId().equals("CASH")).forEach(coinAmount -> {
+                    ->coinAmountEntity.getContainerId().equals(ContainerId.CM.name())).forEach(coinAmount -> {
                 agent.getAmountSnapShotRepository().save(CoinAmountMapper.toSnapshot(coinAmount,shift.getShiftId()));
             });
             shiftRepository.endShift(ShiftMapper.toDto(shift)); //TODO: get complete shift
@@ -624,6 +633,8 @@ public class ShiftServiceImpl implements ShiftService {
         String shiftEndTime= endTime.get();
         try {
 
+            List<AmountSnapShotEntity> amountSnapShotEntityList=agent.getAmountSnapShotRepository().findAll().stream().filter(x->x.getShiftId().equals(shiftId)).toList();
+
             List<FinanceOperationEntity> financeOperationEntityBnrDeposit = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.BNR_DEPOSIT.name());
             List<FinanceOperationEntity> financeOperationEntityBnrDispense = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.BNR_DISPENSE.name());
             List<FinanceOperationEntity> financeOperationEntityCoinDispense = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.COIN_DISPENSE.name());
@@ -631,6 +642,8 @@ public class ShiftServiceImpl implements ShiftService {
             CoinLoadedReport coinDispenseReport = FinanceOperationMapper.toCoinLoadedReport(shift, FinanceOperation.COIN_DISPENSE, financeOperationEntityCoinDispense);
 
             //ensure both are from same shift
+            BNRLoadUnload bnrLoadUnloadReport= AmountSnapshotMapper.toBNRLoadUnload(amountSnapShotEntityList);
+            CoinLoadedReport bnrLoadUnloadCoinReport=AmountSnapshotMapper.toCoinLoadUnload(amountSnapShotEntityList);
             BNRLoadUnload bnrDepositReport =FinanceOperationMapper.toBNRDepositDispense( financeOperationEntityBnrDeposit,financeOperationEntityBnrDispense);
 
             PrinterCommandDispatcher.INSTANCE.printText(
@@ -656,20 +669,38 @@ public class ShiftServiceImpl implements ShiftService {
                             .gtUpiCount(noOfUpiGroup)
                             .gtUpiAmount(amountUpiGroup)
 
-                            .rs10Count(bnrDepositReport.getRs10Count())
-                            .rs10Amount(bnrDepositReport.getRs10Amount())
-                            .rs20Count(bnrDepositReport.getRs20Count())
-                            .rs20Amount(bnrDepositReport.getRs20Amount())
-                            .rs50Count(bnrDepositReport.getRs50Count())
-                            .rs50Amount(bnrDepositReport.getRs50Amount())
-                            .rs100Count(bnrDepositReport.getRs100Count())
-                            .rs100Amount(bnrDepositReport.getRs100Amount())
-                            .rs200Count(bnrDepositReport.getRs200Count())
-                            .rs200Amount(bnrDepositReport.getRs200Amount())
-                            .rs500Amount(bnrDepositReport.getRs500Amount())
-                            .rs500Count(bnrDepositReport.getRs500Count())
-                            .bankTotalAmount(bnrDepositReport.getBankTotalAmount())
-                            .bankTotalCount(bnrDepositReport.getBankTotalCount())
+
+//
+//                            .rs10Count(bnrDepositReport.getRs10Count())
+//                            .rs10Amount(bnrDepositReport.getRs10Amount())
+//                            .rs20Count(bnrDepositReport.getRs20Count())
+//                            .rs20Amount(bnrDepositReport.getRs20Amount())
+//                            .rs50Count(bnrDepositReport.getRs50Count())
+//                            .rs50Amount(bnrDepositReport.getRs50Amount())
+//                            .rs100Count(bnrDepositReport.getRs100Count())
+//                            .rs100Amount(bnrDepositReport.getRs100Amount())
+//                            .rs200Count(bnrDepositReport.getRs200Count())
+//                            .rs200Amount(bnrDepositReport.getRs200Amount())
+//                            .rs500Amount(bnrDepositReport.getRs500Amount())
+//                            .rs500Count(bnrDepositReport.getRs500Count())
+//                            .bankTotalAmount(bnrDepositReport.getBankTotalAmount())
+//                            .bankTotalCount(bnrDepositReport.getBankTotalCount())
+
+
+                            .rs10Count(bnrLoadUnloadReport.getRs10Count())
+                            .rs10Amount(bnrLoadUnloadReport.getRs10Amount())
+                            .rs20Count(bnrLoadUnloadReport.getRs20Count())
+                            .rs20Amount(bnrLoadUnloadReport.getRs20Amount())
+                            .rs50Count(bnrLoadUnloadReport.getRs50Count())
+                            .rs50Amount(bnrLoadUnloadReport.getRs50Amount())
+                            .rs100Count(bnrLoadUnloadReport.getRs100Count())
+                            .rs100Amount(bnrLoadUnloadReport.getRs100Amount())
+                            .rs200Count(bnrLoadUnloadReport.getRs200Count())
+                            .rs200Amount(bnrLoadUnloadReport.getRs200Amount())
+                            .rs500Amount(bnrLoadUnloadReport.getRs500Amount())
+                            .rs500Count(bnrLoadUnloadReport.getRs500Count())
+                            .bankTotalAmount(bnrLoadUnloadReport.getBankTotalAmount())
+                            .bankTotalCount(bnrLoadUnloadReport.getBankTotalCount())
 
                             .hopper1Amount(null != coinDispenseReport?coinDispenseReport.getHopper1Amount():0)
                             .hopper1Count(null != coinDispenseReport?coinDispenseReport.getHopper1Count():0)
@@ -756,6 +787,35 @@ public class ShiftServiceImpl implements ShiftService {
         this.mainStage=mainStage;
 
     }
+    private void pushShift(Shift shift, DataSyncDestination destination){
+        ShiftResponseV1 shiftResponseV1=null;
+        boolean success=false;
+        try {
+            switch (destination) {
+                case CCU:
+                    shiftResponseV1 = agent.getCcuService().pushShiftInfoBulk(shift);
+                    if (shiftResponseV1 != null) {
+                        success = "200".equals(shiftResponseV1.getResponseMetaData().getErrorCode());
+                        shift.setCcu(success ? Timestamp.valueOf(LocalDateTime.now()) : null);
+                    }
+                    break;
+
+                case SCU:
+                    shiftResponseV1 = agent.getScuService().pushShiftInfoBulk(shift);
+                    if (shiftResponseV1 != null) {
+                        success = "200".equals(shiftResponseV1.getResponseMetaData().getErrorCode());
+                        shift.setScu(success ? Timestamp.valueOf(LocalDateTime.now()) : null);
+                    }
+                    break;
+
+                default:
+                    Logger.warn("Unknown destination: " + destination);
+                    break;
+            }
+        } catch (Exception e) {
+            Logger.error("Error while pushing shift to " + destination + " : " + e.getMessage());
+        }
+    }
 
     @Override
     public Optional<String> checkLastShiftCompletion() {
@@ -771,7 +831,6 @@ public class ShiftServiceImpl implements ShiftService {
                 .setEndTime(Timestamp.valueOf(localDateTime))
                 .setUpdatedAt(Timestamp.valueOf(localDateTime))
                 .setReason(EOSType.LAST_SHIFT.name());
-
 
         this.shiftRepository.markLastShiftAsCompleted(shiftDto);
         Shift shift1=new Shift().setEndTime(localDateTime)

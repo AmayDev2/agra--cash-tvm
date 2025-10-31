@@ -1,6 +1,7 @@
 package com.amay.tvm.backend.entity;
 
 
+import com.amay.tvm.backend.enums.ContainerId;
 import com.google.protobuf.Timestamp;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -17,4 +18,5 @@ public class CoinAmountEntity {
     private int quantity;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+
 }

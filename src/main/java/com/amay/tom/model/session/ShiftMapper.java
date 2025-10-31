@@ -27,8 +27,8 @@ public class ShiftMapper {
                 dto.getUpdatedAt() != null ? dto.getUpdatedAt().toLocalDateTime() : null,
                 dto.getImprest_money(),
                 dto.getConfig_version(),
-                dto.isCcu(),
-                dto.isScu(),
+                dto.getCcu(),
+                dto.getScu(),
                 dto.getRole()
         );
     }
@@ -50,9 +50,9 @@ public class ShiftMapper {
                 .setUpdatedAt(shift.getUpdatedAt() != null ? Timestamp.valueOf(shift.getUpdatedAt()) : null)
                 .setImprest_money(shift.getImprest_money())
                 .setConfig_version(shift.getConfig_version())
-                .setCcu(shift.isCcu())
+                .setCcu(shift.getCcu())
                 .setRole(shift.getRole())
-                .setScu(shift.isScu());
+                .setScu(shift.getScu());
         return dto;
     }
 }

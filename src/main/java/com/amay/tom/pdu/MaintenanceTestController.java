@@ -5,6 +5,8 @@ import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
 import com.amay.tom.maintenance.service.component.StatusWindowPopup;
 import com.amay.tom.maintenance.service.component.model.StatusWindowModel;
+import com.amay.tom.model.user.entity.User;
+import com.amay.tom.model.user.entity.UserPrivilege;
 import com.amay.tom.pdu.controller.BNRTestController;
 import com.amay.tom.pdu.controller.PollingStatusController;
 import com.amay.tom.pdu.controller.UPSTestController;
@@ -13,6 +15,7 @@ import com.amay.tom.service.chield.ticketservice.ImplTicketService;
 import com.amay.tom.service.devices.PeripheralMonitor;
 import com.amay.tom.service.devices.device.PrinterStatus;
 import com.amay.tom.service.print.impl.PrinterService;
+import com.amay.tvm.controller.ApplicationController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -32,10 +35,10 @@ public class MaintenanceTestController {
     }
     private PeripheralMonitor peripheralMonitor;
 
-    @FXML
-    private
-    void onBNRTest(ActionEvent event) {
 
+
+    @FXML
+    private void onBNRTest(ActionEvent event) {
         FXMLLoader fxmlLoader= ViewFactory.getBNRTestView();
         BNRTestController controller=new BNRTestController(this.agent,this.sceneManager);
         fxmlLoader.setControllerFactory((x)->controller);
@@ -166,7 +169,13 @@ public class MaintenanceTestController {
 
     @FXML
     private void onRestart(ActionEvent event) {
+        FXMLLoader fxmlLoader= ViewFactory.getRestartScreen();
+        ApplicationController controller=new ApplicationController(this.agent,this.sceneManager);
+        fxmlLoader.setControllerFactory((x)->controller);
+        this.sceneManager.addToScene(fxmlLoader);
+        event.consume();
     }
+
 
     @FXML
     private void onBack(ActionEvent event) {

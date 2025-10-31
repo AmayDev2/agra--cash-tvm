@@ -21,6 +21,8 @@ import org.network.monitorandcontrol.MonitorAndControlGrpc;
 import org.network.monitorandcontrol.tvm.TVMProtocol;
 import org.tinylog.Logger;
 
+import java.util.concurrent.TimeUnit;
+
 import static java.util.concurrent.CompletableFuture.runAsync;
 
 @Slf4j
@@ -100,6 +102,11 @@ public class GrpcControlMonitoringService {
         this.initialConnectionRequest(RequestHandler.getInitialRequest());
         // Additional connected logic here
         dataPushService.pushData();
+        //TODO: LETS SCHEDULE THE TASK TO BE PERFORMED AFTER 5 SEC
+        threadPool.getScheduler().schedule(()->
+        {dataPushService.pushData();
+            Logger.info("Pushing offline data on channel: {}", chanelName);
+        },5, TimeUnit.SECONDS);
     }
 
     private void onDisconnected() {

@@ -35,10 +35,10 @@
     </Label>
 
     <!-- Buttons -->
-    <Button mnemonicParsing="false" onAction="#onCashInStart" prefHeight="35.0" prefWidth="140.0" text="Cash In Start" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
-    <Button mnemonicParsing="false" onAction="#onCashInEnd" prefHeight="35.0" prefWidth="140.0" text="Cash End" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
-    <Button mnemonicParsing="false" onAction="#onRollback" prefHeight="35.0" prefWidth="140.0" text="Rollout" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
-    <Button mnemonicParsing="false" onAction="#onCancel" prefHeight="35.0" prefWidth="140.0" text="Cancel" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+    <Button fx:id="cashInButton" mnemonicParsing="false" onAction="#onCashInStart" prefHeight="35.0" prefWidth="140.0" text="Cash In Start" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+    <Button fx:id="cashEndButton" mnemonicParsing="false" onAction="#onCashInEnd" prefHeight="35.0" prefWidth="140.0" text="Cash End" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+    <Button fx:id="rolloutButton" mnemonicParsing="false" onAction="#onRollback" prefHeight="35.0" prefWidth="140.0" text="Rollout" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+    <Button  mnemonicParsing="false" onAction="#onCancel" prefHeight="35.0" prefWidth="140.0" text="Cancel" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
     <Button mnemonicParsing="false" onAction="#onBack" prefHeight="35.0" prefWidth="140.0" text="Back" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.rowSpan="2147483647"/>
 
 </GridPane>

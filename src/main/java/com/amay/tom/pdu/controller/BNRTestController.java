@@ -1,16 +1,26 @@
 package com.amay.tom.pdu.controller;
 
 import com.amay.tom.agent.Agent;
+import com.amay.tom.model.user.entity.UserPrivilege;
 import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tvm.bnr.BNRIntegration;
 import com.mei.bnr.exception.BnrException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 
 public class BNRTestController {
 
     private final SceneManager sceneManager;
     private final Agent agent;
+
+    @FXML
+    private Button cashInButton;
+    @FXML
+    private Button cashEndButton;
+    @FXML
+    private Button rolloutButton;
+
 
 
     public BNRTestController( Agent agent,SceneManager sceneManager){
@@ -18,11 +28,8 @@ public class BNRTestController {
         this.sceneManager=sceneManager;
     }
 
-    @FXML
-    void initialize(){
 
 
-    }
 
     public void onCashInStart(ActionEvent actionEvent) throws BnrException {
 

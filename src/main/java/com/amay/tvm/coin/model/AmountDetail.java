@@ -1,5 +1,6 @@
 package com.amay.tvm.coin.model;
 
+import com.amay.tvm.backend.enums.ContainerId;
 import jakarta.persistence.Access;
 import lombok.Data;
 import lombok.NoArgsConstructor;

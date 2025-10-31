@@ -18,15 +18,18 @@ import lombok.extern.slf4j.Slf4j;
 import org.amaytechnosystems.*;
 import org.tinylog.Logger;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 @Slf4j
 public class CCUPushService implements PushService {
     private final Agent agent;
+    private String currentShiftId;
     private final String CHANAL="ccu";
     public CCUPushService(Agent agent){
         this.agent=agent;
@@ -95,9 +98,16 @@ public class CCUPushService implements PushService {
 
 
     }
-
+    private void markShiftSyncStatus(Shift shift,boolean status){
+        if(Objects.equals(shift.getShiftId(), currentShiftId)){
+            if(status) agent.getShift().setCcu(Timestamp.valueOf(LocalDateTime.now()));
+            else agent.getShift().setCcu(null);
+        }
+    }
     private void pushShifts(ShiftRepository shiftRepository,List<CompletableFuture<Void>> futures, List<String> listOfShifts){
         List<ShiftDto> shiftDtos=shiftRepository.findNotPushedShifts(CHANAL);
+        if(agent.getShift()!=null)
+            currentShiftId=agent.getShift().getShiftId();
         if(shiftDtos.isEmpty()){
             Logger.debug("No shift data found");
         }else {
@@ -124,10 +134,13 @@ public class CCUPushService implements PushService {
             futures.add( CompletableFuture.runAsync(() -> {
                 try {
                     ShiftResponseV1 shiftResponse=agent.getCcuService().pushShiftInfoBulk(shift);
-                    if(shiftResponse.getResponseMetaData().getErrorCode().equals("200")){
-                        Logger.debug("PUSHED DATA: ",shift.toString());
-                        listOfShifts.add(shift.getShiftId());
+                    if(shiftResponse.getResponseMetaData().getErrorCode().equals("200") || shiftResponse.getResponseMetaData().getErrorCode().equals("751")){
+                        markShiftSyncStatus(shift,true);
+                        Logger.debug("PUSHED DATA: {} {}",shift.toString(),shift.getCurrentStatus());
+                        if(shift.getCurrentStatus().equals(ShiftStatus.COMPLETED.name()))
+                            listOfShifts.add(shift.getShiftId());
                     } else if (shiftResponse.getResponseMetaData().getErrorCode().equals("752")) {
+                        markShiftSyncStatus(shift,false);
                         shift.setCurrentStatus(ShiftStatus.ACTIVE.name());
                         if(agent.getShift()==null)
                         {
@@ -139,12 +152,14 @@ public class CCUPushService implements PushService {
                             listOfShifts.add(shift.getShiftId());
                         }
                     } else if (shiftResponse.getResponseMetaData().getErrorCode().equals("753")) {
+                        markShiftSyncStatus(shift,false);
                         if(agent.getShift()==null)
                         {
                             shift.setCurrentStatus(ShiftStatus.COMPLETED.name());
                             shift.setEndTime(LocalDateTime.now());
                             shiftResponse=agent.getCcuService().pushShiftInfoBulk(shift);
                             if(shiftResponse.getResponseMetaData().getErrorCode().equals("200")){
+                                markShiftSyncStatus(shift,true);
                                 listOfShifts.add(shift.getShiftId());
                             }
                         }

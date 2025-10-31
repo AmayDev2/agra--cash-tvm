@@ -2,18 +2,34 @@ package com.amay.tom.pdu.controller;
 
 import com.amay.tom.ViewFactory;
 import com.amay.tom.agent.Agent;
+import com.amay.tom.model.user.entity.UserPrivilege;
 import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.bnr.BNRIntegration;
 import com.jxfs.events.JxfsException;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import org.checkerframework.checker.units.qual.A;
 import org.tinylog.Logger;
 
 public class MoneyManagementBnrController {
     private final Agent agent;
     private final SceneManager sceneManager;
+
+    @FXML
+    private Button bnrLoadButton;
+    @FXML
+    private Button bnrUnloadButton;
+    @FXML
+    private Button bnrRebootButton;
+    @FXML
+    private Button resetButton;
+    @FXML
+    private Button backButton;
+
+
     public MoneyManagementBnrController(Agent agent, SceneManager sceneManager) {
         this.agent = agent;
         this.sceneManager = sceneManager;
@@ -25,6 +41,11 @@ public class MoneyManagementBnrController {
         fxmlLoader.setControllerFactory((x)->controller);
         this.sceneManager.addToScene(fxmlLoader);
         actionEvent.consume();
+    }
+    @FXML
+    private void initialize(){
+        UserPrivilege privilege=agent.getUserPrivilege();
+
     }
 
     public void onBnrUnload(ActionEvent actionEvent) {

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="root" alignment="TOP_CENTER" maxHeight="480.0" minHeight="480.0" prefHeight="480.0" prefWidth="640.0" stylesheets="@../../../../css/maintenance/dataSync.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.controller.DataSync">
+
+    <Label styleClass="dashboard-title" text="Data Synchronization Status" />
+
+    <GridPane alignment="CENTER" hgap="10.0" maxHeight="491.0" minHeight="450.0" prefHeight="450.0" prefWidth="640.0" styleClass="grid-pane" vgap="30.0">
+
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" percentWidth="40.0" />
+            <ColumnConstraints hgrow="ALWAYS" percentWidth="30.0" />
+            <ColumnConstraints hgrow="ALWAYS" percentWidth="30.0" />
+        </columnConstraints>
+
+        <Label styleClass="label" text="Metric" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label styleClass="label" text="CCU" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label styleClass="label" text="SCU" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+
+        <Label styleClass="h2" text="Total (No. of Files)" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <VBox alignment="CENTER" minHeight="60.0" minWidth="150.0" styleClass="totalData" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Label fx:id="totalDataCount1" styleClass="h1" text="N/A" />
+            <Label styleClass="h3" text="All Records">
+                <font>
+                    <Font size="10.0" />
+                </font></Label>
+        </VBox>
+        <VBox alignment="CENTER" minHeight="60.0" minWidth="150.0" styleClass="totalData" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Label fx:id="totalDataCount2" styleClass="h1" text="N/A" />
+            <Label styleClass="h3" text="All Records">
+                <font>
+                    <Font size="10.0" />
+                </font></Label>
+        </VBox>
+
+        <Label styleClass="h2" text="Online (Synced)" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <VBox alignment="CENTER" maxHeight="60.0" maxWidth="150.0" minHeight="60.0" minWidth="150.0" prefHeight="60.0" prefWidth="150.0" styleClass="onlineData" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Label fx:id="onlineDataCountCCU" styleClass="h1" text="N/A" />
+            <Label minWidth="160.0" prefHeight="20.0" prefWidth="160.0" styleClass="h3" text="Real-time Backed Up">
+                <font>
+                    <Font size="10.0" />
+                </font></Label>
+        </VBox>
+        <VBox alignment="CENTER" minHeight="60.0" minWidth="150.0" styleClass="onlineData" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Label fx:id="onlineDataCountSCU" styleClass="h1" text="N/A" />
+            <Label minWidth="160.0" prefHeight="20.0" prefWidth="160.0" styleClass="h3" text="Real-time Backed Up">
+                <font>
+                    <Font size="10.0" />
+                </font></Label>
+        </VBox>
+
+        <Label styleClass="h2" text="Offline (Not Synced Yet)" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <VBox alignment="CENTER" minHeight="60.0" minWidth="150.0" styleClass="offlineData" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Label fx:id="offlineDataCountCCU" styleClass="h1" text="N/A" />
+            <Label styleClass="h3" text="Pending Uploads">
+                <font>
+                    <Font size="10.0" />
+                </font></Label>
+        </VBox>
+        <VBox alignment="CENTER" minHeight="60.0" minWidth="150.0" styleClass="offlineData" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Label fx:id="offlineDataCountSCU" styleClass="h1" text="N/A" />
+            <Label styleClass="h3" text="Pending Uploads">
+                <font>
+                    <Font size="10.0" />
+                </font></Label>
+        </VBox>
+
+        <Label styleClass="h2" text="Last Sync" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Label fx:id="lastSyncTimestampCCU" prefHeight="30.0" prefWidth="179.0" styleClass="timestamp" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <font>
+            <Font size="4.0" />
+         </font></Label>
+        <Label fx:id="lastSyncTimestampSCU" styleClass="timestamp" text="N/A" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+        <Button mnemonicParsing="false" onAction="#onBack" text="Back" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+
+        <rowConstraints>
+            <RowConstraints percentHeight="8.0" vgrow="NEVER" />
+            <RowConstraints percentHeight="20.0" vgrow="ALWAYS" />
+            <RowConstraints percentHeight="20.0" vgrow="ALWAYS" />
+            <RowConstraints percentHeight="20.0" vgrow="ALWAYS" />
+            <RowConstraints percentHeight="8.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.0" percentHeight="8.0" prefHeight="30.0" vgrow="ALWAYS" />
+        </rowConstraints>
+      <padding>
+         <Insets left="10.0" right="20.0" />
+      </padding>
+    </GridPane>
+    <Label fx:id="syncStatusLabel" alignment="CENTER" styleClass="sync-label" text="⚠️ Please go online to sync data" />
+</VBox>

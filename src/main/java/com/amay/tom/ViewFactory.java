@@ -173,7 +173,7 @@ public class ViewFactory {
 
     public static FXMLLoader getMaintenanceImportExport() {
         FXMLLoader fxmlLoader = new FXMLLoader(ViewFactory.class.getResource
-                ("maintenance/ImportExport.fxml"));
+                ("maintenance/DataSync.fxml"));
         return fxmlLoader;
     }
 
@@ -322,5 +322,9 @@ public class ViewFactory {
     public static FXMLLoader getCoinHopperModuleManitenance() {
         return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/maintenance/coinHopperModuleMaintenance.fxml"));
 }
+
+    public static FXMLLoader getRestartScreen() {
+        return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/maintenance/RestartScreen.fxml"));
+    }
 }
 

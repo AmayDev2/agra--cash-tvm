@@ -11,7 +11,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class  UserPrivilege  implements AutoCloseable{
     private boolean bnrCashAdd;
-    private boolean bnrTesting;
+    private boolean bnrTesting;  // MAINTENANCE
     private boolean bnrMoveCash;
     private boolean checkAvailableCash;
     private boolean coinRefill;
