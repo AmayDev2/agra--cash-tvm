@@ -18,6 +18,11 @@ import com.amay.tom.service.siftservice.ShiftService;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.bnr.BNRIntegration;
 import com.amay.tvm.coin.CoinModuleInterface;
+import com.amay.tvm.ups.UPS;
+import com.amay.tvm.ups.UPSInterface;
+import com.amay.tvm.ups.command.UPSCommand;
+import com.amay.tvm.ups.communication.UPSCommunicationInterface;
+import com.amay.tvm.ups.exception.UPSCommunicationException;
 import com.amay.tvm.util.Snackbar;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
@@ -116,9 +121,8 @@ public class TVMController {
                     //UPS check
                     this.checkUPSStatus(this.agent.getPeripheralMonitor().isUps_connected()
                             && this.agent.getPeripheralMonitor().isUps_on());
-
                 }else{
-                    if(count<4)setTimeout();
+                    if(count<4)setTimeout();else inactivityTimer.stop();
                     this.hideBottomBarView();
                 }
             }
@@ -132,19 +136,26 @@ public class TVMController {
     private PauseTransition pauseTransition;
 
     private void checkUPSStatus(boolean isPowerCut) {
+        Logger.tag(LoggerTag.APP).info("UPS ON");
         if(1!=stackPane.getChildren().size())return;
 
+        try {
         if(isPowerCut){
-            if(null==pauseTransition)pauseTransition=new PauseTransition(Duration.seconds(50));
-            pauseTransition.setOnFinished(event ->  this.agent.getInternalListener().EOShift());
-            pauseTransition.playFromStart();
-            setOperationMode(DeviceOperationMode.POWER_CUT);
+                if(null==pauseTransition)pauseTransition=new PauseTransition(Duration.seconds(10));
+                pauseTransition.setOnFinished(event ->  this.agent.getInternalListener().EOShift());
+                pauseTransition.playFromStart();
+                setOperationMode(DeviceOperationMode.POWER_CUT);
+                UPS.INTERFACE.fireCommand(UPSCommand.shutdown(1));
+                Logger.tag(LoggerTag.APP).info("UPS SHOUTDOWN Command");
         }else{
+            UPS.INTERFACE.fireCommand(UPSCommand.CANCEL_SHUTDOWN);
             if(null!=pauseTransition){
                 pauseTransition.stop();
                 pauseTransition=null;
             }
-
+        }
+        } catch (UPSCommunicationException e) {
+            Logger.tag(LoggerTag.APP).error("UPS SHOUTDOWN FAILED {}",e.getMessage());
         }
     }
 

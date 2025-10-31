@@ -264,10 +264,10 @@ public class ScuDataMapper {
 
         AShift aShift = AShift.newBuilder()
                 .setShiftId(shift.getShiftId())
-                .setShiftStart(TimeUtil.localDateTimeToTimestamp(shift.getStartTime()))
+//                .setShiftStart(TimeUtil.localDateTimeToTimestamp(shift.getStartTime()))
                 .setShiftEnd(TimeUtil.localDateTimeToTimestamp(shift.getEndTime()))
                 .setCurrentStatus(ShiftStatus.COMPLETED)
-                .setImprestMoney(Integer.valueOf(shift.getImprest_money()))
+//                .setImprestMoney(Integer.parseInt(shift.getImprest_money()))
                 .setVersion(shift.getConfig_version())
                 .build();
 

@@ -45,7 +45,9 @@ public class MoneyManagementBnrUnloadController  {
     }
 
     @FXML void initialize() {
-        totalAmount.setText(String.valueOf(haveAmountObject.getTotalAmount()));
+        agent.getNoteAmountRepository().findAll().forEach(System.out::println);
+        totalAmount.setText(totalAmount.getText().split(":")[0]+(haveAmountObject.getTotalAmount()));
+        agent.getNoteAmountRepository().findAll().stream().filter(x->x.getContainerId().equals("CB")).toList();
     }
 
     public void onBnrUnLoad(ActionEvent actionEvent) throws JxfsException {

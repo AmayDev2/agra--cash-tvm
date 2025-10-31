@@ -39,7 +39,7 @@ import com.amay.tvm.controller.TVMController;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
-import org.amaytechnosystems.ShiftStatus;
+import org.amaytechnosystems.*;
 import org.tinylog.Logger;
 
 import java.sql.Timestamp;
@@ -765,16 +765,23 @@ public class ShiftServiceImpl implements ShiftService {
     @Override
     public void markLastShiftAsCompleted(String shiftId) {
         LocalDateTime localDateTime= LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
-        ShiftDto shiftDto=new ShiftDto()
-                .setShiftId(shiftId)
+        ShiftDto shiftDto=shiftRepository.findById(shiftId).orElseThrow( ()->new RuntimeException("Shift Not Found"));
+                shiftDto.setShiftId(shiftId)
                 .setCurrentStatus(ShiftStatus.COMPLETED.name())
                 .setEndTime(Timestamp.valueOf(localDateTime))
                 .setUpdatedAt(Timestamp.valueOf(localDateTime))
                 .setReason(EOSType.LAST_SHIFT.name());
 
-        this.shiftRepository.markLastShiftAsCompleted(shiftDto);
 
-        Shift shift=new Shift().setEndTime(localDateTime)
+        this.shiftRepository.markLastShiftAsCompleted(shiftDto);
+        Shift shift1=new Shift().setEndTime(localDateTime)
+                .setDeviceId(shiftDto.getDeviceId())
+                .setDeviceSerial(shiftDto.getDeviceSerial())
+                .setLineNo(shiftDto.getLineNo())
+                .setStationId(shiftDto.getStationId())
+//                .setStartTime(TimeUtil.timestampToLocalDateTime(shiftDto.getStartTime()))
+                .setConfig_version(shiftDto.getConfig_version())
+                .setOperatorId(shiftDto.getOperatorId())
                 .setShiftId(shiftDto.getShiftId())
                 .setCurrentStatus(shiftDto.getCurrentStatus())
                 .setUpdatedAt(localDateTime)
@@ -782,9 +789,9 @@ public class ShiftServiceImpl implements ShiftService {
 
         this.agent.getThreadPool().getFixedThreadPool().execute(() -> {
             try {
-                this.agent.getScuService().pushShiftEnd(shift);
-                this.agent.getCcuService().pushShiftEnd(shift);
-                Logger.info("Last Shift marked as completed with ID: {}", shiftId);
+                ShiftResponseV1 shiftResponseV1=this.agent.getCcuService().pushShiftEndOnce(shift1);
+                ShiftResponseV1 shiftResponseV2=this.agent.getScuService().pushShiftEndOnce(shift1);
+                Logger.info("Last Shift marked as completed with ID: {} {}", shiftResponseV1,shiftResponseV2);
                 this.agent.getGrpcApiListener().sendAlarm(Alarm.SHIFT_END);
             } catch (Exception e) {
                 Logger.error("Error printing EOS report for last shift: {}", e.getMessage());

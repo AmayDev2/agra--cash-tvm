@@ -53,7 +53,7 @@
         </rowConstraints>
 
         <Button mnemonicParsing="false" onAction="#onBnrUnLoad" prefHeight="39.0" prefWidth="194.0" text="Empty Cashbox" GridPane.halignment="CENTER"/>
-        <Label fx:id="totalAmount"  text="RECYCLER AMOUNT : " GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+        <Label fx:id="totalAmount"  text="RECYCLERS AMOUNT : " GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
     </GridPane>
 
 </GridPane>

@@ -1,7 +1,5 @@
 package com.amay.tom.grpc.scugrpc;
 
-import com.amay.tom.grpc.scugrpc.SCUGrpcConnector;
-import com.amay.tom.grpc.scugrpc.ScuDataMapper;
 import com.amay.tom.model.LastOnline;
 import com.amay.tom.model.session.Shift;
 import com.amay.tom.repository.adjustment.AdjustedTicketRepository;
@@ -197,5 +195,9 @@ public class ScuService {
 
     private LastShiftResponseV1 getLastShift(LastShiftRequestV1 lastShiftRequestV1) {
         return blockingStub.getLastShift(lastShiftRequestV1);
+    }
+
+    public ShiftResponseV1 pushShiftEndOnce(Shift shift1) {
+        return blockingStub.updateShiftInfo(ScuDataMapper.createShiftEndRequest(shift1));
     }
 }

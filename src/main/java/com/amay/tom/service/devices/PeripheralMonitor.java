@@ -138,7 +138,7 @@ public class PeripheralMonitor implements Runnable {
         try {
             UPSResponse response=UPS.INTERFACE.getUPSResponseObject();
             upsStatus[0]=true;
-            upsStatus[1]=response.getInputVoltage()<=0;
+            upsStatus[1]=response.getStatus().isUtilityFail();
         } catch (UPSCommunicationException e) {
                 UPS.INTERFACE.reconnect();
                 return upsStatus;
@@ -282,6 +282,6 @@ public class PeripheralMonitor implements Runnable {
     public boolean isUPSUP() {
         boolean[] upsStatus=getUps();
         Logger.tag(LoggerTag.APP).debug("UPS STATUS {}", Arrays.toString(upsStatus));
-        return !(upsStatus[0] || upsStatus[1]);
+        return !(upsStatus[0] && upsStatus[1]);
     }
 }

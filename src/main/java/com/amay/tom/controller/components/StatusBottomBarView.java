@@ -104,11 +104,11 @@ public class StatusBottomBarView {
         setPeripheralStatus(coinModule, deviceStatus[6] == 1);
         setPeripheralStatus(bnr, deviceStatus[7] == 1);
         setPeripheralStatus(ohd, deviceStatus[8] == 1);
-        setPeripheralStatus(uPOS, deviceStatus[9] == 1);
+        setPeripheralStatus(uPOS, deviceStatus[11] == 1);
         setPeripheralStatus(upsUP, deviceStatus[10] == 1);
-        setPeripheralStatus(upsCon, deviceStatus[11] == 1);
+        setPeripheralStatus(upsCon, deviceStatus[9] == 1);
 
-        handler.accept(deviceStatus[11]==1 && deviceStatus[10]==1);
+        if(deviceStatus[9] == 1)handler.accept(deviceStatus[10]==1);
 
 
 //        deviceStatus[8] = ohd_connected ? 1 : 0;
