@@ -45,8 +45,11 @@ public enum HoppersRegistry {
     }
 
     public void resetHopper(int hopperId) {
-        financeOperationRepository.upsert(new FinanceOperationEntity().setUnitAmount(hopperId).setShiftId(agent.getShiftMaintenance().getShiftId()).setQuantity(0)
+        int q=coinAmountRepository.findById(String.valueOf(hopperId)).getQuantity();
+        financeOperationRepository.upsert(new FinanceOperationEntity().setUnitAmount(hopperId).setShiftId(agent.getShiftMaintenance().getShiftId())
+                .setQuantity(q)
                 .setOperationType(FinanceOperation.COIN_UNLOAD));
+
         //TODO:Update DB
         hoppers.stream().filter(hopper -> hopper.getContainerId().equals(String.valueOf(hopperId))).findFirst().ifPresent(hopper ->{
             hopper.setQuantity(0);

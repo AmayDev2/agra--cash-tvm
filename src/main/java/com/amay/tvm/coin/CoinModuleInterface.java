@@ -130,10 +130,11 @@ public enum CoinModuleInterface {
 		isPoolingAllowed=true;
 		Logger.tag(LoggerTag.APP).info("Requesting Dump "+hopperId);
 		try {
+			HoppersRegistry.INSTANCE.resetHopper(hopperId);
 			CoinDumpResponse response = (CoinDumpResponse) service.dumpHopper((byte) hopperId);
 			Logger.tag(LoggerTag.BUSS).info("Dump done, DATA=" + response.getData().length + " bytes");
 			Logger.tag(LoggerTag.APP).info("Response Dump " + response.toString());
-			HoppersRegistry.INSTANCE.resetHopper(hopperId);
+
 		}catch (Exception e){
 			Logger.tag(LoggerTag.APP).error(e.getMessage());
 		}finally {

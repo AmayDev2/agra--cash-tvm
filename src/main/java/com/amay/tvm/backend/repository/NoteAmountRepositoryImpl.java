@@ -69,7 +69,7 @@ public class NoteAmountRepositoryImpl extends NoteAmountRepository {
         } catch (SQLException e) {
             Logger.tag(LoggerTag.APP).error("Error finding NoteAmountEntity by unitAmount: {}", e.getMessage());
         }
-        return null;
+        return new NoteAmountEntity().setUnitAmount(unitAmount).setContainerId(ContainerId.CB);
     }
 
     @Override

@@ -41,8 +41,6 @@ public enum UPS implements UPSInterface {
 
     @Override
     public void disconnect() {
-
-
         upsCommunicationInterface.disconnect();
     }
 

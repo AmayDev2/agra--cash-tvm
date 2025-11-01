@@ -83,6 +83,7 @@ public class TVMController {
     public TVMController(Agent agent) {
         this.agent = agent;
         int idealTimeOut=agent.getTvmConfigRepository().findTVMConfig().getIdleScreenTimeout();
+        idealTimeOut=15;
         Logger.tag(LoggerTag.APP).debug("Ideal Timeout {}",idealTimeOut);
         inactivityTimer= new PauseTransition(Duration.seconds(idealTimeOut));
     }
@@ -122,7 +123,7 @@ public class TVMController {
                     this.checkUPSStatus(this.agent.getPeripheralMonitor().isUps_connected()
                             && this.agent.getPeripheralMonitor().isUps_on());
                 }else{
-                    if(count<4)setTimeout();else inactivityTimer.stop();
+                    if(count<4)setTimeout(); else inactivityTimer.stop();
                     this.hideBottomBarView();
                 }
             }

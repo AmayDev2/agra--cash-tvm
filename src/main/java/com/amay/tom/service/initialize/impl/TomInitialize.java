@@ -483,10 +483,11 @@ public class TomInitialize implements ITomInitialize {
                     versionService.getActual().setConfigVer(versionService.getExpected().getConfigVer());
                     agent.getVersionRepository().insert(MasterConfigInfoMapper.dtoToEntity(versionService.getActual()));
                 }
-                agent.setMasterConfigInfo(MasterConfigInfoMapper.entityToMasterConfigInfo(agent.getVersionRepository().findAll().getFirst()));
+                if(agent.getVersionRepository().findAll().size()>0)
+                    agent.setMasterConfigInfo(MasterConfigInfoMapper.entityToMasterConfigInfo(agent.getVersionRepository().findAll().getFirst()));
                 //TODO: Load tvm config
                if(agent.getTomConfigRepository().findAll().size()>0)
-                agent.setTomConfig(TomConfigMapper.entityToModel(agent.getTomConfigRepository().findAll().getFirst()));
+                    agent.setTomConfig(TomConfigMapper.entityToModel(agent.getTomConfigRepository().findAll().getFirst()));
                 ScuDataMapper.setVersion(agent.getMasterConfigInfo());
                 progress += 0.04;
                 this.updateUI(progress, "Version info saved.");
@@ -807,7 +808,7 @@ public class TomInitialize implements ITomInitialize {
         List<String> command = Arrays.asList(
                 "cmd.exe", "/C",               // Use detached start
                 "start", "/B","",               // Start in detached mode
-                launcherPath,                                    // Path to launcher.bat
+                launcherPath,                    // Path to launcher.bat
                 dir,
                 oldFilename,
                 Integer.toString(delaySec),

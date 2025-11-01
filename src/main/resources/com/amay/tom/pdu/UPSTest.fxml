@@ -4,40 +4,40 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.pdu.controller.UPSTestController">
+<VBox style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.pdu.controller.UPSTestController">
 
-    <!-- Top Buttons -->
-    <top>
-        <VBox spacing="6" style="-fx-padding: 10;">
-            <HBox alignment="CENTER_LEFT" spacing="10">
-                <Button fx:id="btnBack" onAction="#onBack" text="← Back" />
-                <Button fx:id="btnOpenPort" onAction="#onOpenPort" text="Open Port" />
-                <Button fx:id="btnClosePort" onAction="#onClosePort" text="Close Port" />
-                <Button fx:id="btnClearDisplay" onAction="#onClearDisplay" text="Clear Display Info" HBox.hgrow="SOMETIMES" />
-                <Button fx:id="btnStatusInquiry" onAction="#onGetStatus" text="Status Inquiry" />
-                <Button fx:id="btnCancelShutdown" onAction="#onCancelShutdown" text="Cancel Shutdown" />
-            </HBox>
+<!--    &lt;!&ndash; Top Buttons &ndash;&gt;-->
+<!--    <top>-->
+<!--        <VBox spacing="6" style="-fx-padding: 10;">-->
+<!--            <HBox alignment="CENTER_LEFT" spacing="10">-->
+<!--                <Button fx:id="btnBack" onAction="#onBack" text="← Back" />-->
+<!--                <Button fx:id="btnOpenPort" onAction="#onOpenPort" text="Open Port" />-->
+<!--                <Button fx:id="btnClosePort" onAction="#onClosePort" text="Close Port" />-->
+<!--                <Button fx:id="btnClearDisplay" onAction="#onClearDisplay" text="Clear Display Info" HBox.hgrow="SOMETIMES" />-->
+<!--                <Button fx:id="btnStatusInquiry" onAction="#onGetStatus" text="Status Inquiry" />-->
+<!--                <Button fx:id="btnCancelShutdown" onAction="#onCancelShutdown" text="Cancel Shutdown" />-->
+<!--            </HBox>-->
 
-            <HBox alignment="CENTER_LEFT" spacing="10" />
+<!--            <HBox alignment="CENTER_LEFT" spacing="10" />-->
 
-            <HBox alignment="CENTER_LEFT" spacing="10">
-                <Label text="Retry Num:" />
-                <TextField fx:id="txtRetryNum" prefWidth="50" />
-                <Button fx:id="btnShutdown" onAction="#onShutdown" text=" Shutdown UPS" />
+<!--            <HBox alignment="CENTER_LEFT" spacing="10">-->
+<!--                <Label text="Retry Num:" />-->
+<!--                <TextField fx:id="txtRetryNum" prefWidth="50" />-->
+<!--                <Button fx:id="btnShutdown" onAction="#onShutdown" text=" Shutdown UPS" />-->
 
-                <VBox.margin>
-                    <Insets />
-                </VBox.margin>
-            </HBox>
-            <BorderPane.margin>
-                <Insets top="100.0" />
-            </BorderPane.margin>
-        </VBox>
-    </top>
+<!--                <VBox.margin>-->
+<!--                    <Insets />-->
+<!--                </VBox.margin>-->
+<!--            </HBox>-->
+<!--            <BorderPane.margin>-->
+<!--                <Insets top="100.0" />-->
+<!--            </BorderPane.margin>-->
+<!--        </VBox>-->
+<!--    </top>-->
 
     <!-- Center: UPS Info Fields -->
-    <center>
-        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 10;">
+<!--    <center>-->
+<!--        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 10;">-->
             <GridPane hgap="10" vgap="2.0">
                 <columnConstraints>
                     <ColumnConstraints halignment="CENTER" percentWidth="14.0" />
@@ -77,12 +77,12 @@
                <RowConstraints />
                 </rowConstraints>
             </GridPane>
-        </VBox>
-    </center>
+<!--        </VBox>-->
+<!--    </center>-->
 
-    <!-- Bottom Status Flags + Log -->
-    <bottom>
-        <VBox spacing="8" style="-fx-padding: 10;">
+<!--    &lt;!&ndash; Bottom Status Flags + Log &ndash;&gt;-->
+<!--    <bottom>-->
+<!--        <VBox spacing="8" style="-fx-padding: 10;">-->
             <GridPane hgap="10.0">
                 <columnConstraints>
                     <ColumnConstraints halignment="CENTER" percentWidth="50" />
@@ -114,9 +114,9 @@
                 </rowConstraints>
             </GridPane>
 
-            <TextArea fx:id="txtLog" prefHeight="214.0" prefWidth="620.0" wrapText="true" />
+<!--            <TextArea fx:id="txtLog" prefHeight="214.0" prefWidth="620.0" wrapText="true" />-->
 
-        </VBox>
-    </bottom>
+<!--        </VBox>-->
+<!--    </bottom>-->
 
-</BorderPane>
+</VBox>

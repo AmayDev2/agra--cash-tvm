@@ -291,8 +291,8 @@ public class ShiftServiceImpl implements ShiftService {
                 agent.getAmountSnapShotRepository().save(NoteAmountMapper.toSnapshot(noteAmount,shift.getShiftId()));
 
             });
-            agent.getCoinAmountRepository().findAll().stream().filter(coinAmountEntity
-                    ->coinAmountEntity.getContainerId().equals(ContainerId.CM.name())).forEach(coinAmount -> {
+
+            agent.getCoinAmountRepository().findAll().stream().forEach(coinAmount -> {
                 agent.getAmountSnapShotRepository().save(CoinAmountMapper.toSnapshot(coinAmount,shift.getShiftId()));
             });
             shiftRepository.endShift(ShiftMapper.toDto(shift)); //TODO: get complete shift
@@ -633,18 +633,18 @@ public class ShiftServiceImpl implements ShiftService {
         String shiftEndTime= endTime.get();
         try {
 
-            List<AmountSnapShotEntity> amountSnapShotEntityList=agent.getAmountSnapShotRepository().findAll().stream().filter(x->x.getShiftId().equals(shiftId)).toList();
+//            List<AmountSnapShotEntity> amountSnapShotEntityList=agent.getAmountSnapShotRepository().findAll().stream().filter(x->x.getShiftId().equals(shiftId)).toList();
 
-            List<FinanceOperationEntity> financeOperationEntityBnrDeposit = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.BNR_DEPOSIT.name());
-            List<FinanceOperationEntity> financeOperationEntityBnrDispense = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.BNR_DISPENSE.name());
+//            List<FinanceOperationEntity> financeOperationEntityBnrDeposit = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.BNR_DEPOSIT.name());
+//            List<FinanceOperationEntity> financeOperationEntityBnrDispense = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.BNR_DISPENSE.name());
             List<FinanceOperationEntity> financeOperationEntityCoinDispense = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.COIN_DISPENSE.name());
 
-            CoinLoadedReport coinDispenseReport = FinanceOperationMapper.toCoinLoadedReport(shift, FinanceOperation.COIN_DISPENSE, financeOperationEntityCoinDispense);
+//            CoinLoadedReport coinDispenseReport = FinanceOperationMapper.toCoinLoadedReport(shift, FinanceOperation.COIN_DISPENSE, financeOperationEntityCoinDispense);
 
             //ensure both are from same shift
             BNRLoadUnload bnrLoadUnloadReport= AmountSnapshotMapper.toBNRLoadUnload(amountSnapShotEntityList);
-            CoinLoadedReport bnrLoadUnloadCoinReport=AmountSnapshotMapper.toCoinLoadUnload(amountSnapShotEntityList);
-            BNRLoadUnload bnrDepositReport =FinanceOperationMapper.toBNRDepositDispense( financeOperationEntityBnrDeposit,financeOperationEntityBnrDispense);
+            CoinLoadedReport coinDispenseReport=AmountSnapshotMapper.toCoinLoadUnload(amountSnapShotEntityList);
+//            BNRLoadUnload bnrDepositReport =FinanceOperationMapper.toBNRDepositDispense( financeOperationEntityBnrDeposit,financeOperationEntityBnrDispense);
 
             PrinterCommandDispatcher.INSTANCE.printText(
                     ShiftReportData.builder()
@@ -709,7 +709,7 @@ public class ShiftServiceImpl implements ShiftService {
                             .hopper3Amount(null != coinDispenseReport?coinDispenseReport.getHopper3Amount():0)
                             .hopper3Count(null != coinDispenseReport?coinDispenseReport.getHopper3Count():0)
                             .coinTotalAmount(null != coinDispenseReport?coinDispenseReport.getCoinTotalAmount():0)
-                            .coinTotalAmount(null != coinDispenseReport?coinDispenseReport.getCoinTotalCount():0)
+                            .coinTotalCount(null != coinDispenseReport?coinDispenseReport.getCoinTotalCount():0)
 
                             .qrTotalAmount(finalAmountSJT+finalAmountRJT+finalAmountGroup+amountUpiGroup+amountUpiRJT+amountUpiSJT)
                             .qrTotalCount(finalNoOfSJT+finalNoOfRJT+finalNoOfGroup+noOfUpiGroup+noOfUpiRJT+noOfUpiSJT)

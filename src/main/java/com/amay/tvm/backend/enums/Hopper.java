@@ -7,11 +7,13 @@ public enum Hopper{
     HOPPER2(2,10),
     HOPPER3(3,10);
 
-    private int unitAmount;
     private int hopperId;
+    private int unitAmount;
 
-    Hopper(int unitAmount,int hopperId) {
+
+    Hopper(int hopperId,int unitAmount) {
         this.unitAmount=unitAmount;
+        this.hopperId = hopperId;
     }
 
     public int getUnitAmount() {
@@ -23,7 +25,7 @@ public enum Hopper{
     }
 
     public Hopper getHopperByHopperId(int hopperId){
-        return Arrays.stream(Hopper.values()).filter(x->x.getHopperId()==hopperId).findFirst().orElseThrow();
+        return Arrays.stream(Hopper.values()).peek(x->System.out.println("PEEK "+x.hopperId)).filter(x->x.hopperId==hopperId).findFirst().orElseThrow();
     }
 
     public void setHopperUnitAmount(int unitAmount){

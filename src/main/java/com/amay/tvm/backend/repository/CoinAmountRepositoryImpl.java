@@ -68,7 +68,7 @@ public class CoinAmountRepositoryImpl extends CoinAmountRepository {
         } catch (SQLException e) {
             Logger.error("Error finding CoinAmountEntity by id: {}", e.getMessage());
         }
-        return null;
+        return new CoinAmountEntity().setContainerId(containerId);
     }
 
     @Override
