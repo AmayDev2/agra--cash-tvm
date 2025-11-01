@@ -118,4 +118,7 @@ public class AdministrationController {
         this.agent.getInternalListener().PauseShift();
 
     }
+
+    public void onClickPauseEOShift(ActionEvent event) {
+    }
 }

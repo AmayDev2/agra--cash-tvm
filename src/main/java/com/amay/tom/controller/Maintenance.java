@@ -62,7 +62,7 @@ public class Maintenance implements Initializable{
 
     @FXML
     private void initialize() {
-        this.setFooter();
+      this.setFooter();
         this.setCenter();
         this.moduleTest.fire();
         this.updateDateTime();

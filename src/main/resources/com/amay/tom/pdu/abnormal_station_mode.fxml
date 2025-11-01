@@ -4,7 +4,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="290" minWidth="-Infinity" prefHeight="290.0" prefWidth="640.0" style=" -fx-background-color: #CCE4FF;" stylesheets="@./styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.pdu.controller.command.AbnormalStationModeController">
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="290" minWidth="-Infinity" prefHeight="290.0" prefWidth="640.0" style=" -fx-background-color: #;" stylesheets="@./styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.pdu.controller.command.AbnormalStationModeController">
 
 <columnConstraints>
     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />

@@ -8,11 +8,11 @@
 }
 
 .background{
--fx-background-color: #E6F2FF;}
+-fx-background-color: #ffffff;}
 
 
 .bg-accent-blue {
-    -fx-background-color: #E6F2FF;
+    -fx-background-color: #ffffff;
 }
 
 .bg-accent-red {
@@ -25,7 +25,7 @@
 
 /* === Accent Backgrounds (Darker Shades) === */
 .bg-accent-blue-dark {
-    -fx-background-color: #CCE4FF; /* darker than #E6F2FF */
+    -fx-background-color: #; /* darker than # */
 }
 
 .bg-accent-red-dark {

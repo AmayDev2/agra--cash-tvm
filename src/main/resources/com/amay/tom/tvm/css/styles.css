@@ -150,7 +150,7 @@
 
 
 .button-purchase{
-     -fx-background-color: #CCE4FF;
+     -fx-background-color: #ffffff;
     -fx-pref-width: 220px;
     -fx-pref-height: 300px;
     -fx-text-fill: white;
@@ -214,7 +214,7 @@
 
 /* Number Buttons - Stations */
 .number-btn {
-    -fx-background-color: #CCE4FF;
+    -fx-background-color: #ffffff;
     -fx-text-fill: white;
     -fx-background-radius: 20;
     -fx-border-radius: 20;
@@ -227,7 +227,7 @@
 
 /* Number Buttons - Stations */
 .station-btn {
-    -fx-background-color: #CCE4FF;
+    -fx-background-color: #ffffff;
     -fx-text-fill: black;
     -fx-background-radius: 5;
     -fx-border-radius: 5;
@@ -247,7 +247,7 @@
 
 
 .button-passenger{
-    -fx-background-color: #CCE4FF;
+    -fx-background-color: #ffffff;
     -fx-text-fill: white;
     -fx-text-weight: bold;
     -fx-pref-width: 80px;
@@ -262,7 +262,7 @@
 
 
 .button-journey {
-    -fx-background-color: #CCE4FF;
+    -fx-background-color: #ffffff;
     -fx-text-fill: white;
     -fx-text-weight: bold;
 
@@ -320,7 +320,7 @@
 
 
 .button-payment-select {
-    -fx-background-color:  #CCE4FF;
+    -fx-background-color:  #ffffff;
     -fx-text-fill: white;
     -fx-pref-width: 200px;
     -fx-pref-height: 120px;
