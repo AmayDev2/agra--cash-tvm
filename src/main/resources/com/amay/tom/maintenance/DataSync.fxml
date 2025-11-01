@@ -12,8 +12,8 @@
     <GridPane alignment="CENTER" hgap="10.0" maxHeight="491.0" minHeight="450.0" prefHeight="450.0" prefWidth="640.0" styleClass="grid-pane" vgap="30.0">
 
         <columnConstraints>
-            <ColumnConstraints hgrow="ALWAYS" percentWidth="40.0" />
-            <ColumnConstraints hgrow="ALWAYS" percentWidth="30.0" />
+            <ColumnConstraints hgrow="ALWAYS" percentWidth="43.0" />
+            <ColumnConstraints hgrow="ALWAYS" percentWidth="27.0" />
             <ColumnConstraints hgrow="ALWAYS" percentWidth="30.0" />
         </columnConstraints>
 
@@ -76,6 +76,11 @@
          </font></Label>
         <Label fx:id="lastSyncTimestampSCU" styleClass="timestamp" text="N/A" GridPane.columnIndex="2" GridPane.rowIndex="4" />
         <Button mnemonicParsing="false" onAction="#onBack" text="Back" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+       <Label fx:id="syncStatusLabel" alignment="CENTER" prefHeight="51.0" prefWidth="275.0" styleClass="sync-label" text=" Go online to sync data" GridPane.rowIndex="5">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
 
         <rowConstraints>
             <RowConstraints percentHeight="8.0" vgrow="NEVER" />
@@ -89,5 +94,4 @@
          <Insets left="10.0" right="20.0" />
       </padding>
     </GridPane>
-    <Label fx:id="syncStatusLabel" alignment="CENTER" styleClass="sync-label" text="⚠️ Please go online to sync data" />
 </VBox>

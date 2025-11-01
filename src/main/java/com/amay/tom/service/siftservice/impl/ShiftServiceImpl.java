@@ -787,6 +787,7 @@ public class ShiftServiceImpl implements ShiftService {
         this.mainStage=mainStage;
 
     }
+
     private void pushShift(Shift shift, DataSyncDestination destination){
         ShiftResponseV1 shiftResponseV1=null;
         boolean success=false;

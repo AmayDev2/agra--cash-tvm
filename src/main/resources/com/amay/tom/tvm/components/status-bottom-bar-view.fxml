@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<HBox fx:id="hbox" alignment="BASELINE_RIGHT" spacing="10" style="-fx-background-color: #ffffff;" stylesheets="@../css/structure.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.controller.components.StatusBottomBarView">
+<HBox fx:id="hbox" alignment="BASELINE_RIGHT" spacing="10" style="-fx-background-color: #ffffff;" stylesheets="@../css/structure.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.controller.components.StatusBottomBarView" >
 
 
 

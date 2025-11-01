@@ -16,14 +16,14 @@
                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
                <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES"/>
            </rowConstraints>
-           <StackPane fx:id="stackPane" style=" -fx-background-color: #CCE4FF;" alignment="TOP_CENTER"
+           <StackPane fx:id="stackPane" style=" -fx-background-color: #ffffff;" alignment="TOP_CENTER"
                       GridPane.columnIndex="0" GridPane.rowIndex="1">
                <!--                  <fx:include source="success_screen.fxml" />-->
                <!--                  <fx:include source="error_screen.fxml" />-->
                <!--                  <fx:include source="emergency_screen.fxml" />-->
 <!--               <fx:include fx:id="loginScreen" source="welcome_screen.fxml"/>-->
            </StackPane>
-           <fx:include source="footer.fxml" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+           <!--<fx:include source="footer.fxml" Grid&lt;!&ndash;&ndash;&gt;Pane.columnIndex="0" GridPane.rowIndex="2"/>-->
        </GridPane>
    </children>
 </AnchorPane>

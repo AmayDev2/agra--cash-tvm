@@ -74,6 +74,6 @@
 
         </center>
         <bottom>
-          <AnchorPane maxHeight="50.0" maxWidth="1024.0" minHeight="50.0" minWidth="1024.0" prefHeight="50.0" prefWidth="1024.0" style="-fx-background-color: #CCE4FF;" BorderPane.alignment="CENTER" />
+          <AnchorPane maxHeight="50.0" maxWidth="1024.0" minHeight="50.0" minWidth="1024.0" prefHeight="50.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER" />
         </bottom>
     </BorderPane>
