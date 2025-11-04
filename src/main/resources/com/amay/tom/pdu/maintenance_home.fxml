@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="CENTER" styleClass="background" prefWidth="640.0" stylesheets="@../../../../css/maintenance/maintenance.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.pdu.MaintenanceController">
+<GridPane alignment="CENTER" styleClass="background" prefHeight="480.0" prefWidth="640.0" stylesheets="@../../../../css/maintenance/maintenance.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.pdu.MaintenanceController">
     <columnConstraints>
         <ColumnConstraints halignment="CENTER" percentWidth="50.0" />
         <ColumnConstraints halignment="CENTER" percentWidth="50.0" />

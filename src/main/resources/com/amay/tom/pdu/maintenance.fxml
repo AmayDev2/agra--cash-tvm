@@ -4,42 +4,76 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="CENTER"  styleClass="background" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.pdu.MaintenanceTestController">
+<GridPane alignment="CENTER"
+          prefWidth="640.0"
+          styleClass="background"
+          vgap="50.0"
+          hgap="50.0"
+          xmlns="http://javafx.com/javafx/17.0.12"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.amay.tom.pdu.MaintenanceTestController">
 
     <!-- Columns -->
     <columnConstraints>
-        <ColumnConstraints minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
-        <ColumnConstraints minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+        <ColumnConstraints percentWidth="50.0" hgrow="ALWAYS" />
+        <ColumnConstraints percentWidth="50.0" hgrow="ALWAYS" />
     </columnConstraints>
 
     <!-- Rows -->
     <rowConstraints>
-        <RowConstraints minHeight="10.0" percentHeight="17.0" prefHeight="116.0" valignment="CENTER" />
-        <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="116.0" valignment="CENTER" />
-        <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="116.0" valignment="CENTER" />
-        <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="116.0" valignment="CENTER" />
-        <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="116.0" valignment="CENTER" />
-        <RowConstraints minHeight="139.0" percentHeight="35.0" prefHeight="141.0" valignment="CENTER" />
+        <RowConstraints percentHeight="20.0" vgrow="ALWAYS" valignment="CENTER" />
+        <RowConstraints percentHeight="20.0" vgrow="ALWAYS" valignment="CENTER" />
+        <RowConstraints percentHeight="20.0" vgrow="ALWAYS" valignment="CENTER" />
+        <RowConstraints percentHeight="20.0" vgrow="ALWAYS" valignment="CENTER" />
+        <RowConstraints percentHeight="20.0" vgrow="ALWAYS" valignment="CENTER" />
     </rowConstraints>
 
     <children>
-        <!-- Title -->
-        <Label prefHeight="35.0" prefWidth="142.0" text="Maintenance" GridPane.columnSpan="2" GridPane.halignment="CENTER">
-            <GridPane.margin>
-                <Insets left="20.0" />
-            </GridPane.margin>
-        </Label>
 
-        <!-- Buttons -->
-        <Button mnemonicParsing="false" onAction="#onBNRTest" prefHeight="35.0" prefWidth="200.0" text="BNR Test" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
-        <Button mnemonicParsing="false" onAction="#onCoinHopper" prefHeight="35.0" prefWidth="200.0" text="Coin Hopper" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
-        <Button mnemonicParsing="false" onAction="#onPrinterTest" prefHeight="35.0" prefWidth="200.0" text="Printer Test" GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
-        <Button mnemonicParsing="false" onAction="#onUPSTest" prefHeight="35.0" prefWidth="200.0" text="UPS Test" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
-        <Button mnemonicParsing="false" onAction="#onPIdTest" prefHeight="35.0" prefWidth="200.0" text="PID Test" GridPane.halignment="CENTER" GridPane.rowIndex="3"/>
-        <Button mnemonicParsing="false" onAction="#onFeigTest" prefHeight="35.0" prefWidth="200.0" text="Feig Test" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3"/>
-        <Button mnemonicParsing="false" onAction="#onCommstest" prefHeight="35.0" prefWidth="200.0" text="Communication Test" GridPane.halignment="CENTER" GridPane.rowIndex="4"/>
-        <Button mnemonicParsing="false" onAction="#onRestart" prefHeight="35.0" prefWidth="200.0" text="Restart/Shutdown" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4"/>
-        <Button mnemonicParsing="false" onAction="#onBack" prefHeight="35.0" prefWidth="140.0" text="Back" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5"/>
+        <!-- Row 0 -->
+        <Button text="BNR Test" onAction="#onBNRTest"
+                GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"
+                maxWidth="Infinity" maxHeight="Infinity" />
+        <Button text="Coin Hopper" onAction="#onCoinHopper"
+                GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"
+                maxWidth="Infinity" maxHeight="Infinity" />
+
+        <!-- Row 1 -->
+        <Button text="Printer Test" onAction="#onPrinterTest"
+                GridPane.rowIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"
+                maxWidth="Infinity" maxHeight="Infinity" />
+        <Button text="UPS Test" onAction="#onUPSTest"
+                GridPane.columnIndex="1" GridPane.rowIndex="1"
+                GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"
+                maxWidth="Infinity" maxHeight="Infinity" />
+
+        <!-- Row 2 -->
+        <Button text="PID Test" onAction="#onPIdTest"
+                GridPane.rowIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"
+                maxWidth="Infinity" maxHeight="Infinity" />
+        <Button text="Feig Test" onAction="#onFeigTest"
+                GridPane.columnIndex="1" GridPane.rowIndex="2"
+                GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"
+                maxWidth="Infinity" maxHeight="Infinity" />
+
+        <!-- Row 3 -->
+        <Button text="Communication Test" onAction="#onCommstest"
+                GridPane.rowIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"
+                maxWidth="Infinity" maxHeight="Infinity" />
+        <Button text="Restart/Shutdown" onAction="#onRestart"
+                GridPane.columnIndex="1" GridPane.rowIndex="3"
+                GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"
+                maxWidth="Infinity" maxHeight="Infinity" />
+
+        <!-- Row 4 -->
+        <Button text="Back" onAction="#onBack"
+                GridPane.rowIndex="4" GridPane.columnIndex="0"  GridPane.columnSpan="2"
+                GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"
+                maxWidth="Infinity" maxHeight="Infinity" />
     </children>
+
+    <padding>
+        <Insets top="10.0" right="10.0" bottom="10.0" left="10.0" />
+    </padding>
 
 </GridPane>

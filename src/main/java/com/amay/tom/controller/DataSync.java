@@ -99,9 +99,9 @@ public class DataSync {
     }
 
     private void handleSyncDataWarningVisibility(){
-        if(DataSyncInfo.offlineDataCountCCU==0 && DataSyncInfo.offlineDataCountSCU==0)
-            syncStatusLabel.setVisible(false);
-        else syncStatusLabel.setVisible(true);
+//        if(DataSyncInfo.offlineDataCountCCU==0 && DataSyncInfo.offlineDataCountSCU==0)
+//            syncStatusLabel.setVisible(false);
+//        else syncStatusLabel.setVisible(true);
     }
 
 

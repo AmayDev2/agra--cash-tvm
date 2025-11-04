@@ -27,6 +27,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.tinylog.Logger;
 
+import java.awt.*;
 import java.io.IOException;
 
 
@@ -190,20 +191,19 @@ public class Main extends Application {
 
 
             if (screens.size() >0) { //0205000301AB04A803
-                Rectangle2D screen2Bounds = screens.get(0).getVisualBounds();
+                Rectangle2D screen2Bounds = screens.get(1).getVisualBounds();
 
                 FXMLLoader pduLoader = new FXMLLoader(Main.class.getResource("pdu/main_container.fxml"));
 
 
                 PDUController controller = new PDUController();
                 pduLoader.setControllerFactory((x)->controller);
-                Scene pduScene = new Scene(pduLoader.load(), 640, 448);
+                Scene pduScene = new Scene(pduLoader.load(), 640, 480);
 
                 // Add global key filter
                 new KeypadHandler().attach(pduScene);
                 pduScene.getStylesheets().add(getClass().getResource("/com/amay/tom/pdu/styles.css").toExternalForm());
                 pduScene.getStylesheets().add(getClass().getResource("/com/amay/tom/pdu/themes.css").toExternalForm());
-
 
                 PDUCommandDispatcher.INSTANCE.setController(controller);
 

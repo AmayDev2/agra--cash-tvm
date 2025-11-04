@@ -1,6 +1,6 @@
 /* === Background Utility Classes === */
 .bg-main {
-    -fx-background-color: #f9f9f9;
+   /* -fx-background-color: #f9f9f9;*/
 }
 
 .bg-surface {

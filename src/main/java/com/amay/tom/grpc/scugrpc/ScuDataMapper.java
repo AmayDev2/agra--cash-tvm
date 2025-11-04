@@ -76,7 +76,7 @@ public class ScuDataMapper {
                 .build();
 
         AVersion versions = AVersion.newBuilder()
-                .setSoftwareVer(masterConfigInfo.getTomSwVer())
+                .setSoftwareVer(masterConfigInfo.getTvmSwVer())
                 .setTicketVer(masterConfigInfo.getProductConfig())
                 .setFaretableVer(masterConfigInfo.getFareConfig())
                 .build();
@@ -142,7 +142,7 @@ public class ScuDataMapper {
                 .build();
 
         AVersion versions = AVersion.newBuilder()
-                .setSoftwareVer(masterConfigInfo.getTomSwVer())
+                .setSoftwareVer(masterConfigInfo.getTvmSwVer())
                 .setTicketVer(masterConfigInfo.getProductConfig())
                 .setFaretableVer(masterConfigInfo.getFareConfig())
                 .build();
@@ -409,9 +409,7 @@ public class ScuDataMapper {
         try {
             InetAddress inetAddress = InetAddress.getLocalHost();
             ipAddress = inetAddress.getHostAddress();
-        } catch (UnknownHostException e) {
-            e.printStackTrace(); // Handle the exception as needed
-        }
+
 
         RequestMetaData requestMetaData = RequestMetaData.newBuilder()
                 .setRequestId(String.valueOf(UUID.randomUUID()))
@@ -439,10 +437,11 @@ public class ScuDataMapper {
                 .build();
 
         AVersion versions = AVersion.newBuilder()
-                .setSoftwareVer(masterConfigInfo.getTomSwVer())
+                .setSoftwareVer(masterConfigInfo.getTvmSwVer())
                 .setTicketVer(masterConfigInfo.getProductConfig())
                 .setFaretableVer(masterConfigInfo.getFareConfig())
                 .build();
+
         ATicket ticket = ATicket.newBuilder()
                 .setTicketId(postGeneratedTicket.getTicketId())
                 .setOrderId(orderId)
@@ -475,6 +474,10 @@ public class ScuDataMapper {
                 .build();
 
         return purchaseRequest;
+        } catch (UnknownHostException e) {
+            throw new RuntimeException(e.getMessage());
+
+        }
     }
 
 
@@ -514,7 +517,7 @@ public class ScuDataMapper {
                 .build();
 
         AVersion versions = AVersion.newBuilder()
-                .setSoftwareVer(masterConfigInfo.getTomSwVer())
+                .setSoftwareVer(masterConfigInfo.getTvmSwVer())
                 .setTicketVer(masterConfigInfo.getProductConfig())
                 .setFaretableVer(masterConfigInfo.getFareConfig())
                 .build();

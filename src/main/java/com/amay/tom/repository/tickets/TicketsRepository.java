@@ -49,8 +49,8 @@ public abstract class TicketsRepository {
             "transactionId VARCHAR(255)," +
             "createdAt TIMESTAMP," +
             "updatedAt TIMESTAMP, " +
-            "ccu BOOLEAN DEFAULT FALSE,"+
-            "scu BOOLEAN DEFAULT FALSE"+
+            "ccu TIMESTAMP ,"+
+            "scu TIMESTAMP"+
             ");";
 
     protected static final String INSERT_SQL = "INSERT INTO " + TABLE_NAME + " (orderId, ticketId, issueAt, entryTime, validUntil, inStation, outStation, language, ticketType, qrData, operatorId, shiftId, deviceId, deviceType, deviceSerial, lineId, stationId, amount, discount, paymentMode, isCanceled, isRefund, isReplaced, isAdjusted, isActive, softwareVer, ticketVer, faretableVer, quantity, status, transactionId, createdAt, updatedAt) " +

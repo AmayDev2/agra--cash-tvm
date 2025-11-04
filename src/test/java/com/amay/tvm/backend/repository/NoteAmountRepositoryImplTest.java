@@ -4,6 +4,7 @@ import com.amay.tom.config.ENVURL;
 import com.amay.tom.database.SQLConnector;
 import com.amay.tom.utils.env.EnvLoader;
 import com.amay.tvm.backend.entity.NoteAmountEntity;
+import com.amay.tvm.backend.enums.ContainerId;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.backend.mapper.NoteAmountMapper;
 import org.junit.jupiter.api.AfterAll;
@@ -135,7 +136,7 @@ class NoteAmountRepositoryImplTest {
 
     private NoteAmountEntity createSampleEntity(int denomination, int cashInQuantity, int cashOutQuantity) {
         NoteAmountEntity entity = new NoteAmountEntity();
-        entity.setContainerId("CB");
+        entity.setContainerId(ContainerId.CB);
         entity.setUnitAmount(denomination);
         entity.setCashInQuantity(cashInQuantity);
         entity.setCashOutQuantity(cashOutQuantity);

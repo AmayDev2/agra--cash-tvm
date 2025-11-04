@@ -21,6 +21,8 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import org.tinylog.Logger;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 
 
@@ -40,8 +42,29 @@ public class PDUController {
     private Agent agent;
 
     public PDUController(){
-
+        ensureNumLockOn();
     }
+
+
+        private void ensureNumLockOn() {
+            try {
+                // Check if Num Lock is supported
+                if (Toolkit.getDefaultToolkit().getLockingKeyState(KeyEvent.VK_NUM_LOCK)) {
+                    System.out.println("✅ Num Lock is already ON");
+                } else {
+                    System.out.println("⚠️ Num Lock is OFF — turning it ON...");
+                    Robot robot = new Robot();
+                    robot.keyPress(KeyEvent.VK_NUM_LOCK);
+                    robot.keyRelease(KeyEvent.VK_NUM_LOCK);
+                    System.out.println("✅ Num Lock is now ON");
+                }
+            } catch (UnsupportedOperationException e) {
+                System.err.println("⚠️ Num Lock key state not supported on this system.");
+            } catch (AWTException e) {
+                e.printStackTrace();
+            }
+        }
+
 
     @FXML
     public void initialize() {
