@@ -38,6 +38,8 @@ public class DataSync {
     private Label offlineDataCountCCU;
     @FXML
     private Label offlineDataCountSCU;
+
+
     private Agent agent;
 
     private TicketsRepository ticketsRepository;
@@ -122,4 +124,6 @@ public class DataSync {
         sceneManager.back();
                 event.consume();
     }
+
+
 }

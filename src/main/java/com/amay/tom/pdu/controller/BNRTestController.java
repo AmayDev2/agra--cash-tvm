@@ -21,6 +21,12 @@ public class BNRTestController {
     @FXML
     private Button rolloutButton;
 
+    @FXML
+    private Button backButton;
+
+    @FXML
+    private Button cancelButton;
+
 
 
     public BNRTestController( Agent agent,SceneManager sceneManager){
