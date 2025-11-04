@@ -11,6 +11,7 @@ import com.amay.tom.pdu.controller.ReportController;
 import com.amay.tom.pdu.controller.SystemInfoController;
 import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tvm.backend.enums.LoggerTag;
+import com.amay.tvm.controller.PeripheralStatusController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -98,6 +99,15 @@ public class MaintenanceController {
         agent.getShiftService().markLastShiftAsCompleted(shiftM.getShiftId());
 
         this.sceneManager.back();
+        actionEvent.consume();
+    }
+
+    @FXML
+    private void onPeripheralStatus(ActionEvent actionEvent) {
+        FXMLLoader fxmlLoader= ViewFactory.getPeripheralStatus();
+        PeripheralStatusController controller=new PeripheralStatusController(agent,sceneManager);
+        fxmlLoader.setControllerFactory((x)->controller);
+        this.sceneManager.addToScene(fxmlLoader);
         actionEvent.consume();
     }
 }

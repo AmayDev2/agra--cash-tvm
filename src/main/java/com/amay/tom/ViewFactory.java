@@ -75,6 +75,12 @@ public class ViewFactory {
         return fxmlLoader;
     }
 
+    public static FXMLLoader getPeripheralStatus(){
+        FXMLLoader fxmlLoader = new FXMLLoader(ViewFactory.class.getResource
+                ("maintenance/PeripheralStatus.fxml"));
+        return fxmlLoader;
+    }
+
     public static FXMLLoader getPauseEosSelection() {
         FXMLLoader fxmlLoader = new FXMLLoader(ViewFactory.class.getResource
                 ("administration/pause-eos-selection-view.fxml"));

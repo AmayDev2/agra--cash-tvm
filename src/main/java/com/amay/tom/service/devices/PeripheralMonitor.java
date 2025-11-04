@@ -78,6 +78,7 @@ public class PeripheralMonitor implements Runnable {
 
     @Override
     public void run() {
+        System.out.println("Refreshing Peripheral Status");
         deviceStatus = new int[12];
         boolean[] tvm=coinNoduleConnected();
         door_closed = tvm[1]; //door

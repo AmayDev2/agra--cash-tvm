@@ -20,6 +20,6 @@
     <Button mnemonicParsing="false" styleClass="navigatorButton" onAction="#onMain" prefHeight="35.0" prefWidth="210.0" text="Maintenace" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
     <Button mnemonicParsing="false" styleClass="navigatorButton" onAction="#onImpExp" prefHeight="35.0" prefWidth="210.0" text="Data Sync" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
     <Button alignment="CENTER" styleClass="navigatorButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onReports" prefHeight="39.0" prefWidth="200.0" text="Reports" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
-    <Button alignment="CENTER" styleClass="navigatorButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onReports" prefHeight="39.0" prefWidth="200.0" text="Reports" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Button alignment="CENTER" styleClass="navigatorButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onPeripheralStatus" prefHeight="39.0" prefWidth="200.0" text="Peripheral Status" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
     <Button alignment="CENTER" styleClass="navigatorButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onLogout" prefHeight="39.0" prefWidth="200.0" text="Logout" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3"/>
 </GridPane>

@@ -1,11 +1,8 @@
 package com.amay.tom.service.update;
 
-
-import com.amay.tom.service.update.ProgressMonitor;
 import com.jcraft.jsch.*;
 
 import java.io.BufferedOutputStream;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
