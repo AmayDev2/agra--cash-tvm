@@ -57,9 +57,10 @@
                 maxWidth="Infinity" maxHeight="Infinity" />
 
         <!-- Row 3 -->
-        <Button text="Communication Test" onAction="#onCommstest"
+        <Button text="Maintenance Log" onAction="#onMaintenanceLog"
                 GridPane.rowIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"
                 maxWidth="Infinity" maxHeight="Infinity" />
+
         <Button text="Restart/Shutdown" onAction="#onRestart"
                 GridPane.columnIndex="1" GridPane.rowIndex="3"
                 GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"
