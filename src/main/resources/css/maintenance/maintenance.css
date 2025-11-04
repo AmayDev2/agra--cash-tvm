@@ -95,6 +95,7 @@
     -fx-fill: #95a5a6;
     -fx-font-family: 'Segoe UI', sans-serif;
 }
+
 .navigatorButton {
     -fx-pref-width: 100%;
     -fx-min-width: 250px;

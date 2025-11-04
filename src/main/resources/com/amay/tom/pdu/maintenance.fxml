@@ -57,14 +57,14 @@
                 maxWidth="Infinity" maxHeight="Infinity" />
 
         <!-- Row 3 -->
-        <Button text="Maintenance Log" onAction="#onMaintenanceLog"
-                GridPane.rowIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"
-                maxWidth="Infinity" maxHeight="Infinity" />
-
-        <Button text="Restart/Shutdown" onAction="#onRestart"
-                GridPane.columnIndex="1" GridPane.rowIndex="3"
-                GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"
-                maxWidth="Infinity" maxHeight="Infinity" />
+        <Button onAction="#onCommstest" styleClass="navigatorButton" text="Communication Test" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+         <GridPane.margin>
+            <Insets left="20.0" right="20.0" />
+         </GridPane.margin></Button>
+        <Button onAction="#onRestart" styleClass="navigatorButton" text="Restart/Shutdown" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+         <GridPane.margin>
+            <Insets left="20.0" right="20.0" />
+         </GridPane.margin></Button>
 
         <!-- Row 4 -->
         <Button text="Back" onAction="#onBack"
