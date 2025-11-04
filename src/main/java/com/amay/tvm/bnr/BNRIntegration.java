@@ -876,7 +876,7 @@ public class BNRIntegration  {
 
     public static void cancel(){
         try {
-            control.cancel(1);
+            if(null!=control)control.cancel(1);
             Thread.sleep(100);
         } catch (JxfsException | InterruptedException e) {
             Logger.debug(e.getMessage());
