@@ -332,5 +332,9 @@ public class ViewFactory {
     public static FXMLLoader getRestartScreen() {
         return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/maintenance/RestartScreen.fxml"));
     }
+
+    public static FXMLLoader getMaintenanceLog() {
+        return new FXMLLoader(ViewFactory.class.getResource("/com/amay/tom/maintenance/Alarm.fxml"));
+    }
 }
 

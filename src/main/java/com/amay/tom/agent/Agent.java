@@ -104,6 +104,7 @@ public class Agent {
     private TomConfig tomConfig;
     private EquipmentRepository equipmentRepository;
     private AmountSnapShotRepository amountSnapShotRepository;
+    private MaintenanceRepository maintenanceRepository;
 
 //    private Products products;
     private List<Product> products;

@@ -14,7 +14,7 @@
 /* -------------------- Header Row Styling -------------------- */
 /* Styles for the Header Labels (Row 0: Metric, CCU, SCU) */
 .label {
-    -fx-font-size: 20px;
+    -fx-font-size: 16px;
     -fx-font-weight: bold;
     -fx-text-fill: #34495e; /* Dark slate color for headers */
 }
@@ -23,23 +23,21 @@
 
 /* Container styles for the Data Cards (Rows 1, 2, 3) */
 .totalData {
-    -fx-background-color: #3498db; /* Blue */
+    -fx-background-color: #34495e; /* Blue */
     -fx-background-radius: 12;
-    -fx-padding: 20;
+    -fx-padding: 5;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 3); /* Add shadow to the card */
 }
 
 .onlineData {
-    -fx-background-color: #2ecc71; /* Green */
+    -fx-background-color: #34495e; /* Green */
     -fx-background-radius: 12;
-    -fx-padding: 20;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 3); /* Add shadow to the card */
 }
 
 .offlineData {
-    -fx-background-color: #e67e22; /* Orange */
+    -fx-background-color: #34495e; /* Orange */
     -fx-background-radius: 12;
-    -fx-padding: 20;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 3); /* Add shadow to the card */
 }
 
@@ -47,7 +45,7 @@
 
 /* Large number/file count (h1) */
 .h1 {
-    -fx-font-size: 24px; /* Slightly larger for emphasis */
+    -fx-font-size: 14px; /* Slightly larger for emphasis */
     -fx-text-fill: white;
     -fx-font-weight: bold;
 }
@@ -62,7 +60,7 @@
 
 /* Metric/Description label in Column 1 (h2) and Last Sync data */
 .h2 {
-    -fx-font-size: 16px; /* Increased size */
+    -fx-font-size: 12px; /* Increased size */
     -fx-text-fill: #555555; /* Dark gray for metric names */
     -fx-font-weight: bold;
 }

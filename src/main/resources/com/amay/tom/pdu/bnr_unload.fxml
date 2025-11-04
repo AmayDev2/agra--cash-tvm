@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane prefHeight="400.0" styleClass="background" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.pdu.controller.MoneyManagementBnrUnloadController">
+<GridPane styleClass="background" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.pdu.controller.MoneyManagementBnrUnloadController">
 
     <!-- Columns -->
     <columnConstraints>
@@ -52,7 +52,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
         </rowConstraints>
 
-        <Button mnemonicParsing="false" onAction="#onBnrUnLoad" prefHeight="39.0" prefWidth="194.0" text="Empty Cashbox" GridPane.halignment="CENTER"/>
+        <Button visible="false" onAction="#onBnrUnLoad" prefHeight="39.0" prefWidth="194.0" text="Empty Cashbox" GridPane.halignment="CENTER"/>
         <Label fx:id="totalAmount"  text="RECYCLERS AMOUNT : " GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
     </GridPane>
 

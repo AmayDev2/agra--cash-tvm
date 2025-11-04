@@ -2,6 +2,7 @@ package com.amay.tom.pdu.controller;
 
 import com.amay.tom.agent.Agent;
 import com.amay.tom.pdu.controller.service.SceneManager;
+import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.bnr.BNRIntegration;
 import com.amay.tvm.bnr.BNRListener;
 import com.amay.tvm.bnr.BNRListenerLoad;
@@ -14,6 +15,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import org.h2.util.Task;
+import org.tinylog.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,7 +72,13 @@ public class MoneyManagementBnrLoadController{
     }
 
     @FXML private void onRollback(ActionEvent actionEvent) {
-        BNRIntegration.bnrLoadRollback();
+            agent.getThreadPool().getFixedThreadPool()
+                    .submit(new Task() {
+                         @Override
+                         public void call() {
+                           BNRIntegration.bnrLoadRollback();
+                           }});
+
         actionEvent.consume();
     }
 

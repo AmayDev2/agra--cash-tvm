@@ -16,6 +16,7 @@ import com.amay.tom.service.devices.PeripheralMonitor;
 import com.amay.tom.service.devices.device.PrinterStatus;
 import com.amay.tom.service.print.impl.PrinterService;
 import com.amay.tvm.controller.ApplicationController;
+import com.amay.tvm.controller.MaintenanceAlarmController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -164,7 +165,12 @@ public class MaintenanceTestController {
     }
 
     @FXML
-    private void onCommstest(ActionEvent event) {
+    private void onMaintenanceLog(ActionEvent event) {
+        FXMLLoader fxmlLoader= ViewFactory.getMaintenanceLog();
+        MaintenanceAlarmController controller=new MaintenanceAlarmController(this.agent,this.sceneManager);
+        fxmlLoader.setControllerFactory((x)->controller);
+        this.sceneManager.addToScene(fxmlLoader);
+        event.consume();
     }
 
     @FXML

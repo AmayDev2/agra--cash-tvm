@@ -41,6 +41,7 @@ import com.amay.tvm.backend.mapper.CoinAmountMapper;
 import com.amay.tvm.backend.mapper.CoinAmountMapper;
 import com.amay.tvm.backend.mapper.FinanceOperationMapper;
 import com.amay.tvm.backend.mapper.NoteAmountMapper;
+import com.amay.tvm.backend.model.MaintenanceLog;
 import com.amay.tvm.controller.TVMController;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -78,6 +79,7 @@ public class ShiftServiceImpl implements ShiftService {
     @Override
     public FXMLLoader startShift(String username, String password) throws Exception {
         try (UserPrivilege userPrivilege = userAuth.login(username, password)) {
+
             this.password=password;
 
             this.agent.setUserPrivilege(userPrivilege);
@@ -164,6 +166,12 @@ public class ShiftServiceImpl implements ShiftService {
     @Override
     public FXMLLoader startMaintenanceShift(String username, String password, SceneManager sceneManager) throws Exception {
         try (UserPrivilege userPrivilege = userAuth.login(username, password)) {
+            MaintenanceLog log=new MaintenanceLog(
+                    username,
+                    "LOGIN",
+                    LocalDateTime.now()
+            );
+            agent.getMaintenanceRepository().insert(log);
 
             this.agent.setUserPrivilege(userPrivilege);
             this.agent.setUserAuth(userAuth);
@@ -271,6 +279,14 @@ public class ShiftServiceImpl implements ShiftService {
     public void endOfShift(EOSType eosType) {
         LocalDateTime currentTime = LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
         // updateToAdd 4 columns endTime,endReason,updatedAt,status
+        MaintenanceLog log=new MaintenanceLog(
+          userAuth.getCurrentUser().getUsername(),
+          "LogOut",
+          currentTime
+
+        );
+        agent.getMaintenanceRepository().insert(log);
+
         shift.setEndTime(currentTime)
                 .setCurrentStatus(ShiftStatus.COMPLETED.name())
                 .setUpdatedAt(currentTime)

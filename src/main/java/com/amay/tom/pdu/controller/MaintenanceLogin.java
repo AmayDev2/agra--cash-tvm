@@ -28,6 +28,7 @@ import com.amay.tvm.controller.CoinRagistoryPageController;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
@@ -86,8 +87,8 @@ public class MaintenanceLogin {
     private final Agent agent;
     private final ShiftService shiftService;
     private Station currentStation = null;
-    private SceneManager sceneManager;
-    private BuzzerTask buzzerTask;
+    private final SceneManager sceneManager;
+    private final BuzzerTask buzzerTask;
 
     public MaintenanceLogin(Agent agent, SceneManager sceneManager) {
         this.sceneManager=sceneManager;
@@ -103,6 +104,15 @@ public class MaintenanceLogin {
 
     @FXML
     private void initialize() {
+        usernameField.setText("UPMRC");
+
+        usernameField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue.length() < 5) {
+                // revert to the previous valid text
+                usernameField.setText(oldValue);
+            }
+        });
+
         if(!fl){
         this.agent.getPeripheralMonitor().addDeviceStatusListener(new ListenDoreEvent(this, this.buzzerTask));
         fl=true;}

@@ -56,33 +56,33 @@ public  abstract class QRTicketGenerator implements QRTicketService {
 
 
 
-    private void saveInLocalDB(String orderId, String transactionId, PostGeneratedTicket postGeneratedTicket, PaymentResponse paymentResponse) {
-    TicketsDto ticketDto = new TicketsDto()
-            .setTicketId(postGeneratedTicket.getTicketId())
-            .setQrData(postGeneratedTicket.getQrCodeString())
-            .setActive(true)
-            .setTicketType(postGeneratedTicket.getProperTicket().getTicketType().getTicketTypeId())
-            .setInStation(postGeneratedTicket.getProperTicket().getSource().getStationId())
-            .setOutStation(postGeneratedTicket.getProperTicket().getDestination().getStationId())
-            .setAmount(postGeneratedTicket.getProperTicket().getPrice())
-            .setQuantity(postGeneratedTicket.getProperTicket().getQuantity())
-            .setIssueAt(postGeneratedTicket.getProperTicket().getIssuedAt())
-            .setValidUntil(postGeneratedTicket.getProperTicket().getValidUntil())
-            .setOrderId(orderId)
-            .setPaymentMode(paymentResponse.getPaymentMode())
-            .setDeviceType(shift.getDeviceId().substring(4, 6))
-            .setStationId(shift.getDeviceId().substring(2, 4))
-            .setLineId(shift.getDeviceId().substring(0, 2))
-            .setShiftId(shift.getShiftId())
-            .setOperatorId(shift.getOperatorId())
-            .setDeviceId(shift.getDeviceId())
-            .setTransactionId(transactionId)
-            .setCreatedAt(LocalDateTime.now())
-            .setUpdatedAt(LocalDateTime.now())
-            .setTicketVer(masterConfigInfo.getProductConfig())
-            .setFaretableVer(masterConfigInfo.getFareConfig())
-            .setSoftwareVer(masterConfigInfo.getTomSwVer());
-    ticketsRepository.save(ticketDto);
+    private void saveInLocalDB(String orderId,String transactionId,PostGeneratedTicket postGeneratedTicket) {
+        TicketsDto ticketDto = new TicketsDto()
+                .setTicketId(postGeneratedTicket.getTicketId())
+                .setQrData(postGeneratedTicket.getQrCodeString())
+                .setActive(true)
+                .setTicketType(postGeneratedTicket.getProperTicket().getTicketType().getTicketTypeId())
+                .setInStation(postGeneratedTicket.getProperTicket().getSource().getStationId())
+                .setOutStation(postGeneratedTicket.getProperTicket().getDestination().getStationId())
+                .setAmount(postGeneratedTicket.getProperTicket().getPrice())
+                .setQuantity(postGeneratedTicket.getProperTicket().getQuantity())
+                .setIssueAt(postGeneratedTicket.getProperTicket().getIssuedAt())
+                .setValidUntil(postGeneratedTicket.getProperTicket().getValidUntil())
+                .setOrderId(orderId)
+                .setPaymentMode(PayMethod.CASH.name())
+                .setDeviceType(shift.getDeviceId().substring(4, 6))
+                .setStationId(shift.getDeviceId().substring(2, 4))
+                .setLineId(shift.getDeviceId().substring(0, 2))
+                .setShiftId(shift.getShiftId())
+                .setOperatorId(shift.getOperatorId())
+                .setDeviceId(shift.getDeviceId())
+                .setTransactionId(transactionId)
+                .setCreatedAt(LocalDateTime.now())
+                .setUpdatedAt(LocalDateTime.now())
+                .setTicketVer(masterConfigInfo.getProductConfig())
+                .setFaretableVer(masterConfigInfo.getFareConfig())
+                .setSoftwareVer(masterConfigInfo.getTvmSwVer());
+        ticketsRepository.save(ticketDto);
 
     }
 
@@ -125,7 +125,7 @@ public  abstract class QRTicketGenerator implements QRTicketService {
         //TODO: save the ticket in the db, and push the ticket to the SCU, and generate the QR code image
         postGeneratedTickets.forEach(postGeneratedTicket -> {
             Logger.info("Ticket ID: {}", postGeneratedTicket.toString());
-            saveInLocalDB(finalOrderId, finalTransactionId,postGeneratedTicket,paymentResponse);
+            saveInLocalDB(finalOrderId, finalTransactionId,postGeneratedTicket);
             pushToScuAsync(finalOrderId, finalTransactionId,postGeneratedTicket,paymentResponse);
             pushToCcuAsync(finalOrderId, finalTransactionId,postGeneratedTicket,paymentResponse);
         });

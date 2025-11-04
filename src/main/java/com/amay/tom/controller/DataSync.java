@@ -38,6 +38,8 @@ public class DataSync {
     private Label offlineDataCountCCU;
     @FXML
     private Label offlineDataCountSCU;
+
+
     private Agent agent;
 
     private TicketsRepository ticketsRepository;
@@ -99,9 +101,9 @@ public class DataSync {
     }
 
     private void handleSyncDataWarningVisibility(){
-        if(DataSyncInfo.offlineDataCountCCU==0 && DataSyncInfo.offlineDataCountSCU==0)
-            syncStatusLabel.setVisible(false);
-        else syncStatusLabel.setVisible(true);
+//        if(DataSyncInfo.offlineDataCountCCU==0 && DataSyncInfo.offlineDataCountSCU==0)
+//            syncStatusLabel.setVisible(false);
+//        else syncStatusLabel.setVisible(true);
     }
 
 
@@ -122,4 +124,6 @@ public class DataSync {
         sceneManager.back();
                 event.consume();
     }
+
+
 }

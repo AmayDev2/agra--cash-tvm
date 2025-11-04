@@ -95,6 +95,7 @@ import com.amay.tom.utils.equipments.EquipmentUtil;
 import com.amay.tom.utils.helper.Helper;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.backend.repository.*;
+import com.amay.tvm.backend.service.MaintenanceDeviceListener;
 import com.amay.tvm.bnr.BNRIntegration;
 import com.amay.tvm.coin.CoinModuleInterface;
 import com.amay.tom.model.tvmConfig.TvmConfigDto;
@@ -544,6 +545,7 @@ public class TomInitialize implements ITomInitialize {
                 agent.getThreadPool().getScheduler().scheduleAtFixedRate(agent.getPeripheralMonitor(),0,5,TimeUnit.SECONDS);
                 progress += 0.03;
                 this.updateUI(progress, "Peripheral status pushed.");
+                this.addMaintenanceDeviceListener(agent.getPeripheralMonitor(), agent.getMaintenanceRepository());
 
                 Thread.sleep(6000);
 
@@ -1081,6 +1083,8 @@ public class TomInitialize implements ITomInitialize {
         agent.setFinanceOperationRepository(new FinanceOperationRepositoryImpl(agent.getConnection(), agent.getNoteAmountRepository()));
         agent.setEquipmentRepository(new EquipmentRepositoryImpl(agent.getConnection()));
         agent.setAmountSnapShotRepository(new AmountSnapShotRepositoryImpl(agent.getConnection()));
+        MaintenanceRepository maintenanceRepository = new MaintenanceRepositoryImpl(agent.getConnection());
+        agent.setMaintenanceRepository(maintenanceRepository);
         return true;
     }
 
@@ -1282,6 +1286,9 @@ public class TomInitialize implements ITomInitialize {
         // Restart the Java application
 //        restartApplication();
         return true;
+    }
+    private void addMaintenanceDeviceListener(PeripheralMonitor peripheralMonitor, MaintenanceRepository maintenanceRepository){
+        peripheralMonitor.addDeviceStatusListener(new MaintenanceDeviceListener(maintenanceRepository));
     }
 
 

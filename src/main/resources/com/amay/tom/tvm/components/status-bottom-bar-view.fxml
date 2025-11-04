@@ -87,7 +87,7 @@
         <!--                    </graphic>-->
     </Button>
 
-    <Button fx:id="uPOS" styleClass="status-button" >
+    <Button visible="false" fx:id="uPOS" styleClass="status-button" >
         <!--                    <graphic>-->
         <!--                            <ImageView fitHeight="30" fitWidth="30">-->
         <!--                                    <Image url="@../../../../../images/icon_pdu.png" />-->
@@ -95,7 +95,7 @@
         <!--                    </graphic>-->
     </Button>
 
-    <Button fx:id="ohd" styleClass="status-button" >
+    <Button visible="false" fx:id="ohd" styleClass="status-button" >
         <!--                    <graphic>-->
         <!--                            <ImageView fitHeight="30" fitWidth="30">-->
         <!--                                    <Image url="@../../../../../images/icon_pdu.png" />-->

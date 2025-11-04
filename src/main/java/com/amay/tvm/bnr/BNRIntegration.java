@@ -825,6 +825,16 @@ public class BNRIntegration  {
     public static void bnrLoad(BNRListenerLoad bnrListenerLoad) {
         try {
             bnrListener=bnrListenerLoad;
+            isCancelAllowed=true;
+            isAllowed=true;
+            helper.resetDisconnected();
+            try {
+                endCashInTransaction();
+                haveAmountObject=getBnrHaveAmountObject();
+            } catch (JxfsException e) {
+                e.printStackTrace();
+            }
+
             if(vector==null) {
                 var event = helper.run(new ISynchronousOperation() {
                     public int run(JxfsATM control) throws JxfsException {
@@ -846,9 +856,9 @@ public class BNRIntegration  {
             });
 
             startCashInTransaction();
+            queryDenomination(10000);
 //            cashIn(0,"INR");
             for(int cashInCount=0;cashInCount<MAX_CASH_IN_ATTEMPT_M;cashInCount++) {
-                queryDenomination(10000);
                 MEICashInOrder data = cashInOneByOne(1, CASH_IN_CURRENCY);
                 Logger.tag(LoggerTag.APP).debug("You`ve inserted(partial) : " + data.getDenomination().getAmount() + " " + CASH_IN_CURRENCY);
                 bnrListener.acceptedAmount((int) data.getDenomination().getAmount());   //PAISA-> RUPEE : Last inserted amount of note
@@ -866,7 +876,7 @@ public class BNRIntegration  {
 
     public static void cancel(){
         try {
-            control.cancel(1);
+            if(null!=control)control.cancel(1);
             Thread.sleep(100);
         } catch (JxfsException | InterruptedException e) {
             Logger.debug(e.getMessage());
@@ -961,10 +971,10 @@ public class BNRIntegration  {
     public static int bnrUnloadRecycler() {
         int result=0;
         Vector<String> rcyIds=new Vector<>();
-        rcyIds.add("RE3");
-        rcyIds.add("RE4");
-        rcyIds.add("RE5");
-        rcyIds.add("RE6");
+        rcyIds.add("RE3(100)");
+        rcyIds.add("RE4(50)");
+        rcyIds.add("RE5(20)");
+        rcyIds.add("RE6(10)");
         try {
             result = control.empty(rcyIds);
         } catch (JxfsException e) {

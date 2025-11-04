@@ -100,13 +100,13 @@ public class UPSSerialCommunication implements UPSCommunicationInterface {
 
     @Override
     public boolean reconnect() throws UPSCommunicationException {
-//        synchronized (lock) {
+        synchronized (lock) {
             if (lastPortNumber == null) {
                 throw new UPSCommunicationException("No previous connection to reconnect");
             }
 
             Logger.tag(LoggerTag.APP).info("Attempting to reconnect to " + lastPortNumber);
-            disconnect();
+            serialPort.openPort();
 
             try {
                 TimeUnit.MILLISECONDS.sleep(1000); // Wait before reconnect
@@ -115,19 +115,19 @@ public class UPSSerialCommunication implements UPSCommunicationInterface {
             }
 
             return connect(lastPortNumber);
-//        }
+        }
     }
 
     @Override
     public void disconnect() {
-//        synchronized (lock) {
+        synchronized (lock) {
             if (serialPort != null && serialPort.isOpen()) {
                 serialPort.closePort();
                 Logger.tag(LoggerTag.APP).info("Disconnected from UPS on " + serialPort.getSystemPortName());
             }
             connected = false;
             serialPort = null;
-//        }
+        }
     }
 
     @Override
