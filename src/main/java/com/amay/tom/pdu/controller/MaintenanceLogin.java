@@ -240,7 +240,7 @@ public class MaintenanceLogin {
                     this.task.start();
 
                 }else{
-                    this.task.cancelAndTurnOff();
+//                    this.task.cancelAndTurnOff();
                 }
 
             }

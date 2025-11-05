@@ -3,6 +3,7 @@ package com.amay.tvm.coin.service;
 
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.coin.commands.CommandBuilder;
+import com.amay.tvm.coin.communication.CommunicationException;
 import com.amay.tvm.coin.communication.SerialCommunication;
 import com.amay.tvm.coin.communication.SerialCommunicationInterface;
 import com.amay.tvm.coin.constants.ProtocolConstants;

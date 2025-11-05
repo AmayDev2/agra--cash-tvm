@@ -155,7 +155,6 @@ public enum CoinModuleInterface {
 
 	public void turnOffBuzzer() {
 		service.turnOffBuzzer();
-
 		Logger.tag(LoggerTag.APP).warn("TURN OFF BUZZER");
 	}
 

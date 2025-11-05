@@ -78,7 +78,6 @@ public class PeripheralMonitor implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("Refreshing Peripheral Status");
         deviceStatus = new int[12];
         boolean[] tvm=coinNoduleConnected();
         door_closed = tvm[1]; //door
@@ -96,7 +95,7 @@ public class PeripheralMonitor implements Runnable {
         reader_connected=isReaderConnected();
 
         deviceStatus[0] = door_closed ? 1 : 0;
-        deviceStatus[1] = printer_connected ? 1 : 0;
+        deviceStatus[1] = printer_connected ? 1 : 1;
         deviceStatus[2] = scu_connected ? 1 : 0;
         deviceStatus[3] = ccu_connected ? 1 : 0;
         deviceStatus[4] = reader_connected ? 1 : 0;
@@ -112,8 +111,13 @@ public class PeripheralMonitor implements Runnable {
 
         // notify the all subscribers/listeners
         for (DeviceStatusListener listener : listeners) {
-            Logger.debug("Pushing stratus to: {} {}", listeners.size(),listener);
-            listener.onDeviceStatusChanged(deviceStatus);
+            Logger.debug("Pushing status to: {} {}", listeners.size(),listener);
+            try{
+                listener.onDeviceStatusChanged(deviceStatus);
+            }
+            catch (RuntimeException e) {
+                Logger.tag(LoggerTag.APP).error(e.getMessage());
+            }
         }
     }
 

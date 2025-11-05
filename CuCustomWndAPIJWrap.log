@@ -383,3 +383,970 @@
 2025-11-04 17-11-04.0297[EnumUSBDevices]Begin
 2025-11-04 17-11-04.0308[EnumUSBDevices]Found 0 USB Devices
 2025-11-04 17-11-04.0310[EnumUSBDevices]End
+2025-11-04 17-33-37.0493[]*****************************************
+2025-11-04 17-33-37.0494[]DLL Log Initialize. Verbosity: 6
+2025-11-04 17-33-37.0494[]*****************************************
+2025-11-04 17-33-37.0494[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-04 17-33-37.0496[]DLL Version: 1.07
+2025-11-04 17-33-37.0497[InitLibrary]Begin
+2025-11-04 17-33-37.0521[InitLibrary]Library SignID:00000101
+2025-11-04 17-33-37.0522[InitLibrary]Current SignID:00000101
+2025-11-04 17-33-37.0523[InitLibrary]End
+2025-11-04 17-33-37.0524[GetAPIVersionHwLibrary]Begin
+2025-11-04 17-33-37.0526[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-04 17-33-37.0526[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-04 17-33-37.0527[GetAPIVersionHwLibrary]End
+2025-11-04 17-33-37.0528[EnumUSBDevices]Begin
+2025-11-04 17-33-37.0533[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 17-33-37.0533[EnumUSBDevices]End
+2025-11-04 17-34-06.0996[EnumUSBDevices]Begin
+2025-11-04 17-34-07.0003[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 17-34-07.0004[EnumUSBDevices]End
+2025-11-04 17-34-13.0183[EnumUSBDevices]Begin
+2025-11-04 17-34-13.0194[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 17-34-13.0195[EnumUSBDevices]End
+2025-11-04 17-36-25.0592[]*****************************************
+2025-11-04 17-36-25.0593[]DLL Log Initialize. Verbosity: 6
+2025-11-04 17-36-25.0594[]*****************************************
+2025-11-04 17-36-25.0594[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-04 17-36-25.0595[]DLL Version: 1.07
+2025-11-04 17-36-25.0595[InitLibrary]Begin
+2025-11-04 17-36-25.0618[InitLibrary]Library SignID:00000101
+2025-11-04 17-36-25.0619[InitLibrary]Current SignID:00000101
+2025-11-04 17-36-25.0620[InitLibrary]End
+2025-11-04 17-36-25.0620[GetAPIVersionHwLibrary]Begin
+2025-11-04 17-36-25.0623[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-04 17-36-25.0625[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-04 17-36-25.0626[GetAPIVersionHwLibrary]End
+2025-11-04 17-36-25.0626[EnumUSBDevices]Begin
+2025-11-04 17-36-25.0634[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 17-36-25.0635[EnumUSBDevices]End
+2025-11-04 17-36-55.0033[EnumUSBDevices]Begin
+2025-11-04 17-36-55.0039[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 17-36-55.0040[EnumUSBDevices]End
+2025-11-04 17-37-17.0957[]*****************************************
+2025-11-04 17-37-17.0959[]DLL Log Initialize. Verbosity: 6
+2025-11-04 17-37-17.0960[]*****************************************
+2025-11-04 17-37-17.0960[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-04 17-37-17.0961[]DLL Version: 1.07
+2025-11-04 17-37-17.0962[InitLibrary]Begin
+2025-11-04 17-37-17.0986[InitLibrary]Library SignID:00000101
+2025-11-04 17-37-17.0987[InitLibrary]Current SignID:00000101
+2025-11-04 17-37-17.0988[InitLibrary]End
+2025-11-04 17-37-17.0988[GetAPIVersionHwLibrary]Begin
+2025-11-04 17-37-17.0992[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-04 17-37-17.0993[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-04 17-37-17.0994[GetAPIVersionHwLibrary]End
+2025-11-04 17-37-17.0995[EnumUSBDevices]Begin
+2025-11-04 17-37-18.0005[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 17-37-18.0006[EnumUSBDevices]End
+2025-11-04 17-37-47.0452[EnumUSBDevices]Begin
+2025-11-04 17-37-47.0461[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 17-37-47.0462[EnumUSBDevices]End
+2025-11-04 17-39-25.0072[]*****************************************
+2025-11-04 17-39-25.0076[]DLL Log Initialize. Verbosity: 6
+2025-11-04 17-39-25.0077[]*****************************************
+2025-11-04 17-39-25.0078[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-04 17-39-25.0078[]DLL Version: 1.07
+2025-11-04 17-39-25.0079[InitLibrary]Begin
+2025-11-04 17-39-25.0111[InitLibrary]Library SignID:00000101
+2025-11-04 17-39-25.0112[InitLibrary]Current SignID:00000101
+2025-11-04 17-39-25.0112[InitLibrary]End
+2025-11-04 17-39-25.0113[GetAPIVersionHwLibrary]Begin
+2025-11-04 17-39-25.0115[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-04 17-39-25.0116[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-04 17-39-25.0117[GetAPIVersionHwLibrary]End
+2025-11-04 17-39-25.0117[EnumUSBDevices]Begin
+2025-11-04 17-39-25.0124[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 17-39-25.0125[EnumUSBDevices]End
+2025-11-04 17-40-05.0494[EnumUSBDevices]Begin
+2025-11-04 17-40-05.0501[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 17-40-05.0503[EnumUSBDevices]End
+2025-11-04 17-45-22.0369[]*****************************************
+2025-11-04 17-45-22.0371[]DLL Log Initialize. Verbosity: 6
+2025-11-04 17-45-22.0372[]*****************************************
+2025-11-04 17-45-22.0373[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-04 17-45-22.0373[]DLL Version: 1.07
+2025-11-04 17-45-22.0374[InitLibrary]Begin
+2025-11-04 17-45-22.0407[InitLibrary]Library SignID:00000101
+2025-11-04 17-45-22.0408[InitLibrary]Current SignID:00000101
+2025-11-04 17-45-22.0409[InitLibrary]End
+2025-11-04 17-45-22.0410[GetAPIVersionHwLibrary]Begin
+2025-11-04 17-45-22.0413[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-04 17-45-22.0413[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-04 17-45-22.0414[GetAPIVersionHwLibrary]End
+2025-11-04 17-45-22.0414[EnumUSBDevices]Begin
+2025-11-04 17-45-22.0421[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 17-45-22.0422[EnumUSBDevices]End
+2025-11-04 17-45-52.0032[EnumUSBDevices]Begin
+2025-11-04 17-45-52.0044[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 17-45-52.0047[EnumUSBDevices]End
+2025-11-04 17-49-49.0435[]*****************************************
+2025-11-04 17-49-49.0437[]DLL Log Initialize. Verbosity: 6
+2025-11-04 17-49-49.0439[]*****************************************
+2025-11-04 17-49-49.0439[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-04 17-49-49.0441[]DLL Version: 1.07
+2025-11-04 17-49-49.0442[InitLibrary]Begin
+2025-11-04 17-49-49.0466[InitLibrary]Library SignID:00000101
+2025-11-04 17-49-49.0466[InitLibrary]Current SignID:00000101
+2025-11-04 17-49-49.0467[InitLibrary]End
+2025-11-04 17-49-49.0468[GetAPIVersionHwLibrary]Begin
+2025-11-04 17-49-49.0470[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-04 17-49-49.0471[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-04 17-49-49.0472[GetAPIVersionHwLibrary]End
+2025-11-04 17-49-49.0473[EnumUSBDevices]Begin
+2025-11-04 17-49-49.0478[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 17-49-49.0478[EnumUSBDevices]End
+2025-11-04 17-50-18.0794[EnumUSBDevices]Begin
+2025-11-04 17-50-18.0799[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 17-50-18.0800[EnumUSBDevices]End
+2025-11-04 17-55-03.0174[]*****************************************
+2025-11-04 17-55-03.0184[]DLL Log Initialize. Verbosity: 6
+2025-11-04 17-55-03.0185[]*****************************************
+2025-11-04 17-55-03.0186[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-04 17-55-03.0188[]DLL Version: 1.07
+2025-11-04 17-55-03.0189[InitLibrary]Begin
+2025-11-04 17-55-03.0241[InitLibrary]Library SignID:00000101
+2025-11-04 17-55-03.0243[InitLibrary]Current SignID:00000101
+2025-11-04 17-55-03.0244[InitLibrary]End
+2025-11-04 17-55-03.0245[GetAPIVersionHwLibrary]Begin
+2025-11-04 17-55-03.0249[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-04 17-55-03.0250[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-04 17-55-03.0251[GetAPIVersionHwLibrary]End
+2025-11-04 17-55-03.0252[EnumUSBDevices]Begin
+2025-11-04 17-55-03.0267[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 17-55-03.0269[EnumUSBDevices]End
+2025-11-04 17-55-33.0691[EnumUSBDevices]Begin
+2025-11-04 17-55-33.0702[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 17-55-33.0705[EnumUSBDevices]End
+2025-11-04 17-57-33.0257[]*****************************************
+2025-11-04 17-57-33.0265[]DLL Log Initialize. Verbosity: 6
+2025-11-04 17-57-33.0265[]*****************************************
+2025-11-04 17-57-33.0266[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-04 17-57-33.0266[]DLL Version: 1.07
+2025-11-04 17-57-33.0267[InitLibrary]Begin
+2025-11-04 17-57-33.0308[InitLibrary]Library SignID:00000101
+2025-11-04 17-57-33.0308[InitLibrary]Current SignID:00000101
+2025-11-04 17-57-33.0309[InitLibrary]End
+2025-11-04 17-57-33.0310[GetAPIVersionHwLibrary]Begin
+2025-11-04 17-57-33.0313[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-04 17-57-33.0314[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-04 17-57-33.0315[GetAPIVersionHwLibrary]End
+2025-11-04 17-57-33.0316[EnumUSBDevices]Begin
+2025-11-04 17-57-33.0326[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 17-57-33.0326[EnumUSBDevices]End
+2025-11-04 17-58-03.0943[EnumUSBDevices]Begin
+2025-11-04 17-58-03.0951[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 17-58-03.0953[EnumUSBDevices]End
+2025-11-04 17-59-14.0736[]*****************************************
+2025-11-04 17-59-14.0741[]DLL Log Initialize. Verbosity: 6
+2025-11-04 17-59-14.0742[]*****************************************
+2025-11-04 17-59-14.0743[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-04 17-59-14.0743[]DLL Version: 1.07
+2025-11-04 17-59-14.0744[InitLibrary]Begin
+2025-11-04 17-59-14.0767[InitLibrary]Library SignID:00000101
+2025-11-04 17-59-14.0767[InitLibrary]Current SignID:00000101
+2025-11-04 17-59-14.0768[InitLibrary]End
+2025-11-04 17-59-14.0768[GetAPIVersionHwLibrary]Begin
+2025-11-04 17-59-14.0772[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-04 17-59-14.0772[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-04 17-59-14.0773[GetAPIVersionHwLibrary]End
+2025-11-04 17-59-14.0773[EnumUSBDevices]Begin
+2025-11-04 17-59-14.0780[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 17-59-14.0781[EnumUSBDevices]End
+2025-11-04 17-59-44.0868[EnumUSBDevices]Begin
+2025-11-04 17-59-44.0874[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 17-59-44.0875[EnumUSBDevices]End
+2025-11-04 18-03-05.0893[]*****************************************
+2025-11-04 18-03-05.0899[]DLL Log Initialize. Verbosity: 6
+2025-11-04 18-03-05.0900[]*****************************************
+2025-11-04 18-03-05.0901[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-04 18-03-05.0902[]DLL Version: 1.07
+2025-11-04 18-03-05.0902[InitLibrary]Begin
+2025-11-04 18-03-05.0927[InitLibrary]Library SignID:00000101
+2025-11-04 18-03-05.0927[InitLibrary]Current SignID:00000101
+2025-11-04 18-03-05.0928[InitLibrary]End
+2025-11-04 18-03-05.0929[GetAPIVersionHwLibrary]Begin
+2025-11-04 18-03-05.0930[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-04 18-03-05.0931[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-04 18-03-05.0931[GetAPIVersionHwLibrary]End
+2025-11-04 18-03-05.0932[EnumUSBDevices]Begin
+2025-11-04 18-03-05.0940[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 18-03-05.0941[EnumUSBDevices]End
+2025-11-04 18-03-36.0043[EnumUSBDevices]Begin
+2025-11-04 18-03-36.0049[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 18-03-36.0049[EnumUSBDevices]End
+2025-11-04 18-06-22.0542[]*****************************************
+2025-11-04 18-06-22.0547[]DLL Log Initialize. Verbosity: 6
+2025-11-04 18-06-22.0547[]*****************************************
+2025-11-04 18-06-22.0548[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-04 18-06-22.0548[]DLL Version: 1.07
+2025-11-04 18-06-22.0549[InitLibrary]Begin
+2025-11-04 18-06-22.0571[InitLibrary]Library SignID:00000101
+2025-11-04 18-06-22.0572[InitLibrary]Current SignID:00000101
+2025-11-04 18-06-22.0572[InitLibrary]End
+2025-11-04 18-06-22.0572[GetAPIVersionHwLibrary]Begin
+2025-11-04 18-06-22.0576[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-04 18-06-22.0576[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-04 18-06-22.0576[GetAPIVersionHwLibrary]End
+2025-11-04 18-06-22.0577[EnumUSBDevices]Begin
+2025-11-04 18-06-22.0584[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 18-06-22.0585[EnumUSBDevices]End
+2025-11-04 18-06-52.0652[EnumUSBDevices]Begin
+2025-11-04 18-06-52.0658[EnumUSBDevices]Found 0 USB Devices
+2025-11-04 18-06-52.0659[EnumUSBDevices]End
+2025-11-05 09-29-41.0720[]*****************************************
+2025-11-05 09-29-41.0726[]DLL Log Initialize. Verbosity: 6
+2025-11-05 09-29-41.0726[]*****************************************
+2025-11-05 09-29-41.0728[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-05 09-29-41.0728[]DLL Version: 1.07
+2025-11-05 09-29-41.0728[InitLibrary]Begin
+2025-11-05 09-29-41.0750[InitLibrary]Library SignID:00000101
+2025-11-05 09-29-41.0751[InitLibrary]Current SignID:00000101
+2025-11-05 09-29-41.0751[InitLibrary]End
+2025-11-05 09-29-41.0753[GetAPIVersionHwLibrary]Begin
+2025-11-05 09-29-41.0755[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-05 09-29-41.0756[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-05 09-29-41.0756[GetAPIVersionHwLibrary]End
+2025-11-05 09-29-41.0757[EnumUSBDevices]Begin
+2025-11-05 09-29-41.0765[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-29-41.0766[EnumUSBDevices]End
+2025-11-05 09-30-12.0651[EnumUSBDevices]Begin
+2025-11-05 09-30-12.0660[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-30-12.0661[EnumUSBDevices]End
+2025-11-05 09-31-55.0358[]*****************************************
+2025-11-05 09-31-55.0365[]DLL Log Initialize. Verbosity: 6
+2025-11-05 09-31-55.0366[]*****************************************
+2025-11-05 09-31-55.0367[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-05 09-31-55.0368[]DLL Version: 1.07
+2025-11-05 09-31-55.0368[InitLibrary]Begin
+2025-11-05 09-31-55.0391[InitLibrary]Library SignID:00000101
+2025-11-05 09-31-55.0392[InitLibrary]Current SignID:00000101
+2025-11-05 09-31-55.0392[InitLibrary]End
+2025-11-05 09-31-55.0393[GetAPIVersionHwLibrary]Begin
+2025-11-05 09-31-55.0395[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-05 09-31-55.0396[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-05 09-31-55.0396[GetAPIVersionHwLibrary]End
+2025-11-05 09-31-55.0397[EnumUSBDevices]Begin
+2025-11-05 09-31-55.0403[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-31-55.0403[EnumUSBDevices]End
+2025-11-05 09-32-26.0130[EnumUSBDevices]Begin
+2025-11-05 09-32-26.0143[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-32-26.0146[EnumUSBDevices]End
+2025-11-05 09-40-20.0074[]*****************************************
+2025-11-05 09-40-20.0079[]DLL Log Initialize. Verbosity: 6
+2025-11-05 09-40-20.0080[]*****************************************
+2025-11-05 09-40-20.0080[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-05 09-40-20.0081[]DLL Version: 1.07
+2025-11-05 09-40-20.0081[InitLibrary]Begin
+2025-11-05 09-40-20.0105[InitLibrary]Library SignID:00000101
+2025-11-05 09-40-20.0106[InitLibrary]Current SignID:00000101
+2025-11-05 09-40-20.0106[InitLibrary]End
+2025-11-05 09-40-20.0107[GetAPIVersionHwLibrary]Begin
+2025-11-05 09-40-20.0109[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-05 09-40-20.0110[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-05 09-40-20.0110[GetAPIVersionHwLibrary]End
+2025-11-05 09-40-20.0112[EnumUSBDevices]Begin
+2025-11-05 09-40-20.0117[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-40-20.0118[EnumUSBDevices]End
+2025-11-05 09-40-49.0538[EnumUSBDevices]Begin
+2025-11-05 09-40-49.0543[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-40-49.0544[EnumUSBDevices]End
+2025-11-05 09-45-09.0477[]*****************************************
+2025-11-05 09-45-09.0486[]DLL Log Initialize. Verbosity: 6
+2025-11-05 09-45-09.0486[]*****************************************
+2025-11-05 09-45-09.0487[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-05 09-45-09.0487[]DLL Version: 1.07
+2025-11-05 09-45-09.0488[InitLibrary]Begin
+2025-11-05 09-45-09.0508[InitLibrary]Library SignID:00000101
+2025-11-05 09-45-09.0509[InitLibrary]Current SignID:00000101
+2025-11-05 09-45-09.0509[InitLibrary]End
+2025-11-05 09-45-09.0510[GetAPIVersionHwLibrary]Begin
+2025-11-05 09-45-09.0513[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-05 09-45-09.0513[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-05 09-45-09.0514[GetAPIVersionHwLibrary]End
+2025-11-05 09-45-09.0514[EnumUSBDevices]Begin
+2025-11-05 09-45-09.0521[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-45-09.0522[EnumUSBDevices]End
+2025-11-05 09-45-39.0910[EnumUSBDevices]Begin
+2025-11-05 09-45-39.0917[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-45-39.0918[EnumUSBDevices]End
+2025-11-05 09-46-50.0436[]*****************************************
+2025-11-05 09-46-50.0444[]DLL Log Initialize. Verbosity: 6
+2025-11-05 09-46-50.0444[]*****************************************
+2025-11-05 09-46-50.0445[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-05 09-46-50.0446[]DLL Version: 1.07
+2025-11-05 09-46-50.0446[InitLibrary]Begin
+2025-11-05 09-46-50.0469[InitLibrary]Library SignID:00000101
+2025-11-05 09-46-50.0470[InitLibrary]Current SignID:00000101
+2025-11-05 09-46-50.0470[InitLibrary]End
+2025-11-05 09-46-50.0471[GetAPIVersionHwLibrary]Begin
+2025-11-05 09-46-50.0473[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-05 09-46-50.0474[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-05 09-46-50.0475[GetAPIVersionHwLibrary]End
+2025-11-05 09-46-50.0475[EnumUSBDevices]Begin
+2025-11-05 09-46-50.0482[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-46-50.0482[EnumUSBDevices]End
+2025-11-05 09-47-20.0675[EnumUSBDevices]Begin
+2025-11-05 09-47-20.0685[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-47-20.0687[EnumUSBDevices]End
+2025-11-05 09-48-34.0694[]*****************************************
+2025-11-05 09-48-34.0699[]DLL Log Initialize. Verbosity: 6
+2025-11-05 09-48-34.0700[]*****************************************
+2025-11-05 09-48-34.0701[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-05 09-48-34.0702[]DLL Version: 1.07
+2025-11-05 09-48-34.0703[InitLibrary]Begin
+2025-11-05 09-48-34.0742[InitLibrary]Library SignID:00000101
+2025-11-05 09-48-34.0743[InitLibrary]Current SignID:00000101
+2025-11-05 09-48-34.0744[InitLibrary]End
+2025-11-05 09-48-34.0745[GetAPIVersionHwLibrary]Begin
+2025-11-05 09-48-34.0747[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-05 09-48-34.0747[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-05 09-48-34.0749[GetAPIVersionHwLibrary]End
+2025-11-05 09-48-34.0750[EnumUSBDevices]Begin
+2025-11-05 09-48-34.0757[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-48-34.0758[EnumUSBDevices]End
+2025-11-05 09-49-05.0120[EnumUSBDevices]Begin
+2025-11-05 09-49-05.0127[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-49-05.0129[EnumUSBDevices]End
+2025-11-05 09-50-07.0998[]*****************************************
+2025-11-05 09-50-08.0006[]DLL Log Initialize. Verbosity: 6
+2025-11-05 09-50-08.0007[]*****************************************
+2025-11-05 09-50-08.0009[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-05 09-50-08.0011[]DLL Version: 1.07
+2025-11-05 09-50-08.0012[InitLibrary]Begin
+2025-11-05 09-50-08.0055[InitLibrary]Library SignID:00000101
+2025-11-05 09-50-08.0056[InitLibrary]Current SignID:00000101
+2025-11-05 09-50-08.0057[InitLibrary]End
+2025-11-05 09-50-08.0057[GetAPIVersionHwLibrary]Begin
+2025-11-05 09-50-08.0062[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-05 09-50-08.0063[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-05 09-50-08.0065[GetAPIVersionHwLibrary]End
+2025-11-05 09-50-08.0066[EnumUSBDevices]Begin
+2025-11-05 09-50-08.0078[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-50-08.0079[EnumUSBDevices]End
+2025-11-05 09-50-38.0448[EnumUSBDevices]Begin
+2025-11-05 09-50-38.0455[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-50-38.0457[EnumUSBDevices]End
+2025-11-05 09-51-25.0798[]*****************************************
+2025-11-05 09-51-25.0807[]DLL Log Initialize. Verbosity: 6
+2025-11-05 09-51-25.0808[]*****************************************
+2025-11-05 09-51-25.0810[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-05 09-51-25.0811[]DLL Version: 1.07
+2025-11-05 09-51-25.0811[InitLibrary]Begin
+2025-11-05 09-51-25.0850[InitLibrary]Library SignID:00000101
+2025-11-05 09-51-25.0851[InitLibrary]Current SignID:00000101
+2025-11-05 09-51-25.0852[InitLibrary]End
+2025-11-05 09-51-25.0853[GetAPIVersionHwLibrary]Begin
+2025-11-05 09-51-25.0857[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-05 09-51-25.0858[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-05 09-51-25.0859[GetAPIVersionHwLibrary]End
+2025-11-05 09-51-25.0860[EnumUSBDevices]Begin
+2025-11-05 09-51-25.0868[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-51-25.0868[EnumUSBDevices]End
+2025-11-05 09-51-55.0998[EnumUSBDevices]Begin
+2025-11-05 09-51-56.0005[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-51-56.0006[EnumUSBDevices]End
+2025-11-05 09-52-38.0066[]*****************************************
+2025-11-05 09-52-38.0072[]DLL Log Initialize. Verbosity: 6
+2025-11-05 09-52-38.0072[]*****************************************
+2025-11-05 09-52-38.0073[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-05 09-52-38.0073[]DLL Version: 1.07
+2025-11-05 09-52-38.0074[InitLibrary]Begin
+2025-11-05 09-52-38.0095[InitLibrary]Library SignID:00000101
+2025-11-05 09-52-38.0096[InitLibrary]Current SignID:00000101
+2025-11-05 09-52-38.0097[InitLibrary]End
+2025-11-05 09-52-38.0097[GetAPIVersionHwLibrary]Begin
+2025-11-05 09-52-38.0100[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-05 09-52-38.0100[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-05 09-52-38.0101[GetAPIVersionHwLibrary]End
+2025-11-05 09-52-38.0101[EnumUSBDevices]Begin
+2025-11-05 09-52-38.0107[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-52-38.0108[EnumUSBDevices]End
+2025-11-05 09-53-08.0382[EnumUSBDevices]Begin
+2025-11-05 09-53-08.0389[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-53-08.0392[EnumUSBDevices]End
+2025-11-05 09-54-18.0091[]*****************************************
+2025-11-05 09-54-18.0099[]DLL Log Initialize. Verbosity: 6
+2025-11-05 09-54-18.0100[]*****************************************
+2025-11-05 09-54-18.0101[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-05 09-54-18.0103[]DLL Version: 1.07
+2025-11-05 09-54-18.0104[InitLibrary]Begin
+2025-11-05 09-54-18.0138[InitLibrary]Library SignID:00000101
+2025-11-05 09-54-18.0141[InitLibrary]Current SignID:00000101
+2025-11-05 09-54-18.0143[InitLibrary]End
+2025-11-05 09-54-18.0143[GetAPIVersionHwLibrary]Begin
+2025-11-05 09-54-18.0146[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-05 09-54-18.0146[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-05 09-54-18.0147[GetAPIVersionHwLibrary]End
+2025-11-05 09-54-18.0148[EnumUSBDevices]Begin
+2025-11-05 09-54-18.0154[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-54-18.0155[EnumUSBDevices]End
+2025-11-05 09-55-17.0711[EnumUSBDevices]Begin
+2025-11-05 09-55-17.0724[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-55-17.0727[EnumUSBDevices]End
+2025-11-05 09-57-42.0953[]*****************************************
+2025-11-05 09-57-42.0960[]DLL Log Initialize. Verbosity: 6
+2025-11-05 09-57-42.0961[]*****************************************
+2025-11-05 09-57-42.0961[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-05 09-57-42.0962[]DLL Version: 1.07
+2025-11-05 09-57-42.0962[InitLibrary]Begin
+2025-11-05 09-57-42.0984[InitLibrary]Library SignID:00000101
+2025-11-05 09-57-42.0984[InitLibrary]Current SignID:00000101
+2025-11-05 09-57-42.0985[InitLibrary]End
+2025-11-05 09-57-42.0985[GetAPIVersionHwLibrary]Begin
+2025-11-05 09-57-42.0988[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-05 09-57-42.0988[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-05 09-57-42.0989[GetAPIVersionHwLibrary]End
+2025-11-05 09-57-42.0989[EnumUSBDevices]Begin
+2025-11-05 09-57-42.0996[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-57-42.0997[EnumUSBDevices]End
+2025-11-05 09-58-39.0170[EnumUSBDevices]Begin
+2025-11-05 09-58-39.0176[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 09-58-39.0178[EnumUSBDevices]End
+2025-11-05 10-00-27.0552[]*****************************************
+2025-11-05 10-00-27.0558[]DLL Log Initialize. Verbosity: 6
+2025-11-05 10-00-27.0560[]*****************************************
+2025-11-05 10-00-27.0563[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-05 10-00-27.0565[]DLL Version: 1.07
+2025-11-05 10-00-27.0566[InitLibrary]Begin
+2025-11-05 10-00-27.0625[InitLibrary]Library SignID:00000101
+2025-11-05 10-00-27.0626[InitLibrary]Current SignID:00000101
+2025-11-05 10-00-27.0627[InitLibrary]End
+2025-11-05 10-00-27.0629[GetAPIVersionHwLibrary]Begin
+2025-11-05 10-00-27.0634[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-05 10-00-27.0635[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-05 10-00-27.0638[GetAPIVersionHwLibrary]End
+2025-11-05 10-00-27.0639[EnumUSBDevices]Begin
+2025-11-05 10-00-27.0652[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-00-27.0654[EnumUSBDevices]End
+2025-11-05 10-01-03.0587[EnumUSBDevices]Begin
+2025-11-05 10-01-03.0593[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-01-03.0595[EnumUSBDevices]End
+2025-11-05 10-01-15.0895[EnumUSBDevices]Begin
+2025-11-05 10-01-15.0903[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-01-15.0906[EnumUSBDevices]End
+2025-11-05 10-01-28.0178[EnumUSBDevices]Begin
+2025-11-05 10-01-28.0187[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-01-28.0189[EnumUSBDevices]End
+2025-11-05 10-01-40.0444[EnumUSBDevices]Begin
+2025-11-05 10-01-40.0453[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-01-40.0455[EnumUSBDevices]End
+2025-11-05 10-01-52.0721[EnumUSBDevices]Begin
+2025-11-05 10-01-52.0727[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-01-52.0728[EnumUSBDevices]End
+2025-11-05 10-02-04.0979[EnumUSBDevices]Begin
+2025-11-05 10-02-04.0987[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-02-04.0988[EnumUSBDevices]End
+2025-11-05 10-02-17.0247[EnumUSBDevices]Begin
+2025-11-05 10-02-17.0255[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-02-17.0256[EnumUSBDevices]End
+2025-11-05 10-02-29.0511[EnumUSBDevices]Begin
+2025-11-05 10-02-29.0520[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-02-29.0521[EnumUSBDevices]End
+2025-11-05 10-02-41.0777[EnumUSBDevices]Begin
+2025-11-05 10-02-41.0785[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-02-41.0786[EnumUSBDevices]End
+2025-11-05 10-02-54.0039[EnumUSBDevices]Begin
+2025-11-05 10-02-54.0053[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-02-54.0054[EnumUSBDevices]End
+2025-11-05 10-03-06.0337[EnumUSBDevices]Begin
+2025-11-05 10-03-06.0352[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-03-06.0352[EnumUSBDevices]End
+2025-11-05 10-03-18.0612[EnumUSBDevices]Begin
+2025-11-05 10-03-18.0632[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-03-18.0632[EnumUSBDevices]End
+2025-11-05 10-03-30.0913[EnumUSBDevices]Begin
+2025-11-05 10-03-30.0918[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-03-30.0918[EnumUSBDevices]End
+2025-11-05 10-03-43.0185[EnumUSBDevices]Begin
+2025-11-05 10-03-43.0197[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-03-43.0197[EnumUSBDevices]End
+2025-11-05 10-03-55.0468[EnumUSBDevices]Begin
+2025-11-05 10-03-55.0475[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-03-55.0475[EnumUSBDevices]End
+2025-11-05 10-04-07.0745[EnumUSBDevices]Begin
+2025-11-05 10-04-07.0759[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-04-07.0759[EnumUSBDevices]End
+2025-11-05 10-04-20.0033[EnumUSBDevices]Begin
+2025-11-05 10-04-20.0040[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-04-20.0040[EnumUSBDevices]End
+2025-11-05 10-04-32.0310[EnumUSBDevices]Begin
+2025-11-05 10-04-32.0321[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-04-32.0321[EnumUSBDevices]End
+2025-11-05 10-04-44.0588[EnumUSBDevices]Begin
+2025-11-05 10-04-44.0596[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-04-44.0599[EnumUSBDevices]End
+2025-11-05 10-04-56.0848[EnumUSBDevices]Begin
+2025-11-05 10-04-56.0863[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-04-56.0867[EnumUSBDevices]End
+2025-11-05 10-05-09.0130[EnumUSBDevices]Begin
+2025-11-05 10-05-09.0139[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-05-09.0139[EnumUSBDevices]End
+2025-11-05 10-05-21.0405[EnumUSBDevices]Begin
+2025-11-05 10-05-21.0412[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-05-21.0415[EnumUSBDevices]End
+2025-11-05 10-05-33.0695[EnumUSBDevices]Begin
+2025-11-05 10-05-33.0710[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-05-33.0710[EnumUSBDevices]End
+2025-11-05 10-05-45.0993[EnumUSBDevices]Begin
+2025-11-05 10-05-46.0002[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-05-46.0006[EnumUSBDevices]End
+2025-11-05 10-05-58.0260[EnumUSBDevices]Begin
+2025-11-05 10-05-58.0278[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-05-58.0278[EnumUSBDevices]End
+2025-11-05 10-06-10.0549[EnumUSBDevices]Begin
+2025-11-05 10-06-10.0561[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-06-10.0564[EnumUSBDevices]End
+2025-11-05 10-06-22.0827[EnumUSBDevices]Begin
+2025-11-05 10-06-22.0840[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-06-22.0840[EnumUSBDevices]End
+2025-11-05 10-06-35.0109[EnumUSBDevices]Begin
+2025-11-05 10-06-35.0118[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-06-35.0119[EnumUSBDevices]End
+2025-11-05 10-06-47.0377[EnumUSBDevices]Begin
+2025-11-05 10-06-47.0392[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-06-47.0392[EnumUSBDevices]End
+2025-11-05 10-06-59.0641[EnumUSBDevices]Begin
+2025-11-05 10-06-59.0659[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-06-59.0659[EnumUSBDevices]End
+2025-11-05 10-07-11.0942[EnumUSBDevices]Begin
+2025-11-05 10-07-11.0953[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-07-11.0955[EnumUSBDevices]End
+2025-11-05 10-07-24.0222[EnumUSBDevices]Begin
+2025-11-05 10-07-24.0234[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-07-24.0236[EnumUSBDevices]End
+2025-11-05 10-07-44.0709[EnumUSBDevices]Begin
+2025-11-05 10-07-44.0726[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-07-44.0726[EnumUSBDevices]End
+2025-11-05 10-08-01.0089[EnumUSBDevices]Begin
+2025-11-05 10-08-01.0100[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-08-01.0100[EnumUSBDevices]End
+2025-11-05 10-08-13.0358[EnumUSBDevices]Begin
+2025-11-05 10-08-13.0365[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-08-13.0365[EnumUSBDevices]End
+2025-11-05 10-08-25.0639[EnumUSBDevices]Begin
+2025-11-05 10-08-25.0639[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-08-25.0639[EnumUSBDevices]End
+2025-11-05 10-10-02.0670[EnumUSBDevices]Begin
+2025-11-05 10-10-02.0715[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-10-02.0717[EnumUSBDevices]End
+2025-11-05 10-10-14.0991[EnumUSBDevices]Begin
+2025-11-05 10-10-15.0001[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-10-15.0006[EnumUSBDevices]End
+2025-11-05 10-10-35.0483[EnumUSBDevices]Begin
+2025-11-05 10-10-35.0499[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-10-35.0500[EnumUSBDevices]End
+2025-11-05 10-10-51.0870[EnumUSBDevices]Begin
+2025-11-05 10-10-51.0889[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-10-51.0889[EnumUSBDevices]End
+2025-11-05 10-11-04.0146[EnumUSBDevices]Begin
+2025-11-05 10-11-04.0163[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-11-04.0163[EnumUSBDevices]End
+2025-11-05 10-11-16.0426[EnumUSBDevices]Begin
+2025-11-05 10-11-16.0432[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-11-16.0432[EnumUSBDevices]End
+2025-11-05 10-11-28.0715[EnumUSBDevices]Begin
+2025-11-05 10-11-28.0726[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-11-28.0726[EnumUSBDevices]End
+2025-11-05 10-11-40.0992[EnumUSBDevices]Begin
+2025-11-05 10-11-40.0999[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-11-41.0002[EnumUSBDevices]End
+2025-11-05 10-11-53.0260[EnumUSBDevices]Begin
+2025-11-05 10-11-53.0274[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-11-53.0277[EnumUSBDevices]End
+2025-11-05 10-12-05.0533[EnumUSBDevices]Begin
+2025-11-05 10-12-05.0545[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-12-05.0545[EnumUSBDevices]End
+2025-11-05 10-12-17.0825[EnumUSBDevices]Begin
+2025-11-05 10-12-17.0838[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-12-17.0838[EnumUSBDevices]End
+2025-11-05 10-12-30.0107[EnumUSBDevices]Begin
+2025-11-05 10-12-30.0111[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-12-30.0111[EnumUSBDevices]End
+2025-11-05 10-12-42.0392[EnumUSBDevices]Begin
+2025-11-05 10-12-42.0397[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-12-42.0397[EnumUSBDevices]End
+2025-11-05 10-12-54.0677[EnumUSBDevices]Begin
+2025-11-05 10-12-54.0681[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-12-54.0687[EnumUSBDevices]End
+2025-11-05 10-13-06.0950[EnumUSBDevices]Begin
+2025-11-05 10-13-06.0951[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-13-06.0951[EnumUSBDevices]End
+2025-11-05 10-13-19.0225[EnumUSBDevices]Begin
+2025-11-05 10-13-19.0235[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-13-19.0237[EnumUSBDevices]End
+2025-11-05 10-13-31.0497[EnumUSBDevices]Begin
+2025-11-05 10-13-31.0509[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-13-31.0509[EnumUSBDevices]End
+2025-11-05 10-13-43.0797[EnumUSBDevices]Begin
+2025-11-05 10-13-43.0804[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-13-43.0804[EnumUSBDevices]End
+2025-11-05 10-13-56.0068[EnumUSBDevices]Begin
+2025-11-05 10-13-56.0075[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-13-56.0075[EnumUSBDevices]End
+2025-11-05 10-14-08.0363[EnumUSBDevices]Begin
+2025-11-05 10-14-08.0371[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-14-08.0371[EnumUSBDevices]End
+2025-11-05 10-14-20.0644[EnumUSBDevices]Begin
+2025-11-05 10-14-20.0652[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-14-20.0652[EnumUSBDevices]End
+2025-11-05 10-14-32.0918[EnumUSBDevices]Begin
+2025-11-05 10-14-32.0922[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-14-32.0933[EnumUSBDevices]End
+2025-11-05 10-14-45.0214[EnumUSBDevices]Begin
+2025-11-05 10-14-45.0220[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-14-45.0220[EnumUSBDevices]End
+2025-11-05 10-14-57.0488[EnumUSBDevices]Begin
+2025-11-05 10-14-57.0501[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-14-57.0501[EnumUSBDevices]End
+2025-11-05 10-15-09.0780[EnumUSBDevices]Begin
+2025-11-05 10-15-09.0785[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-15-09.0792[EnumUSBDevices]End
+2025-11-05 10-15-22.0062[EnumUSBDevices]Begin
+2025-11-05 10-15-22.0071[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-15-22.0073[EnumUSBDevices]End
+2025-11-05 10-16-08.0736[EnumUSBDevices]Begin
+2025-11-05 10-16-08.0756[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-16-08.0757[EnumUSBDevices]End
+2025-11-05 10-16-25.0151[EnumUSBDevices]Begin
+2025-11-05 10-16-25.0163[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-16-25.0164[EnumUSBDevices]End
+2025-11-05 10-16-45.0643[EnumUSBDevices]Begin
+2025-11-05 10-16-45.0643[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-16-45.0643[EnumUSBDevices]End
+2025-11-05 10-16-57.0922[EnumUSBDevices]Begin
+2025-11-05 10-16-57.0928[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-16-57.0928[EnumUSBDevices]End
+2025-11-05 10-17-10.0212[EnumUSBDevices]Begin
+2025-11-05 10-17-10.0228[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-17-10.0228[EnumUSBDevices]End
+2025-11-05 10-17-22.0501[EnumUSBDevices]Begin
+2025-11-05 10-17-22.0522[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-17-22.0522[EnumUSBDevices]End
+2025-11-05 10-17-34.0805[EnumUSBDevices]Begin
+2025-11-05 10-17-34.0814[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-17-34.0814[EnumUSBDevices]End
+2025-11-05 10-17-47.0089[EnumUSBDevices]Begin
+2025-11-05 10-17-47.0096[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-17-47.0102[EnumUSBDevices]End
+2025-11-05 10-17-59.0379[EnumUSBDevices]Begin
+2025-11-05 10-17-59.0385[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-17-59.0385[EnumUSBDevices]End
+2025-11-05 10-18-11.0676[EnumUSBDevices]Begin
+2025-11-05 10-18-11.0683[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-18-11.0683[EnumUSBDevices]End
+2025-11-05 10-18-23.0966[EnumUSBDevices]Begin
+2025-11-05 10-18-23.0966[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-18-23.0982[EnumUSBDevices]End
+2025-11-05 10-18-36.0251[EnumUSBDevices]Begin
+2025-11-05 10-18-36.0257[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-18-36.0257[EnumUSBDevices]End
+2025-11-05 10-18-48.0521[EnumUSBDevices]Begin
+2025-11-05 10-18-48.0540[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-18-48.0540[EnumUSBDevices]End
+2025-11-05 10-19-00.0820[EnumUSBDevices]Begin
+2025-11-05 10-19-00.0832[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-19-00.0832[EnumUSBDevices]End
+2025-11-05 10-19-13.0091[EnumUSBDevices]Begin
+2025-11-05 10-19-13.0101[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-19-13.0101[EnumUSBDevices]End
+2025-11-05 10-19-25.0360[EnumUSBDevices]Begin
+2025-11-05 10-19-25.0380[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-19-25.0380[EnumUSBDevices]End
+2025-11-05 10-19-37.0644[EnumUSBDevices]Begin
+2025-11-05 10-19-37.0659[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-19-37.0659[EnumUSBDevices]End
+2025-11-05 10-20-02.0450[]*****************************************
+2025-11-05 10-20-02.0458[]DLL Log Initialize. Verbosity: 6
+2025-11-05 10-20-02.0459[]*****************************************
+2025-11-05 10-20-02.0459[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-05 10-20-02.0460[]DLL Version: 1.07
+2025-11-05 10-20-02.0460[InitLibrary]Begin
+2025-11-05 10-20-02.0484[InitLibrary]Library SignID:00000101
+2025-11-05 10-20-02.0485[InitLibrary]Current SignID:00000101
+2025-11-05 10-20-02.0486[InitLibrary]End
+2025-11-05 10-20-02.0487[GetAPIVersionHwLibrary]Begin
+2025-11-05 10-20-02.0489[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-05 10-20-02.0490[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-05 10-20-02.0490[GetAPIVersionHwLibrary]End
+2025-11-05 10-20-02.0491[EnumUSBDevices]Begin
+2025-11-05 10-20-02.0496[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-20-02.0498[EnumUSBDevices]End
+2025-11-05 10-20-35.0049[EnumUSBDevices]Begin
+2025-11-05 10-20-35.0055[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-20-35.0055[EnumUSBDevices]End
+2025-11-05 10-20-49.0943[EnumUSBDevices]Begin
+2025-11-05 10-20-49.0951[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-20-49.0959[EnumUSBDevices]End
+2025-11-05 10-20-56.0126[EnumUSBDevices]Begin
+2025-11-05 10-20-56.0135[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-20-56.0135[EnumUSBDevices]End
+2025-11-05 10-21-02.0272[EnumUSBDevices]Begin
+2025-11-05 10-21-02.0287[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-21-02.0287[EnumUSBDevices]End
+2025-11-05 10-21-08.0436[EnumUSBDevices]Begin
+2025-11-05 10-21-08.0448[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-21-08.0448[EnumUSBDevices]End
+2025-11-05 10-21-14.0594[EnumUSBDevices]Begin
+2025-11-05 10-21-14.0608[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-21-14.0608[EnumUSBDevices]End
+2025-11-05 10-21-20.0754[EnumUSBDevices]Begin
+2025-11-05 10-21-20.0754[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-21-20.0754[EnumUSBDevices]End
+2025-11-05 10-21-26.0911[EnumUSBDevices]Begin
+2025-11-05 10-21-26.0929[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-21-26.0932[EnumUSBDevices]End
+2025-11-05 10-21-33.0071[EnumUSBDevices]Begin
+2025-11-05 10-21-33.0081[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-21-33.0085[EnumUSBDevices]End
+2025-11-05 10-21-39.0224[EnumUSBDevices]Begin
+2025-11-05 10-21-39.0232[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-21-39.0235[EnumUSBDevices]End
+2025-11-05 10-21-45.0372[EnumUSBDevices]Begin
+2025-11-05 10-21-45.0381[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-21-45.0384[EnumUSBDevices]End
+2025-11-05 10-21-51.0522[EnumUSBDevices]Begin
+2025-11-05 10-21-51.0527[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-21-51.0527[EnumUSBDevices]End
+2025-11-05 10-21-57.0670[EnumUSBDevices]Begin
+2025-11-05 10-21-57.0674[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-21-57.0674[EnumUSBDevices]End
+2025-11-05 10-22-03.0823[EnumUSBDevices]Begin
+2025-11-05 10-22-03.0834[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-22-03.0834[EnumUSBDevices]End
+2025-11-05 10-22-09.0981[EnumUSBDevices]Begin
+2025-11-05 10-22-09.0989[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-22-09.0989[EnumUSBDevices]End
+2025-11-05 10-22-16.0129[EnumUSBDevices]Begin
+2025-11-05 10-22-16.0138[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-22-16.0142[EnumUSBDevices]End
+2025-11-05 10-22-22.0284[EnumUSBDevices]Begin
+2025-11-05 10-22-22.0288[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-22-22.0294[EnumUSBDevices]End
+2025-11-05 10-22-28.0427[EnumUSBDevices]Begin
+2025-11-05 10-22-28.0443[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-22-28.0443[EnumUSBDevices]End
+2025-11-05 10-22-34.0583[EnumUSBDevices]Begin
+2025-11-05 10-22-34.0599[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-22-34.0605[EnumUSBDevices]End
+2025-11-05 10-22-40.0738[EnumUSBDevices]Begin
+2025-11-05 10-22-40.0743[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-22-40.0743[EnumUSBDevices]End
+2025-11-05 10-22-46.0880[EnumUSBDevices]Begin
+2025-11-05 10-22-46.0890[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-22-46.0890[EnumUSBDevices]End
+2025-11-05 10-22-53.0030[EnumUSBDevices]Begin
+2025-11-05 10-22-53.0045[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-22-53.0047[EnumUSBDevices]End
+2025-11-05 10-22-59.0183[EnumUSBDevices]Begin
+2025-11-05 10-22-59.0197[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-22-59.0201[EnumUSBDevices]End
+2025-11-05 10-23-05.0333[EnumUSBDevices]Begin
+2025-11-05 10-23-05.0339[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-23-05.0339[EnumUSBDevices]End
+2025-11-05 10-23-11.0484[EnumUSBDevices]Begin
+2025-11-05 10-23-11.0490[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-23-11.0496[EnumUSBDevices]End
+2025-11-05 10-23-17.0641[EnumUSBDevices]Begin
+2025-11-05 10-23-17.0647[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-23-17.0647[EnumUSBDevices]End
+2025-11-05 10-23-23.0787[EnumUSBDevices]Begin
+2025-11-05 10-23-23.0800[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-23-23.0800[EnumUSBDevices]End
+2025-11-05 10-23-29.0927[EnumUSBDevices]Begin
+2025-11-05 10-23-29.0951[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-23-29.0951[EnumUSBDevices]End
+2025-11-05 10-23-36.0094[EnumUSBDevices]Begin
+2025-11-05 10-23-36.0103[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-23-36.0106[EnumUSBDevices]End
+2025-11-05 10-23-42.0247[EnumUSBDevices]Begin
+2025-11-05 10-23-42.0253[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-23-42.0253[EnumUSBDevices]End
+2025-11-05 10-23-48.0384[EnumUSBDevices]Begin
+2025-11-05 10-23-48.0396[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-23-48.0396[EnumUSBDevices]End
+2025-11-05 10-25-35.0983[EnumUSBDevices]Begin
+2025-11-05 10-25-36.0003[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-25-36.0003[EnumUSBDevices]End
+2025-11-05 10-25-42.0141[EnumUSBDevices]Begin
+2025-11-05 10-25-42.0148[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-25-42.0150[EnumUSBDevices]End
+2025-11-05 10-25-48.0286[EnumUSBDevices]Begin
+2025-11-05 10-25-48.0296[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-25-48.0298[EnumUSBDevices]End
+2025-11-05 10-25-58.0613[EnumUSBDevices]Begin
+2025-11-05 10-25-58.0623[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-25-58.0628[EnumUSBDevices]End
+2025-11-05 10-26-08.0855[EnumUSBDevices]Begin
+2025-11-05 10-26-08.0866[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-26-08.0874[EnumUSBDevices]End
+2025-11-05 10-26-19.0102[EnumUSBDevices]Begin
+2025-11-05 10-26-19.0120[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-26-19.0120[EnumUSBDevices]End
+2025-11-05 10-26-25.0252[EnumUSBDevices]Begin
+2025-11-05 10-26-25.0262[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-26-25.0262[EnumUSBDevices]End
+2025-11-05 10-26-31.0406[EnumUSBDevices]Begin
+2025-11-05 10-26-31.0413[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-26-31.0421[EnumUSBDevices]End
+2025-11-05 10-26-37.0564[EnumUSBDevices]Begin
+2025-11-05 10-26-37.0574[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-26-37.0574[EnumUSBDevices]End
+2025-11-05 10-26-43.0703[EnumUSBDevices]Begin
+2025-11-05 10-26-43.0714[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-26-43.0714[EnumUSBDevices]End
+2025-11-05 10-26-49.0840[EnumUSBDevices]Begin
+2025-11-05 10-26-49.0861[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-26-49.0861[EnumUSBDevices]End
+2025-11-05 10-26-56.0004[EnumUSBDevices]Begin
+2025-11-05 10-26-56.0008[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-26-56.0008[EnumUSBDevices]End
+2025-11-05 10-27-02.0157[EnumUSBDevices]Begin
+2025-11-05 10-27-02.0160[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-27-02.0160[EnumUSBDevices]End
+2025-11-05 10-27-08.0307[EnumUSBDevices]Begin
+2025-11-05 10-27-08.0322[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-27-08.0322[EnumUSBDevices]End
+2025-11-05 10-27-14.0451[EnumUSBDevices]Begin
+2025-11-05 10-27-14.0459[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-27-14.0463[EnumUSBDevices]End
+2025-11-05 10-27-20.0602[EnumUSBDevices]Begin
+2025-11-05 10-27-20.0608[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-27-20.0608[EnumUSBDevices]End
+2025-11-05 10-27-26.0750[EnumUSBDevices]Begin
+2025-11-05 10-27-26.0753[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-27-26.0753[EnumUSBDevices]End
+2025-11-05 10-27-32.0890[EnumUSBDevices]Begin
+2025-11-05 10-27-32.0905[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-27-32.0910[EnumUSBDevices]End
+2025-11-05 10-27-39.0055[EnumUSBDevices]Begin
+2025-11-05 10-27-39.0059[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-27-39.0059[EnumUSBDevices]End
+2025-11-05 10-27-45.0206[EnumUSBDevices]Begin
+2025-11-05 10-27-45.0217[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-27-45.0217[EnumUSBDevices]End
+2025-11-05 10-27-51.0365[EnumUSBDevices]Begin
+2025-11-05 10-27-51.0377[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-27-51.0377[EnumUSBDevices]End
+2025-11-05 10-27-57.0522[EnumUSBDevices]Begin
+2025-11-05 10-27-57.0531[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-27-57.0531[EnumUSBDevices]End
+2025-11-05 10-28-03.0665[EnumUSBDevices]Begin
+2025-11-05 10-28-03.0677[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-28-03.0677[EnumUSBDevices]End
+2025-11-05 10-28-09.0815[EnumUSBDevices]Begin
+2025-11-05 10-28-09.0828[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-28-09.0828[EnumUSBDevices]End
+2025-11-05 10-28-15.0978[EnumUSBDevices]Begin
+2025-11-05 10-28-15.0987[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-28-15.0987[EnumUSBDevices]End
+2025-11-05 10-28-22.0135[EnumUSBDevices]Begin
+2025-11-05 10-28-22.0144[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-28-22.0144[EnumUSBDevices]End
+2025-11-05 10-28-28.0277[EnumUSBDevices]Begin
+2025-11-05 10-28-28.0286[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-28-28.0288[EnumUSBDevices]End
+2025-11-05 10-28-34.0428[EnumUSBDevices]Begin
+2025-11-05 10-28-34.0437[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-28-34.0441[EnumUSBDevices]End
+2025-11-05 10-28-40.0573[EnumUSBDevices]Begin
+2025-11-05 10-28-40.0590[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-28-40.0590[EnumUSBDevices]End
+2025-11-05 10-28-46.0728[EnumUSBDevices]Begin
+2025-11-05 10-28-46.0736[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-28-46.0736[EnumUSBDevices]End
+2025-11-05 10-28-52.0883[EnumUSBDevices]Begin
+2025-11-05 10-28-52.0889[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-28-52.0893[EnumUSBDevices]End
+2025-11-05 10-28-59.0032[EnumUSBDevices]Begin
+2025-11-05 10-28-59.0041[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-28-59.0041[EnumUSBDevices]End
+2025-11-05 10-29-05.0174[EnumUSBDevices]Begin
+2025-11-05 10-29-05.0179[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-29-05.0179[EnumUSBDevices]End
+2025-11-05 10-29-11.0321[EnumUSBDevices]Begin
+2025-11-05 10-29-11.0332[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-29-11.0332[EnumUSBDevices]End
+2025-11-05 10-29-17.0473[EnumUSBDevices]Begin
+2025-11-05 10-29-17.0476[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-29-17.0476[EnumUSBDevices]End
+2025-11-05 10-29-23.0620[EnumUSBDevices]Begin
+2025-11-05 10-29-23.0633[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-29-23.0634[EnumUSBDevices]End
+2025-11-05 10-29-29.0775[EnumUSBDevices]Begin
+2025-11-05 10-29-29.0777[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-29-29.0777[EnumUSBDevices]End
+2025-11-05 10-29-35.0922[EnumUSBDevices]Begin
+2025-11-05 10-29-35.0935[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-29-35.0935[EnumUSBDevices]End
+2025-11-05 10-29-42.0073[EnumUSBDevices]Begin
+2025-11-05 10-29-42.0082[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-29-42.0082[EnumUSBDevices]End
+2025-11-05 10-29-48.0215[EnumUSBDevices]Begin
+2025-11-05 10-29-48.0221[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-29-48.0221[EnumUSBDevices]End
+2025-11-05 10-29-54.0373[EnumUSBDevices]Begin
+2025-11-05 10-29-54.0384[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-29-54.0384[EnumUSBDevices]End
+2025-11-05 10-30-00.0535[EnumUSBDevices]Begin
+2025-11-05 10-30-00.0563[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-30-00.0567[EnumUSBDevices]End
+2025-11-05 10-30-06.0712[EnumUSBDevices]Begin
+2025-11-05 10-30-06.0724[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-30-06.0725[EnumUSBDevices]End
+2025-11-05 10-30-12.0853[EnumUSBDevices]Begin
+2025-11-05 10-30-12.0858[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-30-12.0858[EnumUSBDevices]End
+2025-11-05 10-30-30.0955[]*****************************************
+2025-11-05 10-30-30.0965[]DLL Log Initialize. Verbosity: 6
+2025-11-05 10-30-30.0965[]*****************************************
+2025-11-05 10-30-30.0965[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-05 10-30-30.0966[]DLL Version: 1.07
+2025-11-05 10-30-30.0967[InitLibrary]Begin
+2025-11-05 10-30-30.0988[InitLibrary]Library SignID:00000101
+2025-11-05 10-30-30.0989[InitLibrary]Current SignID:00000101
+2025-11-05 10-30-30.0989[InitLibrary]End
+2025-11-05 10-30-30.0990[GetAPIVersionHwLibrary]Begin
+2025-11-05 10-30-30.0992[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-05 10-30-30.0992[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-05 10-30-30.0993[GetAPIVersionHwLibrary]End
+2025-11-05 10-30-30.0993[EnumUSBDevices]Begin
+2025-11-05 10-30-31.0000[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-30-31.0001[EnumUSBDevices]End
+2025-11-05 10-31-01.0023[EnumUSBDevices]Begin
+2025-11-05 10-31-01.0028[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-31-01.0029[EnumUSBDevices]End
+2025-11-05 10-31-07.0309[EnumUSBDevices]Begin
+2025-11-05 10-31-07.0316[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-31-07.0318[EnumUSBDevices]End
+2025-11-05 10-31-13.0452[EnumUSBDevices]Begin
+2025-11-05 10-31-13.0462[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-31-13.0464[EnumUSBDevices]End
+2025-11-05 10-31-19.0594[EnumUSBDevices]Begin
+2025-11-05 10-31-19.0600[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-31-19.0600[EnumUSBDevices]End
+2025-11-05 10-31-20.0608[EnumUSBDevices]Begin
+2025-11-05 10-31-20.0617[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-31-20.0618[EnumUSBDevices]End
+2025-11-05 10-31-21.0626[EnumUSBDevices]Begin
+2025-11-05 10-31-21.0636[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-31-21.0637[EnumUSBDevices]End
+2025-11-05 10-31-30.0976[EnumUSBDevices]Begin
+2025-11-05 10-31-30.0984[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-31-30.0985[EnumUSBDevices]End
+2025-11-05 10-31-40.0245[EnumUSBDevices]Begin
+2025-11-05 10-31-40.0254[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-31-40.0255[EnumUSBDevices]End
+2025-11-05 10-31-47.0098[EnumUSBDevices]Begin
+2025-11-05 10-31-47.0106[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-31-47.0107[EnumUSBDevices]End
+2025-11-05 10-31-54.0027[EnumUSBDevices]Begin
+2025-11-05 10-31-54.0036[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-31-54.0037[EnumUSBDevices]End
+2025-11-05 10-32-01.0481[EnumUSBDevices]Begin
+2025-11-05 10-32-01.0490[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-32-01.0491[EnumUSBDevices]End
+2025-11-05 10-32-07.0621[EnumUSBDevices]Begin
+2025-11-05 10-32-07.0630[EnumUSBDevices]Found 0 USB Devices
+2025-11-05 10-32-07.0631[EnumUSBDevices]End

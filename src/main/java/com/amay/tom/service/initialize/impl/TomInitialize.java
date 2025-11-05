@@ -542,7 +542,6 @@ public class TomInitialize implements ITomInitialize {
                 this.updateUI(progress, "SCU monitoring service set.");
 
                 this.peripheralDeviceStatus();
-                agent.getThreadPool().getScheduler().scheduleAtFixedRate(agent.getPeripheralMonitor(),0,5,TimeUnit.SECONDS);
                 progress += 0.03;
                 this.updateUI(progress, "Peripheral status pushed.");
                 this.addMaintenanceDeviceListener(agent.getPeripheralMonitor(), agent.getMaintenanceRepository());

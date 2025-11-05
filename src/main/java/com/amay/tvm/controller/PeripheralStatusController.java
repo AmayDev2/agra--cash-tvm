@@ -76,7 +76,7 @@ public class PeripheralStatusController {
                 int idx=0;
                 for(Peripherals peripherals : Peripherals.values()){
                     periStatusInfoObservableList.get(idx++).getStatus().set(
-                            mDeviceStatQus[peripherals.getIndex()]>0?
+                            mDeviceStatus[peripherals.getIndex()]>0?
                                     ConnectionStatus.CONNECTED.name():
                                     ConnectionStatus.DISCONNECTED.name());
                 }
