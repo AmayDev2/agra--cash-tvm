@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -23,15 +24,31 @@
     </rowConstraints>
    <Label styleClass="maintenance-label-heading" text="BNR Test" GridPane.columnSpan="2147483647" />
 
-    <Button fx:id="cashEndButton" onAction="#onCashInEnd" prefHeight="39.0" prefWidth="190.0" styleClass="navigatorButton" text="Cash End" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+    <Button fx:id="cashEndButton" onAction="#onCashInEnd" stylesheets="@styles.css" text="Cash End" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+      <styleClass>
+         <String fx:value="curve-edge-button" />
+         <String fx:value="navigatorButton" />
+      </styleClass></Button>
 
-    <Button fx:id="rolloutButton" onAction="#onRollback" prefHeight="39.0" prefWidth="190.0" styleClass="navigatorButton" text="Rollout" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+    <Button fx:id="rolloutButton" onAction="#onRollback" stylesheets="@styles.css" text="Rollout" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+      <styleClass>
+         <String fx:value="curve-edge-button" />
+         <String fx:value="navigatorButton" />
+      </styleClass></Button>
 
     <!-- Buttons Row -->
-    <Button fx:id="cashInButton" onAction="#onCashInStart" prefHeight="39.0" prefWidth="190.0" styleClass="navigatorButton" text="Cash In Start" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+    <Button fx:id="cashInButton" onAction="#onCashInStart" stylesheets="@styles.css" text="Cash In Start" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+      <styleClass>
+         <String fx:value="curve-edge-button" />
+         <String fx:value="navigatorButton" />
+      </styleClass></Button>
 
-    <Button fx:id="cancelButton" onAction="#onCancel" prefHeight="39.0" prefWidth="190.0" styleClass="navigatorButton" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-   <Button fx:id="backButton" mnemonicParsing="false" onAction="#onBack" prefHeight="39.0" prefWidth="150.0" styleClass="backButton" text="Back" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+    <Button fx:id="cancelButton" onAction="#onCancel" stylesheets="@styles.css" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+      <styleClass>
+         <String fx:value="curve-edge-button" />
+         <String fx:value="navigatorButton" />
+      </styleClass></Button>
+   <Button fx:id="backButton" mnemonicParsing="false" onAction="#onBack" styleClass="backButton" stylesheets="@styles.css" text="Back" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" GridPane.valignment="CENTER">
       <GridPane.margin>
          <Insets />
       </GridPane.margin></Button>
