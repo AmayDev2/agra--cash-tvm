@@ -192,7 +192,7 @@ public class PrinterService implements PrinterInterface {
             Logger.tag(LoggerTag.APP).debug("Printer status : {}",cudev.GetPrinterFullStatus());
             return cudev.GetPrinterFullStatus();
         } catch (Exception e) {
-            e.printStackTrace();
+            Logger.tag(LoggerTag.APP).error("Printer Error : {}", Arrays.stream(e.getStackTrace()).toList());
         }
 
         return null;

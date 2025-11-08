@@ -22,8 +22,7 @@ import javax.print.PrintServiceLookup;
 import java.awt.*;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 import java.util.List;
 
 public class PeripheralMonitor implements Runnable {
@@ -57,7 +56,7 @@ public class PeripheralMonitor implements Runnable {
     private final GrpcApiListener ccuGrpcApiListener;
     private final GrpcApiListener grpcApiListener;
 
-    private final List<DeviceStatusListener> listeners = new ArrayList<>();
+    private final Set<DeviceStatusListener> listeners = new HashSet<>();
 
     public PeripheralMonitor(GrpcApiListener ccuGrpcApiListener, GrpcApiListener grpcApiListener) {
         this.ccuGrpcApiListener= ccuGrpcApiListener;
@@ -65,9 +64,9 @@ public class PeripheralMonitor implements Runnable {
     }
 
     public void addDeviceStatusListener(DeviceStatusListener listener) {
+        if(listeners.contains(listener))return;
         Logger.tag(LoggerTag.APP).debug("Adding device status listener {} {}", listener, this);
         listeners.add(listener);
-
     }
 
 
@@ -94,8 +93,8 @@ public class PeripheralMonitor implements Runnable {
         upos_connected=isUposConnected();
         reader_connected=isReaderConnected();
 
-        deviceStatus[0] = door_closed ? 1 : 0;
-        deviceStatus[1] = printer_connected ? 1 : 1;
+        deviceStatus[0] = door_closed ? 1 : 1;
+        deviceStatus[1] = printer_connected ? 1 : 0;
         deviceStatus[2] = scu_connected ? 1 : 0;
         deviceStatus[3] = ccu_connected ? 1 : 0;
         deviceStatus[4] = reader_connected ? 1 : 0;

@@ -85,15 +85,6 @@ public class SCUPushService implements PushService {
         Logger.debug("All push operations completed successfully: {}", isSuccess.get());
         adjustedTicketsRepository.pushTickets(listOfAdjusts,CHANAL);
 
-
-
-
-
-
-
-
-
-
         // 4- push adjusted, refunded, canceled, replaced on scu
 //        AdjustedTicketRepository adjustedTicketRepository = agent.getAdjustedTicketRepository();
 //        List<AdjustedTicketDto> adjustedTickets = adjustedTicketRepository.findAllQRTicketsFrom(Timestamp.from(Instant.now().minus(Duration.ofHours(200))));
@@ -208,7 +199,7 @@ public class SCUPushService implements PushService {
                 } catch (Exception e) {
                     Logger.error("Error pushing ticket issue info to SCU: {}", e.getMessage(), e);
                 }
-            },agent.getThreadPool().getFixedThreadPool()));
+            },agent.getThreadPool().getSingleThread()));
 
 
         }
@@ -234,7 +225,7 @@ public class SCUPushService implements PushService {
                 } catch (Exception e) {
                     Logger.error("Error pushing ticket issue info to SCU: {}", e.getMessage(), e);
                 }
-            },agent.getThreadPool().getFixedThreadPool()));
+            },agent.getThreadPool().getSingleThread()));
 
 
         }
@@ -261,7 +252,7 @@ public class SCUPushService implements PushService {
                 } catch (Exception e) {
                     Logger.error("Error pushing ticket issue info to SCU: {}", e.getMessage(), e);
                 }
-            },agent.getThreadPool().getFixedThreadPool()));
+            },agent.getThreadPool().getSingleThread()));
 
 
         }

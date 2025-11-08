@@ -308,9 +308,10 @@ public class ShiftServiceImpl implements ShiftService {
 
             });
 
-            agent.getCoinAmountRepository().findAll().stream().forEach(coinAmount -> {
+            agent.getCoinAmountRepository().findAll().forEach(coinAmount -> {
                 agent.getAmountSnapShotRepository().save(CoinAmountMapper.toSnapshot(coinAmount,shift.getShiftId()));
             });
+
             shiftRepository.endShift(ShiftMapper.toDto(shift)); //TODO: get complete shift
             Logger.tag(LoggerTag.APP).debug("EOS : " + shift.toString());
             //notify to scu
@@ -649,18 +650,9 @@ public class ShiftServiceImpl implements ShiftService {
         String shiftEndTime= endTime.get();
         try {
 
-//            List<AmountSnapShotEntity> amountSnapShotEntityList=agent.getAmountSnapShotRepository().findAll().stream().filter(x->x.getShiftId().equals(shiftId)).toList();
-
-//            List<FinanceOperationEntity> financeOperationEntityBnrDeposit = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.BNR_DEPOSIT.name());
-//            List<FinanceOperationEntity> financeOperationEntityBnrDispense = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.BNR_DISPENSE.name());
-            List<FinanceOperationEntity> financeOperationEntityCoinDispense = agent.getFinanceOperationRepository().getByShiftIdAndOperationType(agent.getShift().getShiftId(), FinanceOperation.COIN_DISPENSE.name());
-
-//            CoinLoadedReport coinDispenseReport = FinanceOperationMapper.toCoinLoadedReport(shift, FinanceOperation.COIN_DISPENSE, financeOperationEntityCoinDispense);
-
             //ensure both are from same shift
             BNRLoadUnload bnrLoadUnloadReport= AmountSnapshotMapper.toBNRLoadUnload(amountSnapShotEntityList);
             CoinLoadedReport coinDispenseReport=AmountSnapshotMapper.toCoinLoadUnload(amountSnapShotEntityList);
-//            BNRLoadUnload bnrDepositReport =FinanceOperationMapper.toBNRDepositDispense( financeOperationEntityBnrDeposit,financeOperationEntityBnrDispense);
 
             PrinterCommandDispatcher.INSTANCE.printText(
                     ShiftReportData.builder()

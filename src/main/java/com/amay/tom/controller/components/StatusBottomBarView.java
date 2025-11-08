@@ -83,6 +83,14 @@ public class StatusBottomBarView {
         this.handler=handler;
     }
 
+    public void pauseListener(){
+        peripheralMonitor.removeDeviceStatusListener(uiDeviceListener);
+    }
+
+    public void resumeListener(){
+        peripheralMonitor.addDeviceStatusListener(uiDeviceListener);
+    }
+
     private void setPeripheralStatus(Button button, boolean isActive) {
         Logger.debug("Setting peripheral status: {} {}", button, isActive);
         if (isActive) {

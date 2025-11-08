@@ -86,6 +86,7 @@ public class TVMController {
         idealTimeOut=15;
         Logger.tag(LoggerTag.APP).debug("Ideal Timeout {}",idealTimeOut);
         inactivityTimer= new PauseTransition(Duration.seconds(idealTimeOut));
+        inactivityTimer.setOnFinished(e -> navigateToHomeScreen());
     }
 
     public void CleanUp(){
@@ -120,8 +121,8 @@ public class TVMController {
                     // apply current mode
                     setOperationMode(this.agent.getDeviceStatus().getCurrentStatus());
                     //UPS check
-                    this.checkUPSStatus(this.agent.getPeripheralMonitor().isUps_connected()
-                            && this.agent.getPeripheralMonitor().isUps_on());
+//                    this.checkUPSStatus(this.agent.getPeripheralMonitor().isUps_connected()
+//                            && this.agent.getPeripheralMonitor().isUps_on());
                 }else{
                     if(count<4)setTimeout(); else inactivityTimer.stop();
                     this.hideBottomBarView();
@@ -162,8 +163,6 @@ public class TVMController {
 
     private void setTimeout() {
         inactivityTimer.playFromStart();
-        inactivityTimer.setOnFinished(e -> navigateToHomeScreen());
-        inactivityTimer.play();
     }
 
     private void navigateToHomeScreen() {
@@ -174,6 +173,7 @@ public class TVMController {
 
     private void showBottomBarView() {
         if (borderPane.getBottom() != null) {
+            statusBottomBarView.resumeListener();
             borderPane.getBottom().setVisible(true);
             borderPane.getBottom().setManaged(true);
         }
@@ -181,6 +181,7 @@ public class TVMController {
 
     private void hideBottomBarView() {
         if (borderPane.getBottom() != null) {
+            statusBottomBarView.pauseListener();
             borderPane.getBottom().setVisible(false);
             borderPane.getBottom().setManaged(false);
         }
