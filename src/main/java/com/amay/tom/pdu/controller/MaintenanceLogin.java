@@ -104,7 +104,8 @@ public class MaintenanceLogin {
 
     @FXML
     private void initialize() {
-        usernameField.setText("UPMRC");
+        usernameField.setText("" +
+                "UPMRC");
 
         usernameField.textProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue.length() < 5) {

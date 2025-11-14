@@ -5142,3 +5142,823 @@
 2025-11-14 14-34-22.0096[EnumUSBDevices]Begin
 2025-11-14 14-34-22.0101[EnumUSBDevices]Found 0 USB Devices
 2025-11-14 14-34-22.0101[EnumUSBDevices]End
+2025-11-14 14-54-48.0840[]*****************************************
+2025-11-14 14-54-48.0843[]DLL Log Initialize. Verbosity: 6
+2025-11-14 14-54-48.0844[]*****************************************
+2025-11-14 14-54-48.0845[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-14 14-54-48.0846[]DLL Version: 1.07
+2025-11-14 14-54-48.0847[InitLibrary]Begin
+2025-11-14 14-54-48.0894[InitLibrary]Library SignID:00000101
+2025-11-14 14-54-48.0894[InitLibrary]Current SignID:00000101
+2025-11-14 14-54-48.0895[InitLibrary]End
+2025-11-14 14-54-48.0895[GetAPIVersionHwLibrary]Begin
+2025-11-14 14-54-48.0897[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-14 14-54-48.0897[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-14 14-54-48.0899[GetAPIVersionHwLibrary]End
+2025-11-14 14-54-48.0900[EnumUSBDevices]Begin
+2025-11-14 14-54-48.0905[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-54-48.0905[EnumUSBDevices]End
+2025-11-14 14-55-02.0915[EnumUSBDevices]Begin
+2025-11-14 14-55-02.0922[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-55-02.0923[EnumUSBDevices]End
+2025-11-14 14-55-07.0901[EnumUSBDevices]Begin
+2025-11-14 14-55-07.0910[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-55-07.0910[EnumUSBDevices]End
+2025-11-14 14-55-12.0901[EnumUSBDevices]Begin
+2025-11-14 14-55-12.0908[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-55-12.0909[EnumUSBDevices]End
+2025-11-14 14-55-17.0901[EnumUSBDevices]Begin
+2025-11-14 14-55-17.0908[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-55-17.0909[EnumUSBDevices]End
+2025-11-14 14-55-22.0900[EnumUSBDevices]Begin
+2025-11-14 14-55-22.0906[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-55-22.0906[EnumUSBDevices]End
+2025-11-14 14-55-27.0906[EnumUSBDevices]Begin
+2025-11-14 14-55-27.0914[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-55-27.0914[EnumUSBDevices]End
+2025-11-14 14-55-32.0900[EnumUSBDevices]Begin
+2025-11-14 14-55-32.0905[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-55-32.0905[EnumUSBDevices]End
+2025-11-14 14-55-37.0900[EnumUSBDevices]Begin
+2025-11-14 14-55-37.0908[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-55-37.0908[EnumUSBDevices]End
+2025-11-14 14-55-42.0898[EnumUSBDevices]Begin
+2025-11-14 14-55-42.0904[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-55-42.0905[EnumUSBDevices]End
+2025-11-14 14-55-47.0901[EnumUSBDevices]Begin
+2025-11-14 14-55-47.0908[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-55-47.0909[EnumUSBDevices]End
+2025-11-14 14-55-52.0898[EnumUSBDevices]Begin
+2025-11-14 14-55-52.0907[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-55-52.0907[EnumUSBDevices]End
+2025-11-14 14-55-57.0900[EnumUSBDevices]Begin
+2025-11-14 14-55-57.0904[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-55-57.0905[EnumUSBDevices]End
+2025-11-14 14-56-02.0900[EnumUSBDevices]Begin
+2025-11-14 14-56-02.0909[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-56-02.0910[EnumUSBDevices]End
+2025-11-14 14-56-07.0900[EnumUSBDevices]Begin
+2025-11-14 14-56-07.0908[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-56-07.0909[EnumUSBDevices]End
+2025-11-14 14-56-12.0899[EnumUSBDevices]Begin
+2025-11-14 14-56-12.0905[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-56-12.0907[EnumUSBDevices]End
+2025-11-14 14-56-17.0899[EnumUSBDevices]Begin
+2025-11-14 14-56-17.0906[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-56-17.0907[EnumUSBDevices]End
+2025-11-14 14-56-22.0903[EnumUSBDevices]Begin
+2025-11-14 14-56-22.0911[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-56-22.0912[EnumUSBDevices]End
+2025-11-14 14-56-27.0899[EnumUSBDevices]Begin
+2025-11-14 14-56-27.0908[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-56-27.0909[EnumUSBDevices]End
+2025-11-14 14-56-32.0899[EnumUSBDevices]Begin
+2025-11-14 14-56-32.0907[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-56-32.0908[EnumUSBDevices]End
+2025-11-14 14-56-37.0899[EnumUSBDevices]Begin
+2025-11-14 14-56-37.0908[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-56-37.0908[EnumUSBDevices]End
+2025-11-14 14-56-42.0899[EnumUSBDevices]Begin
+2025-11-14 14-56-42.0907[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-56-42.0907[EnumUSBDevices]End
+2025-11-14 14-56-47.0899[EnumUSBDevices]Begin
+2025-11-14 14-56-47.0908[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-56-47.0909[EnumUSBDevices]End
+2025-11-14 14-56-52.0899[EnumUSBDevices]Begin
+2025-11-14 14-56-52.0907[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-56-52.0907[EnumUSBDevices]End
+2025-11-14 14-56-57.0900[EnumUSBDevices]Begin
+2025-11-14 14-56-57.0906[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-56-57.0907[EnumUSBDevices]End
+2025-11-14 14-57-02.0898[EnumUSBDevices]Begin
+2025-11-14 14-57-02.0903[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-57-02.0903[EnumUSBDevices]End
+2025-11-14 14-57-07.0899[EnumUSBDevices]Begin
+2025-11-14 14-57-07.0903[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-57-07.0904[EnumUSBDevices]End
+2025-11-14 14-57-12.0898[EnumUSBDevices]Begin
+2025-11-14 14-57-12.0904[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-57-12.0905[EnumUSBDevices]End
+2025-11-14 14-57-17.0900[EnumUSBDevices]Begin
+2025-11-14 14-57-17.0908[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-57-17.0908[EnumUSBDevices]End
+2025-11-14 14-57-22.0900[EnumUSBDevices]Begin
+2025-11-14 14-57-22.0905[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-57-22.0906[EnumUSBDevices]End
+2025-11-14 14-57-31.0764[]*****************************************
+2025-11-14 14-57-31.0766[]DLL Log Initialize. Verbosity: 6
+2025-11-14 14-57-31.0768[]*****************************************
+2025-11-14 14-57-31.0769[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-14 14-57-31.0769[]DLL Version: 1.07
+2025-11-14 14-57-31.0770[InitLibrary]Begin
+2025-11-14 14-57-31.0797[InitLibrary]Library SignID:00000101
+2025-11-14 14-57-31.0799[InitLibrary]Current SignID:00000101
+2025-11-14 14-57-31.0799[InitLibrary]End
+2025-11-14 14-57-31.0799[GetAPIVersionHwLibrary]Begin
+2025-11-14 14-57-31.0802[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-14 14-57-31.0803[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-14 14-57-31.0803[GetAPIVersionHwLibrary]End
+2025-11-14 14-57-31.0803[EnumUSBDevices]Begin
+2025-11-14 14-57-31.0809[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-57-31.0810[EnumUSBDevices]End
+2025-11-14 14-57-45.0516[EnumUSBDevices]Begin
+2025-11-14 14-57-45.0518[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-57-45.0518[EnumUSBDevices]End
+2025-11-14 14-57-50.0504[EnumUSBDevices]Begin
+2025-11-14 14-57-50.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-57-50.0514[EnumUSBDevices]End
+2025-11-14 14-57-55.0508[EnumUSBDevices]Begin
+2025-11-14 14-57-55.0515[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-57-55.0516[EnumUSBDevices]End
+2025-11-14 14-58-00.0503[EnumUSBDevices]Begin
+2025-11-14 14-58-00.0507[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-58-00.0508[EnumUSBDevices]End
+2025-11-14 14-58-05.0506[EnumUSBDevices]Begin
+2025-11-14 14-58-05.0511[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-58-05.0512[EnumUSBDevices]End
+2025-11-14 14-58-10.0506[EnumUSBDevices]Begin
+2025-11-14 14-58-10.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-58-10.0515[EnumUSBDevices]End
+2025-11-14 14-58-15.0504[EnumUSBDevices]Begin
+2025-11-14 14-58-15.0507[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-58-15.0508[EnumUSBDevices]End
+2025-11-14 14-58-20.0505[EnumUSBDevices]Begin
+2025-11-14 14-58-20.0508[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-58-20.0509[EnumUSBDevices]End
+2025-11-14 14-58-25.0506[EnumUSBDevices]Begin
+2025-11-14 14-58-25.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-58-25.0514[EnumUSBDevices]End
+2025-11-14 14-58-30.0507[EnumUSBDevices]Begin
+2025-11-14 14-58-30.0515[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-58-30.0516[EnumUSBDevices]End
+2025-11-14 14-58-35.0507[EnumUSBDevices]Begin
+2025-11-14 14-58-35.0515[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-58-35.0515[EnumUSBDevices]End
+2025-11-14 14-58-40.0508[EnumUSBDevices]Begin
+2025-11-14 14-58-40.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-58-40.0514[EnumUSBDevices]End
+2025-11-14 14-58-45.0504[EnumUSBDevices]Begin
+2025-11-14 14-58-45.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-58-45.0514[EnumUSBDevices]End
+2025-11-14 14-58-50.0504[EnumUSBDevices]Begin
+2025-11-14 14-58-50.0512[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-58-50.0513[EnumUSBDevices]End
+2025-11-14 14-58-55.0506[EnumUSBDevices]Begin
+2025-11-14 14-58-55.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-58-55.0515[EnumUSBDevices]End
+2025-11-14 14-59-00.0505[EnumUSBDevices]Begin
+2025-11-14 14-59-00.0511[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-59-00.0512[EnumUSBDevices]End
+2025-11-14 14-59-05.0506[EnumUSBDevices]Begin
+2025-11-14 14-59-05.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-59-05.0514[EnumUSBDevices]End
+2025-11-14 14-59-10.0506[EnumUSBDevices]Begin
+2025-11-14 14-59-10.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-59-10.0515[EnumUSBDevices]End
+2025-11-14 14-59-15.0505[EnumUSBDevices]Begin
+2025-11-14 14-59-15.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-59-15.0515[EnumUSBDevices]End
+2025-11-14 14-59-20.0506[EnumUSBDevices]Begin
+2025-11-14 14-59-20.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-59-20.0514[EnumUSBDevices]End
+2025-11-14 14-59-25.0506[EnumUSBDevices]Begin
+2025-11-14 14-59-25.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-59-25.0515[EnumUSBDevices]End
+2025-11-14 14-59-30.0504[EnumUSBDevices]Begin
+2025-11-14 14-59-30.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-59-30.0514[EnumUSBDevices]End
+2025-11-14 14-59-35.0504[EnumUSBDevices]Begin
+2025-11-14 14-59-35.0512[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-59-35.0513[EnumUSBDevices]End
+2025-11-14 14-59-40.0505[EnumUSBDevices]Begin
+2025-11-14 14-59-40.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-59-40.0514[EnumUSBDevices]End
+2025-11-14 14-59-45.0504[EnumUSBDevices]Begin
+2025-11-14 14-59-45.0509[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-59-45.0509[EnumUSBDevices]End
+2025-11-14 14-59-50.0507[EnumUSBDevices]Begin
+2025-11-14 14-59-50.0515[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-59-50.0515[EnumUSBDevices]End
+2025-11-14 14-59-55.0505[EnumUSBDevices]Begin
+2025-11-14 14-59-55.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 14-59-55.0515[EnumUSBDevices]End
+2025-11-14 15-00-00.0506[EnumUSBDevices]Begin
+2025-11-14 15-00-00.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-00-00.0514[EnumUSBDevices]End
+2025-11-14 15-00-05.0507[EnumUSBDevices]Begin
+2025-11-14 15-00-05.0515[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-00-05.0516[EnumUSBDevices]End
+2025-11-14 15-00-10.0504[EnumUSBDevices]Begin
+2025-11-14 15-00-10.0511[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-00-10.0511[EnumUSBDevices]End
+2025-11-14 15-00-15.0504[EnumUSBDevices]Begin
+2025-11-14 15-00-15.0512[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-00-15.0512[EnumUSBDevices]End
+2025-11-14 15-00-20.0507[EnumUSBDevices]Begin
+2025-11-14 15-00-20.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-00-20.0515[EnumUSBDevices]End
+2025-11-14 15-00-25.0505[EnumUSBDevices]Begin
+2025-11-14 15-00-25.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-00-25.0513[EnumUSBDevices]End
+2025-11-14 15-00-30.0505[EnumUSBDevices]Begin
+2025-11-14 15-00-30.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-00-30.0513[EnumUSBDevices]End
+2025-11-14 15-00-35.0504[EnumUSBDevices]Begin
+2025-11-14 15-00-35.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-00-35.0514[EnumUSBDevices]End
+2025-11-14 15-00-40.0505[EnumUSBDevices]Begin
+2025-11-14 15-00-40.0511[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-00-40.0511[EnumUSBDevices]End
+2025-11-14 15-00-45.0506[EnumUSBDevices]Begin
+2025-11-14 15-00-45.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-00-45.0514[EnumUSBDevices]End
+2025-11-14 15-00-50.0507[EnumUSBDevices]Begin
+2025-11-14 15-00-50.0515[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-00-50.0516[EnumUSBDevices]End
+2025-11-14 15-00-55.0506[EnumUSBDevices]Begin
+2025-11-14 15-00-55.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-00-55.0513[EnumUSBDevices]End
+2025-11-14 15-01-00.0507[EnumUSBDevices]Begin
+2025-11-14 15-01-00.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-01-00.0513[EnumUSBDevices]End
+2025-11-14 15-01-05.0504[EnumUSBDevices]Begin
+2025-11-14 15-01-05.0512[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-01-05.0512[EnumUSBDevices]End
+2025-11-14 15-01-10.0506[EnumUSBDevices]Begin
+2025-11-14 15-01-10.0512[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-01-10.0512[EnumUSBDevices]End
+2025-11-14 15-01-15.0506[EnumUSBDevices]Begin
+2025-11-14 15-01-15.0512[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-01-15.0513[EnumUSBDevices]End
+2025-11-14 15-01-20.0506[EnumUSBDevices]Begin
+2025-11-14 15-01-20.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-01-20.0513[EnumUSBDevices]End
+2025-11-14 15-01-25.0505[EnumUSBDevices]Begin
+2025-11-14 15-01-25.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-01-25.0514[EnumUSBDevices]End
+2025-11-14 15-01-30.0505[EnumUSBDevices]Begin
+2025-11-14 15-01-30.0511[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-01-30.0513[EnumUSBDevices]End
+2025-11-14 15-01-35.0505[EnumUSBDevices]Begin
+2025-11-14 15-01-35.0510[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-01-35.0510[EnumUSBDevices]End
+2025-11-14 15-01-40.0505[EnumUSBDevices]Begin
+2025-11-14 15-01-40.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-01-40.0513[EnumUSBDevices]End
+2025-11-14 15-01-45.0505[EnumUSBDevices]Begin
+2025-11-14 15-01-45.0511[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-01-45.0512[EnumUSBDevices]End
+2025-11-14 15-01-50.0506[EnumUSBDevices]Begin
+2025-11-14 15-01-50.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-01-50.0515[EnumUSBDevices]End
+2025-11-14 15-01-55.0505[EnumUSBDevices]Begin
+2025-11-14 15-01-55.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-01-55.0514[EnumUSBDevices]End
+2025-11-14 15-02-00.0505[EnumUSBDevices]Begin
+2025-11-14 15-02-00.0511[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-02-00.0512[EnumUSBDevices]End
+2025-11-14 15-02-05.0505[EnumUSBDevices]Begin
+2025-11-14 15-02-05.0512[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-02-05.0512[EnumUSBDevices]End
+2025-11-14 15-02-10.0504[EnumUSBDevices]Begin
+2025-11-14 15-02-10.0512[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-02-10.0512[EnumUSBDevices]End
+2025-11-14 15-02-15.0504[EnumUSBDevices]Begin
+2025-11-14 15-02-15.0512[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-02-15.0512[EnumUSBDevices]End
+2025-11-14 15-02-20.0505[EnumUSBDevices]Begin
+2025-11-14 15-02-20.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-02-20.0513[EnumUSBDevices]End
+2025-11-14 15-02-25.0504[EnumUSBDevices]Begin
+2025-11-14 15-02-25.0510[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-02-25.0510[EnumUSBDevices]End
+2025-11-14 15-02-30.0504[EnumUSBDevices]Begin
+2025-11-14 15-02-30.0512[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-02-30.0512[EnumUSBDevices]End
+2025-11-14 15-02-35.0504[EnumUSBDevices]Begin
+2025-11-14 15-02-35.0509[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-02-35.0509[EnumUSBDevices]End
+2025-11-14 15-02-40.0504[EnumUSBDevices]Begin
+2025-11-14 15-02-40.0511[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-02-40.0511[EnumUSBDevices]End
+2025-11-14 15-02-45.0507[EnumUSBDevices]Begin
+2025-11-14 15-02-45.0516[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-02-45.0516[EnumUSBDevices]End
+2025-11-14 15-02-50.0503[EnumUSBDevices]Begin
+2025-11-14 15-02-50.0506[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-02-50.0507[EnumUSBDevices]End
+2025-11-14 15-02-55.0507[EnumUSBDevices]Begin
+2025-11-14 15-02-55.0515[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-02-55.0516[EnumUSBDevices]End
+2025-11-14 15-03-00.0505[EnumUSBDevices]Begin
+2025-11-14 15-03-00.0512[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-03-00.0513[EnumUSBDevices]End
+2025-11-14 15-03-05.0506[EnumUSBDevices]Begin
+2025-11-14 15-03-05.0515[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-03-05.0515[EnumUSBDevices]End
+2025-11-14 15-03-10.0506[EnumUSBDevices]Begin
+2025-11-14 15-03-10.0517[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-03-10.0517[EnumUSBDevices]End
+2025-11-14 15-03-15.0505[EnumUSBDevices]Begin
+2025-11-14 15-03-15.0511[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-03-15.0512[EnumUSBDevices]End
+2025-11-14 15-03-20.0504[EnumUSBDevices]Begin
+2025-11-14 15-03-20.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-03-20.0513[EnumUSBDevices]End
+2025-11-14 15-03-25.0504[EnumUSBDevices]Begin
+2025-11-14 15-03-25.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-03-25.0515[EnumUSBDevices]End
+2025-11-14 15-03-30.0504[EnumUSBDevices]Begin
+2025-11-14 15-03-30.0515[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-03-30.0516[EnumUSBDevices]End
+2025-11-14 15-03-35.0503[EnumUSBDevices]Begin
+2025-11-14 15-03-35.0510[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-03-35.0511[EnumUSBDevices]End
+2025-11-14 15-03-40.0505[EnumUSBDevices]Begin
+2025-11-14 15-03-40.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-03-40.0514[EnumUSBDevices]End
+2025-11-14 15-03-45.0505[EnumUSBDevices]Begin
+2025-11-14 15-03-45.0508[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-03-45.0508[EnumUSBDevices]End
+2025-11-14 15-03-50.0502[EnumUSBDevices]Begin
+2025-11-14 15-03-50.0508[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-03-50.0508[EnumUSBDevices]End
+2025-11-14 15-03-55.0506[EnumUSBDevices]Begin
+2025-11-14 15-03-55.0515[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-03-55.0515[EnumUSBDevices]End
+2025-11-14 15-04-00.0507[EnumUSBDevices]Begin
+2025-11-14 15-04-00.0512[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-04-00.0512[EnumUSBDevices]End
+2025-11-14 15-05-47.0139[EnumUSBDevices]Begin
+2025-11-14 15-05-47.0147[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-05-47.0148[EnumUSBDevices]End
+2025-11-14 15-05-49.0155[EnumUSBDevices]Begin
+2025-11-14 15-05-49.0158[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-05-49.0158[EnumUSBDevices]End
+2025-11-14 15-05-50.0161[EnumUSBDevices]Begin
+2025-11-14 15-05-50.0164[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-05-50.0165[EnumUSBDevices]End
+2025-11-14 15-05-51.0167[EnumUSBDevices]Begin
+2025-11-14 15-05-51.0170[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-05-51.0170[EnumUSBDevices]End
+2025-11-14 15-05-52.0174[EnumUSBDevices]Begin
+2025-11-14 15-05-52.0179[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-05-52.0179[EnumUSBDevices]End
+2025-11-14 15-05-53.0183[EnumUSBDevices]Begin
+2025-11-14 15-05-53.0192[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-05-53.0192[EnumUSBDevices]End
+2025-11-14 15-05-54.0195[EnumUSBDevices]Begin
+2025-11-14 15-05-54.0199[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-05-54.0200[EnumUSBDevices]End
+2025-11-14 15-05-55.0202[EnumUSBDevices]Begin
+2025-11-14 15-05-55.0212[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-05-55.0212[EnumUSBDevices]End
+2025-11-14 15-05-56.0214[EnumUSBDevices]Begin
+2025-11-14 15-05-56.0219[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-05-56.0220[EnumUSBDevices]End
+2025-11-14 15-05-57.0223[EnumUSBDevices]Begin
+2025-11-14 15-05-57.0230[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-05-57.0231[EnumUSBDevices]End
+2025-11-14 15-05-58.0235[EnumUSBDevices]Begin
+2025-11-14 15-05-58.0241[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-05-58.0241[EnumUSBDevices]End
+2025-11-14 15-05-59.0245[EnumUSBDevices]Begin
+2025-11-14 15-05-59.0253[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-05-59.0254[EnumUSBDevices]End
+2025-11-14 15-06-00.0256[EnumUSBDevices]Begin
+2025-11-14 15-06-00.0266[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-00.0267[EnumUSBDevices]End
+2025-11-14 15-06-01.0271[EnumUSBDevices]Begin
+2025-11-14 15-06-01.0283[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-01.0283[EnumUSBDevices]End
+2025-11-14 15-06-02.0285[EnumUSBDevices]Begin
+2025-11-14 15-06-02.0292[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-02.0292[EnumUSBDevices]End
+2025-11-14 15-06-03.0296[EnumUSBDevices]Begin
+2025-11-14 15-06-03.0306[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-03.0306[EnumUSBDevices]End
+2025-11-14 15-06-04.0310[EnumUSBDevices]Begin
+2025-11-14 15-06-04.0314[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-04.0314[EnumUSBDevices]End
+2025-11-14 15-06-05.0316[EnumUSBDevices]Begin
+2025-11-14 15-06-05.0321[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-05.0322[EnumUSBDevices]End
+2025-11-14 15-06-06.0323[EnumUSBDevices]Begin
+2025-11-14 15-06-06.0328[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-06.0328[EnumUSBDevices]End
+2025-11-14 15-06-07.0331[EnumUSBDevices]Begin
+2025-11-14 15-06-07.0344[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-07.0345[EnumUSBDevices]End
+2025-11-14 15-06-08.0349[EnumUSBDevices]Begin
+2025-11-14 15-06-08.0357[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-08.0357[EnumUSBDevices]End
+2025-11-14 15-06-09.0359[EnumUSBDevices]Begin
+2025-11-14 15-06-09.0362[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-09.0362[EnumUSBDevices]End
+2025-11-14 15-06-10.0366[EnumUSBDevices]Begin
+2025-11-14 15-06-10.0375[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-10.0375[EnumUSBDevices]End
+2025-11-14 15-06-11.0378[EnumUSBDevices]Begin
+2025-11-14 15-06-11.0391[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-11.0391[EnumUSBDevices]End
+2025-11-14 15-06-12.0395[EnumUSBDevices]Begin
+2025-11-14 15-06-12.0405[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-12.0406[EnumUSBDevices]End
+2025-11-14 15-06-13.0408[EnumUSBDevices]Begin
+2025-11-14 15-06-13.0418[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-13.0419[EnumUSBDevices]End
+2025-11-14 15-06-15.0503[EnumUSBDevices]Begin
+2025-11-14 15-06-15.0509[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-15.0509[EnumUSBDevices]End
+2025-11-14 15-06-20.0504[EnumUSBDevices]Begin
+2025-11-14 15-06-20.0510[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-20.0511[EnumUSBDevices]End
+2025-11-14 15-06-25.0505[EnumUSBDevices]Begin
+2025-11-14 15-06-25.0510[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-25.0511[EnumUSBDevices]End
+2025-11-14 15-06-30.0503[EnumUSBDevices]Begin
+2025-11-14 15-06-30.0511[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-30.0512[EnumUSBDevices]End
+2025-11-14 15-06-35.0505[EnumUSBDevices]Begin
+2025-11-14 15-06-35.0515[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-35.0515[EnumUSBDevices]End
+2025-11-14 15-06-40.0507[EnumUSBDevices]Begin
+2025-11-14 15-06-40.0515[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-40.0515[EnumUSBDevices]End
+2025-11-14 15-06-45.0504[EnumUSBDevices]Begin
+2025-11-14 15-06-45.0516[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-45.0517[EnumUSBDevices]End
+2025-11-14 15-06-50.0505[EnumUSBDevices]Begin
+2025-11-14 15-06-50.0511[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-50.0512[EnumUSBDevices]End
+2025-11-14 15-06-55.0504[EnumUSBDevices]Begin
+2025-11-14 15-06-55.0517[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-06-55.0518[EnumUSBDevices]End
+2025-11-14 15-07-00.0503[EnumUSBDevices]Begin
+2025-11-14 15-07-00.0506[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-07-00.0506[EnumUSBDevices]End
+2025-11-14 15-07-05.0505[EnumUSBDevices]Begin
+2025-11-14 15-07-05.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-07-05.0515[EnumUSBDevices]End
+2025-11-14 15-07-10.0506[EnumUSBDevices]Begin
+2025-11-14 15-07-10.0516[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-07-10.0516[EnumUSBDevices]End
+2025-11-14 15-07-15.0506[EnumUSBDevices]Begin
+2025-11-14 15-07-15.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-07-15.0515[EnumUSBDevices]End
+2025-11-14 15-07-20.0504[EnumUSBDevices]Begin
+2025-11-14 15-07-20.0507[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-07-20.0508[EnumUSBDevices]End
+2025-11-14 15-07-25.0503[EnumUSBDevices]Begin
+2025-11-14 15-07-25.0511[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-07-25.0512[EnumUSBDevices]End
+2025-11-14 15-07-30.0505[EnumUSBDevices]Begin
+2025-11-14 15-07-30.0516[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-07-30.0518[EnumUSBDevices]End
+2025-11-14 15-07-35.0505[EnumUSBDevices]Begin
+2025-11-14 15-07-35.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-07-35.0514[EnumUSBDevices]End
+2025-11-14 15-07-40.0504[EnumUSBDevices]Begin
+2025-11-14 15-07-40.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-07-40.0514[EnumUSBDevices]End
+2025-11-14 15-07-45.0503[EnumUSBDevices]Begin
+2025-11-14 15-07-45.0512[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-07-45.0512[EnumUSBDevices]End
+2025-11-14 15-07-50.0516[EnumUSBDevices]Begin
+2025-11-14 15-07-50.0524[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-07-50.0524[EnumUSBDevices]End
+2025-11-14 15-07-55.0504[EnumUSBDevices]Begin
+2025-11-14 15-07-55.0509[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-07-55.0510[EnumUSBDevices]End
+2025-11-14 15-08-00.0506[EnumUSBDevices]Begin
+2025-11-14 15-08-00.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-08-00.0515[EnumUSBDevices]End
+2025-11-14 15-08-05.0504[EnumUSBDevices]Begin
+2025-11-14 15-08-05.0516[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-08-05.0516[EnumUSBDevices]End
+2025-11-14 15-08-10.0506[EnumUSBDevices]Begin
+2025-11-14 15-08-10.0516[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-08-10.0516[EnumUSBDevices]End
+2025-11-14 15-08-15.0505[EnumUSBDevices]Begin
+2025-11-14 15-08-15.0515[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-08-15.0516[EnumUSBDevices]End
+2025-11-14 15-08-20.0506[EnumUSBDevices]Begin
+2025-11-14 15-08-20.0516[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-08-20.0517[EnumUSBDevices]End
+2025-11-14 15-08-25.0508[EnumUSBDevices]Begin
+2025-11-14 15-08-25.0517[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-08-25.0517[EnumUSBDevices]End
+2025-11-14 15-08-30.0505[EnumUSBDevices]Begin
+2025-11-14 15-08-30.0510[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-08-30.0510[EnumUSBDevices]End
+2025-11-14 15-08-35.0504[EnumUSBDevices]Begin
+2025-11-14 15-08-35.0511[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-08-35.0511[EnumUSBDevices]End
+2025-11-14 15-08-40.0505[EnumUSBDevices]Begin
+2025-11-14 15-08-40.0512[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-08-40.0513[EnumUSBDevices]End
+2025-11-14 15-08-45.0504[EnumUSBDevices]Begin
+2025-11-14 15-08-45.0510[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-08-45.0511[EnumUSBDevices]End
+2025-11-14 15-08-50.0504[EnumUSBDevices]Begin
+2025-11-14 15-08-50.0511[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-08-50.0512[EnumUSBDevices]End
+2025-11-14 15-08-55.0528[EnumUSBDevices]Begin
+2025-11-14 15-08-55.0541[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-08-55.0542[EnumUSBDevices]End
+2025-11-14 15-09-00.0528[EnumUSBDevices]Begin
+2025-11-14 15-09-00.0535[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-09-00.0536[EnumUSBDevices]End
+2025-11-14 15-09-05.0518[EnumUSBDevices]Begin
+2025-11-14 15-09-05.0527[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-09-05.0528[EnumUSBDevices]End
+2025-11-14 15-09-10.0522[EnumUSBDevices]Begin
+2025-11-14 15-09-10.0534[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-09-10.0535[EnumUSBDevices]End
+2025-11-14 15-09-15.0518[EnumUSBDevices]Begin
+2025-11-14 15-09-15.0529[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-09-15.0529[EnumUSBDevices]End
+2025-11-14 15-09-20.0517[EnumUSBDevices]Begin
+2025-11-14 15-09-20.0529[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-09-20.0531[EnumUSBDevices]End
+2025-11-14 15-09-25.0527[EnumUSBDevices]Begin
+2025-11-14 15-09-25.0535[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-09-25.0536[EnumUSBDevices]End
+2025-11-14 15-09-30.0528[EnumUSBDevices]Begin
+2025-11-14 15-09-30.0538[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-09-30.0539[EnumUSBDevices]End
+2025-11-14 15-09-35.0506[EnumUSBDevices]Begin
+2025-11-14 15-09-35.0516[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-09-35.0517[EnumUSBDevices]End
+2025-11-14 15-09-40.0523[EnumUSBDevices]Begin
+2025-11-14 15-09-40.0535[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-09-40.0536[EnumUSBDevices]End
+2025-11-14 15-09-45.0518[EnumUSBDevices]Begin
+2025-11-14 15-09-45.0531[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-09-45.0532[EnumUSBDevices]End
+2025-11-14 15-09-50.0520[EnumUSBDevices]Begin
+2025-11-14 15-09-50.0555[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-09-50.0556[EnumUSBDevices]End
+2025-11-14 15-09-55.0532[EnumUSBDevices]Begin
+2025-11-14 15-09-55.0541[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-09-55.0542[EnumUSBDevices]End
+2025-11-14 15-10-00.0528[EnumUSBDevices]Begin
+2025-11-14 15-10-00.0545[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-10-00.0546[EnumUSBDevices]End
+2025-11-14 15-10-05.0524[EnumUSBDevices]Begin
+2025-11-14 15-10-05.0536[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-10-05.0537[EnumUSBDevices]End
+2025-11-14 15-10-10.0525[EnumUSBDevices]Begin
+2025-11-14 15-10-10.0537[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-10-10.0538[EnumUSBDevices]End
+2025-11-14 15-10-15.0512[EnumUSBDevices]Begin
+2025-11-14 15-10-15.0521[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-10-15.0522[EnumUSBDevices]End
+2025-11-14 15-10-20.0527[EnumUSBDevices]Begin
+2025-11-14 15-10-20.0540[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-10-20.0542[EnumUSBDevices]End
+2025-11-14 15-10-25.0513[EnumUSBDevices]Begin
+2025-11-14 15-10-25.0527[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-10-25.0528[EnumUSBDevices]End
+2025-11-14 15-10-30.0519[EnumUSBDevices]Begin
+2025-11-14 15-10-30.0532[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-10-30.0536[EnumUSBDevices]End
+2025-11-14 15-10-35.0518[EnumUSBDevices]Begin
+2025-11-14 15-10-35.0526[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-10-35.0526[EnumUSBDevices]End
+2025-11-14 15-10-40.0509[EnumUSBDevices]Begin
+2025-11-14 15-10-40.0518[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-10-40.0519[EnumUSBDevices]End
+2025-11-14 15-10-45.0504[EnumUSBDevices]Begin
+2025-11-14 15-10-45.0509[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-10-45.0509[EnumUSBDevices]End
+2025-11-14 15-10-50.0505[EnumUSBDevices]Begin
+2025-11-14 15-10-50.0510[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-10-50.0510[EnumUSBDevices]End
+2025-11-14 15-10-55.0505[EnumUSBDevices]Begin
+2025-11-14 15-10-55.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-10-55.0514[EnumUSBDevices]End
+2025-11-14 15-11-00.0508[EnumUSBDevices]Begin
+2025-11-14 15-11-00.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-11-00.0514[EnumUSBDevices]End
+2025-11-14 15-11-05.0506[EnumUSBDevices]Begin
+2025-11-14 15-11-05.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-11-05.0515[EnumUSBDevices]End
+2025-11-14 15-11-10.0505[EnumUSBDevices]Begin
+2025-11-14 15-11-10.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-11-10.0514[EnumUSBDevices]End
+2025-11-14 15-11-15.0505[EnumUSBDevices]Begin
+2025-11-14 15-11-15.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-11-15.0515[EnumUSBDevices]End
+2025-11-14 15-11-20.0506[EnumUSBDevices]Begin
+2025-11-14 15-11-20.0517[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-11-20.0518[EnumUSBDevices]End
+2025-11-14 15-11-25.0504[EnumUSBDevices]Begin
+2025-11-14 15-11-25.0509[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-11-25.0510[EnumUSBDevices]End
+2025-11-14 15-11-30.0506[EnumUSBDevices]Begin
+2025-11-14 15-11-30.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-11-30.0514[EnumUSBDevices]End
+2025-11-14 15-11-35.0505[EnumUSBDevices]Begin
+2025-11-14 15-11-35.0508[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-11-35.0509[EnumUSBDevices]End
+2025-11-14 15-11-40.0505[EnumUSBDevices]Begin
+2025-11-14 15-11-40.0508[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-11-40.0509[EnumUSBDevices]End
+2025-11-14 15-11-45.0503[EnumUSBDevices]Begin
+2025-11-14 15-11-45.0511[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-11-45.0513[EnumUSBDevices]End
+2025-11-14 15-11-50.0505[EnumUSBDevices]Begin
+2025-11-14 15-11-50.0508[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-11-50.0508[EnumUSBDevices]End
+2025-11-14 15-11-55.0504[EnumUSBDevices]Begin
+2025-11-14 15-11-55.0508[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-11-55.0509[EnumUSBDevices]End
+2025-11-14 15-12-00.0506[EnumUSBDevices]Begin
+2025-11-14 15-12-00.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-12-00.0515[EnumUSBDevices]End
+2025-11-14 15-12-05.0506[EnumUSBDevices]Begin
+2025-11-14 15-12-05.0510[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-12-05.0511[EnumUSBDevices]End
+2025-11-14 15-12-10.0505[EnumUSBDevices]Begin
+2025-11-14 15-12-10.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-12-10.0513[EnumUSBDevices]End
+2025-11-14 15-12-15.0505[EnumUSBDevices]Begin
+2025-11-14 15-12-15.0516[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-12-15.0516[EnumUSBDevices]End
+2025-11-14 15-12-20.0505[EnumUSBDevices]Begin
+2025-11-14 15-12-20.0512[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-12-20.0513[EnumUSBDevices]End
+2025-11-14 15-12-25.0504[EnumUSBDevices]Begin
+2025-11-14 15-12-25.0512[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-12-25.0513[EnumUSBDevices]End
+2025-11-14 15-12-30.0505[EnumUSBDevices]Begin
+2025-11-14 15-12-30.0512[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-12-30.0513[EnumUSBDevices]End
+2025-11-14 15-12-35.0505[EnumUSBDevices]Begin
+2025-11-14 15-12-35.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-12-35.0514[EnumUSBDevices]End
+2025-11-14 15-12-40.0507[EnumUSBDevices]Begin
+2025-11-14 15-12-40.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-12-40.0513[EnumUSBDevices]End
+2025-11-14 15-12-45.0508[EnumUSBDevices]Begin
+2025-11-14 15-12-45.0520[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-12-45.0520[EnumUSBDevices]End
+2025-11-14 15-12-50.0505[EnumUSBDevices]Begin
+2025-11-14 15-12-50.0512[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-12-50.0512[EnumUSBDevices]End
+2025-11-14 15-12-55.0505[EnumUSBDevices]Begin
+2025-11-14 15-12-55.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-12-55.0514[EnumUSBDevices]End
+2025-11-14 15-13-00.0505[EnumUSBDevices]Begin
+2025-11-14 15-13-00.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-13-00.0517[EnumUSBDevices]End
+2025-11-14 15-13-05.0506[EnumUSBDevices]Begin
+2025-11-14 15-13-05.0515[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-13-05.0516[EnumUSBDevices]End
+2025-11-14 15-13-10.0507[EnumUSBDevices]Begin
+2025-11-14 15-13-10.0522[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-13-10.0523[EnumUSBDevices]End
+2025-11-14 15-13-15.0505[EnumUSBDevices]Begin
+2025-11-14 15-13-15.0515[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-13-15.0516[EnumUSBDevices]End
+2025-11-14 15-13-20.0505[EnumUSBDevices]Begin
+2025-11-14 15-13-20.0519[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-13-20.0520[EnumUSBDevices]End
+2025-11-14 15-13-25.0505[EnumUSBDevices]Begin
+2025-11-14 15-13-25.0518[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-13-25.0518[EnumUSBDevices]End
+2025-11-14 15-13-30.0506[EnumUSBDevices]Begin
+2025-11-14 15-13-30.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-13-30.0514[EnumUSBDevices]End
+2025-11-14 15-13-35.0505[EnumUSBDevices]Begin
+2025-11-14 15-13-35.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-13-35.0514[EnumUSBDevices]End
+2025-11-14 15-13-40.0505[EnumUSBDevices]Begin
+2025-11-14 15-13-40.0515[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-13-40.0516[EnumUSBDevices]End
+2025-11-14 15-13-45.0504[EnumUSBDevices]Begin
+2025-11-14 15-13-45.0510[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-13-45.0510[EnumUSBDevices]End
+2025-11-14 15-13-50.0505[EnumUSBDevices]Begin
+2025-11-14 15-13-50.0517[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-13-50.0518[EnumUSBDevices]End
+2025-11-14 15-13-55.0505[EnumUSBDevices]Begin
+2025-11-14 15-13-55.0514[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-13-55.0515[EnumUSBDevices]End
+2025-11-14 15-14-00.0503[EnumUSBDevices]Begin
+2025-11-14 15-14-00.0509[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-14-00.0509[EnumUSBDevices]End
+2025-11-14 15-14-05.0503[EnumUSBDevices]Begin
+2025-11-14 15-14-05.0508[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-14-05.0508[EnumUSBDevices]End
+2025-11-14 15-14-10.0504[EnumUSBDevices]Begin
+2025-11-14 15-14-10.0510[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-14-10.0510[EnumUSBDevices]End
+2025-11-14 15-14-15.0507[EnumUSBDevices]Begin
+2025-11-14 15-14-15.0516[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-14-15.0520[EnumUSBDevices]End
+2025-11-14 15-14-20.0505[EnumUSBDevices]Begin
+2025-11-14 15-14-20.0521[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-14-20.0521[EnumUSBDevices]End
+2025-11-14 15-14-25.0505[EnumUSBDevices]Begin
+2025-11-14 15-14-25.0511[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-14-25.0511[EnumUSBDevices]End
+2025-11-14 15-14-30.0505[EnumUSBDevices]Begin
+2025-11-14 15-14-30.0520[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-14-30.0522[EnumUSBDevices]End
+2025-11-14 15-14-35.0505[EnumUSBDevices]Begin
+2025-11-14 15-14-35.0510[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-14-35.0510[EnumUSBDevices]End
+2025-11-14 15-14-40.0509[EnumUSBDevices]Begin
+2025-11-14 15-14-40.0516[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-14-40.0516[EnumUSBDevices]End
+2025-11-14 15-14-45.0508[EnumUSBDevices]Begin
+2025-11-14 15-14-45.0518[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-14-45.0518[EnumUSBDevices]End
+2025-11-14 15-14-50.0503[EnumUSBDevices]Begin
+2025-11-14 15-14-50.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-14-50.0515[EnumUSBDevices]End
+2025-11-14 15-14-55.0503[EnumUSBDevices]Begin
+2025-11-14 15-14-55.0506[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-14-55.0506[EnumUSBDevices]End
+2025-11-14 15-15-00.0507[EnumUSBDevices]Begin
+2025-11-14 15-15-00.0516[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-15-00.0517[EnumUSBDevices]End
+2025-11-14 15-15-05.0503[EnumUSBDevices]Begin
+2025-11-14 15-15-05.0512[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-15-05.0513[EnumUSBDevices]End
+2025-11-14 15-15-10.0504[EnumUSBDevices]Begin
+2025-11-14 15-15-10.0513[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-15-10.0514[EnumUSBDevices]End
+2025-11-14 15-15-22.0734[]*****************************************
+2025-11-14 15-15-22.0736[]DLL Log Initialize. Verbosity: 6
+2025-11-14 15-15-22.0736[]*****************************************
+2025-11-14 15-15-22.0737[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-14 15-15-22.0737[]DLL Version: 1.07
+2025-11-14 15-15-22.0738[InitLibrary]Begin
+2025-11-14 15-15-22.0780[InitLibrary]Library SignID:00000101
+2025-11-14 15-15-22.0780[InitLibrary]Current SignID:00000101
+2025-11-14 15-15-22.0782[InitLibrary]End
+2025-11-14 15-15-22.0782[GetAPIVersionHwLibrary]Begin
+2025-11-14 15-15-22.0784[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-14 15-15-22.0785[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-14 15-15-22.0785[GetAPIVersionHwLibrary]End
+2025-11-14 15-15-22.0786[EnumUSBDevices]Begin
+2025-11-14 15-15-22.0792[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-15-22.0793[EnumUSBDevices]End
+2025-11-14 15-15-36.0477[EnumUSBDevices]Begin
+2025-11-14 15-15-36.0483[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-15-36.0483[EnumUSBDevices]End
+2025-11-14 15-15-41.0467[EnumUSBDevices]Begin
+2025-11-14 15-15-41.0474[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-15-41.0475[EnumUSBDevices]End
+2025-11-14 15-15-46.0464[EnumUSBDevices]Begin
+2025-11-14 15-15-46.0468[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-15-46.0469[EnumUSBDevices]End
+2025-11-14 15-16-54.0380[]*****************************************
+2025-11-14 15-16-54.0382[]DLL Log Initialize. Verbosity: 6
+2025-11-14 15-16-54.0383[]*****************************************
+2025-11-14 15-16-54.0386[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-14 15-16-54.0387[]DLL Version: 1.07
+2025-11-14 15-16-54.0390[InitLibrary]Begin
+2025-11-14 15-16-54.0435[InitLibrary]Library SignID:00000101
+2025-11-14 15-16-54.0436[InitLibrary]Current SignID:00000101
+2025-11-14 15-16-54.0437[InitLibrary]End
+2025-11-14 15-16-54.0438[GetAPIVersionHwLibrary]Begin
+2025-11-14 15-16-54.0440[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-14 15-16-54.0441[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-14 15-16-54.0441[GetAPIVersionHwLibrary]End
+2025-11-14 15-16-54.0442[EnumUSBDevices]Begin
+2025-11-14 15-16-54.0449[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-16-54.0451[EnumUSBDevices]End
+2025-11-14 15-17-08.0186[EnumUSBDevices]Begin
+2025-11-14 15-17-08.0193[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-17-08.0193[EnumUSBDevices]End
+2025-11-14 15-17-13.0178[EnumUSBDevices]Begin
+2025-11-14 15-17-13.0188[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-17-13.0189[EnumUSBDevices]End
+2025-11-14 15-17-18.0181[EnumUSBDevices]Begin
+2025-11-14 15-17-18.0189[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-17-18.0190[EnumUSBDevices]End
+2025-11-14 15-17-23.0177[EnumUSBDevices]Begin
+2025-11-14 15-17-23.0181[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-17-23.0181[EnumUSBDevices]End
+2025-11-14 15-17-28.0177[EnumUSBDevices]Begin
+2025-11-14 15-17-28.0179[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-17-28.0180[EnumUSBDevices]End
+2025-11-14 15-17-33.0178[EnumUSBDevices]Begin
+2025-11-14 15-17-33.0184[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-17-33.0184[EnumUSBDevices]End
+2025-11-14 15-17-38.0180[EnumUSBDevices]Begin
+2025-11-14 15-17-38.0184[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-17-38.0185[EnumUSBDevices]End
+2025-11-14 15-17-43.0177[EnumUSBDevices]Begin
+2025-11-14 15-17-43.0183[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-17-43.0183[EnumUSBDevices]End
+2025-11-14 15-17-48.0179[EnumUSBDevices]Begin
+2025-11-14 15-17-48.0186[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-17-48.0187[EnumUSBDevices]End
+2025-11-14 15-17-53.0177[EnumUSBDevices]Begin
+2025-11-14 15-17-53.0182[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-17-53.0183[EnumUSBDevices]End

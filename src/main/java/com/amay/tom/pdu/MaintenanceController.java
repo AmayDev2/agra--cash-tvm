@@ -6,6 +6,7 @@ import com.amay.tom.controller.DataSync;
 import com.amay.tom.controller.MaintenanceImportExport;
 import com.amay.tom.model.session.Shift;
 import com.amay.tom.model.session.ShiftMapper;
+import com.amay.tom.model.user.entity.UserPrivilege;
 import com.amay.tom.pdu.controller.MoneyManageController;
 import com.amay.tom.pdu.controller.ReportController;
 import com.amay.tom.pdu.controller.SystemInfoController;
@@ -37,6 +38,8 @@ public class MaintenanceController {
     private final Agent agent;
     private final SceneManager sceneManager;
     @FXML
+    private Button moneyManagementButton;
+    @FXML
     private GridPane root;
     @FXML
     private Button systemInfo;
@@ -49,6 +52,8 @@ public class MaintenanceController {
     }
     @FXML
     private void initialize() {
+        UserPrivilege privilege=agent.getUserPrivilege();
+        moneyManagementButton.setDisable(!(privilege.isCoinRefill() || privilege.isCoinDumping() && !privilege.isBnrCashAdd()));
         FocusUtil.configureFocus(systemInfo,logout);
     }
 

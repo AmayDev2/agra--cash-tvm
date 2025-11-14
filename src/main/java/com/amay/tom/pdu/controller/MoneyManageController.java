@@ -48,10 +48,10 @@ public class MoneyManageController {
     }
     @FXML
     private void initialize(){
-        UserPrivilege privilege=agent.getUserPrivilege();
-        coinButton.setDisable(!(privilege.isCoinRefill() || privilege.isCoinDumping()));
-        bnrButton.setDisable(!privilege.isBnrCashAdd());           // If no BNR access → disable
-        reportsButton.setDisable(!privilege.isImportAndExport());
+//        UserPrivilege privilege=agent.getUserPrivilege();
+//        coinButton.setDisable(!(privilege.isCoinRefill() || privilege.isCoinDumping()));
+//        bnrButton.setDisable(!privilege.isBnrCashAdd());           // If no BNR access → disable
+//        reportsButton.setDisable(!privilege.isImportAndExport());
         FocusUtil.configureFocus(coinButton,backButton);
     }
 

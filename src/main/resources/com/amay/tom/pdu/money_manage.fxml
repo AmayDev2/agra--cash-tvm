@@ -24,7 +24,8 @@
     </rowConstraints>
 
     <!-- Title -->
-    <Label styleClass="maintenance-label-heading" text="Money Management" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+    <Label styleClass="maintenance-label-heading" text="
+    Money Management" GridPane.columnSpan="2" GridPane.halignment="CENTER">
         <GridPane.margin>
             <Insets />
         </GridPane.margin>
