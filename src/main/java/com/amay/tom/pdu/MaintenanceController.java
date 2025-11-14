@@ -12,11 +12,17 @@ import com.amay.tom.pdu.controller.SystemInfoController;
 import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.controller.PeripheralStatusController;
+import com.amay.tvm.util.Page.FocusUtil;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import org.amaytechnosystems.ShiftStatus;
 import org.tinylog.Logger;
@@ -30,13 +36,20 @@ import java.time.ZoneId;
 public class MaintenanceController {
     private final Agent agent;
     private final SceneManager sceneManager;
+    @FXML
+    private GridPane root;
+    @FXML
+    private Button systemInfo;
+    @FXML
+    private Button logout;
+
     public MaintenanceController(Agent agent, SceneManager sceneManager) {
         this.agent = agent;
         this.sceneManager = sceneManager;
     }
     @FXML
     private void initialize() {
-
+//        FocusUtil.configureFocus(root,);
     }
 
     @FXML

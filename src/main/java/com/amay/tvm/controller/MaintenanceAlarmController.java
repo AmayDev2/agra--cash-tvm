@@ -8,6 +8,7 @@ import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -16,6 +17,10 @@ import java.util.Collections;
 import java.util.List;
 
 public class MaintenanceAlarmController {
+    @FXML
+    private Button refreshButton;
+    @FXML
+    private Button backButton;
     @FXML
     private TableView<MaintenanceLog> logTable;
 
@@ -44,6 +49,8 @@ public class MaintenanceAlarmController {
         deviceCol.setCellValueFactory(new PropertyValueFactory<>("event"));
         statusCol.setCellValueFactory(new PropertyValueFactory<>("status"));
         timestampCol.setCellValueFactory(new PropertyValueFactory<>("timestamp"));
+
+
 
         Platform.runLater(this::loadLogs);
     }
