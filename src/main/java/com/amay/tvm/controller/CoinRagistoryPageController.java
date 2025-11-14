@@ -40,7 +40,6 @@ public class CoinRagistoryPageController {
     public CoinRagistoryPageController(SceneManager sceneManager, Agent agent){
         this.sceneManager=sceneManager;
         this.agent=agent;
-        FocusUtil.configureFocus(dumpHopper1,apply);
     }
 
     @FXML
@@ -52,8 +51,7 @@ public class CoinRagistoryPageController {
 
         back.addEventHandler(KeyEvent.KEY_PRESSED, this::handleKeyPress);
         apply.addEventHandler(KeyEvent.KEY_PRESSED, this::handleKeyPress);
-        FocusUtil.configureFocus(apply,back);
-
+        FocusUtil.configureFocus(dumpHopper1,apply);
     }
 
      void updateHopperInfo() {

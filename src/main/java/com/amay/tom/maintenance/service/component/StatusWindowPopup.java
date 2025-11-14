@@ -1,5 +1,6 @@
 package com.amay.tom.maintenance.service.component;
 
+import com.amay.tom.KeypadHandler;
 import com.amay.tom.ViewFactory;
 import com.amay.tom.controller.components.ConfermationWindow;
 import com.amay.tom.controller.components.StatusWindow;
@@ -50,6 +51,7 @@ public class StatusWindowPopup implements StatusWindowPopupListener {
             Parent p = loader.load();
             Scene scene = new Scene(p, 400, 200);
 //            scene.setFill(Color.TRANSPARENT); // Set the scene fill to transparent
+            new KeypadHandler().attach(scene);
             popupStage.setScene(scene);
         } catch (Exception e) {
             //System.out.println("Error in loading popup"+e.getMessage());
