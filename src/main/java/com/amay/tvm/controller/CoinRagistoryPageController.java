@@ -21,6 +21,8 @@ import org.tinylog.Logger;
 
 public class CoinRagistoryPageController {
 
+    @FXML private Button dumpHopper1;
+    @FXML private Button dumpHopper2;
     @FXML private GridPane root;
     @FXML private Button apply;
     @FXML private Button back;
@@ -38,6 +40,7 @@ public class CoinRagistoryPageController {
     public CoinRagistoryPageController(SceneManager sceneManager, Agent agent){
         this.sceneManager=sceneManager;
         this.agent=agent;
+        FocusUtil.configureFocus(dumpHopper1,apply);
     }
 
     @FXML

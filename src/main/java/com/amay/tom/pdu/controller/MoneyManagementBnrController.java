@@ -36,6 +36,7 @@ public class MoneyManagementBnrController {
     public MoneyManagementBnrController(Agent agent, SceneManager sceneManager) {
         this.agent = agent;
         this.sceneManager = sceneManager;
+        FocusUtil.configureFocus(bnrLoadButton,backButton);
     }
 
     public void onBnrLoad(ActionEvent actionEvent) {
