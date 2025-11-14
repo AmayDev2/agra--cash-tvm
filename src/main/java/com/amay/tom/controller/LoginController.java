@@ -77,27 +77,31 @@ public class LoginController {
         setEquipmentDetails();
 
         // check for last shift completion in another thread so that UI is not blocked
-        this.agent.getThreadPool().getFixedThreadPool().execute(()->
-                Platform.runLater(() ->{
-                        this.shiftService.checkLastShiftCompletion().ifPresentOrElse(
-                                shift -> {
-                                    // Trigger your event or logic here
-                                    this.shiftService.markLastShiftAsCompleted(shift);
-
-                                    this.shiftService.printEOSReport(shift);
-
-                                },
-                                () -> {
-                                    Logger.info("No last shift found or it is already completed.");
-                                }
-                        );
-
-                        }
-                )
-        );
+        markPendingShiftCompleted(); // 1st
+        markPendingShiftCompleted(); // 2nd
 
         boolean isWeekDay=this.agent.getBusinessRule().getToday().getDayType().equals("WEEKDAYS");
         this.updateDateTime(isWeekDay);
+    }
+
+    private void markPendingShiftCompleted() {
+        this.agent.getThreadPool().getSingleThread().execute(()->
+                        Platform.runLater(() ->{
+                                    this.shiftService.checkLastShiftCompletion().ifPresentOrElse(
+                                            shift -> {
+                                                // Trigger your event or logic here
+                                                this.shiftService.markLastShiftAsCompleted(shift);
+//                                    this.shiftService.printEOSReport(shift);
+
+                                            },
+                                            () -> {
+                                                Logger.info("No last shift found or it is already completed.");
+                                            }
+                                    );
+
+                                }
+                        )
+        );
     }
 
     private void setEquipmentDetails() {

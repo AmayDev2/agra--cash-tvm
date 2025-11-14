@@ -164,7 +164,7 @@ public class PeripheralMonitor implements Runnable {
     public static boolean[] coinNoduleConnected() {
         try {
             PollingStatusResponse pollingStatusResponse=CoinModuleInterface.INSTANCE.pooling();
-            return new boolean[]{true,pollingStatusResponse.isMaintenanceDoorOpen()};
+            return new boolean[]{true,!pollingStatusResponse.isMaintenanceDoorOpen()};
         } catch (Exception e) {
             Logger.tag(LoggerTag.APP).error(e.getMessage());
         }

@@ -789,7 +789,7 @@ public class TomInitialize implements ITomInitialize {
         String vendor   = pkg.getImplementationVendor();
         this.agent.setVersions(
                 new Versions(
-                        version==null ? "1.1.7" : version
+                        version==null ? "1.2.0" : version
                 )
         );
     }
@@ -1189,11 +1189,12 @@ public class TomInitialize implements ITomInitialize {
     public boolean getUserDataTableVersion(boolean isUpdate) {
         this.updateUI(progress, "Loading users...");
         try {
-            return this.getUserUpdatedTable(isUpdate);
+            if(isUpdate)return this.getUserUpdatedTable(isUpdate);
         } catch (RuntimeException e) {
             Logger.info("Not able to fetch data of User");
-            return false;
+
         }
+        return isUpdate;
     }
 
     @Override

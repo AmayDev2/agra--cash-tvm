@@ -970,10 +970,10 @@ public class BNRIntegration  {
     public static int bnrUnloadRecycler() {
         int result=0;
         Vector<String> rcyIds=new Vector<>();
-        rcyIds.add("RE3(100)");
-        rcyIds.add("RE4(50)");
-        rcyIds.add("RE5(20)");
-        rcyIds.add("RE6(10)");
+        rcyIds.add("RE3");
+        rcyIds.add("RE4");
+        rcyIds.add("RE5");
+        rcyIds.add("RE6");
         try {
             result = control.empty(rcyIds);
         } catch (JxfsException e) {

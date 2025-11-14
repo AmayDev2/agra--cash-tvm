@@ -30,10 +30,10 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
 
-        <Button mnemonicParsing="false" onAction="#onR4" prefHeight="39.0" prefWidth="150.0" text="R4" GridPane.halignment="CENTER"/>
-        <Button mnemonicParsing="false" onAction="#onR3" prefHeight="39.0" prefWidth="150.0" text="R3" GridPane.columnIndex="1" GridPane.halignment="CENTER"/>
-        <Button mnemonicParsing="false" onAction="#onR2" prefHeight="39.0" prefWidth="150.0" text="R2" GridPane.columnIndex="2" GridPane.halignment="CENTER"/>
-        <Button mnemonicParsing="false" onAction="#onR1" prefHeight="39.0" prefWidth="150.0" text="R1" GridPane.columnIndex="3" GridPane.halignment="CENTER"/>
+        <Button mnemonicParsing="false" onAction="#onR4" prefHeight="39.0" prefWidth="150.0" text="R4(100)" GridPane.halignment="CENTER"/>
+        <Button mnemonicParsing="false" onAction="#onR3" prefHeight="39.0" prefWidth="150.0" text="R3(50)" GridPane.columnIndex="1" GridPane.halignment="CENTER"/>
+        <Button mnemonicParsing="false" onAction="#onR2" prefHeight="39.0" prefWidth="150.0" text="R2(10)" GridPane.columnIndex="2" GridPane.halignment="CENTER"/>
+        <Button mnemonicParsing="false" onAction="#onR1" prefHeight="39.0" prefWidth="150.0" text="R1(20)" GridPane.columnIndex="3" GridPane.halignment="CENTER"/>
     </GridPane>
 
     <!-- Placeholder FlowPane -->

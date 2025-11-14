@@ -143,7 +143,7 @@ public class TVMController {
 
         try {
         if(isPowerCut){
-                if(null==pauseTransition)pauseTransition=new PauseTransition(Duration.seconds(10));
+                if(null==pauseTransition)pauseTransition=new PauseTransition(Duration.seconds(50));
                 pauseTransition.setOnFinished(event ->  this.agent.getInternalListener().EOShift());
                 pauseTransition.playFromStart();
                 setOperationMode(DeviceOperationMode.POWER_CUT);

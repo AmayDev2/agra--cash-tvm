@@ -190,7 +190,7 @@ public class Main extends Application {
 
 
 
-            if (screens.size() >0) { //0205000301AB04A803
+            if (screens.size() >1) { //0205000301AB04A803
                 Rectangle2D screen2Bounds = screens.get(1).getVisualBounds();
 
                 FXMLLoader pduLoader = new FXMLLoader(Main.class.getResource("pdu/main_container.fxml"));
