@@ -6,18 +6,21 @@ import com.amay.tom.model.user.entity.UserPrivilege;
 import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.bnr.BNRIntegration;
+import com.amay.tvm.util.Page.FocusUtil;
 import com.jxfs.events.JxfsException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.layout.GridPane;
 import org.checkerframework.checker.units.qual.A;
 import org.tinylog.Logger;
 
 public class MoneyManagementBnrController {
     private final Agent agent;
     private final SceneManager sceneManager;
-
+    @FXML
+    private GridPane root;
     @FXML
     private Button bnrLoadButton;
     @FXML
@@ -45,7 +48,7 @@ public class MoneyManagementBnrController {
     @FXML
     private void initialize(){
         UserPrivilege privilege=agent.getUserPrivilege();
-
+        FocusUtil.configureFocus(bnrLoadButton,backButton);
     }
 
     public void onBnrUnload(ActionEvent actionEvent) {

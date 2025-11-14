@@ -5,6 +5,7 @@ import com.amay.tom.agent.Agent;
 import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tvm.coin.CoinModuleInterface;
 import com.amay.tvm.coin.model.PollingStatusResponse;
+import com.amay.tvm.util.Page.FocusUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -14,6 +15,7 @@ public class PollingStatusController {
 
     private final SceneManager sceneManager;
     private final Agent agent;
+    @FXML private Button backButton;
     @FXML private Label hopper1Pos, hopper1Empty;
     @FXML private Label hopper2Pos, hopper2Empty;
     @FXML private Label hopper3Pos, hopper3Empty;
@@ -30,6 +32,7 @@ public class PollingStatusController {
     @FXML
     public void initialize() {
         refreshButton.setOnAction(e -> loadStatus());
+        FocusUtil.configureFocus(backButton,refreshButton);
 //        loadStatus();
     }
 

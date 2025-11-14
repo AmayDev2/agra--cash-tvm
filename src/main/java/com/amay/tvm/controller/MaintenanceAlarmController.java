@@ -4,6 +4,7 @@ import com.amay.tom.agent.Agent;
 import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tvm.backend.model.MaintenanceLog;
 import com.amay.tvm.backend.repository.MaintenanceRepository;
+import com.amay.tvm.util.Page.FocusUtil;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -50,7 +51,7 @@ public class MaintenanceAlarmController {
         statusCol.setCellValueFactory(new PropertyValueFactory<>("status"));
         timestampCol.setCellValueFactory(new PropertyValueFactory<>("timestamp"));
 
-
+        FocusUtil.configureFocus(refreshButton,backButton);
 
         Platform.runLater(this::loadLogs);
     }

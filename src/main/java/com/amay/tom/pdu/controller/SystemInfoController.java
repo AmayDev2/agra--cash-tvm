@@ -10,11 +10,14 @@ import com.amay.tom.repository.version.VersionRepository;
 import com.amay.tom.utils.NetworkUtils;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.bnr.BNRIntegration;
+import com.amay.tvm.util.Page.FocusUtil;
 import com.jxfs.events.JxfsException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 import org.tinylog.Logger;
 
 import java.util.List;
@@ -22,6 +25,11 @@ import java.util.List;
 public class SystemInfoController {
     private final Agent agent;
     private final SceneManager sceneManager;
+    @FXML
+    private VBox root;
+    @FXML
+    private Button backButton;
+
     public SystemInfoController(Agent agent, SceneManager sceneManager) {
         this.agent = agent;
         this.sceneManager = sceneManager;
@@ -60,6 +68,7 @@ public class SystemInfoController {
 
 //                BnrLabel.setText(agent.getSystemConfig().getBnrVersion());
 //                coinLabel.setText(agent.getSystemConfig().getCoinModuleVersion());
+                FocusUtil.configureFocus(backButton,backButton);
             }
 
         } catch (Exception e) {

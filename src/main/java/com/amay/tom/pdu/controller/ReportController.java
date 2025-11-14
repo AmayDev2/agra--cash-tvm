@@ -16,6 +16,7 @@ import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.backend.mapper.NoteAmountMapper;
 import com.amay.tvm.coin.CoinModuleInterface;
 import com.amay.tvm.coin.service.HoppersRegistry;
+import com.amay.tvm.util.Page.FocusUtil;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -30,6 +31,7 @@ public class ReportController {
     private final Agent agent;
     private final SceneManager sceneManager;
     private final ToggleGroup toggleGroup = new ToggleGroup();
+    @FXML private Button backbutton;
     ShiftManagementDTO selectedItem;// shared for all rows
     ShiftService shiftService;
     @FXML public TableView<ShiftManagementDTO> reportTable;
@@ -93,6 +95,7 @@ public class ReportController {
                 cellData.getValue().getEndTime().format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm"))));
         addLastNShifts(N);
         shiftService=agent.getShiftService();
+        FocusUtil.configureFocus(reportTable,backbutton);
     }
 
     private void addLastNShifts(int n) {

@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane alignment="CENTER" prefWidth="640.0" styleClass="background" vgap="50.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.pdu.MaintenanceTestController">
+<GridPane fx:id="root" alignment="CENTER" prefWidth="640.0" styleClass="background" vgap="50.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.pdu.MaintenanceTestController">
 
     <!-- Columns -->
     <columnConstraints>
@@ -26,7 +26,7 @@
     <children>
 
         <!-- Row 0 -->
-        <Button onAction="#onBNRTest" styleClass="navigatorButton" text="BNR Test" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+        <Button fx:id="bnrTestButton" onAction="#onBNRTest" styleClass="navigatorButton" text="BNR Test" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
             <GridPane.margin>
                 <Insets left="20.0" right="20.0" top="10.0" />
             </GridPane.margin></Button>
@@ -66,7 +66,7 @@
             </GridPane.margin></Button>
 
         <!-- Row 4 -->
-        <Button onAction="#onBack" styleClass="backButton" text="Back" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS">
+        <Button fx:id="backButton" onAction="#onBack" styleClass="backButton" text="Back" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS">
             <GridPane.margin>
                 <Insets bottom="5.0" left="20.0" right="20.0" />
             </GridPane.margin></Button>

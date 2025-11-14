@@ -35,7 +35,7 @@
     </TableView>
 
     <!-- Back Button -->
-    <Button onAction="#onBack" styleClass="backButton" text="Back" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+    <Button fx:id="backbutton" onAction="#onBack" styleClass="backButton" text="Back" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
    <GridPane GridPane.rowIndex="2">
       <GridPane.margin>
          <Insets />

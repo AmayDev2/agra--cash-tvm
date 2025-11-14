@@ -4,6 +4,7 @@ import com.amay.tom.agent.Agent;
 import com.amay.tom.model.user.entity.UserPrivilege;
 import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tvm.bnr.BNRIntegration;
+import com.amay.tvm.util.Page.FocusUtil;
 import com.mei.bnr.exception.BnrException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -34,8 +35,10 @@ public class BNRTestController {
         this.sceneManager=sceneManager;
     }
 
-
-
+    @FXML
+    public void initialize(){
+        FocusUtil.configureFocus(cashEndButton,backButton);
+    }
 
     public void onCashInStart(ActionEvent actionEvent) throws BnrException {
 

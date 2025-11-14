@@ -8,16 +8,22 @@ import com.amay.tom.repository.session.ShiftRepository;
 import com.amay.tom.repository.tickets.TicketsRepository;
 import com.amay.tvm.backend.service.DataSync.DataSyncCountService;
 import com.amay.tvm.util.DataSync.DataSyncInfo;
+import com.amay.tvm.util.Page.FocusUtil;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
 public class DataSync {
+    @FXML
+    private Button backButton;
+    @FXML
+    private Button refreshButton;
     @FXML
     private Label syncStatusLabel;
     @FXML
@@ -66,6 +72,7 @@ public class DataSync {
                 });
             }
         });
+        FocusUtil.configureFocus(refreshButton,backButton);
     }
 
 

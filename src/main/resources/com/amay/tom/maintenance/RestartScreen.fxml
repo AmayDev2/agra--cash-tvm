@@ -32,11 +32,11 @@
         </Label>
 
         <!-- Buttons -->
-        <Button mnemonicParsing="false" onAction="#onSystemRestart" prefHeight="35.0" prefWidth="200.0" styleClass="navigatorButton" text="System Restart" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+        <Button fx:id="systemRestartButton" mnemonicParsing="false" onAction="#onSystemRestart" prefHeight="35.0" prefWidth="200.0" styleClass="navigatorButton" text="System Restart" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
         <Button mnemonicParsing="false" onAction="#onSystemShutdown" prefHeight="35.0" prefWidth="200.0" styleClass="navigatorButton" text="System Shutdown" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
         <Button mnemonicParsing="false" onAction="#onApplicationRestart" prefHeight="35.0" prefWidth="200.0" styleClass="navigatorButton" text="Application Restart" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
         <Button mnemonicParsing="false" onAction="#onApplicationClose" prefHeight="35.0" prefWidth="200.0" styleClass="navigatorButton" text="Application Close" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-        <Button mnemonicParsing="false" onAction="#onBack" prefHeight="35.0" prefWidth="140.0" styleClass="backButton" text="Back" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+        <Button fx:id="backButton" mnemonicParsing="false" onAction="#onBack" prefHeight="35.0" prefWidth="140.0" styleClass="backButton" text="Back" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
     </children>
 
 </GridPane>

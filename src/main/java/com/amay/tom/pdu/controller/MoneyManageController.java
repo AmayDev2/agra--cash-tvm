@@ -16,10 +16,12 @@ import com.amay.tvm.backend.entity.FinanceOperationEntity;
 import com.amay.tvm.backend.enums.FinanceOperation;
 import com.amay.tvm.backend.mapper.FinanceOperationMapper;
 import com.amay.tvm.controller.CoinRagistoryPageController;
+import com.amay.tvm.util.Page.FocusUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.layout.GridPane;
 import org.network.monitorandcontrol.OperationMode;
 import java.util.List;
 import java.util.Optional;
@@ -27,7 +29,8 @@ import java.util.Optional;
 public class MoneyManageController {
     private final Agent agent;
     private final SceneManager sceneManager;
-
+    @FXML
+    private GridPane root;
     @FXML
     private Button coinButton;
     @FXML
@@ -42,7 +45,6 @@ public class MoneyManageController {
     public MoneyManageController(Agent agent, SceneManager sceneManager) {
         this.agent = agent;
         this.sceneManager = sceneManager;
-
     }
     @FXML
     private void initialize(){
@@ -50,6 +52,7 @@ public class MoneyManageController {
         coinButton.setDisable(!(privilege.isCoinRefill() || privilege.isCoinDumping()));
         bnrButton.setDisable(!privilege.isBnrCashAdd());           // If no BNR access → disable
         reportsButton.setDisable(!privilege.isImportAndExport());
+        FocusUtil.configureFocus(coinButton,backButton);
     }
 
 

@@ -17,9 +17,12 @@ import com.amay.tom.service.devices.device.PrinterStatus;
 import com.amay.tom.service.print.impl.PrinterService;
 import com.amay.tvm.controller.ApplicationController;
 import com.amay.tvm.controller.MaintenanceAlarmController;
+import com.amay.tvm.util.Page.FocusUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
+import javafx.scene.layout.GridPane;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -29,14 +32,23 @@ public class MaintenanceTestController {
 
     private final Agent agent;
     private final SceneManager sceneManager;
+    @FXML
+    private GridPane root;
+    @FXML
+    private Button backButton;
+    @FXML
+    private Button bnrTestButton;
+    private PeripheralMonitor peripheralMonitor;
 
     public MaintenanceTestController(Agent agent, SceneManager sceneManager) {
         this.agent = agent;
         this.sceneManager = sceneManager;
     }
-    private PeripheralMonitor peripheralMonitor;
 
-
+    @FXML
+    public void initialize(){
+        FocusUtil.configureFocus(bnrTestButton,backButton);
+    }
 
     @FXML
     private void onBNRTest(ActionEvent event) {

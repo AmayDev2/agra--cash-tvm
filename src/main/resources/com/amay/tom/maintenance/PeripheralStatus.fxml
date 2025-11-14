@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 
 <?import javafx.geometry.Insets?>
-<VBox prefHeight="480.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1"
+<VBox fx:id="root" prefHeight="480.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1"
       styleClass="background" spacing="20" alignment="CENTER" fx:controller="com.amay.tvm.controller.PeripheralStatusController">
 
     <TableView fx:id="periStatusTable" prefHeight="400.0" prefWidth="500.0">
@@ -16,7 +16,7 @@
             <TableColumn fx:id="colStatus" prefWidth="250.0" text="Status"/>
         </columns>
     </TableView>
-    <Button onAction="#onBack" styleClass="backButton" text="Back" GridPane.halignment="CENTER"
+    <Button fx:id="backButton" onAction="#onBack" styleClass="backButton" text="Back" GridPane.halignment="CENTER"
             GridPane.rowIndex="3"/>
 
 </VBox>

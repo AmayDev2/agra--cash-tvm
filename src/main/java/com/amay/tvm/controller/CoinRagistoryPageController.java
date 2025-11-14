@@ -5,6 +5,7 @@ import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.coin.CoinModuleInterface;
 import com.amay.tvm.coin.service.HoppersRegistry;
+import com.amay.tvm.util.Page.FocusUtil;
 import com.amay.tvm.util.ThreadPool;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
@@ -15,10 +16,12 @@ import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.GridPane;
 import org.tinylog.Logger;
 
 public class CoinRagistoryPageController {
 
+    @FXML private GridPane root;
     @FXML private Button apply;
     @FXML private Button back;
     @FXML private TextField qty1;
@@ -46,6 +49,7 @@ public class CoinRagistoryPageController {
 
         back.addEventHandler(KeyEvent.KEY_PRESSED, this::handleKeyPress);
         apply.addEventHandler(KeyEvent.KEY_PRESSED, this::handleKeyPress);
+        FocusUtil.configureFocus(apply,back);
 
     }
 

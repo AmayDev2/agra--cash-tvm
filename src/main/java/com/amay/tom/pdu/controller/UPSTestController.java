@@ -7,8 +7,10 @@ import com.amay.tvm.ups.UPS;
 import com.amay.tvm.ups.command.UPSCommand;
 import com.amay.tvm.ups.model.UPSResponse;
 import com.amay.tvm.ups.model.UPSStatus;
+import com.amay.tvm.util.Page.FocusUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -16,8 +18,8 @@ import javafx.scene.control.TextField;
 public class UPSTestController {
 
     private final SceneManager sceneManager;
-
-
+    @FXML private Button btnRefresh;
+    @FXML private Button btnBack;
     @FXML private Label txtInputVoltage, txtInputFaultVoltage, txtOutputVoltage, txtOutputCurrent,
             txtInputFrequency, txtBatteryVoltage, txtTemperature;
 
@@ -29,7 +31,11 @@ public class UPSTestController {
 
     public UPSTestController(Agent agent, SceneManager sceneManager){
         this.sceneManager=sceneManager;
-        
+    }
+
+    @FXML
+    public void initialize(){
+        FocusUtil.configureFocus(btnRefresh,btnBack);
     }
 
     @FXML private void onBack(ActionEvent actionEvent) {

@@ -49,7 +49,7 @@ public class MaintenanceController {
     }
     @FXML
     private void initialize() {
-//        FocusUtil.configureFocus(root,);
+        FocusUtil.configureFocus(systemInfo,logout);
     }
 
     @FXML

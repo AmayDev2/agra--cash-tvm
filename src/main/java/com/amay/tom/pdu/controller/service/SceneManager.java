@@ -3,6 +3,7 @@ package com.amay.tom.pdu.controller.service;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.layout.StackPane;
 
 import java.io.IOException;
@@ -36,14 +37,25 @@ public class SceneManager {
     }
 
     public void addToScene(FXMLLoader fxmlLoader) {
+        Parent root;
+
+        try {
+            root = fxmlLoader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
         Platform.runLater(() -> {
-            try {
-                container.getChildren().add(fxmlLoader.load());
-            } catch (IOException e) {
-                throw new RuntimeException(e);
+            container.getChildren().add(root);
+
+
+            Node firstButton = root.lookup(".button");
+            if (firstButton != null) {
+                firstButton.requestFocus();
             }
         });
     }
+
 
     public void addWaiting(Node node) {
         Platform.runLater(() -> {
@@ -55,8 +67,19 @@ public class SceneManager {
 
     public void back() {
         Platform.runLater(() -> {
+            int size = container.getChildren().size();
+            if (size <= 1) return;
+
             container.getChildren().removeLast();
+
+            Parent previousPage = (Parent) container.getChildren().getLast();
+
+            Node firstButton = previousPage.lookup(".button");
+            if (firstButton != null) {
+                firstButton.requestFocus();
+            }
         });
     }
+
 }
 

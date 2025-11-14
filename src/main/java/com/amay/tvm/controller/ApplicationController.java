@@ -10,15 +10,19 @@ import com.amay.tom.maintenance.service.component.model.StatusWindowModel;
 import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tom.service.events.Remote;
 import com.amay.tom.service.tom.IApplicationService;
+import com.amay.tvm.util.Page.FocusUtil;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import org.tinylog.Logger;
 
 import java.io.IOException;
 
 public class ApplicationController {
 
+    @FXML private Button systemRestartButton;
+    @FXML private Button backButton;
     private SceneManager sceneManager;
     private final Agent agent;
 
@@ -28,6 +32,11 @@ public class ApplicationController {
         this.agent=agent;
         this.sceneManager=sceneManager;
         agent.getApplicationService();
+    }
+
+    @FXML
+    public void initialize(){
+        FocusUtil.configureFocus(systemRestartButton,backButton);
     }
 
 

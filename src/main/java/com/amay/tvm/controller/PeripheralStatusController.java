@@ -5,18 +5,25 @@ import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tom.service.devices.DeviceStatusListener;
 import com.amay.tvm.backend.enums.ConnectionStatus;
 import com.amay.tvm.backend.enums.Peripherals;
+import com.amay.tvm.util.Page.FocusUtil;
 import com.amay.tvm.util.Peripheral.PeriStatusInfo;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.layout.VBox;
 
 
 public class PeripheralStatusController {
 
+    @FXML
+    private Button backButton;
+    @FXML
+    private VBox root;
     @FXML
     private TableView<PeriStatusInfo> periStatusTable;
     @FXML
@@ -45,6 +52,7 @@ public class PeripheralStatusController {
         periStatusTable.setItems(periStatusInfoObservableList);
         peripheralEventListener=new PeripheralEventListener(null,periStatusInfoObservableList);
         agent.getPeripheralMonitor().addDeviceStatusListener(peripheralEventListener);
+        FocusUtil.configureFocus(backButton,backButton);
     }
 
     @FXML
