@@ -21,6 +21,8 @@ import org.tinylog.Logger;
 
 public class CoinRagistoryPageController {
 
+    @FXML private Button dumpHopper1;
+    @FXML private Button dumpHopper2;
     @FXML private GridPane root;
     @FXML private Button apply;
     @FXML private Button back;
@@ -49,8 +51,7 @@ public class CoinRagistoryPageController {
 
         back.addEventHandler(KeyEvent.KEY_PRESSED, this::handleKeyPress);
         apply.addEventHandler(KeyEvent.KEY_PRESSED, this::handleKeyPress);
-        FocusUtil.configureFocus(apply,back);
-
+        FocusUtil.configureFocus(dumpHopper1,apply);
     }
 
      void updateHopperInfo() {
