@@ -1,6 +1,9 @@
 package com.amay.tvm.coin.model;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
 
 public class ModuleResponse {
 	private final byte command;

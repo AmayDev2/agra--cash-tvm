@@ -15,10 +15,18 @@ public final class ProtocolConstants {
 	public static final byte CMD_CONTROL = 0x04;
 	public static final byte CMD_POLLING_STATUS = 0x31;
 	public static final byte CMD_GET_VERSION = 0x34;
+	//******************
+	public static final byte CMD_MODULE_TEST = 0x32;
+	public static final byte CMD_DE_JAMMING = 0x09;
+	public static final byte CMD_COIN_ACCEPTANCE_POLLING = 0x05;
+	public static final byte CMD_GET_COLLECTION_BOX_ID = 0x08;
+	public static final byte CMD_SET_COLLECTION_BOX_ID = 0x07;
+
 
 	// Device-specific mode/marker values
 	public static final byte MODE_COIN_DISPENSE = (byte)0xAB;
 	public static final byte MODE_COIN_DUMP = (byte)0xAC;
+	public static final byte COLLECTION_BOX = (byte)0x0A;
 
 	// Response markers or flags
 	public static final byte RESPONSE_PROGRESS = (byte)0xAA; // placeholder per spec: progress notification

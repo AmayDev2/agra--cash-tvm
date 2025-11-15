@@ -7,6 +7,8 @@ import com.amay.tvm.coin.communication.CommunicationException;
 import com.amay.tvm.coin.communication.SerialCommunication;
 import com.amay.tvm.coin.communication.SerialCommunicationInterface;
 import com.amay.tvm.coin.constants.ProtocolConstants;
+import com.amay.tvm.coin.enums.ModuleTestCode;
+import com.amay.tvm.coin.enums.Range;
 import com.amay.tvm.coin.model.CoinChangeResponse;
 import com.amay.tvm.coin.model.CoinDumpResponse;
 import com.amay.tvm.coin.model.ModuleResponse;
@@ -161,6 +163,35 @@ public class CoinModuleService {
 
 	public void end() {
 
+	}
+
+	public ModuleResponse testModule(ModuleTestCode moduleTestCode) {
+		byte seq = sequenceNumberManager.next();
+		ProtocolFrame frame = CommandBuilder.createModuleTestCommand(seq, moduleTestCode.getCode());
+		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
+	}
+
+	public ModuleResponse getDeJamming(Range range) {
+		byte seq = sequenceNumberManager.next();
+		ProtocolFrame frame = CommandBuilder.createDeJamming(seq, range.getCode());
+		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
+	}
+
+	public ModuleResponse acceptancePollStatus(byte status) {
+		byte seq = sequenceNumberManager.next();
+		ProtocolFrame frame = CommandBuilder.createCoinAcceptancePollingStatusCommand(seq,status);
+		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
+	}
+
+	public ModuleResponse getCollectionBoxId() {
+		byte seq = sequenceNumberManager.next();
+		ProtocolFrame frame = CommandBuilder.createGetCollectionBoxIdCommand(seq);
+		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
+	}
+	public ModuleResponse setCollectionBoxId(byte id) {
+		byte seq = sequenceNumberManager.next();
+		ProtocolFrame frame = CommandBuilder.createSetCollectionBoxIdCommand(seq,id);
+		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
 	}
 }
 

@@ -61,6 +61,31 @@ public final class CommandBuilder {
 		byte[] data = new byte[] { hopper };
 		return new ProtocolFrame(ProtocolConstants.CMD_COIN_CHANGE_END, sequence, data);
 	}
+
+	public static ProtocolFrame createModuleTestCommand(byte sequence,byte testCode) {
+		// Test Code - 0x11 (De-Jamming [3 times]), 0x12 (Coin Shutter [1 time]), 0x13 (Diverter [1 time])
+		byte[] data = new byte[] { testCode, 0 };
+		return new ProtocolFrame(ProtocolConstants.CMD_MODULE_TEST, sequence, data);
+	}
+
+	public static ProtocolFrame createDeJamming(byte sequence,byte range) {
+		// Range: 1-3
+		byte[] data = new byte[] { range };
+		return new ProtocolFrame(ProtocolConstants.CMD_DE_JAMMING, sequence, data);
+	}
+
+	public static ProtocolFrame createCoinAcceptancePollingStatusCommand(byte sequence, byte status) {
+		return new ProtocolFrame(ProtocolConstants.CMD_COIN_ACCEPTANCE_POLLING, sequence, new byte[status]);
+	}
+
+	public static ProtocolFrame createGetCollectionBoxIdCommand(byte seq) {
+		byte[] data = new byte[] { ProtocolConstants.COLLECTION_BOX };
+		return new ProtocolFrame(ProtocolConstants.CMD_GET_COLLECTION_BOX_ID,seq,data);
+	}
+	public static ProtocolFrame createSetCollectionBoxIdCommand(byte seq,byte noOfCollectionBox) {
+		byte[] data = new byte[] { ProtocolConstants.COLLECTION_BOX };
+		return new ProtocolFrame(ProtocolConstants.CMD_SET_COLLECTION_BOX_ID,seq,data);
+	}
 }
 
 
