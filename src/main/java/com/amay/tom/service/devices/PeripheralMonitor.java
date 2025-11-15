@@ -93,7 +93,7 @@ public class PeripheralMonitor implements Runnable {
         upos_connected=isUposConnected();
         reader_connected=isReaderConnected();
 
-        deviceStatus[0] = door_closed ? 1 : 1;
+        deviceStatus[0] = door_closed ? 1 : 0;
         deviceStatus[1] = printer_connected ? 1 : 0;
         deviceStatus[2] = scu_connected ? 1 : 0;
         deviceStatus[3] = ccu_connected ? 1 : 0;
@@ -164,7 +164,7 @@ public class PeripheralMonitor implements Runnable {
     public static boolean[] coinNoduleConnected() {
         try {
             PollingStatusResponse pollingStatusResponse=CoinModuleInterface.INSTANCE.pooling();
-            return new boolean[]{true,pollingStatusResponse.isMaintenanceDoorOpen()};
+            return new boolean[]{true,!pollingStatusResponse.isMaintenanceDoorOpen()};
         } catch (Exception e) {
             Logger.tag(LoggerTag.APP).error(e.getMessage());
         }

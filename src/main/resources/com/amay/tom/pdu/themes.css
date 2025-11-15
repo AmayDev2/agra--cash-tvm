@@ -25,7 +25,7 @@
 
 /* === Accent Backgrounds (Darker Shades) === */
 .bg-accent-blue-dark {
-    -fx-background-color: #; /* darker than # */
+    -fx-background-color: #000000; /* darker than # */
 }
 
 .bg-accent-red-dark {

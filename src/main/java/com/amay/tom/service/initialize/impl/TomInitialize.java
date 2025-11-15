@@ -789,7 +789,7 @@ public class TomInitialize implements ITomInitialize {
         String vendor   = pkg.getImplementationVendor();
         this.agent.setVersions(
                 new Versions(
-                        version==null ? "1.1.7" : version
+                        version==null ? "1.2.0" : version
                 )
         );
     }

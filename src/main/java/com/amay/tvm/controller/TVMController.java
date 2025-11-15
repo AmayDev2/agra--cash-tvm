@@ -150,6 +150,7 @@ public class TVMController {
                 UPS.INTERFACE.fireCommand(UPSCommand.shutdown(1));
                 Logger.tag(LoggerTag.APP).info("UPS SHOUTDOWN Command");
         }else{
+            Logger.tag(LoggerTag.APP).info("UPS SHOUTDOWN Cancel Command");
             UPS.INTERFACE.fireCommand(UPSCommand.CANCEL_SHUTDOWN);
             if(null!=pauseTransition){
                 pauseTransition.stop();
