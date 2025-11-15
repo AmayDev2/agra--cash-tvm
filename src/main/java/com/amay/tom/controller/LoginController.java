@@ -6,10 +6,14 @@ import com.amay.tom.config.SystemConfig;
 import com.amay.tom.enums.DeviceOperationMode;
 import com.amay.tom.exceptions.EmptyUsernameOrPasswordException;
 import com.amay.tom.exceptions.UsernameNotFoundException;
+import com.amay.tom.grpc.monotoring.AppCloseCommand;
+import com.amay.tom.grpc.monotoring.ShutdownCommand;
 import com.amay.tom.pdu.controller.command.PDUCommandDispatcher;
 import com.amay.tom.pdu.controller.command.PassAgentCommand;
 import com.amay.tom.repository.session.ShiftRepositoryImpl;
 import com.amay.tom.repository.user.UserRepositoryImpl;
+import com.amay.tom.service.events.Remote;
+import com.amay.tom.service.events.commands.EOSCommand;
 import com.amay.tom.service.siftservice.ShiftService;
 import com.amay.tom.service.siftservice.ShiftServiceListener;
 import com.amay.tom.service.siftservice.SiftService;
@@ -143,6 +147,10 @@ public class LoginController {
                                     Logger.tag(LoggerTag.APP).info("Device not in IN_SERVICE mode {}",agent.getDeviceStatus().getCurrentStatus());
                                     csn1.setText("TVM is not under operational mode");
                                     //TODO: ON UPS ACTIVE-> SHUTDOWN TVM FOR SAFE HAND
+                                    if(!agent.getPeripheralMonitor().isUPSUP()){
+//                                        new Remote(new AppCloseCommand( agent.getApplicationService())).pressButton();
+                                        new Remote(new ShutdownCommand( agent.getApplicationService())).pressButton();
+                                    }
                                 }
                             }
                         }

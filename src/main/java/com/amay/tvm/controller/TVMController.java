@@ -143,8 +143,10 @@ public class TVMController {
 
         try {
         if(isPowerCut){
-                if(null==pauseTransition)pauseTransition=new PauseTransition(Duration.seconds(50));
-                pauseTransition.setOnFinished(event ->  this.agent.getInternalListener().EOShift());
+                if(null==pauseTransition)pauseTransition=new PauseTransition(Duration.seconds(10));
+                pauseTransition.setOnFinished(event ->{
+                    Logger.tag(LoggerTag.APP).info("SHIFT END DUE TO UPS OFF");
+                    this.agent.getInternalListener().EOShift();});
                 pauseTransition.playFromStart();
                 setOperationMode(DeviceOperationMode.POWER_CUT);
                 UPS.INTERFACE.fireCommand(UPSCommand.shutdown(1));
