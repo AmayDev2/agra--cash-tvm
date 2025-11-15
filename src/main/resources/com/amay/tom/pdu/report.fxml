@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane alignment="CENTER" styleClass="background" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.pdu.controller.ReportController">
+<GridPane alignment="CENTER" styleClass="background" stylesheets="@../pdu/styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tom.pdu.controller.ReportController">
     <rowConstraints>
         <RowConstraints percentHeight="10.0" />
         <RowConstraints percentHeight="65.0" />
@@ -23,11 +23,11 @@
     <!-- Table -->
     <TableView fx:id="reportTable" prefHeight="292.0" prefWidth="600.0" GridPane.rowIndex="1">
         <columns>
-            <TableColumn fx:id="selectColumn" styleClass="sm-radio-cell" text="Select" />
-            <TableColumn fx:id="shiftIdColumn" prefWidth="120.0" text="Shift Id" />
-            <TableColumn fx:id="operatorIdColumn" prefWidth="180.0" text="Operator Id" />
-            <TableColumn fx:id="startTimeColumn" prefWidth="186.0" text="Start Time" />
-            <TableColumn fx:id="endTimeColumn" prefWidth="133.0" text="End Time" />
+            <TableColumn fx:id="selectColumn" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" styleClass="sm-radio-cell" text="Select" />
+            <TableColumn fx:id="shiftIdColumn" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="Shift Id" />
+            <TableColumn fx:id="operatorIdColumn" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="Operator Id" />
+            <TableColumn fx:id="startTimeColumn" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Start Time" />
+            <TableColumn fx:id="endTimeColumn" maxWidth="148.0" minWidth="130.0" prefWidth="148.0" text="End Time" />
         </columns>
         <GridPane.margin>
             <Insets left="10.0" right="10.0" />

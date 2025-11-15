@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<GridPane fx:id="root" prefHeight="250.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17.0.12" style=" -fx-background-color: #;" styleClass="bg-surface" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tvm.controller.CoinRagistoryPageController">
+<GridPane fx:id="root" prefHeight="250.0" prefWidth="650.0" style=" -fx-background-color: #;" styleClass="bg-surface" stylesheets="@../pdu/styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amay.tvm.controller.CoinRagistoryPageController">
 
     <columnConstraints>
-        <ColumnConstraints minWidth="10.0" percentWidth="80.0" prefWidth="100.0" />
-        <ColumnConstraints minWidth="10.0" percentWidth="80.0" prefWidth="100.0" />
-        <ColumnConstraints minWidth="10.0" percentWidth="100.0" prefWidth="100.0" />
-        <ColumnConstraints percentWidth="100.0" />
-      <ColumnConstraints halignment="CENTER" minWidth="10.0" percentWidth="100.0" prefWidth="100.0" />
+        <ColumnConstraints minWidth="8.0" percentWidth="60.0" prefWidth="100.0" />
+        <ColumnConstraints minWidth="10.0" percentWidth="60.0" prefWidth="100.0" />
+        <ColumnConstraints minWidth="10.0" percentWidth="90.0" prefWidth="100.0" />
+        <ColumnConstraints minWidth="8.0" percentWidth="60.0" />
+      <ColumnConstraints halignment="CENTER" maxWidth="120.0" minWidth="120.0" percentWidth="100.0" prefWidth="120.0" />
     </columnConstraints>
 
     <rowConstraints>
@@ -55,7 +59,7 @@
             <Font size="18.0" />
         </font>
     </Label>
-    <TextField fx:id="qty1" alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity"  prefHeight="30.0" prefWidth="110.0" promptText="Enter Quantity" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+    <TextField fx:id="qty1" alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="110.0" promptText="Enter Quantity" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
         <font>
         <Font size="14.0" />
         </font>
@@ -77,7 +81,7 @@
             <Font size="18.0" />
         </font>
     </Label>
-    <TextField fx:id="qty2" alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity"  prefHeight="30.0" prefWidth="110.0" promptText="Enter Quantity" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+    <TextField fx:id="qty2" alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="110.0" promptText="Enter Quantity" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
         <font>
         <Font size="14.0" />
         </font>
@@ -114,9 +118,9 @@
          <Font name="System Bold" size="18.0" />
       </font>
    </Label>
-   <Button fx:id="dumpHopper1"  onAction="#dumpHopper" text="Dump H1" styleClass="dump-button" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-   <Button fx:id="dumpHopper2"   onAction="#dumpHopper"  text="Dump H2" styleClass="dump-button"  GridPane.columnIndex="4" GridPane.rowIndex="2" />
-    <Button fx:id="dumpHopper3"  onAction="#dumpHopper"  text="Dump H3" styleClass="dump-button"  GridPane.columnIndex="4" GridPane.rowIndex="3" />
-    <Button fx:id="back"  onAction="#back"  text="Back" styleClass="back-button"  GridPane.columnIndex="2" GridPane.rowIndex="4"  />
-    <Button fx:id="apply"  onAction="#apply"  text="Apply" styleClass="apply-button"  GridPane.columnIndex="3" GridPane.rowIndex="4" />
+   <Button fx:id="dumpHopper1" onAction="#dumpHopper" styleClass="backButton" text="Dump H1" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+   <Button fx:id="dumpHopper2" onAction="#dumpHopper" styleClass="backButton" text="Dump H2" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+    <Button fx:id="dumpHopper3" onAction="#dumpHopper" styleClass="backButton" text="Dump H3" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+    <Button fx:id="back" onAction="#back" styleClass="backButton" text="Back" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+    <Button fx:id="apply" onAction="#apply" styleClass="backButton" text="Apply" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 </GridPane>

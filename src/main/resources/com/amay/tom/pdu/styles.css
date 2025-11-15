@@ -197,7 +197,7 @@
 } */
 
 .maintenance-label-heading {
- -fx-font-size: 16px;
+ -fx-font-size: 20px;
     -fx-font-weight: bold;
     -fx-text-fill: #333333; /* or another color from your theme */
 }
@@ -257,4 +257,99 @@ navigator-select:selected {
 .backButton:pressed {
  -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 5);
     -fx-padding: 12 22 8 18;
+}
+
+
+
+.table-view {
+    -fx-background-color: #f9fafb;
+    -fx-border-color: #d1d5db;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 6;
+    -fx-font-family: "Segoe UI", "Poppins", sans-serif;
+    -fx-table-cell-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 5, 0, 0, 2);
+}
+
+/* ===== HEADER STYLE ===== */
+.table-view .column-header-background {
+    -fx-background-color: #ffffff;          /* White header background */
+    -fx-background-radius: 10 10 0 0;
+    -fx-border-color: #000000;              /* Black border */
+    -fx-border-width: 0 0 2 0;              /* Bottom black line only */
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-size: 40px;
+    -fx-border-color: transparent;
+    -fx-font-family: "Poppins Semibold";
+    -fx-font-size: 15px;
+    -fx-text-fill: #111827;                 /* Dark text */
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 0 0 15;
+}
+
+.table-view .column-header .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;                 /* Pure black header text */
+    -fx-font-size: 18px;
+}
+
+/* ===== ROW STYLES ===== */
+.table-row-cell {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #f3f4f6;
+    -fx-cell-size: 24px;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+    -fx-text-fill: #374151;
+    -fx-transition: 0.2s;
+}
+
+/* Alternate row color for readability */
+.table-row-cell:odd {
+    -fx-background-color: #f9fafb;
+}
+
+/* ===== Dark grey on hover ===== */
+.table-row-cell:hover {
+    -fx-background-color: #d1d5db;  /* Medium-dark grey */
+    -fx-text-fill: #111827;
+}
+
+/* ===== Dark grey when clicked / selected ===== */
+.table-row-cell:selected {
+    -fx-background-color: #b1b5ba !important;  /* Darker grey on click */
+    -fx-text-fill: #ffffff !important;         /* White text when selected */
+}
+
+/* Keep text white on selected cells */
+.table-cell:selected {
+    -fx-background-color: transparent !important;
+    -fx-text-fill: #ffffff !important;
+}
+
+/* Remove focus border */
+.table-view:focused {
+    -fx-background-insets: 0;
+    -fx-background-color: #f9fafb;
+}
+
+.table-view:focused .table-row-cell:selected {
+    -fx-background-color: #9ca3af !important;
+    -fx-text-fill: #ffffff !important;
+}
+/* Center table header text */
+.table-view .column-header,
+.table-view .column-header .label {
+    -fx-alignment: CENTER;
+    -fx-text-alignment: center;
+}
+
+/* Center table cell text */
+.table-cell {
+    -fx-alignment: CENTER;
+    -fx-text-alignment: center;
 }
