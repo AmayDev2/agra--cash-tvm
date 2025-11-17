@@ -5962,6 +5962,2039 @@
 2025-11-14 15-17-53.0177[EnumUSBDevices]Begin
 2025-11-14 15-17-53.0182[EnumUSBDevices]Found 0 USB Devices
 2025-11-14 15-17-53.0183[EnumUSBDevices]End
+2025-11-14 15-37-19.0932[]*****************************************
+2025-11-14 15-37-19.0934[]DLL Log Initialize. Verbosity: 6
+2025-11-14 15-37-19.0934[]*****************************************
+2025-11-14 15-37-19.0934[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-11-14 15-37-19.0935[]DLL Version: 1.07
+2025-11-14 15-37-19.0935[InitLibrary]Begin
+2025-11-14 15-37-19.0956[InitLibrary]Library SignID:00000101
+2025-11-14 15-37-19.0957[InitLibrary]Current SignID:00000101
+2025-11-14 15-37-19.0957[InitLibrary]End
+2025-11-14 15-37-19.0957[GetAPIVersionHwLibrary]Begin
+2025-11-14 15-37-19.0959[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-14 15-37-19.0959[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-14 15-37-19.0959[GetAPIVersionHwLibrary]End
+2025-11-14 15-37-19.0960[EnumUSBDevices]Begin
+2025-11-14 15-37-19.0964[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-37-19.0964[EnumUSBDevices]End
+2025-11-14 15-37-36.0215[EnumUSBDevices]Begin
+2025-11-14 15-37-36.0219[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-37-36.0219[EnumUSBDevices]End
+2025-11-14 15-37-41.0137[EnumUSBDevices]Begin
+2025-11-14 15-37-41.0141[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-37-41.0143[EnumUSBDevices]End
+2025-11-14 15-37-46.0137[EnumUSBDevices]Begin
+2025-11-14 15-37-46.0145[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-37-46.0146[EnumUSBDevices]End
+2025-11-14 15-37-51.0135[EnumUSBDevices]Begin
+2025-11-14 15-37-51.0140[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-37-51.0141[EnumUSBDevices]End
+2025-11-14 15-37-56.0135[EnumUSBDevices]Begin
+2025-11-14 15-37-56.0138[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-37-56.0138[EnumUSBDevices]End
+2025-11-14 15-38-01.0134[EnumUSBDevices]Begin
+2025-11-14 15-38-01.0140[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-38-01.0141[EnumUSBDevices]End
+2025-11-14 15-38-06.0136[EnumUSBDevices]Begin
+2025-11-14 15-38-06.0142[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-38-06.0142[EnumUSBDevices]End
+2025-11-14 15-38-11.0136[EnumUSBDevices]Begin
+2025-11-14 15-38-11.0142[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-38-11.0143[EnumUSBDevices]End
+2025-11-14 15-38-16.0135[EnumUSBDevices]Begin
+2025-11-14 15-38-16.0142[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-38-16.0143[EnumUSBDevices]End
+2025-11-14 15-38-21.0135[EnumUSBDevices]Begin
+2025-11-14 15-38-21.0140[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-38-21.0142[EnumUSBDevices]End
+2025-11-14 15-38-26.0137[EnumUSBDevices]Begin
+2025-11-14 15-38-26.0144[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-38-26.0144[EnumUSBDevices]End
+2025-11-14 15-38-31.0135[EnumUSBDevices]Begin
+2025-11-14 15-38-31.0140[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-38-31.0141[EnumUSBDevices]End
+2025-11-14 15-38-36.0136[EnumUSBDevices]Begin
+2025-11-14 15-38-36.0144[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-38-36.0145[EnumUSBDevices]End
+2025-11-14 15-38-41.0137[EnumUSBDevices]Begin
+2025-11-14 15-38-41.0143[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-38-41.0144[EnumUSBDevices]End
+2025-11-14 15-38-46.0135[EnumUSBDevices]Begin
+2025-11-14 15-38-46.0140[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-38-46.0141[EnumUSBDevices]End
+2025-11-14 15-38-51.0137[EnumUSBDevices]Begin
+2025-11-14 15-38-51.0144[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-38-51.0144[EnumUSBDevices]End
+2025-11-14 15-38-56.0136[EnumUSBDevices]Begin
+2025-11-14 15-38-56.0142[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-38-56.0143[EnumUSBDevices]End
+2025-11-14 15-38-57.0904[EnumUSBDevices]Begin
+2025-11-14 15-38-57.0910[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-38-57.0910[EnumUSBDevices]End
+2025-11-14 15-39-01.0135[EnumUSBDevices]Begin
+2025-11-14 15-39-01.0138[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-39-01.0139[EnumUSBDevices]End
+2025-11-14 15-39-06.0135[EnumUSBDevices]Begin
+2025-11-14 15-39-06.0140[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-39-06.0141[EnumUSBDevices]End
+2025-11-14 15-39-11.0135[EnumUSBDevices]Begin
+2025-11-14 15-39-11.0140[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-39-11.0141[EnumUSBDevices]End
+2025-11-14 15-39-16.0134[EnumUSBDevices]Begin
+2025-11-14 15-39-16.0139[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-39-16.0140[EnumUSBDevices]End
+2025-11-14 15-39-21.0136[EnumUSBDevices]Begin
+2025-11-14 15-39-21.0142[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-39-21.0142[EnumUSBDevices]End
+2025-11-14 15-39-26.0135[EnumUSBDevices]Begin
+2025-11-14 15-39-26.0138[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-39-26.0138[EnumUSBDevices]End
+2025-11-14 15-39-31.0135[EnumUSBDevices]Begin
+2025-11-14 15-39-31.0140[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-39-31.0140[EnumUSBDevices]End
+2025-11-14 15-39-36.0136[EnumUSBDevices]Begin
+2025-11-14 15-39-36.0142[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-39-36.0142[EnumUSBDevices]End
+2025-11-14 15-39-41.0136[EnumUSBDevices]Begin
+2025-11-14 15-39-41.0139[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-39-41.0140[EnumUSBDevices]End
+2025-11-14 15-39-46.0136[EnumUSBDevices]Begin
+2025-11-14 15-39-46.0142[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-39-46.0143[EnumUSBDevices]End
+2025-11-14 15-39-51.0135[EnumUSBDevices]Begin
+2025-11-14 15-39-51.0142[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-39-51.0142[EnumUSBDevices]End
+2025-11-14 15-39-56.0134[EnumUSBDevices]Begin
+2025-11-14 15-39-56.0140[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-39-56.0141[EnumUSBDevices]End
+2025-11-14 15-40-01.0201[EnumUSBDevices]Begin
+2025-11-14 15-40-01.0209[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-40-01.0210[EnumUSBDevices]End
+2025-11-14 15-40-06.0162[EnumUSBDevices]Begin
+2025-11-14 15-40-06.0253[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-40-06.0254[EnumUSBDevices]End
+2025-11-14 15-40-11.0160[EnumUSBDevices]Begin
+2025-11-14 15-40-11.0172[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-40-11.0173[EnumUSBDevices]End
+2025-11-14 15-40-16.0143[EnumUSBDevices]Begin
+2025-11-14 15-40-16.0151[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-40-16.0153[EnumUSBDevices]End
+2025-11-14 15-40-21.0151[EnumUSBDevices]Begin
+2025-11-14 15-40-21.0160[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-40-21.0161[EnumUSBDevices]End
+2025-11-14 15-40-26.0140[EnumUSBDevices]Begin
+2025-11-14 15-40-26.0146[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-40-26.0147[EnumUSBDevices]End
+2025-11-14 15-40-31.0135[EnumUSBDevices]Begin
+2025-11-14 15-40-31.0143[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-40-31.0143[EnumUSBDevices]End
+2025-11-14 15-40-36.0133[EnumUSBDevices]Begin
+2025-11-14 15-40-36.0141[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-40-36.0141[EnumUSBDevices]End
+2025-11-14 15-40-41.0134[EnumUSBDevices]Begin
+2025-11-14 15-40-41.0137[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-40-41.0137[EnumUSBDevices]End
+2025-11-14 15-40-46.0137[EnumUSBDevices]Begin
+2025-11-14 15-40-46.0142[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-40-46.0142[EnumUSBDevices]End
+2025-11-14 15-40-51.0134[EnumUSBDevices]Begin
+2025-11-14 15-40-51.0141[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-40-51.0141[EnumUSBDevices]End
+2025-11-14 15-40-56.0135[EnumUSBDevices]Begin
+2025-11-14 15-40-56.0141[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-40-56.0141[EnumUSBDevices]End
+2025-11-14 15-41-01.0137[EnumUSBDevices]Begin
+2025-11-14 15-41-01.0141[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-41-01.0142[EnumUSBDevices]End
+2025-11-14 15-41-06.0134[EnumUSBDevices]Begin
+2025-11-14 15-41-06.0136[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-41-06.0136[EnumUSBDevices]End
+2025-11-14 15-41-11.0136[EnumUSBDevices]Begin
+2025-11-14 15-41-11.0141[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-41-11.0142[EnumUSBDevices]End
+2025-11-14 15-41-16.0135[EnumUSBDevices]Begin
+2025-11-14 15-41-16.0141[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-41-16.0141[EnumUSBDevices]End
+2025-11-14 15-41-21.0157[EnumUSBDevices]Begin
+2025-11-14 15-41-21.0161[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-41-21.0161[EnumUSBDevices]End
+2025-11-14 15-41-26.0159[EnumUSBDevices]Begin
+2025-11-14 15-41-26.0166[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-41-26.0166[EnumUSBDevices]End
+2025-11-14 15-41-31.0163[EnumUSBDevices]Begin
+2025-11-14 15-41-31.0170[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-41-31.0170[EnumUSBDevices]End
+2025-11-14 15-41-36.0163[EnumUSBDevices]Begin
+2025-11-14 15-41-36.0166[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-41-36.0166[EnumUSBDevices]End
+2025-11-14 15-41-41.0139[EnumUSBDevices]Begin
+2025-11-14 15-41-41.0139[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-41-41.0139[EnumUSBDevices]End
+2025-11-14 15-41-46.0155[EnumUSBDevices]Begin
+2025-11-14 15-41-46.0163[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-41-46.0163[EnumUSBDevices]End
+2025-11-14 15-41-51.0144[EnumUSBDevices]Begin
+2025-11-14 15-41-51.0150[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-41-51.0150[EnumUSBDevices]End
+2025-11-14 15-41-56.0147[EnumUSBDevices]Begin
+2025-11-14 15-41-56.0147[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-41-56.0147[EnumUSBDevices]End
+2025-11-14 15-42-01.0179[EnumUSBDevices]Begin
+2025-11-14 15-42-01.0186[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-42-01.0187[EnumUSBDevices]End
+2025-11-14 15-42-06.0154[EnumUSBDevices]Begin
+2025-11-14 15-42-06.0161[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-42-06.0161[EnumUSBDevices]End
+2025-11-14 15-42-11.0146[EnumUSBDevices]Begin
+2025-11-14 15-42-11.0155[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-42-11.0156[EnumUSBDevices]End
+2025-11-14 15-42-16.0156[EnumUSBDevices]Begin
+2025-11-14 15-42-16.0165[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-42-16.0167[EnumUSBDevices]End
+2025-11-14 15-42-21.0156[EnumUSBDevices]Begin
+2025-11-14 15-42-21.0162[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-42-21.0163[EnumUSBDevices]End
+2025-11-14 15-42-26.0162[EnumUSBDevices]Begin
+2025-11-14 15-42-26.0169[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-42-26.0169[EnumUSBDevices]End
+2025-11-14 15-42-31.0162[EnumUSBDevices]Begin
+2025-11-14 15-42-31.0167[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-42-31.0168[EnumUSBDevices]End
+2025-11-14 15-42-36.0148[EnumUSBDevices]Begin
+2025-11-14 15-42-36.0153[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-42-36.0154[EnumUSBDevices]End
+2025-11-14 15-42-41.0143[EnumUSBDevices]Begin
+2025-11-14 15-42-41.0152[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-42-41.0153[EnumUSBDevices]End
+2025-11-14 15-42-46.0146[EnumUSBDevices]Begin
+2025-11-14 15-42-46.0153[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-42-46.0153[EnumUSBDevices]End
+2025-11-14 15-42-51.0161[EnumUSBDevices]Begin
+2025-11-14 15-42-51.0168[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-42-51.0169[EnumUSBDevices]End
+2025-11-14 15-42-56.0155[EnumUSBDevices]Begin
+2025-11-14 15-42-56.0164[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-42-56.0165[EnumUSBDevices]End
+2025-11-14 15-43-01.0141[EnumUSBDevices]Begin
+2025-11-14 15-43-01.0147[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-43-01.0147[EnumUSBDevices]End
+2025-11-14 15-43-06.0145[EnumUSBDevices]Begin
+2025-11-14 15-43-06.0155[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-43-06.0155[EnumUSBDevices]End
+2025-11-14 15-43-11.0152[EnumUSBDevices]Begin
+2025-11-14 15-43-11.0158[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-43-11.0158[EnumUSBDevices]End
+2025-11-14 15-43-16.0146[EnumUSBDevices]Begin
+2025-11-14 15-43-16.0152[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-43-16.0152[EnumUSBDevices]End
+2025-11-14 15-43-21.0148[EnumUSBDevices]Begin
+2025-11-14 15-43-21.0148[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-43-21.0148[EnumUSBDevices]End
+2025-11-14 15-43-26.0138[EnumUSBDevices]Begin
+2025-11-14 15-43-26.0142[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-43-26.0142[EnumUSBDevices]End
+2025-11-14 15-43-31.0152[EnumUSBDevices]Begin
+2025-11-14 15-43-31.0152[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-43-31.0152[EnumUSBDevices]End
+2025-11-14 15-43-36.0146[EnumUSBDevices]Begin
+2025-11-14 15-43-36.0157[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-43-36.0157[EnumUSBDevices]End
+2025-11-14 15-43-41.0154[EnumUSBDevices]Begin
+2025-11-14 15-43-41.0162[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-43-41.0162[EnumUSBDevices]End
+2025-11-14 15-43-46.0147[EnumUSBDevices]Begin
+2025-11-14 15-43-46.0155[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-43-46.0157[EnumUSBDevices]End
+2025-11-14 15-43-51.0145[EnumUSBDevices]Begin
+2025-11-14 15-43-51.0155[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-43-51.0155[EnumUSBDevices]End
+2025-11-14 15-43-56.0144[EnumUSBDevices]Begin
+2025-11-14 15-43-56.0153[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-43-56.0153[EnumUSBDevices]End
+2025-11-14 15-44-01.0146[EnumUSBDevices]Begin
+2025-11-14 15-44-01.0157[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-44-01.0158[EnumUSBDevices]End
+2025-11-14 15-44-06.0150[EnumUSBDevices]Begin
+2025-11-14 15-44-06.0150[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-44-06.0150[EnumUSBDevices]End
+2025-11-14 15-44-11.0137[EnumUSBDevices]Begin
+2025-11-14 15-44-11.0157[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-44-11.0157[EnumUSBDevices]End
+2025-11-14 15-44-16.0147[EnumUSBDevices]Begin
+2025-11-14 15-44-16.0158[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-44-16.0158[EnumUSBDevices]End
+2025-11-14 15-44-21.0144[EnumUSBDevices]Begin
+2025-11-14 15-44-21.0144[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-44-21.0144[EnumUSBDevices]End
+2025-11-14 15-44-26.0138[EnumUSBDevices]Begin
+2025-11-14 15-44-26.0144[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-44-26.0144[EnumUSBDevices]End
+2025-11-14 15-44-31.0144[EnumUSBDevices]Begin
+2025-11-14 15-44-31.0144[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-44-31.0144[EnumUSBDevices]End
+2025-11-14 15-44-36.0146[EnumUSBDevices]Begin
+2025-11-14 15-44-36.0155[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-44-36.0155[EnumUSBDevices]End
+2025-11-14 15-44-41.0156[EnumUSBDevices]Begin
+2025-11-14 15-44-41.0165[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-44-41.0165[EnumUSBDevices]End
+2025-11-14 15-44-46.0152[EnumUSBDevices]Begin
+2025-11-14 15-44-46.0162[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-44-46.0162[EnumUSBDevices]End
+2025-11-14 15-44-51.0161[EnumUSBDevices]Begin
+2025-11-14 15-44-51.0161[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-44-51.0161[EnumUSBDevices]End
+2025-11-14 15-44-56.0143[EnumUSBDevices]Begin
+2025-11-14 15-44-56.0143[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-44-56.0143[EnumUSBDevices]End
+2025-11-14 15-45-01.0149[EnumUSBDevices]Begin
+2025-11-14 15-45-01.0158[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-45-01.0158[EnumUSBDevices]End
+2025-11-14 15-45-06.0156[EnumUSBDevices]Begin
+2025-11-14 15-45-06.0163[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-45-06.0164[EnumUSBDevices]End
+2025-11-14 15-45-11.0151[EnumUSBDevices]Begin
+2025-11-14 15-45-11.0160[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-45-11.0160[EnumUSBDevices]End
+2025-11-14 15-45-16.0149[EnumUSBDevices]Begin
+2025-11-14 15-45-16.0156[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-45-16.0157[EnumUSBDevices]End
+2025-11-14 15-45-21.0137[EnumUSBDevices]Begin
+2025-11-14 15-45-21.0145[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-45-21.0145[EnumUSBDevices]End
+2025-11-14 15-45-26.0157[EnumUSBDevices]Begin
+2025-11-14 15-45-26.0165[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-45-26.0166[EnumUSBDevices]End
+2025-11-14 15-45-31.0163[EnumUSBDevices]Begin
+2025-11-14 15-45-31.0172[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-45-31.0173[EnumUSBDevices]End
+2025-11-14 15-45-36.0161[EnumUSBDevices]Begin
+2025-11-14 15-45-36.0171[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-45-36.0172[EnumUSBDevices]End
+2025-11-14 15-45-41.0148[EnumUSBDevices]Begin
+2025-11-14 15-45-41.0155[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-45-41.0155[EnumUSBDevices]End
+2025-11-14 15-45-46.0154[EnumUSBDevices]Begin
+2025-11-14 15-45-46.0159[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-45-46.0159[EnumUSBDevices]End
+2025-11-14 15-45-51.0150[EnumUSBDevices]Begin
+2025-11-14 15-45-51.0159[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-45-51.0159[EnumUSBDevices]End
+2025-11-14 15-45-56.0155[EnumUSBDevices]Begin
+2025-11-14 15-45-56.0164[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-45-56.0165[EnumUSBDevices]End
+2025-11-14 15-46-01.0149[EnumUSBDevices]Begin
+2025-11-14 15-46-01.0152[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-46-01.0152[EnumUSBDevices]End
+2025-11-14 15-46-06.0151[EnumUSBDevices]Begin
+2025-11-14 15-46-06.0159[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-46-06.0159[EnumUSBDevices]End
+2025-11-14 15-46-11.0149[EnumUSBDevices]Begin
+2025-11-14 15-46-11.0156[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-46-11.0156[EnumUSBDevices]End
+2025-11-14 15-46-16.0150[EnumUSBDevices]Begin
+2025-11-14 15-46-16.0160[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-46-16.0160[EnumUSBDevices]End
+2025-11-14 15-46-21.0143[EnumUSBDevices]Begin
+2025-11-14 15-46-21.0149[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-46-21.0149[EnumUSBDevices]End
+2025-11-14 15-46-26.0160[EnumUSBDevices]Begin
+2025-11-14 15-46-26.0168[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-46-26.0168[EnumUSBDevices]End
+2025-11-14 15-46-31.0146[EnumUSBDevices]Begin
+2025-11-14 15-46-31.0160[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-46-31.0161[EnumUSBDevices]End
+2025-11-14 15-46-36.0149[EnumUSBDevices]Begin
+2025-11-14 15-46-36.0149[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-46-36.0149[EnumUSBDevices]End
+2025-11-14 15-46-41.0137[EnumUSBDevices]Begin
+2025-11-14 15-46-41.0154[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-46-41.0154[EnumUSBDevices]End
+2025-11-14 15-46-46.0150[EnumUSBDevices]Begin
+2025-11-14 15-46-46.0163[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-46-46.0165[EnumUSBDevices]End
+2025-11-14 15-46-51.0160[EnumUSBDevices]Begin
+2025-11-14 15-46-51.0165[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-46-51.0165[EnumUSBDevices]End
+2025-11-14 15-46-56.0146[EnumUSBDevices]Begin
+2025-11-14 15-46-56.0154[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-46-56.0154[EnumUSBDevices]End
+2025-11-14 15-47-01.0140[EnumUSBDevices]Begin
+2025-11-14 15-47-01.0147[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-47-01.0151[EnumUSBDevices]End
+2025-11-14 15-47-06.0139[EnumUSBDevices]Begin
+2025-11-14 15-47-06.0149[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-47-06.0149[EnumUSBDevices]End
+2025-11-14 15-47-11.0141[EnumUSBDevices]Begin
+2025-11-14 15-47-11.0155[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-47-11.0156[EnumUSBDevices]End
+2025-11-14 15-47-16.0148[EnumUSBDevices]Begin
+2025-11-14 15-47-16.0159[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-47-16.0161[EnumUSBDevices]End
+2025-11-14 15-47-21.0152[EnumUSBDevices]Begin
+2025-11-14 15-47-21.0157[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-47-21.0157[EnumUSBDevices]End
+2025-11-14 15-47-26.0155[EnumUSBDevices]Begin
+2025-11-14 15-47-26.0155[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-47-26.0155[EnumUSBDevices]End
+2025-11-14 15-47-31.0140[EnumUSBDevices]Begin
+2025-11-14 15-47-31.0140[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-47-31.0140[EnumUSBDevices]End
+2025-11-14 15-47-36.0146[EnumUSBDevices]Begin
+2025-11-14 15-47-36.0154[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-47-36.0154[EnumUSBDevices]End
+2025-11-14 15-47-41.0140[EnumUSBDevices]Begin
+2025-11-14 15-47-41.0147[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-47-41.0147[EnumUSBDevices]End
+2025-11-14 15-47-46.0147[EnumUSBDevices]Begin
+2025-11-14 15-47-46.0158[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-47-46.0158[EnumUSBDevices]End
+2025-11-14 15-47-51.0154[EnumUSBDevices]Begin
+2025-11-14 15-47-51.0154[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-47-51.0154[EnumUSBDevices]End
+2025-11-14 15-47-56.0141[EnumUSBDevices]Begin
+2025-11-14 15-47-56.0143[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-47-56.0143[EnumUSBDevices]End
+2025-11-14 15-48-01.0142[EnumUSBDevices]Begin
+2025-11-14 15-48-01.0148[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-48-01.0148[EnumUSBDevices]End
+2025-11-14 15-48-06.0153[EnumUSBDevices]Begin
+2025-11-14 15-48-06.0164[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-48-06.0165[EnumUSBDevices]End
+2025-11-14 15-48-11.0152[EnumUSBDevices]Begin
+2025-11-14 15-48-11.0160[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-48-11.0161[EnumUSBDevices]End
+2025-11-14 15-48-16.0151[EnumUSBDevices]Begin
+2025-11-14 15-48-16.0157[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-48-16.0158[EnumUSBDevices]End
+2025-11-14 15-48-21.0149[EnumUSBDevices]Begin
+2025-11-14 15-48-21.0155[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-48-21.0156[EnumUSBDevices]End
+2025-11-14 15-48-26.0156[EnumUSBDevices]Begin
+2025-11-14 15-48-26.0162[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-48-26.0163[EnumUSBDevices]End
+2025-11-14 15-48-31.0156[EnumUSBDevices]Begin
+2025-11-14 15-48-31.0166[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-48-31.0167[EnumUSBDevices]End
+2025-11-14 15-48-36.0160[EnumUSBDevices]Begin
+2025-11-14 15-48-36.0169[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-48-36.0170[EnumUSBDevices]End
+2025-11-14 15-48-41.0148[EnumUSBDevices]Begin
+2025-11-14 15-48-41.0154[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-48-41.0155[EnumUSBDevices]End
+2025-11-14 15-48-46.0154[EnumUSBDevices]Begin
+2025-11-14 15-48-46.0161[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-48-46.0161[EnumUSBDevices]End
+2025-11-14 15-48-51.0151[EnumUSBDevices]Begin
+2025-11-14 15-48-51.0161[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-48-51.0162[EnumUSBDevices]End
+2025-11-14 15-48-56.0158[EnumUSBDevices]Begin
+2025-11-14 15-48-56.0167[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-48-56.0168[EnumUSBDevices]End
+2025-11-14 15-49-01.0153[EnumUSBDevices]Begin
+2025-11-14 15-49-01.0159[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-49-01.0159[EnumUSBDevices]End
+2025-11-14 15-49-06.0151[EnumUSBDevices]Begin
+2025-11-14 15-49-06.0160[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-49-06.0160[EnumUSBDevices]End
+2025-11-14 15-49-11.0154[EnumUSBDevices]Begin
+2025-11-14 15-49-11.0154[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-49-11.0163[EnumUSBDevices]End
+2025-11-14 15-49-16.0141[EnumUSBDevices]Begin
+2025-11-14 15-49-16.0141[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-49-16.0141[EnumUSBDevices]End
+2025-11-14 15-49-21.0161[EnumUSBDevices]Begin
+2025-11-14 15-49-21.0169[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-49-21.0171[EnumUSBDevices]End
+2025-11-14 15-49-26.0150[EnumUSBDevices]Begin
+2025-11-14 15-49-26.0156[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-49-26.0156[EnumUSBDevices]End
+2025-11-14 15-49-31.0142[EnumUSBDevices]Begin
+2025-11-14 15-49-31.0149[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-49-31.0149[EnumUSBDevices]End
+2025-11-14 15-49-36.0151[EnumUSBDevices]Begin
+2025-11-14 15-49-36.0151[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-49-36.0151[EnumUSBDevices]End
+2025-11-14 15-49-41.0143[EnumUSBDevices]Begin
+2025-11-14 15-49-41.0153[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-49-41.0153[EnumUSBDevices]End
+2025-11-14 15-49-46.0151[EnumUSBDevices]Begin
+2025-11-14 15-49-46.0175[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-49-46.0177[EnumUSBDevices]End
+2025-11-14 15-49-51.0162[EnumUSBDevices]Begin
+2025-11-14 15-49-51.0168[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-49-51.0168[EnumUSBDevices]End
+2025-11-14 15-49-56.0154[EnumUSBDevices]Begin
+2025-11-14 15-49-56.0156[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-49-56.0156[EnumUSBDevices]End
+2025-11-14 15-50-01.0150[EnumUSBDevices]Begin
+2025-11-14 15-50-01.0150[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-50-01.0150[EnumUSBDevices]End
+2025-11-14 15-50-06.0137[EnumUSBDevices]Begin
+2025-11-14 15-50-06.0143[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-50-06.0143[EnumUSBDevices]End
+2025-11-14 15-50-11.0145[EnumUSBDevices]Begin
+2025-11-14 15-50-11.0145[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-50-11.0145[EnumUSBDevices]End
+2025-11-14 15-50-16.0148[EnumUSBDevices]Begin
+2025-11-14 15-50-16.0154[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-50-16.0157[EnumUSBDevices]End
+2025-11-14 15-50-21.0149[EnumUSBDevices]Begin
+2025-11-14 15-50-21.0151[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-50-21.0151[EnumUSBDevices]End
+2025-11-14 15-50-26.0151[EnumUSBDevices]Begin
+2025-11-14 15-50-26.0154[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-50-26.0154[EnumUSBDevices]End
+2025-11-14 15-50-31.0143[EnumUSBDevices]Begin
+2025-11-14 15-50-31.0143[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-50-31.0143[EnumUSBDevices]End
+2025-11-14 15-50-36.0141[EnumUSBDevices]Begin
+2025-11-14 15-50-36.0147[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-50-36.0149[EnumUSBDevices]End
+2025-11-14 15-50-41.0160[EnumUSBDevices]Begin
+2025-11-14 15-50-41.0168[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-50-41.0168[EnumUSBDevices]End
+2025-11-14 15-50-46.0214[EnumUSBDevices]Begin
+2025-11-14 15-50-46.0255[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-50-46.0260[EnumUSBDevices]End
+2025-11-14 15-50-51.0140[EnumUSBDevices]Begin
+2025-11-14 15-50-51.0146[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-50-51.0146[EnumUSBDevices]End
+2025-11-14 15-50-56.0139[EnumUSBDevices]Begin
+2025-11-14 15-50-56.0139[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-50-56.0139[EnumUSBDevices]End
+2025-11-14 15-51-01.0148[EnumUSBDevices]Begin
+2025-11-14 15-51-01.0153[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-51-01.0153[EnumUSBDevices]End
+2025-11-14 15-51-06.0146[EnumUSBDevices]Begin
+2025-11-14 15-51-06.0151[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-51-06.0151[EnumUSBDevices]End
+2025-11-14 15-51-11.0147[EnumUSBDevices]Begin
+2025-11-14 15-51-11.0147[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-51-11.0154[EnumUSBDevices]End
+2025-11-14 15-51-16.0142[EnumUSBDevices]Begin
+2025-11-14 15-51-16.0149[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-51-16.0150[EnumUSBDevices]End
+2025-11-14 15-51-21.0146[EnumUSBDevices]Begin
+2025-11-14 15-51-21.0146[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-51-21.0146[EnumUSBDevices]End
+2025-11-14 15-51-26.0144[EnumUSBDevices]Begin
+2025-11-14 15-51-26.0144[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-51-26.0144[EnumUSBDevices]End
+2025-11-14 15-51-31.0155[EnumUSBDevices]Begin
+2025-11-14 15-51-31.0162[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-51-31.0162[EnumUSBDevices]End
+2025-11-14 15-51-36.0149[EnumUSBDevices]Begin
+2025-11-14 15-51-36.0149[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-51-36.0149[EnumUSBDevices]End
+2025-11-14 15-51-41.0143[EnumUSBDevices]Begin
+2025-11-14 15-51-41.0143[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-51-41.0153[EnumUSBDevices]End
+2025-11-14 15-51-46.0143[EnumUSBDevices]Begin
+2025-11-14 15-51-46.0151[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-51-46.0151[EnumUSBDevices]End
+2025-11-14 15-51-51.0148[EnumUSBDevices]Begin
+2025-11-14 15-51-51.0148[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-51-51.0148[EnumUSBDevices]End
+2025-11-14 15-51-56.0146[EnumUSBDevices]Begin
+2025-11-14 15-51-56.0154[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-51-56.0154[EnumUSBDevices]End
+2025-11-14 15-52-01.0151[EnumUSBDevices]Begin
+2025-11-14 15-52-01.0152[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-52-01.0152[EnumUSBDevices]End
+2025-11-14 15-52-06.0153[EnumUSBDevices]Begin
+2025-11-14 15-52-06.0165[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-52-06.0165[EnumUSBDevices]End
+2025-11-14 15-52-11.0146[EnumUSBDevices]Begin
+2025-11-14 15-52-11.0146[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-52-11.0146[EnumUSBDevices]End
+2025-11-14 15-52-16.0153[EnumUSBDevices]Begin
+2025-11-14 15-52-16.0160[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-52-16.0160[EnumUSBDevices]End
+2025-11-14 17-07-04.0217[]*****************************************
+2025-11-14 17-07-04.0225[]DLL Log Initialize. Verbosity: 6
+2025-11-14 17-07-04.0226[]*****************************************
+2025-11-14 17-07-04.0228[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-11-14 17-07-04.0230[]DLL Version: 1.07
+2025-11-14 17-07-04.0232[InitLibrary]Begin
+2025-11-14 17-07-04.0308[InitLibrary]Library SignID:00000101
+2025-11-14 17-07-04.0310[InitLibrary]Current SignID:00000101
+2025-11-14 17-07-04.0311[InitLibrary]End
+2025-11-14 17-07-04.0313[GetAPIVersionHwLibrary]Begin
+2025-11-14 17-07-04.0318[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-14 17-07-04.0320[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-14 17-07-04.0322[GetAPIVersionHwLibrary]End
+2025-11-14 17-07-04.0323[EnumUSBDevices]Begin
+2025-11-14 17-07-04.0347[EnumUSBDevices]Found 1 USB Devices
+2025-11-14 17-07-04.0349[EnumUSBDevices]End
+2025-11-14 17-07-04.0350[OpenPrinterUSB]Begin
+2025-11-14 17-07-04.0354[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-11-14 17-07-04.0370[OpenPrinterUSB]New device ID:00000101
+2025-11-14 17-07-04.0372[OpenPrinterUSB]End
+2025-11-14 17-07-14.0167[GetPrinterFullStatus]Begin
+2025-11-14 17-07-14.0175[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-07-14.0176[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-07-14.0176[GetPrinterFullStatus]End
+2025-11-14 17-07-14.0178[GetPrinterFullStatus]Begin
+2025-11-14 17-07-14.0182[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-07-14.0183[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-07-14.0184[GetPrinterFullStatus]End
+2025-11-14 17-07-19.0043[GetPrinterFullStatus]Begin
+2025-11-14 17-07-19.0050[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-07-19.0052[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-07-19.0053[GetPrinterFullStatus]End
+2025-11-14 17-07-19.0054[GetPrinterFullStatus]Begin
+2025-11-14 17-07-19.0058[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-07-19.0059[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-07-19.0059[GetPrinterFullStatus]End
+2025-11-14 17-07-24.0065[GetPrinterFullStatus]Begin
+2025-11-14 17-07-24.0071[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-07-24.0072[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-07-24.0073[GetPrinterFullStatus]End
+2025-11-14 17-07-24.0074[GetPrinterFullStatus]Begin
+2025-11-14 17-07-24.0078[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-07-24.0079[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-07-24.0079[GetPrinterFullStatus]End
+2025-11-14 17-07-29.0042[GetPrinterFullStatus]Begin
+2025-11-14 17-07-29.0050[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-07-29.0051[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-07-29.0052[GetPrinterFullStatus]End
+2025-11-14 17-07-29.0053[GetPrinterFullStatus]Begin
+2025-11-14 17-07-29.0058[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-07-29.0059[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-07-29.0059[GetPrinterFullStatus]End
+2025-11-14 17-07-34.0040[GetPrinterFullStatus]Begin
+2025-11-14 17-07-34.0047[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-07-34.0049[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-07-34.0050[GetPrinterFullStatus]End
+2025-11-14 17-07-34.0052[GetPrinterFullStatus]Begin
+2025-11-14 17-07-34.0059[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-07-34.0060[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-07-34.0060[GetPrinterFullStatus]End
+2025-11-14 17-07-39.0040[GetPrinterFullStatus]Begin
+2025-11-14 17-07-39.0047[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-07-39.0048[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-07-39.0049[GetPrinterFullStatus]End
+2025-11-14 17-07-39.0050[GetPrinterFullStatus]Begin
+2025-11-14 17-07-39.0055[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-07-39.0055[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-07-39.0057[GetPrinterFullStatus]End
+2025-11-14 17-07-44.0039[GetPrinterFullStatus]Begin
+2025-11-14 17-07-44.0047[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-07-44.0048[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-07-44.0048[GetPrinterFullStatus]End
+2025-11-14 17-07-44.0049[GetPrinterFullStatus]Begin
+2025-11-14 17-07-44.0052[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-07-44.0054[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-07-44.0054[GetPrinterFullStatus]End
+2025-11-14 17-07-49.0050[GetPrinterFullStatus]Begin
+2025-11-14 17-07-49.0055[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-07-49.0056[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-07-49.0057[GetPrinterFullStatus]End
+2025-11-14 17-07-49.0058[GetPrinterFullStatus]Begin
+2025-11-14 17-07-49.0063[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-07-49.0063[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-07-49.0064[GetPrinterFullStatus]End
+2025-11-14 17-08-00.0450[GetPrinterFullStatus]Begin
+2025-11-14 17-08-00.0457[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-00.0457[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-00.0457[GetPrinterFullStatus]End
+2025-11-14 17-08-00.0457[GetPrinterFullStatus]Begin
+2025-11-14 17-08-00.0467[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-00.0467[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-00.0467[GetPrinterFullStatus]End
+2025-11-14 17-08-02.0468[GetPrinterFullStatus]Begin
+2025-11-14 17-08-02.0477[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-02.0481[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-02.0481[GetPrinterFullStatus]End
+2025-11-14 17-08-02.0481[GetPrinterFullStatus]Begin
+2025-11-14 17-08-02.0497[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-02.0497[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-02.0501[GetPrinterFullStatus]End
+2025-11-14 17-08-04.0257[GetPrinterFullStatus]Begin
+2025-11-14 17-08-04.0267[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-04.0270[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-04.0271[GetPrinterFullStatus]End
+2025-11-14 17-08-04.0271[GetPrinterFullStatus]Begin
+2025-11-14 17-08-04.0277[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-04.0277[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-04.0277[GetPrinterFullStatus]End
+2025-11-14 17-08-09.0173[GetPrinterFullStatus]Begin
+2025-11-14 17-08-09.0184[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-09.0184[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-09.0184[GetPrinterFullStatus]End
+2025-11-14 17-08-09.0187[GetPrinterFullStatus]Begin
+2025-11-14 17-08-09.0194[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-09.0197[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-09.0197[GetPrinterFullStatus]End
+2025-11-14 17-08-14.0054[GetPrinterFullStatus]Begin
+2025-11-14 17-08-14.0065[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-14.0067[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-14.0068[GetPrinterFullStatus]End
+2025-11-14 17-08-14.0069[GetPrinterFullStatus]Begin
+2025-11-14 17-08-14.0077[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-14.0077[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-14.0077[GetPrinterFullStatus]End
+2025-11-14 17-08-18.0848[GetPrinterFullStatus]Begin
+2025-11-14 17-08-18.0857[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-18.0860[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-18.0861[GetPrinterFullStatus]End
+2025-11-14 17-08-18.0862[GetPrinterFullStatus]Begin
+2025-11-14 17-08-18.0871[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-18.0871[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-18.0872[GetPrinterFullStatus]End
+2025-11-14 17-08-23.0845[GetPrinterFullStatus]Begin
+2025-11-14 17-08-23.0847[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-23.0847[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-23.0847[GetPrinterFullStatus]End
+2025-11-14 17-08-23.0857[GetPrinterFullStatus]Begin
+2025-11-14 17-08-23.0867[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-23.0867[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-23.0867[GetPrinterFullStatus]End
+2025-11-14 17-08-28.0850[GetPrinterFullStatus]Begin
+2025-11-14 17-08-28.0857[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-28.0857[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-28.0857[GetPrinterFullStatus]End
+2025-11-14 17-08-28.0866[GetPrinterFullStatus]Begin
+2025-11-14 17-08-28.0870[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-28.0877[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-28.0877[GetPrinterFullStatus]End
+2025-11-14 17-08-31.0504[PrintImageFromPath]Begin
+2025-11-14 17-08-31.0507[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-11-14 17-08-31.0507[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-11-14 17-08-31.0553[PrintImageFromPath]End
+2025-11-14 17-08-31.0563[PrintBarcode]Begin
+2025-11-14 17-08-31.0565[PrintBarcode]<Brc Text>:MDEwNDAzMDE6OFdHME5UTE01MDIwMDAxOjE3NjMxMjAyNzI2Mjc6MDowMDgwOjA0OjA2OjAyOjAxOjE=
+2025-11-14 17-08-31.0567[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-11-14 17-08-31.0602[PrintBarcode]End
+2025-11-14 17-08-31.0611[PrintText]Begin
+2025-11-14 17-08-31.0611[PrintText]<Text to Print>:
+Date-Time        : 14-11-2025 17:07:52
+Payment Type     : CASH
+Salepoint Id     : 01040301
+Type             : RJT 
+Platform No.     : 2
+From             : Taj Mahal
+To               : Mankameshwar
+Price            : Rs. 80/-
+Ticket No.       : 8WG0NTLM5020001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-11-14 17-08-31.0617[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-11-14 17-08-31.0620[PrintText]<Add LF>:false
+2025-11-14 17-08-31.0627[PrintText]End
+2025-11-14 17-08-31.0627[Cut]Begin
+2025-11-14 17-08-31.0635[Cut]CutType:CUT_TOTAL
+2025-11-14 17-08-31.0641[Cut]End
+2025-11-14 17-08-31.0642[PrintImageFromPath]Begin
+2025-11-14 17-08-31.0642[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-11-14 17-08-31.0646[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-11-14 17-08-31.0687[PrintImageFromPath]End
+2025-11-14 17-08-31.0691[PrintText]Begin
+2025-11-14 17-08-31.0691[PrintText]<Text to Print>:            PAYMENT RECEIPT
+
+Denomination    : Rs. 20
+Order Id        : ORD8WG0NTLM5020001
+Receipt Id      : CASH_120d2d02
+Payment Mode    : CASH
+Ticket Amount   : Rs. 80
+Status          : SUCCESS
+Date-Time       : 14-11-2025 17:08:29
+TVM             : 01040301
+
+2025-11-14 17-08-31.0691[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-11-14 17-08-31.0691[PrintText]<Add LF>:false
+2025-11-14 17-08-31.0703[PrintText]End
+2025-11-14 17-08-31.0704[Cut]Begin
+2025-11-14 17-08-31.0704[Cut]CutType:CUT_TOTAL
+2025-11-14 17-08-31.0711[Cut]End
+2025-11-14 17-08-39.0057[GetPrinterFullStatus]Begin
+2025-11-14 17-08-39.0074[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-39.0077[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-39.0080[GetPrinterFullStatus]End
+2025-11-14 17-08-39.0080[GetPrinterFullStatus]Begin
+2025-11-14 17-08-39.0092[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-39.0092[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-39.0092[GetPrinterFullStatus]End
+2025-11-14 17-08-40.0860[GetPrinterFullStatus]Begin
+2025-11-14 17-08-40.0881[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-40.0887[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-40.0891[GetPrinterFullStatus]End
+2025-11-14 17-08-40.0891[GetPrinterFullStatus]Begin
+2025-11-14 17-08-40.0917[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-40.0920[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-40.0923[GetPrinterFullStatus]End
+2025-11-14 17-08-44.0049[GetPrinterFullStatus]Begin
+2025-11-14 17-08-44.0057[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-44.0057[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-44.0057[GetPrinterFullStatus]End
+2025-11-14 17-08-44.0057[GetPrinterFullStatus]Begin
+2025-11-14 17-08-44.0069[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-44.0069[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-44.0069[GetPrinterFullStatus]End
+2025-11-14 17-08-49.0040[GetPrinterFullStatus]Begin
+2025-11-14 17-08-49.0046[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-49.0047[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-49.0047[GetPrinterFullStatus]End
+2025-11-14 17-08-49.0047[GetPrinterFullStatus]Begin
+2025-11-14 17-08-49.0054[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-49.0054[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-49.0055[GetPrinterFullStatus]End
+2025-11-14 17-08-54.0039[GetPrinterFullStatus]Begin
+2025-11-14 17-08-54.0043[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-54.0045[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-54.0045[GetPrinterFullStatus]End
+2025-11-14 17-08-54.0045[GetPrinterFullStatus]Begin
+2025-11-14 17-08-54.0050[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-54.0050[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-54.0051[GetPrinterFullStatus]End
+2025-11-14 17-08-59.0039[GetPrinterFullStatus]Begin
+2025-11-14 17-08-59.0045[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-59.0045[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-59.0047[GetPrinterFullStatus]End
+2025-11-14 17-08-59.0048[GetPrinterFullStatus]Begin
+2025-11-14 17-08-59.0054[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-08-59.0054[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-08-59.0054[GetPrinterFullStatus]End
+2025-11-14 17-09-04.0038[GetPrinterFullStatus]Begin
+2025-11-14 17-09-04.0045[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-04.0045[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-04.0045[GetPrinterFullStatus]End
+2025-11-14 17-09-04.0047[GetPrinterFullStatus]Begin
+2025-11-14 17-09-04.0054[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-04.0055[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-04.0055[GetPrinterFullStatus]End
+2025-11-14 17-09-09.0040[GetPrinterFullStatus]Begin
+2025-11-14 17-09-09.0047[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-09.0047[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-09.0048[GetPrinterFullStatus]End
+2025-11-14 17-09-09.0049[GetPrinterFullStatus]Begin
+2025-11-14 17-09-09.0054[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-09.0055[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-09.0055[GetPrinterFullStatus]End
+2025-11-14 17-09-14.0039[GetPrinterFullStatus]Begin
+2025-11-14 17-09-14.0047[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-14.0048[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-14.0048[GetPrinterFullStatus]End
+2025-11-14 17-09-14.0049[GetPrinterFullStatus]Begin
+2025-11-14 17-09-14.0054[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-14.0054[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-14.0055[GetPrinterFullStatus]End
+2025-11-14 17-09-19.0040[GetPrinterFullStatus]Begin
+2025-11-14 17-09-19.0047[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-19.0047[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-19.0047[GetPrinterFullStatus]End
+2025-11-14 17-09-19.0049[GetPrinterFullStatus]Begin
+2025-11-14 17-09-19.0055[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-19.0056[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-19.0056[GetPrinterFullStatus]End
+2025-11-14 17-09-24.0076[GetPrinterFullStatus]Begin
+2025-11-14 17-09-24.0088[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-24.0090[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-24.0092[GetPrinterFullStatus]End
+2025-11-14 17-09-24.0093[GetPrinterFullStatus]Begin
+2025-11-14 17-09-24.0102[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-24.0103[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-24.0104[GetPrinterFullStatus]End
+2025-11-14 17-09-29.0129[GetPrinterFullStatus]Begin
+2025-11-14 17-09-29.0139[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-29.0140[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-29.0141[GetPrinterFullStatus]End
+2025-11-14 17-09-29.0142[GetPrinterFullStatus]Begin
+2025-11-14 17-09-29.0149[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-29.0150[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-29.0152[GetPrinterFullStatus]End
+2025-11-14 17-09-34.0040[GetPrinterFullStatus]Begin
+2025-11-14 17-09-34.0049[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-34.0049[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-34.0051[GetPrinterFullStatus]End
+2025-11-14 17-09-34.0051[GetPrinterFullStatus]Begin
+2025-11-14 17-09-34.0061[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-34.0061[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-34.0062[GetPrinterFullStatus]End
+2025-11-14 17-09-39.0050[GetPrinterFullStatus]Begin
+2025-11-14 17-09-39.0060[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-39.0062[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-39.0063[GetPrinterFullStatus]End
+2025-11-14 17-09-39.0064[GetPrinterFullStatus]Begin
+2025-11-14 17-09-39.0075[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-39.0077[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-39.0078[GetPrinterFullStatus]End
+2025-11-14 17-09-44.0052[GetPrinterFullStatus]Begin
+2025-11-14 17-09-44.0062[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-44.0065[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-44.0066[GetPrinterFullStatus]End
+2025-11-14 17-09-44.0067[GetPrinterFullStatus]Begin
+2025-11-14 17-09-44.0077[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-44.0078[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-44.0080[GetPrinterFullStatus]End
+2025-11-14 17-09-54.0052[GetPrinterFullStatus]Begin
+2025-11-14 17-09-54.0061[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-54.0063[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-54.0063[GetPrinterFullStatus]End
+2025-11-14 17-09-54.0064[GetPrinterFullStatus]Begin
+2025-11-14 17-09-54.0074[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-54.0075[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-54.0075[GetPrinterFullStatus]End
+2025-11-14 17-09-55.0827[GetPrinterFullStatus]Begin
+2025-11-14 17-09-55.0837[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-55.0837[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-55.0838[GetPrinterFullStatus]End
+2025-11-14 17-09-55.0839[GetPrinterFullStatus]Begin
+2025-11-14 17-09-55.0848[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-55.0849[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-55.0850[GetPrinterFullStatus]End
+2025-11-14 17-09-59.0053[GetPrinterFullStatus]Begin
+2025-11-14 17-09-59.0057[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-59.0065[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-59.0065[GetPrinterFullStatus]End
+2025-11-14 17-09-59.0067[GetPrinterFullStatus]Begin
+2025-11-14 17-09-59.0076[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-09-59.0077[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-09-59.0077[GetPrinterFullStatus]End
+2025-11-14 17-10-04.0049[GetPrinterFullStatus]Begin
+2025-11-14 17-10-04.0054[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-10-04.0055[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-10-04.0055[GetPrinterFullStatus]End
+2025-11-14 17-10-04.0055[GetPrinterFullStatus]Begin
+2025-11-14 17-10-04.0061[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-10-04.0062[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-10-04.0064[GetPrinterFullStatus]End
+2025-11-14 17-10-09.0054[GetPrinterFullStatus]Begin
+2025-11-14 17-10-09.0066[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-10-09.0071[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-10-09.0073[GetPrinterFullStatus]End
+2025-11-14 17-10-09.0074[GetPrinterFullStatus]Begin
+2025-11-14 17-10-09.0085[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-10-09.0087[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-10-09.0088[GetPrinterFullStatus]End
+2025-11-14 17-10-14.0060[GetPrinterFullStatus]Begin
+2025-11-14 17-10-14.0072[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-10-14.0075[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-10-14.0075[GetPrinterFullStatus]End
+2025-11-14 17-10-14.0077[GetPrinterFullStatus]Begin
+2025-11-14 17-10-14.0086[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-10-14.0087[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-10-14.0087[GetPrinterFullStatus]End
+2025-11-14 17-10-19.0064[GetPrinterFullStatus]Begin
+2025-11-14 17-10-19.0073[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-10-19.0074[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-10-19.0075[GetPrinterFullStatus]End
+2025-11-14 17-10-19.0076[GetPrinterFullStatus]Begin
+2025-11-14 17-10-19.0086[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-10-19.0087[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-10-19.0088[GetPrinterFullStatus]End
+2025-11-14 17-10-24.0061[GetPrinterFullStatus]Begin
+2025-11-14 17-10-24.0074[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-10-24.0077[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-10-24.0079[GetPrinterFullStatus]End
+2025-11-14 17-10-24.0081[GetPrinterFullStatus]Begin
+2025-11-14 17-10-24.0093[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-10-24.0097[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-10-24.0098[GetPrinterFullStatus]End
+2025-11-14 17-11-46.0225[GetPrinterFullStatus]Begin
+2025-11-14 17-11-46.0241[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-11-46.0246[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-11-46.0251[GetPrinterFullStatus]End
+2025-11-14 17-11-46.0260[GetPrinterFullStatus]Begin
+2025-11-14 17-11-46.0273[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-11-46.0277[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-11-46.0283[GetPrinterFullStatus]End
+2025-11-14 17-15-08.0080[]*****************************************
+2025-11-14 17-15-08.0084[]DLL Log Initialize. Verbosity: 6
+2025-11-14 17-15-08.0085[]*****************************************
+2025-11-14 17-15-08.0087[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-11-14 17-15-08.0087[]DLL Version: 1.07
+2025-11-14 17-15-08.0089[InitLibrary]Begin
+2025-11-14 17-15-08.0150[InitLibrary]Library SignID:00000101
+2025-11-14 17-15-08.0152[InitLibrary]Current SignID:00000101
+2025-11-14 17-15-08.0153[InitLibrary]End
+2025-11-14 17-15-08.0154[GetAPIVersionHwLibrary]Begin
+2025-11-14 17-15-08.0161[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-14 17-15-08.0162[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-14 17-15-08.0187[GetAPIVersionHwLibrary]End
+2025-11-14 17-15-08.0187[EnumUSBDevices]Begin
+2025-11-14 17-15-08.0205[EnumUSBDevices]Found 1 USB Devices
+2025-11-14 17-15-08.0206[EnumUSBDevices]End
+2025-11-14 17-15-08.0207[OpenPrinterUSB]Begin
+2025-11-14 17-15-08.0210[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-11-14 17-15-08.0221[OpenPrinterUSB]New device ID:00000101
+2025-11-14 17-15-08.0222[OpenPrinterUSB]End
+2025-11-14 17-15-32.0058[GetPrinterFullStatus]Begin
+2025-11-14 17-15-32.0082[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-15-32.0084[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-15-32.0085[GetPrinterFullStatus]End
+2025-11-14 17-15-32.0088[GetPrinterFullStatus]Begin
+2025-11-14 17-15-32.0099[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-15-32.0102[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-15-32.0104[GetPrinterFullStatus]End
+2025-11-14 17-15-37.0028[GetPrinterFullStatus]Begin
+2025-11-14 17-15-37.0039[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-15-37.0043[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-15-37.0044[GetPrinterFullStatus]End
+2025-11-14 17-15-37.0046[GetPrinterFullStatus]Begin
+2025-11-14 17-15-37.0056[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-15-37.0058[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-15-37.0059[GetPrinterFullStatus]End
+2025-11-14 17-15-42.0015[GetPrinterFullStatus]Begin
+2025-11-14 17-15-42.0024[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-15-42.0027[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-15-42.0028[GetPrinterFullStatus]End
+2025-11-14 17-15-42.0031[GetPrinterFullStatus]Begin
+2025-11-14 17-15-42.0042[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-15-42.0043[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-15-42.0044[GetPrinterFullStatus]End
+2025-11-14 17-15-47.0031[GetPrinterFullStatus]Begin
+2025-11-14 17-15-47.0042[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-15-47.0044[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-15-47.0046[GetPrinterFullStatus]End
+2025-11-14 17-15-47.0048[GetPrinterFullStatus]Begin
+2025-11-14 17-15-47.0060[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-15-47.0062[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-15-47.0063[GetPrinterFullStatus]End
+2025-11-14 17-15-52.0023[GetPrinterFullStatus]Begin
+2025-11-14 17-15-52.0033[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-15-52.0034[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-15-52.0037[GetPrinterFullStatus]End
+2025-11-14 17-15-52.0039[GetPrinterFullStatus]Begin
+2025-11-14 17-15-52.0047[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-15-52.0048[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-15-52.0049[GetPrinterFullStatus]End
+2025-11-14 17-15-57.0030[GetPrinterFullStatus]Begin
+2025-11-14 17-15-57.0040[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-15-57.0041[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-15-57.0043[GetPrinterFullStatus]End
+2025-11-14 17-15-57.0046[GetPrinterFullStatus]Begin
+2025-11-14 17-15-57.0059[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-15-57.0062[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-15-57.0063[GetPrinterFullStatus]End
+2025-11-14 17-16-02.0028[GetPrinterFullStatus]Begin
+2025-11-14 17-16-02.0042[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-02.0043[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-02.0044[GetPrinterFullStatus]End
+2025-11-14 17-16-02.0046[GetPrinterFullStatus]Begin
+2025-11-14 17-16-02.0058[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-02.0059[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-02.0060[GetPrinterFullStatus]End
+2025-11-14 17-16-07.0020[GetPrinterFullStatus]Begin
+2025-11-14 17-16-07.0031[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-07.0034[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-07.0035[GetPrinterFullStatus]End
+2025-11-14 17-16-07.0038[GetPrinterFullStatus]Begin
+2025-11-14 17-16-07.0049[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-07.0050[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-07.0052[GetPrinterFullStatus]End
+2025-11-14 17-16-12.0082[GetPrinterFullStatus]Begin
+2025-11-14 17-16-12.0092[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-12.0093[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-12.0095[GetPrinterFullStatus]End
+2025-11-14 17-16-12.0096[GetPrinterFullStatus]Begin
+2025-11-14 17-16-12.0105[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-12.0106[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-12.0107[GetPrinterFullStatus]End
+2025-11-14 17-16-17.0029[GetPrinterFullStatus]Begin
+2025-11-14 17-16-17.0039[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-17.0040[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-17.0042[GetPrinterFullStatus]End
+2025-11-14 17-16-17.0044[GetPrinterFullStatus]Begin
+2025-11-14 17-16-17.0055[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-17.0056[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-17.0057[GetPrinterFullStatus]End
+2025-11-14 17-16-22.0022[GetPrinterFullStatus]Begin
+2025-11-14 17-16-22.0032[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-22.0033[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-22.0034[GetPrinterFullStatus]End
+2025-11-14 17-16-22.0036[GetPrinterFullStatus]Begin
+2025-11-14 17-16-22.0045[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-22.0046[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-22.0047[GetPrinterFullStatus]End
+2025-11-14 17-16-27.0021[GetPrinterFullStatus]Begin
+2025-11-14 17-16-27.0032[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-27.0033[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-27.0035[GetPrinterFullStatus]End
+2025-11-14 17-16-27.0037[GetPrinterFullStatus]Begin
+2025-11-14 17-16-27.0046[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-27.0047[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-27.0049[GetPrinterFullStatus]End
+2025-11-14 17-16-32.0132[GetPrinterFullStatus]Begin
+2025-11-14 17-16-32.0141[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-32.0143[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-32.0147[GetPrinterFullStatus]End
+2025-11-14 17-16-32.0168[GetPrinterFullStatus]Begin
+2025-11-14 17-16-32.0176[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-32.0178[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-32.0179[GetPrinterFullStatus]End
+2025-11-14 17-16-37.0016[GetPrinterFullStatus]Begin
+2025-11-14 17-16-37.0024[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-37.0024[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-37.0031[GetPrinterFullStatus]End
+2025-11-14 17-16-37.0032[GetPrinterFullStatus]Begin
+2025-11-14 17-16-37.0035[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-37.0042[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-37.0042[GetPrinterFullStatus]End
+2025-11-14 17-16-42.0023[GetPrinterFullStatus]Begin
+2025-11-14 17-16-42.0034[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-42.0034[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-42.0034[GetPrinterFullStatus]End
+2025-11-14 17-16-42.0034[GetPrinterFullStatus]Begin
+2025-11-14 17-16-42.0041[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-42.0041[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-42.0041[GetPrinterFullStatus]End
+2025-11-14 17-16-47.0012[GetPrinterFullStatus]Begin
+2025-11-14 17-16-47.0022[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-47.0025[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-47.0025[GetPrinterFullStatus]End
+2025-11-14 17-16-47.0025[GetPrinterFullStatus]Begin
+2025-11-14 17-16-47.0034[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-47.0034[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-47.0034[GetPrinterFullStatus]End
+2025-11-14 17-16-52.0166[GetPrinterFullStatus]Begin
+2025-11-14 17-16-52.0176[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-52.0176[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-52.0176[GetPrinterFullStatus]End
+2025-11-14 17-16-52.0176[GetPrinterFullStatus]Begin
+2025-11-14 17-16-52.0187[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-52.0187[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-52.0191[GetPrinterFullStatus]End
+2025-11-14 17-16-57.0017[GetPrinterFullStatus]Begin
+2025-11-14 17-16-57.0026[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-57.0026[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-57.0029[GetPrinterFullStatus]End
+2025-11-14 17-16-57.0029[GetPrinterFullStatus]Begin
+2025-11-14 17-16-57.0035[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-16-57.0041[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-16-57.0041[GetPrinterFullStatus]End
+2025-11-14 17-17-02.0009[GetPrinterFullStatus]Begin
+2025-11-14 17-17-02.0012[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-17-02.0012[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-17-02.0012[GetPrinterFullStatus]End
+2025-11-14 17-17-02.0021[GetPrinterFullStatus]Begin
+2025-11-14 17-17-02.0030[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-17-02.0030[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-17-02.0032[GetPrinterFullStatus]End
+2025-11-14 17-17-07.0015[GetPrinterFullStatus]Begin
+2025-11-14 17-17-07.0022[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-17-07.0022[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-17-07.0029[GetPrinterFullStatus]End
+2025-11-14 17-17-07.0031[GetPrinterFullStatus]Begin
+2025-11-14 17-17-07.0040[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-17-07.0040[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-17-07.0042[GetPrinterFullStatus]End
+2025-11-14 17-17-12.0012[GetPrinterFullStatus]Begin
+2025-11-14 17-17-12.0012[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-17-12.0022[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-17-12.0022[GetPrinterFullStatus]End
+2025-11-14 17-17-12.0022[GetPrinterFullStatus]Begin
+2025-11-14 17-17-12.0031[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-17-12.0035[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-17-12.0035[GetPrinterFullStatus]End
+2025-11-14 17-17-17.0017[GetPrinterFullStatus]Begin
+2025-11-14 17-17-17.0032[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-17-17.0034[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-17-17.0036[GetPrinterFullStatus]End
+2025-11-14 17-17-17.0037[GetPrinterFullStatus]Begin
+2025-11-14 17-17-17.0049[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-17-17.0052[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-17-17.0053[GetPrinterFullStatus]End
+2025-11-14 17-17-22.0012[GetPrinterFullStatus]Begin
+2025-11-14 17-17-22.0025[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-17-22.0025[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-17-22.0033[GetPrinterFullStatus]End
+2025-11-14 17-17-22.0034[GetPrinterFullStatus]Begin
+2025-11-14 17-17-22.0044[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-17-22.0044[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-17-22.0044[GetPrinterFullStatus]End
+2025-11-14 17-17-27.0066[GetPrinterFullStatus]Begin
+2025-11-14 17-17-27.0074[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-17-27.0074[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-17-27.0074[GetPrinterFullStatus]End
+2025-11-14 17-17-27.0074[GetPrinterFullStatus]Begin
+2025-11-14 17-17-27.0089[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-17-27.0089[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-17-27.0092[GetPrinterFullStatus]End
+2025-11-14 17-17-32.0016[GetPrinterFullStatus]Begin
+2025-11-14 17-17-32.0022[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-17-32.0022[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-17-32.0028[GetPrinterFullStatus]End
+2025-11-14 17-17-32.0028[GetPrinterFullStatus]Begin
+2025-11-14 17-17-32.0034[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-17-32.0034[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-17-32.0034[GetPrinterFullStatus]End
+2025-11-14 17-17-37.0018[GetPrinterFullStatus]Begin
+2025-11-14 17-17-37.0027[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-17-37.0027[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-17-37.0027[GetPrinterFullStatus]End
+2025-11-14 17-17-37.0027[GetPrinterFullStatus]Begin
+2025-11-14 17-17-37.0031[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-17-37.0031[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-17-37.0040[GetPrinterFullStatus]End
+2025-11-14 17-17-42.0010[GetPrinterFullStatus]Begin
+2025-11-14 17-17-42.0012[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-17-42.0012[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-17-42.0012[GetPrinterFullStatus]End
+2025-11-14 17-17-42.0022[GetPrinterFullStatus]Begin
+2025-11-14 17-17-42.0028[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-17-42.0028[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-17-42.0028[GetPrinterFullStatus]End
+2025-11-14 17-18-38.0490[GetPrinterFullStatus]Begin
+2025-11-14 17-18-38.0510[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-18-38.0511[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-18-38.0517[GetPrinterFullStatus]End
+2025-11-14 17-18-38.0521[GetPrinterFullStatus]Begin
+2025-11-14 17-18-38.0531[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-18-38.0535[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-18-38.0539[GetPrinterFullStatus]End
+2025-11-14 15-18-37.0815[]*****************************************
+2025-11-14 15-18-37.0817[]DLL Log Initialize. Verbosity: 6
+2025-11-14 15-18-37.0817[]*****************************************
+2025-11-14 15-18-37.0818[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-14 15-18-37.0819[]DLL Version: 1.07
+2025-11-14 15-18-37.0819[InitLibrary]Begin
+2025-11-14 15-18-37.0852[InitLibrary]Library SignID:00000101
+2025-11-14 15-18-37.0852[InitLibrary]Current SignID:00000101
+2025-11-14 15-18-37.0853[InitLibrary]End
+2025-11-14 15-18-37.0854[GetAPIVersionHwLibrary]Begin
+2025-11-14 15-18-37.0856[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-14 15-18-37.0856[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-14 15-18-37.0856[GetAPIVersionHwLibrary]End
+2025-11-14 15-18-37.0857[EnumUSBDevices]Begin
+2025-11-14 15-18-37.0861[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-18-37.0862[EnumUSBDevices]End
+2025-11-14 15-18-51.0686[EnumUSBDevices]Begin
+2025-11-14 15-18-51.0692[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-18-51.0692[EnumUSBDevices]End
+2025-11-14 15-18-56.0679[EnumUSBDevices]Begin
+2025-11-14 15-18-56.0687[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-18-56.0687[EnumUSBDevices]End
+2025-11-14 15-19-01.0677[EnumUSBDevices]Begin
+2025-11-14 15-19-01.0684[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-19-01.0684[EnumUSBDevices]End
+2025-11-14 15-19-06.0677[EnumUSBDevices]Begin
+2025-11-14 15-19-06.0684[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-19-06.0685[EnumUSBDevices]End
+2025-11-14 15-19-11.0675[EnumUSBDevices]Begin
+2025-11-14 15-19-11.0682[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-19-11.0682[EnumUSBDevices]End
+2025-11-14 15-19-16.0676[EnumUSBDevices]Begin
+2025-11-14 15-19-16.0683[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-19-16.0684[EnumUSBDevices]End
+2025-11-14 15-19-21.0674[EnumUSBDevices]Begin
+2025-11-14 15-19-21.0684[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-19-21.0685[EnumUSBDevices]End
+2025-11-14 15-19-26.0676[EnumUSBDevices]Begin
+2025-11-14 15-19-26.0683[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-19-26.0684[EnumUSBDevices]End
+2025-11-14 15-19-31.0674[EnumUSBDevices]Begin
+2025-11-14 15-19-31.0683[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-19-31.0684[EnumUSBDevices]End
+2025-11-14 15-19-36.0676[EnumUSBDevices]Begin
+2025-11-14 15-19-36.0683[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 15-19-36.0683[EnumUSBDevices]End
+2025-11-14 17-04-02.0474[]*****************************************
+2025-11-14 17-04-02.0475[]DLL Log Initialize. Verbosity: 6
+2025-11-14 17-04-02.0476[]*****************************************
+2025-11-14 17-04-02.0477[]DLL Path: C:\Users\aradh\Downloads\Project\TVM\AgraCashTVM
+2025-11-14 17-04-02.0477[]DLL Version: 1.07
+2025-11-14 17-04-02.0478[InitLibrary]Begin
+2025-11-14 17-04-02.0506[InitLibrary]Library SignID:00000101
+2025-11-14 17-04-02.0507[InitLibrary]Current SignID:00000101
+2025-11-14 17-04-02.0507[InitLibrary]End
+2025-11-14 17-04-02.0508[GetAPIVersionHwLibrary]Begin
+2025-11-14 17-04-02.0510[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-14 17-04-02.0511[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-14 17-04-02.0511[GetAPIVersionHwLibrary]End
+2025-11-14 17-04-02.0512[EnumUSBDevices]Begin
+2025-11-14 17-04-02.0518[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-04-02.0518[EnumUSBDevices]End
+2025-11-14 17-04-16.0742[EnumUSBDevices]Begin
+2025-11-14 17-04-16.0748[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-04-16.0749[EnumUSBDevices]End
+2025-11-14 17-04-21.0717[EnumUSBDevices]Begin
+2025-11-14 17-04-21.0729[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-04-21.0730[EnumUSBDevices]End
+2025-11-14 17-04-26.0718[EnumUSBDevices]Begin
+2025-11-14 17-04-26.0727[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-04-26.0728[EnumUSBDevices]End
+2025-11-14 17-04-31.0719[EnumUSBDevices]Begin
+2025-11-14 17-04-31.0726[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-04-31.0727[EnumUSBDevices]End
+2025-11-14 17-04-36.0719[EnumUSBDevices]Begin
+2025-11-14 17-04-36.0728[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-04-36.0730[EnumUSBDevices]End
+2025-11-14 17-04-41.0732[EnumUSBDevices]Begin
+2025-11-14 17-04-41.0741[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-04-41.0742[EnumUSBDevices]End
+2025-11-14 17-04-46.0718[EnumUSBDevices]Begin
+2025-11-14 17-04-46.0725[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-04-46.0726[EnumUSBDevices]End
+2025-11-14 17-04-51.0718[EnumUSBDevices]Begin
+2025-11-14 17-04-51.0727[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-04-51.0728[EnumUSBDevices]End
+2025-11-14 17-04-56.0717[EnumUSBDevices]Begin
+2025-11-14 17-04-56.0725[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-04-56.0726[EnumUSBDevices]End
+2025-11-14 17-05-01.0717[EnumUSBDevices]Begin
+2025-11-14 17-05-01.0727[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-05-01.0728[EnumUSBDevices]End
+2025-11-14 17-05-05.0508[EnumUSBDevices]Begin
+2025-11-14 17-05-05.0517[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-05-05.0518[EnumUSBDevices]End
+2025-11-14 17-05-06.0719[EnumUSBDevices]Begin
+2025-11-14 17-05-06.0728[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-05-06.0729[EnumUSBDevices]End
+2025-11-14 17-05-11.0716[EnumUSBDevices]Begin
+2025-11-14 17-05-11.0726[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-05-11.0727[EnumUSBDevices]End
+2025-11-14 17-05-16.0718[EnumUSBDevices]Begin
+2025-11-14 17-05-16.0724[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-05-16.0724[EnumUSBDevices]End
+2025-11-14 17-05-21.0716[EnumUSBDevices]Begin
+2025-11-14 17-05-21.0726[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-05-21.0727[EnumUSBDevices]End
+2025-11-14 17-05-26.0718[EnumUSBDevices]Begin
+2025-11-14 17-05-26.0726[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-05-26.0728[EnumUSBDevices]End
+2025-11-14 17-05-31.0717[EnumUSBDevices]Begin
+2025-11-14 17-05-31.0726[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-05-31.0727[EnumUSBDevices]End
+2025-11-14 17-05-36.0719[EnumUSBDevices]Begin
+2025-11-14 17-05-36.0728[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-05-36.0729[EnumUSBDevices]End
+2025-11-14 17-05-41.0719[EnumUSBDevices]Begin
+2025-11-14 17-05-41.0729[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-05-41.0729[EnumUSBDevices]End
+2025-11-14 17-05-46.0716[EnumUSBDevices]Begin
+2025-11-14 17-05-46.0724[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-05-46.0726[EnumUSBDevices]End
+2025-11-14 17-05-51.0716[EnumUSBDevices]Begin
+2025-11-14 17-05-51.0722[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-05-51.0723[EnumUSBDevices]End
+2025-11-14 17-05-56.0716[EnumUSBDevices]Begin
+2025-11-14 17-05-56.0728[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-05-56.0729[EnumUSBDevices]End
+2025-11-14 17-06-01.0718[EnumUSBDevices]Begin
+2025-11-14 17-06-01.0725[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-06-01.0726[EnumUSBDevices]End
+2025-11-14 17-06-06.0718[EnumUSBDevices]Begin
+2025-11-14 17-06-06.0725[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-06-06.0726[EnumUSBDevices]End
+2025-11-14 17-06-11.0717[EnumUSBDevices]Begin
+2025-11-14 17-06-11.0724[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-06-11.0725[EnumUSBDevices]End
+2025-11-14 17-06-16.0716[EnumUSBDevices]Begin
+2025-11-14 17-06-16.0724[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-06-16.0725[EnumUSBDevices]End
+2025-11-14 17-06-21.0717[EnumUSBDevices]Begin
+2025-11-14 17-06-21.0734[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-06-21.0735[EnumUSBDevices]End
+2025-11-14 17-06-26.0716[EnumUSBDevices]Begin
+2025-11-14 17-06-26.0722[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-06-26.0724[EnumUSBDevices]End
+2025-11-14 17-06-31.0725[EnumUSBDevices]Begin
+2025-11-14 17-06-31.0735[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-06-31.0736[EnumUSBDevices]End
+2025-11-14 17-06-36.0717[EnumUSBDevices]Begin
+2025-11-14 17-06-36.0728[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-06-36.0729[EnumUSBDevices]End
+2025-11-14 17-06-41.0717[EnumUSBDevices]Begin
+2025-11-14 17-06-41.0724[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-06-41.0725[EnumUSBDevices]End
+2025-11-14 17-06-46.0718[EnumUSBDevices]Begin
+2025-11-14 17-06-46.0725[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-06-46.0725[EnumUSBDevices]End
+2025-11-14 17-06-51.0715[EnumUSBDevices]Begin
+2025-11-14 17-06-51.0730[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-06-51.0731[EnumUSBDevices]End
+2025-11-14 17-06-56.0717[EnumUSBDevices]Begin
+2025-11-14 17-06-56.0725[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-06-56.0726[EnumUSBDevices]End
+2025-11-14 17-07-01.0719[EnumUSBDevices]Begin
+2025-11-14 17-07-01.0730[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-07-01.0731[EnumUSBDevices]End
+2025-11-14 17-07-06.0715[EnumUSBDevices]Begin
+2025-11-14 17-07-06.0721[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-07-06.0722[EnumUSBDevices]End
+2025-11-14 17-07-11.0718[EnumUSBDevices]Begin
+2025-11-14 17-07-11.0732[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-07-11.0734[EnumUSBDevices]End
+2025-11-14 17-07-16.0717[EnumUSBDevices]Begin
+2025-11-14 17-07-16.0726[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-07-16.0727[EnumUSBDevices]End
+2025-11-14 17-07-21.0719[EnumUSBDevices]Begin
+2025-11-14 17-07-21.0732[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-07-21.0732[EnumUSBDevices]End
+2025-11-14 17-07-26.0717[EnumUSBDevices]Begin
+2025-11-14 17-07-26.0724[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-07-26.0725[EnumUSBDevices]End
+2025-11-14 17-07-31.0717[EnumUSBDevices]Begin
+2025-11-14 17-07-31.0724[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-07-31.0725[EnumUSBDevices]End
+2025-11-14 17-07-36.0716[EnumUSBDevices]Begin
+2025-11-14 17-07-36.0727[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-07-36.0727[EnumUSBDevices]End
+2025-11-14 17-07-41.0718[EnumUSBDevices]Begin
+2025-11-14 17-07-41.0726[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-07-41.0726[EnumUSBDevices]End
+2025-11-14 17-07-46.0719[EnumUSBDevices]Begin
+2025-11-14 17-07-46.0730[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-07-46.0730[EnumUSBDevices]End
+2025-11-14 17-07-51.0718[EnumUSBDevices]Begin
+2025-11-14 17-07-51.0725[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-07-51.0725[EnumUSBDevices]End
+2025-11-14 17-07-56.0717[EnumUSBDevices]Begin
+2025-11-14 17-07-56.0723[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-07-56.0724[EnumUSBDevices]End
+2025-11-14 17-08-01.0717[EnumUSBDevices]Begin
+2025-11-14 17-08-01.0727[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-08-01.0728[EnumUSBDevices]End
+2025-11-14 17-08-06.0718[EnumUSBDevices]Begin
+2025-11-14 17-08-06.0724[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-08-06.0725[EnumUSBDevices]End
+2025-11-14 17-08-11.0715[EnumUSBDevices]Begin
+2025-11-14 17-08-11.0726[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-08-11.0727[EnumUSBDevices]End
+2025-11-14 17-08-16.0718[EnumUSBDevices]Begin
+2025-11-14 17-08-16.0727[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-08-16.0729[EnumUSBDevices]End
+2025-11-14 17-08-21.0718[EnumUSBDevices]Begin
+2025-11-14 17-08-21.0724[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-08-21.0724[EnumUSBDevices]End
+2025-11-14 17-08-26.0716[EnumUSBDevices]Begin
+2025-11-14 17-08-26.0723[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-08-26.0724[EnumUSBDevices]End
+2025-11-14 17-08-31.0716[EnumUSBDevices]Begin
+2025-11-14 17-08-31.0723[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-08-31.0724[EnumUSBDevices]End
+2025-11-14 17-08-36.0717[EnumUSBDevices]Begin
+2025-11-14 17-08-36.0722[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-08-36.0723[EnumUSBDevices]End
+2025-11-14 17-08-41.0717[EnumUSBDevices]Begin
+2025-11-14 17-08-41.0724[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-08-41.0726[EnumUSBDevices]End
+2025-11-14 17-08-46.0742[EnumUSBDevices]Begin
+2025-11-14 17-08-46.0756[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-08-46.0758[EnumUSBDevices]End
+2025-11-14 17-08-51.0738[EnumUSBDevices]Begin
+2025-11-14 17-08-51.0754[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-08-51.0756[EnumUSBDevices]End
+2025-11-14 17-08-56.0719[EnumUSBDevices]Begin
+2025-11-14 17-08-56.0728[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-08-56.0730[EnumUSBDevices]End
+2025-11-14 17-09-01.0736[EnumUSBDevices]Begin
+2025-11-14 17-09-01.0749[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-09-01.0752[EnumUSBDevices]End
+2025-11-14 17-09-06.0737[EnumUSBDevices]Begin
+2025-11-14 17-09-06.0752[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-09-06.0755[EnumUSBDevices]End
+2025-11-14 17-09-11.0728[EnumUSBDevices]Begin
+2025-11-14 17-09-11.0741[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-09-11.0743[EnumUSBDevices]End
+2025-11-14 17-09-16.0736[EnumUSBDevices]Begin
+2025-11-14 17-09-16.0752[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-09-16.0753[EnumUSBDevices]End
+2025-11-14 17-09-21.0742[EnumUSBDevices]Begin
+2025-11-14 17-09-21.0756[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-09-21.0758[EnumUSBDevices]End
+2025-11-14 17-09-26.0740[EnumUSBDevices]Begin
+2025-11-14 17-09-26.0753[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-09-26.0755[EnumUSBDevices]End
+2025-11-14 17-09-31.0733[EnumUSBDevices]Begin
+2025-11-14 17-09-31.0760[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-09-31.0762[EnumUSBDevices]End
+2025-11-14 17-09-36.0738[EnumUSBDevices]Begin
+2025-11-14 17-09-36.0755[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-09-36.0756[EnumUSBDevices]End
+2025-11-14 17-09-41.0740[EnumUSBDevices]Begin
+2025-11-14 17-09-41.0752[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-09-41.0753[EnumUSBDevices]End
+2025-11-14 17-09-46.0740[EnumUSBDevices]Begin
+2025-11-14 17-09-46.0755[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-09-46.0756[EnumUSBDevices]End
+2025-11-14 17-09-51.0741[EnumUSBDevices]Begin
+2025-11-14 17-09-51.0755[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-09-51.0760[EnumUSBDevices]End
+2025-11-14 17-09-56.0737[EnumUSBDevices]Begin
+2025-11-14 17-09-56.0751[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-09-56.0752[EnumUSBDevices]End
+2025-11-14 17-10-01.0730[EnumUSBDevices]Begin
+2025-11-14 17-10-01.0743[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-10-01.0744[EnumUSBDevices]End
+2025-11-14 17-10-06.0749[EnumUSBDevices]Begin
+2025-11-14 17-10-06.0771[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-10-06.0774[EnumUSBDevices]End
+2025-11-14 17-10-11.0726[EnumUSBDevices]Begin
+2025-11-14 17-10-11.0739[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-10-11.0740[EnumUSBDevices]End
+2025-11-14 17-10-16.0738[EnumUSBDevices]Begin
+2025-11-14 17-10-16.0751[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-10-16.0751[EnumUSBDevices]End
+2025-11-14 17-10-21.0732[EnumUSBDevices]Begin
+2025-11-14 17-10-21.0752[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-10-21.0753[EnumUSBDevices]End
+2025-11-14 17-10-26.0730[EnumUSBDevices]Begin
+2025-11-14 17-10-26.0741[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-10-26.0743[EnumUSBDevices]End
+2025-11-14 17-10-31.0737[EnumUSBDevices]Begin
+2025-11-14 17-10-31.0752[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-10-31.0754[EnumUSBDevices]End
+2025-11-14 17-10-36.0738[EnumUSBDevices]Begin
+2025-11-14 17-10-36.0764[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-10-36.0767[EnumUSBDevices]End
+2025-11-14 17-10-41.0721[EnumUSBDevices]Begin
+2025-11-14 17-10-41.0736[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-10-41.0738[EnumUSBDevices]End
+2025-11-14 17-10-46.0729[EnumUSBDevices]Begin
+2025-11-14 17-10-46.0747[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-10-46.0748[EnumUSBDevices]End
+2025-11-14 17-10-51.0745[EnumUSBDevices]Begin
+2025-11-14 17-10-51.0761[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-10-51.0763[EnumUSBDevices]End
+2025-11-14 17-10-56.0742[EnumUSBDevices]Begin
+2025-11-14 17-10-56.0753[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-10-56.0754[EnumUSBDevices]End
+2025-11-14 17-11-01.0743[EnumUSBDevices]Begin
+2025-11-14 17-11-01.0756[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-11-01.0757[EnumUSBDevices]End
+2025-11-14 17-11-06.0740[EnumUSBDevices]Begin
+2025-11-14 17-11-06.0759[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-11-06.0760[EnumUSBDevices]End
+2025-11-14 17-11-11.0745[EnumUSBDevices]Begin
+2025-11-14 17-11-11.0759[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-11-11.0760[EnumUSBDevices]End
+2025-11-14 17-11-16.0727[EnumUSBDevices]Begin
+2025-11-14 17-11-16.0741[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-11-16.0743[EnumUSBDevices]End
+2025-11-14 17-11-21.0746[EnumUSBDevices]Begin
+2025-11-14 17-11-21.0763[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-11-21.0763[EnumUSBDevices]End
+2025-11-14 17-11-26.0740[EnumUSBDevices]Begin
+2025-11-14 17-11-26.0752[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-11-26.0753[EnumUSBDevices]End
+2025-11-14 17-11-31.0740[EnumUSBDevices]Begin
+2025-11-14 17-11-31.0754[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-11-31.0756[EnumUSBDevices]End
+2025-11-14 17-11-36.0728[EnumUSBDevices]Begin
+2025-11-14 17-11-36.0741[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-11-36.0742[EnumUSBDevices]End
+2025-11-14 17-11-41.0729[EnumUSBDevices]Begin
+2025-11-14 17-11-41.0742[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-11-41.0745[EnumUSBDevices]End
+2025-11-14 17-11-46.0742[EnumUSBDevices]Begin
+2025-11-14 17-11-46.0759[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-11-46.0760[EnumUSBDevices]End
+2025-11-14 17-11-51.0738[EnumUSBDevices]Begin
+2025-11-14 17-11-51.0755[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-11-51.0757[EnumUSBDevices]End
+2025-11-14 17-11-56.0728[EnumUSBDevices]Begin
+2025-11-14 17-11-56.0738[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-11-56.0739[EnumUSBDevices]End
+2025-11-14 17-12-01.0740[EnumUSBDevices]Begin
+2025-11-14 17-12-01.0750[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-12-01.0751[EnumUSBDevices]End
+2025-11-14 17-12-06.0740[EnumUSBDevices]Begin
+2025-11-14 17-12-06.0754[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-12-06.0757[EnumUSBDevices]End
+2025-11-14 17-12-11.0741[EnumUSBDevices]Begin
+2025-11-14 17-12-11.0752[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-12-11.0753[EnumUSBDevices]End
+2025-11-14 17-12-16.0741[EnumUSBDevices]Begin
+2025-11-14 17-12-16.0764[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-12-16.0767[EnumUSBDevices]End
+2025-11-14 17-12-21.0723[EnumUSBDevices]Begin
+2025-11-14 17-12-21.0736[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-12-21.0738[EnumUSBDevices]End
+2025-11-14 17-12-26.0745[EnumUSBDevices]Begin
+2025-11-14 17-12-26.0757[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-12-26.0758[EnumUSBDevices]End
+2025-11-14 17-12-31.0740[EnumUSBDevices]Begin
+2025-11-14 17-12-31.0753[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-12-31.0755[EnumUSBDevices]End
+2025-11-14 17-12-36.0732[EnumUSBDevices]Begin
+2025-11-14 17-12-36.0746[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-12-36.0748[EnumUSBDevices]End
+2025-11-14 17-12-41.0743[EnumUSBDevices]Begin
+2025-11-14 17-12-41.0756[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-12-41.0757[EnumUSBDevices]End
+2025-11-14 17-12-46.0740[EnumUSBDevices]Begin
+2025-11-14 17-12-46.0754[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-12-46.0755[EnumUSBDevices]End
+2025-11-14 17-12-51.0746[EnumUSBDevices]Begin
+2025-11-14 17-12-51.0758[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-12-51.0761[EnumUSBDevices]End
+2025-11-14 17-30-27.0079[]*****************************************
+2025-11-14 17-30-27.0079[]DLL Log Initialize. Verbosity: 6
+2025-11-14 17-30-27.0080[]*****************************************
+2025-11-14 17-30-27.0081[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-11-14 17-30-27.0081[]DLL Version: 1.07
+2025-11-14 17-30-27.0082[InitLibrary]Begin
+2025-11-14 17-30-27.0102[InitLibrary]Library SignID:00000101
+2025-11-14 17-30-27.0102[InitLibrary]Current SignID:00000101
+2025-11-14 17-30-27.0104[InitLibrary]End
+2025-11-14 17-30-27.0104[GetAPIVersionHwLibrary]Begin
+2025-11-14 17-30-27.0105[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-14 17-30-27.0106[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-14 17-30-27.0106[GetAPIVersionHwLibrary]End
+2025-11-14 17-30-27.0107[EnumUSBDevices]Begin
+2025-11-14 17-30-27.0112[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-30-27.0113[EnumUSBDevices]End
+2025-11-14 17-30-41.0933[EnumUSBDevices]Begin
+2025-11-14 17-30-41.0939[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-30-41.0940[EnumUSBDevices]End
+2025-11-14 17-30-46.0911[EnumUSBDevices]Begin
+2025-11-14 17-30-46.0916[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-30-46.0918[EnumUSBDevices]End
+2025-11-14 17-30-51.0909[EnumUSBDevices]Begin
+2025-11-14 17-30-51.0917[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-30-51.0918[EnumUSBDevices]End
+2025-11-14 17-30-56.0907[EnumUSBDevices]Begin
+2025-11-14 17-30-56.0913[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-30-56.0915[EnumUSBDevices]End
+2025-11-14 17-31-01.0908[EnumUSBDevices]Begin
+2025-11-14 17-31-01.0915[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-31-01.0916[EnumUSBDevices]End
+2025-11-14 17-31-06.0908[EnumUSBDevices]Begin
+2025-11-14 17-31-06.0916[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-31-06.0918[EnumUSBDevices]End
+2025-11-14 17-31-11.0926[EnumUSBDevices]Begin
+2025-11-14 17-31-11.0935[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-31-11.0935[EnumUSBDevices]End
+2025-11-14 17-31-16.0934[EnumUSBDevices]Begin
+2025-11-14 17-31-16.0942[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-31-16.0943[EnumUSBDevices]End
+2025-11-14 17-31-21.0923[EnumUSBDevices]Begin
+2025-11-14 17-31-21.0944[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-31-21.0947[EnumUSBDevices]End
+2025-11-14 17-31-26.0925[EnumUSBDevices]Begin
+2025-11-14 17-31-26.0930[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-31-26.0932[EnumUSBDevices]End
+2025-11-14 17-31-31.0918[EnumUSBDevices]Begin
+2025-11-14 17-31-31.0928[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-31-31.0929[EnumUSBDevices]End
+2025-11-14 17-31-36.0923[EnumUSBDevices]Begin
+2025-11-14 17-31-36.0931[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-31-36.0932[EnumUSBDevices]End
+2025-11-14 17-31-41.0923[EnumUSBDevices]Begin
+2025-11-14 17-31-41.0932[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-31-41.0933[EnumUSBDevices]End
+2025-11-14 17-31-46.0918[EnumUSBDevices]Begin
+2025-11-14 17-31-46.0928[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-31-46.0929[EnumUSBDevices]End
+2025-11-14 17-31-51.0929[EnumUSBDevices]Begin
+2025-11-14 17-31-51.0938[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-31-51.0939[EnumUSBDevices]End
+2025-11-14 17-31-56.0923[EnumUSBDevices]Begin
+2025-11-14 17-31-56.0933[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-31-56.0936[EnumUSBDevices]End
+2025-11-14 17-32-01.0925[EnumUSBDevices]Begin
+2025-11-14 17-32-01.0932[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-32-01.0933[EnumUSBDevices]End
+2025-11-14 17-32-06.0924[EnumUSBDevices]Begin
+2025-11-14 17-32-06.0934[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-32-06.0935[EnumUSBDevices]End
+2025-11-14 17-32-11.0912[EnumUSBDevices]Begin
+2025-11-14 17-32-11.0921[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-32-11.0923[EnumUSBDevices]End
+2025-11-14 17-32-20.0722[]*****************************************
+2025-11-14 17-32-20.0725[]DLL Log Initialize. Verbosity: 6
+2025-11-14 17-32-20.0725[]*****************************************
+2025-11-14 17-32-20.0726[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-11-14 17-32-20.0726[]DLL Version: 1.07
+2025-11-14 17-32-20.0727[InitLibrary]Begin
+2025-11-14 17-32-20.0749[InitLibrary]Library SignID:00000101
+2025-11-14 17-32-20.0749[InitLibrary]Current SignID:00000101
+2025-11-14 17-32-20.0750[InitLibrary]End
+2025-11-14 17-32-20.0750[GetAPIVersionHwLibrary]Begin
+2025-11-14 17-32-20.0753[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-14 17-32-20.0753[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-14 17-32-20.0754[GetAPIVersionHwLibrary]End
+2025-11-14 17-32-20.0754[EnumUSBDevices]Begin
+2025-11-14 17-32-20.0759[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-32-20.0760[EnumUSBDevices]End
+2025-11-14 17-32-35.0478[EnumUSBDevices]Begin
+2025-11-14 17-32-35.0486[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-32-35.0487[EnumUSBDevices]End
+2025-11-14 17-32-40.0473[EnumUSBDevices]Begin
+2025-11-14 17-32-40.0481[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-32-40.0482[EnumUSBDevices]End
+2025-11-14 17-32-45.0474[EnumUSBDevices]Begin
+2025-11-14 17-32-45.0481[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-32-45.0482[EnumUSBDevices]End
+2025-11-14 17-32-50.0474[EnumUSBDevices]Begin
+2025-11-14 17-32-50.0482[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-32-50.0483[EnumUSBDevices]End
+2025-11-14 17-32-55.0473[EnumUSBDevices]Begin
+2025-11-14 17-32-55.0479[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-32-55.0480[EnumUSBDevices]End
+2025-11-14 17-33-00.0474[EnumUSBDevices]Begin
+2025-11-14 17-33-00.0477[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-33-00.0479[EnumUSBDevices]End
+2025-11-14 17-33-05.0474[EnumUSBDevices]Begin
+2025-11-14 17-33-05.0480[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-33-05.0480[EnumUSBDevices]End
+2025-11-14 17-33-10.0470[EnumUSBDevices]Begin
+2025-11-14 17-33-10.0477[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-33-10.0478[EnumUSBDevices]End
+2025-11-14 17-33-15.0472[EnumUSBDevices]Begin
+2025-11-14 17-33-15.0478[EnumUSBDevices]Found 0 USB Devices
+2025-11-14 17-33-15.0478[EnumUSBDevices]End
+2025-11-14 17-37-10.0518[]*****************************************
+2025-11-14 17-37-10.0523[]DLL Log Initialize. Verbosity: 6
+2025-11-14 17-37-10.0523[]*****************************************
+2025-11-14 17-37-10.0526[]DLL Path: E:\Amay Technosystems\AFC\BackupTVM\AgraCashTVM2
+2025-11-14 17-37-10.0526[]DLL Version: 1.07
+2025-11-14 17-37-10.0527[InitLibrary]Begin
+2025-11-14 17-37-10.0600[InitLibrary]Library SignID:00000101
+2025-11-14 17-37-10.0603[InitLibrary]Current SignID:00000101
+2025-11-14 17-37-10.0606[InitLibrary]End
+2025-11-14 17-37-10.0606[GetAPIVersionHwLibrary]Begin
+2025-11-14 17-37-10.0612[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-11-14 17-37-10.0614[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-11-14 17-37-10.0616[GetAPIVersionHwLibrary]End
+2025-11-14 17-37-10.0617[EnumUSBDevices]Begin
+2025-11-14 17-37-10.0631[EnumUSBDevices]Found 1 USB Devices
+2025-11-14 17-37-10.0634[EnumUSBDevices]End
+2025-11-14 17-37-10.0634[OpenPrinterUSB]Begin
+2025-11-14 17-37-10.0634[OpenPrinterUSB]<USBDevice>:<VID>:0DD4<PID>:0237<SerialNumber>:K80_USB_NUM.:_0<PrinterName>:CUSTOM K80<IntType>:USB_INT_PRINTER
+2025-11-14 17-37-10.0649[OpenPrinterUSB]New device ID:00000101
+2025-11-14 17-37-10.0651[OpenPrinterUSB]End
+2025-11-14 17-37-34.0333[GetPrinterFullStatus]Begin
+2025-11-14 17-37-34.0340[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-37-34.0342[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-37-34.0342[GetPrinterFullStatus]End
+2025-11-14 17-37-34.0343[GetPrinterFullStatus]Begin
+2025-11-14 17-37-34.0347[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-37-34.0347[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-37-34.0348[GetPrinterFullStatus]End
+2025-11-14 17-37-39.0304[GetPrinterFullStatus]Begin
+2025-11-14 17-37-39.0308[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-37-39.0308[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-37-39.0308[GetPrinterFullStatus]End
+2025-11-14 17-37-39.0309[GetPrinterFullStatus]Begin
+2025-11-14 17-37-39.0312[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-37-39.0313[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-37-39.0313[GetPrinterFullStatus]End
+2025-11-14 17-37-44.0323[GetPrinterFullStatus]Begin
+2025-11-14 17-37-44.0327[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-37-44.0327[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-37-44.0328[GetPrinterFullStatus]End
+2025-11-14 17-37-44.0329[GetPrinterFullStatus]Begin
+2025-11-14 17-37-44.0333[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-37-44.0334[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-37-44.0335[GetPrinterFullStatus]End
+2025-11-14 17-37-49.0374[GetPrinterFullStatus]Begin
+2025-11-14 17-37-49.0377[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-37-49.0378[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-37-49.0379[GetPrinterFullStatus]End
+2025-11-14 17-37-49.0380[GetPrinterFullStatus]Begin
+2025-11-14 17-37-49.0384[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-37-49.0384[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-37-49.0385[GetPrinterFullStatus]End
+2025-11-14 17-37-54.0301[GetPrinterFullStatus]Begin
+2025-11-14 17-37-54.0307[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-37-54.0308[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-37-54.0309[GetPrinterFullStatus]End
+2025-11-14 17-37-54.0310[GetPrinterFullStatus]Begin
+2025-11-14 17-37-54.0315[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-37-54.0316[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-37-54.0317[GetPrinterFullStatus]End
+2025-11-14 17-37-59.0305[GetPrinterFullStatus]Begin
+2025-11-14 17-37-59.0312[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-37-59.0313[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-37-59.0314[GetPrinterFullStatus]End
+2025-11-14 17-37-59.0315[GetPrinterFullStatus]Begin
+2025-11-14 17-37-59.0322[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-37-59.0325[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-37-59.0326[GetPrinterFullStatus]End
+2025-11-14 17-38-04.0301[GetPrinterFullStatus]Begin
+2025-11-14 17-38-04.0308[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-04.0309[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-04.0311[GetPrinterFullStatus]End
+2025-11-14 17-38-04.0312[GetPrinterFullStatus]Begin
+2025-11-14 17-38-04.0318[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-04.0319[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-04.0319[GetPrinterFullStatus]End
+2025-11-14 17-38-09.0441[GetPrinterFullStatus]Begin
+2025-11-14 17-38-09.0449[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-09.0450[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-09.0451[GetPrinterFullStatus]End
+2025-11-14 17-38-09.0452[GetPrinterFullStatus]Begin
+2025-11-14 17-38-09.0456[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-09.0456[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-09.0458[GetPrinterFullStatus]End
+2025-11-14 17-38-15.0203[GetPrinterFullStatus]Begin
+2025-11-14 17-38-15.0206[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-15.0206[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-15.0208[GetPrinterFullStatus]End
+2025-11-14 17-38-15.0208[GetPrinterFullStatus]Begin
+2025-11-14 17-38-15.0211[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-15.0211[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-15.0212[GetPrinterFullStatus]End
+2025-11-14 17-38-22.0418[GetPrinterFullStatus]Begin
+2025-11-14 17-38-22.0423[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-22.0425[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-22.0426[GetPrinterFullStatus]End
+2025-11-14 17-38-22.0426[GetPrinterFullStatus]Begin
+2025-11-14 17-38-22.0433[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-22.0434[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-22.0434[GetPrinterFullStatus]End
+2025-11-14 17-38-24.0300[GetPrinterFullStatus]Begin
+2025-11-14 17-38-24.0305[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-24.0305[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-24.0305[GetPrinterFullStatus]End
+2025-11-14 17-38-24.0306[GetPrinterFullStatus]Begin
+2025-11-14 17-38-24.0309[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-24.0309[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-24.0309[GetPrinterFullStatus]End
+2025-11-14 17-38-29.0303[GetPrinterFullStatus]Begin
+2025-11-14 17-38-29.0308[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-29.0310[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-29.0310[GetPrinterFullStatus]End
+2025-11-14 17-38-29.0311[GetPrinterFullStatus]Begin
+2025-11-14 17-38-29.0319[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-29.0320[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-29.0321[GetPrinterFullStatus]End
+2025-11-14 17-38-34.0302[GetPrinterFullStatus]Begin
+2025-11-14 17-38-34.0307[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-34.0308[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-34.0308[GetPrinterFullStatus]End
+2025-11-14 17-38-34.0309[GetPrinterFullStatus]Begin
+2025-11-14 17-38-34.0316[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-34.0316[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-34.0317[GetPrinterFullStatus]End
+2025-11-14 17-38-39.0302[GetPrinterFullStatus]Begin
+2025-11-14 17-38-39.0306[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-39.0307[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-39.0307[GetPrinterFullStatus]End
+2025-11-14 17-38-39.0308[GetPrinterFullStatus]Begin
+2025-11-14 17-38-39.0310[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-39.0311[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-39.0311[GetPrinterFullStatus]End
+2025-11-14 17-38-44.0302[GetPrinterFullStatus]Begin
+2025-11-14 17-38-44.0307[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-44.0308[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-44.0310[GetPrinterFullStatus]End
+2025-11-14 17-38-44.0311[GetPrinterFullStatus]Begin
+2025-11-14 17-38-44.0318[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-44.0318[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-44.0320[GetPrinterFullStatus]End
+2025-11-14 17-38-49.0302[GetPrinterFullStatus]Begin
+2025-11-14 17-38-49.0307[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-49.0307[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-49.0307[GetPrinterFullStatus]End
+2025-11-14 17-38-49.0309[GetPrinterFullStatus]Begin
+2025-11-14 17-38-49.0311[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-49.0311[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-49.0312[GetPrinterFullStatus]End
+2025-11-14 17-38-54.0307[GetPrinterFullStatus]Begin
+2025-11-14 17-38-54.0312[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-54.0312[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-54.0312[GetPrinterFullStatus]End
+2025-11-14 17-38-54.0314[GetPrinterFullStatus]Begin
+2025-11-14 17-38-54.0318[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-38-54.0318[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-38-54.0319[GetPrinterFullStatus]End
+2025-11-14 17-39-20.0659[GetPrinterFullStatus]Begin
+2025-11-14 17-39-20.0672[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-20.0674[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-20.0675[GetPrinterFullStatus]End
+2025-11-14 17-39-20.0677[GetPrinterFullStatus]Begin
+2025-11-14 17-39-20.0687[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-20.0689[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-20.0690[GetPrinterFullStatus]End
+2025-11-14 17-39-22.0754[GetPrinterFullStatus]Begin
+2025-11-14 17-39-22.0768[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-22.0769[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-22.0770[GetPrinterFullStatus]End
+2025-11-14 17-39-22.0771[GetPrinterFullStatus]Begin
+2025-11-14 17-39-22.0781[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-22.0783[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-22.0784[GetPrinterFullStatus]End
+2025-11-14 17-39-24.0742[PrintImageFromPath]Begin
+2025-11-14 17-39-24.0747[PrintImageFromPath]<Image File Path>:C:/tvm-config/image/MPMRC_TICKET.bmp
+2025-11-14 17-39-24.0749[PrintImageFromPath]<PrintImageSettings>:<ImageAlignMode>:IMAGE_ALIGN_TO_CENTER<PrintScaleMode>:IMAGE_SCALE_NONE<PrintScaleWidthValue>:0<LeftMarginValue>:0
+2025-11-14 17-39-24.0807[PrintImageFromPath]End
+2025-11-14 17-39-24.0818[PrintBarcode]Begin
+2025-11-14 17-39-24.0820[PrintBarcode]<Brc Text>:MDEwNDAzMDE6OFdHME5UTE01MDQwMDAxOjE3NjMxMjIxMzExOTU6MDowMDgwOjA0OjAyOjAyOjAxOjE=
+2025-11-14 17-39-24.0820[PrintBarcode]<PrintBarcodeSettings>:<BType>:BARCODE_TYPE_QRCODE<BarcodeWidth>:200<BarcodeHeight>:200<AlignMode>:BARCODE_ALIGN_TO_CENTER<HRIPosition>:BARCODE_HRI_TOP<LeftMarginValue>:0
+2025-11-14 17-39-24.0852[PrintBarcode]End
+2025-11-14 17-39-24.0866[PrintText]Begin
+2025-11-14 17-39-24.0867[PrintText]<Text to Print>:
+Date-Time        : 14-11-2025 17:38:51
+Payment Type     : CASH
+Salepoint Id     : 01040301
+Type             : RJT 
+Platform No.     : 1
+From             : Taj Mahal
+To               : Captain Shubham Gupta
+Price            : Rs. 80/-
+Ticket No.       : 8WG0NTLM5040001
+Valid Upto       : 120 minutes after entry
+
+    Valid only for same working day
+
+
+2025-11-14 17-39-24.0868[PrintText]<PrintFontSettings>:<CharWidth>:FONT_SIZE_X1<CharHeight>:FONT_SIZE_X1<Justification>:FONT_JUSTIFICATION_LEFT<CharFontType>:FONT_TYPE_2<InterCharSet>:FONT_CS_DEFAULT<LineSpacing>:30<Italic>:false<Emphasized>:true<Underline>:false<PrintWidth>:0<LeftMarginValue>:100<Codepage>:0
+2025-11-14 17-39-24.0874[PrintText]<Add LF>:false
+2025-11-14 17-39-24.0887[PrintText]End
+2025-11-14 17-39-24.0890[Cut]Begin
+2025-11-14 17-39-24.0890[Cut]CutType:CUT_TOTAL
+2025-11-14 17-39-24.0899[Cut]End
+2025-11-14 17-39-29.0543[GetPrinterFullStatus]Begin
+2025-11-14 17-39-29.0565[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-29.0567[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-29.0568[GetPrinterFullStatus]End
+2025-11-14 17-39-29.0572[GetPrinterFullStatus]Begin
+2025-11-14 17-39-29.0590[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-29.0592[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-29.0593[GetPrinterFullStatus]End
+2025-11-14 17-39-31.0344[GetPrinterFullStatus]Begin
+2025-11-14 17-39-31.0363[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-31.0366[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-31.0368[GetPrinterFullStatus]End
+2025-11-14 17-39-31.0372[GetPrinterFullStatus]Begin
+2025-11-14 17-39-31.0395[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-31.0397[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-31.0399[GetPrinterFullStatus]End
+2025-11-14 17-39-33.0149[GetPrinterFullStatus]Begin
+2025-11-14 17-39-33.0168[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-33.0171[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-33.0174[GetPrinterFullStatus]End
+2025-11-14 17-39-33.0177[GetPrinterFullStatus]Begin
+2025-11-14 17-39-33.0192[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-33.0195[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-33.0197[GetPrinterFullStatus]End
+2025-11-14 17-39-34.0954[GetPrinterFullStatus]Begin
+2025-11-14 17-39-34.0966[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-34.0967[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-34.0970[GetPrinterFullStatus]End
+2025-11-14 17-39-34.0972[GetPrinterFullStatus]Begin
+2025-11-14 17-39-34.0981[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-34.0982[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-34.0982[GetPrinterFullStatus]End
+2025-11-14 17-39-36.0731[GetPrinterFullStatus]Begin
+2025-11-14 17-39-36.0739[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-36.0740[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-36.0741[GetPrinterFullStatus]End
+2025-11-14 17-39-36.0742[GetPrinterFullStatus]Begin
+2025-11-14 17-39-36.0750[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-36.0751[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-36.0752[GetPrinterFullStatus]End
+2025-11-14 17-39-38.0502[GetPrinterFullStatus]Begin
+2025-11-14 17-39-38.0514[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-38.0515[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-38.0515[GetPrinterFullStatus]End
+2025-11-14 17-39-38.0516[GetPrinterFullStatus]Begin
+2025-11-14 17-39-38.0524[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-38.0525[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-38.0526[GetPrinterFullStatus]End
+2025-11-14 17-39-40.0276[GetPrinterFullStatus]Begin
+2025-11-14 17-39-40.0289[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-40.0291[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-40.0293[GetPrinterFullStatus]End
+2025-11-14 17-39-40.0294[GetPrinterFullStatus]Begin
+2025-11-14 17-39-40.0301[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-40.0303[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-40.0304[GetPrinterFullStatus]End
+2025-11-14 17-39-44.0314[GetPrinterFullStatus]Begin
+2025-11-14 17-39-44.0322[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-44.0324[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-44.0324[GetPrinterFullStatus]End
+2025-11-14 17-39-44.0326[GetPrinterFullStatus]Begin
+2025-11-14 17-39-44.0334[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-44.0335[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-44.0341[GetPrinterFullStatus]End
+2025-11-14 17-39-49.0304[GetPrinterFullStatus]Begin
+2025-11-14 17-39-49.0315[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-49.0316[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-49.0318[GetPrinterFullStatus]End
+2025-11-14 17-39-49.0320[GetPrinterFullStatus]Begin
+2025-11-14 17-39-49.0329[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-49.0331[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-49.0332[GetPrinterFullStatus]End
+2025-11-14 17-39-56.0607[GetPrinterFullStatus]Begin
+2025-11-14 17-39-56.0610[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-56.0610[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-56.0610[GetPrinterFullStatus]End
+2025-11-14 17-39-56.0612[GetPrinterFullStatus]Begin
+2025-11-14 17-39-56.0614[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-39-56.0614[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-39-56.0615[GetPrinterFullStatus]End
+2025-11-14 17-40-04.0308[GetPrinterFullStatus]Begin
+2025-11-14 17-40-04.0315[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-40-04.0315[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-40-04.0317[GetPrinterFullStatus]End
+2025-11-14 17-40-04.0317[GetPrinterFullStatus]Begin
+2025-11-14 17-40-04.0321[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-40-04.0321[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-40-04.0321[GetPrinterFullStatus]End
+2025-11-14 17-40-05.0941[GetPrinterFullStatus]Begin
+2025-11-14 17-40-05.0946[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-40-05.0947[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-40-05.0947[GetPrinterFullStatus]End
+2025-11-14 17-40-05.0948[GetPrinterFullStatus]Begin
+2025-11-14 17-40-05.0952[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-40-05.0953[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-40-05.0953[GetPrinterFullStatus]End
+2025-11-14 17-40-09.0364[GetPrinterFullStatus]Begin
+2025-11-14 17-40-09.0369[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-40-09.0370[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-40-09.0371[GetPrinterFullStatus]End
+2025-11-14 17-40-09.0371[GetPrinterFullStatus]Begin
+2025-11-14 17-40-09.0375[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-40-09.0375[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-40-09.0375[GetPrinterFullStatus]End
+2025-11-14 17-40-14.0301[GetPrinterFullStatus]Begin
+2025-11-14 17-40-14.0308[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-40-14.0308[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-40-14.0309[GetPrinterFullStatus]End
+2025-11-14 17-40-14.0309[GetPrinterFullStatus]Begin
+2025-11-14 17-40-14.0313[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-40-14.0313[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-40-14.0314[GetPrinterFullStatus]End
+2025-11-14 17-40-19.0302[GetPrinterFullStatus]Begin
+2025-11-14 17-40-19.0306[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-40-19.0306[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-40-19.0307[GetPrinterFullStatus]End
+2025-11-14 17-40-19.0307[GetPrinterFullStatus]Begin
+2025-11-14 17-40-19.0314[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-40-19.0314[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-40-19.0314[GetPrinterFullStatus]End
+2025-11-14 17-40-24.0301[GetPrinterFullStatus]Begin
+2025-11-14 17-40-24.0304[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-40-24.0304[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-40-24.0305[GetPrinterFullStatus]End
+2025-11-14 17-40-24.0305[GetPrinterFullStatus]Begin
+2025-11-14 17-40-24.0308[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-40-24.0308[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-40-24.0308[GetPrinterFullStatus]End
+2025-11-14 17-40-29.0439[GetPrinterFullStatus]Begin
+2025-11-14 17-40-29.0447[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-40-29.0448[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-40-29.0448[GetPrinterFullStatus]End
+2025-11-14 17-40-29.0449[GetPrinterFullStatus]Begin
+2025-11-14 17-40-29.0455[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-40-29.0455[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-40-29.0455[GetPrinterFullStatus]End
+2025-11-14 17-40-34.0302[GetPrinterFullStatus]Begin
+2025-11-14 17-40-34.0306[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-40-34.0308[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-40-34.0308[GetPrinterFullStatus]End
+2025-11-14 17-40-34.0309[GetPrinterFullStatus]Begin
+2025-11-14 17-40-34.0314[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-40-34.0315[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-40-34.0315[GetPrinterFullStatus]End
+2025-11-14 17-40-39.0300[GetPrinterFullStatus]Begin
+2025-11-14 17-40-39.0308[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-40-39.0309[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-40-39.0311[GetPrinterFullStatus]End
+2025-11-14 17-40-39.0312[GetPrinterFullStatus]Begin
+2025-11-14 17-40-39.0318[GetPrinterFullStatus]Printer Full Status:00000000
+2025-11-14 17-40-39.0319[GetPrinterFullStatus]Printer Full Status:Full Status:00000000 [00][00][00][00]<StsNOPAPER>:false<StsNEARENDPAP>:false<StsTICKETOUT>:false<StsVIRTUALPAPEREND>:false<StsNOHEAD>:false<StsNOCOVER>:false<StsSPOOLING>:false<StsPAPERROLLING>:false<StsLFPRESSED>:false<StsFFPRESSED>:false<StsOVERTEMP>:false<StsHLVOLT>:false<StsPAPERJAM>:false<StsCUTERROR>:false<StsRAMERROR>:false<StsEEPROMERROR>:false
+2025-11-14 17-40-39.0319[GetPrinterFullStatus]End
 2025-11-14 15-18-37.0815[]*****************************************
 2025-11-14 15-18-37.0817[]DLL Log Initialize. Verbosity: 6
 2025-11-14 15-18-37.0817[]*****************************************

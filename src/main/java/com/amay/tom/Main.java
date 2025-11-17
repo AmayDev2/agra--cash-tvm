@@ -1,20 +1,7 @@
 package com.amay.tom;
 
-//import com.amay.tom.config.SecurityUtil;
-//import com.amay.tom.controller.PDUController;
-import com.amay.tom.controller.TomInitializeViewController;
-import com.amay.tom.database.DatabaseConnector;
-import com.amay.tom.database.RedisConnectionPool;
-import com.amay.tom.pdu.controller.PDUController;
-import com.amay.tom.pdu.controller.command.PDUCommandDispatcher;
-import com.amay.tom.repository.QRDataArray;
-import com.amay.tom.repository.TicketsRepository;
-import com.amay.tom.service.tom.ApplicationService;
-import com.amay.tom.service.tom.IApplicationService;
-import com.amay.tom.systemcontrole.SystemControl;
-import com.amay.tom.utils.env.EnvFile;
-import com.amay.tvm.backend.enums.LoggerTag;
-import com.amay.tvm.bnr.BNRIntegration;
+
+import com.amay.tom.controller.TestToolController;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -33,42 +20,31 @@ import java.io.IOException;
 
 public class Main extends Application {
 
-    private final TicketsRepository ticketsRepository = TicketsRepository.getInstance();
-    private IApplicationService applicationService ;
-
 
 
     @Override
     public void init() throws Exception {
-        Logger.tag(LoggerTag.APP).info("Application init called");
-
-        super.init();
-        EnvFile.loadEnv();
 
     }
 
     @Override
     public void stop() throws Exception {
-        BNRIntegration.bnrClose();
-        RedisConnectionPool.getJedisPool().close();
-        DatabaseConnector.closeConnection();
-        QRDataArray.createQRTicketFile();
-        Logger.tag(LoggerTag.APP).info("Application stopped😒😒🙌");
+
         super.stop();
     }
 
     @Override
     public void start(@SuppressWarnings("exports") Stage stage) throws IOException {
-        applicationService=new ApplicationService(new SystemControl());
+
         var screens = javafx.stage.Screen.getScreens();
 
 
         try {
 
-            FXMLLoader fxmlLoader =new FXMLLoader(Main.class.getResource("initialize/tom-initialize-view.fxml"));
-            fxmlLoader.setControllerFactory(param -> new TomInitializeViewController(applicationService));
+            FXMLLoader fxmlLoader =new FXMLLoader(Main.class.getResource("testTool.fxml"));
+            fxmlLoader.setControllerFactory(param -> new TestToolController());
             Scene scene = new Scene(fxmlLoader.load(), screens.getFirst().getOutputScaleX(),  screens.getFirst().getOutputScaleY());
-            scene.getStylesheets().add(getClass().getResource("/com/amay/tom/tvm/css/theme.css").toExternalForm());
+//            scene.getStylesheets().add(getClass().getResource("/com/amay/tom/tvm/css/theme.css").toExternalForm());
 
             // Add key event filter to prevent system keys
             scene.addEventFilter(KeyEvent.ANY, event -> {
@@ -188,63 +164,14 @@ public class Main extends Application {
             stage.show();
 
 
-
-
-            if (screens.size() >1) { //0205000301AB04A803
-                Rectangle2D screen2Bounds = screens.get(1).getVisualBounds();
-
-                FXMLLoader pduLoader = new FXMLLoader(Main.class.getResource("pdu/main_container.fxml"));
-
-
-                PDUController controller = new PDUController();
-                pduLoader.setControllerFactory((x)->controller);
-                Scene pduScene = new Scene(pduLoader.load(), 640, 480);
-
-                // Add global key filter
-                new KeypadHandler().attach(pduScene);
-                pduScene.getStylesheets().add(getClass().getResource("/com/amay/tom/pdu/styles.css").toExternalForm());
-                pduScene.getStylesheets().add(getClass().getResource("/com/amay/tom/pdu/themes.css").toExternalForm());
-
-                PDUCommandDispatcher.INSTANCE.setController(controller);
-
-                Stage pduStage = new Stage();
-                pduStage.setScene(pduScene);
-                pduStage.setTitle("PDU Monitor");
-                pduStage.setX(screen2Bounds.getMinX());
-                pduStage.setY(screen2Bounds.getMinY());
-                pduStage.setFullScreen(true);
-                pduStage.setFullScreenExitHint(null);
-                pduStage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
-                pduStage.initStyle(StageStyle.UNDECORATED);
-
-                pduStage.show();
-
-
-
-            } else {
-                Logger.warn("Second screen not detected. PDU screen will not be launched.");
-            }
-
-
-
         }catch (Exception e){
             Logger.error("Error in loading main scene: {}", e);
-            e.printStackTrace();
         }
 
     }
 
 
-    private void shiftFocusTo(Stage stage) {
-        if (stage != null) {
-            Platform.runLater(() -> {
-                stage.setAlwaysOnTop(true);
-                stage.toFront();
-                stage.requestFocus();
-                stage.setFullScreen(true);
-            });
-        }
-    }
+
 
 
     public static void main(String[] args) throws IOException {
