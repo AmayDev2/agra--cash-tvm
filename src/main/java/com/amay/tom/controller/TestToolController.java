@@ -1,7 +1,20 @@
 package com.amay.tom.controller;
 
+import com.amay.tom.coin.CoinModuleInterface;
+import com.amay.tom.coin.enums.Diverter;
+import com.amay.tom.coin.enums.ModuleTestCode;
+import com.amay.tom.coin.enums.Range;
+import com.amay.tom.coin.model.CoinPollRequest;
+import com.fazecast.jSerialComm.SerialPort;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+
+import java.util.Objects;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class TestToolController {
 
@@ -15,7 +28,7 @@ public class TestToolController {
     @FXML private Button top_okBtn;
 
     // ================= MODULE TEST =================
-    @FXML private ComboBox<String> module_dejammingMotorCombo;
+    @FXML private ComboBox<ModuleTestCode> module_dejammingMotorCombo;
     @FXML private Button module_moduleTestBtn;
 
     // ================= BOX ID =================
@@ -63,19 +76,19 @@ public class TestToolController {
 
     // ================= DEJAMMING =================
     @FXML private TextField dejamming_cyclesField;
-    @FXML private CheckBox dejamming_h1Check;
-    @FXML private CheckBox dejamming_h2Check;
-    @FXML private CheckBox dejamming_h3Check;
+    @FXML private Button dejamming_h1Check;
+    @FXML private Button dejamming_h2Check;
+    @FXML private Button dejamming_h3Check;
     @FXML private Button dejamming_motorBtn;
-    @FXML private Button dejamming_coinDumpBtn;
+//    @FXML private Button dejamming_coinDumpBtn;
 
     // ================= AUTO POLLING =================
     @FXML private Button auto_startBtn;
     @FXML private Button auto_stopBtn;
 
     // ================= RETURN / ESCROW =================
-    @FXML private ComboBox<String> return_escrowCombo;
-    @FXML private ComboBox<String> return_coinReturnCombo;
+    @FXML private ComboBox<Diverter> return_escrowCombo;
+//    @FXML private ComboBox<String> return_coinReturnCombo;
     @FXML private Button diverter_ctrlBtn;
 
     // ================= LOG DELETE =================
@@ -90,67 +103,167 @@ public class TestToolController {
     @FXML
     public void initialize() {
         log("System Initialized.");
+        SerialPort[] portList = SerialPort.getCommPorts();
 
-        // Fill combos with sample values
-        top_portCombo.getItems().addAll("COM1", "COM2", "COM3", "COM4");
-        module_dejammingMotorCombo.getItems().addAll("Left Motor", "Right Motor");
-        return_escrowCombo.getItems().addAll("ESCROW 1", "ESCROW 2", "ESCROW 3");
-        return_coinReturnCombo.getItems().addAll("RETURN 1", "RETURN 2", "RETURN 3");
+        // Clear previous values (optional)
+        top_portCombo.getItems().clear();
+
+        for (SerialPort port : portList) {
+            String portName = port.getSystemPortName();      // Example: COM3, COM4, etc.
+            // String portName = port.getDescriptivePortName(); // If you prefer descriptive names
+            top_portCombo.getItems().add(portName);
+        }
+
+        if (!top_portCombo.getItems().isEmpty()) {
+            top_portCombo.getSelectionModel().selectFirst(); // Auto-select first available port
+        }
+
+        module_dejammingMotorCombo.getItems().addAll(ModuleTestCode.values());
+        return_escrowCombo.getItems().addAll(Diverter.values());
+//        return_coinReturnCombo.getItems().addAll("RETURN 1", "RETURN 2", "RETURN 3");
 
         // TOP BAR handlers
-        top_openPortBtn.setOnAction(e -> log("Opening Port: " + top_portCombo.getValue()));
-        top_closePortBtn.setOnAction(e -> log("Closing Port"));
-        top_pollingStatusBtn.setOnAction(e -> log("Polling Status requested"));
+        top_openPortBtn.setOnAction(e -> log(CoinModuleInterface.INSTANCE.setupCoinModule(top_portCombo.getValue()).toString()));
+        top_closePortBtn.setOnAction(e -> log("Closing Port "+CoinModuleInterface.INSTANCE.closeCoinModule()));
+        top_pollingStatusBtn.setOnAction(e ->log(CoinModuleInterface.INSTANCE.pooling().toString()));
         top_getVersionBtn.setOnAction(e -> log("Getting Version..."));
         top_clearDisplayInfoBtn.setOnAction(e -> main_logArea.clear());
         top_okBtn.setOnAction(e -> log("OK button clicked"));
 
         // MODULE
-        module_moduleTestBtn.setOnAction(e -> log("Module Test Triggered"));
+        module_moduleTestBtn.setOnAction(e -> log(CoinModuleInterface.INSTANCE.testModule(module_dejammingMotorCombo.getSelectionModel()).toString()));
 
         // BOX ID
-        box_setBoxIdBtn.setOnAction(e -> log("Set Box ID: " + box_boxIdField.getText()));
-        box_getCollectionBoxIdBtn.setOnAction(e -> log("Get Collection Box ID"));
+        box_setBoxIdBtn.setOnAction(e -> log(CoinModuleInterface.INSTANCE.setBoxId(Byte.parseByte(box_boxIdField.getText())).toString()));
+        box_getCollectionBoxIdBtn.setOnAction(e ->log(CoinModuleInterface.INSTANCE.getBoxId().toString()));
 
-        // SHUTTER
-        shutter_closeRb.setOnAction(e -> log("Shutter Close"));
-        shutter_openRb.setOnAction(e -> log("Shutter Open"));
 
-        // REGISTER
-        reg_notClearRb.setOnAction(e -> log("Register Not Clear"));
-        reg_clearRb.setOnAction(e -> log("Register Clear"));
 
-        // DENOMINATIONS
-        rs1_activateRb.setOnAction(e -> log("Rs1 Activated"));
-        rs1_inhibitRb.setOnAction(e -> log("Rs1 Inhibited"));
+// State holders
+        AtomicBoolean isShutterOpen   = new AtomicBoolean(false);
+        AtomicBoolean clearRegister   = new AtomicBoolean(false);
 
-        rs2_activateRb.setOnAction(e -> log("Rs2 Activated"));
-        rs2_inhibitRb.setOnAction(e -> log("Rs2 Inhibited"));
+        AtomicBoolean inhibitRs1  = new AtomicBoolean(false);
+        AtomicBoolean inhibitRs2  = new AtomicBoolean(false);
+        AtomicBoolean inhibitRs5  = new AtomicBoolean(false);
+        AtomicBoolean inhibitRs10 = new AtomicBoolean(false);
+        AtomicBoolean inhibitRs20 = new AtomicBoolean(false);
 
-        rs5_activateRb.setOnAction(e -> log("Rs5 Activated"));
-        rs5_inhibitRb.setOnAction(e -> log("Rs5 Inhibited"));
+// SHUTTER
+        shutter_closeRb.setOnAction(e -> {
+            isShutterOpen.set(false);
+            log("Shutter Closed");
+        });
+        shutter_openRb.setOnAction(e -> {
+            isShutterOpen.set(true);
+            log("Shutter Open");
+        });
 
-        rs10_activateRb.setOnAction(e -> log("Rs10 Activated"));
-        rs10_inhibitRb.setOnAction(e -> log("Rs10 Inhibited"));
+// REGISTER
+        reg_notClearRb.setOnAction(e -> {
+            clearRegister.set(false);
+            log("Register Not Clear");
+        });
+        reg_clearRb.setOnAction(e -> {
+            clearRegister.set(true);
+            log("Register Clear");
+        });
 
-        rs20_activateRb.setOnAction(e -> log("Rs20 Activated"));
-        rs20_inhibitRb.setOnAction(e -> log("Rs20 Inhibited"));
+// DENOMINATIONS
+        rs1_activateRb.setOnAction(e -> {
+            inhibitRs1.set(false);
+            log("Rs1 Activated");
+        });
+        rs1_inhibitRb.setOnAction(e -> {
+            inhibitRs1.set(true);
+            log("Rs1 Inhibited");
+        });
 
-        coin_acceptPollingBtn.setOnAction(e -> log("Manual Coin Acceptance Polling"));
+        rs2_activateRb.setOnAction(e -> {
+            inhibitRs2.set(false);
+            log("Rs2 Activated");
+        });
+        rs2_inhibitRb.setOnAction(e -> {
+            inhibitRs2.set(true);
+            log("Rs2 Inhibited");
+        });
+
+        rs5_activateRb.setOnAction(e -> {
+            inhibitRs5.set(false);
+            log("Rs5 Activated");
+        });
+        rs5_inhibitRb.setOnAction(e -> {
+            inhibitRs5.set(true);
+            log("Rs5 Inhibited");
+        });
+
+        rs10_activateRb.setOnAction(e -> {
+            inhibitRs10.set(false);
+            log("Rs10 Activated");
+        });
+        rs10_inhibitRb.setOnAction(e -> {
+            inhibitRs10.set(true);
+            log("Rs10 Inhibited");
+        });
+
+        rs20_activateRb.setOnAction(e -> {
+            inhibitRs20.set(false);
+            log("Rs20 Activated");
+        });
+        rs20_inhibitRb.setOnAction(e -> {
+            inhibitRs20.set(true);
+            log("Rs20 Inhibited");
+        });
+
+// POLL BUTTON ACTION
+        coin_acceptPollingBtn.setOnAction(e -> {
+            CoinPollRequest req = new CoinPollRequest(
+                    isShutterOpen.get(),   // Bit7
+                    clearRegister.get(),   // Bit6
+                    inhibitRs20.get(),     // Bit4
+                    inhibitRs10.get(),     // Bit3
+                    inhibitRs5.get(),      // Bit2
+                    inhibitRs2.get(),      // Bit1
+                    inhibitRs1.get()       // Bit0
+            );
+
+            log("Manual Coin Polling: " + CoinModuleInterface.INSTANCE.poolingAcceptance(req).parse().toString());
+        });
 
         // HOPPERS
-        hopper_coinChangeBtn.setOnAction(e -> log("Coin Change triggered"));
+        hopper_coinChangeBtn.setOnAction(e ->{
+            new Thread(()->{
+                if(Integer.parseInt(hopper_h2Field.getText())>0)log(CoinModuleInterface.INSTANCE.coinChange(1, Integer.parseInt(hopper_h1Field.getText())).toString());
+                if(Integer.parseInt(hopper_h2Field.getText())>0)log(CoinModuleInterface.INSTANCE.coinChange(2, Integer.parseInt(hopper_h2Field.getText())).toString());
+                if(Integer.parseInt(hopper_h3Field.getText())>0)log(CoinModuleInterface.INSTANCE.coinChange(3, Integer.parseInt(hopper_h3Field.getText())).toString());
+            }).start();
+        }
+        );
 
-        // DEJAMMING
-        dejamming_motorBtn.setOnAction(e -> log("Dejamming Motor cycles: " + dejamming_cyclesField.getText()));
-        dejamming_coinDumpBtn.setOnAction(e -> log("Coin Dump"));
+        // DE_JAMMING
+        dejamming_motorBtn.setOnAction(e -> log(CoinModuleInterface.INSTANCE.deJamming(Range.ONE.get(Integer.parseInt(dejamming_cyclesField.getText()))).toString()));
+        dejamming_h1Check.setOnAction(e -> {
+            new Thread(()->{
+               log(Objects.requireNonNull(CoinModuleInterface.INSTANCE.dumpHopper(1)).toString());
+            }).start();
+        });
+        dejamming_h2Check.setOnAction(e -> {
+            new Thread(()->{
+                log(Objects.requireNonNull(CoinModuleInterface.INSTANCE.dumpHopper(2)).toString());
+            }).start();
+        });
+        dejamming_h3Check.setOnAction(e -> {
+            new Thread(()->{
+                log(Objects.requireNonNull(CoinModuleInterface.INSTANCE.dumpHopper(3)).toString());
+            }).start();
+        });
 
         // AUTO POLLING
-        auto_startBtn.setOnAction(e -> log("Auto Polling Started"));
-        auto_stopBtn.setOnAction(e -> log("Auto Polling Stopped"));
+        auto_startBtn.setOnAction(e -> startAutoPolling());
+        auto_stopBtn.setOnAction(e -> stopAutoPolling());
 
         // RETURN / DIVERTER
-        diverter_ctrlBtn.setOnAction(e -> log("Diverter Control Triggered"));
+//        diverter_ctrlBtn.setOnAction(e -> log(CoinModuleInterface.INSTANCE.turnOffBuzzer().toString()));
 
         // LOG DELETE
         logs_controlBtn.setOnAction(e -> log("Deleting logs older than " + logs_daysField.getText() + " days"));
@@ -159,5 +272,32 @@ public class TestToolController {
     // ================= LOGGER =================
     private void log(String msg) {
         main_logArea.appendText(msg + "\n");
+    }
+
+
+    private void startAutoPolling() {
+        if (scheduler != null && !scheduler.isShutdown()) {
+            log("Auto Polling already running...");
+            return;
+        }
+
+        scheduler = Executors.newSingleThreadScheduledExecutor();
+
+        scheduler.scheduleAtFixedRate(() -> {
+            // Your polling logic here
+            Platform.runLater(() -> log(CoinModuleInterface.INSTANCE.pooling().toString()));
+        }, 0, 5, TimeUnit.SECONDS); // run every 5 seconds
+
+        log("Auto Polling Started");
+    }
+    private ScheduledExecutorService scheduler;
+
+    private void stopAutoPolling() {
+        if (scheduler != null && !scheduler.isShutdown()) {
+            scheduler.shutdownNow();
+            log("Auto Polling Stopped");
+        } else {
+            log("Auto Polling already stopped");
+        }
     }
 }
