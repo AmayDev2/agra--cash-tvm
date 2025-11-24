@@ -6,10 +6,15 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.VBox?>
 
+<?import javafx.scene.control.ComboBox?>
 <VBox xmlns="http://javafx.com/javafx/17"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.amay.tom.cscCard.CscJavaFxUIController"
       spacing="10">
+
+    <ComboBox fx:id="portComboBox" prefWidth="150" promptText="Select COM Port"/>
+    <Button text="Open Selected Port" onAction="#handleOpenSelectedPort"/>
+
 
     <Button fx:id="openPortBtn" text="Open Port" onAction="#handleOpenPort"/>
     <Button fx:id="closePortBtn" text="Close Port" onAction="#handleClosePort"/>

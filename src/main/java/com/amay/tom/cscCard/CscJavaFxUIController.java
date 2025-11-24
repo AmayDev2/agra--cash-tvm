@@ -4,9 +4,11 @@ import com.fazecast.jSerialComm.SerialPort;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 public class CscJavaFxUIController {
 
@@ -21,21 +23,28 @@ public class CscJavaFxUIController {
     @FXML private Button captureBtn;
     @FXML private Button statusBtn;
     @FXML private TextArea responseArea;
+    @FXML private ComboBox<String> portComboBox;
 
-    private final String portName = "COM8"; // change to your port or parameterize
+
+
 
     @FXML
     private void handleOpenPort() {
+        String selectedPort = portComboBox.getSelectionModel().getSelectedItem();
+        if (selectedPort == null) {
+            appendResponse("No COM port selected");
+            return;
+        }
         try {
-            port = SerialPort.getCommPort(portName);
+            port = SerialPort.getCommPort(selectedPort);
             port.setComPortParameters(9600, 8, SerialPort.ONE_STOP_BIT, SerialPort.NO_PARITY);
             port.setComPortTimeouts(SerialPort.TIMEOUT_READ_BLOCKING, 2000, 2000);
 
             if (port.openPort()) {
                 client = new CscProtocolClient(port);
-                appendResponse("Port " + portName + " opened.");
+                appendResponse("Port " + selectedPort + " opened.");
             } else {
-                appendResponse("Failed to open port " + portName);
+                appendResponse("Failed to open port " + selectedPort);
             }
         } catch (Exception e) {
             appendResponse("Error opening port: " + e.getMessage());
@@ -51,6 +60,7 @@ public class CscJavaFxUIController {
             appendResponse("Port not open.");
         }
     }
+
 
     @FXML
     private void handleReset() {
@@ -113,6 +123,37 @@ public class CscJavaFxUIController {
             }
         }).start();
     }
+    @FXML
+    public void initialize() {
+        // Populate combo box with available COM ports on startup
+        SerialPort[] ports = SerialPort.getCommPorts();
+        for (SerialPort port : ports) {
+            portComboBox.getItems().add(port.getSystemPortName());
+        }
+        if (!portComboBox.getItems().isEmpty()) {
+            portComboBox.getSelectionModel().selectFirst();
+        }
+    }
+    @FXML
+    private void handleOpenSelectedPort() {
+        String selectedPort = portComboBox.getSelectionModel().getSelectedItem();
+        if (selectedPort == null) {
+            appendResponse("No COM port selected!");
+            return;
+        }
+        // Open port, e.g.:
+        SerialPort port = SerialPort.getCommPort(selectedPort);
+        port.setComPortParameters(9600, 8, SerialPort.ONE_STOP_BIT, SerialPort.NO_PARITY);
+        port.setComPortTimeouts(SerialPort.TIMEOUT_READ_BLOCKING, 2000, 2000);
+
+        if (port.openPort()) {
+            appendResponse("Opened port " + selectedPort);
+            // assign to client etc.
+        } else {
+            appendResponse("Failed to open port " + selectedPort);
+        }
+    }
+
 
     private void sendCommand(Runnable command) {
         if (client == null || port == null || !port.isOpen()) {
