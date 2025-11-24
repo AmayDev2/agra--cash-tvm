@@ -15,7 +15,7 @@ public class CscJavaFxUIController {
     private SerialPort port;
     private CscProtocolClient client;
 
-    @FXML private Button openPortBtn;
+//    @FXML private Button openPortBtn;
     @FXML private Button closePortBtn;
     @FXML private Button resetBtn;
     @FXML private Button dispenseBtn;
@@ -28,31 +28,31 @@ public class CscJavaFxUIController {
 
 
 
-    @FXML
-    private void handleOpenPort() {
-        String selectedPort = portComboBox.getSelectionModel().getSelectedItem();
-        if (selectedPort == null) {
-            appendResponse("No COM port selected");
-            return;
-        }
-        try {
-            port = SerialPort.getCommPort(selectedPort);
-            port.setComPortParameters(9600, 8, SerialPort.ONE_STOP_BIT, SerialPort.NO_PARITY);
-            port.setComPortTimeouts(SerialPort.TIMEOUT_READ_BLOCKING, 2000, 2000);
+//    @FXML
+//    private void handleOpenPort() {
+//        String selectedPort = portComboBox.getSelectionModel().getSelectedItem();
+//        if (selectedPort == null) {
+//            appendResponse("No COM port selected");
+//            return;
+//        }
+//        try {
+//            port = SerialPort.getCommPort(selectedPort);
+//            port.setComPortParameters(9600, 8, SerialPort.ONE_STOP_BIT, SerialPort.NO_PARITY);
+//            port.setComPortTimeouts(SerialPort.TIMEOUT_READ_BLOCKING, 2000, 2000);
+//
+//            if (port.openPort()) {
+//                client = new CscProtocolClient(port);
+//                appendResponse("Port " + selectedPort + " opened.");
+//            } else {
+//                appendResponse("Failed to open port " + selectedPort);
+//            }
+//        } catch (Exception e) {
+//            appendResponse("Error opening port: " + e.getMessage());
+//        }
+//    }
 
-            if (port.openPort()) {
-                client = new CscProtocolClient(port);
-                appendResponse("Port " + selectedPort + " opened.");
-            } else {
-                appendResponse("Failed to open port " + selectedPort);
-            }
-        } catch (Exception e) {
-            appendResponse("Error opening port: " + e.getMessage());
-        }
-    }
-
     @FXML
-    private void handleClosePort() {
+     void handleClosePort() {
         if (port != null && port.isOpen()) {
             port.closePort();
             appendResponse("Port closed.");
@@ -63,7 +63,7 @@ public class CscJavaFxUIController {
 
 
     @FXML
-    private void handleReset() {
+     void handleReset() {
         sendCommand(() -> {
             try {
                 client.resetModule();
@@ -74,7 +74,7 @@ public class CscJavaFxUIController {
     }
 
     @FXML
-    private void handleDispense() {
+     void handleDispense() {
         sendCommand(() -> {
             try {
                 client.dispenseTicket();
@@ -85,7 +85,7 @@ public class CscJavaFxUIController {
     }
 
     @FXML
-    private void handleIssue() {
+     void handleIssue() {
         sendCommand(() -> {
             try {
                 client.issueTicket();
@@ -96,7 +96,7 @@ public class CscJavaFxUIController {
     }
 
     @FXML
-    private void handleCapture() {
+     void handleCapture() {
         sendCommand(() -> {
             try {
                 client.captureTicket();
@@ -107,7 +107,7 @@ public class CscJavaFxUIController {
     }
 
     @FXML
-    private void handleStatus() {
+     void handleStatus() {
         if (client == null || port == null || !port.isOpen()) {
             appendResponse("Port not open");
             return;
@@ -124,7 +124,7 @@ public class CscJavaFxUIController {
         }).start();
     }
     @FXML
-    public void initialize() {
+     void initialize() {
         // Populate combo box with available COM ports on startup
         SerialPort[] ports = SerialPort.getCommPorts();
         for (SerialPort port : ports) {
@@ -135,18 +135,20 @@ public class CscJavaFxUIController {
         }
     }
     @FXML
-    private void handleOpenSelectedPort() {
+     void handleOpenSelectedPort() {
         String selectedPort = portComboBox.getSelectionModel().getSelectedItem();
         if (selectedPort == null) {
             appendResponse("No COM port selected!");
             return;
         }
         // Open port, e.g.:
-        SerialPort port = SerialPort.getCommPort(selectedPort);
+        port = SerialPort.getCommPort(selectedPort);
         port.setComPortParameters(9600, 8, SerialPort.ONE_STOP_BIT, SerialPort.NO_PARITY);
         port.setComPortTimeouts(SerialPort.TIMEOUT_READ_BLOCKING, 2000, 2000);
+        port.closePort();
 
         if (port.openPort()) {
+            client = new CscProtocolClient(port);
             appendResponse("Opened port " + selectedPort);
             // assign to client etc.
         } else {

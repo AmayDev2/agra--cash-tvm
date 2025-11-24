@@ -16,7 +16,7 @@
     <Button text="Open Selected Port" onAction="#handleOpenSelectedPort"/>
 
 
-    <Button fx:id="openPortBtn" text="Open Port" onAction="#handleOpenPort"/>
+<!--    <Button fx:id="openPortBtn" text="Open Port" onAction="#handleOpenPort"/>-->
     <Button fx:id="closePortBtn" text="Close Port" onAction="#handleClosePort"/>
 
     <Button fx:id="resetBtn" text="Reset" onAction="#handleReset"/>
