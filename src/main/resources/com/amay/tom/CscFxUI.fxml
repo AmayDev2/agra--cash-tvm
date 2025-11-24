@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.amay.tom.cscCard.CscJavaFxUIController"
+      spacing="10">
+
+    <Button fx:id="openPortBtn" text="Open Port" onAction="#handleOpenPort"/>
+    <Button fx:id="closePortBtn" text="Close Port" onAction="#handleClosePort"/>
+
+    <Button fx:id="resetBtn" text="Reset" onAction="#handleReset"/>
+    <Button fx:id="dispenseBtn" text="Dispense" onAction="#handleDispense"/>
+    <Button fx:id="issueBtn" text="Issue" onAction="#handleIssue"/>
+    <Button fx:id="captureBtn" text="Capture" onAction="#handleCapture"/>
+    <Button fx:id="statusBtn" text="Request Status" onAction="#handleStatus"/>
+
+    <Label text="Device Responses:"/>
+
+    <TextArea fx:id="responseArea" editable="false" wrapText="true" prefHeight="300"/>
+
+</VBox>
