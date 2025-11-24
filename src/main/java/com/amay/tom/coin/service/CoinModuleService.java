@@ -67,7 +67,7 @@ public class CoinModuleService {
 		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
 	}
 
-	public ModuleResponse getVersion() {
+	public ModuleResponse getVersion() throws Exception {
 		byte seq = sequenceNumberManager.next();
 		ProtocolFrame frame = CommandBuilder.createGetVersionCommand(seq);
 		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
@@ -135,6 +135,20 @@ public class CoinModuleService {
 
 	public ModuleResponse turnOnTrayLight() { return controlTrayLight(true); }
 	public ModuleResponse turnOffTrayLight() { return controlTrayLight(false); }
+
+	public ModuleResponse controlDivertCommand(boolean on) throws Exception{
+		byte seq = sequenceNumberManager.next();
+		ProtocolFrame frame = CommandBuilder.controlDivertCommand(on, seq);
+		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
+	}
+
+	public ModuleResponse controlEscrowCommand(boolean on) throws Exception{
+		byte seq = sequenceNumberManager.next();
+		ProtocolFrame frame = CommandBuilder.controlEscrowCommand(on, seq);
+		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
+	}
+
+
 
 	private ModuleResponse controlBuzzer(boolean on) {
 		byte seq = sequenceNumberManager.next();

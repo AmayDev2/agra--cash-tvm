@@ -42,7 +42,17 @@ public final class CommandBuilder {
 	}
 
 	public static ProtocolFrame createControlBuzzerCommand(boolean on, byte sequence) {
-		byte[] data = new byte[] {  (byte)(on ? 0x01 : 0x02),0x00 };
+		byte[] data = new byte[] {  (byte)(on ? 0x01 : 0x02) ,0x00 };
+		return new ProtocolFrame(ProtocolConstants.CMD_CONTROL, sequence, data);
+	}
+
+	public static ProtocolFrame controlDivertCommand(boolean on, byte sequence) {
+		byte[] data = new byte[] {  (byte)(on ? 0x01 : 0x02) ,0x00 ,0x00,0x00,0x00,0x00};
+		return new ProtocolFrame(ProtocolConstants.CMD_CONTROL, sequence, data);
+	}
+
+	public static ProtocolFrame controlEscrowCommand(boolean on, byte sequence) {
+		byte[] data = new byte[] {  0x00 ,0x00,0x00,0x00,(byte)(on ? 0x01 : 0x02),0x00};
 		return new ProtocolFrame(ProtocolConstants.CMD_CONTROL, sequence, data);
 	}
 

@@ -1,5 +1,7 @@
 package com.amay.tom.coin;
 
+import com.amay.tom.coin.enums.Diverter;
+import com.amay.tom.coin.enums.Escrow;
 import com.amay.tom.coin.enums.ModuleTestCode;
 import com.amay.tom.coin.enums.Range;
 import com.amay.tom.coin.model.*;
@@ -242,6 +244,18 @@ public enum CoinModuleInterface {
 
 	public AcceptancePollingStatusResponse poolingAcceptance(CoinPollRequest req) {
 		return  (AcceptancePollingStatusResponse)service.acceptancePollStatus(req.getStatusByte());
+	}
+
+	public ModuleResponse getVersion() throws Exception  {
+			return service.getVersion();
+	}
+
+	public ModuleResponse controlDivert(Diverter isReturnTrayOrCollectionBox) throws Exception  {
+		return service.controlDivertCommand(isReturnTrayOrCollectionBox==Diverter.COLLECTION_BOX);
+	}
+
+	public ModuleResponse controlEscrow(Escrow isCoinReturnOrCollection) throws Exception  {
+		return service.controlEscrowCommand(isCoinReturnOrCollection==Escrow.COIN_COLLECTION);
 	}
 }
 

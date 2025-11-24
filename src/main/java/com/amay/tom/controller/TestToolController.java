@@ -2,6 +2,7 @@ package com.amay.tom.controller;
 
 import com.amay.tom.coin.CoinModuleInterface;
 import com.amay.tom.coin.enums.Diverter;
+import com.amay.tom.coin.enums.Escrow;
 import com.amay.tom.coin.enums.ModuleTestCode;
 import com.amay.tom.coin.enums.Range;
 import com.amay.tom.coin.model.CoinPollRequest;
@@ -17,6 +18,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class TestToolController {
+
 
     // ================= TOP BAR =================
     @FXML private ComboBox<String> top_portCombo;
@@ -87,9 +89,11 @@ public class TestToolController {
     @FXML private Button auto_stopBtn;
 
     // ================= RETURN / ESCROW =================
-    @FXML private ComboBox<Diverter> return_escrowCombo;
-//    @FXML private ComboBox<String> return_coinReturnCombo;
+    @FXML private ComboBox<Escrow> return_escrowCombo;
+    @FXML private Button escrow_ctrlBtn;
+    @FXML private ComboBox<Diverter> return_coinReturnCombo;
     @FXML private Button diverter_ctrlBtn;
+
 
     // ================= LOG DELETE =================
     @FXML private TextField logs_daysField;
@@ -119,16 +123,42 @@ public class TestToolController {
         }
 
         module_dejammingMotorCombo.getItems().addAll(ModuleTestCode.values());
-        return_escrowCombo.getItems().addAll(Diverter.values());
-//        return_coinReturnCombo.getItems().addAll("RETURN 1", "RETURN 2", "RETURN 3");
+        return_escrowCombo.getItems().addAll(Escrow.values());
+        return_coinReturnCombo.getItems().addAll(Diverter.values());
+
+
+        // RETURN / DIVERTER
+        diverter_ctrlBtn.setOnAction(e -> {
+            try {
+                log(CoinModuleInterface.INSTANCE.controlDivert((Diverter)return_coinReturnCombo.getSelectionModel().getSelectedItem()).toString());
+            } catch (Exception ex) {
+                log(ex.getMessage());
+            }
+        });
+        escrow_ctrlBtn.setOnAction(e-> {
+            try {
+                log(CoinModuleInterface.INSTANCE.controlEscrow((Escrow) return_escrowCombo.getSelectionModel().getSelectedItem()).toString());
+            } catch (Exception ex) {
+                log(ex.getMessage());
+            }
+        });
 
         // TOP BAR handlers
-        top_openPortBtn.setOnAction(e -> log(CoinModuleInterface.INSTANCE.setupCoinModule(top_portCombo.getValue()).toString()));
+        top_openPortBtn.setOnAction(e -> {
+        CoinModuleInterface.INSTANCE.setupCoinModule(top_portCombo.getValue());
+        log("Open");
+        });
+
         top_closePortBtn.setOnAction(e -> log("Closing Port "+CoinModuleInterface.INSTANCE.closeCoinModule()));
         top_pollingStatusBtn.setOnAction(e ->log(CoinModuleInterface.INSTANCE.pooling().toString()));
-        top_getVersionBtn.setOnAction(e -> log("Getting Version..."));
+        top_getVersionBtn.setOnAction(e ->
+                {try{log(CoinModuleInterface.INSTANCE.getVersion().toString());
+        } catch (Exception ex) {
+                    log(ex.getMessage());
+        }}
+        );
         top_clearDisplayInfoBtn.setOnAction(e -> main_logArea.clear());
-        top_okBtn.setOnAction(e -> log("OK button clicked"));
+        top_okBtn.setOnAction(e -> Platform.exit());
 
         // MODULE
         module_moduleTestBtn.setOnAction(e -> log(CoinModuleInterface.INSTANCE.testModule(module_dejammingMotorCombo.getSelectionModel()).toString()));
@@ -262,8 +292,6 @@ public class TestToolController {
         auto_startBtn.setOnAction(e -> startAutoPolling());
         auto_stopBtn.setOnAction(e -> stopAutoPolling());
 
-        // RETURN / DIVERTER
-//        diverter_ctrlBtn.setOnAction(e -> log(CoinModuleInterface.INSTANCE.turnOffBuzzer().toString()));
 
         // LOG DELETE
         logs_controlBtn.setOnAction(e -> log("Deleting logs older than " + logs_daysField.getText() + " days"));
