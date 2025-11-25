@@ -22,6 +22,13 @@ public final class ProtocolConstants {
 	public static final byte CMD_COIN_ACCEPTANCE_POLLING = 0x05;
 	public static final byte CMD_GET_COLLECTION_BOX_ID = 0x08;
 	public static final byte CMD_SET_COLLECTION_BOX_ID = 0x07;
+	//***********************
+	public static final byte TICKET_RESULT = 0x21;
+	public static final byte CHANGE_TICKET_BOX = 0x22; //DATA BYTE 1
+	public static final byte FEED_TICKET = 0x20; //DATA BYTE 1
+	public static final byte MOTOR_TEST = 0x32; //DATA BYTE 1
+
+
 
 
 	// Device-specific mode/marker values
