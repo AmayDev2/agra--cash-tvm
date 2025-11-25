@@ -72,6 +72,11 @@ public class CoinModuleService {
 		ProtocolFrame frame = CommandBuilder.createGetVersionCommand(seq);
 		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
 	}
+	public ModuleResponse getModuleReset() throws Exception {
+		byte seq = sequenceNumberManager.next();
+		ProtocolFrame frame = CommandBuilder.createModuleResetCommand(seq);
+		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
+	}
 
 	public ModuleResponse dispenseCoin(byte hopper, byte quantity) {
 		byte seq = sequenceNumberManager.next();

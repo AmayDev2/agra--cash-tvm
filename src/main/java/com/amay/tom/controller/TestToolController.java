@@ -25,7 +25,7 @@ public class TestToolController {
     @FXML private Button top_openPortBtn;
     @FXML private Button top_closePortBtn;
     @FXML private Button top_pollingStatusBtn;
-    @FXML private Button top_getVersionBtn;
+    @FXML private Button top_getVersionBtn, top_getModuleResetBtn;
     @FXML private Button top_clearDisplayInfoBtn;
     @FXML private Button top_okBtn;
 
@@ -157,11 +157,17 @@ public class TestToolController {
                     log(ex.getMessage());
         }}
         );
+        top_getModuleResetBtn.setOnAction(e ->
+                {try{log(CoinModuleInterface.INSTANCE.getModuleReset().toString());
+                } catch (Exception ex) {
+                    log(ex.getMessage());
+                }}
+        );
         top_clearDisplayInfoBtn.setOnAction(e -> main_logArea.clear());
         top_okBtn.setOnAction(e -> Platform.exit());
 
         // MODULE
-        module_moduleTestBtn.setOnAction(e -> log(CoinModuleInterface.INSTANCE.testModule(module_dejammingMotorCombo.getSelectionModel()).toString()));
+        module_moduleTestBtn.setOnAction(e -> log(CoinModuleInterface.INSTANCE.testModule(module_dejammingMotorCombo.getSelectionModel().getSelectedItem()).toString()));
 
         // BOX ID
         box_setBoxIdBtn.setOnAction(e -> log(CoinModuleInterface.INSTANCE.setBoxId(Byte.parseByte(box_boxIdField.getText())).toString()));

@@ -1,5 +1,5 @@
 package com.amay.tom.coin.constants;
-
+//
 public final class ProtocolConstants {
 	private ProtocolConstants() {}
 
@@ -15,6 +15,7 @@ public final class ProtocolConstants {
 	public static final byte CMD_CONTROL = 0x04;
 	public static final byte CMD_POLLING_STATUS = 0x31;
 	public static final byte CMD_GET_VERSION = 0x34;
+	public static final byte CMD_MODULE_RESET = 0x33;
 	//******************
 	public static final byte CMD_MODULE_TEST = 0x32;
 	public static final byte CMD_DE_JAMMING = 0x09;

@@ -3,7 +3,9 @@ package com.amay.tom.coin.enums;
 public enum ModuleTestCode {
     DE_JAMMING((byte) 0x11),
     COIN_SHUTTER((byte) 0x12),
-    DIVERTER((byte) 0x13);
+    DIVERTER((byte) 0x13),
+    TRNS_MOTOR_START((byte) 0x14),
+    TRNS_MOTOR_STOP((byte) 0x15);
 
     private final byte code;
 
