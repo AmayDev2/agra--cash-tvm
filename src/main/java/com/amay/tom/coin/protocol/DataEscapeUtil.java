@@ -37,9 +37,9 @@ public final class DataEscapeUtil {
 		// copy bytes up to and including STX
 		for (int i = 0; i <= stxIndex; i++) out.add(frame[i]);
 		// copy LEN byte unchanged
-		out.add(frame[stxIndex + 1]);
+//		out.add(frame[stxIndex + 1]);
 		// escape only the body between STX and ETX, EXCLUDING the LEN byte
-		for (int i = stxIndex + 2; i < etxIndex; i++) {
+		for (int i = stxIndex + 1; i < etxIndex; i++) {
 			byte b = frame[i];
 			// Device protocol: escape by prefixing DLE, keep byte unchanged (no XOR)
 			if (b == ProtocolConstants.STX || b == ProtocolConstants.ETX || b == ProtocolConstants.DLE) {
@@ -71,9 +71,9 @@ public final class DataEscapeUtil {
 		// copy up to and including STX
 		for (int i = 0; i <= stxIndex; i++) out.add(escaped[i]);
 		// copy LEN byte unchanged
-		out.add(escaped[stxIndex + 1]);
+//		out.add(escaped[stxIndex + 1]);
 		// unescape body only, EXCLUDING the LEN byte
-		for (int i = stxIndex + 2; i < etxIndex; i++) {
+		for (int i = stxIndex + 1; i < etxIndex; i++) {
 			byte b = escaped[i];
 			if (b == ProtocolConstants.DLE) {
 				if (i + 1 >= etxIndex) {
@@ -101,9 +101,9 @@ public final class DataEscapeUtil {
     public static boolean isEscapeEnabled(ProtocolFrame frame) { //0205000101AB04AA03 dis
 		if (frame == null) return false;
 		byte[] dataForEscape = frame.getCompleteData();
-//		if(frame.getCommand() == ProtocolConstants.STX || frame.getCommand() == ProtocolConstants.ETX || frame.getCommand()  == ProtocolConstants.DLE
-//		|| frame.getSequenceNumber() == ProtocolConstants.STX || frame.getSequenceNumber() == ProtocolConstants.ETX || frame.getSequenceNumber()  == ProtocolConstants.DLE)return true;
 		if (dataForEscape == null) return false;
+		if(dataForEscape.length == ProtocolConstants.STX || dataForEscape.length == ProtocolConstants.ETX || dataForEscape.length  == ProtocolConstants.DLE)return true;
+//		|| frame.getSequenceNumber() == ProtocolConstants.STX || frame.getSequenceNumber() == ProtocolConstants.ETX || frame.getSequenceNumber()  == ProtocolConstants.DLE)return true;
 		for (byte b : dataForEscape) {
 			Logger.tag(LoggerTag.APP).info(" For Escape Data byte: 0x{}", String.format("%02X", b));
 			if (b == ProtocolConstants.STX || b == ProtocolConstants.ETX || b == ProtocolConstants.DLE) {

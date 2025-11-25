@@ -15,6 +15,11 @@ public final class CommandBuilder {
 		return new ProtocolFrame(ProtocolConstants.CMD_GET_VERSION, sequence, new byte[0]);
 	}
 
+	public static ProtocolFrame createModuleResetCommand(byte sequence) {
+		return new ProtocolFrame(ProtocolConstants.CMD_MODULE_RESET, sequence, new byte[0]);
+	}
+
+
 	public static ProtocolFrame createCoinChangeStartCommand(byte hopper, byte mode, byte quantity, byte sequence) {
 		byte[] data = new byte[] { hopper, mode, quantity };
 		return new ProtocolFrame(ProtocolConstants.CMD_COIN_CHANGE, sequence, data);
@@ -93,7 +98,7 @@ public final class CommandBuilder {
 		return new ProtocolFrame(ProtocolConstants.CMD_GET_COLLECTION_BOX_ID,seq,data);
 	}
 	public static ProtocolFrame createSetCollectionBoxIdCommand(byte seq,byte noOfCollectionBox) {
-		byte[] data = new byte[] { ProtocolConstants.COLLECTION_BOX };
+		byte[] data = new byte[] { noOfCollectionBox,0,0,0,0 };
 		return new ProtocolFrame(ProtocolConstants.CMD_SET_COLLECTION_BOX_ID,seq,data);
 	}
 }

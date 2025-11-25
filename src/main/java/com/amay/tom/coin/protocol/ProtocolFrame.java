@@ -10,14 +10,21 @@ public class ProtocolFrame {
 	private final byte command;
 	private final byte sequenceNumber;
 	private final byte[] data;
+	private boolean isLengthEscape=false;
 
 	public ProtocolFrame(byte command, byte sequenceNumber, byte[] data) {
 		this.command = command;
 		this.sequenceNumber = sequenceNumber;
 		this.data = data == null ? new byte[0] : Arrays.copyOf(data, data.length);
+		int length=2 + data.length;
+		if(length==(byte) 0x02
+				||length==(byte) 0x03
+				||length==(byte) 0x10) isLengthEscape=true;
 	}
 	public byte[] getCompleteData() {
 		byte[] complete = new byte[2 + data.length]; // CMD + SN + DATA
+
+
 		complete[0] = command;
 		complete[1] = sequenceNumber;
 

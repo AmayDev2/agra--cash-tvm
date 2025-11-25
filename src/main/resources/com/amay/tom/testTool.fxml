@@ -24,6 +24,7 @@
                 <Button fx:id="top_closePortBtn" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 4;" text="Close Port" />
                 <Button fx:id="top_pollingStatusBtn" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 4;" text="Polling Status" />
                 <Button fx:id="top_getVersionBtn" style="-fx-background-color: #9b59b6; -fx-text-fill: white; -fx-background-radius: 4;" text="Get Version" />
+                <Button fx:id="top_getModuleResetBtn" style="-fx-background-color: #9b59b6; -fx-text-fill: white; -fx-background-radius: 4;" text="Module Reset" />
                 <Button fx:id="top_clearDisplayInfoBtn" style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-background-radius: 4;" text="Clear Display" />
                 <Button fx:id="top_okBtn" style="-fx-background-color: #34495e; -fx-text-fill: white; -fx-background-radius: 4;" text="OK" />
             </HBox>

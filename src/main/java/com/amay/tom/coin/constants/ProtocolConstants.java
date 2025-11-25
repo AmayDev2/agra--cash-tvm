@@ -1,5 +1,5 @@
 package com.amay.tom.coin.constants;
-
+//
 public final class ProtocolConstants {
 	private ProtocolConstants() {}
 
@@ -15,12 +15,20 @@ public final class ProtocolConstants {
 	public static final byte CMD_CONTROL = 0x04;
 	public static final byte CMD_POLLING_STATUS = 0x31;
 	public static final byte CMD_GET_VERSION = 0x34;
+	public static final byte CMD_MODULE_RESET = 0x33;
 	//******************
 	public static final byte CMD_MODULE_TEST = 0x32;
 	public static final byte CMD_DE_JAMMING = 0x09;
 	public static final byte CMD_COIN_ACCEPTANCE_POLLING = 0x05;
 	public static final byte CMD_GET_COLLECTION_BOX_ID = 0x08;
 	public static final byte CMD_SET_COLLECTION_BOX_ID = 0x07;
+	//***********************
+	public static final byte TICKET_RESULT = 0x21;
+	public static final byte CHANGE_TICKET_BOX = 0x22; //DATA BYTE 1
+	public static final byte FEED_TICKET = 0x20; //DATA BYTE 1
+	public static final byte MOTOR_TEST = 0x32; //DATA BYTE 1
+
+
 
 
 	// Device-specific mode/marker values

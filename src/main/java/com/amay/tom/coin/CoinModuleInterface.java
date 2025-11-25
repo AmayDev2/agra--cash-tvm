@@ -19,8 +19,8 @@ public enum CoinModuleInterface {
 	private boolean isPoolingAllowed = true;
 	private String comPort;
 
-	public ModuleTest testModule(SingleSelectionModel<ModuleTestCode> selectionModel) {
-		return (ModuleTest) service.testModule(ModuleTestCode.DE_JAMMING);
+	public ModuleTest testModule(ModuleTestCode selectionModel) {
+		return (ModuleTest) service.testModule(selectionModel);
 
 	}
 
@@ -248,6 +248,10 @@ public enum CoinModuleInterface {
 
 	public ModuleResponse getVersion() throws Exception  {
 			return service.getVersion();
+	}
+
+	public ModuleResponse getModuleReset() throws Exception  {
+		return service.getModuleReset();
 	}
 
 	public ModuleResponse controlDivert(Diverter isReturnTrayOrCollectionBox) throws Exception  {
