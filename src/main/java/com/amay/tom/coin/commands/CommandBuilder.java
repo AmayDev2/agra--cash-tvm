@@ -96,6 +96,7 @@ public final class CommandBuilder {
 		byte[] data = new byte[] { ProtocolConstants.COLLECTION_BOX };
 		return new ProtocolFrame(ProtocolConstants.CMD_SET_COLLECTION_BOX_ID,seq,data);
 	}
+
 }
 
 
