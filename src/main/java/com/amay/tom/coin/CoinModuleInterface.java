@@ -1,10 +1,10 @@
 package com.amay.tom.coin;
 
-import com.amay.tom.coin.enums.Diverter;
-import com.amay.tom.coin.enums.Escrow;
-import com.amay.tom.coin.enums.ModuleTestCode;
-import com.amay.tom.coin.enums.Range;
+import com.amay.tom.coin.commands.CommandBuilder;
+import com.amay.tom.coin.constants.ProtocolConstants;
+import com.amay.tom.coin.enums.*;
 import com.amay.tom.coin.model.*;
+import com.amay.tom.coin.protocol.ProtocolFrame;
 import com.amay.tom.coin.service.CoinModuleService;
 import com.amay.tom.config.LoggerTag;
 import javafx.scene.control.SingleSelectionModel;
@@ -260,6 +260,22 @@ public enum CoinModuleInterface {
 
 	public ModuleResponse controlEscrow(Escrow isCoinReturnOrCollection) throws Exception  {
 		return service.controlEscrowCommand(isCoinReturnOrCollection==Escrow.COIN_COLLECTION);
+	}
+
+	public ModuleResponse createTicketResultCommand(TicketResultIssue issue, TicketResultFeed feed) {
+		return service.createTicketResultCommand(issue.getCode(), feed.getCode());
+	}
+
+	public ModuleResponse createChangeTicketBoxCommand() {
+		return service.createChangeTicketBoxCommand();
+	}
+
+	public ModuleResponse createFeedTicketCommand() {
+		return service.createFeedTicketCommand();
+	}
+
+	public ModuleResponse createMotorTestCommand(MotorTest motorTest) {
+		return service.createMotorTestCommand(motorTest.getCode());
 	}
 }
 

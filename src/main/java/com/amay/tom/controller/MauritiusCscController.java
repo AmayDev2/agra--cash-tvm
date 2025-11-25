@@ -1,8 +1,10 @@
 package com.amay.tom.controller;
 
+import com.amay.tom.coin.CoinModuleInterface;
 import com.amay.tom.coin.enums.MotorTest;
 import com.amay.tom.coin.enums.TicketResultFeed;
 import com.amay.tom.coin.enums.TicketResultIssue;
+import com.fazecast.jSerialComm.SerialPort;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
@@ -24,7 +26,22 @@ public class MauritiusCscController {
 
          @FXML
         public void initialize(){
-             comboComPort.getItems().addAll("COM1", "COM2", "COM3", "COM4", "COM5", "COM6", "COM7", "COM8", "COM9", "COM10");
+             append("System Initialized.");
+             SerialPort[] portList = SerialPort.getCommPorts();
+
+             // Clear previous values (optional)
+             comboComPort.getItems().clear();
+
+             for (SerialPort port : portList) {
+                 String portName = port.getSystemPortName();      // Example: COM3, COM4, etc.
+                 // String portName = port.getDescriptivePortName(); // If you prefer descriptive names
+                 comboComPort.getItems().add(portName);
+             }
+
+             if (! comboComPort.getItems().isEmpty()) {
+                 comboComPort.getSelectionModel().selectFirst(); // Auto-select first available port
+             }
+
              comboMotor.getItems().addAll(MotorTest.values());
 
              rbIssuePassenger.setSelected(true);
@@ -47,12 +64,14 @@ public class MauritiusCscController {
          }
         @FXML
         private void onOpenPort() {
+            CoinModuleInterface.INSTANCE.setupCoinModule(comboComPort.getValue());
             append("Opening Port: " + comboComPort.getValue());
+
         }
 
         @FXML
         private void onClosePort() {
-            append("Closing Port...");
+             CoinModuleInterface.INSTANCE.closeCoinModule();
         }
 
         @FXML

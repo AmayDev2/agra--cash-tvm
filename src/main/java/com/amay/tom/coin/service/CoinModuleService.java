@@ -230,9 +230,10 @@ public class CoinModuleService {
 		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
 	}
 
-	public static ProtocolFrame createMotorTestCommand(byte seq,byte motorTest) {
-		byte[] data = new byte[] { motorTest };
-		return new ProtocolFrame(ProtocolConstants.CHANGE_TICKET_BOX,seq,data);
+	public ModuleResponse createMotorTestCommand(byte motorTest) {
+		byte seq = sequenceNumberManager.next();
+		ProtocolFrame frame = CommandBuilder.createMotorTestCommand(seq,motorTest);
+		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
 	}
 }
 
