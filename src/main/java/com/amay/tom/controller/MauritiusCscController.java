@@ -1,16 +1,17 @@
 package com.amay.tom.controller;
 
+import com.amay.tom.coin.enums.MotorTest;
+import com.amay.tom.coin.enums.TicketResultFeed;
+import com.amay.tom.coin.enums.TicketResultIssue;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-
+import javafx.scene.control.*;
 
 
 public class MauritiusCscController {
+        @FXML private ToggleGroup groupIssue;
+        @FXML private ToggleGroup groupFeed;
         @FXML private ComboBox<String> comboComPort;
-        @FXML private ComboBox<String> comboMotor;
+        @FXML private ComboBox<MotorTest> comboMotor;
 
         @FXML private RadioButton rbIssuePassenger;
          @FXML private RadioButton rbIssueReject;
@@ -24,8 +25,7 @@ public class MauritiusCscController {
          @FXML
         public void initialize(){
              comboComPort.getItems().addAll("COM1", "COM2", "COM3", "COM4", "COM5", "COM6", "COM7", "COM8", "COM9", "COM10");
-             comboMotor.getItems().addAll("Open all motor", "Feeder Motor", "Transport Motor", "Motor Testing off");
-
+             comboMotor.getItems().addAll(MotorTest.values());
 
              rbIssuePassenger.setSelected(true);
              rbAutoFeed.setSelected(true);
@@ -62,7 +62,8 @@ public class MauritiusCscController {
 
         @FXML
         private void onMotorTest() {
-            append("Motor Test Started...");
+            MotorTest motorTest=comboMotor.getSelectionModel().getSelectedItem();
+
         }
 
 
@@ -74,7 +75,9 @@ public class MauritiusCscController {
 
         @FXML
         private void onTicketResult() {
-            append("Checking Ticket Result...");
+            TicketResultIssue issue= rbIssuePassenger.isSelected()?TicketResultIssue.TO_PASSENGER:TicketResultIssue.TO_REJECT;
+            TicketResultFeed feed= rbAutoFeed.isSelected()?TicketResultFeed.AUTO:TicketResultFeed.MANUAL;
+
         }
 
         @FXML
@@ -84,9 +87,8 @@ public class MauritiusCscController {
 
         @FXML
         private void onChangeTicketBox() {
-            append("Changing Ticket Box...");
-        }
 
+        }
 
 
         private void append(String msg) {

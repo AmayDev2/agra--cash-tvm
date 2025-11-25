@@ -211,6 +211,29 @@ public class CoinModuleService {
 		ProtocolFrame frame = CommandBuilder.createSetCollectionBoxIdCommand(seq,id);
 		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
 	}
+
+	public ModuleResponse createTicketResultCommand(byte issue, byte feed) {
+		byte seq = sequenceNumberManager.next();
+		ProtocolFrame frame = CommandBuilder.createTicketResultCommand(seq,issue,feed);
+		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
+	}
+
+	public ModuleResponse createChangeTicketBoxCommand() {
+		byte seq = sequenceNumberManager.next();
+		ProtocolFrame frame = CommandBuilder.createChangeTicketBoxCommand(seq);
+		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
+	}
+
+	public ModuleResponse createFeedTicketCommand() {
+		byte seq = sequenceNumberManager.next();
+		ProtocolFrame frame = CommandBuilder.createChangeTicketBoxCommand(seq);
+		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
+	}
+
+	public static ProtocolFrame createMotorTestCommand(byte seq,byte motorTest) {
+		byte[] data = new byte[] { motorTest };
+		return new ProtocolFrame(ProtocolConstants.CHANGE_TICKET_BOX,seq,data);
+	}
 }
 
 

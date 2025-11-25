@@ -35,14 +35,14 @@
                 <HBox spacing="5.0" style="-fx-border-color: grey; -fx-border-radius: 4;">
                     <RadioButton fx:id="rbIssuePassenger" text="issue to passenger">
                   <toggleGroup>
-                     <ToggleGroup fx:id="group1" />
+                     <ToggleGroup fx:id="groupIssue" />
                   </toggleGroup></RadioButton>
-                    <RadioButton fx:id="rbIssueReject" text="issue to Reject Bin" toggleGroup="$group1" />
+                    <RadioButton fx:id="rbIssueReject" text="issue to Reject Bin" toggleGroup="$groupIssue" />
                     <RadioButton fx:id="rbAutoFeed" text="auto feed">
                   <toggleGroup>
-                     <ToggleGroup fx:id="group2" />
+                     <ToggleGroup fx:id="groupFeed" />
                   </toggleGroup></RadioButton>
-                    <RadioButton fx:id="rbManualFeed" text="manual feed" toggleGroup="$group2" />
+                    <RadioButton fx:id="rbManualFeed" text="manual feed" toggleGroup="$groupFeed" />
                     <Button onAction="#onTicketResult" text="Ticket Result">
                   <HBox.margin>
                      <Insets />

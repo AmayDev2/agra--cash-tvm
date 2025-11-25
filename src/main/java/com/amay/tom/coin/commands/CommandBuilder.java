@@ -97,10 +97,36 @@ public final class CommandBuilder {
 		byte[] data = new byte[] { ProtocolConstants.COLLECTION_BOX };
 		return new ProtocolFrame(ProtocolConstants.CMD_GET_COLLECTION_BOX_ID,seq,data);
 	}
+
 	public static ProtocolFrame createSetCollectionBoxIdCommand(byte seq,byte noOfCollectionBox) {
 		byte[] data = new byte[] { noOfCollectionBox,0,0,0,0 };
 		return new ProtocolFrame(ProtocolConstants.CMD_SET_COLLECTION_BOX_ID,seq,data);
 	}
+
+	public static ProtocolFrame createTicketResultCommand(byte seq,byte issue, byte feed) {
+		byte[] data = new byte[] { feed,issue };
+		return new ProtocolFrame(ProtocolConstants.TICKET_RESULT,seq,data);
+	}
+
+	public static ProtocolFrame createChangeTicketBoxCommand(byte seq) {
+		byte[] data = new byte[] { 0 };
+		return new ProtocolFrame(ProtocolConstants.CHANGE_TICKET_BOX,seq,data);
+	}
+
+	public static ProtocolFrame createFeedTicketCommand(byte seq) {
+		byte[] data = new byte[] { (byte) 0x01 };
+		return new ProtocolFrame(ProtocolConstants.CHANGE_TICKET_BOX,seq,data);
+	}
+
+	public static ProtocolFrame createMotorTestCommand(byte seq,byte motorTest) {
+		byte[] data = new byte[] { motorTest };
+		return new ProtocolFrame(ProtocolConstants.CHANGE_TICKET_BOX,seq,data);
+	}
+
+//	public static final byte TICKET_RESULT = 0x21;
+//	public static final byte CHANGE_TICKET_BOX = 0x22; //DATA BYTE 1
+//	public static final byte FEED_TICKET = 0x20; //DATA BYTE 1
+//	public static final byte MOTOR_TEST = 0x32; //DATA BYTE 1
 }
 
 
