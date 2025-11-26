@@ -115,12 +115,12 @@ public final class CommandBuilder {
 
 	public static ProtocolFrame createFeedTicketCommand(byte seq) {
 		byte[] data = new byte[] { (byte) 0x01 };
-		return new ProtocolFrame(ProtocolConstants.CHANGE_TICKET_BOX,seq,data);
+		return new ProtocolFrame(ProtocolConstants.FEED_TICKET,seq,data);
 	}
 
 	public static ProtocolFrame createMotorTestCommand(byte seq,byte motorTest) {
 		byte[] data = new byte[] { motorTest };
-		return new ProtocolFrame(ProtocolConstants.CHANGE_TICKET_BOX,seq,data);
+		return new ProtocolFrame(ProtocolConstants.MOTOR_TEST,seq,data);
 	}
 
 //	public static final byte TICKET_RESULT = 0x21;

@@ -60,6 +60,7 @@ public class MauritiusCscController {
 
          @FXML
         private void onDeleteLogs(){
+
              append("Log files Deleted");
          }
         @FXML
@@ -76,12 +77,21 @@ public class MauritiusCscController {
 
         @FXML
         private void onGetStatus() {
-            append("Getting Status...");
+            try {
+                append(CoinModuleInterface.INSTANCE.pooling().toString());
+            } catch (Exception e) {
+                append(e.getMessage());
+            }
         }
 
         @FXML
         private void onMotorTest() {
             MotorTest motorTest=comboMotor.getSelectionModel().getSelectedItem();
+            try {
+                append(CoinModuleInterface.INSTANCE.createMotorTestCommand(motorTest).toString());
+            } catch (Exception e) {
+                append(e.getMessage());
+            }
 
         }
 
@@ -89,24 +99,38 @@ public class MauritiusCscController {
 
         @FXML
         private void onFeedTicket() {
-            append("Feed Ticket clicked.");
+            try {
+                append(CoinModuleInterface.INSTANCE.createFeedTicketCommand().toString());
+            } catch (Exception e) {
+                append(e.getMessage());
+            }
         }
 
         @FXML
         private void onTicketResult() {
             TicketResultIssue issue= rbIssuePassenger.isSelected()?TicketResultIssue.TO_PASSENGER:TicketResultIssue.TO_REJECT;
             TicketResultFeed feed= rbAutoFeed.isSelected()?TicketResultFeed.AUTO:TicketResultFeed.MANUAL;
+            try {
+                append(CoinModuleInterface.INSTANCE.createTicketResultCommand(issue,feed).toString());
+            } catch (Exception e) {
+                append(e.getMessage());
+            }
 
         }
 
         @FXML
         private void onGetVersion() {
-            append("Fetching Version...");
+
+            try {
+                append(CoinModuleInterface.INSTANCE.getVersion().toString());
+            } catch (Exception e) {
+                append(e.getMessage());
+            }
         }
 
         @FXML
         private void onChangeTicketBox() {
-
+            CoinModuleInterface.INSTANCE.createChangeTicketBoxCommand();
         }
 
 
