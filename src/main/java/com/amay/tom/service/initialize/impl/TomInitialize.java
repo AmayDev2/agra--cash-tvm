@@ -88,11 +88,13 @@ import com.amay.tom.service.versions.VersionService;
 import com.amay.tom.test.MonitoringConnector;
 import com.amay.tom.test.MonitoringService;
 import com.amay.tom.threadpool.ThreadPool;
+import com.amay.tom.utils.MapsUtil;
 import com.amay.tom.utils.StationData1;
 import com.amay.tom.utils.env.EnvFile;
 import com.amay.tom.utils.env.EnvLoader;
 import com.amay.tom.utils.equipments.EquipmentUtil;
 import com.amay.tom.utils.helper.Helper;
+import com.amay.tvm.backend.enums.FinanceOperation;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.backend.repository.*;
 import com.amay.tvm.backend.service.MaintenanceDeviceListener;
@@ -110,6 +112,7 @@ import javafx.scene.Scene;
 import lombok.val;
 import org.amaytechnosystems.TomTransactionServiceGrpc.TomTransactionServiceBlockingStub;
 import org.json.JSONObject;
+import org.network.monitorandcontrol.FinanceOperationType;
 import org.network.monitorandcontrol.MonitorAndControlGrpc.MonitorAndControlStub;
 import org.network.monitorandcontrol.tom.TOMEquipmentInfo;
 import org.network.monitorandcontrol.tr.TRProtocol;
@@ -121,6 +124,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.function.BiConsumer;
@@ -1043,6 +1047,11 @@ public class TomInitialize implements ITomInitialize {
         if(agent.getPeripheralMonitor().isCcu_connected())
             new DataPushService(new CCUPushService(agent)).pushData();
     }
+
+//    private void initializeMaps(){
+//        HashMap<FinanceOperation, FinanceOperationType> financeOperationFinanceOperationTypeHashMap = MapsUtil.financeOperationFinanceOperationTypeHashMap;
+//        financeOperationFinanceOperationTypeHashMap.put(FinanceOperation.BNR_LOAD,FinanceOperationType.)
+//    }
 
     private boolean setupRepositories() {
         TicketsRepository ticketsRepository = new TicketsRepositoryImpl(agent.getConnection());

@@ -15,6 +15,8 @@ import com.amay.tom.repository.session.ShiftRepository;
 import com.amay.tom.repository.session.ShiftRepositoryImpl;
 import com.amay.tom.repository.tickets.TicketsRepository;
 import com.amay.tom.service.qrService2.push.PushService;
+import com.amay.tvm.backend.entity.AmountSnapShotEntity;
+import com.amay.tvm.backend.service.CashInventoryService;
 import lombok.extern.slf4j.Slf4j;
 import org.amaytechnosystems.*;
 import org.tinylog.Logger;
@@ -128,6 +130,10 @@ public class SCUPushService implements PushService {
 
             if(dbShift.getEndTime()!=null)
                 shift.setEndTime(dbShift.getEndTime().toLocalDateTime());
+
+            CashInventoryService cashInventoryService = new CashInventoryService(agent.getAmountSnapShotRepository());
+            List<AmountSnapShotEntity> amountSnapShotEntityList = cashInventoryService.getCashInventoryByShiftId(dbShift.getShiftId());
+            shift.setAmountSnapShotEntityList(amountSnapShotEntityList);
 
             if (agent.getShift() == null || dbShift.getEndTime()!=null) {
                 if(dbShift.getEndTime()==null)

@@ -1,7 +1,6 @@
 package com.amay.tom.grpc.scugrpc;
 
 import com.amay.tom.config.SystemConfig;
-import com.amay.tom.enums.PayMethod;
 import com.amay.tom.model.QRTicket;
 import com.amay.tom.model.adjust.AdjustedTicket;
 import com.amay.tom.model.payment.PaymentResponse;
@@ -10,8 +9,14 @@ import com.amay.tom.model.tickets.PostGeneratedTicket;
 import com.amay.tom.model.tickets.TicketsDto;
 import com.amay.tom.model.version.MasterConfigInfo;
 import com.amay.tom.utils.time.TimeUtil;
+import com.amay.tvm.backend.entity.AmountSnapShotEntity;
+import com.amay.tvm.backend.entity.FinanceOperationEntity;
+import com.amay.tvm.backend.enums.ContainerId;
+import com.amay.tvm.backend.enums.FinanceOperation;
 import com.google.protobuf.util.Timestamps;
 import org.amaytechnosystems.*;
+import org.network.monitorandcontrol.ContainerType;
+import org.network.monitorandcontrol.FinanceOperationType;
 import org.tinylog.Logger;
 
 import java.net.InetAddress;
@@ -262,14 +267,20 @@ public class ScuDataMapper {
                 .setStationId(shift.getStationId())
                 .build();
 
-        AShift aShift = AShift.newBuilder()
+        AShift.Builder aShiftBuilder = AShift.newBuilder()
                 .setShiftId(shift.getShiftId())
 //                .setShiftStart(TimeUtil.localDateTimeToTimestamp(shift.getStartTime()))
                 .setShiftEnd(TimeUtil.localDateTimeToTimestamp(shift.getEndTime()))
                 .setCurrentStatus(ShiftStatus.COMPLETED)
 //                .setImprestMoney(Integer.parseInt(shift.getImprest_money()))
-                .setVersion(shift.getConfig_version())
-                .build();
+                .setVersion(shift.getConfig_version());
+
+        if(shift.getAmountSnapShotEntityList()!=null){
+            aShiftBuilder.addAllCashInventoryList(
+                    toACashInventory(shift.getAmountSnapShotEntityList())
+            );
+        }
+        AShift aShift = aShiftBuilder.build();
 
         ShiftDataV1 shiftData = ShiftDataV1.newBuilder()
                 .setEquipment(equipment)
@@ -382,20 +393,32 @@ public class ScuDataMapper {
                 .setStationId(shift.getStationId())
                 .build();
 
-        AShift.Builder aShift = AShift.newBuilder()
+        AShift.Builder aShiftBuilder = AShift.newBuilder()
                 .setShiftId(shift.getShiftId())
                 .setShiftStart(TimeUtil.localDateTimeToTimestamp(shift.getStartTime()))
                 .setCurrentStatus(ShiftStatus.valueOf(shift.getCurrentStatus()));
 
         if(shift.getEndTime()!=null){
-            aShift.setShiftEnd(TimeUtil.localDateTimeToTimestamp(shift.getEndTime()));
+            aShiftBuilder.setShiftEnd(TimeUtil.localDateTimeToTimestamp(shift.getEndTime()));
+        }
+
+        if(shift.getAmountSnapShotEntityList()!=null){
+            aShiftBuilder.addAllCashInventoryList(
+                    toACashInventory(shift.getAmountSnapShotEntityList())
+            );
+        }
+
+        if(shift.getFinanceOperationEntityList()!=null){
+            aShiftBuilder.addAllFinanceOperationList(
+                    toAFinanceOperation(shift.getFinanceOperationEntityList())
+            );
         }
 
         ShiftDataV1 shiftData = ShiftDataV1.newBuilder()
                 .setEquipment(equipment)
                 .setOperator(operator)
                 .setStation(station)
-                .setShift(aShift.build())
+                .setShift(aShiftBuilder.build())
                 .build();
 
         return ShiftRequestV1.newBuilder()
@@ -939,10 +962,6 @@ public class ScuDataMapper {
                 .build();
 
         return ticketAdjustedRequestV1;
-
-
-
-
     }
 
     public static TicketRequestV1 createTicketIssueRequest(TicketsDto ticket) {
@@ -1031,4 +1050,32 @@ public class ScuDataMapper {
                         .setEquipmentId(SystemConfig.getInstance().getCurrentEquipment().getEquipmentId()))
                .build();
 }
-}
+
+    public static List<ACashInventory> toACashInventory(List<AmountSnapShotEntity> amountSnapShotEntityList){
+        List<ACashInventory> aCashInventoryList = new ArrayList<>();
+        for(AmountSnapShotEntity amountSnapShotEntity : amountSnapShotEntityList){
+            ACashInventory aCashInventory = ACashInventory.newBuilder()
+                    .setContainerType(amountSnapShotEntity.getContainerId().equals(ContainerId.CB.name())
+                            ? ContainerType.CB
+                            : ContainerType.CM)
+                    .setQuantity(amountSnapShotEntity.getCurrentQuantity())
+                    .setUnitAmount(amountSnapShotEntity.getUnitAmount())
+                    .build();
+            aCashInventoryList.add(aCashInventory);
+        }
+        return aCashInventoryList;
+    }
+    public static List<AFinanceOperation> toAFinanceOperation(List<FinanceOperationEntity> financeOperationEntityList) {
+        List<AFinanceOperation> afinanceOperationList = new ArrayList<>();
+        for(FinanceOperationEntity financeOperationEntity : financeOperationEntityList){
+                AFinanceOperation aFinanceOperation = AFinanceOperation.newBuilder()
+                        .setFinanceOperationType(FinanceOperationType.valueOf(financeOperationEntity.getOperationType().name()))
+                        .setUnitAmount(financeOperationEntity.getUnitAmount())
+                        .setQuantity(financeOperationEntity.getQuantity())
+                        .build();
+                afinanceOperationList.add(aFinanceOperation);
+        }
+        return afinanceOperationList;
+    }
+
+    }

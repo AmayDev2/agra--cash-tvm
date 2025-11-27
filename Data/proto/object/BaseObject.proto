@@ -5,6 +5,7 @@ option java_package = "org.amaytechnosystems";
 option java_outer_classname = "BaseObject";
 import "enum/Enums.proto";
 import "google/protobuf/timestamp.proto";
+import "common/Enums.proto";
 
 package com.proto.baseobject;
 
@@ -99,7 +100,22 @@ message AShift{
   com.proto.enum.ShiftStatus currentStatus =5;
   int32 imprestMoney=6;
   string version=7;
+  repeated ACashInventory cashInventoryList = 8;
+  repeated AFinanceOperation financeOperationList=9;
 }
+
+message ACashInventory{
+  org.monitoring.proto.ContainerType containerType=1;
+  int32 unitAmount=2;
+  int32 quantity=3;
+}
+
+message AFinanceOperation{
+  org.monitoring.proto.FinanceOperationType financeOperationType=1;
+  int32 unitAmount=2;
+  int32 quantity=3;
+}
+
 message ATransaction{
   string transactionId = 1;
   string orderId = 2;

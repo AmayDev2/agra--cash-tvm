@@ -58,3 +58,15 @@ enum EquipmentType{
     SCU = 2;
     ALL = 3;
 }
+
+enum ContainerType{
+    CB=0;
+    CM=1;
+}
+
+enum FinanceOperationType{
+    BNR_LOAD=0;
+    BNR_UNLOAD=1;
+    COIN_LOAD=2;
+    COIN_UNLOAD=3;
+}

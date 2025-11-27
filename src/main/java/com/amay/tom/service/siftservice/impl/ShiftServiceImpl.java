@@ -42,6 +42,7 @@ import com.amay.tvm.backend.mapper.CoinAmountMapper;
 import com.amay.tvm.backend.mapper.FinanceOperationMapper;
 import com.amay.tvm.backend.mapper.NoteAmountMapper;
 import com.amay.tvm.backend.model.MaintenanceLog;
+import com.amay.tvm.backend.service.CashInventoryService;
 import com.amay.tvm.controller.TVMController;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -68,11 +69,13 @@ public class ShiftServiceImpl implements ShiftService {
     private Stage mainStage;
     private  TVMController tvmController;
     private String password;
+    private CashInventoryService cashInventoryService;
 
-    public ShiftServiceImpl(Agent agent, UserAuth userAuth, ShiftRepository shiftRepository) {
+    public ShiftServiceImpl(Agent agent, UserAuth userAuth, ShiftRepository shiftRepository,CashInventoryService cashInventoryService) {
         this.userAuth = userAuth;
         this.agent = agent;
         this.shiftRepository = shiftRepository;
+        this.cashInventoryService=cashInventoryService;
     }
 
 
@@ -293,7 +296,8 @@ public class ShiftServiceImpl implements ShiftService {
                 .setReason(eosType.name());
 
         shift.setImprest_money(String.valueOf(FareMedium.IMPREST_MONEY.getFareMediumTotal()));
-
+        if(userAuth.hasRole("OPERATOR"))
+            shift.setAmountSnapShotEntityList(cashInventoryService.getCashInventoryByShiftId(shift.getShiftId()));
 
         // remove user privilege and user auth
         this.agent.setUserPrivilege(null);
@@ -854,6 +858,8 @@ public class ShiftServiceImpl implements ShiftService {
                 .setCurrentStatus(shiftDto.getCurrentStatus())
                 .setUpdatedAt(localDateTime)
                 .setReason(shiftDto.getReason());
+
+            shift1.setAmountSnapShotEntityList(cashInventoryService.getCashInventoryByShiftId(shiftDto.getShiftId()));
 
         this.agent.getThreadPool().getFixedThreadPool().execute(() -> {
             try {

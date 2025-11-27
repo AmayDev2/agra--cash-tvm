@@ -111,6 +111,23 @@ public class AmountSnapShotRepositoryImpl extends AmountSnapShotRepository {
         }
     }
 
+    @Override
+    public List<AmountSnapShotEntity> findAllByShiftId(String shiftId) {
+        List<AmountSnapShotEntity> result = new ArrayList<>();
+        try (PreparedStatement pstmt = connection.prepareStatement(FIND_ALL_BY_SHIFT_ID)) {;
+            pstmt.setString(1, shiftId);
+
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                result.add(mapRow(rs));
+            }
+        } catch (SQLException e) {
+            Logger.tag(LoggerTag.APP).error("Error fetching AmountSnapShotEntity list by shiftId: {}", e.getMessage());
+        }
+        return result;
+    }
+
+
     /**
      * Map ResultSet to AmountSnapShotEntity
      */

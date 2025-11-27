@@ -23,6 +23,9 @@ public abstract class AmountSnapShotRepository {
     protected static final String INSERT = "INSERT INTO " + TABLE_NAME + " (shiftId, containerId, unitAmount, currentQuantity, createdAt, updatedAt) VALUES (?, ?, ?, ?, ?, ?);";
     protected static final String Find_All = "SELECT * FROM " + TABLE_NAME + ";";
     protected static final String Delete_SQL = "DELETE FROM " + TABLE_NAME + " WHERE shiftId = ?;";
+    protected static final String FIND_ALL_BY_SHIFT_ID =
+            "SELECT * FROM " + TABLE_NAME + " WHERE shiftId = ?";
+
 
     public abstract void save(AmountSnapShotEntity snapshot);
 
@@ -31,4 +34,6 @@ public abstract class AmountSnapShotRepository {
     public abstract List<AmountSnapShotEntity> findAll();
 
     public abstract void deleteByShiftId(String shiftId);
+
+    public abstract List<AmountSnapShotEntity> findAllByShiftId(String shiftId);
 }
