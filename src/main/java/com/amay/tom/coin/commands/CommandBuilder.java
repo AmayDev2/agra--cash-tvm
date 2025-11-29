@@ -47,7 +47,7 @@ public final class CommandBuilder {
 	}
 
 	public static ProtocolFrame createControlBuzzerCommand(boolean on, byte sequence) {
-		byte[] data = new byte[] {  (byte)(on ? 0x01 : 0x02) ,0x00 };
+		byte[] data = new byte[] { 0x00, (byte)(on ? 0x01 : 0x02) ,0x00,0x00,0x00 };
 		return new ProtocolFrame(ProtocolConstants.CMD_CONTROL, sequence, data);
 	}
 
@@ -62,12 +62,12 @@ public final class CommandBuilder {
 	}
 
 	public static ProtocolFrame createStatusBuzzerCommand( byte sequence) {
-		byte[] data = new byte[] {  0x00, 0x00 };
+		byte[] data = new byte[] {  0x00, 0x00, 0x00 ,0x00,0x00,0x00 };
 		return new ProtocolFrame(ProtocolConstants.CMD_CONTROL, sequence, data);
 	}
 
 	public static ProtocolFrame createControlTrayLightCommand(boolean on, byte sequence) {
-		byte[] data = new byte[] { 0x00, (byte)(on ? 0x01 : 0x02) };
+		byte[] data = new byte[] {  0x00, (byte)(on ? 0x01 : 0x02), 0x00 ,0x00, 0x00 };
 		return new ProtocolFrame(ProtocolConstants.CMD_CONTROL, sequence, data);
 	}
 
@@ -90,7 +90,7 @@ public final class CommandBuilder {
 	}
 
 	public static ProtocolFrame createCoinAcceptancePollingStatusCommand(byte sequence, byte status) {
-		return new ProtocolFrame(ProtocolConstants.CMD_COIN_ACCEPTANCE_POLLING, sequence, new byte[status]);
+		return new ProtocolFrame(ProtocolConstants.CMD_COIN_ACCEPTANCE_POLLING, sequence, new byte[]{status});
 	}
 
 	public static ProtocolFrame createGetCollectionBoxIdCommand(byte seq) {
@@ -123,6 +123,15 @@ public final class CommandBuilder {
 		return new ProtocolFrame(ProtocolConstants.MOTOR_TEST,seq,data);
 	}
 
+	public static ProtocolFrame createControlAlarmCommand(boolean on, byte seq) {
+		byte[] data = new byte[] { 0x00,0x00,0x00, (byte)(on ? 0x01 : 0x02) ,0x00,0x00 };
+		return new ProtocolFrame(ProtocolConstants.CMD_CONTROL, seq, data);
+	}
+
+	public static ProtocolFrame createControlLightCommand(boolean on, byte sequence) {
+		byte[] data = new byte[] { 0x00,0x00, (byte)(on ? 0x01 : 0x02) ,0x00,0x00,0x00 };
+		return new ProtocolFrame(ProtocolConstants.CMD_CONTROL, sequence, data);
+	}
 //	public static final byte TICKET_RESULT = 0x21;
 //	public static final byte CHANGE_TICKET_BOX = 0x22; //DATA BYTE 1
 //	public static final byte FEED_TICKET = 0x20; //DATA BYTE 1

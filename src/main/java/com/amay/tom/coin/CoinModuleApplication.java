@@ -18,7 +18,7 @@ public class CoinModuleApplication {
 		System.out.print("Enter COM port (e.g., COM3): ");
 		String port = sc.nextLine().trim();
 		try {
-			service.connect(port);
+			service.connect(port, "9600");
 			System.out.println("Connected to " + port);
 			while (true) {
 				System.out.println(

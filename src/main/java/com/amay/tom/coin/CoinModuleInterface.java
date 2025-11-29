@@ -1,16 +1,11 @@
 package com.amay.tom.coin;
 
-import com.amay.tom.coin.commands.CommandBuilder;
-import com.amay.tom.coin.constants.ProtocolConstants;
 import com.amay.tom.coin.enums.*;
 import com.amay.tom.coin.model.*;
-import com.amay.tom.coin.protocol.ProtocolFrame;
 import com.amay.tom.coin.service.CoinModuleService;
+import com.amay.tom.config.DataTransfer;
 import com.amay.tom.config.LoggerTag;
-import javafx.scene.control.SingleSelectionModel;
 import org.tinylog.Logger;
-
-import java.util.Arrays;
 
 
 public enum CoinModuleInterface {
@@ -18,17 +13,19 @@ public enum CoinModuleInterface {
 	CoinModuleService service;
 	private boolean isPoolingAllowed = true;
 	private String comPort;
+	private String selectedBaud;
 
 	public ModuleTest testModule(ModuleTestCode selectionModel) {
 		return (ModuleTest) service.testModule(selectionModel);
 
 	}
 
-	public CoinModuleService setupCoinModule(String comPort) {
+	public CoinModuleService setupCoinModule(String comPort, String selectedBaud) {
 		service = new CoinModuleService();
 //		HoppersRegistry.INSTANCE.setHoppers(5,10,10,     0,0,0);
 		this.comPort = comPort;
-		connect(comPort);
+		this.selectedBaud=selectedBaud;
+		connect(comPort,selectedBaud);
 		return service;
 	}
 
@@ -37,16 +34,16 @@ public enum CoinModuleInterface {
 		return "Closed";
 	}
 
-	private void connect(String comPort) {
+	private void connect(String comPort, String selectedBaud) {
 		try {
-			service.connect(comPort);
+			service.connect(comPort,selectedBaud);
 		} catch (Exception e) {
 			Logger.tag(LoggerTag.APP).error("{}", e.fillInStackTrace());
 		}
 	}
 
 	public void reconnect() {
-		connect(comPort);
+		connect(comPort, selectedBaud);
 	}
 
 	public CollectionBoxIdResponse getBoxId() {
@@ -217,6 +214,11 @@ public enum CoinModuleInterface {
 
     }
 
+
+	public void end(byte b){
+		 service.dumpHopper((byte) b);
+	}
+
 		private PollingStatusResponse pollingStatusResponse;
 		public PollingStatusResponse pooling () {
 			if (!isPoolingAllowed) return pollingStatusResponse;
@@ -237,12 +239,17 @@ public enum CoinModuleInterface {
 		Logger.tag(LoggerTag.APP).warn("TURN ON BUZZER");
 	}
 
+	public ModuleResponse controlLightTray(boolean b) throws Exception {
+		    Logger.tag(LoggerTag.APP).warn("CMD : TURN ON Light");
+			return service.controlLight(b);
+	}
+
 	public void buzzerStatus() {
 		service.buzzerStatus();
 	}
 
 
-	public AcceptancePollingStatusResponse poolingAcceptance(CoinPollRequest req) {
+	public AcceptancePollingStatusResponse poolingAcceptance(CoinPollRequest req) throws Exception {
 		return  (AcceptancePollingStatusResponse)service.acceptancePollStatus(req.getStatusByte());
 	}
 
@@ -276,6 +283,23 @@ public enum CoinModuleInterface {
 
 	public ModuleResponse createMotorTestCommand(MotorTest motorTest) {
 		return service.createMotorTestCommand(motorTest.getCode());
+	}
+
+	public ModuleResponse controlAlarmTray(boolean b) throws Exception {
+		Logger.tag(LoggerTag.APP).warn("CMD : TURN ON Alarm");
+		return service.controlAlarm(b);
+	}
+
+	private void setupBaudRateModule(String value) {
+			service.setBaudRate(value);
+	}
+
+	public byte[] applyRowCommand(byte[] data) throws Exception {
+			return service.sendCommand(data);
+	}
+
+	public void setlistener(DataTransfer listener) {
+		service.setListener(listener);
 	}
 }
 

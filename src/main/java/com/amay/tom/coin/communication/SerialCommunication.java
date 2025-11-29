@@ -12,10 +12,15 @@ import java.util.Arrays;
 
 public class SerialCommunication implements SerialCommunicationInterface {
 	private SerialPort port;
-	private int baudRate = 57600;
+	private int baudRate = 9600;
 	private int dataBits = 8;
 	private int stopBits = SerialPort.ONE_STOP_BIT;
 	private int parity = SerialPort.NO_PARITY;
+
+	@Override
+	public void setBaudRate(String value) {
+			baudRate=Integer.parseInt(value);
+	}
 
 	private void applySystemOverrides() {
 		try {
@@ -40,8 +45,9 @@ public class SerialCommunication implements SerialCommunicationInterface {
 	}
 
 	@Override
-	public void connect(String portName) throws CommunicationException {
+	public void connect(String portName, String selectedBaud) throws CommunicationException {
 		if (isConnected()) disconnect();
+		baudRate=Integer.parseInt(selectedBaud);
 		applySystemOverrides();
 		port = SerialPort.getCommPort(portName);
 		port.setComPortParameters(baudRate, dataBits, stopBits, parity);
@@ -165,6 +171,63 @@ public class SerialCommunication implements SerialCommunicationInterface {
 		Logger.tag(LoggerTag.APP).error("PORT TIMEOUT, partial RX: " + HexUtil.toHex(partial));
 		throw new CommunicationException("Timeout waiting for ETX");
 	}
+
+	@Override
+	public byte[] readUntilETXIgnoreDirtyByte(int readTimeoutMs) throws CommunicationException {
+		if(readTimeoutMs<=0)return new byte[]{};
+		if (!isConnected()) throw new CommunicationException("Port not open");
+		port.setComPortTimeouts(SerialPort.TIMEOUT_READ_BLOCKING, readTimeoutMs, 0);
+		byte[] buffer = new byte[512];
+		int total = 0;
+		int startIndex = -1;
+		boolean escapeNext = false;
+		long start = System.currentTimeMillis();
+		Logger.tag(LoggerTag.APP).info(System.currentTimeMillis() - start+" "+readTimeoutMs);
+		while (System.currentTimeMillis() - start < readTimeoutMs) {
+			int available = port.bytesAvailable();
+			if (available > 0) {
+				if (total + available > buffer.length) {
+					byte[] nb = new byte[Math.max(buffer.length * 2, total + available)];
+					System.arraycopy(buffer, 0, nb, 0, total);
+					buffer = nb;
+				}
+				int read = port.readBytes(buffer, available, total);
+				int prevTotal = total;
+				total += read;
+				byte[] chunk = Arrays.copyOfRange(buffer, prevTotal, total);
+				Logger.tag(LoggerTag.APP).info("PORT READ  : " + read + " bytes -> " + HexUtil.toHex(chunk));
+				for (int i = prevTotal; i < total; i++) {
+					byte b = buffer[i];
+					if (startIndex < 0) {
+						if (b == ProtocolConstants.STX) {
+							startIndex = i;
+							escapeNext = false;
+						}
+					} else {
+						if (escapeNext) {
+							// This byte is escaped; treat as data regardless of value
+							escapeNext = false;
+							continue;
+						}
+						if (b == ProtocolConstants.DLE) {
+							escapeNext = true;
+							continue;
+						}
+						if (b == ProtocolConstants.ETX) {
+							int endIndex = i;
+							return Arrays.copyOfRange(buffer, startIndex, endIndex + 1);
+						}
+					}
+				}
+			}
+			try { Thread.sleep(5); } catch (InterruptedException ignored) {}
+		}
+		byte[] partial = Arrays.copyOfRange(buffer, 0, total);
+		Logger.tag(LoggerTag.APP).error("PORT TIMEOUT, partial RX: " + HexUtil.toHex(partial));
+		throw new CommunicationException("Timeout waiting for ETX");
+	}
+
+
 }
 
 

@@ -65,7 +65,7 @@ public class MauritiusCscController {
          }
         @FXML
         private void onOpenPort() {
-            CoinModuleInterface.INSTANCE.setupCoinModule(comboComPort.getValue());
+            CoinModuleInterface.INSTANCE.setupCoinModule(comboComPort.getValue(), "57600");
             append("Opening Port: " + comboComPort.getValue());
 
         }

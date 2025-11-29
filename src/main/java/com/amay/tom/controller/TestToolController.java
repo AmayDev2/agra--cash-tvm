@@ -6,6 +6,7 @@ import com.amay.tom.coin.enums.Escrow;
 import com.amay.tom.coin.enums.ModuleTestCode;
 import com.amay.tom.coin.enums.Range;
 import com.amay.tom.coin.model.CoinPollRequest;
+import com.amay.tom.config.DataTransfer;
 import com.fazecast.jSerialComm.SerialPort;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -20,6 +21,11 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class TestToolController {
 
 
+    @FXML private TextField commands;
+    @FXML private Button applyCommand;
+    @FXML private ComboBox top_baudRate;
+    @FXML private Button quick_resetBtn;
+    @FXML private Button quick_testAllBtn;
     // ================= TOP BAR =================
     @FXML private ComboBox<String> top_portCombo;
     @FXML private Button top_openPortBtn;
@@ -102,13 +108,52 @@ public class TestToolController {
     // ================= LOG AREA =================
     @FXML private TextArea main_logArea;
 
+    private boolean isLightOn=true;
+    private boolean isBuzzerOn=true;
+
+    private byte[] hexStringToBytes(String hex) {
+        hex = hex.trim();
+
+        // Must be even length
+        if (hex.length() % 2 != 0) {
+            throw new IllegalArgumentException("Invalid hex string length");
+        }
+
+        int length = hex.length() / 2;
+        byte[] result = new byte[length];
+
+        for (int i = 0; i < length; i++) {
+            String byteStr = hex.substring(i * 2, i * 2 + 2);
+            result[i] = (byte) Integer.parseInt(byteStr, 16);
+        }
+
+        return result;
+    }
+
+
+
 
     // ================= INITIALIZE =================
     @FXML
     public void initialize() {
+        initialize1();
+    }
+    private void initialize1() {
         log("System Initialized.");
         SerialPort[] portList = SerialPort.getCommPorts();
+        top_baudRate.getItems().addAll(
+                "110", "300", "600", "1200", "2400", "4800", "9600",
+                "14400", "19200", "38400", "57600", "115200", "128000", "256000"
+        );
 
+        applyCommand.setOnAction(e -> {
+            try {
+                byte[] data = hexStringToBytes(commands.getText());
+                CoinModuleInterface.INSTANCE.applyRowCommand(data);
+            } catch (Exception ex) {
+                log(ex.getMessage());
+            }
+        });
         // Clear previous values (optional)
         top_portCombo.getItems().clear();
 
@@ -122,15 +167,43 @@ public class TestToolController {
             top_portCombo.getSelectionModel().selectFirst(); // Auto-select first available port
         }
 
+        if(!top_baudRate.getItems().isEmpty()){
+            top_baudRate.getSelectionModel().selectFirst();
+        }
+
         module_dejammingMotorCombo.getItems().addAll(ModuleTestCode.values());
         return_escrowCombo.getItems().addAll(Escrow.values());
         return_coinReturnCombo.getItems().addAll(Diverter.values());
+
+        quick_testAllBtn.setOnAction(e->{
+            try {
+                isLightOn=!isLightOn;
+               CoinModuleInterface.INSTANCE.controlLightTray(isLightOn);
+            } catch (Exception ex) {
+                log(ex.getMessage());
+            }
+        });
+
+        quick_resetBtn.setOnAction(e->{
+            try {
+                isBuzzerOn=!isBuzzerOn;
+               CoinModuleInterface.INSTANCE.controlAlarmTray(isBuzzerOn);
+            } catch (Exception ex) {
+                log(ex.getMessage());
+            }
+        });
+
+        DataTransfer listener= this::log;
+
+
+
+
 
 
         // RETURN / DIVERTER
         diverter_ctrlBtn.setOnAction(e -> {
             try {
-                log(CoinModuleInterface.INSTANCE.controlDivert((Diverter)return_coinReturnCombo.getSelectionModel().getSelectedItem()).toString());
+                log(CoinModuleInterface.INSTANCE.controlDivert(return_coinReturnCombo.getSelectionModel().getSelectedItem()).toString());
             } catch (Exception ex) {
                 log(ex.getMessage());
             }
@@ -145,8 +218,10 @@ public class TestToolController {
 
         // TOP BAR handlers
         top_openPortBtn.setOnAction(e -> {
-        CoinModuleInterface.INSTANCE.setupCoinModule(top_portCombo.getValue());
-        log("Open");
+            log("Opening @ "+ top_baudRate.getSelectionModel().getSelectedItem()+" "+top_portCombo.getValue());
+            CoinModuleInterface.INSTANCE.setupCoinModule(top_portCombo.getValue(), (String) top_baudRate.getSelectionModel().getSelectedItem());
+            CoinModuleInterface.INSTANCE.setlistener( listener);
+            log("Opened");
         });
 
         top_closePortBtn.setOnAction(e -> log("Closing Port "+CoinModuleInterface.INSTANCE.closeCoinModule()));
@@ -263,7 +338,11 @@ public class TestToolController {
                     inhibitRs1.get()       // Bit0
             );
 
-            log("Manual Coin Polling: " + CoinModuleInterface.INSTANCE.poolingAcceptance(req).parse().toString());
+            try {
+                log("Manual Coin Polling Response: " + CoinModuleInterface.INSTANCE.poolingAcceptance(req).parse().toString());
+            } catch (Exception ex) {
+                log("Manual Coin Polling Response: "+ex.getMessage());
+            }
         });
 
         // HOPPERS
@@ -305,7 +384,7 @@ public class TestToolController {
 
     // ================= LOGGER =================
     private void log(String msg) {
-        main_logArea.appendText(msg + "\n");
+        Platform.runLater(()->main_logArea.appendText(msg + "\n"));
     }
 
 

@@ -38,9 +38,9 @@ public class Main extends Application {
 
         try {
 
-//            FXMLLoader fxmlLoader =new FXMLLoader(Main.class.getResource("testTool.fxml"));
+            FXMLLoader fxmlLoader =new FXMLLoader(Main.class.getResource("testTool.fxml"));
 //            FXMLLoader fxmlLoader =new FXMLLoader(Main.class.getResource("/com/amay/tom/CscFxUI.fxml"));
-            FXMLLoader fxmlLoader =new FXMLLoader(Main.class.getResource("/com/amay/tom/MauritiusCsc.fxml"));
+//            FXMLLoader fxmlLoader =new FXMLLoader(Main.class.getResource("/com/amay/tom/MauritiusCsc.fxml"));
 
 //            fxmlLoader.setControllerFactory(param -> new TestToolController());
             Scene scene = new Scene(fxmlLoader.load(), screens.getFirst().getOutputScaleX(),  screens.getFirst().getOutputScaleY());
@@ -81,8 +81,8 @@ public class Main extends Application {
             // Set window properties
             stage.setMinHeight(768);
             stage.setMinWidth(1024);
-            stage.setMaxHeight(768);
-            stage.setMaxWidth(1024);
+//            stage.setMaxHeight(768);
+//            stage.setMaxWidth(1024);
 //            stage.setFullScreen(true);
 //            stage.setFullScreenExitHint(null);
 //            stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);

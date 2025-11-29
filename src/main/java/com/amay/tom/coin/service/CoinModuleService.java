@@ -2,6 +2,7 @@ package com.amay.tom.coin.service;
 
 
 import com.amay.tom.coin.commands.CommandBuilder;
+import com.amay.tom.coin.communication.CommunicationException;
 import com.amay.tom.coin.communication.SerialCommunication;
 import com.amay.tom.coin.communication.SerialCommunicationInterface;
 import com.amay.tom.coin.constants.ProtocolConstants;
@@ -15,11 +16,15 @@ import com.amay.tom.coin.protocol.ProtocolFrame;
 import com.amay.tom.coin.protocol.ResponseParser;
 import com.amay.tom.coin.protocol.SequenceNumberManager;
 import com.amay.tom.coin.util.HexUtil;
+import com.amay.tom.config.DataTransfer;
 import com.amay.tom.config.LoggerTag;
 import org.tinylog.Logger;
 
+import java.util.Arrays;
+
 public class CoinModuleService {
 	private final SerialCommunicationInterface comm;
+	private  DataTransfer listener;
 	private final SequenceNumberManager sequenceNumberManager = new SequenceNumberManager();
 
 	public CoinModuleService() {
@@ -30,11 +35,40 @@ public class CoinModuleService {
 		this.comm = comm;
 	}
 
-	public void connect(String port) { comm.connect(port); }
+	public void connect(String port, String selectedBaud) { comm.connect(port,selectedBaud); }
 	public void disconnect() { comm.disconnect(); }
 	public boolean isConnected() { return comm.isConnected(); }
 
 	private ModuleResponse sendAndReceive(ProtocolFrame frame, int timeoutMs) {
+		byte[] raw = frame.toByteArray();
+		boolean escapeEnabled=DataEscapeUtil.isEscapeEnabled(frame);
+		byte[] escaped = escapeEnabled ? DataEscapeUtil.escapeFrame(raw) : raw;
+		Logger.tag(LoggerTag.BUSS).info("TX (raw)     : " + HexUtil.toHex(raw));
+		Logger.tag(LoggerTag.BUSS).info("TX (escaped) : " + HexUtil.toHex(escaped) + (escapeEnabled ? "" : " (disabled)"));
+		write("TX : "+(escapeEnabled?HexUtil.toHex(escaped):HexUtil.toHex(raw)));
+		comm.write(escaped);
+		byte[] in;
+		try {
+			in = comm.readUntilETX(timeoutMs);
+		} catch (Exception ex) {
+			Logger.tag(LoggerTag.BUSS).info("RX: <no frame> (" + ex.getMessage() + ")");
+			throw ex;
+		}
+		Logger.tag(LoggerTag.BUSS).info("RX (escaped) : " + HexUtil.toHex(in));
+		// Always unescape incoming (device may send DLE-prefixed controls even if we don't escape on TX)
+		byte[] unescaped = DataEscapeUtil.unescapeFrame(in);
+		Logger.tag(LoggerTag.BUSS).info("RX (raw)     : " + HexUtil.toHex(unescaped));
+		ProtocolFrame parsed = ProtocolFrame.parse(unescaped);
+		Logger.tag(LoggerTag.BUSS).info(
+			"RX (parsed)  : CMD=" + HexUtil.toHex(parsed.getCommand()) +
+			" SN=" + HexUtil.toHex(parsed.getSequenceNumber()) +
+			" DATA=" + HexUtil.toHex(parsed.getData())
+		);
+		write("RX : "+ HexUtil.toHex(in));
+		return ResponseParser.parseResponse(parsed);
+	}
+
+	private ModuleResponse sendAndReceiveIgnoreDirtyByte(ProtocolFrame frame, int timeoutMs) {
 		byte[] raw = frame.toByteArray();
 		boolean escapeEnabled=DataEscapeUtil.isEscapeEnabled(frame);
 		byte[] escaped = escapeEnabled ? DataEscapeUtil.escapeFrame(raw) : raw;
@@ -54,9 +88,9 @@ public class CoinModuleService {
 		Logger.tag(LoggerTag.BUSS).info("RX (raw)     : " + HexUtil.toHex(unescaped));
 		ProtocolFrame parsed = ProtocolFrame.parse(unescaped);
 		Logger.tag(LoggerTag.BUSS).info(
-			"RX (parsed)  : CMD=" + HexUtil.toHex(parsed.getCommand()) +
-			" SN=" + HexUtil.toHex(parsed.getSequenceNumber()) +
-			" DATA=" + HexUtil.toHex(parsed.getData())
+				"RX (parsed)  : CMD=" + HexUtil.toHex(parsed.getCommand()) +
+						" SN=" + HexUtil.toHex(parsed.getSequenceNumber()) +
+						" DATA=" + HexUtil.toHex(parsed.getData())
 		);
 		return ResponseParser.parseResponse(parsed);
 	}
@@ -108,6 +142,11 @@ public class CoinModuleService {
 		return resp;
 	}
 
+	public void end(byte data){
+		byte endSeq = sequenceNumberManager.next();
+		ProtocolFrame end = CommandBuilder.createCoinChangeEndCommand(data, endSeq);
+		try { comm.write(end.toByteArray()); } catch (Exception ignored) {}
+	}
 	public ModuleResponse dumpHopper(byte hopper) {
 		byte seq = sequenceNumberManager.next();
 		ProtocolFrame start = CommandBuilder.createCoinDumpStartCommand(hopper, seq);
@@ -141,10 +180,34 @@ public class CoinModuleService {
 	public ModuleResponse turnOnTrayLight() { return controlTrayLight(true); }
 	public ModuleResponse turnOffTrayLight() { return controlTrayLight(false); }
 
+
+
 	public ModuleResponse controlDivertCommand(boolean on) throws Exception{
 		byte seq = sequenceNumberManager.next();
 		ProtocolFrame frame = CommandBuilder.controlDivertCommand(on, seq);
 		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
+	}
+
+	public byte[] sendCommand(byte[] bytes ) throws Exception{
+		Logger.tag(LoggerTag.BUSS).info(
+				"TX :"+ HexUtil.toHex(bytes)
+		);
+		write(("TX : "+ HexUtil.toHex(bytes)));
+		comm.write(bytes);
+		byte[] in;
+		try {
+			in = comm.readUntilETX(ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
+
+		} catch (Exception ex) {
+			Logger.tag(LoggerTag.BUSS).info("RX: <no frame> (" + ex.getMessage() + ")");
+			throw ex;
+		}
+		Logger.tag(LoggerTag.BUSS).info(
+				"RX :"+ HexUtil.toHex(in)
+		);
+
+		write(("RX : "+ HexUtil.toHex(in)));
+		return in;
 	}
 
 	public ModuleResponse controlEscrowCommand(boolean on) throws Exception{
@@ -160,6 +223,13 @@ public class CoinModuleService {
 		ProtocolFrame frame = CommandBuilder.createControlBuzzerCommand(on, seq);
 		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
 	}
+
+	public ModuleResponse controlLight(boolean on) {
+		byte seq = sequenceNumberManager.next();
+		ProtocolFrame frame = CommandBuilder.createControlLightCommand(on, seq);
+		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
+	}
+
 
 	private ModuleResponse statusBuzzer() {
 		byte seq = sequenceNumberManager.next();
@@ -183,7 +253,7 @@ public class CoinModuleService {
 
 	}
 
-	public ModuleResponse testModule(ModuleTestCode moduleTestCode) {
+	public ModuleResponse testModule(ModuleTestCode moduleTestCode) throws CommunicationException {
 		byte seq = sequenceNumberManager.next();
 		ProtocolFrame frame = CommandBuilder.createModuleTestCommand(seq, moduleTestCode.getCode());
 		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
@@ -195,7 +265,7 @@ public class CoinModuleService {
 		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
 	}
 
-	public ModuleResponse acceptancePollStatus(byte status) {
+	public ModuleResponse acceptancePollStatus(byte status) throws Exception {
 		byte seq = sequenceNumberManager.next();
 		ProtocolFrame frame = CommandBuilder.createCoinAcceptancePollingStatusCommand(seq,status);
 		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
@@ -234,6 +304,26 @@ public class CoinModuleService {
 		byte seq = sequenceNumberManager.next();
 		ProtocolFrame frame = CommandBuilder.createMotorTestCommand(seq,motorTest);
 		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
+	}
+
+	public ModuleResponse controlAlarm(boolean on) {
+		byte seq = sequenceNumberManager.next();
+		ProtocolFrame frame = CommandBuilder.createControlAlarmCommand(on, seq);
+		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
+	}
+
+	public void setBaudRate(String value) {
+		comm.setBaudRate(value);
+	}
+
+	private void write(String data){
+		if(null!=listener){
+			listener.set(data);
+		}
+	}
+
+	public void setListener(DataTransfer listener) {
+		this.listener=listener;
 	}
 }
 
