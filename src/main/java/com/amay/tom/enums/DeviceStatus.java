@@ -68,10 +68,10 @@ public class DeviceStatus implements DeviceStatusListener {
             this.mDeviceStatus2 = deviceStatus;
 
             if (deviceStatus[0] == 1) {
-                Logger.tag(LoggerTag.APP).debug("Trigger to maintenance");
                 notifyListeners(this.operationModeDeciderService.requestAndGetAppliedOperationMode(
                         new OperationMode(OperationModeSource.TRIGGER,DeviceOperationMode.IN_SERVICE)));
             }else if (deviceStatus[0] == 0){
+                Logger.tag(LoggerTag.APP).debug("Trigger to maintenance");
                 notifyListeners(this.operationModeDeciderService.requestAndGetAppliedOperationMode(
                         new OperationMode(OperationModeSource.TRIGGER,DeviceOperationMode.MAINTENANCE)));
             }

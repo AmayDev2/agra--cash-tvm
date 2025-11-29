@@ -22,6 +22,7 @@ import com.amay.tom.service.userauth.UserAuth;
 import com.amay.tom.service.userauth.UserDetailsService;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.backend.service.CashInventoryService;
+import com.amay.tvm.backend.service.FinanceOperationService;
 import com.amay.tvm.ups.UPS;
 import com.amay.tvm.ups.exception.UPSCommunicationException;
 import com.amay.tvm.ups.model.UPSResponse;
@@ -69,8 +70,9 @@ public class LoginController {
                 new UserAuth(
                         new UserDetailsService(
                                 new UserRepositoryImpl(
-                                        agent.getConnection()))),new ShiftRepositoryImpl(agent.getConnection())
-        ,new CashInventoryService(agent.getAmountSnapShotRepository()));
+                                        agent.getConnection()))),new ShiftRepositoryImpl(agent.getConnection()),
+                                            new CashInventoryService(agent.getAmountSnapShotRepository()),
+                                                new FinanceOperationService(agent.getFinanceOperationRepository()));
         this.agent.setShiftService(this.shiftService);
 
         //TODO> Pass shiftService to maintenance

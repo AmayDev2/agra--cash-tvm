@@ -280,6 +280,13 @@ public class ScuDataMapper {
                     toACashInventory(shift.getAmountSnapShotEntityList())
             );
         }
+
+        if(shift.getFinanceOperationEntityList()!=null){
+            aShiftBuilder.addAllFinanceOperationList(
+                    toAFinanceOperation(shift.getFinanceOperationEntityList())
+            );
+        }
+
         AShift aShift = aShiftBuilder.build();
 
         ShiftDataV1 shiftData = ShiftDataV1.newBuilder()

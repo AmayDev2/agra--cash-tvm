@@ -43,6 +43,7 @@ import com.amay.tvm.backend.mapper.FinanceOperationMapper;
 import com.amay.tvm.backend.mapper.NoteAmountMapper;
 import com.amay.tvm.backend.model.MaintenanceLog;
 import com.amay.tvm.backend.service.CashInventoryService;
+import com.amay.tvm.backend.service.FinanceOperationService;
 import com.amay.tvm.controller.TVMController;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -70,12 +71,14 @@ public class ShiftServiceImpl implements ShiftService {
     private  TVMController tvmController;
     private String password;
     private CashInventoryService cashInventoryService;
+    private final FinanceOperationService financeOperationService;
 
-    public ShiftServiceImpl(Agent agent, UserAuth userAuth, ShiftRepository shiftRepository,CashInventoryService cashInventoryService) {
+    public ShiftServiceImpl(Agent agent, UserAuth userAuth, ShiftRepository shiftRepository, CashInventoryService cashInventoryService, FinanceOperationService financeOperationService) {
         this.userAuth = userAuth;
         this.agent = agent;
         this.shiftRepository = shiftRepository;
         this.cashInventoryService=cashInventoryService;
+        this.financeOperationService = financeOperationService;
     }
 
 
@@ -851,7 +854,6 @@ public class ShiftServiceImpl implements ShiftService {
                 .setDeviceSerial(shiftDto.getDeviceSerial())
                 .setLineNo(shiftDto.getLineNo())
                 .setStationId(shiftDto.getStationId())
-//                .setStartTime(TimeUtil.timestampToLocalDateTime(shiftDto.getStartTime()))
                 .setConfig_version(shiftDto.getConfig_version())
                 .setOperatorId(shiftDto.getOperatorId())
                 .setShiftId(shiftDto.getShiftId())
@@ -860,6 +862,7 @@ public class ShiftServiceImpl implements ShiftService {
                 .setReason(shiftDto.getReason());
 
             shift1.setAmountSnapShotEntityList(cashInventoryService.getCashInventoryByShiftId(shiftDto.getShiftId()));
+            shift1.setFinanceOperationEntityList(financeOperationService.getFinanceOperationEntityLoadUnloadListByShiftId(shiftDto.getShiftId()));
 
         this.agent.getThreadPool().getFixedThreadPool().execute(() -> {
             try {
@@ -871,8 +874,6 @@ public class ShiftServiceImpl implements ShiftService {
                 Logger.error("Error printing EOS report for last shift: {}", e.getMessage());
             }
         });
-
-
     }
 
     @Override

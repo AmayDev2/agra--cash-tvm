@@ -171,6 +171,8 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
         return results;
     }
 
+
+
     @Override
     public int markCommited(FinanceOperation financeOperation) {
         int processedCount = 0;
@@ -299,6 +301,26 @@ public class FinanceOperationRepositoryImpl extends FinanceOperationRepository {
         }
         return financeOperationEntityList;
     }
+
+    @Override
+    public List<FinanceOperationEntity> getLoadUnloadOperationByShiftId(String shiftId) {
+        List<FinanceOperationEntity> list = new ArrayList<>();
+
+        try (PreparedStatement psmt = connection.prepareStatement(SELECT_ALL_LOAD_UNLOAD_OPERATION_BY_SHIFT_ID)) {
+            psmt.setString(1, shiftId);
+            try (ResultSet rs = psmt.executeQuery()) {
+                while (rs.next()) {
+                    list.add(mapRow(rs));
+                }
+            }
+        } catch (SQLException e) {
+            Logger.error("Error fetching load/unload operations for shiftId={}", shiftId, e);
+        }
+
+        return list;
+    }
+
+
 
     private FinanceOperationEntity mapRow(ResultSet rs) throws SQLException {
         return new FinanceOperationEntity()

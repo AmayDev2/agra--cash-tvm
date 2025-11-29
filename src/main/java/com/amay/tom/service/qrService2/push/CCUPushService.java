@@ -14,6 +14,10 @@ import com.amay.tom.repository.session.ShiftRepository;
 import com.amay.tom.repository.session.ShiftRepositoryImpl;
 import com.amay.tom.repository.tickets.TicketsRepository;
 import com.amay.tom.service.qrService2.push.PushService;
+import com.amay.tvm.backend.entity.AmountSnapShotEntity;
+import com.amay.tvm.backend.entity.FinanceOperationEntity;
+import com.amay.tvm.backend.service.CashInventoryService;
+import com.amay.tvm.backend.service.FinanceOperationService;
 import lombok.extern.slf4j.Slf4j;
 import org.amaytechnosystems.*;
 import org.tinylog.Logger;
@@ -129,6 +133,15 @@ public class CCUPushService implements PushService {
             if(dbShift.getEndTime()!=null){
                 shift.setEndTime(dbShift.getEndTime().toLocalDateTime());
             }
+
+            CashInventoryService cashInventoryService = new CashInventoryService(agent.getAmountSnapShotRepository());
+            List<AmountSnapShotEntity> amountSnapShotEntityList = cashInventoryService.getCashInventoryByShiftId(dbShift.getShiftId());
+            shift.setAmountSnapShotEntityList(amountSnapShotEntityList);
+
+            FinanceOperationService financeOperationService = new FinanceOperationService(agent.getFinanceOperationRepository());
+            List<FinanceOperationEntity> financeOperationEntityList = financeOperationService.getFinanceOperationEntityLoadUnloadListByShiftId(dbShift.getShiftId());
+            shift.setFinanceOperationEntityList(financeOperationEntityList);
+
 //            if(shift.getCurrentStatus()==ShiftStatus.)
 //            if(agent.getPeripheralMonitor().isCcu_connected()) CompletableFuture.runAsync(() -> agent.getCcuService().pushShiftInfo(shift),agent.getThreadPool().getFixedThreadPool());
             futures.add( CompletableFuture.runAsync(() -> {
