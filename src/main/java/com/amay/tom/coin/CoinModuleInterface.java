@@ -265,8 +265,8 @@ public enum CoinModuleInterface {
 		return service.controlDivertCommand(isReturnTrayOrCollectionBox==Diverter.COLLECTION_BOX);
 	}
 
-	public ModuleResponse controlEscrow(Escrow isCoinReturnOrCollection) throws Exception  {
-		return service.controlEscrowCommand(isCoinReturnOrCollection==Escrow.COIN_COLLECTION);
+	public ModuleResponse controlEscrow(Escrow escrow, Diverter diverter) throws Exception  {
+		return service.controlEscrowCommand(escrow.getCode(),diverter.getCode());
 	}
 
 	public ModuleResponse createTicketResultCommand(TicketResultIssue issue, TicketResultFeed feed) {

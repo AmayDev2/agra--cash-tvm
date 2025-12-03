@@ -52,12 +52,12 @@ public final class CommandBuilder {
 	}
 
 	public static ProtocolFrame controlDivertCommand(boolean on, byte sequence) {
-		byte[] data = new byte[] {  (byte)(on ? 0x01 : 0x02) ,0x00 ,0x00,0x00,0x00,0x00};
+		byte[] data = new byte[] {  (byte)(on ? 0x01 : 0x02) ,0x00 ,0x00,0x00,0x03,0x00};
 		return new ProtocolFrame(ProtocolConstants.CMD_CONTROL, sequence, data);
 	}
 
-	public static ProtocolFrame controlEscrowCommand(boolean on, byte sequence) {
-		byte[] data = new byte[] {  0x00 ,0x00,0x00,0x00,(byte)(on ? 0x01 : 0x02),0x00};
+	public static ProtocolFrame controlEscrowCommand(byte escrow, byte diverter, byte sequence) {
+		byte[] data = new byte[] {  diverter ,0x00,0x00,0x00,escrow,0x00};
 		return new ProtocolFrame(ProtocolConstants.CMD_CONTROL, sequence, data);
 	}
 

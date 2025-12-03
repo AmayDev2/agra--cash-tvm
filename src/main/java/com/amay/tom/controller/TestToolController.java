@@ -21,6 +21,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class TestToolController {
 
 
+
     @FXML private TextField commands;
     @FXML private Button applyCommand;
     @FXML private ComboBox top_baudRate;
@@ -87,6 +88,9 @@ public class TestToolController {
     @FXML private Button dejamming_h1Check;
     @FXML private Button dejamming_h2Check;
     @FXML private Button dejamming_h3Check;
+    @FXML private Button dejamming_h4Check;
+    @FXML private Button dejamming_h5Check;
+    @FXML private Button dejamming_h6Check;
     @FXML private Button dejamming_motorBtn;
 //    @FXML private Button dejamming_coinDumpBtn;
 
@@ -201,16 +205,17 @@ public class TestToolController {
 
 
         // RETURN / DIVERTER
-        diverter_ctrlBtn.setOnAction(e -> {
-            try {
-                log(CoinModuleInterface.INSTANCE.controlDivert(return_coinReturnCombo.getSelectionModel().getSelectedItem()).toString());
-            } catch (Exception ex) {
-                log(ex.getMessage());
-            }
-        });
+        diverter_ctrlBtn.setVisible(false);
+//        diverter_ctrlBtn.setOnAction(e -> {
+//            try {
+//                log(CoinModuleInterface.INSTANCE.controlDivert(return_coinReturnCombo.getSelectionModel().getSelectedItem()).toString());
+//            } catch (Exception ex) {
+//                log(ex.getMessage());
+//            }
+//        });
         escrow_ctrlBtn.setOnAction(e-> {
             try {
-                log(CoinModuleInterface.INSTANCE.controlEscrow((Escrow) return_escrowCombo.getSelectionModel().getSelectedItem()).toString());
+                log(CoinModuleInterface.INSTANCE.controlEscrow( return_escrowCombo.getSelectionModel().getSelectedItem(),return_coinReturnCombo.getSelectionModel().getSelectedItem()).toString());
             } catch (Exception ex) {
                 log(ex.getMessage());
             }
@@ -348,9 +353,9 @@ public class TestToolController {
         // HOPPERS
         hopper_coinChangeBtn.setOnAction(e ->{
             new Thread(()->{
-                if(Integer.parseInt(hopper_h2Field.getText())>0)log(CoinModuleInterface.INSTANCE.coinChange(1, Integer.parseInt(hopper_h1Field.getText())).toString());
-                if(Integer.parseInt(hopper_h2Field.getText())>0)log(CoinModuleInterface.INSTANCE.coinChange(2, Integer.parseInt(hopper_h2Field.getText())).toString());
-                if(Integer.parseInt(hopper_h3Field.getText())>0)log(CoinModuleInterface.INSTANCE.coinChange(3, Integer.parseInt(hopper_h3Field.getText())).toString());
+                if(hopper_h1Field.getText()!= null && !hopper_h1Field.getText().isBlank() && Integer.parseInt(hopper_h1Field.getText())>0)log(CoinModuleInterface.INSTANCE.coinChange(1, Integer.parseInt(hopper_h1Field.getText())).toString());
+                if(hopper_h2Field.getText()!= null && !hopper_h2Field.getText().isBlank() && Integer.parseInt(hopper_h2Field.getText())>0)log(CoinModuleInterface.INSTANCE.coinChange(2, Integer.parseInt(hopper_h2Field.getText())).toString());
+                if(hopper_h3Field.getText()!= null && !hopper_h3Field.getText().isBlank() && Integer.parseInt(hopper_h3Field.getText())>0)log(CoinModuleInterface.INSTANCE.coinChange(3, Integer.parseInt(hopper_h3Field.getText())).toString());
             }).start();
         }
         );
@@ -370,6 +375,21 @@ public class TestToolController {
         dejamming_h3Check.setOnAction(e -> {
             new Thread(()->{
                 log(Objects.requireNonNull(CoinModuleInterface.INSTANCE.dumpHopper(3)).toString());
+            }).start();
+        });
+        dejamming_h4Check.setOnAction(e -> {
+            new Thread(()->{
+                log(Objects.requireNonNull(CoinModuleInterface.INSTANCE.dumpHopper(4)).toString());
+            }).start();
+        });
+        dejamming_h5Check.setOnAction(e -> {
+            new Thread(()->{
+                log(Objects.requireNonNull(CoinModuleInterface.INSTANCE.dumpHopper(5)).toString());
+            }).start();
+        });
+        dejamming_h6Check.setOnAction(e -> {
+            new Thread(()->{
+                log(Objects.requireNonNull(CoinModuleInterface.INSTANCE.dumpHopper(6)).toString());
             }).start();
         });
 

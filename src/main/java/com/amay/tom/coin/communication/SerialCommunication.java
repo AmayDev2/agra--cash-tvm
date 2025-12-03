@@ -171,61 +171,65 @@ public class SerialCommunication implements SerialCommunicationInterface {
 		Logger.tag(LoggerTag.APP).error("PORT TIMEOUT, partial RX: " + HexUtil.toHex(partial));
 		throw new CommunicationException("Timeout waiting for ETX");
 	}
-
 	@Override
 	public byte[] readUntilETXIgnoreDirtyByte(int readTimeoutMs) throws CommunicationException {
-		if(readTimeoutMs<=0)return new byte[]{};
+
+		if (readTimeoutMs <= 0) return new byte[]{};
 		if (!isConnected()) throw new CommunicationException("Port not open");
-		port.setComPortTimeouts(SerialPort.TIMEOUT_READ_BLOCKING, readTimeoutMs, 0);
+
+		// Semi-blocking → waits until 1 byte arrives, then returns immediately
+		port.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, readTimeoutMs, 0);
+
 		byte[] buffer = new byte[512];
 		int total = 0;
-		int startIndex = -1;
+
+		boolean inFrame = false;
+		int frameStart = -1;
 		boolean escapeNext = false;
-		long start = System.currentTimeMillis();
-		Logger.tag(LoggerTag.APP).info(System.currentTimeMillis() - start+" "+readTimeoutMs);
-		while (System.currentTimeMillis() - start < readTimeoutMs) {
-			int available = port.bytesAvailable();
-			if (available > 0) {
-				if (total + available > buffer.length) {
-					byte[] nb = new byte[Math.max(buffer.length * 2, total + available)];
-					System.arraycopy(buffer, 0, nb, 0, total);
-					buffer = nb;
+
+		long deadline = System.currentTimeMillis() + readTimeoutMs;
+
+		while (System.currentTimeMillis() < deadline) {
+
+			int read = port.readBytes(buffer, 1, total); // read only 1 byte
+			if (read <= 0) continue;
+
+			byte b = buffer[total];
+			int i = total;
+			total++;
+
+			// Start frame detection
+			if (!inFrame) {
+				if (b == ProtocolConstants.STX) {
+					inFrame = true;
+					escapeNext = false;
+					frameStart = i;
 				}
-				int read = port.readBytes(buffer, available, total);
-				int prevTotal = total;
-				total += read;
-				byte[] chunk = Arrays.copyOfRange(buffer, prevTotal, total);
-				Logger.tag(LoggerTag.APP).info("PORT READ  : " + read + " bytes -> " + HexUtil.toHex(chunk));
-				for (int i = prevTotal; i < total; i++) {
-					byte b = buffer[i];
-					if (startIndex < 0) {
-						if (b == ProtocolConstants.STX) {
-							startIndex = i;
-							escapeNext = false;
-						}
-					} else {
-						if (escapeNext) {
-							// This byte is escaped; treat as data regardless of value
-							escapeNext = false;
-							continue;
-						}
-						if (b == ProtocolConstants.DLE) {
-							escapeNext = true;
-							continue;
-						}
-						if (b == ProtocolConstants.ETX) {
-							int endIndex = i;
-							return Arrays.copyOfRange(buffer, startIndex, endIndex + 1);
-						}
-					}
-				}
+				continue;
 			}
-			try { Thread.sleep(5); } catch (InterruptedException ignored) {}
+
+			// Inside frame
+			if (escapeNext) {
+				escapeNext = false;
+				continue;
+			}
+
+			if (b == ProtocolConstants.DLE) {
+				escapeNext = true;
+				continue;
+			}
+
+			if (b == ProtocolConstants.ETX) {
+				return Arrays.copyOfRange(buffer, frameStart, i + 1);
+			}
+
+			// Data byte → nothing special
 		}
-		byte[] partial = Arrays.copyOfRange(buffer, 0, total);
-		Logger.tag(LoggerTag.APP).error("PORT TIMEOUT, partial RX: " + HexUtil.toHex(partial));
+
 		throw new CommunicationException("Timeout waiting for ETX");
 	}
+
+
 
 
 }

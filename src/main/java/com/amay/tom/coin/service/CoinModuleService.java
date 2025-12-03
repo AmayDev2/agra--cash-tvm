@@ -49,7 +49,7 @@ public class CoinModuleService {
 		comm.write(escaped);
 		byte[] in;
 		try {
-			in = comm.readUntilETX(timeoutMs);
+			in = comm.readUntilETXIgnoreDirtyByte(timeoutMs);
 		} catch (Exception ex) {
 			Logger.tag(LoggerTag.BUSS).info("RX: <no frame> (" + ex.getMessage() + ")");
 			throw ex;
@@ -196,7 +196,7 @@ public class CoinModuleService {
 		comm.write(bytes);
 		byte[] in;
 		try {
-			in = comm.readUntilETX(ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
+			in = comm.readUntilETXIgnoreDirtyByte(ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
 
 		} catch (Exception ex) {
 			Logger.tag(LoggerTag.BUSS).info("RX: <no frame> (" + ex.getMessage() + ")");
@@ -210,9 +210,9 @@ public class CoinModuleService {
 		return in;
 	}
 
-	public ModuleResponse controlEscrowCommand(boolean on) throws Exception{
+	public ModuleResponse controlEscrowCommand(byte escrow, byte diverter) throws Exception{
 		byte seq = sequenceNumberManager.next();
-		ProtocolFrame frame = CommandBuilder.controlEscrowCommand(on, seq);
+		ProtocolFrame frame = CommandBuilder.controlEscrowCommand(escrow,diverter, seq);
 		return sendAndReceive(frame, ProtocolConstants.DEFAULT_READ_TIMEOUT_MS);
 	}
 
