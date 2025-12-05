@@ -6,6 +6,7 @@ import com.amay.tom.coin.enums.Escrow;
 import com.amay.tom.coin.enums.ModuleTestCode;
 import com.amay.tom.coin.enums.Range;
 import com.amay.tom.coin.model.CoinPollRequest;
+import com.amay.tom.coin.util.OverHeadDisplay;
 import com.amay.tom.config.DataTransfer;
 import com.fazecast.jSerialComm.SerialPort;
 import javafx.application.Platform;
@@ -21,7 +22,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class TestToolController {
 
 
-
+    @FXML private Button clear;
+    @FXML private Button sendBMP;
+    @FXML private Button connection;
     @FXML private TextField commands;
     @FXML private Button applyCommand;
     @FXML private ComboBox top_baudRate;
@@ -400,6 +403,37 @@ public class TestToolController {
 
         // LOG DELETE
         logs_controlBtn.setOnAction(e -> log("Deleting logs older than " + logs_daysField.getText() + " days"));
+
+        clear.setOnAction(e->{
+            byte[][] data = OverHeadDisplay.getClear();
+            for(var x:data)
+            new Thread(()->{
+                try {
+                    CoinModuleInterface.INSTANCE.applyRowCommand(x);
+                } catch (Exception ex) {
+                    log(ex.getMessage());
+                }
+            }).start();
+
+        });
+
+        sendBMP.setOnAction(e->{
+            byte[][] data = OverHeadDisplay.getSendBMPs();
+            for(var x:data)
+                try {
+                    CoinModuleInterface.INSTANCE.applyRowCommand(x);
+                } catch (Exception ex) {
+                    log(ex.getMessage());
+                }
+        });
+        connection.setOnAction(e->{
+            try {
+                byte[] data = OverHeadDisplay.getConnection();
+               CoinModuleInterface.INSTANCE.applyRowCommand(data);
+            } catch (Exception ex) {
+                log(ex.getMessage());
+            }
+        });
     }
 
     // ================= LOGGER =================
@@ -433,4 +467,5 @@ public class TestToolController {
             log("Auto Polling already stopped");
         }
     }
+
 }

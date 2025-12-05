@@ -169,6 +169,11 @@
 <!--                                <Label style="-fx-font-size: 11px; -fx-text-fill: #7f8c8d;" text="Last Cmd:" />-->
 <!--                                <Label fx:id="status_lastResponse" style="-fx-text-fill: #34495e; -fx-font-size: 11px;" text="N/A" />-->
 <!--                            </HBox>-->
+                            <HBox spacing="10">
+                                <Button fx:id="connection" prefHeight="30" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-background-radius: 4;" text="Connection" />
+                                <Button fx:id="sendBMP" prefHeight="30" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-background-radius: 4;" text="Send BMP" />
+                                <Button fx:id="clear" prefHeight="30" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-background-radius: 4;" text="Clear" />
+                            </HBox>
                         </VBox>
                     </VBox>
 
