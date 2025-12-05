@@ -417,15 +417,18 @@ public class TestToolController {
 
         });
 
-        sendBMP.setOnAction(e->{
-            byte[][] data = OverHeadDisplay.getSendBMPs();
-            for(var x:data)
+        sendBMP.setOnAction(e -> {
+            byte[][] cmds = OverHeadDisplay.getSendBMPs();
+
+            for (byte[] cmd : cmds) {
                 try {
-                    CoinModuleInterface.INSTANCE.applyRowCommand(x);
+                    CoinModuleInterface.INSTANCE.applyRowCommand(cmd);
                 } catch (Exception ex) {
                     log(ex.getMessage());
                 }
+            }
         });
+
         connection.setOnAction(e->{
             try {
                 byte[] data = OverHeadDisplay.getConnection();
