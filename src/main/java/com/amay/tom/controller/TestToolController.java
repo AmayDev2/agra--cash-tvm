@@ -433,11 +433,10 @@ public class TestToolController {
             }
         });
         sendBMP2.setOnAction(e -> {
-            byte[][] cmd = OverHeadDisplay.sentText();
+            byte[][] cmd = OverHeadDisplay.getText3();
             for (byte[] cmds : cmd) {
                 try {
                     CoinModuleInterface.INSTANCE.applyRowCommandWithoutWait(cmds);
-                    Thread.sleep(500);
                 } catch (Exception ex) {
                     log(ex.getMessage());
                 }
