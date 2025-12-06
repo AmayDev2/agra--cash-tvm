@@ -493,6 +493,9 @@ public class TomInitialize implements ITomInitialize {
                 //TODO: Load tvm config
                if(agent.getTomConfigRepository().findAll().size()>0)
                     agent.setTomConfig(TomConfigMapper.entityToModel(agent.getTomConfigRepository().findAll().getFirst()));
+
+                if(agent.getTvmConfigRepository().findAll().size()>0)
+                    agent.setTvmConfig(TvmConfigMapper.entityToModel(agent.getTvmConfigRepository().findAll().getFirst()));
                 ScuDataMapper.setVersion(agent.getMasterConfigInfo());
                 progress += 0.04;
                 this.updateUI(progress, "Version info saved.");

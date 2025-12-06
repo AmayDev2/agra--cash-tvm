@@ -23,6 +23,7 @@ public class TvmConfigMapper {
         dto.setCoinDispenserEnabled(model.isCoinDispenserEnabled());
         dto.setPosEnabled(model.isPosEnabled());
         dto.setUpiEnabled(model.isUpiEnabled());
+        dto.setReceiptPrinterEnabled(model.isReceiptPrinterEnabled());
         return dto;
     }
 
@@ -48,6 +49,7 @@ public class TvmConfigMapper {
         model.setCoinDispenserEnabled(dto.isCoinDispenserEnabled());
         model.setPosEnabled(dto.isPosEnabled());
         model.setUpiEnabled(dto.isUpiEnabled());
+        model.setReceiptPrinterEnabled(dto.isReceiptPrinterEnabled());
         return model;
     }
 
@@ -76,6 +78,7 @@ public class TvmConfigMapper {
         entity.setCoinDispenserEnabled(model.isCoinDispenserEnabled());
         entity.setPosEnabled(model.isPosEnabled());
         entity.setUpiEnabled(model.isUpiEnabled());
+        entity.setReceiptPrinterEnabled(model.isReceiptPrinterEnabled());
         return entity;
     }
 
@@ -101,6 +104,7 @@ public class TvmConfigMapper {
         model.setCoinDispenserEnabled(entity.isCoinDispenserEnabled());
         model.setPosEnabled(entity.isPosEnabled());
         model.setUpiEnabled(entity.isUpiEnabled());
+        model.setReceiptPrinterEnabled(entity.isReceiptPrinterEnabled());
         return model;
     }
 
@@ -129,6 +133,7 @@ public class TvmConfigMapper {
         entity.setCoinDispenserEnabled(dto.isCoinDispenserEnabled());
         entity.setPosEnabled(dto.isPosEnabled());
         entity.setUpiEnabled(dto.isUpiEnabled());
+        entity.setReceiptPrinterEnabled(dto.isReceiptPrinterEnabled());
         return entity;
     }
 
@@ -154,6 +159,7 @@ public class TvmConfigMapper {
         dto.setCoinDispenserEnabled(entity.isCoinDispenserEnabled());
         dto.setPosEnabled(entity.isPosEnabled());
         dto.setUpiEnabled(entity.isUpiEnabled());
+        dto.setReceiptPrinterEnabled(entity.isReceiptPrinterEnabled());
         return dto;
     }
 }

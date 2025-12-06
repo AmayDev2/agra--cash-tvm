@@ -29,15 +29,12 @@ import com.amay.tom.service.userauth.UserAuth;
 import com.amay.tom.utils.helper.Helper;
 import com.amay.tom.utils.time.TimeUtil;
 import com.amay.tvm.backend.entity.AmountSnapShotEntity;
-import com.amay.tvm.backend.entity.CoinAmountEntity;
-import com.amay.tvm.backend.entity.AmountSnapShotEntity;
 import com.amay.tvm.backend.entity.FinanceOperationEntity;
 import com.amay.tvm.backend.enums.ContainerId;
 import com.amay.tvm.backend.enums.DataSyncDestination;
 import com.amay.tvm.backend.enums.FinanceOperation;
 import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.backend.mapper.AmountSnapshotMapper;
-import com.amay.tvm.backend.mapper.CoinAmountMapper;
 import com.amay.tvm.backend.mapper.CoinAmountMapper;
 import com.amay.tvm.backend.mapper.FinanceOperationMapper;
 import com.amay.tvm.backend.mapper.NoteAmountMapper;
@@ -127,7 +124,7 @@ public class ShiftServiceImpl implements ShiftService {
                 //scu push
             if(agent.getPeripheralMonitor().isScu_connected()) {
                 Logger.tag(LoggerTag.APP).debug("Login data pushed to SC");
-                CompletableFuture.runAsync(() -> pushShift(shift,DataSyncDestination.CCU),agent.getThreadPool().getFixedThreadPool());
+                CompletableFuture.runAsync(() -> pushShift(shift,DataSyncDestination.SCU),agent.getThreadPool().getFixedThreadPool());
 //                CompletableFuture.runAsync(() -> agent.getScuService().pushShiftInfo(shift), agent.getThreadPool().getFixedThreadPool());
                 Logger.tag(LoggerTag.APP).debug("SC responded to login data push");
             }
@@ -761,6 +758,7 @@ public class ShiftServiceImpl implements ShiftService {
         try{shiftRepository.shiftPauseResume(ShiftMapper.toDto(shift));
             //notify to scu
             agent.getScuService().pushShiftPause(shift);
+            agent.getCcuService().pushShiftPause(shift);
 
 //            //popup
 //            popupContent = new PopupContent(this);
@@ -783,6 +781,7 @@ public class ShiftServiceImpl implements ShiftService {
             shift.setCurrentStatus(ShiftStatus.ACTIVE.name()).setUpdatedAt(currentTime);
             shiftRepository.shiftPauseResume(ShiftMapper.toDto(shift));
             agent.getScuService().resumeShiftPause(shift);
+            agent.getCcuService().resumeShiftPause(shift);
 
 //            this.agent.setUserPrivilege(userPrivilege);
 //            this.agent.setUserAuth(userAuth);
@@ -840,6 +839,7 @@ public class ShiftServiceImpl implements ShiftService {
 
     @Override
     public void markLastShiftAsCompleted(String shiftId) {
+        updateCashInventory(shiftId);
         LocalDateTime localDateTime= LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
         ShiftDto shiftDto=shiftRepository.findById(shiftId).orElseThrow( ()->new RuntimeException("Shift Not Found"));
                 shiftDto.setShiftId(shiftId)
@@ -867,12 +867,32 @@ public class ShiftServiceImpl implements ShiftService {
         this.agent.getThreadPool().getFixedThreadPool().execute(() -> {
             try {
                 ShiftResponseV1 shiftResponseV1=this.agent.getCcuService().pushShiftEndOnce(shift1);
-                ShiftResponseV1 shiftResponseV2=this.agent.getScuService().pushShiftEndOnce(shift1);
+                if(shiftResponseV1.getResponseMetaData().getErrorCode().equals("200")
+                        || shiftResponseV1.getResponseMetaData().getErrorCode().equals("751")) {
+                    shiftRepository.pushShifts(List.of(shift1.getShiftId()),"ccu");
+                }
+                ShiftResponseV1 shiftResponseV2 = this.agent.getScuService().pushShiftEndOnce(shift1);
+                if(shiftResponseV2.getResponseMetaData().getErrorCode().equals("200")
+                        || shiftResponseV2.getResponseMetaData().getErrorCode().equals("751")) {
+                    shiftRepository.pushShifts(List.of(shift1.getShiftId()),"scu");
+                }
                 Logger.info("Last Shift marked as completed with ID: {} {}", shiftResponseV1,shiftResponseV2);
                 this.agent.getGrpcApiListener().sendAlarm(Alarm.SHIFT_END);
             } catch (Exception e) {
                 Logger.error("Error printing EOS report for last shift: {}", e.getMessage());
             }
+        });
+    }
+
+    public void updateCashInventory(String shiftId){
+        agent.getNoteAmountRepository().findAll().stream().filter(noteAmountEntity
+                -> noteAmountEntity.getContainerId().equals(ContainerId.CB)).forEach(noteAmount -> {
+            agent.getAmountSnapShotRepository().save(NoteAmountMapper.toSnapshot(noteAmount,shiftId));
+
+        });
+
+        agent.getCoinAmountRepository().findAll().forEach(coinAmount -> {
+            agent.getAmountSnapShotRepository().save(CoinAmountMapper.toSnapshot(coinAmount,shiftId));
         });
     }
 

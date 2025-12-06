@@ -7,6 +7,7 @@ import com.amay.tom.model.adjust.AdjustedTicketMapper;
 import com.amay.tom.model.refund.Refund;
 import com.amay.tom.model.session.Shift;
 import com.amay.tom.model.session.ShiftDto;
+import com.amay.tom.model.session.ShiftMapper;
 import com.amay.tom.model.tickets.TicketsDto;
 import com.amay.tom.repository.adjustment.AdjustedTicketRepository;
 import com.amay.tom.repository.refund.RefundTicketRepository;
@@ -16,6 +17,9 @@ import com.amay.tom.repository.tickets.TicketsRepository;
 import com.amay.tom.service.qrService2.push.PushService;
 import com.amay.tvm.backend.entity.AmountSnapShotEntity;
 import com.amay.tvm.backend.entity.FinanceOperationEntity;
+import com.amay.tvm.backend.enums.ContainerId;
+import com.amay.tvm.backend.mapper.CoinAmountMapper;
+import com.amay.tvm.backend.mapper.NoteAmountMapper;
 import com.amay.tvm.backend.service.CashInventoryService;
 import com.amay.tvm.backend.service.FinanceOperationService;
 import lombok.extern.slf4j.Slf4j;
@@ -132,13 +136,17 @@ public class CCUPushService implements PushService {
                     .setReason(dbShift.getReason());
             if(dbShift.getEndTime()!=null){
                 shift.setEndTime(dbShift.getEndTime().toLocalDateTime());
+            }else {
+                shift.setCurrentStatus(ShiftStatus.COMPLETED.name());
+                shiftRepository.markLastShiftAsCompleted(ShiftMapper.toDto(shift));
+                this.updateCashInventory(shift.getShiftId());
             }
 
-            CashInventoryService cashInventoryService = new CashInventoryService(agent.getAmountSnapShotRepository());
+            CashInventoryService cashInventoryService = new CashInventoryService(agent.getAmountSnapShotRepository(),agent.getTvmConfig());
             List<AmountSnapShotEntity> amountSnapShotEntityList = cashInventoryService.getCashInventoryByShiftId(dbShift.getShiftId());
             shift.setAmountSnapShotEntityList(amountSnapShotEntityList);
 
-            FinanceOperationService financeOperationService = new FinanceOperationService(agent.getFinanceOperationRepository());
+            FinanceOperationService financeOperationService = new FinanceOperationService(agent.getFinanceOperationRepository(), agent.getTvmConfig());
             List<FinanceOperationEntity> financeOperationEntityList = financeOperationService.getFinanceOperationEntityLoadUnloadListByShiftId(dbShift.getShiftId());
             shift.setFinanceOperationEntityList(financeOperationEntityList);
 
@@ -264,6 +272,17 @@ public class CCUPushService implements PushService {
 
 
         }
+    }
+    private void updateCashInventory(String shiftId) {
+        agent.getNoteAmountRepository().findAll().stream().filter(noteAmountEntity
+                -> noteAmountEntity.getContainerId().equals(ContainerId.CB)).forEach(noteAmount -> {
+            agent.getAmountSnapShotRepository().save(NoteAmountMapper.toSnapshot(noteAmount,shiftId));
+
+        });
+
+        agent.getCoinAmountRepository().findAll().forEach(coinAmount -> {
+            agent.getAmountSnapShotRepository().save(CoinAmountMapper.toSnapshot(coinAmount,shiftId));
+        });
     }
         // 4- push adjusted, refunded, canceled, replaced on scu
 //        AdjustedTicketRepository adjustedTicketRepository = agent.getAdjustedTicketRepository();

@@ -71,8 +71,8 @@ public class LoginController {
                         new UserDetailsService(
                                 new UserRepositoryImpl(
                                         agent.getConnection()))),new ShiftRepositoryImpl(agent.getConnection()),
-                                            new CashInventoryService(agent.getAmountSnapShotRepository()),
-                                                new FinanceOperationService(agent.getFinanceOperationRepository()));
+                                            new CashInventoryService(agent.getAmountSnapShotRepository(),agent.getTvmConfig()),
+                                                new FinanceOperationService(agent.getFinanceOperationRepository(), agent.getTvmConfig()));
         this.agent.setShiftService(this.shiftService);
 
         //TODO> Pass shiftService to maintenance

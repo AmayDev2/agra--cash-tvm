@@ -29,4 +29,5 @@ public class TvmConfig {
     private boolean coinDispenserEnabled;
     private boolean posEnabled;
     private boolean upiEnabled;
+    private boolean receiptPrinterEnabled;
 }

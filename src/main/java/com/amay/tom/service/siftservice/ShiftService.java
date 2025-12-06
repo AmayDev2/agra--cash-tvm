@@ -24,4 +24,5 @@ public FXMLLoader startShift(String username, String password) throws Exception;
  void printFinanceReports(String shiftId);
 // public void printEOShift(String shiftId);
  void printEOSReport(String shiftId);
+ void updateCashInventory(String shiftId);
 }

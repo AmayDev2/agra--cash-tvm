@@ -8,6 +8,7 @@ import com.amay.tom.model.adjust.AdjustedTicketMapper;
 import com.amay.tom.model.refund.Refund;
 import com.amay.tom.model.session.Shift;
 import com.amay.tom.model.session.ShiftDto;
+import com.amay.tom.model.session.ShiftMapper;
 import com.amay.tom.model.tickets.TicketsDto;
 import com.amay.tom.repository.adjustment.AdjustedTicketRepository;
 import com.amay.tom.repository.refund.RefundTicketRepository;
@@ -17,6 +18,9 @@ import com.amay.tom.repository.tickets.TicketsRepository;
 import com.amay.tom.service.qrService2.push.PushService;
 import com.amay.tvm.backend.entity.AmountSnapShotEntity;
 import com.amay.tvm.backend.entity.FinanceOperationEntity;
+import com.amay.tvm.backend.enums.ContainerId;
+import com.amay.tvm.backend.mapper.CoinAmountMapper;
+import com.amay.tvm.backend.mapper.NoteAmountMapper;
 import com.amay.tvm.backend.service.CashInventoryService;
 import com.amay.tvm.backend.service.FinanceOperationService;
 import lombok.extern.slf4j.Slf4j;
@@ -130,21 +134,24 @@ public class SCUPushService implements PushService {
                     .setCurrentStatus(dbShift.getCurrentStatus())
                     .setReason(dbShift.getReason());
 
-            if(dbShift.getEndTime()!=null)
+            if(dbShift.getEndTime()!=null) {
                 shift.setEndTime(dbShift.getEndTime().toLocalDateTime());
-
-            CashInventoryService cashInventoryService = new CashInventoryService(agent.getAmountSnapShotRepository());
-            List<AmountSnapShotEntity> amountSnapShotEntityList = cashInventoryService.getCashInventoryByShiftId(dbShift.getShiftId());
-            shift.setAmountSnapShotEntityList(amountSnapShotEntityList);
-
-            FinanceOperationService financeOperationService = new FinanceOperationService(agent.getFinanceOperationRepository());
-            List<FinanceOperationEntity> financeOperationEntityList = financeOperationService.getFinanceOperationEntityLoadUnloadListByShiftId(dbShift.getShiftId());
-            shift.setFinanceOperationEntityList(financeOperationEntityList);
+            }
 
             if (agent.getShift() == null || dbShift.getEndTime()!=null) {
-                if(dbShift.getEndTime()==null)
+                if(dbShift.getEndTime()==null) {
                     shift.setEndTime(LocalDateTime.now());
-                shift.setCurrentStatus(ShiftStatus.COMPLETED.name());
+                    shift.setCurrentStatus(ShiftStatus.COMPLETED.name());
+                    shiftRepository.markLastShiftAsCompleted(ShiftMapper.toDto(shift));
+                    this.updateCashInventory(shift.getShiftId());
+                }
+                CashInventoryService cashInventoryService = new CashInventoryService(agent.getAmountSnapShotRepository(),agent.getTvmConfig());
+                List<AmountSnapShotEntity> amountSnapShotEntityList = cashInventoryService.getCashInventoryByShiftId(dbShift.getShiftId());
+                shift.setAmountSnapShotEntityList(amountSnapShotEntityList);
+
+                FinanceOperationService financeOperationService = new FinanceOperationService(agent.getFinanceOperationRepository(), agent.getTvmConfig());
+                List<FinanceOperationEntity> financeOperationEntityList = financeOperationService.getFinanceOperationEntityLoadUnloadListByShiftId(dbShift.getShiftId());
+                shift.setFinanceOperationEntityList(financeOperationEntityList);
 //            if(agent.getPeripheralMonitor().isCcu_connected()) CompletableFuture.runAsync(() -> agent.getCcuService().pushShiftInfo(shift),agent.getThreadPool().getFixedThreadPool());
                 futures.add(CompletableFuture.runAsync(() -> {
                     try {
@@ -189,6 +196,18 @@ public class SCUPushService implements PushService {
                 }, agent.getThreadPool().getFixedThreadPool()));
             }
         }
+    }
+
+    private void updateCashInventory(String shiftId) {
+        agent.getNoteAmountRepository().findAll().stream().filter(noteAmountEntity
+                -> noteAmountEntity.getContainerId().equals(ContainerId.CB)).forEach(noteAmount -> {
+            agent.getAmountSnapShotRepository().save(NoteAmountMapper.toSnapshot(noteAmount,shiftId));
+
+        });
+
+        agent.getCoinAmountRepository().findAll().forEach(coinAmount -> {
+            agent.getAmountSnapShotRepository().save(CoinAmountMapper.toSnapshot(coinAmount,shiftId));
+        });
     }
 
     private void pushTickets(TicketsRepository ticketsRepository, List<CompletableFuture<Void>> futures, List<String> listOfTickets){

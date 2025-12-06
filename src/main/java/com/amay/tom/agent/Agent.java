@@ -13,6 +13,7 @@ import com.amay.tom.model.equipment.entity.EquipmentPrivilege;
 import com.amay.tom.model.product.Product;
 import com.amay.tom.model.session.Shift;
 import com.amay.tom.model.tomConfig.TomConfig;
+import com.amay.tom.model.tvmConfig.TvmConfig;
 import com.amay.tom.model.user.entity.UserPrivilege;
 import com.amay.tom.model.version.MasterConfigInfo;
 import com.amay.tom.repository.Replacement.ReplacementTicketRepository;
@@ -97,6 +98,7 @@ public class Agent {
     private FareTableRepository fareTableRepository;
     private TomConfigRepository tomConfigRepository;
     private TvmConfigRepository tvmConfigRepository;
+    private TvmConfig tvmConfig;
     private NoteAmountRepository noteAmountRepository;
     private FinanceOperationRepository financeOperationRepository;
     private ShiftRepository shiftRepository;
@@ -108,7 +110,6 @@ public class Agent {
 
 //    private Products products;
     private List<Product> products;
-
 
 
 //    public Agent(SystemConfig systemConfig, EquipmentPrivilegeDto equipmentPrivilegeDto) {
