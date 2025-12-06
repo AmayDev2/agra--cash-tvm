@@ -210,6 +210,28 @@ public class CoinModuleService {
 		return in;
 	}
 
+    public byte[] sendCommandWithoutWait(byte[] bytes ) throws Exception{
+        Logger.tag(LoggerTag.BUSS).info(
+                "TX :"+ HexUtil.toHex(bytes)
+        );
+        write(("TX : "+ HexUtil.toHex(bytes)));
+        comm.write(bytes);
+        byte[] in;
+        try {
+            in = comm.readUntilETXIgnoreDirtyByte(ProtocolConstants.READ_TIMEOUT_100_MS);
+
+        } catch (Exception ex) {
+            Logger.tag(LoggerTag.BUSS).info("RX: <no frame> (" + ex.getMessage() + ")");
+            throw ex;
+        }
+        Logger.tag(LoggerTag.BUSS).info(
+                "RX :"+ HexUtil.toHex(in)
+        );
+
+        write(("RX : "+ HexUtil.toHex(in)));
+        return in;
+    }
+
 	public ModuleResponse controlEscrowCommand(byte escrow, byte diverter) throws Exception{
 		byte seq = sequenceNumberManager.next();
 		ProtocolFrame frame = CommandBuilder.controlEscrowCommand(escrow,diverter, seq);

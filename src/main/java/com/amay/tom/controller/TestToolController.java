@@ -13,6 +13,9 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Objects;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -23,7 +26,8 @@ public class TestToolController {
 
 
     @FXML private Button clear;
-    @FXML private Button sendBMP;
+    @FXML private Button sendBMP1;
+    @FXML private Button sendBMP2;
     @FXML private Button connection;
     @FXML private TextField commands;
     @FXML private Button applyCommand;
@@ -417,12 +421,23 @@ public class TestToolController {
 
         });
 
-        sendBMP.setOnAction(e -> {
-            byte[][] cmds = OverHeadDisplay.getSendBMPs();
+        sendBMP1.setOnAction(e -> {
+            byte[][] cmds = OverHeadDisplay.getSendBMP1();
 
             for (byte[] cmd : cmds) {
                 try {
-                    CoinModuleInterface.INSTANCE.applyRowCommand(cmd);
+                    CoinModuleInterface.INSTANCE.applyRowCommandWithoutWait(cmd);
+                } catch (Exception ex) {
+                    log(ex.getMessage());
+                }
+            }
+        });
+        sendBMP2.setOnAction(e -> {
+            byte[][] cmd = OverHeadDisplay.sentText();
+            for (byte[] cmds : cmd) {
+                try {
+                    CoinModuleInterface.INSTANCE.applyRowCommandWithoutWait(cmds);
+                    Thread.sleep(500);
                 } catch (Exception ex) {
                     log(ex.getMessage());
                 }

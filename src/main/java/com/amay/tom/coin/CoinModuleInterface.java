@@ -301,6 +301,11 @@ public enum CoinModuleInterface {
 	public void setlistener(DataTransfer listener) {
 		service.setListener(listener);
 	}
+
+    public byte[] applyRowCommandWithoutWait(byte[] data) throws Exception {
+        return service.sendCommandWithoutWait(data);
+
+    }
 }
 
 

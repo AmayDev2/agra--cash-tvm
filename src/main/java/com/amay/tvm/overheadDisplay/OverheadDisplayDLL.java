@@ -7,7 +7,7 @@ import com.sun.jna.win32.W32APIOptions;
 public interface OverheadDisplayDLL extends StdCallLibrary {
 
     OverheadDisplayDLL INSTANCE = Native.load(
-            "EQ2008_Dll.dll",
+            "EQ2008_Dll",
             OverheadDisplayDLL.class,
             W32APIOptions.DEFAULT_OPTIONS  // ANSI, StdCall
     );

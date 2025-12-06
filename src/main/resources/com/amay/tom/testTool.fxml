@@ -171,7 +171,8 @@
 <!--                            </HBox>-->
                             <HBox spacing="10">
                                 <Button fx:id="connection" prefHeight="30" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-background-radius: 4;" text="Connection" />
-                                <Button fx:id="sendBMP" prefHeight="30" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-background-radius: 4;" text="Send BMP" />
+                                <Button fx:id="sendBMP1" prefHeight="30" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-background-radius: 4;" text="No Change mode" />
+                                <Button fx:id="sendBMP2" prefHeight="30" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-background-radius: 4;" text="In Service" />
                                 <Button fx:id="clear" prefHeight="30" style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-background-radius: 4;" text="Clear" />
                             </HBox>
                         </VBox>
