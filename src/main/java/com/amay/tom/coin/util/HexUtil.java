@@ -25,6 +25,25 @@ public final class HexUtil {
         return input.replaceAll("[^a-zA-Z0-9]", "");
     }
 
+    public static byte[] hexStringToBytes(String hex) {
+        hex = hex.trim();
+
+        // Must be even length
+        if (hex.length() % 2 != 0) {
+            throw new IllegalArgumentException("Invalid hex string length");
+        }
+
+        int length = hex.length() / 2;
+        byte[] result = new byte[length];
+
+        for (int i = 0; i < length; i++) {
+            String byteStr = hex.substring(i * 2, i * 2 + 2);
+            result[i] = (byte) Integer.parseInt(byteStr, 16);
+        }
+
+        return result;
+    }
+
 }
 
 

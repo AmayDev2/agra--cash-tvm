@@ -29,6 +29,7 @@ public class TestToolController {
     @FXML private Button clear;
     @FXML private Button sendBMP1;
     @FXML private Button sendBMP2;
+    @FXML private Button sendBMP3;
     @FXML private Button connection;
     @FXML private TextField commands;
     @FXML private Button applyCommand;
@@ -435,6 +436,18 @@ public class TestToolController {
         });
         sendBMP2.setOnAction(e -> {
             byte[][] cmd = OverHeadDisplay.getSendBMP2();
+            for (byte[] cmds : cmd) {
+                try {
+                    CoinModuleInterface.INSTANCE.applyRowCommandWithoutWait(cmds);
+
+
+                } catch (Exception ex) {
+                    log(ex.getMessage());
+                }
+            }
+        });
+        sendBMP3.setOnAction(e -> {
+            byte[][] cmd = OverHeadDisplay.outOfService();
             for (byte[] cmds : cmd) {
                 try {
                     CoinModuleInterface.INSTANCE.applyRowCommandWithoutWait(cmds);
