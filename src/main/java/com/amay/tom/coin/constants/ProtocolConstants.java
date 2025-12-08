@@ -40,7 +40,7 @@ public final class ProtocolConstants {
 	public static final byte RESPONSE_PROGRESS = (byte)0xAA; // placeholder per spec: progress notification
 
 	// Timeouts (milliseconds)
-    public static final int READ_TIMEOUT_100_MS = 10;
+    public static final int READ_TIMEOUT_100_MS = 100;
 	public static final int DEFAULT_READ_TIMEOUT_MS = 5000;
 	public static final int LONG_OPERATION_PROGRESS_MS = 350;
 	public static final int LONG_OPERATION_TIMEOUT_MS = 60_000;

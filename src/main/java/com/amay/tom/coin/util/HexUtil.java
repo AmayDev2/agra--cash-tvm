@@ -19,6 +19,12 @@ public final class HexUtil {
 		}
 		return sb.toString();
 	}
+
+    public static String cleanHex(String input) {
+        if (input == null) return "";
+        return input.replaceAll("[^a-zA-Z0-9]", "");
+    }
+
 }
 
 

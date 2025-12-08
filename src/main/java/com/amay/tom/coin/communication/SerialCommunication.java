@@ -51,7 +51,11 @@ public class SerialCommunication implements SerialCommunicationInterface {
 		applySystemOverrides();
 		port = SerialPort.getCommPort(portName);
 		port.setComPortParameters(baudRate, dataBits, stopBits, parity);
+        port.flushIOBuffers();
+
 		port.setComPortTimeouts(SerialPort.TIMEOUT_READ_BLOCKING, 2000, 0);
+        port.clearDTR();
+        port.clearRTS();
 		if (!port.openPort()) {
 			throw new CommunicationException("Failed to open port: " + portName);
 		}
@@ -87,6 +91,7 @@ public class SerialCommunication implements SerialCommunicationInterface {
 		if (!isConnected()) throw new CommunicationException("Port not open");
 		// No purge constants available in all jSerialComm versions; skip purge here
 		int written = port.writeBytes(data, data.length);
+        port.flushIOBuffers();
 		//System.out.println("PORT WRITE: " + written + " bytes");
 		if (written != data.length) throw new CommunicationException("Short write: " + written + "/" + data.length);
 	}

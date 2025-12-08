@@ -6,6 +6,7 @@ import com.amay.tom.coin.enums.Escrow;
 import com.amay.tom.coin.enums.ModuleTestCode;
 import com.amay.tom.coin.enums.Range;
 import com.amay.tom.coin.model.CoinPollRequest;
+import com.amay.tom.coin.util.HexUtil;
 import com.amay.tom.coin.util.OverHeadDisplay;
 import com.amay.tom.config.DataTransfer;
 import com.fazecast.jSerialComm.SerialPort;
@@ -159,7 +160,7 @@ public class TestToolController {
 
         applyCommand.setOnAction(e -> {
             try {
-                byte[] data = hexStringToBytes(commands.getText());
+                byte[] data = hexStringToBytes(HexUtil.cleanHex(commands.getText()));
                 CoinModuleInterface.INSTANCE.applyRowCommand(data);
             } catch (Exception ex) {
                 log(ex.getMessage());
@@ -433,11 +434,12 @@ public class TestToolController {
             }
         });
         sendBMP2.setOnAction(e -> {
-            byte[][] cmd = OverHeadDisplay.sentText();
+            byte[][] cmd = OverHeadDisplay.getSendBMP2();
             for (byte[] cmds : cmd) {
                 try {
                     CoinModuleInterface.INSTANCE.applyRowCommandWithoutWait(cmds);
-                    Thread.sleep(500);
+
+
                 } catch (Exception ex) {
                     log(ex.getMessage());
                 }
