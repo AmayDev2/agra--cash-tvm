@@ -35,7 +35,7 @@
 
         <FlowPane fx:id="flowPaneInsertedNotes" hgap="10" prefHeight="262.0" prefWidth="640.0" styleClass="maintenance-label-header" GridPane.rowIndex="1" />
 
-        <Button mnemonicParsing="false" onAction="#onBackBnr" prefHeight="39.0" prefWidth="150.0" styleClass="backButton" text="Back" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.rowSpan="2147483647">
+        <Button fx:id="back" mnemonicParsing="false" onAction="#onBackBnr" prefHeight="39.0" prefWidth="150.0" styleClass="backButton" text="Back" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.rowSpan="2147483647">
             <GridPane.margin>
                 <Insets />
             </GridPane.margin>
@@ -50,7 +50,7 @@
                 <RowConstraints minHeight="10.0" percentHeight="35.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Button minHeight="39.0" mnemonicParsing="false" onAction="#onBnrLoad" prefHeight="39.0" prefWidth="150.0" styleClass="navigatorButton" text="BNR Load" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                <Button fx:id="bnrLoad" minHeight="39.0" mnemonicParsing="false" onAction="#onBnrLoad" prefHeight="39.0" prefWidth="150.0" styleClass="navigatorButton" text="BNR Load" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
                 <Label styleClass="maintenance-label-header" text="Allowed Count :" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
             </children>
         </GridPane>

@@ -13,10 +13,13 @@ import com.amay.tvm.backend.mapper.NoteAmountMapper;
 import com.amay.tvm.backend.repository.FinanceOperationRepository;
 import com.amay.tvm.bnr.BNRIntegration;
 import com.amay.tvm.coin.model.HaveAmountObject;
+import com.amay.tvm.util.Page.FocusUtil;
 import com.jxfs.events.JxfsException;
 import com.mei.bnr.exception.BnrException;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import org.tinylog.Logger;
 
@@ -25,6 +28,15 @@ public class MoneyManagementBnrUnloadController  {
     private final SceneManager sceneManager;
     private final ListenBnrEvent listenBnrEvent;
     @FXML private Label totalAmount;
+
+    @FXML private Button btnUnload;
+    @FXML private Button btnR1;
+    @FXML private Button btnR2;
+    @FXML private Button btnR3;
+    @FXML private Button btnR4;
+    @FXML private Button btnBack;
+
+
     private HaveAmountObject haveAmountObject=null;
     public MoneyManagementBnrUnloadController(Agent agent, SceneManager sceneManager) {
         this.sceneManager=sceneManager;
@@ -45,9 +57,19 @@ public class MoneyManagementBnrUnloadController  {
     }
 
     @FXML void initialize() {
+        Platform.runLater(() -> btnUnload.requestFocus());
+        FocusUtil.configureTabOrder(
+                btnUnload,
+                btnR1,
+                btnR2,
+                btnR3,
+                btnR4,
+                btnBack
+        );
         agent.getNoteAmountRepository().findAll().forEach(System.out::println);
         totalAmount.setText(totalAmount.getText().split(":")[0]+(haveAmountObject.getTotalAmount()));
         agent.getNoteAmountRepository().findAll().stream().filter(x->x.getContainerId().equals("CB")).toList();
+
     }
 
     public void onBnrUnLoad(ActionEvent actionEvent) throws JxfsException {

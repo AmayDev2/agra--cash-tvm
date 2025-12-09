@@ -6,6 +6,7 @@ import com.amay.tvm.backend.enums.LoggerTag;
 import com.amay.tvm.bnr.BNRIntegration;
 import com.amay.tvm.bnr.BNRListener;
 import com.amay.tvm.bnr.BNRListenerLoad;
+import com.amay.tvm.util.Page.FocusUtil;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -34,6 +35,9 @@ public class MoneyManagementBnrLoadController{
     @FXML private  Button cancel;
     @FXML private  Button rollback;
     @FXML private  Button commit;
+    @FXML private Button bnrLoad;
+    @FXML private Button back;
+
 
     public MoneyManagementBnrLoadController(Agent agent, SceneManager sceneManager) {
         this.agent = agent;
@@ -43,12 +47,24 @@ public class MoneyManagementBnrLoadController{
 
     @FXML
     private void initialize(){
+        Platform.runLater(() -> rollback.requestFocus());
+
+        // Create circular tab sequence
+        FocusUtil.configureTabOrder(
+                bnrLoad,
+                rollback,
+                commit,
+                cancel,
+                back// this is your Stop button (fx:id = cancel)
+
+        );
 //        agent.getThreadPool().getScheduler().scheduleAtFixedRate(() -> {
 //            Platform.runLater(() -> setInsertedAmount(new Random().nextInt(100)));
 //            if (new Random().nextInt(100)<50) {
 //                Platform.runLater(this::setZero); // Update UI safely
 //            }
 //        }, 0, 3, TimeUnit.SECONDS);
+
     }
 
 

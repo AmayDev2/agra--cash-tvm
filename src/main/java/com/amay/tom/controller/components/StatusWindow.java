@@ -8,6 +8,7 @@ import com.amay.tom.maintenance.service.component.model.StatusWindowModel;
 import com.amay.tom.service.print.impl.ImplPrintTicket;
 import com.amay.tom.threadpool.ThreadPool;
 import com.amay.tom.utils.env.EnvFile;
+import com.amay.tvm.util.Page.FocusUtil;
 import com.fazecast.jSerialComm.SerialPort;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -59,6 +60,14 @@ public class StatusWindow {
     }
 
     public void initialize() {
+        Platform.runLater(() -> recheckButton.requestFocus());
+
+        FocusUtil.configureTabOrder(
+                recheckButton,
+                testButton,
+                cancelButton
+        );
+
         statusLabel.setText(statusWindowModel.isConnected()?"Connected":"Disconnected");
         statusLabel.setStyle(statusWindowModel.isConnected()?"-fx-text-fill: green;":"-fx-text-fill: red;");
         recheckButton.setText(statusWindowModel.getRelativeOperation());

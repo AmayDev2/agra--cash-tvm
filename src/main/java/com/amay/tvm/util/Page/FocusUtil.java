@@ -42,4 +42,43 @@ public class FocusUtil {
         }
         return false;
     }
+    public static void configureTabOrder(Button... buttons) {
+        for (int i = 0; i < buttons.length; i++) {
+            Button current = buttons[i];
+
+            current.addEventFilter(KeyEvent.KEY_PRESSED, event -> {
+                if (event.getCode() == KeyCode.TAB) {
+                    event.consume();
+
+                    Button next = getNextVisibleButton(current, buttons);
+                    Platform.runLater(next::requestFocus);
+                }
+            });
+        }
+    }
+
+    private static Button getNextVisibleButton(Button current, Button[] buttons) {
+        int index = -1;
+
+        for (int i = 0; i < buttons.length; i++) {
+            if (buttons[i] == current) {
+                index = i;
+                break;
+            }
+        }
+
+        for (int i = 1; i <= buttons.length; i++) {
+            Button next = buttons[(index + i) % buttons.length];
+            if (next.isVisible() && !next.isDisabled()) {
+                return next;
+            }
+        }
+
+        // fallback
+        return current;
+    }
+
+
+
+
 }

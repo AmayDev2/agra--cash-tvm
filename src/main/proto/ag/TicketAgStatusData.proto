@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.amaytechnosystems";
+option java_outer_classname = "AGStatusObjectV1";
+
+
+import "meta/RequestMetaData.proto";
+import "meta/ResponseMetaData.proto";
+import "object/BaseObject.proto";
+import "enum/Enums.proto";
+import "google/protobuf/timestamp.proto";
+
+package com.proto.ag.object;
+
+message TicketStatusV1 {
+  string ticketId = 1;
+  com.proto.enum.TicketOperation operation =2;
+  bool processTrans = 3;
+  string time=4;
+  baseobject.AEquipment equipment=5;
+  com.proto.enum.TicketGenerationType generationType = 6;
+  com.proto.baseobject.ATicket ticketData = 7; //In case of offline ticket
+}
+
+message AGTicketRequestV1 {
+  TicketStatusV1 ticketData = 1;
+  meta.reqmetadata.RequestMetaData requestMetaData = 2;
+}
+
+message AGTicketResponseV1 {
+  bool isAllowed=1;
+  meta.respmetadata.ResponseMetaData responseMetaData = 2;
+  LiveTicketData ticketData = 3;
+}
+
+message AGBulkDataRequest {
+  repeated TicketStatusV1 ticketList = 1;
+  meta.reqmetadata.RequestMetaData requestMetaData = 2;
+}
+
+message LiveTicketData{
+  string ticketId = 1;
+  string productId = 2;
+  bool isAdjusted = 5;
+  bool isRefunded = 6;
+  bool isReplaced = 7;
+  bool isCanceled = 8;
+  baseobject.ATicketHistory history = 9;
+}

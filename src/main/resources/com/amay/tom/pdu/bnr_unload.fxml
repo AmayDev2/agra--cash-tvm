@@ -33,17 +33,17 @@
          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
 
-        <Button mnemonicParsing="false" onAction="#onR4" styleClass="navigatorButton" text="R4(100)" GridPane.halignment="CENTER" />
-        <Button mnemonicParsing="false" onAction="#onR3" styleClass="navigatorButton" text="R3(50)" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-        <Button mnemonicParsing="false" onAction="#onR2" styleClass="navigatorButton" text="R2(10)" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-        <Button mnemonicParsing="false" onAction="#onR1" styleClass="navigatorButton" text="R1(20)" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+        <Button fx:id="btnR4"  mnemonicParsing="false" onAction="#onR4" styleClass="navigatorButton" text="R4(100)" GridPane.halignment="CENTER" />
+        <Button fx:id="btnR3" mnemonicParsing="false" onAction="#onR3" styleClass="navigatorButton" text="R3(50)" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+        <Button fx:id="btnR2" mnemonicParsing="false" onAction="#onR2" styleClass="navigatorButton" text="R2(10)" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+        <Button fx:id="btnR1"  mnemonicParsing="false" onAction="#onR1" styleClass="navigatorButton" text="R1(20)" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
     </GridPane>
 
     <!-- Placeholder FlowPane -->
     <FlowPane prefHeight="200.0" prefWidth="200.0" styleClass="maintenance-label-header" GridPane.rowIndex="1" />
 
     <!-- Back Button -->
-    <Button mnemonicParsing="false" onAction="#onBackBnr" prefHeight="39.0" prefWidth="150.0" styleClass="backButton" text="Back" GridPane.columnSpan="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+    <Button fx:id="btnBack" mnemonicParsing="false" onAction="#onBackBnr" prefHeight="39.0" prefWidth="150.0" styleClass="backButton" text="Back" GridPane.columnSpan="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
 
        <!-- Bottom GridPane: Empty Cashbox and Last Ejected -->
     <GridPane>
@@ -55,7 +55,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
 
-           <Button onAction="#onBnrUnLoad" prefHeight="39.0" prefWidth="194.0" text="Empty Cashbox" visible="false" GridPane.halignment="CENTER" />
+           <Button fx:id="btnUnload" onAction="#onBnrUnLoad" prefHeight="39.0" prefWidth="194.0" text="Empty Cashbox" visible="false" GridPane.halignment="CENTER" />
         <Label fx:id="totalAmount" styleClass="maintenance-label-header" text="RECYCLERS AMOUNT : " GridPane.halignment="CENTER" GridPane.rowIndex="1" />
     </GridPane>
 

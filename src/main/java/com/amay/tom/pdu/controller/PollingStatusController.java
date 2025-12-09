@@ -6,6 +6,7 @@ import com.amay.tom.pdu.controller.service.SceneManager;
 import com.amay.tvm.coin.CoinModuleInterface;
 import com.amay.tvm.coin.model.PollingStatusResponse;
 import com.amay.tvm.util.Page.FocusUtil;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -32,7 +33,8 @@ public class PollingStatusController {
     @FXML
     public void initialize() {
         refreshButton.setOnAction(e -> loadStatus());
-        FocusUtil.configureFocus(backButton,refreshButton);
+        Platform.runLater(() -> backButton.requestFocus());
+        FocusUtil.configureTabOrder(backButton,refreshButton);
 //        loadStatus();
     }
 

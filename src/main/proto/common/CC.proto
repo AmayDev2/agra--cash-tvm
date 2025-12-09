@@ -1,0 +1,28 @@
+syntax = "proto3";
+package org.monitoring.proto;
+
+option java_package = "org.network.monitorandcontrol.ccu_console";
+option java_multiple_files = true;
+
+import "common/Enums.proto";
+import "common/SC.proto";
+
+import "google/protobuf/any.proto";
+
+
+/*
+    ConsoleProtocol :- ConsoleProtocol will be used to exchange data between SCU Console and Monitoring Server
+
+    console_id :- ID sent by the console to the monitoring server
+    status_code :- Status code for the operation
+    error_msg :- error message for the operation
+    command_data :- Command Data will be sent from SCU Console to the Monitoring Server
+*/
+message CentralConsoleProtocol{
+  string console_id = 1;
+  int32 status_code = 2;
+  string error_msg = 3;
+  StreamData stream_data = 4;
+  EquipmentType equipment_type = 5;
+  repeated string connectedList = 6;
+}

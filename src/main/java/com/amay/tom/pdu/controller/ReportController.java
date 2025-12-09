@@ -17,6 +17,7 @@ import com.amay.tvm.backend.mapper.NoteAmountMapper;
 import com.amay.tvm.coin.CoinModuleInterface;
 import com.amay.tvm.coin.service.HoppersRegistry;
 import com.amay.tvm.util.Page.FocusUtil;
+import javafx.application.Platform;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -40,7 +41,13 @@ public class ReportController {
     @FXML public TableColumn<ShiftManagementDTO, String> endTimeColumn;
     @FXML public TableColumn<ShiftManagementDTO, String> operatorIdColumn;
     @FXML public TableColumn<ShiftManagementDTO, Boolean> selectColumn;
+    @FXML private Button printButton;
     @FXML private Button eos;
+    @FXML private Button balanceQuery;
+
+
+
+
     private static int N = 10;
 
     public ReportController(Agent agent, SceneManager sceneManager) {
@@ -50,11 +57,18 @@ public class ReportController {
 
     @FXML
     void initialize() {
+        Platform.runLater(() -> printButton.requestFocus());
+        FocusUtil.configureTabOrder(
+                printButton,
+                eos,
+                balanceQuery,
+                backbutton
+        );
+
+        ;
         try {
             Logger.tag(LoggerTag.APP).info(agent.getShift().getShiftId());
-        }catch (Exception e){
-            eos.setDisable(true);
-        }
+
 
         reportTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
@@ -96,6 +110,9 @@ public class ReportController {
         addLastNShifts(N);
         shiftService=agent.getShiftService();
         FocusUtil.configureFocus(reportTable,backbutton);
+        }catch (Exception e){
+            eos.setDisable(true);
+        }
     }
 
     private void addLastNShifts(int n) {

@@ -53,7 +53,7 @@ public class MaintenanceController {
     @FXML
     private void initialize() {
         UserPrivilege privilege=agent.getUserPrivilege();
-        moneyManagementButton.setDisable(!(privilege.isCoinRefill() || privilege.isCoinDumping() && !privilege.isBnrCashAdd()));
+//        moneyManagementButton.setDisable(!(privilege.isCoinRefill() || privilege.isCoinDumping() && !privilege.isBnrCashAdd()));
         FocusUtil.configureFocus(systemInfo,logout);
     }
 

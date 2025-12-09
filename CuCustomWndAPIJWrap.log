@@ -14878,3 +14878,1504 @@
 2025-12-04 18-15-57.0112[EnumUSBDevices]Begin
 2025-12-04 18-15-57.0124[EnumUSBDevices]Found 0 USB Devices
 2025-12-04 18-15-57.0124[EnumUSBDevices]End
+2025-12-06 17-17-52.0351[]*****************************************
+2025-12-06 17-17-52.0352[]DLL Log Initialize. Verbosity: 6
+2025-12-06 17-17-52.0352[]*****************************************
+2025-12-06 17-17-52.0353[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-06 17-17-52.0354[]DLL Version: 1.07
+2025-12-06 17-17-52.0354[InitLibrary]Begin
+2025-12-06 17-17-52.0380[InitLibrary]Library SignID:00000101
+2025-12-06 17-17-52.0381[InitLibrary]Current SignID:00000101
+2025-12-06 17-17-52.0382[InitLibrary]End
+2025-12-06 17-17-52.0382[GetAPIVersionHwLibrary]Begin
+2025-12-06 17-17-52.0384[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-06 17-17-52.0385[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-06 17-17-52.0385[GetAPIVersionHwLibrary]End
+2025-12-06 17-17-52.0386[EnumUSBDevices]Begin
+2025-12-06 17-17-52.0391[EnumUSBDevices]Found 0 USB Devices
+2025-12-06 17-17-52.0392[EnumUSBDevices]End
+2025-12-06 17-32-00.0539[]*****************************************
+2025-12-06 17-32-00.0541[]DLL Log Initialize. Verbosity: 6
+2025-12-06 17-32-00.0543[]*****************************************
+2025-12-06 17-32-00.0543[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-06 17-32-00.0544[]DLL Version: 1.07
+2025-12-06 17-32-00.0545[InitLibrary]Begin
+2025-12-06 17-32-00.0587[InitLibrary]Library SignID:00000101
+2025-12-06 17-32-00.0587[InitLibrary]Current SignID:00000101
+2025-12-06 17-32-00.0588[InitLibrary]End
+2025-12-06 17-32-00.0588[GetAPIVersionHwLibrary]Begin
+2025-12-06 17-32-00.0591[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-06 17-32-00.0591[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-06 17-32-00.0592[GetAPIVersionHwLibrary]End
+2025-12-06 17-32-00.0592[EnumUSBDevices]Begin
+2025-12-06 17-32-00.0598[EnumUSBDevices]Found 0 USB Devices
+2025-12-06 17-32-00.0599[EnumUSBDevices]End
+2025-12-06 17-38-29.0719[]*****************************************
+2025-12-06 17-38-29.0721[]DLL Log Initialize. Verbosity: 6
+2025-12-06 17-38-29.0722[]*****************************************
+2025-12-06 17-38-29.0722[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-06 17-38-29.0723[]DLL Version: 1.07
+2025-12-06 17-38-29.0723[InitLibrary]Begin
+2025-12-06 17-38-29.0746[InitLibrary]Library SignID:00000101
+2025-12-06 17-38-29.0747[InitLibrary]Current SignID:00000101
+2025-12-06 17-38-29.0747[InitLibrary]End
+2025-12-06 17-38-29.0748[GetAPIVersionHwLibrary]Begin
+2025-12-06 17-38-29.0750[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-06 17-38-29.0750[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-06 17-38-29.0751[GetAPIVersionHwLibrary]End
+2025-12-06 17-38-29.0751[EnumUSBDevices]Begin
+2025-12-06 17-38-29.0757[EnumUSBDevices]Found 0 USB Devices
+2025-12-06 17-38-29.0757[EnumUSBDevices]End
+2025-12-06 17-39-47.0356[]*****************************************
+2025-12-06 17-39-47.0358[]DLL Log Initialize. Verbosity: 6
+2025-12-06 17-39-47.0358[]*****************************************
+2025-12-06 17-39-47.0359[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-06 17-39-47.0360[]DLL Version: 1.07
+2025-12-06 17-39-47.0362[InitLibrary]Begin
+2025-12-06 17-39-47.0385[InitLibrary]Library SignID:00000101
+2025-12-06 17-39-47.0386[InitLibrary]Current SignID:00000101
+2025-12-06 17-39-47.0386[InitLibrary]End
+2025-12-06 17-39-47.0387[GetAPIVersionHwLibrary]Begin
+2025-12-06 17-39-47.0389[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-06 17-39-47.0390[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-06 17-39-47.0390[GetAPIVersionHwLibrary]End
+2025-12-06 17-39-47.0390[EnumUSBDevices]Begin
+2025-12-06 17-39-47.0398[EnumUSBDevices]Found 0 USB Devices
+2025-12-06 17-39-47.0399[EnumUSBDevices]End
+2025-12-06 17-41-50.0551[]*****************************************
+2025-12-06 17-41-50.0553[]DLL Log Initialize. Verbosity: 6
+2025-12-06 17-41-50.0555[]*****************************************
+2025-12-06 17-41-50.0556[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-06 17-41-50.0556[]DLL Version: 1.07
+2025-12-06 17-41-50.0557[InitLibrary]Begin
+2025-12-06 17-41-50.0581[InitLibrary]Library SignID:00000101
+2025-12-06 17-41-50.0581[InitLibrary]Current SignID:00000101
+2025-12-06 17-41-50.0582[InitLibrary]End
+2025-12-06 17-41-50.0582[GetAPIVersionHwLibrary]Begin
+2025-12-06 17-41-50.0584[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-06 17-41-50.0585[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-06 17-41-50.0585[GetAPIVersionHwLibrary]End
+2025-12-06 17-41-50.0587[EnumUSBDevices]Begin
+2025-12-06 17-41-50.0593[EnumUSBDevices]Found 0 USB Devices
+2025-12-06 17-41-50.0593[EnumUSBDevices]End
+2025-12-06 17-43-01.0193[]*****************************************
+2025-12-06 17-43-01.0194[]DLL Log Initialize. Verbosity: 6
+2025-12-06 17-43-01.0194[]*****************************************
+2025-12-06 17-43-01.0196[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-06 17-43-01.0196[]DLL Version: 1.07
+2025-12-06 17-43-01.0196[InitLibrary]Begin
+2025-12-06 17-43-01.0218[InitLibrary]Library SignID:00000101
+2025-12-06 17-43-01.0219[InitLibrary]Current SignID:00000101
+2025-12-06 17-43-01.0219[InitLibrary]End
+2025-12-06 17-43-01.0220[GetAPIVersionHwLibrary]Begin
+2025-12-06 17-43-01.0222[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-06 17-43-01.0223[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-06 17-43-01.0223[GetAPIVersionHwLibrary]End
+2025-12-06 17-43-01.0224[EnumUSBDevices]Begin
+2025-12-06 17-43-01.0229[EnumUSBDevices]Found 0 USB Devices
+2025-12-06 17-43-01.0230[EnumUSBDevices]End
+2025-12-06 17-43-58.0992[]*****************************************
+2025-12-06 17-43-58.0995[]DLL Log Initialize. Verbosity: 6
+2025-12-06 17-43-58.0996[]*****************************************
+2025-12-06 17-43-58.0998[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-06 17-43-58.0998[]DLL Version: 1.07
+2025-12-06 17-43-58.0999[InitLibrary]Begin
+2025-12-06 17-43-59.0020[InitLibrary]Library SignID:00000101
+2025-12-06 17-43-59.0021[InitLibrary]Current SignID:00000101
+2025-12-06 17-43-59.0021[InitLibrary]End
+2025-12-06 17-43-59.0022[GetAPIVersionHwLibrary]Begin
+2025-12-06 17-43-59.0024[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-06 17-43-59.0024[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-06 17-43-59.0025[GetAPIVersionHwLibrary]End
+2025-12-06 17-43-59.0025[EnumUSBDevices]Begin
+2025-12-06 17-43-59.0032[EnumUSBDevices]Found 0 USB Devices
+2025-12-06 17-43-59.0033[EnumUSBDevices]End
+2025-12-06 17-45-40.0664[]*****************************************
+2025-12-06 17-45-40.0666[]DLL Log Initialize. Verbosity: 6
+2025-12-06 17-45-40.0667[]*****************************************
+2025-12-06 17-45-40.0668[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-06 17-45-40.0669[]DLL Version: 1.07
+2025-12-06 17-45-40.0671[InitLibrary]Begin
+2025-12-06 17-45-40.0712[InitLibrary]Library SignID:00000101
+2025-12-06 17-45-40.0713[InitLibrary]Current SignID:00000101
+2025-12-06 17-45-40.0714[InitLibrary]End
+2025-12-06 17-45-40.0715[GetAPIVersionHwLibrary]Begin
+2025-12-06 17-45-40.0720[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-06 17-45-40.0721[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-06 17-45-40.0722[GetAPIVersionHwLibrary]End
+2025-12-06 17-45-40.0723[EnumUSBDevices]Begin
+2025-12-06 17-45-40.0734[EnumUSBDevices]Found 0 USB Devices
+2025-12-06 17-45-40.0734[EnumUSBDevices]End
+2025-12-06 17-46-09.0816[]*****************************************
+2025-12-06 17-46-09.0819[]DLL Log Initialize. Verbosity: 6
+2025-12-06 17-46-09.0819[]*****************************************
+2025-12-06 17-46-09.0820[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-06 17-46-09.0820[]DLL Version: 1.07
+2025-12-06 17-46-09.0821[InitLibrary]Begin
+2025-12-06 17-46-09.0859[InitLibrary]Library SignID:00000101
+2025-12-06 17-46-09.0859[InitLibrary]Current SignID:00000101
+2025-12-06 17-46-09.0860[InitLibrary]End
+2025-12-06 17-46-09.0860[GetAPIVersionHwLibrary]Begin
+2025-12-06 17-46-09.0863[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-06 17-46-09.0863[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-06 17-46-09.0863[GetAPIVersionHwLibrary]End
+2025-12-06 17-46-09.0864[EnumUSBDevices]Begin
+2025-12-06 17-46-09.0869[EnumUSBDevices]Found 0 USB Devices
+2025-12-06 17-46-09.0870[EnumUSBDevices]End
+2025-12-06 17-50-27.0270[]*****************************************
+2025-12-06 17-50-27.0272[]DLL Log Initialize. Verbosity: 6
+2025-12-06 17-50-27.0273[]*****************************************
+2025-12-06 17-50-27.0274[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-06 17-50-27.0275[]DLL Version: 1.07
+2025-12-06 17-50-27.0277[InitLibrary]Begin
+2025-12-06 17-50-27.0337[InitLibrary]Library SignID:00000101
+2025-12-06 17-50-27.0338[InitLibrary]Current SignID:00000101
+2025-12-06 17-50-27.0339[InitLibrary]End
+2025-12-06 17-50-27.0340[GetAPIVersionHwLibrary]Begin
+2025-12-06 17-50-27.0346[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-06 17-50-27.0347[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-06 17-50-27.0349[GetAPIVersionHwLibrary]End
+2025-12-06 17-50-27.0350[EnumUSBDevices]Begin
+2025-12-06 17-50-27.0367[EnumUSBDevices]Found 0 USB Devices
+2025-12-06 17-50-27.0369[EnumUSBDevices]End
+2025-12-06 17-53-05.0261[]*****************************************
+2025-12-06 17-53-05.0263[]DLL Log Initialize. Verbosity: 6
+2025-12-06 17-53-05.0264[]*****************************************
+2025-12-06 17-53-05.0265[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-06 17-53-05.0265[]DLL Version: 1.07
+2025-12-06 17-53-05.0266[InitLibrary]Begin
+2025-12-06 17-53-05.0298[InitLibrary]Library SignID:00000101
+2025-12-06 17-53-05.0299[InitLibrary]Current SignID:00000101
+2025-12-06 17-53-05.0299[InitLibrary]End
+2025-12-06 17-53-05.0300[GetAPIVersionHwLibrary]Begin
+2025-12-06 17-53-05.0303[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-06 17-53-05.0303[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-06 17-53-05.0304[GetAPIVersionHwLibrary]End
+2025-12-06 17-53-05.0304[EnumUSBDevices]Begin
+2025-12-06 17-53-05.0310[EnumUSBDevices]Found 0 USB Devices
+2025-12-06 17-53-05.0311[EnumUSBDevices]End
+2025-12-06 17-56-58.0331[]*****************************************
+2025-12-06 17-56-58.0333[]DLL Log Initialize. Verbosity: 6
+2025-12-06 17-56-58.0333[]*****************************************
+2025-12-06 17-56-58.0334[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-06 17-56-58.0334[]DLL Version: 1.07
+2025-12-06 17-56-58.0335[InitLibrary]Begin
+2025-12-06 17-56-58.0369[InitLibrary]Library SignID:00000101
+2025-12-06 17-56-58.0370[InitLibrary]Current SignID:00000101
+2025-12-06 17-56-58.0371[InitLibrary]End
+2025-12-06 17-56-58.0372[GetAPIVersionHwLibrary]Begin
+2025-12-06 17-56-58.0376[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-06 17-56-58.0377[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-06 17-56-58.0378[GetAPIVersionHwLibrary]End
+2025-12-06 17-56-58.0379[EnumUSBDevices]Begin
+2025-12-06 17-56-58.0387[EnumUSBDevices]Found 0 USB Devices
+2025-12-06 17-56-58.0388[EnumUSBDevices]End
+2025-12-06 18-01-19.0981[]*****************************************
+2025-12-06 18-01-19.0983[]DLL Log Initialize. Verbosity: 6
+2025-12-06 18-01-19.0984[]*****************************************
+2025-12-06 18-01-19.0985[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-06 18-01-19.0986[]DLL Version: 1.07
+2025-12-06 18-01-19.0987[InitLibrary]Begin
+2025-12-06 18-01-20.0036[InitLibrary]Library SignID:00000101
+2025-12-06 18-01-20.0037[InitLibrary]Current SignID:00000101
+2025-12-06 18-01-20.0039[InitLibrary]End
+2025-12-06 18-01-20.0040[GetAPIVersionHwLibrary]Begin
+2025-12-06 18-01-20.0046[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-06 18-01-20.0047[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-06 18-01-20.0048[GetAPIVersionHwLibrary]End
+2025-12-06 18-01-20.0050[EnumUSBDevices]Begin
+2025-12-06 18-01-20.0064[EnumUSBDevices]Found 0 USB Devices
+2025-12-06 18-01-20.0065[EnumUSBDevices]End
+2025-12-06 18-06-04.0832[]*****************************************
+2025-12-06 18-06-04.0833[]DLL Log Initialize. Verbosity: 6
+2025-12-06 18-06-04.0834[]*****************************************
+2025-12-06 18-06-04.0835[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-06 18-06-04.0836[]DLL Version: 1.07
+2025-12-06 18-06-04.0836[InitLibrary]Begin
+2025-12-06 18-06-04.0868[InitLibrary]Library SignID:00000101
+2025-12-06 18-06-04.0869[InitLibrary]Current SignID:00000101
+2025-12-06 18-06-04.0869[InitLibrary]End
+2025-12-06 18-06-04.0870[GetAPIVersionHwLibrary]Begin
+2025-12-06 18-06-04.0872[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-06 18-06-04.0872[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-06 18-06-04.0873[GetAPIVersionHwLibrary]End
+2025-12-06 18-06-04.0873[EnumUSBDevices]Begin
+2025-12-06 18-06-04.0879[EnumUSBDevices]Found 0 USB Devices
+2025-12-06 18-06-04.0880[EnumUSBDevices]End
+2025-12-08 10-26-50.0932[]*****************************************
+2025-12-08 10-26-50.0935[]DLL Log Initialize. Verbosity: 6
+2025-12-08 10-26-50.0937[]*****************************************
+2025-12-08 10-26-50.0938[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 10-26-50.0940[]DLL Version: 1.07
+2025-12-08 10-26-50.0942[InitLibrary]Begin
+2025-12-08 10-26-51.0015[InitLibrary]Library SignID:00000101
+2025-12-08 10-26-51.0018[InitLibrary]Current SignID:00000101
+2025-12-08 10-26-51.0020[InitLibrary]End
+2025-12-08 10-26-51.0022[GetAPIVersionHwLibrary]Begin
+2025-12-08 10-26-51.0029[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 10-26-51.0031[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 10-26-51.0034[GetAPIVersionHwLibrary]End
+2025-12-08 10-26-51.0037[EnumUSBDevices]Begin
+2025-12-08 10-26-51.0063[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 10-26-51.0065[EnumUSBDevices]End
+2025-12-08 10-31-37.0716[]*****************************************
+2025-12-08 10-31-37.0720[]DLL Log Initialize. Verbosity: 6
+2025-12-08 10-31-37.0723[]*****************************************
+2025-12-08 10-31-37.0724[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 10-31-37.0726[]DLL Version: 1.07
+2025-12-08 10-31-37.0727[InitLibrary]Begin
+2025-12-08 10-31-37.0784[InitLibrary]Library SignID:00000101
+2025-12-08 10-31-37.0786[InitLibrary]Current SignID:00000101
+2025-12-08 10-31-37.0788[InitLibrary]End
+2025-12-08 10-31-37.0790[GetAPIVersionHwLibrary]Begin
+2025-12-08 10-31-37.0795[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 10-31-37.0797[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 10-31-37.0798[GetAPIVersionHwLibrary]End
+2025-12-08 10-31-37.0799[EnumUSBDevices]Begin
+2025-12-08 10-31-37.0811[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 10-31-37.0813[EnumUSBDevices]End
+2025-12-08 10-37-41.0846[]*****************************************
+2025-12-08 10-37-41.0848[]DLL Log Initialize. Verbosity: 6
+2025-12-08 10-37-41.0849[]*****************************************
+2025-12-08 10-37-41.0850[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 10-37-41.0851[]DLL Version: 1.07
+2025-12-08 10-37-41.0852[InitLibrary]Begin
+2025-12-08 10-37-41.0905[InitLibrary]Library SignID:00000101
+2025-12-08 10-37-41.0906[InitLibrary]Current SignID:00000101
+2025-12-08 10-37-41.0907[InitLibrary]End
+2025-12-08 10-37-41.0908[GetAPIVersionHwLibrary]Begin
+2025-12-08 10-37-41.0913[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 10-37-41.0914[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 10-37-41.0915[GetAPIVersionHwLibrary]End
+2025-12-08 10-37-41.0916[EnumUSBDevices]Begin
+2025-12-08 10-37-41.0927[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 10-37-41.0929[EnumUSBDevices]End
+2025-12-08 10-39-12.0325[]*****************************************
+2025-12-08 10-39-12.0329[]DLL Log Initialize. Verbosity: 6
+2025-12-08 10-39-12.0330[]*****************************************
+2025-12-08 10-39-12.0331[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 10-39-12.0332[]DLL Version: 1.07
+2025-12-08 10-39-12.0333[InitLibrary]Begin
+2025-12-08 10-39-12.0378[InitLibrary]Library SignID:00000101
+2025-12-08 10-39-12.0379[InitLibrary]Current SignID:00000101
+2025-12-08 10-39-12.0382[InitLibrary]End
+2025-12-08 10-39-12.0383[GetAPIVersionHwLibrary]Begin
+2025-12-08 10-39-12.0388[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 10-39-12.0389[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 10-39-12.0390[GetAPIVersionHwLibrary]End
+2025-12-08 10-39-12.0390[EnumUSBDevices]Begin
+2025-12-08 10-39-12.0403[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 10-39-12.0404[EnumUSBDevices]End
+2025-12-08 10-52-47.0965[]*****************************************
+2025-12-08 10-52-47.0967[]DLL Log Initialize. Verbosity: 6
+2025-12-08 10-52-47.0969[]*****************************************
+2025-12-08 10-52-47.0969[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 10-52-47.0971[]DLL Version: 1.07
+2025-12-08 10-52-47.0971[InitLibrary]Begin
+2025-12-08 10-52-47.0994[InitLibrary]Library SignID:00000101
+2025-12-08 10-52-47.0995[InitLibrary]Current SignID:00000101
+2025-12-08 10-52-47.0996[InitLibrary]End
+2025-12-08 10-52-47.0997[GetAPIVersionHwLibrary]Begin
+2025-12-08 10-52-47.0999[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 10-52-48.0000[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 10-52-48.0000[GetAPIVersionHwLibrary]End
+2025-12-08 10-52-48.0001[EnumUSBDevices]Begin
+2025-12-08 10-52-48.0006[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 10-52-48.0007[EnumUSBDevices]End
+2025-12-08 10-58-37.0598[]*****************************************
+2025-12-08 10-58-37.0599[]DLL Log Initialize. Verbosity: 6
+2025-12-08 10-58-37.0600[]*****************************************
+2025-12-08 10-58-37.0601[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 10-58-37.0602[]DLL Version: 1.07
+2025-12-08 10-58-37.0602[InitLibrary]Begin
+2025-12-08 10-58-37.0630[InitLibrary]Library SignID:00000101
+2025-12-08 10-58-37.0630[InitLibrary]Current SignID:00000101
+2025-12-08 10-58-37.0631[InitLibrary]End
+2025-12-08 10-58-37.0631[GetAPIVersionHwLibrary]Begin
+2025-12-08 10-58-37.0634[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 10-58-37.0635[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 10-58-37.0635[GetAPIVersionHwLibrary]End
+2025-12-08 10-58-37.0636[EnumUSBDevices]Begin
+2025-12-08 10-58-37.0641[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 10-58-37.0641[EnumUSBDevices]End
+2025-12-08 11-00-24.0054[]*****************************************
+2025-12-08 11-00-24.0055[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-00-24.0056[]*****************************************
+2025-12-08 11-00-24.0057[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-00-24.0057[]DLL Version: 1.07
+2025-12-08 11-00-24.0058[InitLibrary]Begin
+2025-12-08 11-00-24.0081[InitLibrary]Library SignID:00000101
+2025-12-08 11-00-24.0082[InitLibrary]Current SignID:00000101
+2025-12-08 11-00-24.0083[InitLibrary]End
+2025-12-08 11-00-24.0083[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-00-24.0085[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-00-24.0086[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-00-24.0087[GetAPIVersionHwLibrary]End
+2025-12-08 11-00-24.0087[EnumUSBDevices]Begin
+2025-12-08 11-00-24.0093[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-00-24.0095[EnumUSBDevices]End
+2025-12-08 11-03-54.0551[]*****************************************
+2025-12-08 11-03-54.0553[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-03-54.0553[]*****************************************
+2025-12-08 11-03-54.0554[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-03-54.0554[]DLL Version: 1.07
+2025-12-08 11-03-54.0555[InitLibrary]Begin
+2025-12-08 11-03-54.0578[InitLibrary]Library SignID:00000101
+2025-12-08 11-03-54.0578[InitLibrary]Current SignID:00000101
+2025-12-08 11-03-54.0579[InitLibrary]End
+2025-12-08 11-03-54.0580[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-03-54.0582[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-03-54.0583[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-03-54.0584[GetAPIVersionHwLibrary]End
+2025-12-08 11-03-54.0584[EnumUSBDevices]Begin
+2025-12-08 11-03-54.0590[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-03-54.0591[EnumUSBDevices]End
+2025-12-08 11-07-18.0120[]*****************************************
+2025-12-08 11-07-18.0123[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-07-18.0124[]*****************************************
+2025-12-08 11-07-18.0125[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-07-18.0126[]DLL Version: 1.07
+2025-12-08 11-07-18.0126[InitLibrary]Begin
+2025-12-08 11-07-18.0162[InitLibrary]Library SignID:00000101
+2025-12-08 11-07-18.0163[InitLibrary]Current SignID:00000101
+2025-12-08 11-07-18.0164[InitLibrary]End
+2025-12-08 11-07-18.0166[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-07-18.0170[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-07-18.0172[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-07-18.0174[GetAPIVersionHwLibrary]End
+2025-12-08 11-07-18.0175[EnumUSBDevices]Begin
+2025-12-08 11-07-18.0189[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-07-18.0191[EnumUSBDevices]End
+2025-12-08 11-09-46.0680[]*****************************************
+2025-12-08 11-09-46.0683[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-09-46.0684[]*****************************************
+2025-12-08 11-09-46.0685[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-09-46.0685[]DLL Version: 1.07
+2025-12-08 11-09-46.0685[InitLibrary]Begin
+2025-12-08 11-09-46.0708[InitLibrary]Library SignID:00000101
+2025-12-08 11-09-46.0709[InitLibrary]Current SignID:00000101
+2025-12-08 11-09-46.0709[InitLibrary]End
+2025-12-08 11-09-46.0710[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-09-46.0713[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-09-46.0713[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-09-46.0714[GetAPIVersionHwLibrary]End
+2025-12-08 11-09-46.0714[EnumUSBDevices]Begin
+2025-12-08 11-09-46.0720[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-09-46.0720[EnumUSBDevices]End
+2025-12-08 11-13-01.0089[]*****************************************
+2025-12-08 11-13-01.0092[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-13-01.0092[]*****************************************
+2025-12-08 11-13-01.0093[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-13-01.0093[]DLL Version: 1.07
+2025-12-08 11-13-01.0094[InitLibrary]Begin
+2025-12-08 11-13-01.0116[InitLibrary]Library SignID:00000101
+2025-12-08 11-13-01.0116[InitLibrary]Current SignID:00000101
+2025-12-08 11-13-01.0117[InitLibrary]End
+2025-12-08 11-13-01.0118[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-13-01.0122[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-13-01.0123[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-13-01.0123[GetAPIVersionHwLibrary]End
+2025-12-08 11-13-01.0124[EnumUSBDevices]Begin
+2025-12-08 11-13-01.0129[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-13-01.0130[EnumUSBDevices]End
+2025-12-08 11-15-39.0271[]*****************************************
+2025-12-08 11-15-39.0273[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-15-39.0274[]*****************************************
+2025-12-08 11-15-39.0274[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-15-39.0275[]DLL Version: 1.07
+2025-12-08 11-15-39.0275[InitLibrary]Begin
+2025-12-08 11-15-39.0296[InitLibrary]Library SignID:00000101
+2025-12-08 11-15-39.0297[InitLibrary]Current SignID:00000101
+2025-12-08 11-15-39.0298[InitLibrary]End
+2025-12-08 11-15-39.0298[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-15-39.0301[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-15-39.0301[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-15-39.0302[GetAPIVersionHwLibrary]End
+2025-12-08 11-15-39.0302[EnumUSBDevices]Begin
+2025-12-08 11-15-39.0307[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-15-39.0308[EnumUSBDevices]End
+2025-12-08 11-18-42.0878[]*****************************************
+2025-12-08 11-18-42.0879[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-18-42.0879[]*****************************************
+2025-12-08 11-18-42.0880[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-18-42.0880[]DLL Version: 1.07
+2025-12-08 11-18-42.0881[InitLibrary]Begin
+2025-12-08 11-18-42.0902[InitLibrary]Library SignID:00000101
+2025-12-08 11-18-42.0902[InitLibrary]Current SignID:00000101
+2025-12-08 11-18-42.0903[InitLibrary]End
+2025-12-08 11-18-42.0903[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-18-42.0906[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-18-42.0906[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-18-42.0907[GetAPIVersionHwLibrary]End
+2025-12-08 11-18-42.0907[EnumUSBDevices]Begin
+2025-12-08 11-18-42.0912[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-18-42.0913[EnumUSBDevices]End
+2025-12-08 11-19-33.0791[]*****************************************
+2025-12-08 11-19-33.0793[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-19-33.0794[]*****************************************
+2025-12-08 11-19-33.0795[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-19-33.0796[]DLL Version: 1.07
+2025-12-08 11-19-33.0797[InitLibrary]Begin
+2025-12-08 11-19-33.0840[InitLibrary]Library SignID:00000101
+2025-12-08 11-19-33.0841[InitLibrary]Current SignID:00000101
+2025-12-08 11-19-33.0842[InitLibrary]End
+2025-12-08 11-19-33.0843[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-19-33.0847[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-19-33.0848[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-19-33.0849[GetAPIVersionHwLibrary]End
+2025-12-08 11-19-33.0850[EnumUSBDevices]Begin
+2025-12-08 11-19-33.0862[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-19-33.0863[EnumUSBDevices]End
+2025-12-08 11-20-32.0757[]*****************************************
+2025-12-08 11-20-32.0761[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-20-32.0763[]*****************************************
+2025-12-08 11-20-32.0764[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-20-32.0765[]DLL Version: 1.07
+2025-12-08 11-20-32.0765[InitLibrary]Begin
+2025-12-08 11-20-32.0805[InitLibrary]Library SignID:00000101
+2025-12-08 11-20-32.0806[InitLibrary]Current SignID:00000101
+2025-12-08 11-20-32.0807[InitLibrary]End
+2025-12-08 11-20-32.0808[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-20-32.0812[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-20-32.0814[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-20-32.0815[GetAPIVersionHwLibrary]End
+2025-12-08 11-20-32.0816[EnumUSBDevices]Begin
+2025-12-08 11-20-32.0829[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-20-32.0831[EnumUSBDevices]End
+2025-12-08 11-21-36.0498[]*****************************************
+2025-12-08 11-21-36.0501[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-21-36.0502[]*****************************************
+2025-12-08 11-21-36.0503[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-21-36.0504[]DLL Version: 1.07
+2025-12-08 11-21-36.0505[InitLibrary]Begin
+2025-12-08 11-21-36.0549[InitLibrary]Library SignID:00000101
+2025-12-08 11-21-36.0550[InitLibrary]Current SignID:00000101
+2025-12-08 11-21-36.0552[InitLibrary]End
+2025-12-08 11-21-36.0553[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-21-36.0559[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-21-36.0560[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-21-36.0562[GetAPIVersionHwLibrary]End
+2025-12-08 11-21-36.0563[EnumUSBDevices]Begin
+2025-12-08 11-21-36.0574[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-21-36.0576[EnumUSBDevices]End
+2025-12-08 11-22-44.0454[]*****************************************
+2025-12-08 11-22-44.0455[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-22-44.0455[]*****************************************
+2025-12-08 11-22-44.0455[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-22-44.0456[]DLL Version: 1.07
+2025-12-08 11-22-44.0456[InitLibrary]Begin
+2025-12-08 11-22-44.0481[InitLibrary]Library SignID:00000101
+2025-12-08 11-22-44.0481[InitLibrary]Current SignID:00000101
+2025-12-08 11-22-44.0482[InitLibrary]End
+2025-12-08 11-22-44.0483[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-22-44.0485[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-22-44.0485[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-22-44.0486[GetAPIVersionHwLibrary]End
+2025-12-08 11-22-44.0486[EnumUSBDevices]Begin
+2025-12-08 11-22-44.0492[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-22-44.0493[EnumUSBDevices]End
+2025-12-08 11-24-35.0127[]*****************************************
+2025-12-08 11-24-35.0128[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-24-35.0130[]*****************************************
+2025-12-08 11-24-35.0131[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-24-35.0132[]DLL Version: 1.07
+2025-12-08 11-24-35.0133[InitLibrary]Begin
+2025-12-08 11-24-35.0177[InitLibrary]Library SignID:00000101
+2025-12-08 11-24-35.0178[InitLibrary]Current SignID:00000101
+2025-12-08 11-24-35.0179[InitLibrary]End
+2025-12-08 11-24-35.0180[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-24-35.0184[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-24-35.0185[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-24-35.0186[GetAPIVersionHwLibrary]End
+2025-12-08 11-24-35.0187[EnumUSBDevices]Begin
+2025-12-08 11-24-35.0198[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-24-35.0200[EnumUSBDevices]End
+2025-12-08 11-27-52.0608[]*****************************************
+2025-12-08 11-27-52.0610[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-27-52.0611[]*****************************************
+2025-12-08 11-27-52.0612[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-27-52.0613[]DLL Version: 1.07
+2025-12-08 11-27-52.0614[InitLibrary]Begin
+2025-12-08 11-27-52.0655[InitLibrary]Library SignID:00000101
+2025-12-08 11-27-52.0656[InitLibrary]Current SignID:00000101
+2025-12-08 11-27-52.0657[InitLibrary]End
+2025-12-08 11-27-52.0659[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-27-52.0663[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-27-52.0664[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-27-52.0665[GetAPIVersionHwLibrary]End
+2025-12-08 11-27-52.0666[EnumUSBDevices]Begin
+2025-12-08 11-27-52.0676[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-27-52.0677[EnumUSBDevices]End
+2025-12-08 11-32-10.0197[]*****************************************
+2025-12-08 11-32-10.0199[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-32-10.0200[]*****************************************
+2025-12-08 11-32-10.0201[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-32-10.0202[]DLL Version: 1.07
+2025-12-08 11-32-10.0203[InitLibrary]Begin
+2025-12-08 11-32-10.0246[InitLibrary]Library SignID:00000101
+2025-12-08 11-32-10.0247[InitLibrary]Current SignID:00000101
+2025-12-08 11-32-10.0248[InitLibrary]End
+2025-12-08 11-32-10.0250[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-32-10.0254[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-32-10.0255[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-32-10.0257[GetAPIVersionHwLibrary]End
+2025-12-08 11-32-10.0258[EnumUSBDevices]Begin
+2025-12-08 11-32-10.0269[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-32-10.0271[EnumUSBDevices]End
+2025-12-08 11-33-48.0628[]*****************************************
+2025-12-08 11-33-48.0629[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-33-48.0630[]*****************************************
+2025-12-08 11-33-48.0630[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-33-48.0631[]DLL Version: 1.07
+2025-12-08 11-33-48.0631[InitLibrary]Begin
+2025-12-08 11-33-48.0652[InitLibrary]Library SignID:00000101
+2025-12-08 11-33-48.0653[InitLibrary]Current SignID:00000101
+2025-12-08 11-33-48.0653[InitLibrary]End
+2025-12-08 11-33-48.0654[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-33-48.0656[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-33-48.0657[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-33-48.0657[GetAPIVersionHwLibrary]End
+2025-12-08 11-33-48.0657[EnumUSBDevices]Begin
+2025-12-08 11-33-48.0663[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-33-48.0663[EnumUSBDevices]End
+2025-12-08 11-34-53.0117[]*****************************************
+2025-12-08 11-34-53.0120[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-34-53.0120[]*****************************************
+2025-12-08 11-34-53.0121[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-34-53.0122[]DLL Version: 1.07
+2025-12-08 11-34-53.0123[InitLibrary]Begin
+2025-12-08 11-34-53.0155[InitLibrary]Library SignID:00000101
+2025-12-08 11-34-53.0156[InitLibrary]Current SignID:00000101
+2025-12-08 11-34-53.0157[InitLibrary]End
+2025-12-08 11-34-53.0158[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-34-53.0160[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-34-53.0160[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-34-53.0161[GetAPIVersionHwLibrary]End
+2025-12-08 11-34-53.0162[EnumUSBDevices]Begin
+2025-12-08 11-34-53.0171[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-34-53.0173[EnumUSBDevices]End
+2025-12-08 11-36-52.0115[]*****************************************
+2025-12-08 11-36-52.0116[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-36-52.0116[]*****************************************
+2025-12-08 11-36-52.0117[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-36-52.0117[]DLL Version: 1.07
+2025-12-08 11-36-52.0118[InitLibrary]Begin
+2025-12-08 11-36-52.0140[InitLibrary]Library SignID:00000101
+2025-12-08 11-36-52.0141[InitLibrary]Current SignID:00000101
+2025-12-08 11-36-52.0141[InitLibrary]End
+2025-12-08 11-36-52.0142[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-36-52.0144[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-36-52.0145[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-36-52.0145[GetAPIVersionHwLibrary]End
+2025-12-08 11-36-52.0146[EnumUSBDevices]Begin
+2025-12-08 11-36-52.0151[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-36-52.0152[EnumUSBDevices]End
+2025-12-08 11-37-44.0552[]*****************************************
+2025-12-08 11-37-44.0555[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-37-44.0556[]*****************************************
+2025-12-08 11-37-44.0556[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-37-44.0557[]DLL Version: 1.07
+2025-12-08 11-37-44.0559[InitLibrary]Begin
+2025-12-08 11-37-44.0611[InitLibrary]Library SignID:00000101
+2025-12-08 11-37-44.0613[InitLibrary]Current SignID:00000101
+2025-12-08 11-37-44.0614[InitLibrary]End
+2025-12-08 11-37-44.0615[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-37-44.0620[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-37-44.0622[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-37-44.0622[GetAPIVersionHwLibrary]End
+2025-12-08 11-37-44.0623[EnumUSBDevices]Begin
+2025-12-08 11-37-44.0636[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-37-44.0637[EnumUSBDevices]End
+2025-12-08 11-41-44.0632[]*****************************************
+2025-12-08 11-41-44.0634[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-41-44.0634[]*****************************************
+2025-12-08 11-41-44.0636[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-41-44.0637[]DLL Version: 1.07
+2025-12-08 11-41-44.0638[InitLibrary]Begin
+2025-12-08 11-41-44.0689[InitLibrary]Library SignID:00000101
+2025-12-08 11-41-44.0690[InitLibrary]Current SignID:00000101
+2025-12-08 11-41-44.0691[InitLibrary]End
+2025-12-08 11-41-44.0692[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-41-44.0698[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-41-44.0699[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-41-44.0700[GetAPIVersionHwLibrary]End
+2025-12-08 11-41-44.0701[EnumUSBDevices]Begin
+2025-12-08 11-41-44.0713[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-41-44.0715[EnumUSBDevices]End
+2025-12-08 11-43-39.0961[]*****************************************
+2025-12-08 11-43-39.0964[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-43-39.0965[]*****************************************
+2025-12-08 11-43-39.0966[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-43-39.0967[]DLL Version: 1.07
+2025-12-08 11-43-39.0968[InitLibrary]Begin
+2025-12-08 11-43-40.0006[InitLibrary]Library SignID:00000101
+2025-12-08 11-43-40.0007[InitLibrary]Current SignID:00000101
+2025-12-08 11-43-40.0008[InitLibrary]End
+2025-12-08 11-43-40.0009[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-43-40.0014[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-43-40.0015[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-43-40.0016[GetAPIVersionHwLibrary]End
+2025-12-08 11-43-40.0017[EnumUSBDevices]Begin
+2025-12-08 11-43-40.0026[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-43-40.0027[EnumUSBDevices]End
+2025-12-08 11-44-18.0792[]*****************************************
+2025-12-08 11-44-18.0793[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-44-18.0793[]*****************************************
+2025-12-08 11-44-18.0794[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-44-18.0794[]DLL Version: 1.07
+2025-12-08 11-44-18.0795[InitLibrary]Begin
+2025-12-08 11-44-18.0816[InitLibrary]Library SignID:00000101
+2025-12-08 11-44-18.0817[InitLibrary]Current SignID:00000101
+2025-12-08 11-44-18.0818[InitLibrary]End
+2025-12-08 11-44-18.0818[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-44-18.0821[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-44-18.0822[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-44-18.0822[GetAPIVersionHwLibrary]End
+2025-12-08 11-44-18.0823[EnumUSBDevices]Begin
+2025-12-08 11-44-18.0829[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-44-18.0829[EnumUSBDevices]End
+2025-12-08 11-45-19.0537[]*****************************************
+2025-12-08 11-45-19.0539[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-45-19.0540[]*****************************************
+2025-12-08 11-45-19.0541[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-45-19.0542[]DLL Version: 1.07
+2025-12-08 11-45-19.0543[InitLibrary]Begin
+2025-12-08 11-45-19.0592[InitLibrary]Library SignID:00000101
+2025-12-08 11-45-19.0594[InitLibrary]Current SignID:00000101
+2025-12-08 11-45-19.0595[InitLibrary]End
+2025-12-08 11-45-19.0596[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-45-19.0601[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-45-19.0602[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-45-19.0604[GetAPIVersionHwLibrary]End
+2025-12-08 11-45-19.0605[EnumUSBDevices]Begin
+2025-12-08 11-45-19.0621[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-45-19.0624[EnumUSBDevices]End
+2025-12-08 11-47-21.0851[]*****************************************
+2025-12-08 11-47-21.0854[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-47-21.0855[]*****************************************
+2025-12-08 11-47-21.0856[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-47-21.0857[]DLL Version: 1.07
+2025-12-08 11-47-21.0858[InitLibrary]Begin
+2025-12-08 11-47-21.0915[InitLibrary]Library SignID:00000101
+2025-12-08 11-47-21.0918[InitLibrary]Current SignID:00000101
+2025-12-08 11-47-21.0920[InitLibrary]End
+2025-12-08 11-47-21.0921[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-47-21.0927[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-47-21.0929[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-47-21.0931[GetAPIVersionHwLibrary]End
+2025-12-08 11-47-21.0933[EnumUSBDevices]Begin
+2025-12-08 11-47-21.0954[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-47-21.0956[EnumUSBDevices]End
+2025-12-08 11-49-08.0579[]*****************************************
+2025-12-08 11-49-08.0580[]DLL Log Initialize. Verbosity: 6
+2025-12-08 11-49-08.0581[]*****************************************
+2025-12-08 11-49-08.0581[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 11-49-08.0582[]DLL Version: 1.07
+2025-12-08 11-49-08.0582[InitLibrary]Begin
+2025-12-08 11-49-08.0605[InitLibrary]Library SignID:00000101
+2025-12-08 11-49-08.0606[InitLibrary]Current SignID:00000101
+2025-12-08 11-49-08.0606[InitLibrary]End
+2025-12-08 11-49-08.0607[GetAPIVersionHwLibrary]Begin
+2025-12-08 11-49-08.0609[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 11-49-08.0609[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 11-49-08.0610[GetAPIVersionHwLibrary]End
+2025-12-08 11-49-08.0610[EnumUSBDevices]Begin
+2025-12-08 11-49-08.0616[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 11-49-08.0617[EnumUSBDevices]End
+2025-12-08 12-24-13.0240[]*****************************************
+2025-12-08 12-24-13.0242[]DLL Log Initialize. Verbosity: 6
+2025-12-08 12-24-13.0243[]*****************************************
+2025-12-08 12-24-13.0244[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 12-24-13.0245[]DLL Version: 1.07
+2025-12-08 12-24-13.0246[InitLibrary]Begin
+2025-12-08 12-24-13.0298[InitLibrary]Library SignID:00000101
+2025-12-08 12-24-13.0301[InitLibrary]Current SignID:00000101
+2025-12-08 12-24-13.0303[InitLibrary]End
+2025-12-08 12-24-13.0305[GetAPIVersionHwLibrary]Begin
+2025-12-08 12-24-13.0311[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 12-24-13.0312[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 12-24-13.0313[GetAPIVersionHwLibrary]End
+2025-12-08 12-24-13.0315[EnumUSBDevices]Begin
+2025-12-08 12-24-13.0327[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 12-24-13.0329[EnumUSBDevices]End
+2025-12-08 12-26-27.0475[]*****************************************
+2025-12-08 12-26-27.0476[]DLL Log Initialize. Verbosity: 6
+2025-12-08 12-26-27.0477[]*****************************************
+2025-12-08 12-26-27.0477[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 12-26-27.0478[]DLL Version: 1.07
+2025-12-08 12-26-27.0478[InitLibrary]Begin
+2025-12-08 12-26-27.0501[InitLibrary]Library SignID:00000101
+2025-12-08 12-26-27.0501[InitLibrary]Current SignID:00000101
+2025-12-08 12-26-27.0502[InitLibrary]End
+2025-12-08 12-26-27.0503[GetAPIVersionHwLibrary]Begin
+2025-12-08 12-26-27.0505[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 12-26-27.0505[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 12-26-27.0506[GetAPIVersionHwLibrary]End
+2025-12-08 12-26-27.0506[EnumUSBDevices]Begin
+2025-12-08 12-26-27.0512[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 12-26-27.0513[EnumUSBDevices]End
+2025-12-08 12-29-51.0067[]*****************************************
+2025-12-08 12-29-51.0071[]DLL Log Initialize. Verbosity: 6
+2025-12-08 12-29-51.0071[]*****************************************
+2025-12-08 12-29-51.0072[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 12-29-51.0072[]DLL Version: 1.07
+2025-12-08 12-29-51.0073[InitLibrary]Begin
+2025-12-08 12-29-51.0104[InitLibrary]Library SignID:00000101
+2025-12-08 12-29-51.0105[InitLibrary]Current SignID:00000101
+2025-12-08 12-29-51.0106[InitLibrary]End
+2025-12-08 12-29-51.0106[GetAPIVersionHwLibrary]Begin
+2025-12-08 12-29-51.0109[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 12-29-51.0111[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 12-29-51.0112[GetAPIVersionHwLibrary]End
+2025-12-08 12-29-51.0112[EnumUSBDevices]Begin
+2025-12-08 12-29-51.0121[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 12-29-51.0122[EnumUSBDevices]End
+2025-12-08 12-31-01.0313[]*****************************************
+2025-12-08 12-31-01.0316[]DLL Log Initialize. Verbosity: 6
+2025-12-08 12-31-01.0318[]*****************************************
+2025-12-08 12-31-01.0319[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 12-31-01.0320[]DLL Version: 1.07
+2025-12-08 12-31-01.0321[InitLibrary]Begin
+2025-12-08 12-31-01.0373[InitLibrary]Library SignID:00000101
+2025-12-08 12-31-01.0375[InitLibrary]Current SignID:00000101
+2025-12-08 12-31-01.0377[InitLibrary]End
+2025-12-08 12-31-01.0378[GetAPIVersionHwLibrary]Begin
+2025-12-08 12-31-01.0385[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 12-31-01.0387[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 12-31-01.0389[GetAPIVersionHwLibrary]End
+2025-12-08 12-31-01.0392[EnumUSBDevices]Begin
+2025-12-08 12-31-01.0410[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 12-31-01.0412[EnumUSBDevices]End
+2025-12-08 12-32-26.0690[]*****************************************
+2025-12-08 12-32-26.0691[]DLL Log Initialize. Verbosity: 6
+2025-12-08 12-32-26.0692[]*****************************************
+2025-12-08 12-32-26.0693[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 12-32-26.0693[]DLL Version: 1.07
+2025-12-08 12-32-26.0693[InitLibrary]Begin
+2025-12-08 12-32-26.0715[InitLibrary]Library SignID:00000101
+2025-12-08 12-32-26.0715[InitLibrary]Current SignID:00000101
+2025-12-08 12-32-26.0716[InitLibrary]End
+2025-12-08 12-32-26.0716[GetAPIVersionHwLibrary]Begin
+2025-12-08 12-32-26.0719[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 12-32-26.0719[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 12-32-26.0720[GetAPIVersionHwLibrary]End
+2025-12-08 12-32-26.0721[EnumUSBDevices]Begin
+2025-12-08 12-32-26.0726[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 12-32-26.0727[EnumUSBDevices]End
+2025-12-08 12-33-54.0809[]*****************************************
+2025-12-08 12-33-54.0812[]DLL Log Initialize. Verbosity: 6
+2025-12-08 12-33-54.0813[]*****************************************
+2025-12-08 12-33-54.0814[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 12-33-54.0815[]DLL Version: 1.07
+2025-12-08 12-33-54.0816[InitLibrary]Begin
+2025-12-08 12-33-54.0853[InitLibrary]Library SignID:00000101
+2025-12-08 12-33-54.0854[InitLibrary]Current SignID:00000101
+2025-12-08 12-33-54.0854[InitLibrary]End
+2025-12-08 12-33-54.0855[GetAPIVersionHwLibrary]Begin
+2025-12-08 12-33-54.0857[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 12-33-54.0857[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 12-33-54.0858[GetAPIVersionHwLibrary]End
+2025-12-08 12-33-54.0858[EnumUSBDevices]Begin
+2025-12-08 12-33-54.0867[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 12-33-54.0867[EnumUSBDevices]End
+2025-12-08 12-36-05.0346[]*****************************************
+2025-12-08 12-36-05.0347[]DLL Log Initialize. Verbosity: 6
+2025-12-08 12-36-05.0348[]*****************************************
+2025-12-08 12-36-05.0349[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 12-36-05.0349[]DLL Version: 1.07
+2025-12-08 12-36-05.0349[InitLibrary]Begin
+2025-12-08 12-36-05.0373[InitLibrary]Library SignID:00000101
+2025-12-08 12-36-05.0374[InitLibrary]Current SignID:00000101
+2025-12-08 12-36-05.0375[InitLibrary]End
+2025-12-08 12-36-05.0376[GetAPIVersionHwLibrary]Begin
+2025-12-08 12-36-05.0379[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 12-36-05.0380[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 12-36-05.0381[GetAPIVersionHwLibrary]End
+2025-12-08 12-36-05.0382[EnumUSBDevices]Begin
+2025-12-08 12-36-05.0396[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 12-36-05.0397[EnumUSBDevices]End
+2025-12-08 12-38-50.0136[]*****************************************
+2025-12-08 12-38-50.0138[]DLL Log Initialize. Verbosity: 6
+2025-12-08 12-38-50.0138[]*****************************************
+2025-12-08 12-38-50.0139[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 12-38-50.0139[]DLL Version: 1.07
+2025-12-08 12-38-50.0139[InitLibrary]Begin
+2025-12-08 12-38-50.0162[InitLibrary]Library SignID:00000101
+2025-12-08 12-38-50.0163[InitLibrary]Current SignID:00000101
+2025-12-08 12-38-50.0164[InitLibrary]End
+2025-12-08 12-38-50.0164[GetAPIVersionHwLibrary]Begin
+2025-12-08 12-38-50.0167[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 12-38-50.0167[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 12-38-50.0168[GetAPIVersionHwLibrary]End
+2025-12-08 12-38-50.0169[EnumUSBDevices]Begin
+2025-12-08 12-38-50.0175[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 12-38-50.0176[EnumUSBDevices]End
+2025-12-08 12-39-58.0367[]*****************************************
+2025-12-08 12-39-58.0368[]DLL Log Initialize. Verbosity: 6
+2025-12-08 12-39-58.0368[]*****************************************
+2025-12-08 12-39-58.0369[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 12-39-58.0369[]DLL Version: 1.07
+2025-12-08 12-39-58.0370[InitLibrary]Begin
+2025-12-08 12-39-58.0395[InitLibrary]Library SignID:00000101
+2025-12-08 12-39-58.0396[InitLibrary]Current SignID:00000101
+2025-12-08 12-39-58.0396[InitLibrary]End
+2025-12-08 12-39-58.0397[GetAPIVersionHwLibrary]Begin
+2025-12-08 12-39-58.0399[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 12-39-58.0399[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 12-39-58.0400[GetAPIVersionHwLibrary]End
+2025-12-08 12-39-58.0400[EnumUSBDevices]Begin
+2025-12-08 12-39-58.0405[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 12-39-58.0406[EnumUSBDevices]End
+2025-12-08 12-51-35.0465[]*****************************************
+2025-12-08 12-51-35.0467[]DLL Log Initialize. Verbosity: 6
+2025-12-08 12-51-35.0468[]*****************************************
+2025-12-08 12-51-35.0469[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 12-51-35.0470[]DLL Version: 1.07
+2025-12-08 12-51-35.0471[InitLibrary]Begin
+2025-12-08 12-51-35.0515[InitLibrary]Library SignID:00000101
+2025-12-08 12-51-35.0516[InitLibrary]Current SignID:00000101
+2025-12-08 12-51-35.0518[InitLibrary]End
+2025-12-08 12-51-35.0519[GetAPIVersionHwLibrary]Begin
+2025-12-08 12-51-35.0522[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 12-51-35.0523[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 12-51-35.0523[GetAPIVersionHwLibrary]End
+2025-12-08 12-51-35.0524[EnumUSBDevices]Begin
+2025-12-08 12-51-35.0531[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 12-51-35.0532[EnumUSBDevices]End
+2025-12-08 12-59-54.0264[]*****************************************
+2025-12-08 12-59-54.0267[]DLL Log Initialize. Verbosity: 6
+2025-12-08 12-59-54.0268[]*****************************************
+2025-12-08 12-59-54.0269[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 12-59-54.0270[]DLL Version: 1.07
+2025-12-08 12-59-54.0270[InitLibrary]Begin
+2025-12-08 12-59-54.0295[InitLibrary]Library SignID:00000101
+2025-12-08 12-59-54.0295[InitLibrary]Current SignID:00000101
+2025-12-08 12-59-54.0296[InitLibrary]End
+2025-12-08 12-59-54.0297[GetAPIVersionHwLibrary]Begin
+2025-12-08 12-59-54.0299[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 12-59-54.0300[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 12-59-54.0300[GetAPIVersionHwLibrary]End
+2025-12-08 12-59-54.0301[EnumUSBDevices]Begin
+2025-12-08 12-59-54.0306[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 12-59-54.0307[EnumUSBDevices]End
+2025-12-08 13-01-22.0520[]*****************************************
+2025-12-08 13-01-22.0522[]DLL Log Initialize. Verbosity: 6
+2025-12-08 13-01-22.0523[]*****************************************
+2025-12-08 13-01-22.0524[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 13-01-22.0524[]DLL Version: 1.07
+2025-12-08 13-01-22.0526[InitLibrary]Begin
+2025-12-08 13-01-22.0574[InitLibrary]Library SignID:00000101
+2025-12-08 13-01-22.0576[InitLibrary]Current SignID:00000101
+2025-12-08 13-01-22.0577[InitLibrary]End
+2025-12-08 13-01-22.0578[GetAPIVersionHwLibrary]Begin
+2025-12-08 13-01-22.0583[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 13-01-22.0585[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 13-01-22.0586[GetAPIVersionHwLibrary]End
+2025-12-08 13-01-22.0587[EnumUSBDevices]Begin
+2025-12-08 13-01-22.0602[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 13-01-22.0603[EnumUSBDevices]End
+2025-12-08 13-05-19.0565[]*****************************************
+2025-12-08 13-05-19.0567[]DLL Log Initialize. Verbosity: 6
+2025-12-08 13-05-19.0567[]*****************************************
+2025-12-08 13-05-19.0568[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 13-05-19.0568[]DLL Version: 1.07
+2025-12-08 13-05-19.0569[InitLibrary]Begin
+2025-12-08 13-05-19.0591[InitLibrary]Library SignID:00000101
+2025-12-08 13-05-19.0592[InitLibrary]Current SignID:00000101
+2025-12-08 13-05-19.0593[InitLibrary]End
+2025-12-08 13-05-19.0593[GetAPIVersionHwLibrary]Begin
+2025-12-08 13-05-19.0595[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 13-05-19.0596[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 13-05-19.0596[GetAPIVersionHwLibrary]End
+2025-12-08 13-05-19.0597[EnumUSBDevices]Begin
+2025-12-08 13-05-19.0603[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 13-05-19.0604[EnumUSBDevices]End
+2025-12-08 13-07-54.0409[]*****************************************
+2025-12-08 13-07-54.0411[]DLL Log Initialize. Verbosity: 6
+2025-12-08 13-07-54.0412[]*****************************************
+2025-12-08 13-07-54.0413[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 13-07-54.0414[]DLL Version: 1.07
+2025-12-08 13-07-54.0415[InitLibrary]Begin
+2025-12-08 13-07-54.0463[InitLibrary]Library SignID:00000101
+2025-12-08 13-07-54.0465[InitLibrary]Current SignID:00000101
+2025-12-08 13-07-54.0467[InitLibrary]End
+2025-12-08 13-07-54.0468[GetAPIVersionHwLibrary]Begin
+2025-12-08 13-07-54.0475[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 13-07-54.0476[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 13-07-54.0477[GetAPIVersionHwLibrary]End
+2025-12-08 13-07-54.0478[EnumUSBDevices]Begin
+2025-12-08 13-07-54.0494[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 13-07-54.0496[EnumUSBDevices]End
+2025-12-08 13-08-40.0478[]*****************************************
+2025-12-08 13-08-40.0480[]DLL Log Initialize. Verbosity: 6
+2025-12-08 13-08-40.0482[]*****************************************
+2025-12-08 13-08-40.0483[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 13-08-40.0484[]DLL Version: 1.07
+2025-12-08 13-08-40.0485[InitLibrary]Begin
+2025-12-08 13-08-40.0530[InitLibrary]Library SignID:00000101
+2025-12-08 13-08-40.0531[InitLibrary]Current SignID:00000101
+2025-12-08 13-08-40.0533[InitLibrary]End
+2025-12-08 13-08-40.0534[GetAPIVersionHwLibrary]Begin
+2025-12-08 13-08-40.0539[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 13-08-40.0540[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 13-08-40.0541[GetAPIVersionHwLibrary]End
+2025-12-08 13-08-40.0542[EnumUSBDevices]Begin
+2025-12-08 13-08-40.0552[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 13-08-40.0554[EnumUSBDevices]End
+2025-12-08 13-09-23.0565[]*****************************************
+2025-12-08 13-09-23.0567[]DLL Log Initialize. Verbosity: 6
+2025-12-08 13-09-23.0568[]*****************************************
+2025-12-08 13-09-23.0569[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 13-09-23.0570[]DLL Version: 1.07
+2025-12-08 13-09-23.0571[InitLibrary]Begin
+2025-12-08 13-09-23.0593[InitLibrary]Library SignID:00000101
+2025-12-08 13-09-23.0594[InitLibrary]Current SignID:00000101
+2025-12-08 13-09-23.0595[InitLibrary]End
+2025-12-08 13-09-23.0595[GetAPIVersionHwLibrary]Begin
+2025-12-08 13-09-23.0597[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 13-09-23.0598[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 13-09-23.0598[GetAPIVersionHwLibrary]End
+2025-12-08 13-09-23.0599[EnumUSBDevices]Begin
+2025-12-08 13-09-23.0604[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 13-09-23.0605[EnumUSBDevices]End
+2025-12-08 13-12-29.0458[]*****************************************
+2025-12-08 13-12-29.0460[]DLL Log Initialize. Verbosity: 6
+2025-12-08 13-12-29.0461[]*****************************************
+2025-12-08 13-12-29.0462[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 13-12-29.0463[]DLL Version: 1.07
+2025-12-08 13-12-29.0464[InitLibrary]Begin
+2025-12-08 13-12-29.0498[InitLibrary]Library SignID:00000101
+2025-12-08 13-12-29.0499[InitLibrary]Current SignID:00000101
+2025-12-08 13-12-29.0500[InitLibrary]End
+2025-12-08 13-12-29.0500[GetAPIVersionHwLibrary]Begin
+2025-12-08 13-12-29.0503[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 13-12-29.0503[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 13-12-29.0504[GetAPIVersionHwLibrary]End
+2025-12-08 13-12-29.0504[EnumUSBDevices]Begin
+2025-12-08 13-12-29.0512[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 13-12-29.0512[EnumUSBDevices]End
+2025-12-08 13-13-19.0252[]*****************************************
+2025-12-08 13-13-19.0254[]DLL Log Initialize. Verbosity: 6
+2025-12-08 13-13-19.0255[]*****************************************
+2025-12-08 13-13-19.0256[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 13-13-19.0258[]DLL Version: 1.07
+2025-12-08 13-13-19.0260[InitLibrary]Begin
+2025-12-08 13-13-19.0286[InitLibrary]Library SignID:00000101
+2025-12-08 13-13-19.0286[InitLibrary]Current SignID:00000101
+2025-12-08 13-13-19.0287[InitLibrary]End
+2025-12-08 13-13-19.0288[GetAPIVersionHwLibrary]Begin
+2025-12-08 13-13-19.0291[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 13-13-19.0292[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 13-13-19.0292[GetAPIVersionHwLibrary]End
+2025-12-08 13-13-19.0293[EnumUSBDevices]Begin
+2025-12-08 13-13-19.0299[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 13-13-19.0299[EnumUSBDevices]End
+2025-12-08 13-15-00.0228[]*****************************************
+2025-12-08 13-15-00.0230[]DLL Log Initialize. Verbosity: 6
+2025-12-08 13-15-00.0231[]*****************************************
+2025-12-08 13-15-00.0232[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 13-15-00.0234[]DLL Version: 1.07
+2025-12-08 13-15-00.0236[InitLibrary]Begin
+2025-12-08 13-15-00.0284[InitLibrary]Library SignID:00000101
+2025-12-08 13-15-00.0287[InitLibrary]Current SignID:00000101
+2025-12-08 13-15-00.0288[InitLibrary]End
+2025-12-08 13-15-00.0289[GetAPIVersionHwLibrary]Begin
+2025-12-08 13-15-00.0293[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 13-15-00.0295[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 13-15-00.0295[GetAPIVersionHwLibrary]End
+2025-12-08 13-15-00.0296[EnumUSBDevices]Begin
+2025-12-08 13-15-00.0310[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 13-15-00.0311[EnumUSBDevices]End
+2025-12-08 13-18-21.0790[]*****************************************
+2025-12-08 13-18-21.0792[]DLL Log Initialize. Verbosity: 6
+2025-12-08 13-18-21.0793[]*****************************************
+2025-12-08 13-18-21.0793[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 13-18-21.0794[]DLL Version: 1.07
+2025-12-08 13-18-21.0794[InitLibrary]Begin
+2025-12-08 13-18-21.0827[InitLibrary]Library SignID:00000101
+2025-12-08 13-18-21.0828[InitLibrary]Current SignID:00000101
+2025-12-08 13-18-21.0829[InitLibrary]End
+2025-12-08 13-18-21.0829[GetAPIVersionHwLibrary]Begin
+2025-12-08 13-18-21.0831[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 13-18-21.0833[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 13-18-21.0833[GetAPIVersionHwLibrary]End
+2025-12-08 13-18-21.0834[EnumUSBDevices]Begin
+2025-12-08 13-18-21.0839[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 13-18-21.0840[EnumUSBDevices]End
+2025-12-08 13-19-12.0748[]*****************************************
+2025-12-08 13-19-12.0750[]DLL Log Initialize. Verbosity: 6
+2025-12-08 13-19-12.0751[]*****************************************
+2025-12-08 13-19-12.0752[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 13-19-12.0755[]DLL Version: 1.07
+2025-12-08 13-19-12.0756[InitLibrary]Begin
+2025-12-08 13-19-12.0801[InitLibrary]Library SignID:00000101
+2025-12-08 13-19-12.0802[InitLibrary]Current SignID:00000101
+2025-12-08 13-19-12.0804[InitLibrary]End
+2025-12-08 13-19-12.0805[GetAPIVersionHwLibrary]Begin
+2025-12-08 13-19-12.0811[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 13-19-12.0812[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 13-19-12.0813[GetAPIVersionHwLibrary]End
+2025-12-08 13-19-12.0814[EnumUSBDevices]Begin
+2025-12-08 13-19-12.0827[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 13-19-12.0829[EnumUSBDevices]End
+2025-12-08 13-20-23.0615[]*****************************************
+2025-12-08 13-20-23.0618[]DLL Log Initialize. Verbosity: 6
+2025-12-08 13-20-23.0620[]*****************************************
+2025-12-08 13-20-23.0621[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 13-20-23.0622[]DLL Version: 1.07
+2025-12-08 13-20-23.0622[InitLibrary]Begin
+2025-12-08 13-20-23.0656[InitLibrary]Library SignID:00000101
+2025-12-08 13-20-23.0657[InitLibrary]Current SignID:00000101
+2025-12-08 13-20-23.0657[InitLibrary]End
+2025-12-08 13-20-23.0658[GetAPIVersionHwLibrary]Begin
+2025-12-08 13-20-23.0661[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 13-20-23.0662[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 13-20-23.0662[GetAPIVersionHwLibrary]End
+2025-12-08 13-20-23.0663[EnumUSBDevices]Begin
+2025-12-08 13-20-23.0673[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 13-20-23.0674[EnumUSBDevices]End
+2025-12-08 13-22-56.0837[]*****************************************
+2025-12-08 13-22-56.0839[]DLL Log Initialize. Verbosity: 6
+2025-12-08 13-22-56.0840[]*****************************************
+2025-12-08 13-22-56.0841[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 13-22-56.0842[]DLL Version: 1.07
+2025-12-08 13-22-56.0844[InitLibrary]Begin
+2025-12-08 13-22-56.0886[InitLibrary]Library SignID:00000101
+2025-12-08 13-22-56.0887[InitLibrary]Current SignID:00000101
+2025-12-08 13-22-56.0888[InitLibrary]End
+2025-12-08 13-22-56.0889[GetAPIVersionHwLibrary]Begin
+2025-12-08 13-22-56.0894[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 13-22-56.0895[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 13-22-56.0896[GetAPIVersionHwLibrary]End
+2025-12-08 13-22-56.0897[EnumUSBDevices]Begin
+2025-12-08 13-22-56.0906[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 13-22-56.0907[EnumUSBDevices]End
+2025-12-08 13-24-26.0359[]*****************************************
+2025-12-08 13-24-26.0362[]DLL Log Initialize. Verbosity: 6
+2025-12-08 13-24-26.0363[]*****************************************
+2025-12-08 13-24-26.0365[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 13-24-26.0366[]DLL Version: 1.07
+2025-12-08 13-24-26.0367[InitLibrary]Begin
+2025-12-08 13-24-26.0397[InitLibrary]Library SignID:00000101
+2025-12-08 13-24-26.0398[InitLibrary]Current SignID:00000101
+2025-12-08 13-24-26.0399[InitLibrary]End
+2025-12-08 13-24-26.0399[GetAPIVersionHwLibrary]Begin
+2025-12-08 13-24-26.0402[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 13-24-26.0402[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 13-24-26.0403[GetAPIVersionHwLibrary]End
+2025-12-08 13-24-26.0404[EnumUSBDevices]Begin
+2025-12-08 13-24-26.0411[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 13-24-26.0412[EnumUSBDevices]End
+2025-12-08 13-29-35.0904[]*****************************************
+2025-12-08 13-29-35.0905[]DLL Log Initialize. Verbosity: 6
+2025-12-08 13-29-35.0906[]*****************************************
+2025-12-08 13-29-35.0906[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 13-29-35.0907[]DLL Version: 1.07
+2025-12-08 13-29-35.0907[InitLibrary]Begin
+2025-12-08 13-29-35.0934[InitLibrary]Library SignID:00000101
+2025-12-08 13-29-35.0936[InitLibrary]Current SignID:00000101
+2025-12-08 13-29-35.0936[InitLibrary]End
+2025-12-08 13-29-35.0937[GetAPIVersionHwLibrary]Begin
+2025-12-08 13-29-35.0939[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 13-29-35.0940[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 13-29-35.0940[GetAPIVersionHwLibrary]End
+2025-12-08 13-29-35.0941[EnumUSBDevices]Begin
+2025-12-08 13-29-35.0947[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 13-29-35.0947[EnumUSBDevices]End
+2025-12-08 13-36-15.0407[]*****************************************
+2025-12-08 13-36-15.0409[]DLL Log Initialize. Verbosity: 6
+2025-12-08 13-36-15.0410[]*****************************************
+2025-12-08 13-36-15.0411[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 13-36-15.0412[]DLL Version: 1.07
+2025-12-08 13-36-15.0413[InitLibrary]Begin
+2025-12-08 13-36-15.0454[InitLibrary]Library SignID:00000101
+2025-12-08 13-36-15.0455[InitLibrary]Current SignID:00000101
+2025-12-08 13-36-15.0456[InitLibrary]End
+2025-12-08 13-36-15.0456[GetAPIVersionHwLibrary]Begin
+2025-12-08 13-36-15.0461[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 13-36-15.0462[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 13-36-15.0463[GetAPIVersionHwLibrary]End
+2025-12-08 13-36-15.0464[EnumUSBDevices]Begin
+2025-12-08 13-36-15.0471[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 13-36-15.0472[EnumUSBDevices]End
+2025-12-08 14-44-25.0127[]*****************************************
+2025-12-08 14-44-25.0130[]DLL Log Initialize. Verbosity: 6
+2025-12-08 14-44-25.0131[]*****************************************
+2025-12-08 14-44-25.0132[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 14-44-25.0133[]DLL Version: 1.07
+2025-12-08 14-44-25.0134[InitLibrary]Begin
+2025-12-08 14-44-25.0171[InitLibrary]Library SignID:00000101
+2025-12-08 14-44-25.0172[InitLibrary]Current SignID:00000101
+2025-12-08 14-44-25.0172[InitLibrary]End
+2025-12-08 14-44-25.0173[GetAPIVersionHwLibrary]Begin
+2025-12-08 14-44-25.0175[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 14-44-25.0176[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 14-44-25.0176[GetAPIVersionHwLibrary]End
+2025-12-08 14-44-25.0177[EnumUSBDevices]Begin
+2025-12-08 14-44-25.0188[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 14-44-25.0189[EnumUSBDevices]End
+2025-12-08 14-46-25.0109[]*****************************************
+2025-12-08 14-46-25.0112[]DLL Log Initialize. Verbosity: 6
+2025-12-08 14-46-25.0113[]*****************************************
+2025-12-08 14-46-25.0114[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 14-46-25.0115[]DLL Version: 1.07
+2025-12-08 14-46-25.0116[InitLibrary]Begin
+2025-12-08 14-46-25.0148[InitLibrary]Library SignID:00000101
+2025-12-08 14-46-25.0149[InitLibrary]Current SignID:00000101
+2025-12-08 14-46-25.0149[InitLibrary]End
+2025-12-08 14-46-25.0150[GetAPIVersionHwLibrary]Begin
+2025-12-08 14-46-25.0154[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 14-46-25.0155[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 14-46-25.0156[GetAPIVersionHwLibrary]End
+2025-12-08 14-46-25.0157[EnumUSBDevices]Begin
+2025-12-08 14-46-25.0168[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 14-46-25.0169[EnumUSBDevices]End
+2025-12-08 14-51-21.0284[]*****************************************
+2025-12-08 14-51-21.0286[]DLL Log Initialize. Verbosity: 6
+2025-12-08 14-51-21.0287[]*****************************************
+2025-12-08 14-51-21.0287[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 14-51-21.0289[]DLL Version: 1.07
+2025-12-08 14-51-21.0289[InitLibrary]Begin
+2025-12-08 14-51-21.0309[InitLibrary]Library SignID:00000101
+2025-12-08 14-51-21.0310[InitLibrary]Current SignID:00000101
+2025-12-08 14-51-21.0311[InitLibrary]End
+2025-12-08 14-51-21.0311[GetAPIVersionHwLibrary]Begin
+2025-12-08 14-51-21.0313[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 14-51-21.0315[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 14-51-21.0315[GetAPIVersionHwLibrary]End
+2025-12-08 14-51-21.0315[EnumUSBDevices]Begin
+2025-12-08 14-51-21.0322[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 14-51-21.0322[EnumUSBDevices]End
+2025-12-08 15-09-01.0369[]*****************************************
+2025-12-08 15-09-01.0370[]DLL Log Initialize. Verbosity: 6
+2025-12-08 15-09-01.0370[]*****************************************
+2025-12-08 15-09-01.0371[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 15-09-01.0371[]DLL Version: 1.07
+2025-12-08 15-09-01.0372[InitLibrary]Begin
+2025-12-08 15-09-01.0405[InitLibrary]Library SignID:00000101
+2025-12-08 15-09-01.0406[InitLibrary]Current SignID:00000101
+2025-12-08 15-09-01.0407[InitLibrary]End
+2025-12-08 15-09-01.0407[GetAPIVersionHwLibrary]Begin
+2025-12-08 15-09-01.0409[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 15-09-01.0410[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 15-09-01.0410[GetAPIVersionHwLibrary]End
+2025-12-08 15-09-01.0411[EnumUSBDevices]Begin
+2025-12-08 15-09-01.0421[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 15-09-01.0422[EnumUSBDevices]End
+2025-12-08 15-12-51.0823[]*****************************************
+2025-12-08 15-12-51.0825[]DLL Log Initialize. Verbosity: 6
+2025-12-08 15-12-51.0826[]*****************************************
+2025-12-08 15-12-51.0827[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 15-12-51.0828[]DLL Version: 1.07
+2025-12-08 15-12-51.0828[InitLibrary]Begin
+2025-12-08 15-12-51.0852[InitLibrary]Library SignID:00000101
+2025-12-08 15-12-51.0852[InitLibrary]Current SignID:00000101
+2025-12-08 15-12-51.0853[InitLibrary]End
+2025-12-08 15-12-51.0854[GetAPIVersionHwLibrary]Begin
+2025-12-08 15-12-51.0856[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 15-12-51.0856[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 15-12-51.0858[GetAPIVersionHwLibrary]End
+2025-12-08 15-12-51.0858[EnumUSBDevices]Begin
+2025-12-08 15-12-51.0864[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 15-12-51.0865[EnumUSBDevices]End
+2025-12-08 15-35-06.0612[]*****************************************
+2025-12-08 15-35-06.0614[]DLL Log Initialize. Verbosity: 6
+2025-12-08 15-35-06.0615[]*****************************************
+2025-12-08 15-35-06.0615[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 15-35-06.0616[]DLL Version: 1.07
+2025-12-08 15-35-06.0616[InitLibrary]Begin
+2025-12-08 15-35-06.0671[InitLibrary]Library SignID:00000101
+2025-12-08 15-35-06.0673[InitLibrary]Current SignID:00000101
+2025-12-08 15-35-06.0674[InitLibrary]End
+2025-12-08 15-35-06.0676[GetAPIVersionHwLibrary]Begin
+2025-12-08 15-35-06.0681[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 15-35-06.0683[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 15-35-06.0685[GetAPIVersionHwLibrary]End
+2025-12-08 15-35-06.0687[EnumUSBDevices]Begin
+2025-12-08 15-35-06.0699[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 15-35-06.0701[EnumUSBDevices]End
+2025-12-08 15-43-40.0310[]*****************************************
+2025-12-08 15-43-40.0312[]DLL Log Initialize. Verbosity: 6
+2025-12-08 15-43-40.0313[]*****************************************
+2025-12-08 15-43-40.0313[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 15-43-40.0314[]DLL Version: 1.07
+2025-12-08 15-43-40.0316[InitLibrary]Begin
+2025-12-08 15-43-40.0348[InitLibrary]Library SignID:00000101
+2025-12-08 15-43-40.0349[InitLibrary]Current SignID:00000101
+2025-12-08 15-43-40.0349[InitLibrary]End
+2025-12-08 15-43-40.0350[GetAPIVersionHwLibrary]Begin
+2025-12-08 15-43-40.0352[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 15-43-40.0352[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 15-43-40.0353[GetAPIVersionHwLibrary]End
+2025-12-08 15-43-40.0353[EnumUSBDevices]Begin
+2025-12-08 15-43-40.0358[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 15-43-40.0359[EnumUSBDevices]End
+2025-12-08 15-44-20.0989[]*****************************************
+2025-12-08 15-44-20.0991[]DLL Log Initialize. Verbosity: 6
+2025-12-08 15-44-20.0992[]*****************************************
+2025-12-08 15-44-20.0993[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 15-44-20.0994[]DLL Version: 1.07
+2025-12-08 15-44-20.0995[InitLibrary]Begin
+2025-12-08 15-44-21.0031[InitLibrary]Library SignID:00000101
+2025-12-08 15-44-21.0033[InitLibrary]Current SignID:00000101
+2025-12-08 15-44-21.0033[InitLibrary]End
+2025-12-08 15-44-21.0034[GetAPIVersionHwLibrary]Begin
+2025-12-08 15-44-21.0036[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 15-44-21.0037[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 15-44-21.0037[GetAPIVersionHwLibrary]End
+2025-12-08 15-44-21.0037[EnumUSBDevices]Begin
+2025-12-08 15-44-21.0048[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 15-44-21.0050[EnumUSBDevices]End
+2025-12-08 15-45-37.0096[EnumUSBDevices]Begin
+2025-12-08 15-45-37.0103[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 15-45-37.0105[EnumUSBDevices]End
+2025-12-08 15-50-58.0107[]*****************************************
+2025-12-08 15-50-58.0108[]DLL Log Initialize. Verbosity: 6
+2025-12-08 15-50-58.0109[]*****************************************
+2025-12-08 15-50-58.0109[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 15-50-58.0109[]DLL Version: 1.07
+2025-12-08 15-50-58.0110[InitLibrary]Begin
+2025-12-08 15-50-58.0149[InitLibrary]Library SignID:00000101
+2025-12-08 15-50-58.0150[InitLibrary]Current SignID:00000101
+2025-12-08 15-50-58.0151[InitLibrary]End
+2025-12-08 15-50-58.0152[GetAPIVersionHwLibrary]Begin
+2025-12-08 15-50-58.0155[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 15-50-58.0156[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 15-50-58.0156[GetAPIVersionHwLibrary]End
+2025-12-08 15-50-58.0157[EnumUSBDevices]Begin
+2025-12-08 15-50-58.0162[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 15-50-58.0163[EnumUSBDevices]End
+2025-12-08 15-53-30.0461[]*****************************************
+2025-12-08 15-53-30.0465[]DLL Log Initialize. Verbosity: 6
+2025-12-08 15-53-30.0466[]*****************************************
+2025-12-08 15-53-30.0466[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 15-53-30.0467[]DLL Version: 1.07
+2025-12-08 15-53-30.0468[InitLibrary]Begin
+2025-12-08 15-53-30.0499[InitLibrary]Library SignID:00000101
+2025-12-08 15-53-30.0499[InitLibrary]Current SignID:00000101
+2025-12-08 15-53-30.0500[InitLibrary]End
+2025-12-08 15-53-30.0500[GetAPIVersionHwLibrary]Begin
+2025-12-08 15-53-30.0503[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 15-53-30.0504[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 15-53-30.0504[GetAPIVersionHwLibrary]End
+2025-12-08 15-53-30.0505[EnumUSBDevices]Begin
+2025-12-08 15-53-30.0511[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 15-53-30.0512[EnumUSBDevices]End
+2025-12-08 16-02-16.0286[]*****************************************
+2025-12-08 16-02-16.0287[]DLL Log Initialize. Verbosity: 6
+2025-12-08 16-02-16.0287[]*****************************************
+2025-12-08 16-02-16.0288[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 16-02-16.0288[]DLL Version: 1.07
+2025-12-08 16-02-16.0289[InitLibrary]Begin
+2025-12-08 16-02-16.0325[InitLibrary]Library SignID:00000101
+2025-12-08 16-02-16.0326[InitLibrary]Current SignID:00000101
+2025-12-08 16-02-16.0326[InitLibrary]End
+2025-12-08 16-02-16.0327[GetAPIVersionHwLibrary]Begin
+2025-12-08 16-02-16.0330[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 16-02-16.0330[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 16-02-16.0331[GetAPIVersionHwLibrary]End
+2025-12-08 16-02-16.0331[EnumUSBDevices]Begin
+2025-12-08 16-02-16.0337[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-02-16.0338[EnumUSBDevices]End
+2025-12-08 16-08-53.0667[]*****************************************
+2025-12-08 16-08-53.0668[]DLL Log Initialize. Verbosity: 6
+2025-12-08 16-08-53.0669[]*****************************************
+2025-12-08 16-08-53.0669[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 16-08-53.0670[]DLL Version: 1.07
+2025-12-08 16-08-53.0671[InitLibrary]Begin
+2025-12-08 16-08-53.0695[InitLibrary]Library SignID:00000101
+2025-12-08 16-08-53.0696[InitLibrary]Current SignID:00000101
+2025-12-08 16-08-53.0697[InitLibrary]End
+2025-12-08 16-08-53.0697[GetAPIVersionHwLibrary]Begin
+2025-12-08 16-08-53.0699[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 16-08-53.0700[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 16-08-53.0700[GetAPIVersionHwLibrary]End
+2025-12-08 16-08-53.0701[EnumUSBDevices]Begin
+2025-12-08 16-08-53.0706[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-08-53.0707[EnumUSBDevices]End
+2025-12-08 16-15-05.0700[]*****************************************
+2025-12-08 16-15-05.0702[]DLL Log Initialize. Verbosity: 6
+2025-12-08 16-15-05.0702[]*****************************************
+2025-12-08 16-15-05.0703[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 16-15-05.0703[]DLL Version: 1.07
+2025-12-08 16-15-05.0704[InitLibrary]Begin
+2025-12-08 16-15-05.0728[InitLibrary]Library SignID:00000101
+2025-12-08 16-15-05.0729[InitLibrary]Current SignID:00000101
+2025-12-08 16-15-05.0729[InitLibrary]End
+2025-12-08 16-15-05.0730[GetAPIVersionHwLibrary]Begin
+2025-12-08 16-15-05.0732[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 16-15-05.0732[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 16-15-05.0733[GetAPIVersionHwLibrary]End
+2025-12-08 16-15-05.0733[EnumUSBDevices]Begin
+2025-12-08 16-15-05.0738[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-15-05.0739[EnumUSBDevices]End
+2025-12-08 16-16-16.0758[EnumUSBDevices]Begin
+2025-12-08 16-16-16.0764[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-16-16.0766[EnumUSBDevices]End
+2025-12-08 16-25-51.0077[EnumUSBDevices]Begin
+2025-12-08 16-25-51.0084[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-25-51.0085[EnumUSBDevices]End
+2025-12-08 16-28-22.0962[]*****************************************
+2025-12-08 16-28-22.0963[]DLL Log Initialize. Verbosity: 6
+2025-12-08 16-28-22.0963[]*****************************************
+2025-12-08 16-28-22.0964[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 16-28-22.0964[]DLL Version: 1.07
+2025-12-08 16-28-22.0965[InitLibrary]Begin
+2025-12-08 16-28-22.0990[InitLibrary]Library SignID:00000101
+2025-12-08 16-28-22.0991[InitLibrary]Current SignID:00000101
+2025-12-08 16-28-22.0992[InitLibrary]End
+2025-12-08 16-28-22.0993[GetAPIVersionHwLibrary]Begin
+2025-12-08 16-28-22.0995[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 16-28-22.0996[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 16-28-22.0996[GetAPIVersionHwLibrary]End
+2025-12-08 16-28-22.0997[EnumUSBDevices]Begin
+2025-12-08 16-28-23.0003[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-28-23.0004[EnumUSBDevices]End
+2025-12-08 16-29-25.0814[EnumUSBDevices]Begin
+2025-12-08 16-29-25.0821[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-29-25.0822[EnumUSBDevices]End
+2025-12-08 16-31-10.0245[]*****************************************
+2025-12-08 16-31-10.0246[]DLL Log Initialize. Verbosity: 6
+2025-12-08 16-31-10.0247[]*****************************************
+2025-12-08 16-31-10.0248[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 16-31-10.0249[]DLL Version: 1.07
+2025-12-08 16-31-10.0250[InitLibrary]Begin
+2025-12-08 16-31-10.0295[InitLibrary]Library SignID:00000101
+2025-12-08 16-31-10.0296[InitLibrary]Current SignID:00000101
+2025-12-08 16-31-10.0297[InitLibrary]End
+2025-12-08 16-31-10.0298[GetAPIVersionHwLibrary]Begin
+2025-12-08 16-31-10.0304[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 16-31-10.0306[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 16-31-10.0307[GetAPIVersionHwLibrary]End
+2025-12-08 16-31-10.0308[EnumUSBDevices]Begin
+2025-12-08 16-31-10.0320[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-31-10.0322[EnumUSBDevices]End
+2025-12-08 16-32-26.0635[EnumUSBDevices]Begin
+2025-12-08 16-32-26.0643[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-32-26.0644[EnumUSBDevices]End
+2025-12-08 16-33-18.0523[EnumUSBDevices]Begin
+2025-12-08 16-33-18.0531[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-33-18.0534[EnumUSBDevices]End
+2025-12-08 16-40-37.0887[]*****************************************
+2025-12-08 16-40-37.0889[]DLL Log Initialize. Verbosity: 6
+2025-12-08 16-40-37.0890[]*****************************************
+2025-12-08 16-40-37.0891[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 16-40-37.0892[]DLL Version: 1.07
+2025-12-08 16-40-37.0893[InitLibrary]Begin
+2025-12-08 16-40-37.0919[InitLibrary]Library SignID:00000101
+2025-12-08 16-40-37.0920[InitLibrary]Current SignID:00000101
+2025-12-08 16-40-37.0921[InitLibrary]End
+2025-12-08 16-40-37.0921[GetAPIVersionHwLibrary]Begin
+2025-12-08 16-40-37.0923[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 16-40-37.0924[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 16-40-37.0924[GetAPIVersionHwLibrary]End
+2025-12-08 16-40-37.0925[EnumUSBDevices]Begin
+2025-12-08 16-40-37.0930[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-40-37.0931[EnumUSBDevices]End
+2025-12-08 16-41-31.0015[EnumUSBDevices]Begin
+2025-12-08 16-41-31.0022[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-41-31.0023[EnumUSBDevices]End
+2025-12-08 16-44-21.0665[]*****************************************
+2025-12-08 16-44-21.0668[]DLL Log Initialize. Verbosity: 6
+2025-12-08 16-44-21.0670[]*****************************************
+2025-12-08 16-44-21.0671[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 16-44-21.0672[]DLL Version: 1.07
+2025-12-08 16-44-21.0673[InitLibrary]Begin
+2025-12-08 16-44-21.0720[InitLibrary]Library SignID:00000101
+2025-12-08 16-44-21.0721[InitLibrary]Current SignID:00000101
+2025-12-08 16-44-21.0723[InitLibrary]End
+2025-12-08 16-44-21.0724[GetAPIVersionHwLibrary]Begin
+2025-12-08 16-44-21.0726[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 16-44-21.0727[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 16-44-21.0728[GetAPIVersionHwLibrary]End
+2025-12-08 16-44-21.0728[EnumUSBDevices]Begin
+2025-12-08 16-44-21.0739[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-44-21.0740[EnumUSBDevices]End
+2025-12-08 16-46-50.0821[]*****************************************
+2025-12-08 16-46-50.0823[]DLL Log Initialize. Verbosity: 6
+2025-12-08 16-46-50.0825[]*****************************************
+2025-12-08 16-46-50.0826[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 16-46-50.0827[]DLL Version: 1.07
+2025-12-08 16-46-50.0828[InitLibrary]Begin
+2025-12-08 16-46-50.0868[InitLibrary]Library SignID:00000101
+2025-12-08 16-46-50.0869[InitLibrary]Current SignID:00000101
+2025-12-08 16-46-50.0871[InitLibrary]End
+2025-12-08 16-46-50.0872[GetAPIVersionHwLibrary]Begin
+2025-12-08 16-46-50.0876[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 16-46-50.0877[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 16-46-50.0878[GetAPIVersionHwLibrary]End
+2025-12-08 16-46-50.0879[EnumUSBDevices]Begin
+2025-12-08 16-46-50.0887[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-46-50.0889[EnumUSBDevices]End
+2025-12-08 16-47-46.0335[EnumUSBDevices]Begin
+2025-12-08 16-47-46.0344[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-47-46.0345[EnumUSBDevices]End
+2025-12-08 16-47-54.0736[EnumUSBDevices]Begin
+2025-12-08 16-47-54.0743[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-47-54.0744[EnumUSBDevices]End
+2025-12-08 16-52-40.0010[]*****************************************
+2025-12-08 16-52-40.0012[]DLL Log Initialize. Verbosity: 6
+2025-12-08 16-52-40.0013[]*****************************************
+2025-12-08 16-52-40.0013[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 16-52-40.0014[]DLL Version: 1.07
+2025-12-08 16-52-40.0015[InitLibrary]Begin
+2025-12-08 16-52-40.0036[InitLibrary]Library SignID:00000101
+2025-12-08 16-52-40.0037[InitLibrary]Current SignID:00000101
+2025-12-08 16-52-40.0037[InitLibrary]End
+2025-12-08 16-52-40.0038[GetAPIVersionHwLibrary]Begin
+2025-12-08 16-52-40.0040[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 16-52-40.0041[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 16-52-40.0041[GetAPIVersionHwLibrary]End
+2025-12-08 16-52-40.0042[EnumUSBDevices]Begin
+2025-12-08 16-52-40.0047[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-52-40.0048[EnumUSBDevices]End
+2025-12-08 16-53-31.0809[EnumUSBDevices]Begin
+2025-12-08 16-53-31.0816[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-53-31.0824[EnumUSBDevices]End
+2025-12-08 16-53-43.0799[EnumUSBDevices]Begin
+2025-12-08 16-53-43.0807[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-53-43.0808[EnumUSBDevices]End
+2025-12-08 16-54-17.0432[]*****************************************
+2025-12-08 16-54-17.0434[]DLL Log Initialize. Verbosity: 6
+2025-12-08 16-54-17.0435[]*****************************************
+2025-12-08 16-54-17.0436[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 16-54-17.0437[]DLL Version: 1.07
+2025-12-08 16-54-17.0438[InitLibrary]Begin
+2025-12-08 16-54-17.0487[InitLibrary]Library SignID:00000101
+2025-12-08 16-54-17.0488[InitLibrary]Current SignID:00000101
+2025-12-08 16-54-17.0490[InitLibrary]End
+2025-12-08 16-54-17.0491[GetAPIVersionHwLibrary]Begin
+2025-12-08 16-54-17.0496[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 16-54-17.0497[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 16-54-17.0499[GetAPIVersionHwLibrary]End
+2025-12-08 16-54-17.0500[EnumUSBDevices]Begin
+2025-12-08 16-54-17.0512[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-54-17.0514[EnumUSBDevices]End
+2025-12-08 16-55-33.0429[EnumUSBDevices]Begin
+2025-12-08 16-55-33.0436[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-55-33.0437[EnumUSBDevices]End
+2025-12-08 16-55-39.0677[EnumUSBDevices]Begin
+2025-12-08 16-55-39.0684[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-55-39.0686[EnumUSBDevices]End
+2025-12-08 16-57-18.0360[]*****************************************
+2025-12-08 16-57-18.0362[]DLL Log Initialize. Verbosity: 6
+2025-12-08 16-57-18.0363[]*****************************************
+2025-12-08 16-57-18.0363[]DLL Path: C:\Users\Wafa Sayed\agra--cash-tvm
+2025-12-08 16-57-18.0364[]DLL Version: 1.07
+2025-12-08 16-57-18.0365[InitLibrary]Begin
+2025-12-08 16-57-18.0389[InitLibrary]Library SignID:00000101
+2025-12-08 16-57-18.0390[InitLibrary]Current SignID:00000101
+2025-12-08 16-57-18.0391[InitLibrary]End
+2025-12-08 16-57-18.0392[GetAPIVersionHwLibrary]Begin
+2025-12-08 16-57-18.0394[GetAPIVersionHwLibrary]Down level library (C-library) release: 1.36
+2025-12-08 16-57-18.0395[GetAPIVersionHwLibrary]API rel for hardware library (C-library) 1.36
+2025-12-08 16-57-18.0395[GetAPIVersionHwLibrary]End
+2025-12-08 16-57-18.0396[EnumUSBDevices]Begin
+2025-12-08 16-57-18.0401[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 16-57-18.0402[EnumUSBDevices]End
+2025-12-08 17-00-19.0605[EnumUSBDevices]Begin
+2025-12-08 17-00-19.0612[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 17-00-19.0615[EnumUSBDevices]End
+2025-12-08 17-05-58.0930[EnumUSBDevices]Begin
+2025-12-08 17-05-58.0937[EnumUSBDevices]Found 0 USB Devices
+2025-12-08 17-05-58.0938[EnumUSBDevices]End

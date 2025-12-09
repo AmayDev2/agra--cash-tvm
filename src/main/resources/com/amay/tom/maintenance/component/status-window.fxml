@@ -16,9 +16,9 @@
         <Label fx:id="statusLabel" text="Connected"/>
     </HBox>
     <HBox spacing="20" alignment="CENTER">
-        <Button fx:id="recheckButton" text="Recheck"/>
-        <Button fx:id="testButton" text="Test Scan"/>
-        <Button fx:id="cancelButton" text="Cancel"/>
+        <Button fx:id="recheckButton" styleClass="navigatorButton" text="Recheck"/>
+        <Button fx:id="testButton" styleClass="navigatorButton" text="Test Scan"/>
+        <Button fx:id="cancelButton" styleClass="navigatorButton" text="Cancel"/>
     </HBox>
 </VBox>
 

@@ -1,0 +1,64 @@
+syntax = "proto3";
+package org.monitoring.proto;
+
+option java_package = "org.network.monitorandcontrol.scu_console";
+option java_multiple_files = true;
+
+import "common/Enums.proto";
+
+import "google/protobuf/any.proto";
+
+/*
+    ConsoleProtocol :- ConsoleProtocol will be used to exchange data between SCU Console and Monitoring Server
+
+    console_id :- ID sent by the console to the monitoring server
+    status_code :- Status code for the operation
+    error_msg :- error message for the operation
+    operation_type :- operation type will determine what type of operation to perform 1-monitoring, 2-controlling
+    command_data :- Command Data will be sent from SCU Console to the Monitoring Server
+*/
+
+message ConsoleProtocol{
+    string console_id = 1;
+    int32 status_code = 2;
+    string error_msg = 3;
+    StreamData stream_data = 4;
+    EquipmentType equipment_type = 5;
+}
+
+/*
+    CommandData :- Command data will be the data send to the SLE for further Operation
+
+    command_type :-
+    1 - Request for Equipment Info
+    2 - Request for Peripheral Status
+    3 - Request for Version 
+    4 - Request for Last 5 Alarms
+    for command type 5 - console will send the respective ModeControl for the SLE's
+        
+    
+    request_type :- request type will be sent in case SC wants to retrieve some data from SLE
+    
+    equipment_id :- Which Equipment To Send the Command
+    
+*/
+
+message StreamData{
+    CommandType command_type = 1;
+    string equip_id = 2;
+    RequestType request_type = 3;
+    google.protobuf.Any request_data = 4;
+    EquipmentType equipment_type = 5;
+}
+
+/*
+    MonitorData :- Monitor data will be the data send by the SLE to the monitoring server to the console
+
+    equipment_id :- Which Equipment Send the Data
+    request_type :- forwarded by server to the client to identify the request type
+    request_data :- data associated with the type of request type
+
+*/
+message SCUModeControl{
+    SpecialMode special_mode = 4;
+}

@@ -1,0 +1,28 @@
+syntax = "proto3";
+package org.monitoring.proto;
+
+import "common/TOM.proto";
+import "common/AG.proto";
+import "common/SC.proto";
+import "common/TR.proto";
+import "common/TVM.proto";
+import "common/CC.proto";
+
+option java_package = "org.network.monitorandcontrol";
+option java_multiple_files = true;
+
+service MonitorAndControl {
+    rpc agStream(stream AGProtocol) returns (stream AGProtocol) {}
+    rpc tomStream(stream TOMProtocol) returns (stream TOMProtocol){}
+    rpc scStream(stream ConsoleProtocol) returns (stream ConsoleProtocol){}
+    rpc trStream(stream TRProtocol) returns (stream TRProtocol){}
+    rpc tvmStream(stream TVMProtocol) returns (stream TVMProtocol){}
+    rpc ccStream(stream CentralConsoleProtocol) returns(stream CentralConsoleProtocol){}
+}
+
+/*
+    request_type - 10
+*/
+message Alarms{
+    map<int32, string> alarms = 1;
+}
